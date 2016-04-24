@@ -25,6 +25,8 @@ Check out the repository to find examples / tests for each feature.
 - [String](#string-extensions)
 - [Array](#array-extensions)
 - [Dictionary](#dictionary-extensions)
+- [CollectionType](#collectiontype-extensions)
+- [MutableCollectionType](#mutablecollectiontype-extensions)
 - [NSObject](#nsobject-extensions)
 - [NSDate](#nsdate-extensions)
 - [NSTimer](#nstimer-extensions)
@@ -212,14 +214,6 @@ print(myArray.containsArray([1, 2])) // true
 print(myArray.containsArray([5])) // false
 ```
 
-Shuffle an array:
-
-``` swift
-var myArray = [1, 2, 3, "5", "6]
-myArray.shuffle()
-print(myArray) // [3, "6", 1, 2, "5"]
-```
-
 Get an object at a specified index:
 
 ``` swift
@@ -313,6 +307,26 @@ let dic2 = ["three": 3, "four": 4]
 var finalDic: Dictionary<String, Int> = [:]
 finalDic.merge(dic1, dic2)
 print(finalDic) // ["one": 1, "two": 2, "three": 3, "four": 4]
+```
+
+### CollectionType extensions
+
+Shuffle a collection:
+
+``` swift
+let myArray = [1, 2, 3, "5", "6]
+let arraySuffled = myArray.shuffle()
+print(arraySuffled) // [3, "6", 1, 2, "5"]
+```
+
+### MutableCollectionType extensions
+
+Shuffle a collection:
+
+``` swift
+var myArray = [1, 2, 3, "5", "6]
+myArray.shuffle()
+print(newArray) // [3, "6", 1, 2, "5"]
 ```
 
 ### NSObject extensions

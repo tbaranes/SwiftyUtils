@@ -134,17 +134,7 @@ public extension Array {
     public func reverseIndex(index: Int) -> Int {
         return Swift.max(self.count - 1 - index, 0)
     }
-    
-    public mutating func shuffle() {
-        var j: Int
-        
-        for i in 0..<(self.count - 2) {
-            j = Int(arc4random_uniform(UInt32(self.count - i)))
-            if i != i + j {
-                swap(&self[i], &self[i + j])
-            }
-        }
-    }
+
 }
 
 // MARK: - Helpers

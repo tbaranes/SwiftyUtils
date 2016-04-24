@@ -104,22 +104,7 @@ extension ArrayExtensionTests {
         XCTAssertEqual(array.reverseIndex(0), 5)
         XCTAssertEqual(array.reverseIndex(2), 3)
     }
-    
-    func testShuffle() {
-        let copyArray = array
-        array.shuffle()
         
-        XCTAssertNotNil(array)
-        XCTAssertEqual(array.count, copyArray.count)
-        
-        for e in copyArray {
-            if let i = array.indexOf(e) {
-                array.removeAtIndex(i)
-            }
-        }
-        XCTAssertEqual(array, [])
-    }
-    
 }
 
 // MARK: - Helpers

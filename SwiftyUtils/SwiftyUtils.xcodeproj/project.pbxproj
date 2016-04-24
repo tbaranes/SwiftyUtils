@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2147B381CCD26EF0086ACE3 /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B371CCD26EF0086ACE3 /* CollectionTypeExtension.swift */; };
+		E2147B391CCD26EF0086ACE3 /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B371CCD26EF0086ACE3 /* CollectionTypeExtension.swift */; };
+		E2147B3A1CCD26EF0086ACE3 /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B371CCD26EF0086ACE3 /* CollectionTypeExtension.swift */; };
+		E2147B3C1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */; };
+		E2147B3D1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */; };
+		E2147B3E1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */; };
 		E273000D1CCD031B003156EC /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E273000C1CCD031B003156EC /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E273001A1CCD03ED003156EC /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E27300191CCD03ED003156EC /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E27300331CCD0633003156EC /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5A1CCD0040003156EC /* ArrayExtension.swift */; };
@@ -148,6 +154,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E2147B371CCD26EF0086ACE3 /* CollectionTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionTypeExtension.swift; path = ../../../../Desktop/CollectionTypeExtension.swift; sourceTree = "<group>"; };
+		E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeTests.swift; sourceTree = "<group>"; };
 		E273000A1CCD031B003156EC /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E273000C1CCD031B003156EC /* SwiftyUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyUtils.h; sourceTree = "<group>"; };
 		E273000E1CCD031B003156EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -302,6 +310,7 @@
 				E27300741CCD0669003156EC /* NSUserDefaultsExtensionTests.swift */,
 				E27300751CCD0669003156EC /* OccupiableTests.swift */,
 				E27300761CCD0669003156EC /* StringExtensionTests.swift */,
+				E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */,
 			);
 			name = Core;
 			path = "../SwiftyUtils/SwiftyUtils Core Tests";
@@ -422,6 +431,7 @@
 				E273FF6B1CCD0040003156EC /* ReusableFormatters.swift */,
 				E273FF6C1CCD0040003156EC /* Selfie.swift */,
 				E273FF6D1CCD0040003156EC /* StringExtension.swift */,
+				E2147B371CCD26EF0086ACE3 /* CollectionTypeExtension.swift */,
 			);
 			name = "SwiftyUtils Core";
 			path = ../Sources;
@@ -671,6 +681,7 @@
 				E27300481CCD0633003156EC /* Async.swift in Sources */,
 				E27300521CCD0633003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E27300531CCD0633003156EC /* NSRangeExtension.swift in Sources */,
+				E2147B3A1CCD26EF0086ACE3 /* CollectionTypeExtension.swift in Sources */,
 				E27300491CCD0633003156EC /* BlockNotification.swift in Sources */,
 				E273004C1CCD0633003156EC /* DictionaryExtension.swift in Sources */,
 				E273004E1CCD0633003156EC /* Injectable.swift in Sources */,
@@ -698,6 +709,7 @@
 				E27300341CCD0633003156EC /* Async.swift in Sources */,
 				E273003E1CCD0633003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E273003F1CCD0633003156EC /* NSRangeExtension.swift in Sources */,
+				E2147B391CCD26EF0086ACE3 /* CollectionTypeExtension.swift in Sources */,
 				E27300351CCD0633003156EC /* BlockNotification.swift in Sources */,
 				E27300381CCD0633003156EC /* DictionaryExtension.swift in Sources */,
 				E273003A1CCD0633003156EC /* Injectable.swift in Sources */,
@@ -732,6 +744,7 @@
 				E27300811CCD0669003156EC /* OccupiableTests.swift in Sources */,
 				E273007D1CCD0669003156EC /* NSRangeExtensionTests.swift in Sources */,
 				E27300771CCD0669003156EC /* ArrayExtensionTests.swift in Sources */,
+				E2147B3C1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */,
 				E273007F1CCD0669003156EC /* NSURLExtensionTests.swift in Sources */,
 				E273007A1CCD0669003156EC /* IntExtensionTests.swift in Sources */,
 			);
@@ -746,6 +759,7 @@
 				E27300B91CCD06F4003156EC /* NSTimerTests.swift in Sources */,
 				E27300B71CCD06F4003156EC /* NSFileManagerTests.swift in Sources */,
 				E27300BC1CCD06F4003156EC /* OccupiableTests.swift in Sources */,
+				E2147B3E1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */,
 				E27300B51CCD06F4003156EC /* IntExtensionTests.swift in Sources */,
 				E27300BB1CCD06F4003156EC /* NSUserDefaultsExtensionTests.swift in Sources */,
 				E27300B21CCD06F4003156EC /* ArrayExtensionTests.swift in Sources */,
@@ -765,6 +779,7 @@
 				E27300C51CCD06F5003156EC /* NSTimerTests.swift in Sources */,
 				E27300C31CCD06F5003156EC /* NSFileManagerTests.swift in Sources */,
 				E27300C81CCD06F5003156EC /* OccupiableTests.swift in Sources */,
+				E2147B3D1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */,
 				E27300C11CCD06F5003156EC /* IntExtensionTests.swift in Sources */,
 				E27300C71CCD06F5003156EC /* NSUserDefaultsExtensionTests.swift in Sources */,
 				E27300BE1CCD06F5003156EC /* ArrayExtensionTests.swift in Sources */,
@@ -782,6 +797,7 @@
 				E273FF981CCD0040003156EC /* NSURLExtension.swift in Sources */,
 				E273FFA71CCD0040003156EC /* StringExtension.swift in Sources */,
 				E273FF741CCD0040003156EC /* BlockNotification.swift in Sources */,
+				E2147B381CCD26EF0086ACE3 /* CollectionTypeExtension.swift in Sources */,
 				E273FF541CCD0025003156EC /* NSBundleExtension.swift in Sources */,
 				E273FF4F1CCD0025003156EC /* BlockLongPressGestureRecognizer.swift in Sources */,
 				E273FF511CCD0025003156EC /* BlockPinchGestureRecognizer.swift in Sources */,
