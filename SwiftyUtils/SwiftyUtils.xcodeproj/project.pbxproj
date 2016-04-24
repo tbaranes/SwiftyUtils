@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E2147B381CCD26EF0086ACE3 /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B371CCD26EF0086ACE3 /* CollectionTypeExtension.swift */; };
-		E2147B391CCD26EF0086ACE3 /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B371CCD26EF0086ACE3 /* CollectionTypeExtension.swift */; };
-		E2147B3A1CCD26EF0086ACE3 /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B371CCD26EF0086ACE3 /* CollectionTypeExtension.swift */; };
 		E2147B3C1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */; };
 		E2147B3D1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */; };
 		E2147B3E1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */; };
@@ -127,6 +124,9 @@
 		E273FFA11CCD0040003156EC /* ReusableFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF6B1CCD0040003156EC /* ReusableFormatters.swift */; };
 		E273FFA41CCD0040003156EC /* Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF6C1CCD0040003156EC /* Selfie.swift */; };
 		E273FFA71CCD0040003156EC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF6D1CCD0040003156EC /* StringExtension.swift */; };
+		E2976EED1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2976EEC1CCD2E3A0048724F /* CollectionTypeExtension.swift */; };
+		E2976EEE1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2976EEC1CCD2E3A0048724F /* CollectionTypeExtension.swift */; };
+		E2976EEF1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2976EEC1CCD2E3A0048724F /* CollectionTypeExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,7 +154,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E2147B371CCD26EF0086ACE3 /* CollectionTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionTypeExtension.swift; path = ../../../../Desktop/CollectionTypeExtension.swift; sourceTree = "<group>"; };
 		E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeTests.swift; sourceTree = "<group>"; };
 		E273000A1CCD031B003156EC /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E273000C1CCD031B003156EC /* SwiftyUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyUtils.h; sourceTree = "<group>"; };
@@ -215,6 +214,7 @@
 		E273FF6B1CCD0040003156EC /* ReusableFormatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableFormatters.swift; sourceTree = "<group>"; };
 		E273FF6C1CCD0040003156EC /* Selfie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Selfie.swift; sourceTree = "<group>"; };
 		E273FF6D1CCD0040003156EC /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E2976EEC1CCD2E3A0048724F /* CollectionTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,17 +392,12 @@
 		E273FEE81CCCFFA9003156EC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E2976EF21CCD2E860048724F /* Extensions */,
 				E273FF441CCD0025003156EC /* BlockLongPressGestureRecognizer.swift */,
 				E273FF451CCD0025003156EC /* BlockPanGestureRecognizer.swift */,
 				E273FF461CCD0025003156EC /* BlockPinchGestureRecognizer.swift */,
 				E273FF471CCD0025003156EC /* BlockSwipeGestureRecognizer.swift */,
 				E273FF481CCD0025003156EC /* BlockTapGestureRecognizer.swift */,
-				E273FF491CCD0025003156EC /* NSBundleExtension.swift */,
-				E273FF4A1CCD0025003156EC /* NSObjectExtension.swift */,
-				E273FF4B1CCD0025003156EC /* UIDeviceExtension.swift */,
-				E273FF4C1CCD0025003156EC /* UIImageExtension.swift */,
-				E273FF4D1CCD0025003156EC /* UIScreenExtension.swift */,
-				E273FF4E1CCD0025003156EC /* UIViewExtensions.swift */,
 			);
 			name = Classes;
 			path = ../Sources/ios;
@@ -411,14 +406,24 @@
 		E273FF431CCCFFEC003156EC /* SwiftyUtils Core */ = {
 			isa = PBXGroup;
 			children = (
-				E273FF5A1CCD0040003156EC /* ArrayExtension.swift */,
+				E2976EF01CCD2E4B0048724F /* Extensions */,
+				E2976EF11CCD2E6A0048724F /* Protocols */,
 				E273FF5B1CCD0040003156EC /* Async.swift */,
 				E273FF5C1CCD0040003156EC /* BlockNotification.swift */,
-				E273FF5D1CCD0040003156EC /* ColorExtension.swift */,
 				E273FF5E1CCD0040003156EC /* Constants.swift */,
+				E273FF6B1CCD0040003156EC /* ReusableFormatters.swift */,
+			);
+			name = "SwiftyUtils Core";
+			path = ../Sources;
+			sourceTree = "<group>";
+		};
+		E2976EF01CCD2E4B0048724F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E273FF5A1CCD0040003156EC /* ArrayExtension.swift */,
+				E273FF5D1CCD0040003156EC /* ColorExtension.swift */,
 				E273FF5F1CCD0040003156EC /* DictionaryExtension.swift */,
 				E273FF601CCD0040003156EC /* DoubleExtension.swift */,
-				E273FF611CCD0040003156EC /* Injectable.swift */,
 				E273FF621CCD0040003156EC /* IntExtension.swift */,
 				E273FF631CCD0040003156EC /* NSDateExtension.swift */,
 				E273FF641CCD0040003156EC /* NSFileManagerExtension.swift */,
@@ -427,14 +432,33 @@
 				E273FF671CCD0040003156EC /* NSTimerExtension.swift */,
 				E273FF681CCD0040003156EC /* NSURLExtension.swift */,
 				E273FF691CCD0040003156EC /* NSUserDefaultsExtension.swift */,
-				E273FF6A1CCD0040003156EC /* OccupiableProtocol.swift */,
-				E273FF6B1CCD0040003156EC /* ReusableFormatters.swift */,
-				E273FF6C1CCD0040003156EC /* Selfie.swift */,
 				E273FF6D1CCD0040003156EC /* StringExtension.swift */,
-				E2147B371CCD26EF0086ACE3 /* CollectionTypeExtension.swift */,
+				E2976EEC1CCD2E3A0048724F /* CollectionTypeExtension.swift */,
 			);
-			name = "SwiftyUtils Core";
-			path = ../Sources;
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E2976EF11CCD2E6A0048724F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E273FF611CCD0040003156EC /* Injectable.swift */,
+				E273FF6A1CCD0040003156EC /* OccupiableProtocol.swift */,
+				E273FF6C1CCD0040003156EC /* Selfie.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		E2976EF21CCD2E860048724F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E273FF491CCD0025003156EC /* NSBundleExtension.swift */,
+				E273FF4A1CCD0025003156EC /* NSObjectExtension.swift */,
+				E273FF4B1CCD0025003156EC /* UIDeviceExtension.swift */,
+				E273FF4C1CCD0025003156EC /* UIImageExtension.swift */,
+				E273FF4D1CCD0025003156EC /* UIScreenExtension.swift */,
+				E273FF4E1CCD0025003156EC /* UIViewExtensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -681,7 +705,7 @@
 				E27300481CCD0633003156EC /* Async.swift in Sources */,
 				E27300521CCD0633003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E27300531CCD0633003156EC /* NSRangeExtension.swift in Sources */,
-				E2147B3A1CCD26EF0086ACE3 /* CollectionTypeExtension.swift in Sources */,
+				E2976EEF1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */,
 				E27300491CCD0633003156EC /* BlockNotification.swift in Sources */,
 				E273004C1CCD0633003156EC /* DictionaryExtension.swift in Sources */,
 				E273004E1CCD0633003156EC /* Injectable.swift in Sources */,
@@ -709,7 +733,7 @@
 				E27300341CCD0633003156EC /* Async.swift in Sources */,
 				E273003E1CCD0633003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E273003F1CCD0633003156EC /* NSRangeExtension.swift in Sources */,
-				E2147B391CCD26EF0086ACE3 /* CollectionTypeExtension.swift in Sources */,
+				E2976EEE1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */,
 				E27300351CCD0633003156EC /* BlockNotification.swift in Sources */,
 				E27300381CCD0633003156EC /* DictionaryExtension.swift in Sources */,
 				E273003A1CCD0633003156EC /* Injectable.swift in Sources */,
@@ -797,7 +821,7 @@
 				E273FF981CCD0040003156EC /* NSURLExtension.swift in Sources */,
 				E273FFA71CCD0040003156EC /* StringExtension.swift in Sources */,
 				E273FF741CCD0040003156EC /* BlockNotification.swift in Sources */,
-				E2147B381CCD26EF0086ACE3 /* CollectionTypeExtension.swift in Sources */,
+				E2976EED1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */,
 				E273FF541CCD0025003156EC /* NSBundleExtension.swift in Sources */,
 				E273FF4F1CCD0025003156EC /* BlockLongPressGestureRecognizer.swift in Sources */,
 				E273FF511CCD0025003156EC /* BlockPinchGestureRecognizer.swift in Sources */,
