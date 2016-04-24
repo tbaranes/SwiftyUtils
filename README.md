@@ -1,4 +1,4 @@
-#SwiftyUtils
+# SwiftyUtils
 
 [![CI Status](https://travis-ci.org/tbaranes/SwiftyUtils.svg)](https://travis-ci.org/tbaranes/SwiftyUtils)
 ![Language](https://img.shields.io/badge/language-Swift%202.2-orange.svg)
