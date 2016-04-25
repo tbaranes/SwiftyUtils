@@ -10,7 +10,7 @@ import Foundation
 
 public extension NSLayoutConstraint {
     
-    func applyMultiplier(multiplier: CGFloat, toView: UIView) {
+    public func applyMultiplier(multiplier: CGFloat, toView: UIView) {
         switch firstAttribute {
         case .Width:
             constant = toView.bounds.width * multiplier
