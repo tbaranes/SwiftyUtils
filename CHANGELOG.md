@@ -12,9 +12,10 @@ N/A
  
 #### Enhancements
 
-- New extensions:
+- New extensions for classes:
     - `CollectionType`
     - `MutableCollectionType`
+    - `NSLayoutConstraint`
 
 Check out the README to see the methods of these extensions.
 

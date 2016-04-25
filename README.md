@@ -34,6 +34,7 @@ Check out the repository to find examples / tests for each feature.
 - [UIColor / NSColor](#uicolor-nscolor-extensions)
 - [NSUserDefaults](#nsuserdefaults-extensions)
 - [NSFileManager](#nsfilemanager-extensions)
+- [NSLayoutConstraint](#nslayoutconstraint-extensions)
 - [NSMutableAttributedString](#nsmutableattributedstring-extensions)
 - [BlockNotification](#blocknotification)
 - [ReusableFormatters](#reusableformatters)
@@ -510,6 +511,22 @@ NSFileManager.deleteAllDocumentFiles()
 NSFileManager.defaultManager().deleteAllDocumentFiles()
 ```
 
+### NSLayoutConstraint extensions
+
+Apply a multiplier to a constraint (currently working only for width and height):
+
+```swift
+let view = UIView(CGRect(x: 0, y: 0, width: 100, height: 200))
+let constraint = NSLayoutConstraint(item: view, attribute: .Width, ...)
+constraint.applyMultiplier(0.5, toView: superview)
+print(constraint.constants) // 50
+
+let constraint = NSLayoutConstraint(item: view, attribute: .Height, ...)
+constraint.applyMultiplier(0.5, toView: superview)
+print(constraint.constants) // 100
+```
+
+
 ### NSMutableAttributedString extensions
 
 Colorize each occurence:
@@ -620,32 +637,32 @@ Portocol to do `ViewController` Data Injection with Storyboards and Segues in Sw
 
 ```
 class RedPillViewController: UIViewController, Injectable {
- 
+
     @IBOutlet weak private var mainLabel: UILabel!
-    
+
     // the type matches the IOU's type
     typealias T = String
-    
+
     // this is my original dependency (IOU)
     // I can now make this private!
     private var mainText: String!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // this will crash if the IOU is not set
         assertDependencies()
-        
+
         // using the IOU if needed here,
         // but using it later is fine as well
         mainLabel.text = mainText
     }
-    
+
     // Injectable Implementation
     func inject(text: T) {
         mainText = text
     }
-    
+
     func assertDependencies() {
         assert(mainText != nil)
     }
@@ -653,7 +670,7 @@ class RedPillViewController: UIViewController, Injectable {
 
 // ViewController that will inject data...
 override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
+
     switch segueIdentifierForSegue(segue) {
     case .TheRedPillExperience
         let redPillVC = segue.destinationViewController as? RedPillViewController
