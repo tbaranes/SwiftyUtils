@@ -31,26 +31,26 @@ public extension NSMutableAttributedString {
     
     // MARK - Colors
     
-    public static func setTextColor(text: String, color: TBColor, afterOcurrence occurence: String) -> NSMutableAttributedString {
+    public static func setTextColor(text: String, color: SwiftyColor, afterOcurrence occurence: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
         attrStr.setTextColor(color, afterOcurrence: occurence)
         return attrStr
     }
     
-    public static func setTextColor(text: String, color: TBColor, forOccurences searchString: String) -> NSMutableAttributedString {
+    public static func setTextColor(text: String, color: SwiftyColor, forOccurences searchString: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
         attrStr.setTextColor(color, forOccurences: searchString)
         return attrStr
     }
     
-    public func setTextColor(color: TBColor, afterOcurrence occurence: String) {
+    public func setTextColor(color: SwiftyColor, afterOcurrence occurence: String) {
         let range = NSRange(text: string, afterOccurence: occurence)
         if range.location != NSNotFound {
             setTextColor(color, range: range)
         }
     }
     
-    public func setTextColor(color: TBColor, forOccurences searchString: String) {
+    public func setTextColor(color: SwiftyColor, forOccurences searchString: String) {
         addAttributeForOccurence(searchString, value: color, funcAddingAttribute: setTextColor)
     }
     

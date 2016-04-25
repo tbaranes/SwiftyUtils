@@ -27,7 +27,7 @@ import Foundation
     import Cocoa
 #endif
 
-public extension TBColor {
+public extension SwiftyColor {
 
     public convenience init?(hexString: String) {
         self.init(hexString: hexString, alpha: 1.0)

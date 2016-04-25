@@ -11,13 +11,13 @@ import SwiftyUtils
 
 class NSLayoutConstraintExtensionTests: XCTestCase {
 
-    var view: UIView!
-    var superview: UIView!
+    var view: SwiftyView!
+    var superview: SwiftyView!
 
     override func setUp() {
         super.setUp()
-        view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 200))
-        superview = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 200))
+        view = SwiftyView(frame: CGRect(x: 0, y: 0, width: 100, height: 200))
+        superview = SwiftyView(frame: CGRect(x: 0, y: 0, width: 100, height: 200))
     }
     
     override func tearDown() {

@@ -24,8 +24,10 @@ import Foundation
 
 #if os(iOS) || os (tvOS)
     import UIKit
-    public  typealias TBColor = UIColor
+    public  typealias SwiftyColor = UIColor
+    public typealias SwiftyView = UIView
 #elseif os(OSX)
     import Cocoa
-    public typealias TBColor = NSColor
+    public typealias SwiftyColor = NSColor
+    public typealias SwiftyView = NSView
 #endif
