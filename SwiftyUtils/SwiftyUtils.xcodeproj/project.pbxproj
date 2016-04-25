@@ -10,6 +10,12 @@
 		E2147B3C1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */; };
 		E2147B3D1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */; };
 		E2147B3E1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */; };
+		E21D5AC81CCE46410070797C /* NSLayoutConstraintsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5AC71CCE46410070797C /* NSLayoutConstraintsExtension.swift */; };
+		E21D5AC91CCE46410070797C /* NSLayoutConstraintsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5AC71CCE46410070797C /* NSLayoutConstraintsExtension.swift */; };
+		E21D5ACA1CCE46410070797C /* NSLayoutConstraintsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5AC71CCE46410070797C /* NSLayoutConstraintsExtension.swift */; };
+		E21D5ACC1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */; };
+		E21D5ACD1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */; };
+		E21D5ACE1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */; };
 		E273000D1CCD031B003156EC /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E273000C1CCD031B003156EC /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E273001A1CCD03ED003156EC /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E27300191CCD03ED003156EC /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E27300331CCD0633003156EC /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5A1CCD0040003156EC /* ArrayExtension.swift */; };
@@ -155,6 +161,8 @@
 
 /* Begin PBXFileReference section */
 		E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeTests.swift; sourceTree = "<group>"; };
+		E21D5AC71CCE46410070797C /* NSLayoutConstraintsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintsExtension.swift; sourceTree = "<group>"; };
+		E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensionTests.swift; sourceTree = "<group>"; };
 		E273000A1CCD031B003156EC /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E273000C1CCD031B003156EC /* SwiftyUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyUtils.h; sourceTree = "<group>"; };
 		E273000E1CCD031B003156EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -311,6 +319,7 @@
 				E27300751CCD0669003156EC /* OccupiableTests.swift */,
 				E27300761CCD0669003156EC /* StringExtensionTests.swift */,
 				E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */,
+				E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */,
 			);
 			name = Core;
 			path = "../SwiftyUtils/SwiftyUtils Core Tests";
@@ -434,6 +443,7 @@
 				E273FF691CCD0040003156EC /* NSUserDefaultsExtension.swift */,
 				E273FF6D1CCD0040003156EC /* StringExtension.swift */,
 				E2976EEC1CCD2E3A0048724F /* CollectionTypeExtension.swift */,
+				E21D5AC71CCE46410070797C /* NSLayoutConstraintsExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -702,6 +712,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E273004B1CCD0633003156EC /* Constants.swift in Sources */,
+				E21D5ACA1CCE46410070797C /* NSLayoutConstraintsExtension.swift in Sources */,
 				E27300481CCD0633003156EC /* Async.swift in Sources */,
 				E27300521CCD0633003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E27300531CCD0633003156EC /* NSRangeExtension.swift in Sources */,
@@ -730,6 +741,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E27300371CCD0633003156EC /* Constants.swift in Sources */,
+				E21D5AC91CCE46410070797C /* NSLayoutConstraintsExtension.swift in Sources */,
 				E27300341CCD0633003156EC /* Async.swift in Sources */,
 				E273003E1CCD0633003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E273003F1CCD0633003156EC /* NSRangeExtension.swift in Sources */,
@@ -767,6 +779,7 @@
 				E27300781CCD0669003156EC /* DictionaryExtensionTests.swift in Sources */,
 				E27300811CCD0669003156EC /* OccupiableTests.swift in Sources */,
 				E273007D1CCD0669003156EC /* NSRangeExtensionTests.swift in Sources */,
+				E21D5ACC1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */,
 				E27300771CCD0669003156EC /* ArrayExtensionTests.swift in Sources */,
 				E2147B3C1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */,
 				E273007F1CCD0669003156EC /* NSURLExtensionTests.swift in Sources */,
@@ -791,6 +804,7 @@
 				E27300B81CCD06F4003156EC /* NSRangeExtensionTests.swift in Sources */,
 				E27300B31CCD06F4003156EC /* DictionaryExtensionTests.swift in Sources */,
 				E27300BA1CCD06F4003156EC /* NSURLExtensionTests.swift in Sources */,
+				E21D5ACE1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,6 +825,7 @@
 				E27300C41CCD06F5003156EC /* NSRangeExtensionTests.swift in Sources */,
 				E27300BF1CCD06F5003156EC /* DictionaryExtensionTests.swift in Sources */,
 				E27300C61CCD06F5003156EC /* NSURLExtensionTests.swift in Sources */,
+				E21D5ACD1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +845,7 @@
 				E273FF9B1CCD0040003156EC /* NSUserDefaultsExtension.swift in Sources */,
 				E273FF521CCD0025003156EC /* BlockSwipeGestureRecognizer.swift in Sources */,
 				E273FF7A1CCD0040003156EC /* Constants.swift in Sources */,
+				E21D5AC81CCE46410070797C /* NSLayoutConstraintsExtension.swift in Sources */,
 				E273FF951CCD0040003156EC /* NSTimerExtension.swift in Sources */,
 				E273FFA41CCD0040003156EC /* Selfie.swift in Sources */,
 				E273FF8F1CCD0040003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
