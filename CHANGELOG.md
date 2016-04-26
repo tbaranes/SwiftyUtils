@@ -13,9 +13,14 @@ N/A
 #### Enhancements
 
 - New extensions for classes:
-    - `CollectionType`
-    - `MutableCollectionType`
+    - `CollectionType`:
+        - `shuffle()`
+    - `MutableCollectionType`:
+        - `shuffleInPlace()`
     - `NSLayoutConstraint`
+        - `applyMultiplier(multiplier: CGFloat, toView: SwiftyView)`
+- New methods for `NSURL` extension:
+    -  `addSkipBackupAttribute()`
 
 Check out the README to see the methods of these extensions.
 

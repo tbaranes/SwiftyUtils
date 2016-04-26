@@ -35,4 +35,9 @@ public extension NSURL {
         }
         return parameters
     }
+
+    public func addSkipBackupAttribute() throws {
+        try setResourceValue(true, forKey: NSURLIsExcludedFromBackupKey)
+    }
+
 }
