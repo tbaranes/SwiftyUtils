@@ -50,6 +50,7 @@ Check out the repository to find examples / tests for each feature.
 - [UIDevice](#uidevice-extensions)
 - [NSBundle](#nsbundle-extensions)
 - [UIScreen](#uiscreen-extensions)
+- [UIViewController](#uiviewcontroller-extensions)
 - **Gestures:**
  - [BlockTapGesturesRecognizers](#blocktapgesturesrecognizers)
  - [BlockLongPressGesturesRecognizers](#blocklongpressgesturesrecognizers)
@@ -814,6 +815,19 @@ Get the status bar height:
 
 ```swift
 print(UIScreen.screenStatusBarHeight) // 20.0 on iPhone6
+```
+
+### UIViewController extensions
+
+Reset the navigation stack by deleting previous view controllers:
+
+```swift
+        let navController = UINavigationController()
+        navController.pushViewController(vc1, animated: true)
+        navController.pushViewController(vc2, animated: true)
+        navController.pushViewController(vc3, animated: true)
+        vc3.deletePreviousViewControllers(true)
+        print(navController.viewControllers) // [vc3]
 ```
 
 ### BlockTapGesturesRecognizers

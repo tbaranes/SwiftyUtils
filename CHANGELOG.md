@@ -12,13 +12,18 @@ N/A
  
 #### Enhancements
 
-- New extensions for classes:
+- New extensions (iOS, OSX, tvOS) for classes:
     - `CollectionType`:
         - `shuffle()`
     - `MutableCollectionType`:
         - `shuffleInPlace()`
     - `NSLayoutConstraint`
         - `applyMultiplier(multiplier: CGFloat, toView: SwiftyView)`
+
+- New extensions (iOS) for classes:
+    - `UIViewController`:
+        - `deletePreviousViewControllers()`
+
 - New methods for `NSURL` extension:
     -  `addSkipBackupAttribute()`
 
