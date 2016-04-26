@@ -37,10 +37,6 @@ public extension NSURL {
     }
 
     public func addSkipBackupAttribute() throws {
-        guard let unwrappedPath = path where NSFileManager.defaultManager().fileExistsAtPath(unwrappedPath) else {            
-            return
-        }
-        
         try setResourceValue(true, forKey: NSURLIsExcludedFromBackupKey)
     }
 
