@@ -441,6 +441,12 @@ if let queryParameters = url?.queryParameters {
 }
 ```
 
+Add skip backup attributes to you URL:
+
+``` swift
+let url = NSURL(fileURLWithPath: "/path/to/your/file")        url?.addSkipBackupAttribute() // File at url won't be backupped!
+```
+
 ## UIColor / NSColor extensions
 
 Create colors with HEX values:
