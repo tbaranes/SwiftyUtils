@@ -38,7 +38,7 @@ func applyMultiplier(multiplier: CGFloat, toView: SwiftyView)
    
 ```swift
 func deletePreviousViewControllers()
-func setupBackButton(hidden: Bool = false, title: String = "", backIndicatorImage: UIImage? = nil, tintColor: UIColor?)
+func setupBackButton(hidden hidden: Bool = false, title: String = "", backIndicatorImage: UIImage? = nil, tintColor: UIColor? = UIColor.whiteColor())
 func setupRightBarView(view: UIView)
 func setupLeftBarView(view: UIView)
 ```
