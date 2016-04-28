@@ -13,16 +13,35 @@ N/A
 #### Enhancements
 
 - New extensions (iOS, OSX, tvOS) for classes:
-    - `CollectionType`:
-        - `shuffle()`
-    - `MutableCollectionType`:
-        - `shuffleInPlace()`
-    - `NSLayoutConstraint`
-        - `applyMultiplier(multiplier: CGFloat, toView: SwiftyView)`
+   
+    - CollectionType:
+
+```swift
+swiftshuffle()
+```
+
+   - MutableCollectionType:
+
+```swift
+func shuffleInPlace()
+```
+
+   - NSLayoutConstraint
+
+```swift
+func applyMultiplier(multiplier: CGFloat, toView: SwiftyView)
+```
 
 - New extensions (iOS) for classes:
-    - `UIViewController`:
-        - `deletePreviousViewControllers()`
+
+    - UIViewController:
+   
+```swift
+func deletePreviousViewControllers()
+func setupBackButton(hidden: Bool = false, title: String = "", backIndicatorImage: UIImage? = nil, tintColor: UIColor?)
+func setupRightBarView(view: UIView)
+func setupLeftBarView(view: UIView)
+```
 
 - New methods for `NSURL` extension:
     -  `addSkipBackupAttribute()`
