@@ -54,12 +54,12 @@ extension UIViewController {
     }
 
     public func setupLeftBarView(view: UIView) {
-        let leftBarButtonItem = UIBarButtonItem(customView: unwrappedView)
+        let leftBarButtonItem = UIBarButtonItem(customView: view)
         navigationItem.leftBarButtonItem = leftBarButtonItem
     }
     
     public func setupRightBarView(view: UIView) {
-        let rightBarButtonItem = UIBarButtonItem(customView: unwrappedView)
+        let rightBarButtonItem = UIBarButtonItem(customView: view)
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
