@@ -58,6 +58,6 @@ class OthersExampleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupBackButton(tintColor: UIColor.greenColor())
     }
 }

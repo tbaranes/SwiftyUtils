@@ -14,6 +14,7 @@ class InjectableViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBackButton(title: "Custom back title!", tintColor: UIColor.blueColor())
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
