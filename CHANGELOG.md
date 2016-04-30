@@ -12,13 +12,15 @@ N/A
  
 #### Enhancements
 
-- New extensions (iOS, OSX, tvOS) for classes:
+New methods available for the following classes, take a look into the README to see the details:
+
    
-    - CollectionType:
+   - CollectionType:
 
 ```swift
 swiftshuffle()
 ```
+
 
    - MutableCollectionType:
 
@@ -26,15 +28,21 @@ swiftshuffle()
 func shuffleInPlace()
 ```
 
-   - NSLayoutConstraint
+   - NSLayoutConstraint:
 
 ```swift
 func applyMultiplier(multiplier: CGFloat, toView: SwiftyView)
 ```
 
-- New extensions (iOS) for classes:
+   - NSURL:
 
-    - UIViewController:
+```swift
+func addSkipBackupAttribute()
+```
+
+New extensions (iOS) for classes:
+
+   - UIViewController:
    
 ```swift
 func deletePreviousViewControllers()
@@ -42,11 +50,6 @@ func setupBackButton(hidden hidden: Bool = false, title: String = "", backIndica
 func setupRightBarView(view: UIView)
 func setupLeftBarView(view: UIView)
 ```
-
-- New methods for `NSURL` extension:
-    -  `addSkipBackupAttribute()`
-
-Check out the README to see the methods of these extensions.
 
 #### Bugfixes
 
