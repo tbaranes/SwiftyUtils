@@ -24,12 +24,16 @@ import Foundation
 
 public extension NSRange {
     
-    init(text: String, afterOccurence occurence: String) {
+    public init(text: String, afterOccurence occurence: String) {
         self = (text as NSString).rangeOfString(occurence, options: [])
         if location != NSNotFound {
             location += 1
             length = text.length - location
         }
+    }
+ 
+    public init(rangeOf textToFind: String, in text: String) {
+        self = (text as NSString).rangeOfString(textToFind, options: [])
     }
     
 }
