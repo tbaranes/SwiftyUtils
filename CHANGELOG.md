@@ -9,7 +9,17 @@ All notable changes to the project will be documented in this file.
 #### API breaking changes
 
 N/A
- 
+
+#### Enhancements
+
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [0.2.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.2.0) (05-09-2016)
+
 #### Enhancements
 
 New methods available for the following classes, take a look into the README to see the details:
@@ -56,10 +66,6 @@ func setupRightBarView(view: UIView)
 func setupLeftBarView(view: UIView)
 ```
 
-#### Bugfixes
-
-N/A
-
-## [0.1.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.1.0) (2016-04-24)
+## [0.1.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.1.0) (24-04-2016)
 
 First version
