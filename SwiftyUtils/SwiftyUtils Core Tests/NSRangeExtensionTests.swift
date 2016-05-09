@@ -21,8 +21,11 @@ class NSRangeExtensionTests: XCTestCase {
         super.tearDown()
     }
     
-    
+}
+
     // MARK - Range
+
+extension NSRangeExtensionTests {
     
     func testRangeAfterOccurence() {
         let string = "Hello world"
@@ -31,4 +34,11 @@ class NSRangeExtensionTests: XCTestCase {
         XCTAssertEqual(range.length, 8)
     }
 
+    func testRangeOfOccurence() {
+        let string = "Hello world"
+        let stringToFind = "ello wo"
+        let range = NSRange(rangeOf: stringToFind, in: string)
+        XCTAssertEqual(range.location, 1)
+        XCTAssertEqual(range.length, stringToFind.length)
+    }
 }

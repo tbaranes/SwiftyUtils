@@ -36,6 +36,7 @@ Check out the repository to find examples / tests for each feature.
 - [NSFileManager](#nsfilemanager-extensions)
 - [NSLayoutConstraint](#nslayoutconstraint-extensions)
 - [NSMutableAttributedString](#nsmutableattributedstring-extensions)
+- [NSRange](#nsrange-extensions)
 - [BlockNotification](#blocknotification)
 - [ReusableFormatters](#reusableformatters)
 - [Async](#async)
@@ -613,6 +614,25 @@ let attrStr: NSMutableAttributedString = NSMutableAttributedString.setTextUnderl
 
 let attrStr = NSMutableAttributedString(string: "Hello world")
 attrStr.setTextUnderline(afterOcurrence: "llo")
+```
+
+### NSRange extensions
+
+Range after an occurence:
+
+```swift
+let string = "Hello world"
+let range = NSRange(text: string, afterOccurence: "llo")
+print(range) // location: 3, length: 8
+```
+
+Range of string:
+
+```swift
+let string = "Hello world"
+let stringToFind = "ello wo"
+let range = NSRange(rangeOf: stringToFind, in: string)
+print(range) // location: 1, length: 7
 ```
 
 ### BlockNotification

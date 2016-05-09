@@ -21,7 +21,6 @@ New methods available for the following classes, take a look into the README to 
 swiftshuffle()
 ```
 
-
    - MutableCollectionType:
 
 ```swift
@@ -38,6 +37,12 @@ func applyMultiplier(multiplier: CGFloat, toView: SwiftyView)
 
 ```swift
 func addSkipBackupAttribute()
+```
+
+   - NSRange:
+
+```swift
+init(rangeOf textToFind: String, in text: String)
 ```
 
 New extensions (iOS) for classes:
