@@ -27,7 +27,7 @@ public extension UIDevice {
     public class func idForVendor() -> String? {
         return UIDevice.currentDevice().identifierForVendor?.UUIDString
     }
-    
+        
     public class func systemName() -> String {
         return UIDevice.currentDevice().systemName
     }
