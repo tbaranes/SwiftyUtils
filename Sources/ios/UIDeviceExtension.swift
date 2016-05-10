@@ -28,6 +28,10 @@ public extension UIDevice {
         return UIDevice.currentDevice().identifierForVendor?.UUIDString
     }
     
+    public class func appVersion() -> String {
+        return String(NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString"))
+    }
+    
     public class func systemName() -> String {
         return UIDevice.currentDevice().systemName
     }

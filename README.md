@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/cocoapods/l/SwiftyUtils.svg?style=flat)](http://cocoapods.org/pods/SwiftyUtils)
 
 SwiftyUtils groups all the reusable code that we need to ship in each project. This framework contains:
-- Extensions
+- extension
 - Protocols
 - Structs
 - Subclasses
@@ -20,23 +20,24 @@ Check out the repository to find examples / tests for each feature.
 
 **Available for iOS, OS X, and tvOS:**
 
-- [Int](#int-extensions)
-- [Double](#double-extensions)
-- [String](#string-extensions)
-- [Array](#array-extensions)
-- [Dictionary](#dictionary-extensions)
-- [CollectionType](#collectiontype-extensions)
-- [MutableCollectionType](#mutablecollectiontype-extensions)
-- [NSObject](#nsobject-extensions)
-- [NSDate](#nsdate-extensions)
-- [NSTimer](#nstimer-extensions)
-- [NSURL](#nsurl-extensions)
-- [UIColor / NSColor](#uicolor-nscolor-extensions)
-- [NSUserDefaults](#nsuserdefaults-extensions)
-- [NSFileManager](#nsfilemanager-extensions)
-- [NSLayoutConstraint](#nslayoutconstraint-extensions)
-- [NSMutableAttributedString](#nsmutableattributedstring-extensions)
-- [NSRange](#nsrange-extensions)
+- [Int](#int-extension)
+- [Double](#double-extension)
+- [String](#string-extension)
+- [Array](#array-extension)
+- [Dictionary](#dictionary-extension)
+- [CollectionType](#collectiontype-extension)
+- [MutableCollectionType](#mutablecollectiontype-extension)
+- [NSObject](#nsobject-extension)
+- [NSDate](#nsdate-extension)
+- [NSTimer](#nstimer-extension)
+- [NSURL](#nsurl-extension)
+- [UIColor / NSColor](#uicolor-nscolor-extension)
+- [NSUserDefaults](#nsuserdefaults-extension)
+- [NSFileManager](#nsfilemanager-extension)
+- [NSLayoutConstraint](#nslayoutconstraint-extension)
+- [NSMutableAttributedString](#nsmutableattributedstring-extension)
+- [NSRange](#nsrange-extension)
+- [NSNotificationCenter](#nsnotificationcenter-extension)
 - [BlockNotification](#blocknotification)
 - [ReusableFormatters](#reusableformatters)
 - [Async](#async)
@@ -46,12 +47,14 @@ Check out the repository to find examples / tests for each feature.
 
 **Available for iOS:**
 
-- [UIView](#uiview-extensions)
-- [UIImage](#uiimage-extensions)
-- [UIDevice](#uidevice-extensions)
-- [NSBundle](#nsbundle-extensions)
-- [UIScreen](#uiscreen-extensions)
-- [UIViewController](#uiviewcontroller-extensions)
+- [UIView](#uiview-extension)
+- [UIImage](#uiimage-extension)
+- [UIDevice](#uidevice-extension)
+- [NSBundle](#nsbundle-extension)
+- [UIScreen](#uiscreen-extension)
+- [UIViewController](#uiviewcontroller-extension)
+- [UIAlertController](#uialertcontroller-extension)
+- [UIApplication](#uiapplication-extension)
 - **Gestures:**
  - [BlockTapGesturesRecognizers](#blocktapgesturesrecognizers)
  - [BlockLongPressGesturesRecognizers](#blocklongpressgesturesrecognizers)
@@ -61,7 +64,7 @@ Check out the repository to find examples / tests for each feature.
 
 ## Available for iOS, OS X, and tvOS
 
-### Int extensions
+### Int extension
 
 ```swift
 var myNumber = -33
@@ -72,7 +75,7 @@ print(myNumber.isNegative) // true
 print(myNumber.digits) // 2
 ```
 
-### Double extensions
+### Double extension
 
 Get the time interval for a number of milliseconds, seconds, hour, or days:
 
@@ -89,7 +92,7 @@ print(1.day) // 86400
 print(2.day) // 172800
 ```
 
-### String extensions
+### String extension
 
 Get the length of a string:
 
@@ -170,7 +173,7 @@ let string = "http://google.com http fpt:// http://facebook.com test"
 print(aString.extractURLs) // [http://google.com, http://facebook.com]
 ```
 
-### Array extensions
+### Array extension
 
 Access to a random element:
 
@@ -257,7 +260,7 @@ let result = myArray.testAll {
 print(result) // false
 ```
 
-### Dictionary extensions
+### Dictionary extension
 
 Check if a key exists in the dictionary:
 
@@ -312,7 +315,7 @@ finalDic.merge(dic1, dic2)
 print(finalDic) // ["one": 1, "two": 2, "three": 3, "four": 4]
 ```
 
-### CollectionType extensions
+### CollectionType extension
 
 Shuffle a collection:
 
@@ -322,7 +325,7 @@ let arraySuffled = myArray.shuffle()
 print(arraySuffled) // [3, "6", 1, 2, "5"]
 ```
 
-### MutableCollectionType extensions
+### MutableCollectionType extension
 
 Shuffle a collection:
 
@@ -332,7 +335,7 @@ myArray.shuffle()
 print(newArray) // [3, "6", 1, 2, "5"]
 ```
 
-### NSObject extensions
+### NSObject extension
 
 Get the class name of a `NSObject`:
 
@@ -355,7 +358,7 @@ vc2.setupLeftBarView(view: UIView)
 vc2.setupRightBarView(aView)
 ```
 
-## NSDate Extensions
+## NSDate extension
 
 Initialize from string:
 
@@ -402,7 +405,7 @@ print(now < now2) // true
 print(now2 < now) // false  
 ```
 
-## NSTimer Extensions
+## NSTimer extension
 
 Schedule timer every seconds:
 
@@ -443,7 +446,7 @@ let timer = NSTimer.new(after: 2.seconds) {
 timer.start
 ```
 
-### NSURL extensions
+### NSURL extension
 
 Put query in a Dictionary:
 
@@ -462,7 +465,7 @@ Add skip backup attributes to you URL:
 let url = NSURL(fileURLWithPath: "/path/to/your/file")        url?.addSkipBackupAttribute() // File at url won't be backupped!
 ```
 
-## UIColor / NSColor extensions
+## UIColor / NSColor extension
 
 Create colors with HEX values:
 
@@ -474,7 +477,7 @@ let myColor = NSColor(hex: 0x233C64) // Equals 35,60,100,1
 let myColor2 = NSColor(hexString: "not hex string") // nil
 ```
 
-### NSUserDefaults extensions
+### NSUserDefaults extension
 
 Get and set values from NSUserDefaults with subscripts:
 
@@ -498,7 +501,7 @@ Reset the defaults:
 NSUserDefaults.standarUserDefaults.reset()
 ```
 
-### NSFileManager extensions
+### NSFileManager extension
 
 Get documents directory url following the os:
 
@@ -532,7 +535,7 @@ NSFileManager.deleteAllDocumentFiles()
 NSFileManager.defaultManager().deleteAllDocumentFiles()
 ```
 
-### NSLayoutConstraint extensions
+### NSLayoutConstraint extension
 
 Apply a multiplier to a constraint (currently working only for width and height):
 
@@ -548,7 +551,7 @@ print(constraint.constants) // 100
 ```
 
 
-### NSMutableAttributedString extensions
+### NSMutableAttributedString extension
 
 Colorize each occurence:
 
@@ -616,7 +619,7 @@ let attrStr = NSMutableAttributedString(string: "Hello world")
 attrStr.setTextUnderline(afterOcurrence: "llo")
 ```
 
-### NSRange extensions
+### NSRange extension
 
 Range after an occurence:
 
@@ -633,6 +636,16 @@ let string = "Hello world"
 let stringToFind = "ello wo"
 let range = NSRange(rangeOf: stringToFind, in: string)
 print(range) // location: 1, length: 7
+```
+
+### NSNotificationCenter extension
+
+Post a notification from a specific queue:
+
+```
+NSNotificationCenter.defaultCenter().postNotification(name: "aNotification", queue: dispatch_get_main_queue()) 
+NSNotificationCenter.defaultCenter().postNotification(name: "aNotification", object: aObject queue: dispatch_get_main_queue())
+NSNotificationCenter.defaultCenter().postNotification(name: "aNotification", object: aObject userInfo: userInfo queue: dispatch_get_main_queue())
 ```
 
 ### BlockNotification
@@ -760,7 +773,7 @@ print(string.isNilOrEmpty) // true
 
 ## Available on iOS
 
-### UIView extensions
+### UIView extension
 
 **Automates your localizables**
 
@@ -778,7 +791,7 @@ let myCustomView: CustomView = UIView.fromNib()
 // or
 let myCustomView = UIView.fromNib() as? CustomView
 ```
-### UIDevice extensions
+### UIDevice extension
 
 Access to your device information:
 
@@ -799,7 +812,7 @@ print(UIDevice.isVersionOrLater(8.1)) // true
 print(UIDevice.isVersionOrEarlier(8.1)) // false
 ```
 
-### UIImage extensions
+### UIImage extension
 
 Create an image from a color:
 
@@ -807,7 +820,7 @@ Create an image from a color:
 let image = UIImage.imageWithColor(UIColor.greenColor())
 ```
 
-### NSBundle extensions
+### NSBundle extension
 
 Get the app version:
 
@@ -823,7 +836,7 @@ NSBundle(URL: someURL)?.appBuild
 NSBundle.mainBundle().appBuild
 ```
 
-### UIScreen extensions
+### UIScreen extension
 
 Get the screen orientation:
 
@@ -850,7 +863,7 @@ Get the status bar height:
 print(UIScreen.screenStatusBarHeight) // 20.0 on iPhone6
 ```
 
-### UIViewController extensions
+### UIViewController extension
 
 Reset the navigation stack by deleting previous view controllers:
 
@@ -861,6 +874,23 @@ Reset the navigation stack by deleting previous view controllers:
         navController.pushViewController(vc3, animated: true)
         vc3.deletePreviousViewControllers(true)
         print(navController.viewControllers) // [vc3]
+```
+
+### UIAlertController extension
+
+Show a basic alert:
+
+```swift
+UIAlertController.show(title: "Title", message: "Message")
+UIAlertController.show(title: "Title", message: "Message", cancelTitle: "Custom cancel title")
+```
+
+### UIApplication extension
+
+Get the current view controller display:
+
+```swift
+UIApplication.sharedApplication().topViewController()
 ```
 
 ### BlockTapGesturesRecognizers

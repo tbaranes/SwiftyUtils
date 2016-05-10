@@ -12,7 +12,28 @@ N/A
 
 #### Enhancements
 
-N/A
+New methods available for the following classes, take a look into the README to see the details:
+
+   
+   - NSNotificationCenter:
+
+```swift
+func postNotification(name name: String, object: AnyObject? = nil, userInfo: [NSObject : AnyObject]? = nil, queue: dispatch_queue_t)
+```
+
+New extensions (iOS) for classes:
+
+   - UIAlertController:
+   
+```swift
+static func show(title title: String, message: String, cancelTitle: String = "OK")
+```
+
+   - UIApplication:
+
+```swift
+func topMostViewController() -> UIViewController?
+```   
 
 #### Bugfixes
 
@@ -28,7 +49,7 @@ New methods available for the following classes, take a look into the README to 
    - CollectionType:
 
 ```swift
-swiftshuffle()
+func shuffle()
 ```
 
    - MutableCollectionType:
