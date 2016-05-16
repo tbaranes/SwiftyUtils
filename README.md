@@ -817,7 +817,7 @@ print(UIDevice.isVersionOrEarlier(8.1)) // false
 Create an image from a color:
 
 ```swift
-let image = UIImage.imageWithColor(UIColor.greenColor())
+let image = UIImage(color: UIColor.greenColor())
 ```
 
 ### NSBundle extension

@@ -8,7 +8,7 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
-N/A
+- Creating an UIImage from UIColor is now more swifty: `UIImage(color: .orangeColor())` instead of `UIImage.imageWithTintColor(.orangeColor())`
 
 #### Enhancements
 
