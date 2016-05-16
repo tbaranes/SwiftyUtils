@@ -24,14 +24,14 @@ import UIKit
 
 public extension UIImage {
 
-    public static func imageWithColor(let color: UIColor) -> UIImage {
+    public convenience init(color: UIColor?) {
         let rect = CGRectMake(0, 0, 1, 1)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
-        color.setFill()
+        color?.setFill()
         UIRectFill(rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        self.init(CGImage: image.CGImage!)
     }
     
 }
