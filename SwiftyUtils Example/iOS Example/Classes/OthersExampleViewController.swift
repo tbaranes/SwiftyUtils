@@ -52,7 +52,7 @@ class OthersExampleViewController: UIViewController {
     
     @IBOutlet weak var imageViewWithColor: UIImageView! {
         didSet {
-            imageViewWithColor.image = UIImage.imageWithColor(UIColor.orangeColor())
+            imageViewWithColor.image = UIImage(color: UIColor.orangeColor())
         }
     }
     
