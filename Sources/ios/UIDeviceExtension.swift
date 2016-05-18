@@ -94,3 +94,15 @@ public extension UIDevice {
     }
     
 }
+
+public extension UIDevice {
+
+    public func forceRotation(orientation: UIInterfaceOrientation) {
+        setValue(orientation.rawValue, forKey: "orientation")
+    }
+    
+    public class func forceRotation(orientation: UIInterfaceOrientation) {
+        UIDevice.currentDevice().forceRotation(orientation)
+    }
+    
+}
