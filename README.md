@@ -812,6 +812,14 @@ print(UIDevice.isVersionOrLater(8.1)) // true
 print(UIDevice.isVersionOrEarlier(8.1)) // false
 ```
 
+Force device orientation:
+
+```
+UIDevice.forceRotation(.Portrait)
+// or
+UIDevice.mainDevice().setValue(orientation.rawValue, forKey: "orientation")
+```
+
 ### UIImage extension
 
 Create an image from a color:

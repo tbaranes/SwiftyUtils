@@ -35,6 +35,12 @@ static func show(title title: String, message: String, cancelTitle: String = "OK
 func topMostViewController() -> UIViewController?
 ```   
 
+   - UIDevice
+
+```swift
+func forceRotation(orientation: UIInterfaceOrientation)
+```
+
 #### Bugfixes
 
 N/A
