@@ -4,7 +4,16 @@ All notable changes to the project will be documented in this file.
 
 ---
 
-### Next
+## Next
+
+#### API breaking changes
+
+#### Enhancements
+
+#### Bugfixes
+
+
+## [0.3.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.3.0) (19-05-2016)
 
 #### API breaking changes
 
@@ -45,7 +54,7 @@ func forceRotation(orientation: UIInterfaceOrientation)
 
 N/A
 
-## [0.2.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.2.0) (05-09-2016)
+## [0.2.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.2.0) (09-05-2016)
 
 #### Enhancements
 
