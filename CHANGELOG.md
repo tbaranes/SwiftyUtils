@@ -41,7 +41,7 @@ static func show(title title: String, message: String, cancelTitle: String = "OK
    - UIApplication:
 
 ```swift
-func topMostViewController() -> UIViewController?
+func topViewController() -> UIViewController?
 ```   
 
    - UIDevice
