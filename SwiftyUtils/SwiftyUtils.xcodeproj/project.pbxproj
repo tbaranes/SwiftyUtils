@@ -19,6 +19,10 @@
 		E21D5ACC1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */; };
 		E21D5ACD1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */; };
 		E21D5ACE1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */; };
+		E269E8211D014D6B0085992E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8201D014D6B0085992E /* Then.swift */; };
+		E269E8261D014F2B0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
+		E269E8271D014F2C0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
+		E269E8281D014F2E0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
 		E273000D1CCD031B003156EC /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E273000C1CCD031B003156EC /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E273001A1CCD03ED003156EC /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E27300191CCD03ED003156EC /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E27300331CCD0633003156EC /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5A1CCD0040003156EC /* ArrayExtension.swift */; };
@@ -170,6 +174,8 @@
 		E218E3261CE201F9005E0FA4 /* NSNotificationCenterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotificationCenterExtension.swift; sourceTree = "<group>"; };
 		E21D5AC71CCE46410070797C /* NSLayoutConstraintsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintsExtension.swift; sourceTree = "<group>"; };
 		E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensionTests.swift; sourceTree = "<group>"; };
+		E269E8201D014D6B0085992E /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
+		E269E8221D014EBE0085992E /* ThenTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThenTest.swift; sourceTree = "<group>"; };
 		E273000A1CCD031B003156EC /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E273000C1CCD031B003156EC /* SwiftyUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyUtils.h; sourceTree = "<group>"; };
 		E273000E1CCD031B003156EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -328,6 +334,7 @@
 				E27300761CCD0669003156EC /* StringExtensionTests.swift */,
 				E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */,
 				E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */,
+				E269E8221D014EBE0085992E /* ThenTest.swift */,
 			);
 			name = Core;
 			path = "../SwiftyUtils/SwiftyUtils Core Tests";
@@ -463,6 +470,7 @@
 				E273FF611CCD0040003156EC /* Injectable.swift */,
 				E273FF6A1CCD0040003156EC /* OccupiableProtocol.swift */,
 				E273FF6C1CCD0040003156EC /* Selfie.swift */,
+				E269E8201D014D6B0085992E /* Then.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -789,6 +797,7 @@
 				E27300851CCD068C003156EC /* NSObjectExtensionTests.swift in Sources */,
 				E27300821CCD0669003156EC /* StringExtensionTests.swift in Sources */,
 				E27300781CCD0669003156EC /* DictionaryExtensionTests.swift in Sources */,
+				E269E8261D014F2B0085992E /* ThenTest.swift in Sources */,
 				E27300811CCD0669003156EC /* OccupiableTests.swift in Sources */,
 				E273007D1CCD0669003156EC /* NSRangeExtensionTests.swift in Sources */,
 				E21D5ACC1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */,
@@ -804,6 +813,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E27300B41CCD06F4003156EC /* DoubleExtensionTests.swift in Sources */,
+				E269E8281D014F2E0085992E /* ThenTest.swift in Sources */,
 				E27300B61CCD06F4003156EC /* NSDateExtensionTests.swift in Sources */,
 				E27300B91CCD06F4003156EC /* NSTimerTests.swift in Sources */,
 				E27300B71CCD06F4003156EC /* NSFileManagerTests.swift in Sources */,
@@ -825,6 +835,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E27300C01CCD06F5003156EC /* DoubleExtensionTests.swift in Sources */,
+				E269E8271D014F2C0085992E /* ThenTest.swift in Sources */,
 				E27300C21CCD06F5003156EC /* NSDateExtensionTests.swift in Sources */,
 				E27300C51CCD06F5003156EC /* NSTimerTests.swift in Sources */,
 				E27300C31CCD06F5003156EC /* NSFileManagerTests.swift in Sources */,
@@ -871,6 +882,7 @@
 				E273FF7D1CCD0040003156EC /* DictionaryExtension.swift in Sources */,
 				E273FF581CCD0025003156EC /* UIScreenExtension.swift in Sources */,
 				E273FF771CCD0040003156EC /* ColorExtension.swift in Sources */,
+				E269E8211D014D6B0085992E /* Then.swift in Sources */,
 				E273FF801CCD0040003156EC /* DoubleExtension.swift in Sources */,
 				E273FF861CCD0040003156EC /* IntExtension.swift in Sources */,
 				E273FF9E1CCD0040003156EC /* OccupiableProtocol.swift in Sources */,

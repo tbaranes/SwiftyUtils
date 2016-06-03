@@ -44,6 +44,7 @@ Check out the repository to find examples / tests for each feature.
 - **Protocols:**
  - [Injectable](#injectable)
  - [Occupiable](#occupiable)
+ - [Then](#then)
 
 **Available for iOS:**
 
@@ -769,6 +770,18 @@ print(string.isEmpty) // false
 ```swift
 let string: String? = ""
 print(string.isNilOrEmpty) // true
+```
+
+### Then
+
+Syntactic sugar for Swift initializers:
+
+```swift
+let label = UILabel().then {
+    $0.textAlignment = .Center
+    $0.textColor = .blackColor()
+    $0.text = "Hello, World!"
+}
 ```
 
 ## Available on iOS
