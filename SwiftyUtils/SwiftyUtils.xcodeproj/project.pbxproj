@@ -23,6 +23,8 @@
 		E269E8261D014F2B0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
 		E269E8271D014F2C0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
 		E269E8281D014F2E0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
+		E269E82A1D0152710085992E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8201D014D6B0085992E /* Then.swift */; };
+		E269E82B1D0152720085992E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8201D014D6B0085992E /* Then.swift */; };
 		E273000D1CCD031B003156EC /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E273000C1CCD031B003156EC /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E273001A1CCD03ED003156EC /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E27300191CCD03ED003156EC /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E27300331CCD0633003156EC /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5A1CCD0040003156EC /* ArrayExtension.swift */; };
@@ -739,6 +741,7 @@
 				E2976EEF1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */,
 				E27300491CCD0633003156EC /* BlockNotification.swift in Sources */,
 				E273004C1CCD0633003156EC /* DictionaryExtension.swift in Sources */,
+				E269E82B1D0152720085992E /* Then.swift in Sources */,
 				E273004E1CCD0633003156EC /* Injectable.swift in Sources */,
 				E273004F1CCD0633003156EC /* IntExtension.swift in Sources */,
 				E27300501CCD0633003156EC /* NSDateExtension.swift in Sources */,
@@ -768,6 +771,7 @@
 				E2976EEE1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */,
 				E27300351CCD0633003156EC /* BlockNotification.swift in Sources */,
 				E27300381CCD0633003156EC /* DictionaryExtension.swift in Sources */,
+				E269E82A1D0152710085992E /* Then.swift in Sources */,
 				E273003A1CCD0633003156EC /* Injectable.swift in Sources */,
 				E273003B1CCD0633003156EC /* IntExtension.swift in Sources */,
 				E273003C1CCD0633003156EC /* NSDateExtension.swift in Sources */,
