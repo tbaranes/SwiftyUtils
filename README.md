@@ -346,19 +346,6 @@ print(vc.className) // UIViewController
 print(UIViewController.className) // UIViewController
 ```
 
-Setup your navigation bar:
-
-```swift
-let vc = UIViewController()
-vc.setupBackButton(title: String = "Example", tintColor: UIColor.blueColor())
-vc.setupRightBarView(aView)
-
-let vc2 = UIViewController()
-vc2.setupBackButton(hidden: false)
-vc2.setupLeftBarView(view: UIView)
-vc2.setupRightBarView(aView)
-```
-
 ## NSDate extension
 
 Initialize from string:
@@ -895,6 +882,20 @@ Reset the navigation stack by deleting previous view controllers:
         navController.pushViewController(vc3, animated: true)
         vc3.deletePreviousViewControllers(true)
         print(navController.viewControllers) // [vc3]
+```
+
+
+Setup your navigation bar:
+
+```swift
+let vc = UIViewController()
+vc.setupBackButton(title: String = "Example", tintColor: UIColor.blueColor())
+vc.setupRightBarView(aView)
+
+let vc2 = UIViewController()
+vc2.setupBackButton(hidden: false)
+vc2.setupLeftBarView(view: UIView)
+vc2.setupRightBarView(aView)
 ```
 
 ### UIAlertController extension
