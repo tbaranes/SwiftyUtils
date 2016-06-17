@@ -23,7 +23,8 @@ N/A
 
 #### API breaking changes
 
-- Swift 3 support (currently not merged in master, available using branch `feature/swift3`). README up to date (possibility of some diffs, please report you find some)
+- Swift 3 support (currently not merged in master, available using branch `feature/swift3`). README is up to date, please report if you find any diffs
+- Some APIs have been updated to be more swifty, check out the README for more information
 
 #### Enhancements
 

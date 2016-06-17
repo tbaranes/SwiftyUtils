@@ -80,7 +80,7 @@ extension ArrayExtensionTests {
         let difference = a.difference(values: b, c)
         XCTAssertEqual(difference, [0, 5, 6, 7, 8])
     }
- 
+
     func testIntersection() {
         let a = [Int](0...8), b = [Int](3...4), c = [Int](1...6)
         let intersection = a.intersection(values: b, c)
@@ -92,7 +92,7 @@ extension ArrayExtensionTests {
         let union = a.union(values: b, c)
         XCTAssertEqual(union, [Int](0...8))
     }
-    
+
 }
 
 // MARK: - Update
@@ -104,7 +104,7 @@ extension ArrayExtensionTests {
         XCTAssertEqual(array.reverseIndex(index: 0), 5)
         XCTAssertEqual(array.reverseIndex(index: 2), 3)
     }
-        
+
 }
 
 // MARK: - Helpers
@@ -116,7 +116,7 @@ extension ArrayExtensionTests {
         XCTAssertFalse(array.contains(instanceOf: 12.22))
         XCTAssertTrue(array.contains(instanceOf: 46378))
     }
-    
+
     func testTestAll() {
         XCTAssertTrue(array.testAll { $0 < 10 })
     }
@@ -130,5 +130,5 @@ extension ArrayExtensionTests {
         let array = [Int](2...4)
         XCTAssertTrue(self.array.contains(array: array))
     }
-    
+
 }
