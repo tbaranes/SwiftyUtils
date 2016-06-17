@@ -29,11 +29,11 @@ public extension NSObject {
     }
     
     public static var className: String {
-        return stringFromClass(self)
+        return stringFromClass(aClass: self)
     }
  
 }
 
 public func stringFromClass(aClass: AnyClass) -> String {
-    return NSStringFromClass(aClass).componentsSeparatedByString(".").last!
+    return NSStringFromClass(aClass).components(separatedBy: ".").last!
 }

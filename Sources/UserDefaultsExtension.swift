@@ -24,14 +24,14 @@ import Foundation
 
 // MARK: - 
 
-public extension NSUserDefaults {
+public extension UserDefaults {
 
     public subscript(key: String) -> AnyObject? {
         get {
-            return objectForKey(key)
+            return object(forKey: key)
         }
         set {
-            setObject(newValue, forKey: key)
+            set(newValue, forKey: key)
         }
     }
 
@@ -39,10 +39,10 @@ public extension NSUserDefaults {
 
 // MARK: - 
 
-public extension NSUserDefaults {
+public extension UserDefaults {
  
     public static func contains(key: String) -> Bool {
-        return self.standardUserDefaults().contains(key)
+        return self.standard().contains(key: key)
     }
 
     public func contains(key: String) -> Bool {
@@ -50,8 +50,8 @@ public extension NSUserDefaults {
     }
     
     public func reset() {        
-        for key in Array(NSUserDefaults.standardUserDefaults().dictionaryRepresentation().keys) {
-            NSUserDefaults.standardUserDefaults().removeObjectForKey(key)
+        for key in Array(UserDefaults.standard().dictionaryRepresentation().keys) {
+            UserDefaults.standard().removeObject(forKey: key)
         }
     }
     

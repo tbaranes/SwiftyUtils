@@ -33,7 +33,7 @@ extension StringExtensionTests {
     
     func testSubscriptRange() {
         let aString = "Hello world"
-        XCTAssertEqual(aString[1...3], "ell")
+        XCTAssertEqual(aString[Range(1...3)], "ell")
     }
     
 }
@@ -90,7 +90,7 @@ extension StringExtensionTests {
     func testTrim() {
         var string = "space space"
         string.trim()
-        XCTAssertFalse(string.containsString(" "))
+        XCTAssertFalse(string.contains(" "))
     }
     
     func testTruncate() {

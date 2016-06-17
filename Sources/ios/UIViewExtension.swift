@@ -49,8 +49,8 @@ public extension UIView {
                     aTextView.text = NSLocalizedString(text, comment: "")
                 }
             } else if let aButton = aSubview as?  UIButton {
-                if let title = aButton.titleForState(.Normal) {
-                    aButton.setTitle(NSLocalizedString(title, comment: ""), forState: .Normal)
+                if let title = aButton.title(for: []) {
+                    aButton.setTitle(NSLocalizedString(title, comment: ""), for: [])
                 }
             } else {
                 aSubview.convertLocalizables()
@@ -66,7 +66,7 @@ public extension UIView {
     // MARK - View from nib
     
     public class func fromNib<T: UIView>(nibNameOrNil: String? = nil) -> T {
-        let v: T? = fromNib(nibNameOrNil)
+        let v: T? = fromNib(nibNameOrNil: nibNameOrNil)
         return v!
     }
     
@@ -79,7 +79,7 @@ public extension UIView {
             name = T.className
         }
         
-        let nibViews = NSBundle.mainBundle().loadNibNamed(name, owner: nil, options: nil)
+        let nibViews = Bundle.main().loadNibNamed(name, owner: nil, options: nil)
         for v in nibViews {
             if let tog = v as? T {
                 view = tog

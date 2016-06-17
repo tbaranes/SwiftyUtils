@@ -25,7 +25,7 @@ import Foundation
 public extension NSURL {
     
     public var queryParameters: [String: String]? {
-        guard let components = NSURLComponents(URL: self, resolvingAgainstBaseURL: true), queryItems = components.queryItems else {
+        guard let components = NSURLComponents(url: self as URL, resolvingAgainstBaseURL: true), queryItems = components.queryItems else {
             return nil
         }
         
@@ -37,7 +37,7 @@ public extension NSURL {
     }
 
     public func addSkipBackupAttribute() throws {
-        try setResourceValue(true, forKey: NSURLIsExcludedFromBackupKey)
+        try setResourceValue(true, forKey: URLResourceKey.isExcludedFromBackupKey)
     }
 
 }

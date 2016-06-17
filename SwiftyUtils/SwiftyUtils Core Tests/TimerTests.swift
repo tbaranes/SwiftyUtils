@@ -9,7 +9,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class NSTimerTests: XCTestCase {
+class TimerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,18 +21,18 @@ class NSTimerTests: XCTestCase {
     
     func testAfter() {
         var fired = false
-        NSTimer.after(0.1.seconds) {
+        let _ = Timer.after(0.1.seconds) {
             assert(!fired)
             fired = true
             self.testEvery()
         }
     }
     
-    var timer1: NSTimer!
+    var timer1: Timer!
     
     func testEvery() {
         var fired = false
-        timer1 = NSTimer.every(0.1.seconds) {
+        timer1 = Timer.every(0.1.seconds) {
             if fired {
                 self.testNewAfter()
                 self.timer1.invalidate()
@@ -42,21 +42,21 @@ class NSTimerTests: XCTestCase {
         }
     }
     
-    let timer2 = NSTimer.new(after: 0.1.seconds) { fatalError() }
-    let timer3 = NSTimer.new(every: 0.1.seconds) { fatalError() }
+    let timer2 = Timer.new(after: 0.1.seconds) { fatalError() }
+    let timer3 = Timer.new(every: 0.1.seconds) { fatalError() }
     
     func testNewAfter() {
-        let timer = NSTimer.new(after: 0.1.seconds) {
+        let timer = Timer.new(after: 0.1.seconds) {
             self.testNewEvery()
         }
-        NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
+        RunLoop.current().add(timer, forMode: RunLoopMode.defaultRunLoopMode)
     }
     
-    var timer4: NSTimer!
+    var timer4: Timer!
     
     func testNewEvery() {
         var fired = false
-        timer4 = NSTimer.new(every: 0.1.seconds) {
+        timer4 = Timer.new(every: 0.1.seconds) {
             if fired {
                 self.timer4.invalidate()
                 self.testStart()
@@ -68,20 +68,20 @@ class NSTimerTests: XCTestCase {
     }
     
     func testStart() {
-        let timer = NSTimer.new(after: 0.1.seconds) {
+        let timer = Timer.new(after: 0.1.seconds) {
             self.testAfter2()
         }
         
-        timer.start(runLoop: NSRunLoop.currentRunLoop(), modes: NSDefaultRunLoopMode)
+        timer.start(runLoop: RunLoop.current(), modes: RunLoopMode.defaultRunLoopMode)
     }
     
     func testAfter2() {
-        NSTimer.after(0.1.seconds, testTimerFired)
+        let _ = Timer.after(0.1.seconds, testTimerFired)
     }
     
     func testTimerFired() {
         var fires = 0
-        let timer = NSTimer.new(every: 0.1.seconds) { (timer: NSTimer) in
+        let timer = Timer.new(every: 0.1.seconds) { (timer: Timer) in
             guard fires <= 1 else { fatalError("should be invalidated") }
             defer { fires += 1 }
             
@@ -95,7 +95,7 @@ class NSTimerTests: XCTestCase {
     
     func testTimerCleanup() {
         var fires = 0
-        NSTimer.every(0.1.seconds) { (timer: NSTimer) in
+        let _ = Timer.every(0.1.seconds) { (timer: Timer) in
             guard fires <= 1 else { fatalError("should be invalidated") }
             defer { fires += 1 }
             

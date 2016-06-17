@@ -29,16 +29,15 @@ Check out the repository to find examples / tests for each feature.
 - [MutableCollectionType](#mutablecollectiontype-extension)
 - [NSObject](#nsobject-extension)
 - [NSDate](#nsdate-extension)
-- [NSTimer](#nstimer-extension)
+- [Timer](#timer-extension)
 - [NSURL](#nsurl-extension)
-- [NSBundle](#nsbundle-extension)
 - [UIColor / NSColor](#uicolor-nscolor-extension)
-- [NSUserDefaults](#nsuserdefaults-extension)
-- [NSFileManager](#nsfilemanager-extension)
+- [UserDefaults](#userdefaults-extension)
+- [FileManager](#filemanager-extension)
 - [NSLayoutConstraint](#nslayoutconstraint-extension)
 - [NSMutableAttributedString](#nsmutableattributedstring-extension)
 - [NSRange](#nsrange-extension)
-- [NSNotificationCenter](#nsnotificationcenter-extension)
+- [NotificationCenter](#notificationcenter-extension)
 - [BlockNotification](#blocknotification)
 - [ReusableFormatters](#reusableformatters)
 - [Async](#async)
@@ -52,6 +51,7 @@ Check out the repository to find examples / tests for each feature.
 - [UIView](#uiview-extension)
 - [UIImage](#uiimage-extension)
 - [UIDevice](#uidevice-extension)
+- [Bundle](#bundle-extension)
 - [UIScreen](#uiscreen-extension)
 - [UIViewController](#uiviewcontroller-extension)
 - [UIAlertController](#uialertcontroller-extension)
@@ -393,13 +393,13 @@ print(now < now2) // true
 print(now2 < now) // false  
 ```
 
-## NSTimer extension
+## Timer extension
 
 Schedule timer every seconds:
 
 ``` swift
 var count = 0
-NSTimer.every(1.seconds) { (timer: NSTimer) in
+Timer.every(1.seconds) { timer in
     print("Will print every second")
     if count == 3 {
         timer.invalidate()
@@ -411,7 +411,7 @@ NSTimer.every(1.seconds) { (timer: NSTimer) in
 Schedule timer after a certain delay:
 
 ``` swift
-NSTimer.after(2.seconds) {
+Timer.after(2.seconds) {
     print("Prints this 2 seconds later in main queue")
 }
 ```
@@ -419,7 +419,7 @@ NSTimer.after(2.seconds) {
 Manual scheduling a timer:
 
 ``` swift
-let timer = NSTimer.new(every: 2.seconds) {
+let timer = Timer.new(every: 2.seconds) {
     print("Prints this 2 seconds later in main queue")
 }
 timer.start
@@ -428,7 +428,7 @@ timer.start
 Manual scheduling a timer with a delay:
 
 ``` swift
-let timer = NSTimer.new(after: 2.seconds) {
+let timer = Timer.new(after: 2.seconds) {
     print("Prints this 2 seconds later in main queue")
 }
 timer.start
@@ -450,23 +450,7 @@ if let queryParameters = url?.queryParameters {
 Add skip backup attributes to you URL:
 
 ``` swift
-let url = NSURL(fileURLWithPath: "/path/to/your/file")        url?.addSkipBackupAttribute() // File at url won't be backupped!
-```
-
-### NSBundle extension
-
-Get the app version:
-
-```swift
-NSBundle.mainBundle().appVersion
-NSBundle(URL: someURL)?.appVersion
-```
-
-Get the app build:
-
-```swift
-NSBundle(URL: someURL)?.appBuild
-NSBundle.mainBundle().appBuild
+let url = NSURL(string: "/path/to/your/file")        url?.addSkipBackupAttribute() // File at url won't be backupped!
 ```
 
 ## UIColor / NSColor extension
@@ -481,24 +465,12 @@ let myColor = NSColor(hex: 0x233C64) // Equals 35,60,100,1
 let myColor2 = NSColor(hexString: "not hex string") // nil
 ```
 
-Get lighter or darker variants of colors instances:
+### UserDefaults extension
 
-``` swift
-let color = UIColor(red: 0.5, green: 0.5, blue: 1.0, alpha: 1.0)
-let lighter = color.lighter()
-let darker = color.darker()
-
-let color = NSColor(red: 0.5, green: 0.5, blue: 1.0, alpha: 1.0)
-let lighter = color.lighter()
-let darker = color.darker()
-```
-
-### NSUserDefaults extension
-
-Get and set values from NSUserDefaults with subscripts:
+Get and set values from UserDefaults with subscripts:
 
 ```swift
-let Defaults = NSUserDefaults.standardUserDefaults()
+let Defaults = UserDefaults.standard()
 Defaults["userName"] = "test"
 print(Defaults["userName"]) // test
 ```
@@ -506,49 +478,49 @@ print(Defaults["userName"]) // test
 Check if the userdefaults contains a key:
 
 ```swift
-NSUserDefaults.contains("aKey")
+UserDefaults.contains("aKey")
 // OR
-NSUserDefaults.standarUserDefaults.contains("aKey")
+UserDefaults.standard().contains("aKey")
 ```
 
 Reset the defaults:
 
 ```swift
-NSUserDefaults.standarUserDefaults.reset()
+UserDefaults.standard().reset()
 ```
 
-### NSFileManager extension
+### FileManager extension
 
 Get documents directory url following the os:
 
 ```
-NSFileManager.documentDirectory()
+FileManager.documentDirectory()
 // OR
-NSFileManager.defaultManager.documentDirectory()
+FileManager.default.documentDirectory()
 ```
 
 Create a new directory:
 
 ```
-NSFileManager.createDirectory(at: directoryUR)
+FileManager.createDirectory(at: directoryUR)
 // OR
-NSFileManager.defaultManager().createDirectory(at: directoryUR)
+FileManager.default().createDirectory(at: directoryUR)
 ```
 
 Delete contents of temporary directory
 
 ```
-NSFileManager.deleteAllTemporaryFiles()
+FileManager.deleteAllTemporaryFiles()
 // OR
-NSFileManager.defaultManager().deleteAllTemporaryFiles()
+FileManager.default().deleteAllTemporaryFiles()
 ```
 
 Delete contents of documents directory
 
 ```
-NSFileManager.deleteAllDocumentFiles()
+FileManager.deleteAllDocumentFiles()
 // OR
-NSFileManager.defaultManager().deleteAllDocumentFiles()
+FileManager.default().deleteAllDocumentFiles()
 ```
 
 ### NSLayoutConstraint extension
@@ -557,11 +529,11 @@ Apply a multiplier to a constraint (currently working only for width and height)
 
 ```swift
 let view = UIView(CGRect(x: 0, y: 0, width: 100, height: 200))
-let constraint = NSLayoutConstraint(item: view, attribute: .Width, ...)
+let constraint = NSLayoutConstraint(item: view, attribute: .width, ...)
 constraint.applyMultiplier(0.5, toView: superview)
 print(constraint.constants) // 50
 
-let constraint = NSLayoutConstraint(item: view, attribute: .Height, ...)
+let constraint = NSLayoutConstraint(item: view, attribute: .height, ...)
 constraint.applyMultiplier(0.5, toView: superview)
 print(constraint.constants) // 100
 ```
@@ -654,14 +626,14 @@ let range = NSRange(rangeOf: stringToFind, in: string)
 print(range) // location: 1, length: 7
 ```
 
-### NSNotificationCenter extension
+### NotificationCenter extension
 
 Post a notification from a specific queue:
 
 ```
-NSNotificationCenter.defaultCenter().postNotification(name: "aNotification", queue: dispatch_get_main_queue()) 
-NSNotificationCenter.defaultCenter().postNotification(name: "aNotification", object: aObject queue: dispatch_get_main_queue())
-NSNotificationCenter.defaultCenter().postNotification(name: "aNotification", object: aObject userInfo: userInfo queue: dispatch_get_main_queue())
+NotificationCenter.default().postNotification(name: "aNotification", queue: DispatchQueue.main) 
+NotificationCenter.default().postNotification(name: "aNotification", object: aObject queue: DispatchQueue.main)
+NotificationCenter.default().postNotification(name: "aNotification", object: aObject userInfo: userInfo queue: DispatchQueue.main)
 ```
 
 ### BlockNotification
@@ -673,7 +645,7 @@ let notificationProxy = BlockNotification("aNotificationName": name) { notificat
 }
 
 // Post a notification
-NSNotificationCenter.defaultCenter().postNotificationName("aNotificationName", object: "Hello world")
+NotificationCenter.default().postNotificationName("aNotificationName", object: "Hello world")
 ```
 
 ### ReusableFormatters
@@ -681,13 +653,13 @@ NSNotificationCenter.defaultCenter().postNotificationName("aNotificationName", o
 Reuse your formatter to avoid heavy allocation:
 
 ```swift
-DateFormatter.sharedInstance
-NumberFormatter.sharedInstance
-ByteCountFormatter.sharedInstance
-DateComponentsFormatter.sharedInstance
-DateIntervalFormatter.sharedInstance
-EnergyFormatter.sharedInstance
-MassFormatter.sharedInstance
+SUDateFormatter.sharedInstance
+SUNumberFormatter.sharedInstance
+SUByteCountFormatter.sharedInstance
+SUDateComponentsFormatter.sharedInstance
+SUDateIntervalFormatter.sharedInstance
+SUEnergyFormatter.sharedInstance
+SUMassFormatter.sharedInstance
 ```
 
 ### Async
@@ -856,11 +828,20 @@ Create an image from a color:
 let image = UIImage(color: UIColor.greenColor())
 ```
 
-Fill an image with a color:
+### NSBundle extension
 
+Get the app version:
+
+```swift
+NSBundle.mainBundle().appVersion
+NSBundle(URL: someURL)?.appVersion
 ```
-let image = UIImage(named: "anImage")
-let greenImage = image.filled(with: UIColor.greenColor())
+
+Get the app build:
+
+```swift
+NSBundle(URL: someURL)?.appBuild
+NSBundle.mainBundle().appBuild
 ```
 
 ### UIScreen extension

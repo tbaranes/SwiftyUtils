@@ -97,11 +97,11 @@
 			isa = PBXGroup;
 			children = (
 				E27300D61CCD09D3003156EC /* SwiftyUtils.framework */,
-				E27300D81CCD09D3003156EC /* SwiftyUtils.framework */,
-				E27300DA1CCD09D3003156EC /* SwiftyUtils.framework */,
 				E27300DC1CCD09D3003156EC /* SwiftyUtils iOS Tests.xctest */,
-				E27300DE1CCD09D3003156EC /* SwiftyUtils tvOS Tests.xctest */,
+				E27300D81CCD09D3003156EC /* SwiftyUtils.framework */,
 				E27300E01CCD09D3003156EC /* SwiftyUtils OS X Tests.xctest */,
+				E27300DA1CCD09D3003156EC /* SwiftyUtils.framework */,
+				E27300DE1CCD09D3003156EC /* SwiftyUtils tvOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Tom Baranes";
 				TargetAttributes = {
 					E2D92EB41C0392E40065268F = {
@@ -399,6 +399,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tombaranes.SwiftyUtils-Demo-iOS";
 				PRODUCT_NAME = "SwiftyUtils Example";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};

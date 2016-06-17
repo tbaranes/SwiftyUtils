@@ -27,9 +27,9 @@ public extension NSLayoutConstraint {
     
     public func applyMultiplier(multiplier: CGFloat, toView: SwiftyView) {
         switch firstAttribute {
-        case .Width:
+        case .width:
             constant = toView.bounds.width * multiplier
-        case .Height:
+        case .height:
             constant = toView.bounds.height * multiplier
         default:
             break

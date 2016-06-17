@@ -22,58 +22,58 @@
 
 import Foundation
 
-public struct DateFormatter {
+public struct SUDateFormatter {
     
-    public static let sharedInstance = NSDateFormatter()
+    public static let sharedInstance = DateFormatter()
     private init() {}
     
 }
 
-public struct NumberFormatter {
+public struct SUNumberFormatter {
     
-    public static let sharedInstance = NSNumberFormatter()
+    public static let sharedInstance = NumberFormatter()
     private init() {}
     
 }
 
-public struct ByteCountFormatter {
+public struct SUByteCountFormatter {
 
-    public static let sharedInstance = NSByteCountFormatter()
+    public static let sharedInstance = ByteCountFormatter()
     private init() {}
     
 }
 
-public struct DateComponentsFormatter {
+public struct SUDateComponentsFormatter {
     
-    public static let sharedInstance = NSDateComponentsFormatter()
+    public static let sharedInstance = DateComponentsFormatter()
     private init() {}
     
 }
 
-public struct DateIntervalFormatter {
+public struct SUDateIntervalFormatter {
     
-    public static let sharedInstance = NSDateIntervalFormatter()
+    public static let sharedInstance = DateIntervalFormatter()
     private init() {}
     
 }
 
-public struct EnergyFormatter {
+public struct SUEnergyFormatter {
     
-    public static let sharedInstance = NSEnergyFormatter()
+    public static let sharedInstance = EnergyFormatter()
     private init() {}
     
 }
 
-public struct MassFormatter {
+public struct SUMassFormatter {
     
-    public static let sharedInstance = NSMassFormatter()
+    public static let sharedInstance = MassFormatter()
     private init() {}
     
 }
 
-public struct LengthFormatter {
+public struct SULengthFormatter {
     
-    public static let sharedInstance = NSLengthFormatter()
+    public static let sharedInstance = LengthFormatter()
     private init() {}
     
 }

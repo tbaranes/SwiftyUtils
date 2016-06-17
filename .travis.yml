@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode7.3
+osx_image: xcode8
 notifications:
   email: false
 env:
@@ -10,9 +10,9 @@ env:
   - IOS_FRAMEWORK_SCHEME="SwiftyUtils iOS"
   - OSX_FRAMEWORK_SCHEME="SwiftyUtils OS X"
   - TVOS_FRAMEWORK_SCHEME="SwiftyUtils tvOS"  
-  - IOS_SDK=iphonesimulator9.3
-  - OSX_SDK=macosx10.11
-  - TVOS_SDK=appletvsimulator9.2
+  - IOS_SDK=iphonesimulator10.0
+  - OSX_SDK=macosx10.12
+  - TVOS_SDK=appletvsimulator10.0
   - EXAMPLE_SCHEME="iOS Example"
   matrix:
     - DESTINATION="OS=8.1,name=iPhone 4S"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="YES"

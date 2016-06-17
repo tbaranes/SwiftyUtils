@@ -16,13 +16,13 @@ class OthersExampleViewController: UIViewController {
     
     @IBOutlet weak var labelAppVersion: UILabel! {
         didSet {
-            labelAppVersion.text = String(format: "App version: %@", NSBundle.mainBundle().appVersion!)
+            labelAppVersion.text = String(format: "App version: %@", Bundle.main().appVersion!)
         }
     }
     
     @IBOutlet weak var labelAppBuild: UILabel! {
         didSet {
-            labelAppBuild.text = String(format: "App build: %@", NSBundle.mainBundle().appBuild!)
+            labelAppBuild.text = String(format: "App build: %@", Bundle.main().appBuild!)
         }
     }
     
@@ -52,12 +52,12 @@ class OthersExampleViewController: UIViewController {
     
     @IBOutlet weak var imageViewWithColor: UIImageView! {
         didSet {
-            imageViewWithColor.image = UIImage(color: UIColor.orangeColor())
+            imageViewWithColor.image = UIImage(color: UIColor.orange())
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBackButton(tintColor: UIColor.greenColor())
+        setupBackButton(tintColor: UIColor.green())
     }
 }

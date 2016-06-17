@@ -25,7 +25,7 @@ import Foundation
 public extension NSRange {
     
     public init(text: String, afterOccurence occurence: String) {
-        self = (text as NSString).rangeOfString(occurence, options: [])
+        self = (text as NSString).range(of: occurence, options: [])
         if location != NSNotFound {
             location += 1
             length = text.length - location
@@ -33,7 +33,7 @@ public extension NSRange {
     }
  
     public init(rangeOf textToFind: String, in text: String) {
-        self = (text as NSString).rangeOfString(textToFind, options: [])
+        self = (text as NSString).range(of: textToFind, options: [])
     }
     
 }

@@ -36,10 +36,10 @@ extension UIViewController {
 
 extension UIViewController {
 
-    public func setupBackButton(hidden hidden: Bool = false, title: String = "", backIndicatorImage: UIImage? = nil, tintColor: UIColor? = UIColor.whiteColor()) {
+    public func setupBackButton(hidden: Bool = false, title: String = "", backIndicatorImage: UIImage? = nil, tintColor: UIColor? = UIColor.white()) {
         navigationItem.hidesBackButton = hidden
         if !hidden {
-            navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .Plain, target: nil, action: nil)
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
             
             if let unwrappedColor = tintColor {
                 navigationItem.backBarButtonItem?.tintColor = unwrappedColor

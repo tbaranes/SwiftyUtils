@@ -24,17 +24,16 @@ import Foundation
 
 public struct Async {
     
-    public static func background(queuePriority: dispatch_queue_priority_t = DISPATCH_QUEUE_PRIORITY_DEFAULT, closure: () -> Void) {
-        dispatch_async(dispatch_get_global_queue(queuePriority, 0), closure)
+    public static func background(closure: () -> Void) {
+        DispatchQueue(label: "com.swiftyutils.main").async(execute: closure)
     }
     
     public static func main(closure: () -> Void) {
-        dispatch_async(dispatch_get_main_queue(), closure)
+        DispatchQueue(label: "com.swiftyutils.main").async(execute: closure)
     }
     
-    public static func delay(delay: Double, closure: () -> Void) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))),
-                       dispatch_get_main_queue(), closure)
+    public static func delay(delay: Double, closure: () -> Void) {        
+        DispatchQueue(label: "com.swiftyutils.delay").after(when: DispatchTime.now() + delay, execute: closure)
     }
     
 }

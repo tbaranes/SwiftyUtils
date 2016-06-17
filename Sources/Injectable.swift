@@ -24,6 +24,6 @@ import Foundation
 
 public protocol Injectable {
     associatedtype T
-    func inject(_: T)
+    func inject(properties: T)
     func assertDependencies()
 }

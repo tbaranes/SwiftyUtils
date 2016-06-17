@@ -33,25 +33,25 @@ public extension NSMutableAttributedString {
     
     public static func setTextColor(text: String, color: SwiftyColor, afterOcurrence occurence: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
-        attrStr.setTextColor(color, afterOcurrence: occurence)
+        attrStr.setTextColor(color: color, afterOcurrence: occurence)
         return attrStr
     }
     
     public static func setTextColor(text: String, color: SwiftyColor, forOccurences searchString: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
-        attrStr.setTextColor(color, forOccurences: searchString)
+        attrStr.setTextColor(color: color, forOccurences: searchString)
         return attrStr
     }
     
     public func setTextColor(color: SwiftyColor, afterOcurrence occurence: String) {
         let range = NSRange(text: string, afterOccurence: occurence)
         if range.location != NSNotFound {
-            setTextColor(color, range: range)
+            setTextColor(value: color, range: range)
         }
     }
     
     public func setTextColor(color: SwiftyColor, forOccurences searchString: String) {
-        addAttributeForOccurence(searchString, value: color, funcAddingAttribute: setTextColor)
+        addAttributeForOccurence(searchString: searchString, value: color, funcAddingAttribute: setTextColor)
     }
     
     // MARK - Strike
@@ -76,7 +76,7 @@ public extension NSMutableAttributedString {
     }
     
     public func setTextStrike(forOccurences searchString: String) {
-        addAttributeForOccurence(searchString, funcAddingAttribute: setTextStrike)
+        addAttributeForOccurence(searchString: searchString, funcAddingAttribute: setTextStrike)
     }
     
     // MARK - Strike
@@ -101,7 +101,7 @@ public extension NSMutableAttributedString {
     }
     
     public func setTextUnderline(forOccurences searchString: String) {
-        addAttributeForOccurence(searchString, funcAddingAttribute: setTextUnderline)
+        addAttributeForOccurence(searchString: searchString, funcAddingAttribute: setTextUnderline)
     }
     
     // MARK - Private
@@ -111,7 +111,7 @@ public extension NSMutableAttributedString {
         let searchLength = searchString.length
         var range = NSRange(location: 0, length: length)
         while range.location != NSNotFound {
-            range = (string as NSString).rangeOfString(searchString, options: [], range: range)
+            range = (string as NSString).range(of: searchString, options: [], range: range)
             if range.location != NSNotFound {
                 funcAddingAttribute(value: value, range: NSRange(location: range.location, length: searchLength))
                 range = NSRange(location: range.location + range.length, length: inputLength - (range.location + range.length))

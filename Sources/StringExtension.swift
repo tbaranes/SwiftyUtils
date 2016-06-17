@@ -27,14 +27,13 @@ import Foundation
 public extension String {
     
     public subscript(integerIndex: Int) -> Character {
-        return self[startIndex.advancedBy(integerIndex)]
+        return self[index(startIndex, offsetBy: integerIndex)]
     }
     
     public subscript(integerRange: Range<Int>) -> String {
-        let start = startIndex.advancedBy(integerRange.startIndex)
-        let end = startIndex.advancedBy(integerRange.endIndex)
-        let range = start..<end
-        return self[range]
+        let start = index(startIndex, offsetBy: integerRange.lowerBound)
+        let end = index(startIndex, offsetBy: integerRange.upperBound)
+        return self[start..<end]
     }
     
 }
@@ -48,22 +47,22 @@ public extension String {
     }
     
     public func isOnlyEmptySpacesAndNewLineCharacters() -> Bool {
-        let characterSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
-        let newText = self.stringByTrimmingCharactersInSet(characterSet)
+        let characterSet = NSCharacterSet.whitespacesAndNewlines()        
+        let newText = self.trimmingCharacters(in: characterSet)
         return newText.isEmpty
     }
 
     func contains(find: String) -> Bool {
-        return self.rangeOfString(find) != nil
+        return self.range(of: find) != nil
     }
 
-    public func contains(find: String, compareOption: NSStringCompareOptions) -> Bool {
-        return self.rangeOfString(find, options: compareOption) != nil
+    public func contains(find: String, compareOption: NSString.CompareOptions) -> Bool {
+        return self.range(of: find, options: compareOption) != nil
     }
     
     public func containsEmoji() -> Bool {
         for i in 0...length {
-            let c: unichar = (self as NSString).characterAtIndex(i)
+            let c: unichar = (self as NSString).character(at: i)
             if (0xD800 <= c && c <= 0xDBFF) || (0xDC00 <= c && c <= 0xDFFF) {
                 return true
             }
@@ -81,17 +80,17 @@ public extension String {
         var urls: [NSURL] = []
         let detector: NSDataDetector?
         do {
-            detector = try NSDataDetector(types: NSTextCheckingType.Link.rawValue)
+            detector = try NSDataDetector(types: TextCheckingResult.CheckingType.link.rawValue)
         } catch _ as NSError {
             detector = nil
         }
         
         let text = self
         if let detector = detector {
-            detector.enumerateMatchesInString(text, options: [], range: NSRange(location: 0, length: text.characters.count), usingBlock: {
-                (result: NSTextCheckingResult?, flags: NSMatchingFlags, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
+            detector.enumerateMatches(in: text, options: [], range: NSRange(location: 0, length: text.characters.count), using: {
+                (result: TextCheckingResult?, flags: RegularExpression.MatchingFlags, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
                 if let result = result,
-                    let url = result.URL {
+                    let url = result.url {
                     urls.append(url)
                 }
             })
@@ -110,25 +109,24 @@ public extension String {
     }
     
     public func trimmed() -> String {
-        return componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).joinWithSeparator("")
+        return components(separatedBy: NSCharacterSet.whitespacesAndNewlines()).joined(separator: "")
     }
     
-    public mutating func truncate(limit limit: Int) {
+    public mutating func truncate(limit: Int) {
         self = truncated(limit: limit)
     }
     
-    public func truncated(limit limit: Int) -> String {
+    public func truncated(limit: Int) -> String {
         if self.length > limit {
             var truncatedString = self[0..<limit]
-            truncatedString = truncatedString.stringByAppendingString("...")
+            truncatedString = truncatedString.appending("...")
             return truncatedString
         }
         return self
     }
 
     public var capitalizeFirst: String {
-        var result = self
-        result.replaceRange(startIndex...startIndex, with: String(self[startIndex]).capitalizedString)
+        let result = replacingCharacters(in: Range(startIndex..<startIndex), with: String(self[startIndex]).capitalized)
         return result
     }
     
@@ -139,7 +137,7 @@ public extension String {
 public extension String {
 
     public func isNumber() -> Bool {
-        if let _ = NumberFormatter.sharedInstance.numberFromString(self) {
+        if let _ = SUNumberFormatter.sharedInstance.number(from: self) {
             return true
         }
         return false
@@ -147,7 +145,7 @@ public extension String {
 
     public var isEmail: Bool {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
-        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluateWithObject(self)
+        return Predicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: self)
     }
 
 }

@@ -24,22 +24,22 @@ import Foundation
 
 // MARK: Schedule
 
-public extension NSTimer {
+public extension Timer {
     
-    public class func after(interval: NSTimeInterval, _ block: () -> Void) -> NSTimer {
-        let timer = NSTimer.new(after: interval, block)
+    public class func after(_ interval: TimeInterval, _ block: () -> Void) -> Timer {
+        let timer = Timer.new(after: interval, block)
         timer.start()
         return timer
     }
     
-    public class func every(interval: NSTimeInterval, _ block: () -> Void) -> NSTimer {
-        let timer = NSTimer.new(every: interval, block)
+    public class func every(_ interval: TimeInterval, _ block: () -> Void) -> Timer {
+        let timer = Timer.new(every: interval, block)
         timer.start()
         return timer
     }
     
-    @nonobjc public class func every(interval: NSTimeInterval, _ block: NSTimer -> Void) -> NSTimer {
-        let timer = NSTimer.new(every: interval, block)
+    @nonobjc public class func every(_ interval: TimeInterval, _ block: (Timer) -> Void) -> Timer {
+        let timer = Timer.new(every: interval, block)
         timer.start()
         return timer
     }
@@ -48,32 +48,32 @@ public extension NSTimer {
 
 // MARK: - Manual schedule
 
-public extension NSTimer {
+public extension Timer {
     
-    public class func new(after interval: NSTimeInterval, _ block: () -> Void) -> NSTimer {
+    public class func new(after interval: TimeInterval, _ block: () -> Void) -> Timer {
         return CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, CFAbsoluteTimeGetCurrent() + interval, 0, 0, 0) { _ in
             block()
         }
     }
     
-    public class func new(every interval: NSTimeInterval, _ block: () -> Void) -> NSTimer {
+    public class func new(every interval: TimeInterval, _ block: () -> Void) -> Timer {
         return CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, CFAbsoluteTimeGetCurrent() + interval, interval, 0, 0) { _ in
             block()
         }
     }
     
-    @nonobjc public class func new(every interval: NSTimeInterval, _ block: NSTimer -> Void) -> NSTimer {
-        var timer: NSTimer!
+    @nonobjc public class func new(every interval: TimeInterval, _ block: (Timer) -> Void) -> Timer {
+        var timer: Timer!
         timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, CFAbsoluteTimeGetCurrent() + interval, interval, 0, 0) { _ in
             block(timer)
         }
         return timer
     }
     
-    public func start(runLoop runLoop: NSRunLoop = NSRunLoop.currentRunLoop(), modes: String...) {
-        let modes = modes.isEmpty ? [NSDefaultRunLoopMode] : modes
+    public func start(runLoop: RunLoop = RunLoop.current(), modes: RunLoopMode...) {
+        let modes = modes.isEmpty ? [RunLoopMode.defaultRunLoopMode] : modes
         modes.forEach {
-            runLoop.addTimer(self, forMode: $0)
+            runLoop.add(self, forMode: $0)
         }
     }
 }

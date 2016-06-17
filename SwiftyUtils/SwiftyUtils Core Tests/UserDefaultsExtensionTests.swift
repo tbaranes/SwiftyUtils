@@ -9,7 +9,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class NSUserDefaultsExtensionTests: XCTestCase {
+class UserDefaultsExtensionTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -23,10 +23,10 @@ class NSUserDefaultsExtensionTests: XCTestCase {
 
 // MARK - Subscript
 
-extension NSUserDefaultsExtensionTests {
+extension UserDefaultsExtensionTests {
     
     func testSubscript() {
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard()
         let username = "test"
         defaults["userName"] = username
         XCTAssertEqual(defaults["userName"] as? String ?? "", username)
@@ -35,19 +35,18 @@ extension NSUserDefaultsExtensionTests {
 
 // MARK -
 
-extension NSUserDefaultsExtensionTests {
+extension UserDefaultsExtensionTests {
     
     func testContainsKeySuccess() {
         let key = "aKey"
         let value = "aValue"
-        NSUserDefaults.standardUserDefaults().setObject(value, forKey: key)
-        NSUserDefaults.standardUserDefaults().synchronize()
-        XCTAssertTrue(NSUserDefaults.contains(key))
+        UserDefaults.standard().set(value, forKey: key)
+        XCTAssertTrue(UserDefaults.contains(key: key))
     }
 
     func testContainsKeyFailure() {
         let key = "aFakeKey"
-        XCTAssertFalse(NSUserDefaults.contains(key))
+        XCTAssertFalse(UserDefaults.contains(key: key))
     }
  
 }

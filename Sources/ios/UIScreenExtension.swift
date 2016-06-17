@@ -1,3 +1,4 @@
+
 // UIScreenExtension.swift
 //
 // Copyright (c) 2016 Tom Baranes
@@ -25,28 +26,28 @@ import UIKit
 public extension UIScreen {
 
     public static func screenOrientation() -> UIInterfaceOrientation {
-        return UIApplication.sharedApplication().statusBarOrientation
+        return UIApplication.shared().statusBarOrientation
     }
     
     public static func screenSize() -> CGSize {
-        return CGSizeMake(screenWidth, screenHeight)
+        return CGSize(width: screenWidth, height: screenHeight)
     }
 
     public static var screenWidth: CGFloat {
-        return UIInterfaceOrientationIsPortrait(screenOrientation()) ? UIScreen.mainScreen().bounds.size.width : UIScreen.mainScreen().bounds.size.height
+        return UIInterfaceOrientationIsPortrait(screenOrientation()) ? UIScreen.main().bounds.size.width : UIScreen.main().bounds.size.height
     }
     
     public static var screenHeight: CGFloat {
-        return UIInterfaceOrientationIsPortrait(screenOrientation()) ? UIScreen.mainScreen().bounds.size.height : UIScreen.mainScreen().bounds.size.width
+        return UIInterfaceOrientationIsPortrait(screenOrientation()) ? UIScreen.main().bounds.size.height : UIScreen.main().bounds.size.width
     }
     
     public static var screenStatusBarHeight: CGFloat {
-        return UIApplication.sharedApplication().statusBarFrame.height
+        return UIApplication.shared().statusBarFrame.height
     }
     
     public static var screenHeightWithoutStatusBar: CGFloat {
-        return UIInterfaceOrientationIsPortrait(screenOrientation()) ? UIScreen.mainScreen().bounds.size.height - screenStatusBarHeight :
-            UIScreen.mainScreen().bounds.size.width - screenStatusBarHeight
+        return UIInterfaceOrientationIsPortrait(screenOrientation()) ? UIScreen.main().bounds.size.height - screenStatusBarHeight :
+            UIScreen.main().bounds.size.width - screenStatusBarHeight
     }
     
 }

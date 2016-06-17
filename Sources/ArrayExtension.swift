@@ -26,17 +26,17 @@ import Foundation
 
 public extension Array where Element : Equatable {
 
-    public mutating func removeObject(object : Generator.Element) -> Bool {
-        if let index = self.indexOf(object) {
-            self.removeAtIndex(index)
+    public mutating func removeObject(object : Iterator.Element) -> Bool {
+        if let index = self.index(of: object) {
+            self.remove(at: index)
             return true
         }
         return false
     }
     
     public mutating func removeObjects(object: Element) {
-        for idx in self.indexesOf(object).reverse() {
-            self.removeAtIndex(idx)
+        for idx in self.indexesOf(object: object).reversed() {
+            self.remove(at: idx)
         }
     }
 
@@ -78,7 +78,7 @@ public extension Array where Element : Equatable {
     }
 
     public func lastIndexOf(object: Element) -> Int? {
-        return indexesOf(object).last
+        return indexesOf(object: object).last
     }
     
     public func difference(values: [Element]...) -> [Element] {
@@ -98,7 +98,7 @@ public extension Array where Element : Equatable {
         var result = self
         var intersection = Array()
         
-        for (i, value) in values.enumerate() {
+        for (i, value) in values.enumerated() {
             if i > 0 {
                 result = intersection
                 intersection = Array()
@@ -165,7 +165,7 @@ public extension Array {
 public extension Array where Element : Equatable {
 
     public func contains(items: Element...) -> Bool {
-        return items.testAll { self.indexOf($0) >= 0 }
+        return items.testAll { self.index(of: $0) >= 0 }
     }
 
     public func containsArray(lookFor: [Element]) -> Bool {

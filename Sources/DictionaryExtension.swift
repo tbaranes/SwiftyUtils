@@ -61,7 +61,7 @@ public extension Dictionary {
 public extension Dictionary {
     
     public func has(key: Key) -> Bool {
-        return indexForKey(key) != nil
+        return index(forKey: key) != nil
     }
     
     public func testAll(test: (Key, Value) -> (Bool)) -> Bool {
@@ -80,8 +80,8 @@ public extension Dictionary where Value: Equatable {
         var result = self
         for dictionary in dictionaries {
             for (key, value) in dictionary {
-                if result.has(key) && result[key] == value {
-                    result.removeValueForKey(key)
+                if result.has(key: key) && result[key] == value {
+                    result.removeValue(forKey: key)
                 }
             }
         }
@@ -89,16 +89,16 @@ public extension Dictionary where Value: Equatable {
     }
 }
 
-public func += <KeyType, ValueType> (inout left: Dictionary<KeyType, ValueType>, right: Dictionary<KeyType, ValueType>) {
+public func += <KeyType, ValueType> (left: inout Dictionary<KeyType, ValueType>, right: Dictionary<KeyType, ValueType>) {
     for (k, v) in right {
         left.updateValue(v, forKey: k)
     }
 }
 
 public func - <K, V: Equatable> (first: [K: V], second: [K: V]) -> [K: V] {
-    return first.difference(second)
+    return first.difference(dictionaries: second)
 }
 
 public func | <K: Hashable, V> (first: [K: V], second: [K: V]) -> [K: V] {
-    return first.union(second)
+    return first.union(dictionaries: second)
 }

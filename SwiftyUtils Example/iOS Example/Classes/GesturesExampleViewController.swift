@@ -75,19 +75,19 @@ class GesturesExampleViewController: UIViewController {
     }
 
     func handleSwipeGesture() {
-        let swipeDownGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1, direction: .Down) { _ in
+        let swipeDownGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1, direction: .down) { _ in
             self.swipeCounter += 1
         }
         
-        let swipeUpGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1, direction: .Up) { _ in
+        let swipeUpGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1, direction: .up) { _ in
             self.swipeCounter += 1
         }
         
-        let swipeLeftGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1, direction: .Left) { _ in
+        let swipeLeftGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1, direction: .left) { _ in
             self.swipeCounter += 1
         }
         
-        let swipeRightGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1, direction: .Right) { _ in
+        let swipeRightGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1, direction: .right) { _ in
             self.swipeCounter += 1
         }
 
@@ -99,12 +99,12 @@ class GesturesExampleViewController: UIViewController {
     
     func handlePanGesture() {
         let panGesture = BlockPanGestureRecognizer(minimumNumberOfTouches: 1) { gesture in
-            if gesture.state == .Began {
+            if gesture.state == .began {
                 self.lastPanViewLocation = gesture.view!.center
             } else {
-                let translation = gesture.translationInView(gesture.view?.superview)
-                gesture.view?.center = CGPointMake(self.lastPanViewLocation.x + translation.x,
-                self.lastPanViewLocation.y + translation.y);
+                let translation = gesture.translation(in: gesture.view?.superview)
+                gesture.view?.center = CGPoint(x: self.lastPanViewLocation.x + translation.x,
+                                               y: self.lastPanViewLocation.y + translation.y);
             }
         }
         
@@ -113,7 +113,7 @@ class GesturesExampleViewController: UIViewController {
     
     func handlePinchGesture() {
         let pinchGesture = BlockPinchGestureRecognizer { (gesture: UIPinchGestureRecognizer) in
-            gesture.view?.transform = CGAffineTransformScale(gesture.view!.transform, gesture.scale, gesture.scale)
+            gesture.view?.transform = gesture.view!.transform.scaleBy(x: gesture.scale, y: gesture.scale)
             gesture.scale = 1.0
         }
         viewPinchGesture.addGestureRecognizer(pinchGesture)

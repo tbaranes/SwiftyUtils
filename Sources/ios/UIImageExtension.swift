@@ -25,13 +25,13 @@ import UIKit
 public extension UIImage {
 
     public convenience init(color: UIColor?) {
-        let rect = CGRectMake(0, 0, 1, 1)
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
         color?.setFill()
         UIRectFill(rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        self.init(CGImage: image.CGImage!)
+        UIGraphicsEndImageContext()        
+        self.init(cgImage: (image?.cgImage!)!)
     }
 
     public func filled(with color: UIColor?) -> UIImage {

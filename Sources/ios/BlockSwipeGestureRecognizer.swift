@@ -30,7 +30,7 @@ public class BlockSwipeGestureRecognizer: UISwipeGestureRecognizer {
         self.init()
         self.numberOfTouchesRequired = numberOfTouchesRequired
         self.swipeAction = swipeAction
-        self.addTarget(self, action: #selector(handleSwipe(_:)))
+        self.addTarget(self, action: #selector(handleSwipe(swipe:)))
     }
     
     public  convenience init (numberOfTouchesRequired: Int = 1, direction: UISwipeGestureRecognizerDirection,  swipeAction: ((UISwipeGestureRecognizer) -> Void)?) {
@@ -38,7 +38,7 @@ public class BlockSwipeGestureRecognizer: UISwipeGestureRecognizer {
         self.numberOfTouchesRequired = numberOfTouchesRequired
         self.direction = direction
         self.swipeAction = swipeAction
-        self.addTarget(self, action: #selector(handleSwipe(_:)))
+        self.addTarget(self, action: #selector(handleSwipe(swipe:)))
     }
     
     func handleSwipe(swipe: UISwipeGestureRecognizer) {

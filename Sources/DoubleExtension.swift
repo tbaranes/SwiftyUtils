@@ -23,19 +23,19 @@
 import Foundation
 
 public extension Double {
-    public var millisecond: NSTimeInterval { return self / 1000 }
-    public var milliseconds: NSTimeInterval { return self / 1000 }
-    public var ms: NSTimeInterval { return self / 1000 }
+    public var millisecond: TimeInterval { return self / 1000 }
+    public var milliseconds: TimeInterval { return self / 1000 }
+    public var ms: TimeInterval { return self / 1000 }
     
-    public var second: NSTimeInterval { return self }
-    public var seconds: NSTimeInterval { return self }
+    public var second: TimeInterval { return self }
+    public var seconds: TimeInterval { return self }
     
-    public var minute: NSTimeInterval { return self * 60 }
-    public var minutes: NSTimeInterval { return self * 60 }
+    public var minute: TimeInterval { return self * 60 }
+    public var minutes: TimeInterval { return self * 60 }
     
-    public var hour: NSTimeInterval { return self * 3600 }
-    public var hours: NSTimeInterval { return self * 3600 }
+    public var hour: TimeInterval { return self * 3600 }
+    public var hours: TimeInterval { return self * 3600 }
     
-    public var day: NSTimeInterval { return self * 3600 * 24 }
-    public var days: NSTimeInterval { return self * 3600 * 24 }
+    public var day: TimeInterval { return self * 3600 * 24 }
+    public var days: TimeInterval { return self * 3600 * 24 }
 }

@@ -29,7 +29,7 @@ public class BlockPinchGestureRecognizer: UIPinchGestureRecognizer {
     public  convenience init (pinchAction: ((UIPinchGestureRecognizer) -> Void)?) {
         self.init()
         self.pinchAction = pinchAction
-        self.addTarget(self, action: #selector(handlePinch(_:)))
+        self.addTarget(self, action: #selector(handlePinch(pinch:)))
     }
     
     func handlePinch(pinch: UIPinchGestureRecognizer) {

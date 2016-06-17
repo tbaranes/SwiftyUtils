@@ -14,45 +14,45 @@ class AttributedStringExampleViewController: UIViewController {
 
     @IBOutlet weak var labelColorizeAfterOccurence: UILabel! {
         didSet {
-            labelColorizeAfterOccurence.attributedText = NSMutableAttributedString.setTextColor("hello world", color: UIColor.greenColor(), afterOcurrence: "hello")
+            labelColorizeAfterOccurence.attributedText = NSMutableAttributedString.setTextColor(text: "hello world", color: UIColor.green(), afterOcurrence: "hello")
         }
     }
     
     @IBOutlet weak var labelColorizeForEachOccurence: UILabel! {
         didSet {
-            labelColorizeForEachOccurence.attributedText = NSMutableAttributedString.setTextColor("hello world", color: UIColor.greenColor(), forOccurences: "o")
+            labelColorizeForEachOccurence.attributedText = NSMutableAttributedString.setTextColor(text: "hello world", color: UIColor.green(), forOccurences: "o")
         }
     }
     
     @IBOutlet weak var labelStrikeAfterOccurence: UILabel! {
         didSet {
-            labelStrikeAfterOccurence.attributedText = NSMutableAttributedString.setTextStrike("hello world", afterOcurrence: "o")
+            labelStrikeAfterOccurence.attributedText = NSMutableAttributedString.setTextStrike(text: "hello world", afterOcurrence: "o")
         }
     }
     
     @IBOutlet weak var labelStrikeForEachOccurence: UILabel! {
         didSet {
-            labelStrikeForEachOccurence.attributedText = NSMutableAttributedString.setTextStrike("hello world", forOccurences: "o")
+            labelStrikeForEachOccurence.attributedText = NSMutableAttributedString.setTextStrike(text: "hello world", forOccurences: "o")
         }
     }
     
     @IBOutlet weak var labelUnderlineAfterOccurence: UILabel! {
         didSet {
-            labelUnderlineAfterOccurence.attributedText = NSMutableAttributedString.setTextUnderline("hello world", afterOcurrence: "o")
+            labelUnderlineAfterOccurence.attributedText = NSMutableAttributedString.setTextUnderline(text: "hello world", afterOcurrence: "o")
         }
     }
     
     @IBOutlet weak var labelUnderlineForEachOccurence: UILabel! {
         didSet {
-            labelUnderlineForEachOccurence.attributedText = NSMutableAttributedString.setTextUnderline("hello world", forOccurences: "o")
+            labelUnderlineForEachOccurence.attributedText = NSMutableAttributedString.setTextUnderline(text: "hello world", forOccurences: "o")
         }
     }
     
     @IBOutlet weak var labelCombiningAllAttrExample: UILabel! {
         didSet {
             let attrStr = NSMutableAttributedString(string: "hello world")
-            attrStr.setTextColor(UIColor.orangeColor(), afterOcurrence: "hello")
-            attrStr.setTextColor(UIColor.greenColor(), forOccurences: "o") 
+            attrStr.setTextColor(color: UIColor.orange(), afterOcurrence: "hello")
+            attrStr.setTextColor(color: UIColor.green(), forOccurences: "o")
             attrStr.setTextStrike(forOccurences: "o")
             attrStr.setTextStrike(afterOcurrence: "hello")
             attrStr.setTextUnderline(forOccurences: "o")

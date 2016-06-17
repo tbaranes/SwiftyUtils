@@ -27,26 +27,25 @@ import Foundation
 public extension NSDate {
     
     public convenience init?(fromString string: String, format: String) {
-        let formatter = DateFormatter.sharedInstance
+        let formatter = SUDateFormatter.sharedInstance
         formatter.dateFormat = format
-        guard let date = formatter.dateFromString(string) else {
+        guard let date = formatter.date(from: string) else {
             return nil
         }
-
-        self.init(timeInterval: 0, sinceDate: date)
+        self.init(timeInterval: 0, since: date)
     }
     
-    public func toString(dateStyle dateStyle: NSDateFormatterStyle = .MediumStyle, timeStyle: NSDateFormatterStyle = .MediumStyle) -> String {
-        let formatter = DateFormatter.sharedInstance
+    public func toString(dateStyle: DateFormatter.Style = .mediumStyle, timeStyle: DateFormatter.Style = .mediumStyle) -> String {
+        let formatter = SUDateFormatter.sharedInstance
         formatter.dateStyle = dateStyle
         formatter.timeStyle = timeStyle
-        return formatter.stringFromDate(self)
+        return formatter.string(from: self as Date)
     }
     
-    public func toString(format format: String) -> String {
-        let formatter = DateFormatter.sharedInstance
+    public func toString(format: String) -> String {
+        let formatter = SUDateFormatter.sharedInstance
         formatter.dateFormat = format
-        return formatter.stringFromDate(self)
+        return formatter.string(from: self as Date)
     }
     
 }
@@ -78,17 +77,17 @@ public extension NSDate {
         diff = fabs(diff)
         return diff
     }
-    
+
 }
 
 public func == (lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.isEqualToDate(rhs)
+    return lhs.isEqual(to: rhs as Date as Date)
 }
 
 public func < (lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) == .OrderedAscending
+    return lhs.compare(rhs as Date) == .orderedAscending
 }
 
 public func > (lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) == .OrderedDescending
+    return lhs.compare(rhs as Date) == .orderedDescending
 }

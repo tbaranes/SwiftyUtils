@@ -30,7 +30,7 @@ public class BlockPanGestureRecognizer: UIPanGestureRecognizer {
         self.init()
         self.minimumNumberOfTouches = minimumNumberOfTouches
         self.panAction = panAction
-        self.addTarget(self, action: #selector(handlePan(_:)))
+        self.addTarget(self, action: #selector(handlePan(pan:)))
     }
     
     func handlePan(pan: UIPanGestureRecognizer) {

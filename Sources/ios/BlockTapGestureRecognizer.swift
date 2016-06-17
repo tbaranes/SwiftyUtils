@@ -31,7 +31,7 @@ public class BlockTapGestureRecognizer: UITapGestureRecognizer {
         self.numberOfTapsRequired = numberOfTapsRequired
         self.numberOfTouchesRequired = numberOfTouchesRequired
         self.tapAction = tapAction
-        self.addTarget(self, action: #selector(handleTap(_:)))
+        self.addTarget(self, action: #selector(handleTap(tap:)))
     }
     
     func handleTap(tap: UITapGestureRecognizer) {

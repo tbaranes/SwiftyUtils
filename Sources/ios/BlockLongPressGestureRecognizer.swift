@@ -32,7 +32,7 @@ public class BlockLongPressGestureRecognizer: UILongPressGestureRecognizer {
         self.numberOfTouchesRequired = numberOfTouchesRequired
         self.minimumPressDuration = minimumPressDuration
         self.longPressAction = longPress
-        self.addTarget(self, action: #selector(handleLongPress(_:)))
+        self.addTarget(self, action: #selector(handleLongPress(longPress:)))
     }
     
     func handleLongPress(longPress: UILongPressGestureRecognizer) {

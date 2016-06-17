@@ -10,17 +10,17 @@ import Foundation
 
 extension UIApplication {
     
-    public func topViewController(baseViewController: UIViewController? = UIApplication.sharedApplication().keyWindow?.rootViewController) -> UIViewController? {
+    public func topViewController(baseViewController: UIViewController? = UIApplication.shared().keyWindow?.rootViewController) -> UIViewController? {
         guard let base = baseViewController else {
             return nil
         }
         
         if let nav = base as? UINavigationController {
-            return topViewController(nav.visibleViewController)
+            return topViewController(baseViewController: nav.visibleViewController)
         } else if let tab = base as? UITabBarController, selected = tab.selectedViewController {
-            return topViewController(selected)
+            return topViewController(baseViewController: selected)
         } else if let presented = base.presentedViewController {
-            return topViewController(presented)
+            return topViewController(baseViewController: presented)
         }
         return base
     }
@@ -28,5 +28,5 @@ extension UIApplication {
 }
 
 func test() {
-    UIApplication.sharedApplication().topViewController()
+    UIApplication.shared().topViewController()
 }

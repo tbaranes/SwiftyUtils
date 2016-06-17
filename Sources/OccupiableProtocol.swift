@@ -41,9 +41,9 @@ extension Set: Occupiable { }
 public extension Optional where Wrapped: Occupiable {
     public var isNilOrEmpty: Bool {
         switch self {
-        case .None:
+        case .none:
             return true
-        case .Some(let value):
+        case .some(let value):
             return value.isEmpty
         }
     }

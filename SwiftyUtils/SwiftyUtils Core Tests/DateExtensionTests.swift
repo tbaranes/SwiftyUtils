@@ -9,7 +9,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class NSDateExtensionTests: XCTestCase {
+class DateExtensionTests: XCTestCase {
 
     var string: String!
     let format = "dd-mm-yyyy hh:mm:ss"
@@ -21,7 +21,7 @@ class NSDateExtensionTests: XCTestCase {
     
 }
 
-extension NSDateExtensionTests {
+extension DateExtensionTests {
     
     func testDateFromString() {
         guard let dateFromString = NSDate(fromString: string, format: format) else {
@@ -42,7 +42,7 @@ extension NSDateExtensionTests {
     
 }
 
-extension NSDateExtensionTests {
+extension DateExtensionTests {
     
     func testComparable() {
         let date = NSDate()
