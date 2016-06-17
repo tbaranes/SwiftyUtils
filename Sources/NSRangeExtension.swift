@@ -32,7 +32,7 @@ public extension NSRange {
         }
     }
  
-    public init(rangeOf textToFind: String, in text: String) {
+    public init(textToFind: String, in text: String) {
         self = (text as NSString).range(of: textToFind, options: [])
     }
     

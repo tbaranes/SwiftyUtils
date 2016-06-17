@@ -39,7 +39,7 @@
 		E27300391CCD0633003156EC /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF601CCD0040003156EC /* DoubleExtension.swift */; };
 		E273003A1CCD0633003156EC /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF611CCD0040003156EC /* Injectable.swift */; };
 		E273003B1CCD0633003156EC /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF621CCD0040003156EC /* IntExtension.swift */; };
-		E273003C1CCD0633003156EC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* DateExtension.swift */; };
+		E273003C1CCD0633003156EC /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* NSDateExtension.swift */; };
 		E273003D1CCD0633003156EC /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF641CCD0040003156EC /* FileManagerExtension.swift */; };
 		E273003E1CCD0633003156EC /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF651CCD0040003156EC /* NSMutableAttributedStringExtension.swift */; };
 		E273003F1CCD0633003156EC /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF661CCD0040003156EC /* NSRangeExtension.swift */; };
@@ -59,7 +59,7 @@
 		E273004D1CCD0633003156EC /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF601CCD0040003156EC /* DoubleExtension.swift */; };
 		E273004E1CCD0633003156EC /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF611CCD0040003156EC /* Injectable.swift */; };
 		E273004F1CCD0633003156EC /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF621CCD0040003156EC /* IntExtension.swift */; };
-		E27300501CCD0633003156EC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* DateExtension.swift */; };
+		E27300501CCD0633003156EC /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* NSDateExtension.swift */; };
 		E27300511CCD0633003156EC /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF641CCD0040003156EC /* FileManagerExtension.swift */; };
 		E27300521CCD0633003156EC /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF651CCD0040003156EC /* NSMutableAttributedStringExtension.swift */; };
 		E27300531CCD0633003156EC /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF661CCD0040003156EC /* NSRangeExtension.swift */; };
@@ -131,7 +131,7 @@
 		E273FF801CCD0040003156EC /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF601CCD0040003156EC /* DoubleExtension.swift */; };
 		E273FF831CCD0040003156EC /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF611CCD0040003156EC /* Injectable.swift */; };
 		E273FF861CCD0040003156EC /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF621CCD0040003156EC /* IntExtension.swift */; };
-		E273FF891CCD0040003156EC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* DateExtension.swift */; };
+		E273FF891CCD0040003156EC /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* NSDateExtension.swift */; };
 		E273FF8C1CCD0040003156EC /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF641CCD0040003156EC /* FileManagerExtension.swift */; };
 		E273FF8F1CCD0040003156EC /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF651CCD0040003156EC /* NSMutableAttributedStringExtension.swift */; };
 		E273FF921CCD0040003156EC /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF661CCD0040003156EC /* NSRangeExtension.swift */; };
@@ -230,7 +230,7 @@
 		E273FF601CCD0040003156EC /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		E273FF611CCD0040003156EC /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		E273FF621CCD0040003156EC /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
-		E273FF631CCD0040003156EC /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		E273FF631CCD0040003156EC /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		E273FF641CCD0040003156EC /* FileManagerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
 		E273FF651CCD0040003156EC /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
 		E273FF661CCD0040003156EC /* NSRangeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRangeExtension.swift; sourceTree = "<group>"; };
@@ -456,7 +456,7 @@
 				E273FF5F1CCD0040003156EC /* DictionaryExtension.swift */,
 				E273FF601CCD0040003156EC /* DoubleExtension.swift */,
 				E273FF621CCD0040003156EC /* IntExtension.swift */,
-				E273FF631CCD0040003156EC /* DateExtension.swift */,
+				E273FF631CCD0040003156EC /* NSDateExtension.swift */,
 				E273FF641CCD0040003156EC /* FileManagerExtension.swift */,
 				E273FF651CCD0040003156EC /* NSMutableAttributedStringExtension.swift */,
 				E273FF661CCD0040003156EC /* NSRangeExtension.swift */,
@@ -749,7 +749,7 @@
 				E269E82B1D0152720085992E /* Then.swift in Sources */,
 				E273004E1CCD0633003156EC /* Injectable.swift in Sources */,
 				E273004F1CCD0633003156EC /* IntExtension.swift in Sources */,
-				E27300501CCD0633003156EC /* DateExtension.swift in Sources */,
+				E27300501CCD0633003156EC /* NSDateExtension.swift in Sources */,
 				E27300471CCD0633003156EC /* ArrayExtension.swift in Sources */,
 				E27300571CCD0633003156EC /* OccupiableProtocol.swift in Sources */,
 				E273004D1CCD0633003156EC /* DoubleExtension.swift in Sources */,
@@ -779,7 +779,7 @@
 				E269E82A1D0152710085992E /* Then.swift in Sources */,
 				E273003A1CCD0633003156EC /* Injectable.swift in Sources */,
 				E273003B1CCD0633003156EC /* IntExtension.swift in Sources */,
-				E273003C1CCD0633003156EC /* DateExtension.swift in Sources */,
+				E273003C1CCD0633003156EC /* NSDateExtension.swift in Sources */,
 				E27300331CCD0633003156EC /* ArrayExtension.swift in Sources */,
 				E27300431CCD0633003156EC /* OccupiableProtocol.swift in Sources */,
 				E27300391CCD0633003156EC /* DoubleExtension.swift in Sources */,
@@ -888,7 +888,7 @@
 				E273FFA41CCD0040003156EC /* Selfie.swift in Sources */,
 				E273FF8F1CCD0040003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E273FF551CCD0025003156EC /* NSObjectExtension.swift in Sources */,
-				E273FF891CCD0040003156EC /* DateExtension.swift in Sources */,
+				E273FF891CCD0040003156EC /* NSDateExtension.swift in Sources */,
 				E218E3231CE200B9005E0FA4 /* UIAlertControllerExtension.swift in Sources */,
 				E273FF8C1CCD0040003156EC /* FileManagerExtension.swift in Sources */,
 				E273FF7D1CCD0040003156EC /* DictionaryExtension.swift in Sources */,

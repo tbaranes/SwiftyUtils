@@ -1,4 +1,4 @@
-// File.swift
+// ArrayExtension.swift
 //
 // Copyright (c) 2016 Tom Baranes
 //
@@ -26,7 +26,7 @@ import Foundation
 
 public extension Array where Element : Equatable {
 
-    public mutating func removeObject(object : Iterator.Element) -> Bool {
+    public mutating func remove(object : Iterator.Element) -> Bool {
         if let index = self.index(of: object) {
             self.remove(at: index)
             return true
@@ -34,8 +34,8 @@ public extension Array where Element : Equatable {
         return false
     }
     
-    public mutating func removeObjects(object: Element) {
-        for idx in self.indexesOf(object: object).reversed() {
+    public mutating func remove(objects: Element) {
+        for idx in self.indexes(of: objects).reversed() {
             self.remove(at: idx)
         }
     }
@@ -67,7 +67,7 @@ public extension Array {
 
 public extension Array where Element : Equatable {
     
-    public func indexesOf(object: Element) -> [Int] {
+    public func indexes(of object: Element) -> [Int] {
         var indexes = [Int]()
         for index in 0..<self.count {
             if self[index] == object {
@@ -77,8 +77,8 @@ public extension Array where Element : Equatable {
         return indexes
     }
 
-    public func lastIndexOf(object: Element) -> Int? {
-        return indexesOf(object: object).last
+    public func lastIndex(of object: Element) -> Int? {
+        return indexes(of: object).last
     }
     
     public func difference(values: [Element]...) -> [Element] {
@@ -141,7 +141,7 @@ public extension Array {
 
 public extension Array {
     
-    public func containsInstanceOf<T>(object: T) -> Bool {
+    public func contains<T>(instanceOf object: T) -> Bool {
         for item in self {
             if item.dynamicType == object.dynamicType {
                 return true
@@ -168,8 +168,8 @@ public extension Array where Element : Equatable {
         return items.testAll { self.index(of: $0) >= 0 }
     }
 
-    public func containsArray(lookFor: [Element]) -> Bool {
-        for item in lookFor {
+    public func contains(array: [Element]) -> Bool {
+        for item in array {
             if self.contains(item) == false {
                 return false
             }

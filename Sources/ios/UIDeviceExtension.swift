@@ -81,15 +81,15 @@ public extension UIDevice {
 
 public extension UIDevice {
     
-    public class func isVersion(version: Float) -> Bool {
+    public class func isVersion(_ version: Float) -> Bool {
         return systemFloatVersion() >= version && systemFloatVersion() < (version + 1.0)
     }
     
-    public class func isVersionOrLater(version: Float) -> Bool {
+    public class func isVersionOrLater(_ version: Float) -> Bool {
         return systemFloatVersion() >= version
     }
     
-    public class func isVersionOrEarlier(version: Float) -> Bool {
+    public class func isVersionOrEarlier(_ version: Float) -> Bool {
         return systemFloatVersion() < (version + 1.0)
     }
     
@@ -97,12 +97,12 @@ public extension UIDevice {
 
 public extension UIDevice {
 
-    public func forceRotation(orientation: UIInterfaceOrientation) {
+    public func forceRotation(_ orientation: UIInterfaceOrientation) {
         setValue(orientation.rawValue, forKey: "orientation")
     }
     
-    public class func forceRotation(orientation: UIInterfaceOrientation) {
-        UIDevice.current().forceRotation(orientation: orientation)
+    public class func forceRotation(_ orientation: UIInterfaceOrientation) {
+        UIDevice.current().forceRotation(orientation)
     }
     
 }

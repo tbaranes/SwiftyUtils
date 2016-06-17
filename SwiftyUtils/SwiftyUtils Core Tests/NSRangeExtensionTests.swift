@@ -37,7 +37,7 @@ extension NSRangeExtensionTests {
     func testRangeOfOccurence() {
         let string = "Hello world"
         let stringToFind = "ello wo"
-        let range = NSRange(rangeOf: stringToFind, in: string)
+        let range = NSRange(textToFind: stringToFind, in: string)
         XCTAssertEqual(range.location, 1)
         XCTAssertEqual(range.length, stringToFind.length)
     }

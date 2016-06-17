@@ -31,19 +31,19 @@ extension ArrayExtensionTests {
 
     func testRemoveObject() {
         var arrayToTest = [1, 2, 3]
-        var isObjectRemoved = arrayToTest.removeObject(object: 2)
+        var isObjectRemoved = arrayToTest.remove(object: 2)
         XCTAssertTrue(isObjectRemoved)
-        isObjectRemoved = arrayToTest.removeObject(object: 5)
+        isObjectRemoved = arrayToTest.remove(object: 5)
         XCTAssertFalse(isObjectRemoved)
     }
     
     func testRemoveObjects() {
         let copyArray = array
-        array.removeObjects(object: 12345)
+        array.remove(objects: 12345)
         XCTAssertEqual(array, copyArray)
         
         let compareArray = [0, 2, 3, 4, 5]
-        array.removeObjects(object: 1)
+        array.remove(objects: 1)
         XCTAssertEqual(array, compareArray)
     }
     
@@ -68,10 +68,10 @@ extension ArrayExtensionTests {
     }
 
     func testIndexesOf() {
-        var indexes = array.indexesOf(object: 1)
+        var indexes = array.indexes(of: 1)
         XCTAssertEqual(indexes, [1, 6])
         
-        indexes = array.indexesOf(object: 12345)
+        indexes = array.indexes(of: 12345)
         XCTAssertEqual(indexes, [])
     }
 
@@ -112,9 +112,9 @@ extension ArrayExtensionTests {
 extension ArrayExtensionTests {
 
     func testContainsInstanceOf() {
-        XCTAssertFalse(array.containsInstanceOf(object: "a"))
-        XCTAssertFalse(array.containsInstanceOf(object: 12.22))
-        XCTAssertTrue(array.containsInstanceOf(object: 46378))
+        XCTAssertFalse(array.contains(instanceOf: "a"))
+        XCTAssertFalse(array.contains(instanceOf: 12.22))
+        XCTAssertTrue(array.contains(instanceOf: 46378))
     }
     
     func testTestAll() {
@@ -128,7 +128,7 @@ extension ArrayExtensionTests {
     
     func testContainsArray() {
         let array = [Int](2...4)
-        XCTAssertTrue(self.array.containsArray(lookFor: array))
+        XCTAssertTrue(self.array.contains(array: array))
     }
     
 }

@@ -54,25 +54,25 @@ public extension NSDate {
 
 public extension NSDate {
     
-    public func daysInBetweenDate(date: NSDate) -> Double {
+    public func daysInBetweenDate(_ date: NSDate) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff / 86400)
         return diff
     }
     
-    public func hoursInBetweenDate(date: NSDate) -> Double {
+    public func hoursInBetweenDate(_ date: NSDate) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff / 3600)
         return diff
     }
     
-    public func minutesInBetweenDate(date: NSDate) -> Double {
+    public func minutesInBetweenDate(_ date: NSDate) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff / 60)
         return diff
     }
     
-    public func secondsInBetweenDate(date: NSDate) -> Double {
+    public func secondsInBetweenDate(_ date: NSDate) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff)
         return diff

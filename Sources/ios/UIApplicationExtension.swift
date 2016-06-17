@@ -26,7 +26,3 @@ extension UIApplication {
     }
     
 }
-
-func test() {
-    UIApplication.shared().topViewController()
-}

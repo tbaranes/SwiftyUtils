@@ -52,12 +52,12 @@ public extension String {
         return newText.isEmpty
     }
 
-    func contains(find: String) -> Bool {
-        return self.range(of: find) != nil
+    func contains(text: String) -> Bool {
+        return self.range(of: text) != nil
     }
 
-    public func contains(find: String, compareOption: NSString.CompareOptions) -> Bool {
-        return self.range(of: find, options: compareOption) != nil
+    public func contains(text: String, compareOption: NSString.CompareOptions) -> Bool {
+        return self.range(of: text, options: compareOption) != nil
     }
     
     public func containsEmoji() -> Bool {

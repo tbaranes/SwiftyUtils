@@ -63,8 +63,7 @@ public extension UIView {
 // MARK: - Nib
 
 public extension UIView {
-    // MARK - View from nib
-    
+
     public class func fromNib<T: UIView>(nibNameOrNil: String? = nil) -> T {
         let v: T? = fromNib(nibNameOrNil: nibNameOrNil)
         return v!

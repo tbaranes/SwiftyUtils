@@ -20,6 +20,7 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
 import UIKit
 
 // MARK: - Helpers
@@ -53,13 +54,13 @@ extension UIViewController {
         }
     }
 
-    public func setupLeftBarView(view: UIView) {
-        let leftBarButtonItem = UIBarButtonItem(customView: view)
+    public func setupBar(leftView: UIView) {
+        let leftBarButtonItem = UIBarButtonItem(customView: leftView)
         navigationItem.leftBarButtonItem = leftBarButtonItem
     }
     
-    public func setupRightBarView(view: UIView) {
-        let rightBarButtonItem = UIBarButtonItem(customView: view)
+    public func setupBar(rightView: UIView) {
+        let rightBarButtonItem = UIBarButtonItem(customView: rightView)
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     

@@ -115,8 +115,8 @@ Check if it contains a string:
 
 ```swift
 let aString = "Hello world"
-print (aString.contains("hello")) // true
-print (aString.contains("hellooooo")) // false
+print (aString.contains(text: "hello")) // true
+print (aString.contains(text: "hellooooo")) // false
 ```
 
 Capitalize the first letter:
@@ -187,45 +187,47 @@ Find the indexes of an object:
 
 ``` swift
 var myArray = [1, 2, 3, 1]
-print(myArray.indexesOf(1)) // [0,3]
+print(myArray.indexes(of: 1)) // [0,3]
 ```
 
 Get index of last occurrence of an object:
 
 ``` swift
 var myArray = [1, 2, 3, 1]
-print(myArray.lastIndexOf(1)) // 3
+print(myArray.lastIndex(of: 1)) // 3
 ```
 
 Remove an object:
 
 ``` swift
 var myArray = [1, 2, 3]
-myArray.removeObject(2)
+myArray.remove(object: 2)
 print(myArray) // [1, 3]
+myArray.remove(objects: [1, 3])
+print(myArray) // []
 ```
 
 Check if an array contains instance of an object:
 
 ``` swift
 var myArray = [1, 2, 3]
-print(myArray.containsInstanceOf(1)) // true
-print(myArray.containsInstanceOf("1")) // false
+print(myArray.contains(instanceOf: 1)) // true
+print(myArray.contains(instanceOf: "1")) // false
 ```
 
 Check if an array contains another array:
 
 ``` swift
 var myArray = [1, 2, 3]
-print(myArray.containsArray([1, 2])) // true
-print(myArray.containsArray([5])) // false
+print(myArray.contains(array: [1, 2])) // true
+print(myArray.contains(array: [5])) // false
 ```
 
 Get an object at a specified index:
 
 ``` swift
 var myArray = [1, 2, 3]
-print(myArray.get(1)) // 2
+print(myArray.get(index: 1)) // 2
 ```
 
 Determine if an array contains an object:
@@ -240,15 +242,15 @@ Get intersection and union of two arrays:
 
 ``` swift
 var myArray = [1, 2, 3]
-print(myArray.intersection([1, 5, 3])) // [1, 3]
-print(myArray.union([5, 6])) // [1, 2, 3, 5, 6]
+print(myArray.intersection(values: [1, 5, 3])) // [1, 3]
+print(myArray.union(values: [5, 6])) // [1, 2, 3, 5, 6]
 ```
 
 Get difference between two arrays:
 
 ``` swift
 var myArray = [1, 2, 3]
-print(myArray.difference([1])) // [2, 3]
+print(myArray.difference(values: [1])) // [2, 3]
 ```
 
 Test all elements of an array against a closure:
@@ -294,7 +296,7 @@ Easily get union of two dictionaries:
 let dic1 = ["one": 1, "two": 2]
 let dic2 = ["one": 1, "four": 4]
 
-let dictionary3 = dictionary1.union(dictionary2)
+let dictionary3 = dictionary1.union(dictionaries: dictionary2)
 print(dictionary3) // ["one": 1, "two": 2, "four": 4]
 ```
 
@@ -502,9 +504,9 @@ FileManager.default.documentDirectory()
 Create a new directory:
 
 ```
-FileManager.createDirectory(at: directoryUR)
+FileManager.createDirectory(at: directoryURL)
 // OR
-FileManager.default().createDirectory(at: directoryUR)
+FileManager.default().createDirectory(at: directoryURL)
 ```
 
 Delete contents of temporary directory
@@ -530,11 +532,11 @@ Apply a multiplier to a constraint (currently working only for width and height)
 ```swift
 let view = UIView(CGRect(x: 0, y: 0, width: 100, height: 200))
 let constraint = NSLayoutConstraint(item: view, attribute: .width, ...)
-constraint.applyMultiplier(0.5, toView: superview)
+constraint.apply(multiplier: 0.5, toView: superview)
 print(constraint.constants) // 50
 
 let constraint = NSLayoutConstraint(item: view, attribute: .height, ...)
-constraint.applyMultiplier(0.5, toView: superview)
+constraint.apply(multiplier0.5, toView: superview)
 print(constraint.constants) // 100
 ```
 
@@ -622,7 +624,7 @@ Range of string:
 ```swift
 let string = "Hello world"
 let stringToFind = "ello wo"
-let range = NSRange(rangeOf: stringToFind, in: string)
+let range = NSRange(textToFind: stringToFind, in: string)
 print(range) // location: 1, length: 7
 ```
 
@@ -894,8 +896,8 @@ vc.setupRightBarView(aView)
 
 let vc2 = UIViewController()
 vc2.setupBackButton(hidden: false)
-vc2.setupLeftBarView(view: UIView)
-vc2.setupRightBarView(aView)
+vc2.setupBar(leftView:  aView)
+vc2.setupBar(rightView: aView)
 ```
 
 ### UIAlertController extension
