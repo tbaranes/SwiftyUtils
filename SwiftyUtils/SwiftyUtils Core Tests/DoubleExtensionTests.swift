@@ -10,21 +10,21 @@ import XCTest
 @testable import SwiftyUtils
 
 class DoubleExtensionTests: XCTestCase {
-    
+
     var value: Double = 1
-    
+
     override func setUp() {
         super.setUp()
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
-    
+
 }
 
 extension DoubleExtensionTests {
-    
+
     func testMilliseconds() {
         XCTAssertEqual(1.3.milliseconds, 0.0013)
     }

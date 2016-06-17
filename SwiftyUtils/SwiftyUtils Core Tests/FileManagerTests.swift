@@ -10,17 +10,17 @@ import XCTest
 @testable import SwiftyUtils
 
 class FileManagerTests: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
     }
-    
+
 }
 
 // MARK: - Create
 
 extension FileManagerTests {
-    
+
     func testCreateDirectory() {
         let directoryURL = FileManager.default().documentDirectory()
         directoryURL.appendingPathComponent("demo", isDirectory: true)
@@ -31,5 +31,5 @@ extension FileManagerTests {
             XCTAssertTrue(false)
         }
     }
-    
+
 }

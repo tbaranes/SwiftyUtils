@@ -10,15 +10,15 @@ import XCTest
 @testable import SwiftyUtils
 
 class ArrayExtensionTests: XCTestCase {
-    
+
     var array = [Int]()
-    
+
     override func setUp() {
         super.setUp()
         array = [Int](0...5)
         array.append(1)
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
@@ -36,17 +36,17 @@ extension ArrayExtensionTests {
         isObjectRemoved = arrayToTest.remove(object: 5)
         XCTAssertFalse(isObjectRemoved)
     }
-    
+
     func testRemoveObjects() {
         let copyArray = array
         array.remove(objects: 12345)
         XCTAssertEqual(array, copyArray)
-        
+
         let compareArray = [0, 2, 3, 4, 5]
         array.remove(objects: 1)
         XCTAssertEqual(array, compareArray)
     }
-    
+
 }
 
 // MARK: - Getter
@@ -57,7 +57,7 @@ extension ArrayExtensionTests {
         XCTAssertNotNil(array.random())
         XCTAssertNil([].random())
     }
- 
+
     func testGet() {
         XCTAssertNotNil(array.get(index: 1))
         XCTAssertNil(array.get(index: 10))
@@ -70,7 +70,7 @@ extension ArrayExtensionTests {
     func testIndexesOf() {
         var indexes = array.indexes(of: 1)
         XCTAssertEqual(indexes, [1, 6])
-        
+
         indexes = array.indexes(of: 12345)
         XCTAssertEqual(indexes, [])
     }
@@ -123,9 +123,9 @@ extension ArrayExtensionTests {
 
     func testContains() {
         let array = [Int](2...4)
-        XCTAssertTrue(array.contains(items: 2,3,4))
+        XCTAssertTrue(array.contains(items: 2, 3, 4))
     }
-    
+
     func testContainsArray() {
         let array = [Int](2...4)
         XCTAssertTrue(self.array.contains(array: array))

@@ -25,7 +25,7 @@ import Foundation
 // MARK: - Format
 
 public extension NSDate {
-    
+
     public convenience init?(fromString string: String, format: String) {
         let formatter = SUDateFormatter.sharedInstance
         formatter.dateFormat = format
@@ -34,44 +34,44 @@ public extension NSDate {
         }
         self.init(timeInterval: 0, since: date)
     }
-    
+
     public func toString(dateStyle: DateFormatter.Style = .mediumStyle, timeStyle: DateFormatter.Style = .mediumStyle) -> String {
         let formatter = SUDateFormatter.sharedInstance
         formatter.dateStyle = dateStyle
         formatter.timeStyle = timeStyle
         return formatter.string(from: self as Date)
     }
-    
+
     public func toString(format: String) -> String {
         let formatter = SUDateFormatter.sharedInstance
         formatter.dateFormat = format
         return formatter.string(from: self as Date)
     }
-    
+
 }
 
 // MARK: - InBetweenDate
 
 public extension NSDate {
-    
+
     public func daysInBetweenDate(_ date: NSDate) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff / 86400)
         return diff
     }
-    
+
     public func hoursInBetweenDate(_ date: NSDate) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff / 3600)
         return diff
     }
-    
+
     public func minutesInBetweenDate(_ date: NSDate) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff / 60)
         return diff
     }
-    
+
     public func secondsInBetweenDate(_ date: NSDate) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff)

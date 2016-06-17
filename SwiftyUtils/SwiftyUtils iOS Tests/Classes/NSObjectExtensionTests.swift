@@ -10,24 +10,24 @@ import XCTest
 @testable import SwiftyUtils
 
 class NSObjectExtensionTests: XCTestCase {
-    
+
     // MARK - Life cycle
-    
+
     override func setUp() {
         super.setUp()
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
-    
-    
+
+
     // MARK -
-    
+
     func testClassName() {
         let vc = UIViewController()
         XCTAssertEqual(vc.className, "UIViewController")
         XCTAssertEqual(UIViewController.className, "UIViewController")
     }
-    
+
 }

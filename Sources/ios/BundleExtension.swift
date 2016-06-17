@@ -27,9 +27,9 @@ public extension Bundle {
     public var appVersion: String? {
         return self.infoDictionary?["CFBundleShortVersionString"] as? String
     }
-    
+
     public var appBuild: String? {
         return self.infoDictionary?["CFBundleVersion"] as? String
     }
-    
-}    
+
+}

@@ -23,15 +23,15 @@
 import Foundation
 
 public extension NSObject {
-    
+
     public var className: String {
         return self.dynamicType.className
     }
-    
+
     public static var className: String {
         return stringFromClass(aClass: self)
     }
- 
+
 }
 
 public func stringFromClass(aClass: AnyClass) -> String {

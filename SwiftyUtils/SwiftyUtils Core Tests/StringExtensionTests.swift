@@ -10,15 +10,15 @@ import XCTest
 @testable import SwiftyUtils
 
 class StringExtensionTests: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
-    
+
 }
 
 // MARK -
@@ -30,32 +30,32 @@ extension StringExtensionTests {
         XCTAssertEqual(aString[0], "H")
         XCTAssertEqual(aString[2], "l")
     }
-    
+
     func testSubscriptRange() {
         let aString = "Hello world"
         XCTAssertEqual(aString[Range(1...3)], "ell")
     }
-    
+
 }
 
 extension StringExtensionTests {
-    
+
     func testLengthRange() {
         let aString = "Hello world"
         XCTAssertEqual(aString.length, aString.characters.count)
     }
-    
+
     func testIsOnlyEmptySpacesAndNewLineCharacters() {
         XCTAssertFalse("test".isOnlyEmptySpacesAndNewLineCharacters())
         XCTAssertTrue(" \n ".isOnlyEmptySpacesAndNewLineCharacters())
     }
-    
+
     func testClassName() {
         var aString = "hello world"
         aString = aString.capitalizeFirst
         XCTAssertEqual(aString[0], "H")
     }
-    
+
     func testContains() {
         let aString = "Hello world"
         XCTAssertTrue(aString.contains("worl"))
@@ -63,53 +63,53 @@ extension StringExtensionTests {
         XCTAssertTrue(aString.contains("Hello world"))
         XCTAssertFalse(aString.contains("elllo"))
     }
-    
+
     func testIsIncludeEmoji() {
         XCTAssertTrue("test 😃 emoji".containsEmoji())
         XCTAssertFalse("test emoji".containsEmoji())
     }
-    
+
 }
 
 // MARK: - Getter
 
 extension StringExtensionTests {
- 
+
     func testExtractURLs() {
         let string = "http://google.com http fpt:// http://facebook.com test"
         let urls = string.extractURLs
         XCTAssertEqual(urls.count, 2)
     }
-    
+
 }
 
 // MARK: - Getter
 
 extension StringExtensionTests {
- 
+
     func testTrim() {
         var string = "space space"
         string.trim()
         XCTAssertFalse(string.contains(" "))
     }
-    
+
     func testTruncate() {
         var string = "0123456789aaaa"
         string.truncate(limit: 10)
         XCTAssertEqual(string, "0123456789...")
     }
-    
+
 }
 
 // MARK - Validators
 
 extension StringExtensionTests {
-    
+
     func testIsNumber() {
         XCTAssertTrue("425252".isNumber())
         XCTAssertFalse("test".isNumber())
     }
-    
+
     func testIsEmailValid() {
         var aString = "test@gmail.com"
         XCTAssertTrue(aString.isEmail)

@@ -22,7 +22,7 @@
 
 import Foundation
 
-// MARK: - 
+// MARK: -
 
 public extension UserDefaults {
 
@@ -37,10 +37,10 @@ public extension UserDefaults {
 
 }
 
-// MARK: - 
+// MARK: -
 
 public extension UserDefaults {
- 
+
     public static func contains(key: String) -> Bool {
         return self.standard().contains(key: key)
     }
@@ -48,11 +48,11 @@ public extension UserDefaults {
     public func contains(key: String) -> Bool {
         return self.dictionaryRepresentation().keys.contains(key)
     }
-    
-    public func reset() {        
+
+    public func reset() {
         for key in Array(UserDefaults.standard().dictionaryRepresentation().keys) {
             UserDefaults.standard().removeObject(forKey: key)
         }
     }
-    
+
 }

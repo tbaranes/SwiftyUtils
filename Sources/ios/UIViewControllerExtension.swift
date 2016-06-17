@@ -26,11 +26,11 @@ import UIKit
 // MARK: - Helpers
 
 extension UIViewController {
- 
+
     public func deletePreviousViewControllers(animated: Bool = false) {
         navigationController?.setViewControllers([self], animated: animated)
     }
-    
+
 }
 
 // MARK: - NavigationBar
@@ -41,12 +41,12 @@ extension UIViewController {
         navigationItem.hidesBackButton = hidden
         if !hidden {
             navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
-            
+
             if let unwrappedColor = tintColor {
                 navigationItem.backBarButtonItem?.tintColor = unwrappedColor
                 navigationController?.navigationBar.tintColor = unwrappedColor
             }
-            
+
             if let unwrappedImage = backIndicatorImage {
                 navigationController?.navigationBar.backIndicatorImage = unwrappedImage
                 navigationController?.navigationBar.backIndicatorTransitionMaskImage = unwrappedImage
@@ -58,10 +58,10 @@ extension UIViewController {
         let leftBarButtonItem = UIBarButtonItem(customView: leftView)
         navigationItem.leftBarButtonItem = leftBarButtonItem
     }
-    
+
     public func setupBar(rightView: UIView) {
         let rightBarButtonItem = UIBarButtonItem(customView: rightView)
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
-    
+
 }

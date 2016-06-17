@@ -9,12 +9,12 @@
 import Foundation
 
 extension UIApplication {
-    
+
     public func topViewController(baseViewController: UIViewController? = UIApplication.shared().keyWindow?.rootViewController) -> UIViewController? {
         guard let base = baseViewController else {
             return nil
         }
-        
+
         if let nav = base as? UINavigationController {
             return topViewController(baseViewController: nav.visibleViewController)
         } else if let tab = base as? UITabBarController, selected = tab.selectedViewController {
@@ -24,5 +24,5 @@ extension UIApplication {
         }
         return base
     }
-    
+
 }

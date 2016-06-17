@@ -16,19 +16,19 @@ struct User {
 extension User: Then {}
 
 class ThenTests: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
-    
+
 }
 
 extension ThenTests {
-    
+
     func testThen_object() {
         let queue = OperationQueue().then {
             $0.name = "awesome"
@@ -37,7 +37,7 @@ extension ThenTests {
         XCTAssertEqual(queue.name, "awesome")
         XCTAssertEqual(queue.maxConcurrentOperationCount, 5)
     }
-    
+
     func testThen_value() {
         let user = User().then {
             $0.name = "SwiftyUtils"
@@ -47,5 +47,5 @@ extension ThenTests {
         XCTAssertEqual(user.email, "SwiftyUtils@gmail.com")
     }
 
-    
+
 }

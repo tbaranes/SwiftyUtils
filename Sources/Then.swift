@@ -28,7 +28,7 @@ import Foundation
 public protocol Then {}
 
 extension Then {
-    
+
     /// Makes it available to set properties with closures.
     ///
     ///     let label = UILabel().then {
@@ -41,7 +41,7 @@ extension Then {
         block(&copy)
         return copy
     }
-    
+
 }
 
 extension NSObject: Then {}

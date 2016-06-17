@@ -23,42 +23,42 @@
 import Foundation
 
 public class BlockNotification {
-    
+
     public let name: String
     private var object: AnyObject?
     private let closure: ((NSNotification) -> Void)
-    
+
     // MARK - Initializers
-    
+
     public init(name: String, closure: (NSNotification) -> ()) {
         self.name = name
         self.closure = closure
-        self.start();
+        self.start()
     }
-    
+
     public convenience init(name: String, object: AnyObject, closure: (NSNotification) -> ()) {
         self.init(name: name, closure: closure)
-        self.object = object;
+        self.object = object
     }
-    
+
     deinit {
         stop()
     }
-    
-    // MARK - 
-    
+
+    // MARK -
+
     public  func start() {
         NotificationCenter.default().addObserver(self, selector: #selector(handleNotification(notification:)), name: name, object: object)
     }
-    
+
     public  func stop() {
         NotificationCenter.default().removeObserver(self)
     }
-    
+
     // MARK - Action
-    
+
     dynamic func handleNotification(notification: NSNotification) {
         closure(notification)
     }
-    
+
 }

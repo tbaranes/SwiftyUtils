@@ -19,19 +19,19 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-    
+
 import Foundation
 import UIKit
 
 // MARK - Localizables
 
 public extension UIView {
-    
+
     public func convertLocalizables() {
         if subviews.count == 0 {
             return
         }
-        
+
         for aSubview: UIView in subviews {
             if let aLabel = aSubview as? UILabel {
                 if let text = aLabel.text {
@@ -57,7 +57,7 @@ public extension UIView {
             }
         }
     }
-    
+
 }
 
 // MARK: - Nib
@@ -68,7 +68,7 @@ public extension UIView {
         let v: T? = fromNib(nibNameOrNil: nibNameOrNil)
         return v!
     }
-    
+
     public class func fromNib<T: UIView>(nibNameOrNil: String? = nil) -> T? {
         var view: T?
         let name: String
@@ -77,7 +77,7 @@ public extension UIView {
         } else {
             name = T.className
         }
-        
+
         let nibViews = Bundle.main().loadNibNamed(name, owner: nil, options: nil)
         for v in nibViews {
             if let tog = v as? T {

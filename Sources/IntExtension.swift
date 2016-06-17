@@ -23,7 +23,7 @@
 import Foundation
 
 public extension Int {
-    
+
     public var isEven: Bool { return (self % 2 == 0) }
     public var isOdd: Bool { return (self % 2 != 0) }
     public var isPositive: Bool { return (self > 0) }
@@ -36,8 +36,8 @@ public extension Int {
         } else if Int(fabs(Double(self))) <= LONG_MAX {
             return Int(log10(fabs(Double(self)))) + 1
         } else {
-            return -1;
+            return -1
         }
     }
-    
+
 }

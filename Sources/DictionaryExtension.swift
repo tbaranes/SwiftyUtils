@@ -30,7 +30,7 @@ public extension Dictionary {
         let index: Int = Int(arc4random_uniform(UInt32(self.count)))
         return Array(self.values)[index]
     }
-    
+
 }
 
 // MARK: - Transform
@@ -46,7 +46,7 @@ public extension Dictionary {
         }
         return result
     }
-    
+
     public mutating func merge<K, V>(_ dictionaries: Dictionary<K, V>...) {
         for dict in dictionaries {
             for (key, value) in dict {
@@ -59,11 +59,11 @@ public extension Dictionary {
 // MARK: - Helpers
 
 public extension Dictionary {
-    
+
     public func has(_ key: Key) -> Bool {
         return index(forKey: key) != nil
     }
-    
+
     public func testAll(test: (Key, Value) -> (Bool)) -> Bool {
         for (key, value) in self {
             if !test(key, value) {

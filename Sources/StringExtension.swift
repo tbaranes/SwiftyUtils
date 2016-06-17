@@ -25,29 +25,29 @@ import Foundation
 // MARK - Subscript
 
 public extension String {
-    
+
     public subscript(integerIndex: Int) -> Character {
         return self[index(startIndex, offsetBy: integerIndex)]
     }
-    
+
     public subscript(integerRange: Range<Int>) -> String {
         let start = index(startIndex, offsetBy: integerRange.lowerBound)
         let end = index(startIndex, offsetBy: integerRange.upperBound)
         return self[start..<end]
     }
-    
+
 }
 
 // MARK - Helpers
 
 public extension String {
-    
+
     public var length: Int {
         return self.characters.count
     }
-    
+
     public func isOnlyEmptySpacesAndNewLineCharacters() -> Bool {
-        let characterSet = NSCharacterSet.whitespacesAndNewlines()        
+        let characterSet = NSCharacterSet.whitespacesAndNewlines()
         let newText = self.trimmingCharacters(in: characterSet)
         return newText.isEmpty
     }
@@ -59,7 +59,7 @@ public extension String {
     public func contains(text: String, compareOption: NSString.CompareOptions) -> Bool {
         return self.range(of: text, options: compareOption) != nil
     }
-    
+
     public func containsEmoji() -> Bool {
         for i in 0...length {
             let c: unichar = (self as NSString).character(at: i)
@@ -75,7 +75,7 @@ public extension String {
 // MARK: - Getter
 
 public extension String {
-    
+
     public var extractURLs: [NSURL] {
         var urls: [NSURL] = []
         let detector: NSDataDetector?
@@ -84,7 +84,7 @@ public extension String {
         } catch _ as NSError {
             detector = nil
         }
-        
+
         let text = self
         if let detector = detector {
             detector.enumerateMatches(in: text, options: [], range: NSRange(location: 0, length: text.characters.count), using: {
@@ -103,19 +103,19 @@ public extension String {
 // MARK: - Updating
 
 public extension String {
-    
+
     public mutating func trim() {
         self = trimmed()
     }
-    
+
     public func trimmed() -> String {
         return components(separatedBy: NSCharacterSet.whitespacesAndNewlines()).joined(separator: "")
     }
-    
+
     public mutating func truncate(limit: Int) {
         self = truncated(limit: limit)
     }
-    
+
     public func truncated(limit: Int) -> String {
         if self.length > limit {
             var truncatedString = self[0..<limit]
@@ -129,7 +129,7 @@ public extension String {
         let result = replacingCharacters(in: Range(startIndex..<startIndex), with: String(self[startIndex]).capitalized)
         return result
     }
-    
+
 }
 
 // MARk - Validator

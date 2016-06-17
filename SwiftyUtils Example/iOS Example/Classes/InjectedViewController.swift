@@ -10,30 +10,30 @@ import UIKit
 import SwiftyUtils
 
 class InjectedViewController: UIViewController, Injectable {
-    
+
     @IBOutlet weak var labelStringInjected: UILabel!
     private var stringInjected: String!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        assertDependencies()        
+        assertDependencies()
         labelStringInjected.text = "String injected: \(stringInjected)"
     }
-    
+
 }
 
 // MARK: - Injectable
 
 extension InjectedViewController {
-    
+
     typealias T = String
-    
+
     func inject(properties: T) {
         stringInjected = properties
     }
-    
+
     func assertDependencies() {
         assert(stringInjected != nil)
     }
-    
+
 }

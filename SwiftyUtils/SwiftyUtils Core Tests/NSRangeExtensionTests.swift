@@ -10,23 +10,23 @@ import XCTest
 @testable import SwiftyUtils
 
 class NSRangeExtensionTests: XCTestCase {
-    
+
     // MARK - Life cycle
-    
+
     override func setUp() {
         super.setUp()
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
-    
+
 }
 
     // MARK - Range
 
 extension NSRangeExtensionTests {
-    
+
     func testRangeAfterOccurence() {
         let string = "Hello world"
         let range = NSRange(text: string, afterOccurence: "llo")

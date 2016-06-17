@@ -23,17 +23,17 @@
 import Foundation
 
 public struct Async {
-    
+
     public static func background(closure: () -> Void) {
         DispatchQueue(label: "com.swiftyutils.main").async(execute: closure)
     }
-    
+
     public static func main(closure: () -> Void) {
         DispatchQueue(label: "com.swiftyutils.main").async(execute: closure)
     }
-    
-    public static func delay(delay: Double, closure: () -> Void) {        
+
+    public static func delay(delay: Double, closure: () -> Void) {
         DispatchQueue(label: "com.swiftyutils.delay").after(when: DispatchTime.now() + delay, execute: closure)
     }
-    
+
 }

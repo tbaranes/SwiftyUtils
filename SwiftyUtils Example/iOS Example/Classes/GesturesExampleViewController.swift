@@ -10,10 +10,10 @@ import UIKit
 import SwiftyUtils
 
 class GesturesExampleViewController: UIViewController {
-    
-    var lastPanViewLocation: CGPoint!;
-    var lastPinchScale: CGFloat = 0;
-    
+
+    var lastPanViewLocation: CGPoint!
+    var lastPinchScale: CGFloat = 0
+
     @IBOutlet weak var viewTapGesture: UIView!
     @IBOutlet weak var labelTapGestureCounter: UILabel!
     @IBOutlet weak var viewSwipeGesture: UIView!
@@ -22,30 +22,32 @@ class GesturesExampleViewController: UIViewController {
     @IBOutlet weak var labelLongPressGestureCounter: UILabel!
     @IBOutlet weak var viewPanGesture: UIView!
     @IBOutlet weak var viewPinchGesture: UIView!
-    
+
     // MARK - Counter
-    
+
     var tapCounter: Int = 0 {
         didSet {
-            labelTapGestureCounter.text =
-                String(format:NSLocalizedString("gestures_example.label.tap_counter", comment: ""), tapCounter)
+            let text = NSLocalizedString("gestures_example.label.tap_counter", comment: "")
+            labelTapGestureCounter.text = String(format: text, tapCounter)
         }
     }
 
     var longPressCounter: Int = 0 {
         didSet {
-            labelLongPressGestureCounter.text = String(format:NSLocalizedString("gestures_example.label.long_press_counter", comment: ""), longPressCounter)
+            let text = NSLocalizedString("gestures_example.label.long_press_counter", comment: "")
+            labelLongPressGestureCounter.text = String(format: text, longPressCounter)
         }
     }
-    
+
     var swipeCounter: Int = 0 {
         didSet {
-            labelSwipeGestureCounter.text = String(format:NSLocalizedString("gestures_example.label.swipe_counter", comment: ""), swipeCounter)
+            let text = NSLocalizedString("gestures_example.label.swipe_counter", comment: "")
+            labelSwipeGestureCounter.text = String(format: text, swipeCounter)
         }
     }
-    
+
     //  MARK - Life cycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.convertLocalizables()
@@ -54,19 +56,19 @@ class GesturesExampleViewController: UIViewController {
         self.handleSwipeGesture()
         self.handlePanGesture()
         self.handlePinchGesture()
-        
+
         lastPanViewLocation = viewPanGesture.center
     }
 
     // MARK - Gestures
-    
+
     func handleTapGesture() {
         let blockTapGesture = BlockTapGestureRecognizer() { _ in
             self.tapCounter += 1
         }
         view.addGestureRecognizer(blockTapGesture)
     }
-    
+
     func handleLongPressGesture() {
         let longPressGesture = BlockLongPressGestureRecognizer(minimumPressDuration: 0.5) { _ in
             self.longPressCounter += 1
@@ -75,19 +77,23 @@ class GesturesExampleViewController: UIViewController {
     }
 
     func handleSwipeGesture() {
-        let swipeDownGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1, direction: .down) { _ in
+        let swipeDownGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1,
+                                                           direction: .down) { _ in
             self.swipeCounter += 1
         }
-        
-        let swipeUpGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1, direction: .up) { _ in
+
+        let swipeUpGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1,
+                                                         direction: .up) { _ in
             self.swipeCounter += 1
         }
-        
-        let swipeLeftGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1, direction: .left) { _ in
+
+        let swipeLeftGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1,
+                                                           direction: .left) { _ in
             self.swipeCounter += 1
         }
-        
-        let swipeRightGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1, direction: .right) { _ in
+
+        let swipeRightGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1,
+                                                            direction: .right) { _ in
             self.swipeCounter += 1
         }
 
@@ -96,7 +102,7 @@ class GesturesExampleViewController: UIViewController {
         view.addGestureRecognizer(swipeLeftGesture)
         view.addGestureRecognizer(swipeRightGesture)
     }
-    
+
     func handlePanGesture() {
         let panGesture = BlockPanGestureRecognizer(minimumNumberOfTouches: 1) { gesture in
             if gesture.state == .began {
@@ -104,19 +110,19 @@ class GesturesExampleViewController: UIViewController {
             } else {
                 let translation = gesture.translation(in: gesture.view?.superview)
                 gesture.view?.center = CGPoint(x: self.lastPanViewLocation.x + translation.x,
-                                               y: self.lastPanViewLocation.y + translation.y);
+                                               y: self.lastPanViewLocation.y + translation.y)
             }
         }
-        
+
         viewPanGesture.addGestureRecognizer(panGesture)
     }
-    
+
     func handlePinchGesture() {
         let pinchGesture = BlockPinchGestureRecognizer { (gesture: UIPinchGestureRecognizer) in
-            gesture.view?.transform = gesture.view!.transform.scaleBy(x: gesture.scale, y: gesture.scale)
+            gesture.view?.transform = gesture.view!.transform.scaleBy(x: gesture.scale,
+                                                                      y: gesture.scale)
             gesture.scale = 1.0
         }
         viewPinchGesture.addGestureRecognizer(pinchGesture)
     }
 }
-

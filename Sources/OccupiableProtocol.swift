@@ -47,7 +47,7 @@ public extension Optional where Wrapped: Occupiable {
             return value.isEmpty
         }
     }
-    
+
     public var isNotNilNotEmpty: Bool {
         return !isNilOrEmpty
     }

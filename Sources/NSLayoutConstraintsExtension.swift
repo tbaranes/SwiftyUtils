@@ -24,7 +24,7 @@
 import Foundation
 
 public extension NSLayoutConstraint {
-    
+
     public func apply(multiplier: CGFloat, toView: SwiftyView) {
         switch firstAttribute {
         case .width:
@@ -35,5 +35,5 @@ public extension NSLayoutConstraint {
             break
         }
     }
-    
+
 }

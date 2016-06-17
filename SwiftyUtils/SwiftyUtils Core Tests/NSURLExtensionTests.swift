@@ -10,11 +10,11 @@ import XCTest
 @testable import SwiftyUtils
 
 class NSURLExtensionTests: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
     }
-    
+
 }
 
 extension NSURLExtensionTests {
@@ -27,5 +27,5 @@ extension NSURLExtensionTests {
             XCTAssertEqual(queryParameters["other"], nil)
         }
     }
-    
+
 }

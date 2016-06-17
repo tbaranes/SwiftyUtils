@@ -14,5 +14,5 @@ class LocalizablesExampleViewController: UIViewController {
         super.viewDidLoad()
         view.convertLocalizables()
     }
-    
+
 }
