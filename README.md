@@ -18,7 +18,7 @@ Working on iOS, macOS, tvOS, and watchOS, everything has been made to be easy to
 
 Check out the repository to find examples / tests for each feature.
 
-**Available for iOS, macOS, and tvOS:**
+**Available for iOS, macOS, tvOS and watchOS:**
 
 - [Int](#int-extension)
 - [Double](#double-extension)
@@ -994,9 +994,11 @@ viewPinchGesture.addGestureRecognizer(pinchGesture)
 
 ## Installation
 
+- Xcode 8 and later
 - iOS 8.0 or later
 - macOS 10.10 or later
 - tvOS 9.0 or later
+- watchOS 2.0 or later
 
 ### Manually
 
