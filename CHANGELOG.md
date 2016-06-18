@@ -28,6 +28,8 @@ N/A
 
 #### Enhancements
 
+- watchOS support
+
 New protocols available, take a look into the README to see the details:
 
 - Then

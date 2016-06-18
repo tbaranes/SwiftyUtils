@@ -21,10 +21,10 @@
 // THE SOFTWARE.
 
 import Foundation
-#if os(iOS) || os (tvOS)
-    import UIKit
-#elseif os(OSX)
+#if os(OSX)
     import Cocoa
+#else
+    import UIKit
 #endif
 
 // MARK: Create Colors

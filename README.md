@@ -12,13 +12,13 @@ SwiftyUtils groups all the reusable code that we need to ship in each project. T
 - Structs
 - Subclasses
 
-Working on iOS, OS X, tvOS, everything has been made to be easy to use! :tada:
+Working on iOS, macOS, tvOS, and watchOS, everything has been made to be easy to use! :tada:
 
 ## Contents
 
 Check out the repository to find examples / tests for each feature.
 
-**Available for iOS, OS X, and tvOS:**
+**Available for iOS, macOS, and tvOS:**
 
 - [Int](#int-extension)
 - [Double](#double-extension)
@@ -63,7 +63,7 @@ Check out the repository to find examples / tests for each feature.
  - [BlockPanGesturesRecognizers](#blockpangesturesrecognizers)
  - [BlockPinchGesturesRecognizers](#blockpinchgesturesrecognizers)
 
-## Available for iOS, OS X, and tvOS
+## Available for iOS, macOS, tvOS and watchOS
 
 ### Int extension
 
@@ -526,6 +526,8 @@ FileManager.default().deleteAllDocumentFiles()
 ```
 
 ### NSLayoutConstraint extension
+
+*No available for watchOS*
 
 Apply a multiplier to a constraint (currently working only for width and height):
 
@@ -993,7 +995,7 @@ viewPinchGesture.addGestureRecognizer(pinchGesture)
 ## Installation
 
 - iOS 8.0 or later
-- OS X 10.10 or later
+- macOS 10.10 or later
 - tvOS 9.0 or later
 
 ### Manually
