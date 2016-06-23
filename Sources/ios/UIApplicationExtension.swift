@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension UIApplication {
+public extension UIApplication {
 
     public func topViewController(baseViewController: UIViewController? = UIApplication.shared().keyWindow?.rootViewController) -> UIViewController? {
         guard let base = baseViewController else {
