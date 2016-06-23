@@ -40,6 +40,22 @@ extension StringExtensionTests {
 
 extension StringExtensionTests {
 
+    func testInitFloat() {
+        let aFloat: Float = 2.323232
+        let aString = String(value: aFloat, maxDigits: 2)
+        XCTAssertEqual(aString, "2.32")
+    }
+
+    func testInitDouble() {
+        let aFloat: Double = 2.323232
+        let aString = String(value: aFloat, maxDigits: 2)
+        XCTAssertEqual(aString, "2.32")
+    }
+
+}
+
+extension StringExtensionTests {
+
     func testLengthRange() {
         let aString = "Hello world"
         XCTAssertEqual(aString.length, aString.characters.count)

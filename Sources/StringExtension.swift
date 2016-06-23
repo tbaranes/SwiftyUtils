@@ -38,6 +38,32 @@ public extension String {
 
 }
 
+// MARK: - Init
+
+public extension String {
+
+    init?(value: Float, maxDigits: Int) {
+        let numberFormatter = SUNumberFormatter.sharedInstance
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.maximumFractionDigits = maxDigits
+        guard let string = numberFormatter.string(from: value) else {
+            return nil
+        }
+        self = string
+    }
+
+    init?(value: Double, maxDigits: Int) {
+        let numberFormatter = SUNumberFormatter.sharedInstance
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.maximumFractionDigits = maxDigits
+        guard let string = numberFormatter.string(from: value) else {
+            return nil
+        }
+        self = string
+    }
+
+}
+
 // MARK - Helpers
 
 public extension String {
