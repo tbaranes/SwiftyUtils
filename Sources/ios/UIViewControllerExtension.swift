@@ -25,7 +25,7 @@ import UIKit
 
 // MARK: - Helpers
 
-extension UIViewController {
+public extension UIViewController {
 
     public func deletePreviousViewControllers(animated: Bool = false) {
         navigationController?.setViewControllers([self], animated: animated)
@@ -35,7 +35,7 @@ extension UIViewController {
 
 // MARK: - NavigationBar
 
-extension UIViewController {
+public extension UIViewController {
 
     public func setupBackButton(hidden: Bool = false, title: String = "", backIndicatorImage: UIImage? = nil, tintColor: UIColor? = UIColor.white()) {
         navigationItem.hidesBackButton = hidden
