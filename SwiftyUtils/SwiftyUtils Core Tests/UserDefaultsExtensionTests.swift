@@ -9,6 +9,8 @@
 import XCTest
 @testable import SwiftyUtils
 
+// TODO: Renable defaults tests once Apple fix them
+
 class UserDefaultsExtensionTests: XCTestCase {
 
     override func setUp() {
