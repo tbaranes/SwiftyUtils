@@ -25,7 +25,7 @@ import Foundation
 public struct Async {
 
     public static func background(closure: () -> Void) {
-        DispatchQueue(label: "com.swiftyutils.main").async(execute: closure)
+        DispatchQueue(label: "com.swiftyutils.background").async(execute: closure)
     }
 
     public static func main(closure: () -> Void) {

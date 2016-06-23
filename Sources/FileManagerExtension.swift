@@ -26,11 +26,11 @@ import Foundation
 
 public extension FileManager {
 
-    public static func documentDirectory() -> NSURL {
-        return self.default().documentDirectory()
+    public static func document() -> NSURL {
+        return self.default().document()
     }
 
-    public func documentDirectory() -> NSURL {
+    public func document() -> NSURL {
         #if os(OSX)
             // On OS X it is, so put files in Application Support. If we aren't running
             // in a sandbox, put it in a subdirectory based on the bundle identifier
@@ -91,7 +91,7 @@ public extension FileManager {
     }
 
     public func deleteAllDocumentFiles() throws {
-        let documentPath = documentDirectory().path ?? ""
+        let documentPath = document().path ?? ""
         let contents = try contentsOfDirectory(atPath: documentPath)
         for file in contents {
             try removeItem(atPath: documentPath + file)

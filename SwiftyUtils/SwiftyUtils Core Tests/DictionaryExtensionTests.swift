@@ -35,7 +35,7 @@ class DictionaryExtensionTests: XCTestCase {
 extension DictionaryExtensionTests {
 
     func testUnion() {
-        let union = firstdic.union(secondDic)
+        let union = firstdic.union(values: secondDic)
         XCTAssertEqual(firstdic.keys.count + secondDic.keys.count, union.keys.count)
         XCTAssertEqual(firstdic.values.count + secondDic.values.count, union.values.count)
 
@@ -48,7 +48,7 @@ extension DictionaryExtensionTests {
 
     func testMergeDictionaries() {
         var finalDic: Dictionary<String, Int> = [:]
-        finalDic.merge(firstdic, secondDic)
+        finalDic.merge(with: firstdic, secondDic)
         XCTAssertEqual(finalDic.count, firstdic.count + secondDic.count)
         for (key, _) in firstdic {
             XCTAssertEqual(finalDic[key], firstdic[key])
@@ -65,7 +65,7 @@ extension DictionaryExtensionTests {
 extension DictionaryExtensionTests {
 
     func testHas() {
-        XCTAssertTrue(firstdic.has("one"))
+        XCTAssertTrue(firstdic.has(key: "one"))
     }
 
     func testTestAll() {
@@ -77,8 +77,8 @@ extension DictionaryExtensionTests {
         let union = firstdic | secondDic
         let difference = union - fourthDic
 
-        XCTAssertTrue(difference.has("one"))
-        XCTAssertTrue(difference.has("four"))
+        XCTAssertTrue(difference.has(key: "one"))
+        XCTAssertTrue(difference.has(key: "four"))
         XCTAssertEqual(difference.count, 2)
     }
 

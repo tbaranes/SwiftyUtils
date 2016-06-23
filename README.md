@@ -242,7 +242,7 @@ Get intersection and union of two arrays:
 
 ``` swift
 var myArray = [1, 2, 3]
-print(myArray.intersection(values: [1, 5, 3])) // [1, 3]
+print(myArray.intersection(for: [1, 5, 3])) // [1, 3]
 print(myArray.union(values: [5, 6])) // [1, 2, 3, 5, 6]
 ```
 
@@ -250,7 +250,7 @@ Get difference between two arrays:
 
 ``` swift
 var myArray = [1, 2, 3]
-print(myArray.difference(values: [1])) // [2, 3]
+print(myArray.difference(with: [1])) // [2, 3]
 ```
 
 Test all elements of an array against a closure:
@@ -269,8 +269,8 @@ Check if a key exists in the dictionary:
 
 ``` swift
 let dic1 = ["one": 1, "two": 2]
-print(myDict.has("one")) // True
-print(myDict.has("1")) // False
+print(myDict.has(key: "one")) // True
+print(myDict.has(key: "1")) // False
 ```
 
 Access a random element:
@@ -296,7 +296,7 @@ Easily get union of two dictionaries:
 let dic1 = ["one": 1, "two": 2]
 let dic2 = ["one": 1, "four": 4]
 
-let dictionary3 = dictionary1.union(dictionaries: dictionary2)
+let dictionary3 = dictionary1.union(values: dictionary2)
 print(dictionary3) // ["one": 1, "two": 2, "four": 4]
 ```
 
@@ -305,7 +305,7 @@ Get difference of two dictionaries:
 ``` swift
 let dic1 = ["one": 1, "two": 2]
 let dic2 = ["one": 1, "four": 4]
-difference(dictionary1, dictionary2) // ["two": 2, "four": 4]
+difference(with: dictionary1, dictionary2) // ["two": 2, "four": 4]
 ```
 
 Merge several dictionaries:
@@ -314,7 +314,7 @@ Merge several dictionaries:
 let dic1 = ["one": 1, "two": 2]
 let dic2 = ["three": 3, "four": 4]
 var finalDic: Dictionary<String, Int> = [:]
-finalDic.merge(dic1, dic2)
+finalDic.merge(with: dic1, dic2)
 print(finalDic) // ["one": 1, "two": 2, "three": 3, "four": 4]
 ```
 
@@ -496,9 +496,9 @@ UserDefaults.standard().reset()
 Get documents directory url following the os:
 
 ```
-FileManager.documentDirectory()
+FileManager.document()
 // OR
-FileManager.default.documentDirectory()
+FileManager.default.document()
 ```
 
 Create a new directory:

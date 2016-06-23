@@ -77,13 +77,13 @@ extension ArrayExtensionTests {
 
     func testDifference() {
         let a = [Int](0...8), b = [Int](3...4), c = [Int](1...2)
-        let difference = a.difference(values: b, c)
+        let difference = a.difference(with: b, c)
         XCTAssertEqual(difference, [0, 5, 6, 7, 8])
     }
 
     func testIntersection() {
         let a = [Int](0...8), b = [Int](3...4), c = [Int](1...6)
-        let intersection = a.intersection(values: b, c)
+        let intersection = a.intersection(for: b, c)
         XCTAssertEqual(intersection, [3, 4])
     }
 
@@ -101,8 +101,8 @@ extension ArrayExtensionTests {
 
     func testReverseIndex() {
         let array = [Int](0...5)
-        XCTAssertEqual(array.reverseIndex(index: 0), 5)
-        XCTAssertEqual(array.reverseIndex(index: 2), 3)
+        XCTAssertEqual(array.reverse(index: 0), 5)
+        XCTAssertEqual(array.reverse(index: 2), 3)
     }
 
 }

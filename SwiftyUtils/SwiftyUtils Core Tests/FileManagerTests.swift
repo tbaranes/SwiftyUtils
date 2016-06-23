@@ -22,7 +22,7 @@ class FileManagerTests: XCTestCase {
 extension FileManagerTests {
 
     func testCreateDirectory() {
-        let directoryURL = FileManager.default().documentDirectory()
+        let directoryURL = FileManager.default().document()
         directoryURL.appendingPathComponent("demo", isDirectory: true)
         do {
             try FileManager.default().createDirectory(at: directoryURL)

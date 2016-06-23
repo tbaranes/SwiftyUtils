@@ -37,9 +37,9 @@ public extension Dictionary {
 
 public extension Dictionary {
 
-    public func union(_ dictionaries: Dictionary...) -> Dictionary {
+    public func union(values: Dictionary...) -> Dictionary {
         var result = self
-        dictionaries.forEach { dictionary in
+        values.forEach { dictionary in
             dictionary.forEach { key, value in
                 result.updateValue(value, forKey: key)
             }
@@ -47,7 +47,7 @@ public extension Dictionary {
         return result
     }
 
-    public mutating func merge<K, V>(_ dictionaries: Dictionary<K, V>...) {
+    public mutating func merge<K, V>(with dictionaries: Dictionary<K, V>...) {
         for dict in dictionaries {
             for (key, value) in dict {
                 self.updateValue(value as! Value, forKey: key as! Key)
@@ -60,7 +60,7 @@ public extension Dictionary {
 
 public extension Dictionary {
 
-    public func has(_ key: Key) -> Bool {
+    public func has(key: Key) -> Bool {
         return index(forKey: key) != nil
     }
 
@@ -76,11 +76,11 @@ public extension Dictionary {
 
 public extension Dictionary where Value: Equatable {
 
-    public func difference(_ dictionaries: [Key: Value]...) -> [Key: Value] {
+    public func difference(with dictionaries: [Key: Value]...) -> [Key: Value] {
         var result = self
         for dictionary in dictionaries {
             for (key, value) in dictionary {
-                if result.has(key) && result[key] == value {
+                if result.has(key: key) && result[key] == value {
                     result.removeValue(forKey: key)
                 }
             }
@@ -96,9 +96,9 @@ public func += <KeyType, ValueType> (left: inout Dictionary<KeyType, ValueType>,
 }
 
 public func - <K, V: Equatable> (first: [K: V], second: [K: V]) -> [K: V] {
-    return first.difference(second)
+    return first.difference(with: second)
 }
 
 public func | <K: Hashable, V> (first: [K: V], second: [K: V]) -> [K: V] {
-    return first.union(second)
+    return first.union(values: second)
 }

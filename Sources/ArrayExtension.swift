@@ -81,7 +81,7 @@ public extension Array where Element : Equatable {
         return indexes(of: object).last
     }
 
-    public func difference(values: [Element]...) -> [Element] {
+    public func difference(with values: [Element]...) -> [Element] {
         var result = [Element]()
         elements: for element in self {
             for value in values {
@@ -94,7 +94,7 @@ public extension Array where Element : Equatable {
         return result
     }
 
-    public func intersection(values: [Element]...) -> Array {
+    public func intersection(for values: [Element]...) -> Array {
         var result = self
         var intersection = Array()
 
@@ -131,7 +131,7 @@ public extension Array where Element : Equatable {
 
 public extension Array {
 
-    public func reverseIndex(index: Int) -> Int {
+    public func reverse(index: Int) -> Int {
         return Swift.max(self.count - 1 - index, 0)
     }
 
