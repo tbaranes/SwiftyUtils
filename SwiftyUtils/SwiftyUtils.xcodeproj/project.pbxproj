@@ -169,6 +169,7 @@
 		E2DE21481D1C7DB30035C523 /* SwiftyColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE21451D1C7D8F0035C523 /* SwiftyColorTests.swift */; };
 		E2DE21491D1C7DB40035C523 /* SwiftyColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE21451D1C7D8F0035C523 /* SwiftyColorTests.swift */; };
 		E2DE214B1D1C80680035C523 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE214A1D1C80680035C523 /* UIStoryboardExtension.swift */; };
+		E2DE214D1D1C82030035C523 /* UISwitchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE214C1D1C82030035C523 /* UISwitchExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -270,6 +271,7 @@
 		E29AA5091CCFC3F200B351C9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		E2DE21451D1C7D8F0035C523 /* SwiftyColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyColorTests.swift; sourceTree = "<group>"; };
 		E2DE214A1D1C80680035C523 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		E2DE214C1D1C82030035C523 /* UISwitchExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -540,6 +542,7 @@
 				E218E3221CE200B9005E0FA4 /* UIAlertControllerExtension.swift */,
 				E218E3241CE20121005E0FA4 /* UIApplicationExtension.swift */,
 				E2DE214A1D1C80680035C523 /* UIStoryboardExtension.swift */,
+				E2DE214C1D1C82030035C523 /* UISwitchExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1061,6 +1064,7 @@
 				E273FF861CCD0040003156EC /* IntExtension.swift in Sources */,
 				E273FF9E1CCD0040003156EC /* OccupiableProtocol.swift in Sources */,
 				E273FF831CCD0040003156EC /* Injectable.swift in Sources */,
+				E2DE214D1D1C82030035C523 /* UISwitchExtension.swift in Sources */,
 				E273FFA11CCD0040003156EC /* ReusableFormatters.swift in Sources */,
 				E273FF571CCD0025003156EC /* UIImageExtension.swift in Sources */,
 				E273FF501CCD0025003156EC /* BlockPanGestureRecognizer.swift in Sources */,

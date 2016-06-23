@@ -56,6 +56,8 @@ Check out the repository to find examples / tests for each feature.
 - [UIViewController](#uiviewcontroller-extension)
 - [UIAlertController](#uialertcontroller-extension)
 - [UIApplication](#uiapplication-extension)
+- [UIStoryboard](#uistoryboard-extension)
+- [UISwitch](#uiswitch-extension)
 - **Gestures:**
  - [BlockTapGesturesRecognizers](#blocktapgesturesrecognizers)
  - [BlockLongPressGesturesRecognizers](#blocklongpressgesturesrecognizers)
@@ -109,6 +111,13 @@ var aString = "hello world"
 print(aString[0]) // h
 print(aString[2]) // l
 print(aString[1...3]) // ell
+```
+
+Create a string from Float or Double with max digits:
+
+```swift
+let aString = String(value: 2.323232, maxDigits: 2)
+print(aString) // 2.32
 ```
 
 Check if it contains a string:
@@ -465,6 +474,16 @@ let myColor2 = UIColor(hexString: "not hex string") // nil
 
 let myColor = NSColor(hex: 0x233C64) // Equals 35,60,100,1
 let myColor2 = NSColor(hexString: "not hex string") // nil
+```
+
+Access to individual color value:
+
+```swift
+let myColor = UIColor(red: 120, green: 205, blue: 44, alpha: 0.3)
+print(myColor.redComponent) // 120
+print(myColor.greenComponent) // 205
+print(myColor.blueComponent) // 44
+print(myColor.alpha) // 0.3
 ```
 
 ### UserDefaults extension
@@ -917,6 +936,23 @@ Get the current view controller display:
 
 ```swift
 UIApplication.sharedApplication().topViewController()
+```
+
+### UIStoryboard extension
+
+Get the application's main storyboard:
+
+```swift
+let storyboard = UIStoryboard.main
+```
+
+### UISwitch extension
+
+Toggle a switch state:
+
+```swift
+let mySwitch = UISwitch()
+mySwitch.toggle()
 ```
 
 ### BlockTapGesturesRecognizers
