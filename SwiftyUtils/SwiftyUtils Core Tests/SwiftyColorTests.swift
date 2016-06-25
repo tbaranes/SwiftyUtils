@@ -21,6 +21,8 @@ class SwiftyColorTests: XCTestCase {
 
 }
 
+#if !os(OSX)
+
 extension SwiftyColorTests {
 
     func testValidHexColor() {
@@ -55,3 +57,5 @@ extension SwiftyColorTests {
     }
 
 }
+
+#endif

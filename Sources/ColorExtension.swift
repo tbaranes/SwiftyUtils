@@ -59,29 +59,33 @@ public extension SwiftyColor {
 
 public extension SwiftyColor {
 
+    #if !os(OSX)
+    
     public var redComponent: Int {
-        var r: CGFloat = 0
-        getRed(&r, green: nil, blue: nil, alpha: nil)
-        return Int(r * 255)
+    var r: CGFloat = 0
+    getRed(&r, green: nil, blue: nil, alpha: nil)
+    return Int(r * 255)
     }
 
     public var greenComponent: Int {
-        var g: CGFloat = 0
-        getRed(nil, green: &g, blue: nil, alpha: nil)
-        return Int(g * 255)
+    var g: CGFloat = 0
+    getRed(nil, green: &g, blue: nil, alpha: nil)
+    return Int(g * 255)
     }
 
     public var blueComponent: Int {
-        var b: CGFloat = 0
-        getRed(nil, green: nil, blue: &b, alpha: nil)
-        return Int(b * 255)
+    var b: CGFloat = 0
+    getRed(nil, green: nil, blue: &b, alpha: nil)
+    return Int(b * 255)
     }
 
     public var alpha: CGFloat {
-        var alpha: CGFloat = 0
-        getRed(nil, green: nil, blue: nil, alpha: &alpha)
-        return alpha
+    var alpha: CGFloat = 0
+    getRed(nil, green: nil, blue: nil, alpha: &alpha)
+    return alpha
     }
+
+    #endif
 
 }
 

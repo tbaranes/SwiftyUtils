@@ -231,7 +231,7 @@
 		E27300841CCD068C003156EC /* NSObjectExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensionTests.swift; sourceTree = "<group>"; };
 		E27300981CCD06CD003156EC /* SwiftyUtils tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftyUtils tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E273009C1CCD06CD003156EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E27300A71CCD06E8003156EC /* SwiftyUtils OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftyUtils OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E27300A71CCD06E8003156EC /* SwiftyUtils macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftyUtils macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27300AB1CCD06E8003156EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E273FED71CCCFF5B003156EC /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E273FEDA1CCCFF5B003156EC /* SwiftyUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyUtils.h; sourceTree = "<group>"; };
@@ -348,14 +348,13 @@
 			path = "SwiftyUtils tvOS";
 			sourceTree = "<group>";
 		};
-		E27300181CCD03ED003156EC /* SwiftyUtils OS X */ = {
+		E27300181CCD03ED003156EC /* SwiftyUtils macOS */ = {
 			isa = PBXGroup;
 			children = (
 				E27300191CCD03ED003156EC /* SwiftyUtils.h */,
 				E273001B1CCD03ED003156EC /* Info.plist */,
 			);
-			name = "SwiftyUtils OS X";
-			path = "SwiftyUtils-OSX";
+			path = "SwiftyUtils macOS";
 			sourceTree = "<group>";
 		};
 		E27300601CCD0655003156EC /* SwiftyUtils iOS Tests */ = {
@@ -409,13 +408,13 @@
 			path = "../SwiftyUtils/SwiftyUtils tvOS Tests";
 			sourceTree = "<group>";
 		};
-		E27300A81CCD06E8003156EC /* SwiftyUtils OS X Tests */ = {
+		E27300A81CCD06E8003156EC /* SwiftyUtils macOS Tests */ = {
 			isa = PBXGroup;
 			children = (
 				E27300AB1CCD06E8003156EC /* Info.plist */,
 			);
-			name = "SwiftyUtils OS X Tests";
-			path = "../SwiftyUtils/SwiftyUtils OS X Tests";
+			name = "SwiftyUtils macOS Tests";
+			path = "../SwiftyUtils/SwiftyUtils macOS Tests";
 			sourceTree = "<group>";
 		};
 		E27300CB1CCD08B4003156EC /* Tests */ = {
@@ -423,7 +422,7 @@
 			children = (
 				E273006A1CCD0669003156EC /* Core */,
 				E27300601CCD0655003156EC /* SwiftyUtils iOS Tests */,
-				E27300A81CCD06E8003156EC /* SwiftyUtils OS X Tests */,
+				E27300A81CCD06E8003156EC /* SwiftyUtils macOS Tests */,
 				E27300991CCD06CD003156EC /* SwiftyUtils tvOS Tests */,
 			);
 			name = Tests;
@@ -435,7 +434,7 @@
 			children = (
 				E273FF431CCCFFEC003156EC /* SwiftyUtils Core */,
 				E273FED91CCCFF5B003156EC /* SwiftyUtils iOS */,
-				E27300181CCD03ED003156EC /* SwiftyUtils OS X */,
+				E27300181CCD03ED003156EC /* SwiftyUtils macOS */,
 				E273000B1CCD031B003156EC /* SwiftyUtils tvOS */,
 				E2218C331D155039000F96DB /* SwiftyUtils watchOS */,
 				E27300CB1CCD08B4003156EC /* Tests */,
@@ -451,7 +450,7 @@
 				E27300171CCD03ED003156EC /* SwiftyUtils.framework */,
 				E273005F1CCD0655003156EC /* SwiftyUtils iOS Tests.xctest */,
 				E27300981CCD06CD003156EC /* SwiftyUtils tvOS Tests.xctest */,
-				E27300A71CCD06E8003156EC /* SwiftyUtils OS X Tests.xctest */,
+				E27300A71CCD06E8003156EC /* SwiftyUtils macOS Tests.xctest */,
 				E2218C321D155039000F96DB /* SwiftyUtils.framework */,
 			);
 			name = Products;
@@ -622,9 +621,9 @@
 			productReference = E273000A1CCD031B003156EC /* SwiftyUtils.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E27300161CCD03ED003156EC /* SwiftyUtils OS X */ = {
+		E27300161CCD03ED003156EC /* SwiftyUtils macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E273001C1CCD03ED003156EC /* Build configuration list for PBXNativeTarget "SwiftyUtils OS X" */;
+			buildConfigurationList = E273001C1CCD03ED003156EC /* Build configuration list for PBXNativeTarget "SwiftyUtils macOS" */;
 			buildPhases = (
 				E27300121CCD03ED003156EC /* Sources */,
 				E27300131CCD03ED003156EC /* Frameworks */,
@@ -636,7 +635,7 @@
 			);
 			dependencies = (
 			);
-			name = "SwiftyUtils OS X";
+			name = "SwiftyUtils macOS";
 			productName = SwiftyUtils;
 			productReference = E27300171CCD03ED003156EC /* SwiftyUtils.framework */;
 			productType = "com.apple.product-type.framework";
@@ -677,9 +676,9 @@
 			productReference = E27300981CCD06CD003156EC /* SwiftyUtils tvOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E27300A61CCD06E8003156EC /* SwiftyUtils OS X Tests */ = {
+		E27300A61CCD06E8003156EC /* SwiftyUtils macOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E27300AF1CCD06E8003156EC /* Build configuration list for PBXNativeTarget "SwiftyUtils OS X Tests" */;
+			buildConfigurationList = E27300AF1CCD06E8003156EC /* Build configuration list for PBXNativeTarget "SwiftyUtils macOS Tests" */;
 			buildPhases = (
 				E27300A31CCD06E8003156EC /* Sources */,
 				E27300A41CCD06E8003156EC /* Frameworks */,
@@ -690,9 +689,9 @@
 			dependencies = (
 				E27300AE1CCD06E8003156EC /* PBXTargetDependency */,
 			);
-			name = "SwiftyUtils OS X Tests";
+			name = "SwiftyUtils macOS Tests";
 			productName = "SwiftyUtils OS X Tests";
-			productReference = E27300A71CCD06E8003156EC /* SwiftyUtils OS X Tests.xctest */;
+			productReference = E27300A71CCD06E8003156EC /* SwiftyUtils macOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		E273FED61CCCFF5B003156EC /* SwiftyUtils iOS */ = {
@@ -764,8 +763,8 @@
 			targets = (
 				E273FED61CCCFF5B003156EC /* SwiftyUtils iOS */,
 				E273005E1CCD0655003156EC /* SwiftyUtils iOS Tests */,
-				E27300161CCD03ED003156EC /* SwiftyUtils OS X */,
-				E27300A61CCD06E8003156EC /* SwiftyUtils OS X Tests */,
+				E27300161CCD03ED003156EC /* SwiftyUtils macOS */,
+				E27300A61CCD06E8003156EC /* SwiftyUtils macOS Tests */,
 				E27300091CCD031B003156EC /* SwiftyUtils tvOS */,
 				E27300971CCD06CD003156EC /* SwiftyUtils tvOS Tests */,
 				E2218C311D155039000F96DB /* SwiftyUtils watchOS */,
@@ -1091,7 +1090,7 @@
 		};
 		E27300AE1CCD06E8003156EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E27300161CCD03ED003156EC /* SwiftyUtils OS X */;
+			target = E27300161CCD03ED003156EC /* SwiftyUtils macOS */;
 			targetProxy = E27300AD1CCD06E8003156EC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1248,7 +1247,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftyUtils-OSX/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftyUtils macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1265,7 +1264,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "SwiftyUtils OS X Tests/Info.plist";
+				INFOPLIST_FILE = "SwiftyUtils macOS Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.SwiftyUtils-OS-X-Tests";
@@ -1357,7 +1356,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftyUtils-OSX/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftyUtils macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1378,7 +1377,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftyUtils-OSX/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftyUtils macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -1441,7 +1440,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "SwiftyUtils OS X Tests/Info.plist";
+				INFOPLIST_FILE = "SwiftyUtils macOS Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.SwiftyUtils-OS-X-Tests";
@@ -1455,7 +1454,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "SwiftyUtils OS X Tests/Info.plist";
+				INFOPLIST_FILE = "SwiftyUtils macOS Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.SwiftyUtils-OS-X-Tests";
@@ -1614,7 +1613,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E273001C1CCD03ED003156EC /* Build configuration list for PBXNativeTarget "SwiftyUtils OS X" */ = {
+		E273001C1CCD03ED003156EC /* Build configuration list for PBXNativeTarget "SwiftyUtils macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E273001D1CCD03ED003156EC /* Debug */,
@@ -1644,7 +1643,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E27300AF1CCD06E8003156EC /* Build configuration list for PBXNativeTarget "SwiftyUtils OS X Tests" */ = {
+		E27300AF1CCD06E8003156EC /* Build configuration list for PBXNativeTarget "SwiftyUtils macOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E27300B01CCD06E8003156EC /* Debug */,
