@@ -2,6 +2,9 @@ language: objective-c
 osx_image: xcode8
 notifications:
   email: false
+branches:
+  except:
+      - feature/swift3
 env:
   global:
   - LC_CTYPE=en_US.UTF-8
