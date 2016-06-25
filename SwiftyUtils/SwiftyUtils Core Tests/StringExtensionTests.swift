@@ -43,13 +43,13 @@ extension StringExtensionTests {
     func testInitFloat() {
         let aFloat: Float = 2.323232
         let aString = String(value: aFloat, maxDigits: 2)
-        XCTAssertEqual(aString, "2,32")
+        XCTAssertTrue(aString == "2,32" || aString == "2.32")
     }
 
     func testInitDouble() {
         let aFloat: Double = 2.323232
         let aString = String(value: aFloat, maxDigits: 2)
-        XCTAssertEqual(aString, "2,32")
+        XCTAssertTrue(aString == "2,32" || aString == "2.32")
     }
 
 }
