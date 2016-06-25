@@ -410,7 +410,7 @@ Schedule timer every seconds:
 
 ``` swift
 var count = 0
-Timer.every(1.seconds) { timer in
+Timer.every(1.seconds) { (timer: NSTimer) in
     print("Will print every second")
     if count == 3 {
         timer.invalidate()
