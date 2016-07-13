@@ -1,7 +1,4 @@
 //
-//  SwiftyColorTests.swift
-//  SwiftyUtils
-//
 //  Created by Tom Baranes on 23/06/16.
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //

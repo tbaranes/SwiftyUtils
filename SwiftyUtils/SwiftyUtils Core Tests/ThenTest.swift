@@ -1,7 +1,4 @@
 //
-//  ThenTest.swift
-//  SwiftyUtils
-//
 //  Created by Tom Baranes on 03/06/16.
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //

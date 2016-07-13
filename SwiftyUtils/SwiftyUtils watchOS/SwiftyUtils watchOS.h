@@ -1,7 +1,4 @@
 //
-//  SwiftyUtils watchOS.h
-//  SwiftyUtils watchOS
-//
 //  Created by Tom Baranes on 18/06/16.
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //

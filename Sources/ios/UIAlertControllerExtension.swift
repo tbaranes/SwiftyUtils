@@ -1,9 +1,6 @@
 //
-//  UIAlertControllerExtension.swift
-//  KaraFun
-//
 //  Created by Tom Baranes on 10/05/16.
-//  Copyright © 2016 Recisio. All rights reserved.
+//  Copyright © 2016 Tom Baranes. All rights reserved.
 //
 
 import Foundation
