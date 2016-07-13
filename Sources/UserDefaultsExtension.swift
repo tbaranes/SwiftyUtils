@@ -42,7 +42,7 @@ public extension UserDefaults {
 public extension UserDefaults {
 
     public static func contains(key: String) -> Bool {
-        return self.standard().contains(key: key)
+        return self.standard.contains(key: key)
     }
 
     public func contains(key: String) -> Bool {
@@ -50,8 +50,8 @@ public extension UserDefaults {
     }
 
     public func reset() {
-        for key in Array(UserDefaults.standard().dictionaryRepresentation().keys) {
-            UserDefaults.standard().removeObject(forKey: key)
+        for key in Array(UserDefaults.standard.dictionaryRepresentation().keys) {
+            UserDefaults.standard.removeObject(forKey: key)
         }
     }
 

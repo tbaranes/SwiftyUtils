@@ -35,7 +35,7 @@ public extension NSDate {
         self.init(timeInterval: 0, since: date)
     }
 
-    public func toString(dateStyle: DateFormatter.Style = .mediumStyle, timeStyle: DateFormatter.Style = .mediumStyle) -> String {
+    public func toString(dateStyle: DateFormatter.Style = .medium, timeStyle: DateFormatter.Style = .medium) -> String {
         let formatter = SUDateFormatter.sharedInstance
         formatter.dateStyle = dateStyle
         formatter.timeStyle = timeStyle

@@ -63,6 +63,13 @@
 			remoteGlobalIDString = E27300A71CCD06E8003156EC;
 			remoteInfo = "SwiftyUtils OS X Tests";
 		};
+		E2773EA01D20128E00365CDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E27300CC1CCD09D3003156EC /* SwiftyUtils.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2218C321D155039000F96DB;
+			remoteInfo = "SwiftyUtils watchOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +109,7 @@
 				E27300E01CCD09D3003156EC /* SwiftyUtils OS X Tests.xctest */,
 				E27300DA1CCD09D3003156EC /* SwiftyUtils.framework */,
 				E27300DE1CCD09D3003156EC /* SwiftyUtils tvOS Tests.xctest */,
+				E2773EA11D20128E00365CDF /* SwiftyUtils.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,7 +168,7 @@
 				E2D92EB11C0392E40065268F /* Sources */,
 				E2D92EB21C0392E40065268F /* Frameworks */,
 				E2D92EB31C0392E40065268F /* Resources */,
-				E2576C411D1481E0009B2CD0 /* Run Script - ⚠️ */,
+				E2576C411D1481E0009B2CD0 /* Run Script - ⚠️ SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -249,8 +257,15 @@
 		E27300E01CCD09D3003156EC /* SwiftyUtils OS X Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "SwiftyUtils OS X Tests.xctest";
+			path = "SwiftyUtils macOS Tests.xctest";
 			remoteRef = E27300DF1CCD09D3003156EC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E2773EA11D20128E00365CDF /* SwiftyUtils.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyUtils.framework;
+			remoteRef = E2773EA01D20128E00365CDF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -269,14 +284,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		E2576C411D1481E0009B2CD0 /* Run Script - ⚠️ */ = {
+		E2576C411D1481E0009B2CD0 /* Run Script - ⚠️ SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Run Script - ⚠️";
+			name = "Run Script - ⚠️ SwiftLint";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

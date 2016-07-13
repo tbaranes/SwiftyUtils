@@ -9,8 +9,6 @@
 import XCTest
 @testable import SwiftyUtils
 
-// TODO: Renable defaults tests once Apple fix them
-
 class UserDefaultsExtensionTests: XCTestCase {
 
     override func setUp() {
@@ -28,7 +26,7 @@ class UserDefaultsExtensionTests: XCTestCase {
 extension UserDefaultsExtensionTests {
 
     func testSubscript() {
-        let defaults = UserDefaults.standard()
+        let defaults = UserDefaults.standard
         let username = "test"
         defaults["userName"] = username
         XCTAssertEqual(defaults["userName"] as? String ?? "", username)
@@ -42,7 +40,7 @@ extension UserDefaultsExtensionTests {
     func testContainsKeySuccess() {
         let key = "aKey"
         let value = "aValue"
-        UserDefaults.standard().set(value, forKey: key)
+        UserDefaults.standard.set(value, forKey: key)
         XCTAssertTrue(UserDefaults.contains(key: key))
     }
 

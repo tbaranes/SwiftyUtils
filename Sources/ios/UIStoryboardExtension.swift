@@ -9,7 +9,7 @@
 public extension UIStoryboard {
 
     public static var main: UIStoryboard {
-        let bundle = Bundle.main()
+        let bundle = Bundle.main
         guard let storyboardName = bundle.objectForInfoDictionaryKey("UIMainStoryboardFile") as? String else {
             fatalError("No main storyboard set in your app.")
         }

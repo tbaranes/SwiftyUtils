@@ -27,7 +27,7 @@ import Foundation
 public extension FileManager {
 
     public static func document() -> NSURL {
-        return self.default().document()
+        return self.default.document()
     }
 
     public func document() -> NSURL {
@@ -35,18 +35,18 @@ public extension FileManager {
             // On OS X it is, so put files in Application Support. If we aren't running
             // in a sandbox, put it in a subdirectory based on the bundle identifier
             // to avoid accidentally sharing files between applications
-            var defaultURL = FileManager.default().urlsForDirectory(.applicationSupportDirectory, inDomains: .userDomainMask).first
-            if ProcessInfo.processInfo().environment["APP_SANDBOX_CONTAINER_ID"] == nil {
-                var identifier = Bundle.main().bundleIdentifier
+            var defaultURL = FileManager.default.urlsForDirectory(.applicationSupportDirectory, inDomains: .userDomainMask).first
+            if ProcessInfo.processInfo.environment["APP_SANDBOX_CONTAINER_ID"] == nil {
+                var identifier = Bundle.main.bundleIdentifier
                 if identifier?.length == 0 {
-                    identifier = Bundle.main().executableURL?.lastPathComponent
+                    identifier = Bundle.main.executableURL?.lastPathComponent
                 }
                 defaultURL = try! defaultURL?.appendingPathComponent(identifier ?? "", isDirectory: true)
             }
             return defaultURL ?? NSURL()
         #else
             // On iOS the Documents directory isn't user-visible, so put files there
-            return FileManager.default().urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
+            return FileManager.default.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
         #endif
     }
 
@@ -57,11 +57,11 @@ public extension FileManager {
 public extension FileManager {
 
     public static func createDirectory(at directoryURL: NSURL) throws {
-        return try self.default().createDirectory(at: directoryURL)
+        return try self.default.createDirectory(at: directoryURL)
     }
 
     public func createDirectory(at directoryURL: NSURL) throws {
-        let fileManager = FileManager.default()
+        let fileManager = FileManager.default
         var isDir: ObjCBool = false
         let fileExists = fileManager.fileExists(atPath: directoryURL.path!, isDirectory: &isDir)
         if fileExists == false || isDir {
@@ -76,7 +76,7 @@ public extension FileManager {
 public extension FileManager {
 
     public static func deleteAllTemporaryFiles(path: String) throws {
-        return try self.default().deleteAllTemporaryFiles()
+        return try self.default.deleteAllTemporaryFiles()
     }
 
     public func deleteAllTemporaryFiles() throws {
@@ -87,7 +87,7 @@ public extension FileManager {
     }
 
     public static func deleteAllDocumentFiles(path: String) throws {
-        return try self.default().deleteAllDocumentFiles()
+        return try self.default.deleteAllDocumentFiles()
     }
 
     public func deleteAllDocumentFiles() throws {

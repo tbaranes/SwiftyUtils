@@ -73,7 +73,7 @@ public extension String {
     }
 
     public func isOnlyEmptySpacesAndNewLineCharacters() -> Bool {
-        let characterSet = NSCharacterSet.whitespacesAndNewlines()
+        let characterSet = NSCharacterSet.whitespacesAndNewlines
         let newText = self.trimmingCharacters(in: characterSet)
         return newText.isEmpty
     }
@@ -135,7 +135,7 @@ public extension String {
     }
 
     public func trimmed() -> String {
-        return components(separatedBy: NSCharacterSet.whitespacesAndNewlines()).joined(separator: "")
+        return components(separatedBy: NSCharacterSet.whitespacesAndNewlines).joined(separator: "")
     }
 
     public mutating func truncate(limit: Int) {

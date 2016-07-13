@@ -49,7 +49,7 @@ class TimerTests: XCTestCase {
         let timer = Timer.new(after: 0.1.seconds) {
             self.testNewEvery()
         }
-        RunLoop.current().add(timer, forMode: RunLoopMode.defaultRunLoopMode)
+        RunLoop.current.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
     }
 
     var timer4: Timer!
@@ -72,7 +72,7 @@ class TimerTests: XCTestCase {
             self.testAfter2()
         }
 
-        timer.start(runLoop: RunLoop.current(), modes: RunLoopMode.defaultRunLoopMode)
+        timer.start(runLoop: RunLoop.current, modes: RunLoopMode.defaultRunLoopMode)
     }
 
     func testAfter2() {

@@ -45,7 +45,7 @@ public extension UIDevice {
     }
 
     public class func deviceLanguage() -> String {
-        return Bundle.main().preferredLocalizations[0]
+        return Bundle.main.preferredLocalizations[0]
     }
 
     public class func isPhone() -> Bool {

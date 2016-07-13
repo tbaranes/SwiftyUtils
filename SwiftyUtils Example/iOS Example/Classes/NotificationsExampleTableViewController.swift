@@ -37,7 +37,7 @@ class NotificationsExampleTableViewController: UITableViewController {
         tableView.reloadData()
 
         let name = NSNotification.Name(rawValue: notificationProxy.name)
-        NotificationCenter.default().post(name: name, object: nil)
+        NotificationCenter.default.post(name: name, object: nil)
     }
 
     func removeNotificationAtIndexPath(indexPath: NSIndexPath) {
@@ -72,6 +72,6 @@ class NotificationsExampleTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let notificationProxy = notifications[indexPath.row]
         let name = NSNotification.Name(rawValue: notificationProxy.name)
-        NotificationCenter.default().post(name: name, object: indexPath)
+        NotificationCenter.default.post(name: name, object: indexPath)
     }
 }

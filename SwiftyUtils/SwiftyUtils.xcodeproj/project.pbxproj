@@ -18,6 +18,7 @@
 		E21D5ACC1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */; };
 		E21D5ACD1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */; };
 		E21D5ACE1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */; };
+		E21FD8941D36CAD2001A3886 /* UserDefaultsExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300741CCD0669003156EC /* UserDefaultsExtensionTests.swift */; };
 		E2218C351D155039000F96DB /* SwiftyUtils watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E2218C341D155039000F96DB /* SwiftyUtils watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2218C3B1D1550A9000F96DB /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5A1CCD0040003156EC /* ArrayExtension.swift */; };
 		E2218C3C1D1550A9000F96DB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5D1CCD0040003156EC /* ColorExtension.swift */; };
@@ -966,6 +967,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E273007B1CCD0669003156EC /* DateExtensionTests.swift in Sources */,
+				E21FD8941D36CAD2001A3886 /* UserDefaultsExtensionTests.swift in Sources */,
 				E273007C1CCD0669003156EC /* FileManagerTests.swift in Sources */,
 				E27300791CCD0669003156EC /* DoubleExtensionTests.swift in Sources */,
 				E273007E1CCD0669003156EC /* TimerTests.swift in Sources */,

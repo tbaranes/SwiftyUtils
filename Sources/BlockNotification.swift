@@ -48,11 +48,11 @@ public class BlockNotification {
     // MARK -
 
     public  func start() {
-        NotificationCenter.default().addObserver(self, selector: #selector(handleNotification(notification:)), name: name, object: object)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(notification:)), name: NSNotification.Name(rawValue: name), object: object)
     }
 
     public  func stop() {
-        NotificationCenter.default().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 
     // MARK - Action
