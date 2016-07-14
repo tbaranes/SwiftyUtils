@@ -42,6 +42,10 @@ N/A
 - UITesting
 - UnitTesting
 
+**New iOS classes:**
+
+- Simulator
+
 **New extensions:**
 
 - Color:

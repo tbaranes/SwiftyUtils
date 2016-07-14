@@ -60,6 +60,7 @@ Check out the repository to find examples / tests for each feature.
 - [UIApplication](#uiapplication-extension)
 - [UIStoryboard](#uistoryboard-extension)
 - [UISwitch](#uiswitch-extension)
+- [Simulator](#simulator)
 - **Gestures:**
  - [BlockTapGesturesRecognizers](#blocktapgesturesrecognizers)
  - [BlockLongPressGesturesRecognizers](#blocklongpressgesturesrecognizers)
@@ -1014,6 +1015,16 @@ Toggle a switch state:
 ```swift
 let mySwitch = UISwitch()
 mySwitch.toggle()
+```
+
+### Simulator
+
+Check if you are running on a simulator:
+
+```swift
+if !Simulator.isRunning {
+  // add device specific operations here
+}
 ```
 
 ### BlockTapGesturesRecognizers

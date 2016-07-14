@@ -82,6 +82,7 @@
 		E26578151D37A0410009452D /* UITestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26578111D37A03E0009452D /* UITestingTests.swift */; };
 		E26578161D37A0430009452D /* UITestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26578111D37A03E0009452D /* UITestingTests.swift */; };
 		E26578171D37A0440009452D /* UITestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26578111D37A03E0009452D /* UITestingTests.swift */; };
+		E26578241D37A5200009452D /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26578231D37A5200009452D /* Simulator.swift */; };
 		E269E8211D014D6B0085992E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8201D014D6B0085992E /* Then.swift */; };
 		E269E8261D014F2B0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
 		E269E8271D014F2C0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
@@ -228,6 +229,7 @@
 		E26578061D379FB10009452D /* UnitTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTesting.swift; sourceTree = "<group>"; };
 		E265780A1D379FE80009452D /* UnitTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTestingTests.swift; sourceTree = "<group>"; };
 		E26578111D37A03E0009452D /* UITestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestingTests.swift; sourceTree = "<group>"; };
+		E26578231D37A5200009452D /* Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
 		E269E8201D014D6B0085992E /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		E269E8221D014EBE0085992E /* ThenTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThenTest.swift; sourceTree = "<group>"; };
 		E273000A1CCD031B003156EC /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -499,6 +501,7 @@
 				E273FF461CCD0025003156EC /* BlockPinchGestureRecognizer.swift */,
 				E273FF471CCD0025003156EC /* BlockSwipeGestureRecognizer.swift */,
 				E273FF481CCD0025003156EC /* BlockTapGestureRecognizer.swift */,
+				E26578231D37A5200009452D /* Simulator.swift */,
 			);
 			name = Classes;
 			path = ../Sources/ios;
@@ -1082,6 +1085,7 @@
 				E218E3271CE201F9005E0FA4 /* NotificationCenterExtension.swift in Sources */,
 				E273FF541CCD0025003156EC /* BundleExtension.swift in Sources */,
 				E218E3251CE20121005E0FA4 /* UIApplicationExtension.swift in Sources */,
+				E26578241D37A5200009452D /* Simulator.swift in Sources */,
 				E273FF4F1CCD0025003156EC /* BlockLongPressGestureRecognizer.swift in Sources */,
 				E273FF511CCD0025003156EC /* BlockPinchGestureRecognizer.swift in Sources */,
 				E273FF6E1CCD0040003156EC /* ArrayExtension.swift in Sources */,
