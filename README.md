@@ -37,6 +37,7 @@ Check out the repository to find examples / tests for each feature.
 - [NSLayoutConstraint](#nslayoutconstraint-extension)
 - [NSMutableAttributedString](#nsmutableattributedstring-extension)
 - [NSRange](#nsrange-extension)
+- [Bundle](#bundle-extension)
 - [NotificationCenter](#notificationcenter-extension)
 - [BlockNotification](#blocknotification)
 - [ReusableFormatters](#reusableformatters)
@@ -51,7 +52,6 @@ Check out the repository to find examples / tests for each feature.
 - [UIView](#uiview-extension)
 - [UIImage](#uiimage-extension)
 - [UIDevice](#uidevice-extension)
-- [Bundle](#bundle-extension)
 - [UIScreen](#uiscreen-extension)
 - [UIViewController](#uiviewcontroller-extension)
 - [UIAlertController](#uialertcontroller-extension)
@@ -649,6 +649,37 @@ let range = NSRange(textToFind: stringToFind, in: string)
 print(range) // location: 1, length: 7
 ```
 
+### NSBundle extension
+
+Get bundle information:
+
+```swift
+Bundle.main.appName
+Bundle(URL: someURL)?.appName
+
+Bundle.main.appVersion
+Bundle(URL: someURL)?.appVersion
+
+Bundle.main.appBuild
+Bundle(URL: someURL)?.appBuild
+
+Bundle.main.bundleId
+Bundle(URL: someURL)?.bundleId
+
+Bundle.main.schemes
+Bundle(URL: someURL)?.schemes
+
+Bundle.main.mainScheme
+Bundle(URL: someURL)?.mainScheme
+```
+
+Get the app build:
+
+```swift
+NSBundle(URL: someURL)?.appBuild
+NSBundle.mainBundle().appBuild
+```
+
 ### NotificationCenter extension
 
 Post a notification from a specific queue:
@@ -849,22 +880,6 @@ Create an image from a color:
 
 ```swift
 let image = UIImage(color: UIColor.greenColor())
-```
-
-### NSBundle extension
-
-Get the app version:
-
-```swift
-NSBundle.mainBundle().appVersion
-NSBundle(URL: someURL)?.appVersion
-```
-
-Get the app build:
-
-```swift
-NSBundle(URL: someURL)?.appBuild
-NSBundle.mainBundle().appBuild
 ```
 
 ### UIScreen extension
