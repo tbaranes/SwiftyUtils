@@ -42,6 +42,8 @@ Check out the repository to find examples / tests for each feature.
 - [BlockNotification](#blocknotification)
 - [ReusableFormatters](#reusableformatters)
 - [Async](#async)
+- [UITesting](#uitesting)
+- [UnitTesting](#unittesting)
 - **Protocols:**
  - [Injectable](#injectable)
  - [Occupiable](#occupiable)
@@ -724,6 +726,42 @@ Grand Central Dispatch sugar syntax:
 Async.background({ /* dispatch in background */}
 Async.main({ /* dispatch on the main thread */}
 Async.delay(2, { /* dispatch on the main thread after a delay */}
+```
+
+### UITesting
+
+Detect if UITests are running:
+
+```swift
+if UITesting.isRunning {
+  // tests are running
+} else {
+  // everything is fine, move along
+}
+```
+
+### UnitTesting
+
+Grand Central Dispatch sugar syntax:
+
+Detect if UITests are running:
+
+```swift
+if UnitTesting.isRunning {
+  // tests are running
+} else {
+  // everything is fine, move along
+}
+```
+
+Measure tests performance:
+
+```
+func testPerformance() {
+  let measurement = measure {
+    // run operation
+  }
+}
 ```
 
 ### Injectable

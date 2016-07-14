@@ -37,6 +37,11 @@ N/A
 - Then
 - NSBundle is now available for macOS
 
+**New classes:**
+
+- UITesting
+- UnitTesting
+
 **New extensions:**
 
 - Color:
