@@ -70,6 +70,18 @@
 		E26577FF1D37997A0009452D /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF491CCD0025003156EC /* BundleExtension.swift */; };
 		E26578001D37997B0009452D /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF491CCD0025003156EC /* BundleExtension.swift */; };
 		E26578011D37997D0009452D /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF491CCD0025003156EC /* BundleExtension.swift */; };
+		E26578031D379F910009452D /* UITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26578021D379F910009452D /* UITesting.swift */; };
+		E26578041D379F910009452D /* UITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26578021D379F910009452D /* UITesting.swift */; };
+		E26578051D379F910009452D /* UITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26578021D379F910009452D /* UITesting.swift */; };
+		E26578071D379FB10009452D /* UnitTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26578061D379FB10009452D /* UnitTesting.swift */; };
+		E26578081D379FB10009452D /* UnitTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26578061D379FB10009452D /* UnitTesting.swift */; };
+		E26578091D379FB10009452D /* UnitTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26578061D379FB10009452D /* UnitTesting.swift */; };
+		E265780E1D379FED0009452D /* UnitTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265780A1D379FE80009452D /* UnitTestingTests.swift */; };
+		E265780F1D379FEF0009452D /* UnitTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265780A1D379FE80009452D /* UnitTestingTests.swift */; };
+		E26578101D379FF10009452D /* UnitTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265780A1D379FE80009452D /* UnitTestingTests.swift */; };
+		E26578151D37A0410009452D /* UITestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26578111D37A03E0009452D /* UITestingTests.swift */; };
+		E26578161D37A0430009452D /* UITestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26578111D37A03E0009452D /* UITestingTests.swift */; };
+		E26578171D37A0440009452D /* UITestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26578111D37A03E0009452D /* UITestingTests.swift */; };
 		E269E8211D014D6B0085992E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8201D014D6B0085992E /* Then.swift */; };
 		E269E8261D014F2B0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
 		E269E8271D014F2C0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
@@ -212,6 +224,10 @@
 		E2218C321D155039000F96DB /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2218C341D155039000F96DB /* SwiftyUtils watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftyUtils watchOS.h"; sourceTree = "<group>"; };
 		E2218C361D155039000F96DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E26578021D379F910009452D /* UITesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITesting.swift; sourceTree = "<group>"; };
+		E26578061D379FB10009452D /* UnitTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTesting.swift; sourceTree = "<group>"; };
+		E265780A1D379FE80009452D /* UnitTestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTestingTests.swift; sourceTree = "<group>"; };
+		E26578111D37A03E0009452D /* UITestingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestingTests.swift; sourceTree = "<group>"; };
 		E269E8201D014D6B0085992E /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		E269E8221D014EBE0085992E /* ThenTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThenTest.swift; sourceTree = "<group>"; };
 		E273000A1CCD031B003156EC /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -392,6 +408,8 @@
 				E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */,
 				E269E8221D014EBE0085992E /* ThenTest.swift */,
 				E2DE21451D1C7D8F0035C523 /* SwiftyColorTests.swift */,
+				E265780A1D379FE80009452D /* UnitTestingTests.swift */,
+				E26578111D37A03E0009452D /* UITestingTests.swift */,
 			);
 			name = Core;
 			path = "../SwiftyUtils/SwiftyUtils Core Tests";
@@ -495,6 +513,8 @@
 				E273FF5C1CCD0040003156EC /* BlockNotification.swift */,
 				E273FF5E1CCD0040003156EC /* Constants.swift */,
 				E273FF6B1CCD0040003156EC /* ReusableFormatters.swift */,
+				E26578021D379F910009452D /* UITesting.swift */,
+				E26578061D379FB10009452D /* UnitTesting.swift */,
 			);
 			name = "SwiftyUtils Core";
 			path = ../Sources;
@@ -912,12 +932,14 @@
 			files = (
 				E273004B1CCD0633003156EC /* Constants.swift in Sources */,
 				E21D5ACA1CCE46410070797C /* NSLayoutConstraintsExtension.swift in Sources */,
+				E26578051D379F910009452D /* UITesting.swift in Sources */,
 				E27300481CCD0633003156EC /* Async.swift in Sources */,
 				E27300521CCD0633003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E27300531CCD0633003156EC /* NSRangeExtension.swift in Sources */,
 				E26578001D37997B0009452D /* BundleExtension.swift in Sources */,
 				E2976EEF1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */,
 				E27300491CCD0633003156EC /* BlockNotification.swift in Sources */,
+				E26578091D379FB10009452D /* UnitTesting.swift in Sources */,
 				E273004C1CCD0633003156EC /* DictionaryExtension.swift in Sources */,
 				E269E82B1D0152720085992E /* Then.swift in Sources */,
 				E273004E1CCD0633003156EC /* Injectable.swift in Sources */,
@@ -944,12 +966,14 @@
 			files = (
 				E2218C591D1550AE000F96DB /* NSDateExtension.swift in Sources */,
 				E2218C571D1550AE000F96DB /* DoubleExtension.swift in Sources */,
+				E26578041D379F910009452D /* UITesting.swift in Sources */,
 				E2218C5E1D1550AE000F96DB /* NSURLExtension.swift in Sources */,
 				E2218C631D1550AE000F96DB /* NotificationCenterExtension.swift in Sources */,
 				E2218C651D1550AE000F96DB /* OccupiableProtocol.swift in Sources */,
 				E26577FF1D37997A0009452D /* BundleExtension.swift in Sources */,
 				E2218C5B1D1550AE000F96DB /* NSMutableAttributedStringExtension.swift in Sources */,
 				E2218C6A1D1550AE000F96DB /* Constants.swift in Sources */,
+				E26578081D379FB10009452D /* UnitTesting.swift in Sources */,
 				E2218C5A1D1550AE000F96DB /* FileManagerExtension.swift in Sources */,
 				E2218C561D1550AE000F96DB /* DictionaryExtension.swift in Sources */,
 				E2218C671D1550AE000F96DB /* Then.swift in Sources */,
@@ -990,6 +1014,8 @@
 				E27300771CCD0669003156EC /* ArrayExtensionTests.swift in Sources */,
 				E2147B3C1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */,
 				E273007F1CCD0669003156EC /* NSURLExtensionTests.swift in Sources */,
+				E265780E1D379FED0009452D /* UnitTestingTests.swift in Sources */,
+				E26578151D37A0410009452D /* UITestingTests.swift in Sources */,
 				E273007A1CCD0669003156EC /* IntExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1004,6 +1030,7 @@
 				E27300B91CCD06F4003156EC /* TimerTests.swift in Sources */,
 				E2A801A61D37167600C99FD3 /* UserDefaultsExtensionTests.swift in Sources */,
 				E27300B71CCD06F4003156EC /* FileManagerTests.swift in Sources */,
+				E26578171D37A0440009452D /* UITestingTests.swift in Sources */,
 				E27300BC1CCD06F4003156EC /* OccupiableTests.swift in Sources */,
 				E2147B3E1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */,
 				E27300B51CCD06F4003156EC /* IntExtensionTests.swift in Sources */,
@@ -1012,6 +1039,7 @@
 				E2DE21491D1C7DB40035C523 /* SwiftyColorTests.swift in Sources */,
 				E27300B81CCD06F4003156EC /* NSRangeExtensionTests.swift in Sources */,
 				E27300B31CCD06F4003156EC /* DictionaryExtensionTests.swift in Sources */,
+				E26578101D379FF10009452D /* UnitTestingTests.swift in Sources */,
 				E27300BA1CCD06F4003156EC /* NSURLExtensionTests.swift in Sources */,
 				E21D5ACE1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */,
 			);
@@ -1027,6 +1055,7 @@
 				E27300C51CCD06F5003156EC /* TimerTests.swift in Sources */,
 				E2A801A51D37167500C99FD3 /* UserDefaultsExtensionTests.swift in Sources */,
 				E27300C31CCD06F5003156EC /* FileManagerTests.swift in Sources */,
+				E26578161D37A0430009452D /* UITestingTests.swift in Sources */,
 				E27300C81CCD06F5003156EC /* OccupiableTests.swift in Sources */,
 				E2147B3D1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */,
 				E27300C11CCD06F5003156EC /* IntExtensionTests.swift in Sources */,
@@ -1035,6 +1064,7 @@
 				E2DE21481D1C7DB30035C523 /* SwiftyColorTests.swift in Sources */,
 				E27300C41CCD06F5003156EC /* NSRangeExtensionTests.swift in Sources */,
 				E27300BF1CCD06F5003156EC /* DictionaryExtensionTests.swift in Sources */,
+				E265780F1D379FEF0009452D /* UnitTestingTests.swift in Sources */,
 				E27300C61CCD06F5003156EC /* NSURLExtensionTests.swift in Sources */,
 				E21D5ACD1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */,
 			);
@@ -1061,6 +1091,7 @@
 				E273FF7A1CCD0040003156EC /* Constants.swift in Sources */,
 				E21D5AC81CCE46410070797C /* NSLayoutConstraintsExtension.swift in Sources */,
 				E273FF951CCD0040003156EC /* TimerExtension.swift in Sources */,
+				E26578031D379F910009452D /* UITesting.swift in Sources */,
 				E273FFA41CCD0040003156EC /* Selfie.swift in Sources */,
 				E273FF8F1CCD0040003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E273FF551CCD0025003156EC /* NSObjectExtension.swift in Sources */,
@@ -1079,6 +1110,7 @@
 				E273FFA11CCD0040003156EC /* ReusableFormatters.swift in Sources */,
 				E273FF571CCD0025003156EC /* UIImageExtension.swift in Sources */,
 				E273FF501CCD0025003156EC /* BlockPanGestureRecognizer.swift in Sources */,
+				E26578071D379FB10009452D /* UnitTesting.swift in Sources */,
 				E2DE214B1D1C80680035C523 /* UIStoryboardExtension.swift in Sources */,
 				E273FF921CCD0040003156EC /* NSRangeExtension.swift in Sources */,
 				E273FF591CCD0025003156EC /* UIViewExtension.swift in Sources */,
