@@ -5,6 +5,9 @@
 
 import UIKit
 
+// MARK: Initializer
+
+
 public extension UIImage {
 
     public convenience init(color: UIColor?) {
@@ -37,6 +40,20 @@ public extension UIImage {
         let newImage = UIGraphicsGetImageFromCurrentImageContext() as UIImage
         UIGraphicsEndImageContext()
         return newImage
+    }
+
+}
+
+// MARK: RenderingMode
+
+public extension UIImage {
+
+    public var original: UIImage {
+        return withRenderingMode(.alwaysOriginal)
+    }
+
+    public var template: UIImage {
+        return withRenderingMode(.alwaysTemplate)
     }
 
 }
