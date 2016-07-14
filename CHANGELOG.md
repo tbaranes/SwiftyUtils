@@ -84,6 +84,13 @@ static var main: UIStoryboard
 func toggle(animated: Bool = true)
 ```
 
+- UIImage:
+
+```swift
+var original: UIImage
+var template: UIImage
+```
+
 #### Bugfixes
 
 N/A

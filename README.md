@@ -920,6 +920,14 @@ Create an image from a color:
 let image = UIImage(color: UIColor.greenColor())
 ```
 
+Change the rendering mode:
+
+```swift
+var image = UIImage(...)
+image = image.template // imageWithRenderingMode(.AlwaysTemplate)
+image = image.original // imageWithRenderingMode(.AlwaysOriginal)
+```
+
 ### UIScreen extension
 
 Get the screen orientation:
