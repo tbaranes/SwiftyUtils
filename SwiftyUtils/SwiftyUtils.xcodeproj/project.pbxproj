@@ -166,6 +166,8 @@
 		E2976EED1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2976EEC1CCD2E3A0048724F /* CollectionTypeExtension.swift */; };
 		E2976EEF1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2976EEC1CCD2E3A0048724F /* CollectionTypeExtension.swift */; };
 		E29AA50A1CCFC3F200B351C9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29AA5091CCFC3F200B351C9 /* UIViewControllerExtension.swift */; };
+		E2A801A51D37167500C99FD3 /* UserDefaultsExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300741CCD0669003156EC /* UserDefaultsExtensionTests.swift */; };
+		E2A801A61D37167600C99FD3 /* UserDefaultsExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300741CCD0669003156EC /* UserDefaultsExtensionTests.swift */; };
 		E2DE21471D1C7DB20035C523 /* SwiftyColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE21451D1C7D8F0035C523 /* SwiftyColorTests.swift */; };
 		E2DE21481D1C7DB30035C523 /* SwiftyColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE21451D1C7D8F0035C523 /* SwiftyColorTests.swift */; };
 		E2DE21491D1C7DB40035C523 /* SwiftyColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE21451D1C7D8F0035C523 /* SwiftyColorTests.swift */; };
@@ -994,6 +996,7 @@
 				E269E8281D014F2E0085992E /* ThenTest.swift in Sources */,
 				E27300B61CCD06F4003156EC /* DateExtensionTests.swift in Sources */,
 				E27300B91CCD06F4003156EC /* TimerTests.swift in Sources */,
+				E2A801A61D37167600C99FD3 /* UserDefaultsExtensionTests.swift in Sources */,
 				E27300B71CCD06F4003156EC /* FileManagerTests.swift in Sources */,
 				E27300BC1CCD06F4003156EC /* OccupiableTests.swift in Sources */,
 				E2147B3E1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */,
@@ -1016,6 +1019,7 @@
 				E269E8271D014F2C0085992E /* ThenTest.swift in Sources */,
 				E27300C21CCD06F5003156EC /* DateExtensionTests.swift in Sources */,
 				E27300C51CCD06F5003156EC /* TimerTests.swift in Sources */,
+				E2A801A51D37167500C99FD3 /* UserDefaultsExtensionTests.swift in Sources */,
 				E27300C31CCD06F5003156EC /* FileManagerTests.swift in Sources */,
 				E27300C81CCD06F5003156EC /* OccupiableTests.swift in Sources */,
 				E2147B3D1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */,
