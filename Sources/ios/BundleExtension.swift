@@ -25,9 +25,9 @@ public extension Bundle {
 
     public var schemes: [String] {
         guard let infoDictionary = Bundle.main.infoDictionary,
-            urlTypes = infoDictionary["CFBundleURLTypes"] as? [AnyObject],
-            urlType = urlTypes.first as? [String : AnyObject],
-            urlSchemes = urlType["CFBundleURLSchemes"] as? [String] else {
+            let urlTypes = infoDictionary["CFBundleURLTypes"] as? [AnyObject],
+            let urlType = urlTypes.first as? [String : AnyObject],
+            let urlSchemes = urlType["CFBundleURLSchemes"] as? [String] else {
                 return []
         }
         return urlSchemes
@@ -43,7 +43,7 @@ private extension Bundle {
 
     private func string(for key: String) -> String {
         guard let infoDictionary = Bundle.main.infoDictionary,
-            value = infoDictionary[key] as? String else {
+            let value = infoDictionary[key] as? String else {
                 return ""
         }
         return value

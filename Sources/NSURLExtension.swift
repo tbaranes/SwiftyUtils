@@ -8,7 +8,7 @@ import Foundation
 public extension NSURL {
 
     public var queryParameters: [String: String]? {
-        guard let components = NSURLComponents(url: self as URL, resolvingAgainstBaseURL: true), queryItems = components.queryItems else {
+        guard let components = NSURLComponents(url: self as URL, resolvingAgainstBaseURL: true), let queryItems = components.queryItems else {
             return nil
         }
 

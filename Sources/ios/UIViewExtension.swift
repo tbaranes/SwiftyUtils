@@ -61,7 +61,10 @@ public extension UIView {
             name = T.className
         }
 
-        let nibViews = Bundle.main.loadNibNamed(name, owner: nil, options: nil)
+        guard let nibViews = Bundle.main.loadNibNamed(name, owner: nil, options: nil) else {
+            return nil
+        }
+        
         for v in nibViews {
             if let tog = v as? T {
                 view = tog

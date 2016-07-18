@@ -50,7 +50,7 @@ public extension UIDevice {
         for child in mirror.children {
             let value = child.value
 
-            if let value = value as? Int8 where value != 0 {
+            if let value = value as? Int8, value != 0 {
                 identifier.append(UnicodeScalar(UInt8(value)))
             }
         }

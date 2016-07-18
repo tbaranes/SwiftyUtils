@@ -13,13 +13,13 @@ class OthersExampleViewController: UIViewController {
 
     @IBOutlet weak var labelAppVersion: UILabel! {
         didSet {
-            labelAppVersion.text = String(format: "App version: %@", Bundle.main.appVersion!)
+            labelAppVersion.text = String(format: "App version: %@", Bundle.main.appVersion)
         }
     }
 
     @IBOutlet weak var labelAppBuild: UILabel! {
         didSet {
-            labelAppBuild.text = String(format: "App build: %@", Bundle.main.appBuild!)
+            labelAppBuild.text = String(format: "App build: %@", Bundle.main.appBuild)
         }
     }
 

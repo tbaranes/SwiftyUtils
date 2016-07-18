@@ -16,8 +16,8 @@ class InjectableViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         super.prepare(for: segue, sender: sender)
-        if let injectedVC = segue.destinationViewController as? InjectedViewController
-            where segue.identifier == "Push using injectable example" {
+        if let injectedVC = segue.destinationViewController as? InjectedViewController,
+            segue.identifier == "Push using injectable example" {
             injectedVC.inject(properties: textField.text ?? "")
         }
     }

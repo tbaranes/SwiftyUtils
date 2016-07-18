@@ -106,7 +106,7 @@
 				E27300D61CCD09D3003156EC /* SwiftyUtils.framework */,
 				E27300DC1CCD09D3003156EC /* SwiftyUtils iOS Tests.xctest */,
 				E27300D81CCD09D3003156EC /* SwiftyUtils.framework */,
-				E27300E01CCD09D3003156EC /* SwiftyUtils OS X Tests.xctest */,
+				E27300E01CCD09D3003156EC /* SwiftyUtils macOS Tests.xctest */,
 				E27300DA1CCD09D3003156EC /* SwiftyUtils.framework */,
 				E27300DE1CCD09D3003156EC /* SwiftyUtils tvOS Tests.xctest */,
 				E2773EA11D20128E00365CDF /* SwiftyUtils.framework */,
@@ -191,6 +191,7 @@
 				TargetAttributes = {
 					E2D92EB41C0392E40065268F = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -254,7 +255,7 @@
 			remoteRef = E27300DD1CCD09D3003156EC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E27300E01CCD09D3003156EC /* SwiftyUtils OS X Tests.xctest */ = {
+		E27300E01CCD09D3003156EC /* SwiftyUtils macOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "SwiftyUtils macOS Tests.xctest";
@@ -421,6 +422,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tombaranes.SwiftyUtils-Demo-iOS";
 				PRODUCT_NAME = "SwiftyUtils Example";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -433,6 +435,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tombaranes.SwiftyUtils-Demo-iOS";
 				PRODUCT_NAME = "SwiftyUtils Example";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
