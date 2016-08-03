@@ -19,6 +19,9 @@
 		E21D5ACC1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */; };
 		E21D5ACD1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */; };
 		E21D5ACE1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */; };
+		E22F301A1D523C8000ACCC9B /* NSBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22F30191D523C8000ACCC9B /* NSBundleExtension.swift */; };
+		E22F301B1D523C8000ACCC9B /* NSBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22F30191D523C8000ACCC9B /* NSBundleExtension.swift */; };
+		E22F301C1D523C8000ACCC9B /* NSBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22F30191D523C8000ACCC9B /* NSBundleExtension.swift */; };
 		E269E8211D014D6B0085992E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8201D014D6B0085992E /* Then.swift */; };
 		E269E8261D014F2B0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
 		E269E8271D014F2C0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
@@ -113,7 +116,6 @@
 		E273FF511CCD0025003156EC /* BlockPinchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF461CCD0025003156EC /* BlockPinchGestureRecognizer.swift */; };
 		E273FF521CCD0025003156EC /* BlockSwipeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF471CCD0025003156EC /* BlockSwipeGestureRecognizer.swift */; };
 		E273FF531CCD0025003156EC /* BlockTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF481CCD0025003156EC /* BlockTapGestureRecognizer.swift */; };
-		E273FF541CCD0025003156EC /* NSBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF491CCD0025003156EC /* NSBundleExtension.swift */; };
 		E273FF551CCD0025003156EC /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF4A1CCD0025003156EC /* NSObjectExtension.swift */; };
 		E273FF561CCD0025003156EC /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF4B1CCD0025003156EC /* UIDeviceExtension.swift */; };
 		E273FF571CCD0025003156EC /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF4C1CCD0025003156EC /* UIImageExtension.swift */; };
@@ -176,6 +178,7 @@
 		E218E3261CE201F9005E0FA4 /* NSNotificationCenterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotificationCenterExtension.swift; sourceTree = "<group>"; };
 		E21D5AC71CCE46410070797C /* NSLayoutConstraintsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintsExtension.swift; sourceTree = "<group>"; };
 		E21D5ACB1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensionTests.swift; sourceTree = "<group>"; };
+		E22F30191D523C8000ACCC9B /* NSBundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBundleExtension.swift; sourceTree = "<group>"; };
 		E269E8201D014D6B0085992E /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		E269E8221D014EBE0085992E /* ThenTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThenTest.swift; sourceTree = "<group>"; };
 		E273000A1CCD031B003156EC /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,7 +214,6 @@
 		E273FF461CCD0025003156EC /* BlockPinchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockPinchGestureRecognizer.swift; sourceTree = "<group>"; };
 		E273FF471CCD0025003156EC /* BlockSwipeGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockSwipeGestureRecognizer.swift; sourceTree = "<group>"; };
 		E273FF481CCD0025003156EC /* BlockTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockTapGestureRecognizer.swift; sourceTree = "<group>"; };
-		E273FF491CCD0025003156EC /* NSBundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSBundleExtension.swift; path = ios/NSBundleExtension.swift; sourceTree = "<group>"; };
 		E273FF4A1CCD0025003156EC /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		E273FF4B1CCD0025003156EC /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		E273FF4C1CCD0025003156EC /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -462,7 +464,7 @@
 				E2976EEC1CCD2E3A0048724F /* CollectionTypeExtension.swift */,
 				E21D5AC71CCE46410070797C /* NSLayoutConstraintsExtension.swift */,
 				E218E3261CE201F9005E0FA4 /* NSNotificationCenterExtension.swift */,
-				E273FF491CCD0025003156EC /* NSBundleExtension.swift */,
+				E22F30191D523C8000ACCC9B /* NSBundleExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -751,6 +753,7 @@
 				E273005A1CCD0633003156EC /* StringExtension.swift in Sources */,
 				E273004A1CCD0633003156EC /* ColorExtension.swift in Sources */,
 				E27300541CCD0633003156EC /* NSTimerExtension.swift in Sources */,
+				E22F301C1D523C8000ACCC9B /* NSBundleExtension.swift in Sources */,
 				E27300591CCD0633003156EC /* Selfie.swift in Sources */,
 				E27300561CCD0633003156EC /* NSUserDefaultsExtension.swift in Sources */,
 				E27300581CCD0633003156EC /* ReusableFormatters.swift in Sources */,
@@ -781,6 +784,7 @@
 				E27300461CCD0633003156EC /* StringExtension.swift in Sources */,
 				E27300361CCD0633003156EC /* ColorExtension.swift in Sources */,
 				E27300401CCD0633003156EC /* NSTimerExtension.swift in Sources */,
+				E22F301B1D523C8000ACCC9B /* NSBundleExtension.swift in Sources */,
 				E27300451CCD0633003156EC /* Selfie.swift in Sources */,
 				E27300421CCD0633003156EC /* NSUserDefaultsExtension.swift in Sources */,
 				E27300441CCD0633003156EC /* ReusableFormatters.swift in Sources */,
@@ -866,7 +870,6 @@
 				E2976EED1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */,
 				E29AA50A1CCFC3F200B351C9 /* UIViewControllerExtension.swift in Sources */,
 				E218E3271CE201F9005E0FA4 /* NSNotificationCenterExtension.swift in Sources */,
-				E273FF541CCD0025003156EC /* NSBundleExtension.swift in Sources */,
 				E218E3251CE20121005E0FA4 /* UIApplicationExtension.swift in Sources */,
 				E273FF4F1CCD0025003156EC /* BlockLongPressGestureRecognizer.swift in Sources */,
 				E273FF511CCD0025003156EC /* BlockPinchGestureRecognizer.swift in Sources */,
@@ -875,6 +878,7 @@
 				E273FF9B1CCD0040003156EC /* NSUserDefaultsExtension.swift in Sources */,
 				E273FF521CCD0025003156EC /* BlockSwipeGestureRecognizer.swift in Sources */,
 				E273FF7A1CCD0040003156EC /* Constants.swift in Sources */,
+				E22F301A1D523C8000ACCC9B /* NSBundleExtension.swift in Sources */,
 				E21D5AC81CCE46410070797C /* NSLayoutConstraintsExtension.swift in Sources */,
 				E273FF951CCD0040003156EC /* NSTimerExtension.swift in Sources */,
 				E273FFA41CCD0040003156EC /* Selfie.swift in Sources */,
