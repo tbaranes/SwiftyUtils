@@ -211,7 +211,7 @@
 		E273FF461CCD0025003156EC /* BlockPinchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockPinchGestureRecognizer.swift; sourceTree = "<group>"; };
 		E273FF471CCD0025003156EC /* BlockSwipeGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockSwipeGestureRecognizer.swift; sourceTree = "<group>"; };
 		E273FF481CCD0025003156EC /* BlockTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockTapGestureRecognizer.swift; sourceTree = "<group>"; };
-		E273FF491CCD0025003156EC /* NSBundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBundleExtension.swift; sourceTree = "<group>"; };
+		E273FF491CCD0025003156EC /* NSBundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSBundleExtension.swift; path = ios/NSBundleExtension.swift; sourceTree = "<group>"; };
 		E273FF4A1CCD0025003156EC /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		E273FF4B1CCD0025003156EC /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		E273FF4C1CCD0025003156EC /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -462,6 +462,7 @@
 				E2976EEC1CCD2E3A0048724F /* CollectionTypeExtension.swift */,
 				E21D5AC71CCE46410070797C /* NSLayoutConstraintsExtension.swift */,
 				E218E3261CE201F9005E0FA4 /* NSNotificationCenterExtension.swift */,
+				E273FF491CCD0025003156EC /* NSBundleExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -480,7 +481,6 @@
 		E2976EF21CCD2E860048724F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E273FF491CCD0025003156EC /* NSBundleExtension.swift */,
 				E273FF4A1CCD0025003156EC /* NSObjectExtension.swift */,
 				E273FF4B1CCD0025003156EC /* UIDeviceExtension.swift */,
 				E273FF4C1CCD0025003156EC /* UIImageExtension.swift */,
