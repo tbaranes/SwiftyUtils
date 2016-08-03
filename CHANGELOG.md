@@ -13,6 +13,7 @@ All notable changes to the project will be documented in this file.
 New protocols available, take a look into the README to see the details:
 
 - Then
+- NSBundle is now available for macOS
 
 #### Bugfixes
 
