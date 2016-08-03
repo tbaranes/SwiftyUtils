@@ -11,7 +11,7 @@ public extension UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: cancelTitle, style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
-        UIApplication.shared().topViewController()?.present(alertController, animated: true, completion: nil)
+        UIApplication.shared.topViewController()?.present(alertController, animated: true, completion: nil)
     }
 
 }

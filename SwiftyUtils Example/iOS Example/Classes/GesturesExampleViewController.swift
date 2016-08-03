@@ -116,7 +116,7 @@ class GesturesExampleViewController: UIViewController {
 
     func handlePinchGesture() {
         let pinchGesture = BlockPinchGestureRecognizer { (gesture: UIPinchGestureRecognizer) in
-            gesture.view?.transform = gesture.view!.transform.scaleBy(x: gesture.scale,
+            gesture.view?.transform = gesture.view!.transform.scaledBy(x: gesture.scale,
                                                                       y: gesture.scale)
             gesture.scale = 1.0
         }

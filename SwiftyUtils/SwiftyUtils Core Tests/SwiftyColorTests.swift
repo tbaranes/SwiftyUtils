@@ -33,23 +33,23 @@ extension SwiftyColorTests {
     }
 
     func testRedComponent() {
-        let color = SwiftyColor.red()
+        let color = SwiftyColor.red
         XCTAssertEqual(color.redComponent, 255)
     }
 
     func testGreenComponent() {
-        let color = SwiftyColor.green()
+        let color = SwiftyColor.green
         XCTAssertEqual(color.greenComponent, 255)
     }
 
     func testBlueComponent() {
-        let color = SwiftyColor.blue()
+        let color = SwiftyColor.blue
         XCTAssertEqual(color.blueComponent, 255)
     }
 
     func testAlpha() {
         let expectedAlpha: CGFloat = 0.5
-        let color = SwiftyColor.black().withAlphaComponent(expectedAlpha)
+        let color = SwiftyColor.black.withAlphaComponent(expectedAlpha)
         XCTAssertEqual(color.alpha, expectedAlpha)
     }
 

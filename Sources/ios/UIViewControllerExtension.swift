@@ -19,7 +19,7 @@ public extension UIViewController {
 
 public extension UIViewController {
 
-    public func setupBackButton(hidden: Bool = false, title: String = "", backIndicatorImage: UIImage? = nil, tintColor: UIColor? = UIColor.white()) {
+    public func setupBackButton(hidden: Bool = false, title: String = "", backIndicatorImage: UIImage? = nil, tintColor: UIColor? = UIColor.white) {
         navigationItem.hidesBackButton = hidden
         if !hidden {
             navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)

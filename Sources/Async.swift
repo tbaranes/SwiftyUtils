@@ -16,7 +16,7 @@ public struct Async {
     }
 
     public static func delay(delay: Double, closure: () -> Void) {
-        DispatchQueue(label: "com.swiftyutils.delay").after(when: DispatchTime.now() + delay, execute: closure)
+        DispatchQueue(label: "com.swiftyutils.delay").asyncAfter(deadline: DispatchTime.now() + delay, execute: closure)
     }
 
 }

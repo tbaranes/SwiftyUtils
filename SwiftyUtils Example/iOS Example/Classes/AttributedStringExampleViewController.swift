@@ -11,7 +11,7 @@ class AttributedStringExampleViewController: UIViewController {
     @IBOutlet weak var labelColorizeAfterOccurence: UILabel! {
         didSet {
             let attrString = NSMutableAttributedString.setTextColor(text: "hello world",
-                                                   color: .green(),
+                                                   color: UIColor.green,
                                                    afterOcurrence: "hello")
             labelColorizeAfterOccurence.attributedText = attrString
         }
@@ -20,7 +20,7 @@ class AttributedStringExampleViewController: UIViewController {
     @IBOutlet weak var labelColorizeForEachOccurence: UILabel! {
         didSet {
             let attrString = NSMutableAttributedString.setTextColor(text: "hello world",
-                                                                    color: UIColor.green(),
+                                                                    color: UIColor.green,
                                                                     forOccurences: "o")
             labelColorizeForEachOccurence.attributedText = attrString
         }
@@ -61,8 +61,8 @@ class AttributedStringExampleViewController: UIViewController {
     @IBOutlet weak var labelCombiningAllAttrExample: UILabel! {
         didSet {
             let attrStr = NSMutableAttributedString(string: "hello world")
-            attrStr.setTextColor(color: UIColor.orange(), afterOcurrence: "hello")
-            attrStr.setTextColor(color: UIColor.green(), forOccurences: "o")
+            attrStr.setTextColor(color: UIColor.orange, afterOcurrence: "hello")
+            attrStr.setTextColor(color: UIColor.green, forOccurences: "o")
             attrStr.setTextStrike(forOccurences: "o")
             attrStr.setTextStrike(afterOcurrence: "hello")
             attrStr.setTextUnderline(forOccurences: "o")

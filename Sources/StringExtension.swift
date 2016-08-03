@@ -89,7 +89,7 @@ public extension String {
         var urls: [NSURL] = []
         let detector: NSDataDetector?
         do {
-            detector = try NSDataDetector(types: TextCheckingResult.CheckingType.link.rawValue)
+            detector = try NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
         } catch _ as NSError {
             detector = nil
         }
@@ -97,7 +97,7 @@ public extension String {
         let text = self
         if let detector = detector {
             detector.enumerateMatches(in: text, options: [], range: NSRange(location: 0, length: text.characters.count), using: {
-                (result: TextCheckingResult?, flags: RegularExpression.MatchingFlags, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
+                (result: NSTextCheckingResult?, flags: NSRegularExpression.MatchingFlags, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
                 if let result = result,
                     let url = result.url {
                     urls.append(url)
@@ -154,7 +154,7 @@ public extension String {
 
     public var isEmail: Bool {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
-        return Predicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: self)
+        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: self)
     }
 
 }

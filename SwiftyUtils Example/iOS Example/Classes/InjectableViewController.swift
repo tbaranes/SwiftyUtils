@@ -11,12 +11,12 @@ class InjectableViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBackButton(title: "Custom back title!", tintColor: UIColor.blue())
+        setupBackButton(title: "Custom back title!", tintColor: UIColor.blue)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         super.prepare(for: segue, sender: sender)
-        if let injectedVC = segue.destinationViewController as? InjectedViewController,
+        if let injectedVC = segue.destination as? InjectedViewController,
             segue.identifier == "Push using injectable example" {
             injectedVC.inject(properties: textField.text ?? "")
         }

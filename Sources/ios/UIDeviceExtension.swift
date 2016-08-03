@@ -8,15 +8,15 @@ import UIKit
 public extension UIDevice {
 
     public class func idForVendor() -> String? {
-        return UIDevice.current().identifierForVendor?.uuidString
+        return UIDevice.current.identifierForVendor?.uuidString
     }
 
     public class func systemName() -> String {
-        return UIDevice.current().systemName
+        return UIDevice.current.systemName
     }
 
     public class func systemVersion() -> String {
-        return UIDevice.current().systemVersion
+        return UIDevice.current.systemVersion
     }
 
     public class func systemFloatVersion() -> Float {
@@ -24,7 +24,7 @@ public extension UIDevice {
     }
 
     public class func deviceName() -> String {
-        return UIDevice.current().name
+        return UIDevice.current.name
     }
 
     public class func deviceLanguage() -> String {
@@ -32,11 +32,11 @@ public extension UIDevice {
     }
 
     public class func isPhone() -> Bool {
-        return UIDevice.current().userInterfaceIdiom == UIUserInterfaceIdiom.phone
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone
     }
 
     public class func isPad() -> Bool {
-        return UIDevice.current().userInterfaceIdiom == UIUserInterfaceIdiom.pad
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
     }
 
     public class func deviceModel() -> String {
@@ -85,7 +85,7 @@ public extension UIDevice {
     }
 
     public class func forceRotation(_ orientation: UIInterfaceOrientation) {
-        UIDevice.current().forceRotation(orientation)
+        UIDevice.current.forceRotation(orientation)
     }
 
 }
