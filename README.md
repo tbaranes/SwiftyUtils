@@ -31,6 +31,7 @@ Check out the repository to find examples / tests for each feature.
 - [NSDate](#nsdate-extension)
 - [NSTimer](#nstimer-extension)
 - [NSURL](#nsurl-extension)
+- [NSBundle](#nsbundle-extension)
 - [UIColor / NSColor](#uicolor-nscolor-extension)
 - [NSUserDefaults](#nsuserdefaults-extension)
 - [NSFileManager](#nsfilemanager-extension)
@@ -51,7 +52,6 @@ Check out the repository to find examples / tests for each feature.
 - [UIView](#uiview-extension)
 - [UIImage](#uiimage-extension)
 - [UIDevice](#uidevice-extension)
-- [NSBundle](#nsbundle-extension)
 - [UIScreen](#uiscreen-extension)
 - [UIViewController](#uiviewcontroller-extension)
 - [UIAlertController](#uialertcontroller-extension)
@@ -453,6 +453,22 @@ Add skip backup attributes to you URL:
 let url = NSURL(fileURLWithPath: "/path/to/your/file")        url?.addSkipBackupAttribute() // File at url won't be backupped!
 ```
 
+### NSBundle extension
+
+Get the app version:
+
+```swift
+NSBundle.mainBundle().appVersion
+NSBundle(URL: someURL)?.appVersion
+```
+
+Get the app build:
+
+```swift
+NSBundle(URL: someURL)?.appBuild
+NSBundle.mainBundle().appBuild
+```
+
 ## UIColor / NSColor extension
 
 Create colors with HEX values:
@@ -826,22 +842,6 @@ Create an image from a color:
 
 ```swift
 let image = UIImage(color: UIColor.greenColor())
-```
-
-### NSBundle extension
-
-Get the app version:
-
-```swift
-NSBundle.mainBundle().appVersion
-NSBundle(URL: someURL)?.appVersion
-```
-
-Get the app build:
-
-```swift
-NSBundle(URL: someURL)?.appBuild
-NSBundle.mainBundle().appBuild
 ```
 
 ### UIScreen extension
