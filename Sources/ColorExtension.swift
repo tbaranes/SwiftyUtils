@@ -27,6 +27,8 @@ import Foundation
     import Cocoa
 #endif
 
+// MARK: Create Colors
+
 public extension SwiftyColor {
 
     public convenience init?(hexString: String) {
@@ -44,6 +46,45 @@ public extension SwiftyColor {
         } else {
             return nil
         }
+    }
+    
+}
+
+// MARK: Get Colors
+
+public extension SwiftyColor {
+    
+    public func lighter(amount : CGFloat = 0.25) -> SwiftyColor {
+        return hueColorWithBrightnessAmount(1 + amount)
+    }
+    
+    public func darker(amount : CGFloat = 0.25) -> SwiftyColor {
+        return hueColorWithBrightnessAmount(1 - amount)
+    }
+    
+    private func hueColorWithBrightnessAmount(amount: CGFloat) -> SwiftyColor {
+        var hue : CGFloat = 0
+        var saturation : CGFloat = 0
+        var brightness : CGFloat = 0
+        var alpha : CGFloat = 0
+        
+        #if os (iOS) || os (tvOS)
+            if getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha) {
+                return SwiftyColor(hue: hue,
+                               saturation: saturation,
+                               brightness: brightness * amount,
+                               alpha: alpha)
+            } else {
+                return self
+            }
+        #else
+            getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+            return SwiftyColor(hue: hue,
+                               saturation: saturation,
+                               brightness: brightness * amount,
+                               alpha: alpha)
+        #endif
+        
     }
     
 }

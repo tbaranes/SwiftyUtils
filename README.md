@@ -481,6 +481,18 @@ let myColor = NSColor(hex: 0x233C64) // Equals 35,60,100,1
 let myColor2 = NSColor(hexString: "not hex string") // nil
 ```
 
+Get lighter or darker variants of colors instances:
+
+``` swift
+let color = UIColor(red: 0.5, green: 0.5, blue: 1.0, alpha: 1.0)
+let lighter = color.lighter()
+let darker = color.darker()
+
+let color = NSColor(red: 0.5, green: 0.5, blue: 1.0, alpha: 1.0)
+let lighter = color.lighter()
+let darker = color.darker()
+```
+
 ### NSUserDefaults extension
 
 Get and set values from NSUserDefaults with subscripts:
