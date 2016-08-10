@@ -40,73 +40,67 @@ public extension SwiftyColor {
 
 // MARK: - Components
 
+#if !os(OSX)
 public extension SwiftyColor {
 
-    #if !os(OSX)
-    
     public var redComponent: Int {
-    var r: CGFloat = 0
-    getRed(&r, green: nil, blue: nil, alpha: nil)
-    return Int(r * 255)
+        var r: CGFloat = 0
+        getRed(&r, green: nil, blue: nil, alpha: nil)
+        return Int(r * 255)
     }
 
     public var greenComponent: Int {
-    var g: CGFloat = 0
-    getRed(nil, green: &g, blue: nil, alpha: nil)
-    return Int(g * 255)
+        var g: CGFloat = 0
+        getRed(nil, green: &g, blue: nil, alpha: nil)
+        return Int(g * 255)
     }
 
     public var blueComponent: Int {
-    var b: CGFloat = 0
-    getRed(nil, green: nil, blue: &b, alpha: nil)
-    return Int(b * 255)
+        var b: CGFloat = 0
+        getRed(nil, green: nil, blue: &b, alpha: nil)
+        return Int(b * 255)
     }
 
     public var alpha: CGFloat {
-    var alpha: CGFloat = 0
-    getRed(nil, green: nil, blue: nil, alpha: &alpha)
-    return alpha
+        var alpha: CGFloat = 0
+        getRed(nil, green: nil, blue: nil, alpha: &alpha)
+        return alpha
     }
 
-    #endif
-
 }
+#endif
 
-// MARK: Get Colors
+// MARK: - Brightness
 
 public extension SwiftyColor {
     
-    public func lighter(amount : CGFloat = 0.25) -> SwiftyColor {
-        return hueColorWithBrightnessAmount(1 + amount)
+    public func lighter(amount: CGFloat = 0.25) -> SwiftyColor {
+        return hueColorWithBrightnessAmount(amount: 1 + amount)
     }
     
-    public func darker(amount : CGFloat = 0.25) -> SwiftyColor {
-        return hueColorWithBrightnessAmount(1 - amount)
+    public func darker(amount: CGFloat = 0.25) -> SwiftyColor {
+        return hueColorWithBrightnessAmount(amount: 1 - amount)
     }
     
     private func hueColorWithBrightnessAmount(amount: CGFloat) -> SwiftyColor {
-        var hue : CGFloat = 0
-        var saturation : CGFloat = 0
-        var brightness : CGFloat = 0
-        var alpha : CGFloat = 0
+        var hue: CGFloat = 0
+        var saturation: CGFloat = 0
+        var brightness: CGFloat = 0
+        var alpha: CGFloat = 0
         
-        #if os (iOS) || os (tvOS)
+        #if os (iOS) || os (tvOS) || os (watchOS)
             if getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha) {
-                return SwiftyColor(hue: hue,
-                               saturation: saturation,
-                               brightness: brightness * amount,
-                               alpha: alpha)
-            } else {
-                return self
+                return SwiftyColor(hue: hue, saturation: saturation,
+                                   brightness: brightness * amount,
+                                   alpha: alpha)
             }
+            return self
         #else
             getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
-            return SwiftyColor(hue: hue,
-                               saturation: saturation,
+            return SwiftyColor(hue: hue, saturation: saturation,
                                brightness: brightness * amount,
                                alpha: alpha)
         #endif
-        
     }
     
 }

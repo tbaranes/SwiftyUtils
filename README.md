@@ -31,7 +31,7 @@ Check out the repository to find examples / tests for each feature.
 - [NSDate](#nsdate-extension)
 - [Timer](#timer-extension)
 - [NSURL](#nsurl-extension)
-- [UIColor / NSColor](#uicolor-nscolor-extension)
+- [UIColor / NSColor](#color-extension)
 - [UserDefaults](#userdefaults-extension)
 - [FileManager](#filemanager-extension)
 - [NSLayoutConstraint](#nslayoutconstraint-extension)
@@ -467,7 +467,7 @@ Add skip backup attributes to you URL:
 let url = NSURL(string: "/path/to/your/file")        url?.addSkipBackupAttribute() // File at url won't be backupped!
 ```
 
-## UIColor / NSColor extension
+### Color extension
 
 Create colors with HEX values:
 
@@ -487,6 +487,24 @@ print(myColor.redComponent) // 120
 print(myColor.greenComponent) // 205
 print(myColor.blueComponent) // 44
 print(myColor.alpha) // 0.3
+```
+
+Get lighter or darker variants of colors instances:
+
+```swift
+let color = UIColor(red: 0.5, green: 0.5, blue: 1.0, alpha: 1.0)
+let lighter = color.lighter(amount: 0.5)
+let darker = color.darker(amount: 0.5)
+// OR
+let lighter = color.lighter()
+let darker = color.darker()
+
+let color = NSColor(red: 0.5, green: 0.5, blue: 1.0, alpha: 1.0)
+let lighter = color.lighter(amount: 0.5)
+let lighter = color.lighter()
+// OR
+let darker = color.darker(amount: 0.5)
+let darker = color.darker()
 ```
 
 ### UserDefaults extension
