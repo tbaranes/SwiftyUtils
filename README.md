@@ -856,6 +856,13 @@ Create an image from a color:
 let image = UIImage(color: UIColor.greenColor())
 ```
 
+Fill an image with a color:
+
+```
+let image = UIImage(named: "anImage")
+let greenImage = image.filled(with: UIColor.greenColor())
+```
+
 ### UIScreen extension
 
 Get the screen orientation:
