@@ -27,6 +27,12 @@ func lighter()
 func darker()
 ```
 
+   - UIImage
+
+```swift
+func filled(with color: UIColor?) -> UIImage
+```
+   
 #### Bugfixes
 
 N/A
