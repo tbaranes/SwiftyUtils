@@ -42,8 +42,8 @@ public extension Array {
         return index >= 0 && index < count ? self[index] : nil
     }
 
-    public func takeMax(n: Int) -> Array {
-        return Array(self[0..<Swift.max(0, Swift.min(n, count))])
+    public func takeMax(number: Int) -> Array {
+        return Array(self[0..<Swift.max(0, Swift.min(number, count))])
     }
 
 }

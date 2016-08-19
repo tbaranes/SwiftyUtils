@@ -19,7 +19,8 @@ public class BlockNotification {
         self.start()
     }
 
-    public convenience init(name: String, object: AnyObject, closure: @escaping (NSNotification) -> ()) {
+    public convenience init(name: String, object: AnyObject,
+                            closure: @escaping (NSNotification) -> ()) {
         self.init(name: name, closure: closure)
         self.object = object
     }
