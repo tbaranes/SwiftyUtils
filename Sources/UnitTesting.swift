@@ -15,7 +15,7 @@ public struct UnitTesting {
     public static func measure(closure: () -> Void) -> Float {
         let start = CACurrentMediaTime()
         closure()
-        
+
         let end = CACurrentMediaTime()
         return Float(end - start)
     }

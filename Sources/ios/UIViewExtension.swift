@@ -10,6 +10,7 @@ import UIKit
 
 public extension UIView {
 
+    // swiftlint:disable:next cyclomatic_complexity
     public func convertLocalizables() {
         if subviews.count == 0 {
             return
@@ -64,7 +65,7 @@ public extension UIView {
         guard let nibViews = Bundle.main.loadNibNamed(name, owner: nil, options: nil) else {
             return nil
         }
-        
+
         for v in nibViews {
             if let tog = v as? T {
                 view = tog

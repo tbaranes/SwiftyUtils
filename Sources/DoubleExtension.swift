@@ -8,6 +8,7 @@ import Foundation
 public extension Double {
     public var millisecond: TimeInterval { return self / 1000 }
     public var milliseconds: TimeInterval { return self / 1000 }
+    // swiftlint:disable:next variable_name
     public var ms: TimeInterval { return self / 1000 }
 
     public var second: TimeInterval { return self }

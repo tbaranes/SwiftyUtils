@@ -32,7 +32,7 @@ public extension Bundle {
         }
         return urlSchemes
     }
-    
+
     public var mainScheme: String? {
         return schemes.first
     }

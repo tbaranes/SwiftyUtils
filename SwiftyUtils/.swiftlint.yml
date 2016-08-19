@@ -1,1 +1,3 @@
 line_length: 180
+included:
+ - ../Sources

@@ -9,7 +9,10 @@ public class BlockLongPressGestureRecognizer: UILongPressGestureRecognizer {
 
     private var longPressAction: ((UILongPressGestureRecognizer) -> Void)?
 
-    public  convenience init (numberOfTapsRequired: Int = 0, numberOfTouchesRequired: Int = 1, minimumPressDuration: CFTimeInterval = 0.5, longPress: ((UILongPressGestureRecognizer) -> Void)?) {
+    public  convenience init (numberOfTapsRequired: Int = 0,
+                              numberOfTouchesRequired: Int = 1,
+                              minimumPressDuration: CFTimeInterval = 0.5,
+                              longPress: ((UILongPressGestureRecognizer) -> Void)?) {
         self.init()
         self.numberOfTapsRequired = numberOfTapsRequired
         self.numberOfTouchesRequired = numberOfTouchesRequired

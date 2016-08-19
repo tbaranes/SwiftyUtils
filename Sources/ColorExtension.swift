@@ -73,21 +73,21 @@ public extension SwiftyColor {
 // MARK: - Brightness
 
 public extension SwiftyColor {
-    
+
     public func lighter(amount: CGFloat = 0.25) -> SwiftyColor {
         return hueColorWithBrightnessAmount(amount: 1 + amount)
     }
-    
+
     public func darker(amount: CGFloat = 0.25) -> SwiftyColor {
         return hueColorWithBrightnessAmount(amount: 1 - amount)
     }
-    
+
     private func hueColorWithBrightnessAmount(amount: CGFloat) -> SwiftyColor {
         var hue: CGFloat = 0
         var saturation: CGFloat = 0
         var brightness: CGFloat = 0
         var alpha: CGFloat = 0
-        
+
         #if os (iOS) || os (tvOS) || os (watchOS)
             if getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha) {
                 return SwiftyColor(hue: hue, saturation: saturation,
@@ -102,5 +102,5 @@ public extension SwiftyColor {
                                alpha: alpha)
         #endif
     }
-    
+
 }
