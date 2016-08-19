@@ -947,6 +947,13 @@ image = image.template // imageWithRenderingMode(.AlwaysTemplate)
 image = image.original // imageWithRenderingMode(.AlwaysOriginal)
 ```
 
+Fill an image with a color:
+
+```
+let image = UIImage(named: "anImage")
+let greenImage = image.filled(with: UIColor.greenColor())
+```
+
 ### UIScreen extension
 
 Get the screen orientation:

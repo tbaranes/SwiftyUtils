@@ -96,7 +96,9 @@ func toggle(animated: Bool = true)
 ```swift
 var original: UIImage
 var template: UIImage
+func filled(with color: UIColor?) -> UIImage
 ```
+   
 
 #### Bugfixes
 
