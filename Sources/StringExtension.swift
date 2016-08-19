@@ -29,7 +29,7 @@ public extension String {
         let numberFormatter = SUNumberFormatter.sharedInstance
         numberFormatter.numberStyle = .decimal
         numberFormatter.maximumFractionDigits = maxDigits
-        guard let string = numberFormatter.string(from: value) else {
+        guard let string = numberFormatter.string(for: value) else {
             return nil
         }
         self = string
@@ -39,7 +39,7 @@ public extension String {
         let numberFormatter = SUNumberFormatter.sharedInstance
         numberFormatter.numberStyle = .decimal
         numberFormatter.maximumFractionDigits = maxDigits
-        guard let string = numberFormatter.string(from: value) else {
+        guard let string = numberFormatter.string(for: value) else {
             return nil
         }
         self = string
@@ -100,7 +100,7 @@ public extension String {
                 (result: NSTextCheckingResult?, flags: NSRegularExpression.MatchingFlags, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
                 if let result = result,
                     let url = result.url {
-                    urls.append(url)
+                    urls.append(url as NSURL)
                 }
             })
         }

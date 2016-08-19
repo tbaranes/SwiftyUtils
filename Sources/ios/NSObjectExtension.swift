@@ -8,7 +8,7 @@ import Foundation
 public extension NSObject {
 
     public var className: String {
-        return self.dynamicType.className
+        return type(of: self).className
     }
 
     public static var className: String {

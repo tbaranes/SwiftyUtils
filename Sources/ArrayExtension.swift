@@ -126,7 +126,7 @@ public extension Array {
 
     public func contains<T>(instanceOf object: T) -> Bool {
         for item in self {
-            if item.dynamicType == object.dynamicType {
+            if type(of: item) == type(of: object) {
                 return true
             }
         }
@@ -148,7 +148,7 @@ public extension Array {
 public extension Array where Element : Equatable {
 
     public func contains(items: Element...) -> Bool {
-        return items.testAll { self.index(of: $0) >= 0 }
+        return items.testAll { self.index(of: $0) ?? 0 >= 0 }
     }
 
     public func contains(array: [Element]) -> Bool {

@@ -14,7 +14,7 @@ class InjectableViewController: UIViewController {
         setupBackButton(title: "Custom back title!", tintColor: UIColor.blue)
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         if let injectedVC = segue.destination as? InjectedViewController,
             segue.identifier == "Push using injectable example" {

@@ -9,7 +9,7 @@ import SwiftyUtils
 class InjectedViewController: UIViewController, Injectable {
 
     @IBOutlet weak var labelStringInjected: UILabel!
-    private var stringInjected: String!
+    fileprivate var stringInjected: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()

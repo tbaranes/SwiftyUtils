@@ -39,25 +39,6 @@ public extension UIDevice {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
     }
 
-    public class func deviceModel() -> String {
-        var systemInfo = utsname()
-        uname(&systemInfo)
-
-        let machine = systemInfo.machine
-        var identifier = ""
-        let mirror = Mirror(reflecting: machine)
-
-        for child in mirror.children {
-            let value = child.value
-
-            if let value = value as? Int8, value != 0 {
-                identifier.append(UnicodeScalar(UInt8(value)))
-            }
-        }
-
-        return identifier
-    }
-
 }
 
 // MARK: - Version

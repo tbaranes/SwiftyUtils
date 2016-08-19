@@ -26,6 +26,12 @@ N/A
 - Swift 3 support (currently not merged in master, available using branch `feature/swift3`). README is up to date, please report if you find any diffs
 - Some APIs have been updated to be more swifty, check out the README for more information
 
+**Extensions iOS removed:**   
+
+```
+class func deviceModel() -> String
+```
+
 ### Enhancements
 
 *Note: Take a look into the README to see the details of all the following enhancements* 
@@ -98,7 +104,7 @@ var original: UIImage
 var template: UIImage
 func filled(with color: UIColor?) -> UIImage
 ```
-   
+
 
 #### Bugfixes
 

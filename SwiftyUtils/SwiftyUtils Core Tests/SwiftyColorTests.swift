@@ -73,9 +73,15 @@ extension SwiftyColorTests {
         var alpha: CGFloat = 0
 
         lighterWhite.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-        XCTAssertEqualWithAccuracy(red, 1.0, accuracy: 0.0001)
-        XCTAssertEqualWithAccuracy(green, 1.0, accuracy: 0.0001)
-        XCTAssertEqualWithAccuracy(blue, 1.0, accuracy: 0.0001)
+        #if os(OSX)
+            XCTAssertEqualWithAccuracy(red, 1.0, accuracy: 0.0001)
+            XCTAssertEqualWithAccuracy(green, 1.0, accuracy: 0.0001)
+            XCTAssertEqualWithAccuracy(blue, 1.0, accuracy: 0.0001)
+        #else
+            XCTAssertEqualWithAccuracy(red, 1.25, accuracy: 0.0001)
+            XCTAssertEqualWithAccuracy(green, 1.25, accuracy: 0.0001)
+            XCTAssertEqualWithAccuracy(blue, 1.25, accuracy: 0.0001)
+        #endif
         XCTAssertEqualWithAccuracy(alpha, 1.0, accuracy: 0.0001)
     }
 

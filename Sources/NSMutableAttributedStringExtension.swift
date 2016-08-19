@@ -10,9 +10,9 @@ import Foundation
     import Cocoa
 #endif
 
-public extension NSMutableAttributedString {
+// MARK - Colors
 
-    // MARK - Colors
+public extension NSMutableAttributedString {
 
     public static func setTextColor(text: String, color: SwiftyColor, afterOcurrence occurence: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
@@ -37,7 +37,11 @@ public extension NSMutableAttributedString {
         addAttributeForOccurence(searchString: searchString, value: color, funcAddingAttribute: setTextColor)
     }
 
-    // MARK - Strike
+}
+
+// MARK - Strike
+
+public extension NSMutableAttributedString {
 
     public static func setTextStrike(text: String, afterOcurrence occurence: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
@@ -62,7 +66,11 @@ public extension NSMutableAttributedString {
         addAttributeForOccurence(searchString: searchString, funcAddingAttribute: setTextStrike)
     }
 
-    // MARK - Strike
+}
+
+// MARK - Underline
+
+public extension NSMutableAttributedString {
 
     public static func setTextUnderline(text: String, afterOcurrence occurence: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
@@ -87,30 +95,34 @@ public extension NSMutableAttributedString {
         addAttributeForOccurence(searchString: searchString, funcAddingAttribute: setTextUnderline)
     }
 
-    // MARK - Private
+}
 
-    private func addAttributeForOccurence(searchString: String, value: AnyObject = 1, funcAddingAttribute: ((value: AnyObject, range: NSRange) -> Void)) {
+// MARK - Private
+
+fileprivate extension NSMutableAttributedString {
+
+    func addAttributeForOccurence(searchString: String, value: Any = 1, funcAddingAttribute: ((_ value: Any, _ range: NSRange) -> Void)) {
         let inputLength = string.length
         let searchLength = searchString.length
         var range = NSRange(location: 0, length: length)
         while range.location != NSNotFound {
             range = (string as NSString).range(of: searchString, options: [], range: range)
             if range.location != NSNotFound {
-                funcAddingAttribute(value: value, range: NSRange(location: range.location, length: searchLength))
+                funcAddingAttribute(value, NSRange(location: range.location, length: searchLength))
                 range = NSRange(location: range.location + range.length, length: inputLength - (range.location + range.length))
             }
         }
     }
 
-    private func setTextColor(value: AnyObject, range: NSRange) {
+    func setTextColor(value: Any, range: NSRange) {
         addAttribute(NSForegroundColorAttributeName, value: value, range: range)
     }
 
-    private func setTextStrike(value: AnyObject = 1, range: NSRange) {
+    func setTextStrike(value: Any = 1, range: NSRange) {
         addAttribute(NSStrikethroughStyleAttributeName, value: value, range: range)
     }
 
-    private func setTextUnderline(value: AnyObject = 1, range: NSRange) {
+    func setTextUnderline(value: Any = 1, range: NSRange) {
         addAttribute(NSUnderlineStyleAttributeName, value: value, range: range)
     }
 }

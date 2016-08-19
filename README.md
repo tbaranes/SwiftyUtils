@@ -911,7 +911,6 @@ print(UIDevice.idForVendor()) // 104C9F7F-7403-4B3E-B6A2-C222C82074FF
 print(UIDevice.systemName()) // iPhone OS
 print(UIDevice.systemVersion()) // 9.0
 print(UIDevice.deviceName()) // iPhone Simulator / iPhone 6 Wifi
-print(UIDevice.deviceModel()) // x86_64 / iPhone7,2
 print(UIDevice.deviceLanguage()) // en
 ```
 

@@ -54,12 +54,6 @@ class OthersExampleViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var imageViewWithColor: UIImageView! {
-        didSet {
-            imageViewWithColor.image = UIImage(color: UIColor.orange)
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackButton(tintColor: UIColor.green)

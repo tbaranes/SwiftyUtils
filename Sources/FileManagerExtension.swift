@@ -26,10 +26,10 @@ public extension FileManager {
                 }
                 defaultURL = defaultURL?.appendingPathComponent(identifier ?? "", isDirectory: true)
             }
-            return defaultURL ?? NSURL()
+            return defaultURL as NSURL? ?? NSURL()
         #else
             // On iOS the Documents directory isn't user-visible, so put files there
-            return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as NSURL
         #endif
     }
 

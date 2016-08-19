@@ -39,9 +39,9 @@ public extension Bundle {
 
 }
 
-private extension Bundle {
+fileprivate extension Bundle {
 
-    private func string(for key: String) -> String {
+    func string(for key: String) -> String {
         guard let infoDictionary = Bundle.main.infoDictionary,
             let value = infoDictionary[key] as? String else {
                 return ""
