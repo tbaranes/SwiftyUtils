@@ -472,11 +472,8 @@ let url = NSURL(string: "/path/to/your/file")        url?.addSkipBackupAttribute
 Create colors with HEX values:
 
 ``` swift
-let myColor = UIColor(hex: 0x233C64) // Equals 35,60,100,1
-let myColor2 = UIColor(hexString: "not hex string") // nil
-
-let myColor = NSColor(hex: 0x233C64) // Equals 35,60,100,1
-let myColor2 = NSColor(hexString: "not hex string") // nil
+let myUIColor = UIColor(hex: 0x233C64) // Equals 35,60,100,1
+let myNSColor = NSColor(hex: 0x233C64) // Equals 35,60,100,1
 ```
 
 Access to individual color value:

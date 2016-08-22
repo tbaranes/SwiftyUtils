@@ -15,13 +15,9 @@ import Foundation
 public extension SwiftyColor {
 
     public convenience init(hex: String) {
-        self.init(hex: hex, alpha: 1.0)
-    }
-
-    public convenience init(hex: String, alpha: Float) {
-        let hex = hex.stringByTrimmingCharactersInSet(NSCharacterSet.alphanumericCharacterSet().invertedSet)
+        let hex = hex.trimmingCharacters(in: NSCharacterSet.alphanumerics.inverted)
         var int = UInt32()
-        NSScanner(string: hex).scanHexInt(&int)
+        Scanner(string: hex).scanHexInt32(&int)
         let a, r, g, b: UInt32
         switch hex.characters.count {
         case 3:
