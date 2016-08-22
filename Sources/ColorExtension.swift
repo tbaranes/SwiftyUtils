@@ -31,21 +31,26 @@ import Foundation
 
 public extension SwiftyColor {
 
-    public convenience init?(hexString: String) {
-        self.init(hexString: hexString, alpha: 1.0)
+    public convenience init(hex: String) {
+        self.init(hex: hex, alpha: 1.0)
     }
-    
-    public convenience init?(hexString: String, alpha: Float) {
-        var formatted = hexString.stringByReplacingOccurrencesOfString("0x", withString: "")
-        formatted = formatted.stringByReplacingOccurrencesOfString("#", withString: "")
-        if let hex = Int(formatted, radix: 16) {
-            let red = CGFloat(CGFloat((hex & 0xFF0000) >> 16)/255.0)
-            let green = CGFloat(CGFloat((hex & 0x00FF00) >> 8)/255.0)
-            let blue = CGFloat(CGFloat((hex & 0x0000FF) >> 0)/255.0)
-            self.init(red: red, green: green, blue: blue, alpha: CGFloat(alpha))
-        } else {
-            return nil
+
+    public convenience init(hex: String, alpha: Float) {
+        let hex = hex.stringByTrimmingCharactersInSet(NSCharacterSet.alphanumericCharacterSet().invertedSet)
+        var int = UInt32()
+        NSScanner(string: hex).scanHexInt(&int)
+        let a, r, g, b: UInt32
+        switch hex.characters.count {
+        case 3:
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6:
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8:
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (1, 1, 1, 0)
         }
+        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
     
 }

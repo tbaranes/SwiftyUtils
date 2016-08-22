@@ -8,7 +8,19 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
-N/A
+- Color extension initializer has been updated:
+
+```swift
+convenience init?(hexString: String)
+convenience init?(hexString: String, alpha: Float)
+```
+
+becomes
+
+```swift
+convenience init(hex: String)
+convenience init(hex: String, alpha: Float)
+```
 
 #### Enhancements
 
