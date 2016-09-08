@@ -61,7 +61,7 @@ extension ArrayExtensionTests {
     }
 
     func testTakeMax() {
-        XCTAssertEqual(array.takeMax(n: 2).count, 2)
+        XCTAssertEqual(array.takeMax(number: 2).count, 2)
     }
 
     func testIndexesOf() {

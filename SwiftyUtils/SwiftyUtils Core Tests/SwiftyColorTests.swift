@@ -25,12 +25,12 @@ class SwiftyColorTests: XCTestCase {
 extension SwiftyColorTests {
 
     func testValidHexColor() {
-        let color = SwiftyColor(hexString: "FFFFFFFEFEFEZAZF")
-        XCTAssertNil(color)
+        let color = SwiftyColor(hex: "FFFFFFFEFEFEZAZF")
+        XCTAssertNotNil(color)
     }
 
     func testInvalidHexColor() {
-        let color = SwiftyColor(hexString: "FFFFFF")
+        let color = SwiftyColor(hex: "FFFFFF")
         XCTAssertNotNil(color)
     }
 

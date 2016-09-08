@@ -5,7 +5,7 @@
 
 import Foundation
 
-// MARK: -
+// MARK: - Subscript
 
 public extension UserDefaults {
 
@@ -20,7 +20,7 @@ public extension UserDefaults {
 
 }
 
-// MARK: -
+// MARK: - Helpers
 
 public extension UserDefaults {
 
