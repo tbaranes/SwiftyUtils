@@ -9,11 +9,11 @@ import Foundation
 
 public extension FileManager {
 
-    public static var document: NSURL {
+    public static var document: URL {
         return self.default.document
     }
 
-    public var document: NSURL {
+    public var document: URL {
         #if os(OSX)
             // On OS X it is, so put files in Application Support. If we aren't running
             // in a sandbox, put it in a subdirectory based on the bundle identifier
@@ -26,10 +26,10 @@ public extension FileManager {
                 }
                 defaultURL = defaultURL?.appendingPathComponent(identifier ?? "", isDirectory: true)
             }
-            return defaultURL as NSURL? ?? NSURL()
+            return defaultURL ?? URL(fileURLWithPath: "")
         #else
             // On iOS the Documents directory isn't user-visible, so put files there
-            return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as NSURL
+            return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         #endif
     }
 
@@ -39,16 +39,16 @@ public extension FileManager {
 
 public extension FileManager {
 
-    public static func createDirectory(at directoryURL: NSURL) throws {
+    public static func createDirectory(at directoryURL: URL) throws {
         return try self.default.createDirectory(at: directoryURL)
     }
 
-    public func createDirectory(at directoryURL: NSURL) throws {
+    public func createDirectory(at directoryUrl: URL) throws {
         let fileManager = FileManager.default
         var isDir: ObjCBool = false
-        let fileExists = fileManager.fileExists(atPath: directoryURL.path!, isDirectory: &isDir)
+        let fileExists = fileManager.fileExists(atPath: directoryUrl.path, isDirectory: &isDir)
         if fileExists == false || isDir.boolValue != false {
-            try fileManager.createDirectory(at: directoryURL as URL, withIntermediateDirectories: true, attributes: nil)
+            try fileManager.createDirectory(at: directoryUrl, withIntermediateDirectories: true, attributes: nil)
         }
     }
 
@@ -74,7 +74,7 @@ public extension FileManager {
     }
 
     public func deleteAllDocumentFiles() throws {
-        let documentPath = document.path ?? ""
+        let documentPath = document.path
         let contents = try contentsOfDirectory(atPath: documentPath)
         for file in contents {
             try removeItem(atPath: documentPath + file)

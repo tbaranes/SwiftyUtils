@@ -541,9 +541,9 @@ FileManager.default.document
 Create a new directory:
 
 ```
-FileManager.createDirectory(at: directoryURL)
+FileManager.createDirectory(at: directoryUrl)
 // OR
-FileManager.default().createDirectory(at: directoryURL)
+FileManager.default().createDirectory(at: directoryUrl)
 ```
 
 Delete contents of temporary directory
