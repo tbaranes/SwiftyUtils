@@ -533,9 +533,9 @@ UserDefaults.standard().reset()
 Get documents directory url following the os:
 
 ```
-FileManager.document()
+FileManager.document
 // OR
-FileManager.default.document()
+FileManager.default.document
 ```
 
 Create a new directory:
