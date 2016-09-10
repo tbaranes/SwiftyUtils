@@ -504,7 +504,7 @@
 				E26578231D37A5200009452D /* Simulator.swift */,
 			);
 			name = Classes;
-			path = ../Sources/ios;
+			path = ../Source/iOS;
 			sourceTree = SOURCE_ROOT;
 		};
 		E273FF431CCCFFEC003156EC /* SwiftyUtils Core */ = {
@@ -520,7 +520,7 @@
 				E26578061D379FB10009452D /* UnitTesting.swift */,
 			);
 			name = "SwiftyUtils Core";
-			path = ../Sources;
+			path = ../Source;
 			sourceTree = "<group>";
 		};
 		E2976EF01CCD2E4B0048724F /* Extensions */ = {

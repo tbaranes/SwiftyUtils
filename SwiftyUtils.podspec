@@ -19,8 +19,7 @@ s.osx.deployment_target 	= '10.10'
 s.watchos.deployment_target = '2.0'
 
 s.requires_arc 	   			= true
-s.source_files				= 'Sources/*.swift'
-s.ios.source_files			= 'Sources/ios/*.swift' 
-s.osx.source_files			= 'Sources/osx/*.swift' 
+s.source_files				= 'Source/*.swift'
+s.ios.source_files			= 'Source/iOS/*.swift' 
 
 end
