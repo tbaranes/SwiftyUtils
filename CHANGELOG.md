@@ -8,18 +8,92 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
-N/A
+- Swift 3 support (currently not merged in master, available using branch `feature/swift3`). README is up to date, please report if you find any diffs
+- Some APIs have been updated to be more swifty, check out the README for more information
+
+**Extensions removed:**
+
+- {UI/NS}Color: 
+
+```
+convenience init(hex: String, alpha: Float)
+```
+
+- UIDevice: 
+
+```
+class func deviceModel() -> String
+```
 
 #### Enhancements
 
-N/A
+*Note: Take a look into the README to see the details of all the following enhancements* 
+
+- watchOS support
+
+**New classes:**
+
+- UITesting
+- UnitTesting
+
+**New iOS classes:**
+
+- Simulator
+
+**New extensions:**
+
+- Color:
+
+```swift
+var redComponent: Int
+var greenComponent: Int
+var blueComponent: Int
+var alpha: CGFloat
+```
+
+- String:
+
+```swift
+init?(value: Float, maxDigits: Int)
+init?(value: Double, maxDigits: Int)
+```
+
+- Bundle (now available for the fourth platforms):
+
+```
+var appName: String
+var appVersion: String
+var appBuild: String
+var schemes: String
+var mainScheme: String
+```
+
+**New iOS extensions:**
+
+- UIStoryboard:
+
+```swift
+static var main: UIStoryboard
+```
+
+- UISwitch:
+
+```swift
+func toggle(animated: Bool = true)
+```
+
+- UIImage:
+
+```swift
+var original: UIImage
+var template: UIImage
+```
 
 #### Bugfixes
 
 N/A
 
 ## [0.4.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.4.0) (11-09-2016)
-
 
 #### API breaking changes
 
@@ -37,51 +111,49 @@ convenience init(hex: String)
 convenience init(hex: String, alpha: Float)
 ```
 
-#### Enhancements
+### Enhancements
 
-New protocols available, take a look into the README to see the details:
+*Note: Take a look into the README to see the details of all the following enhancements* 
+
+**New protocols available:**
 
 - Then
 - NSBundle is now available for macOS
 
-New methods available for the following classes, take a look into the README to see the details:
+**New extensions:**
 
-   
-   - UIColor/NSColor:
+- Color:
 
 ```swift
-func lighter()
-func darker()
+func darker(amount: CGFloat = 0.25) -> SwiftyColor
+func lighter(amount: CGFloat = 0.25) -> SwiftyColor
 ```
 
-   - UIImage
+- UIImage:
 
 ```swift
 func filled(with color: UIColor?) -> UIImage
 ```
-   
-#### Bugfixes
-
-N/A
 
 ## [0.3.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.3.0) (19-05-2016)
 
-#### API breaking changes
+### API breaking changes
 
 - Creating an UIImage from UIColor is now more swifty: `UIImage(color: .orangeColor())` instead of `UIImage.imageWithTintColor(.orangeColor())`
 
-#### Enhancements
+### Enhancements
 
-New methods available for the following classes, take a look into the README to see the details:
+*Note: Take a look into the README to see the details of all the following enhancements* 
 
-   
+**New extensions:**
+
    - NSNotificationCenter:
 
 ```swift
 func postNotification(name name: String, object: AnyObject? = nil, userInfo: [NSObject : AnyObject]? = nil, queue: dispatch_queue_t)
 ```
 
-New extensions (iOS) for classes:
+**New iOS extensions:**
 
    - UIAlertController:
    
@@ -101,17 +173,15 @@ func topViewController() -> UIViewController?
 func forceRotation(orientation: UIInterfaceOrientation)
 ```
 
-#### Bugfixes
-
-N/A
 
 ## [0.2.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.2.0) (09-05-2016)
 
-#### Enhancements
+### Enhancements
 
-New methods available for the following classes, take a look into the README to see the details:
-
+*Note: Take a look into the README to see the details of all the following enhancements* 
    
+**New extensions:**
+
    - CollectionType:
 
 ```swift
@@ -142,7 +212,7 @@ func addSkipBackupAttribute()
 init(rangeOf textToFind: String, in text: String)
 ```
 
-New extensions (iOS) for classes:
+**New iOS extensions:**
 
    - UIViewController:
    

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E218809D1D677C6B001888D2 /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27300D61CCD09D3003156EC /* SwiftyUtils.framework */; };
+		E218809E1D677C6B001888D2 /* SwiftyUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E27300D61CCD09D3003156EC /* SwiftyUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E21880A31D677ED5001888D2 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21880A21D677ED5001888D2 /* ImagesViewController.swift */; };
 		E27300E21CCD0D99003156EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281B9111C039BE4000DADBA /* AppDelegate.swift */; };
 		E27300E31CCD0D99003156EC /* LocalizablesExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2049E3E1C044EDD006D10E7 /* LocalizablesExampleViewController.swift */; };
 		E27300E41CCD0D99003156EC /* GesturesExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281B9131C039BE4000DADBA /* GesturesExampleViewController.swift */; };
@@ -21,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E218809F1D677C6B001888D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E27300CC1CCD09D3003156EC /* SwiftyUtils.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E273FED61CCCFF5B003156EC;
+			remoteInfo = "SwiftyUtils iOS";
+		};
 		E27300D51CCD09D3003156EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E27300CC1CCD09D3003156EC /* SwiftyUtils.xcodeproj */;
@@ -63,12 +73,34 @@
 			remoteGlobalIDString = E27300A71CCD06E8003156EC;
 			remoteInfo = "SwiftyUtils OS X Tests";
 		};
+		E2773EA01D20128E00365CDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E27300CC1CCD09D3003156EC /* SwiftyUtils.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2218C321D155039000F96DB;
+			remoteInfo = "SwiftyUtils watchOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E21880A11D677C6B001888D2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E218809E1D677C6B001888D2 /* SwiftyUtils.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E2049E3E1C044EDD006D10E7 /* LocalizablesExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizablesExampleViewController.swift; sourceTree = "<group>"; };
 		E210DE351CCCC2940007F692 /* InjectableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectableViewController.swift; sourceTree = "<group>"; };
 		E210DE371CCCC29B0007F692 /* InjectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectedViewController.swift; sourceTree = "<group>"; };
+		E21880A21D677ED5001888D2 /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		E23B1D911C0645A300C986BF /* AttributedStringExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringExampleViewController.swift; sourceTree = "<group>"; };
 		E27300CC1CCD09D3003156EC /* SwiftyUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyUtils.xcodeproj; path = ../SwiftyUtils/SwiftyUtils.xcodeproj; sourceTree = "<group>"; };
 		E281B9111C039BE4000DADBA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E218809D1D677C6B001888D2 /* SwiftyUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,11 +130,12 @@
 			isa = PBXGroup;
 			children = (
 				E27300D61CCD09D3003156EC /* SwiftyUtils.framework */,
-				E27300D81CCD09D3003156EC /* SwiftyUtils.framework */,
-				E27300DA1CCD09D3003156EC /* SwiftyUtils.framework */,
 				E27300DC1CCD09D3003156EC /* SwiftyUtils iOS Tests.xctest */,
+				E27300D81CCD09D3003156EC /* SwiftyUtils.framework */,
+				E27300E01CCD09D3003156EC /* SwiftyUtils macOS Tests.xctest */,
+				E27300DA1CCD09D3003156EC /* SwiftyUtils.framework */,
 				E27300DE1CCD09D3003156EC /* SwiftyUtils tvOS Tests.xctest */,
-				E27300E01CCD09D3003156EC /* SwiftyUtils OS X Tests.xctest */,
+				E2773EA11D20128E00365CDF /* SwiftyUtils.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +151,7 @@
 				E23B1D911C0645A300C986BF /* AttributedStringExampleViewController.swift */,
 				E210DE351CCCC2940007F692 /* InjectableViewController.swift */,
 				E210DE371CCCC29B0007F692 /* InjectedViewController.swift */,
+				E21880A21D677ED5001888D2 /* ImagesViewController.swift */,
 				E29E73491C04BD0000F059F1 /* OthersExampleViewController.swift */,
 			);
 			path = Classes;
@@ -160,10 +195,13 @@
 				E2D92EB11C0392E40065268F /* Sources */,
 				E2D92EB21C0392E40065268F /* Frameworks */,
 				E2D92EB31C0392E40065268F /* Resources */,
+				E2576C411D1481E0009B2CD0 /* Run Script - ⚠️ SwiftLint */,
+				E21880A11D677C6B001888D2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E21880A01D677C6B001888D2 /* PBXTargetDependency */,
 			);
 			name = "iOS Example";
 			productName = TBSwiftExtensionsDemo;
@@ -177,11 +215,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Tom Baranes";
 				TargetAttributes = {
 					E2D92EB41C0392E40065268F = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -245,11 +284,18 @@
 			remoteRef = E27300DD1CCD09D3003156EC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E27300E01CCD09D3003156EC /* SwiftyUtils OS X Tests.xctest */ = {
+		E27300E01CCD09D3003156EC /* SwiftyUtils macOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "SwiftyUtils OS X Tests.xctest";
+			path = "SwiftyUtils macOS Tests.xctest";
 			remoteRef = E27300DF1CCD09D3003156EC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E2773EA11D20128E00365CDF /* SwiftyUtils.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyUtils.framework;
+			remoteRef = E2773EA01D20128E00365CDF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -267,11 +313,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E2576C411D1481E0009B2CD0 /* Run Script - ⚠️ SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - ⚠️ SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E2D92EB11C0392E40065268F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21880A31D677ED5001888D2 /* ImagesViewController.swift in Sources */,
 				E27300E41CCD0D99003156EC /* GesturesExampleViewController.swift in Sources */,
 				E27300E81CCD0D99003156EC /* InjectedViewController.swift in Sources */,
 				E27300E61CCD0D99003156EC /* AttributedStringExampleViewController.swift in Sources */,
@@ -284,6 +348,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E21880A01D677C6B001888D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyUtils iOS";
+			targetProxy = E218809F1D677C6B001888D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E2986EA21CCAF2D700D438A8 /* Localizable.strings */ = {
@@ -383,22 +455,27 @@
 		E2D92ED31C0392E40065268F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tombaranes.SwiftyUtils-Demo-iOS";
 				PRODUCT_NAME = "SwiftyUtils Example";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		E2D92ED41C0392E40065268F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tombaranes.SwiftyUtils-Demo-iOS";
 				PRODUCT_NAME = "SwiftyUtils Example";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

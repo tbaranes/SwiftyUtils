@@ -1,7 +1,4 @@
 //
-//  NotificationsViewController.swift
-//  SwiftyUtilsDemo
-//
 //  Created by Tom Baranes on 23/11/15.
 //  Copyright © 2015 Tom Baranes. All rights reserved.
 //
@@ -14,58 +11,64 @@ class NotificationsExampleTableViewController: UITableViewController {
     var notifications: [BlockNotification] = []
     var notificationsCounter: [Int] = []
     var totalNotificationsAdded = 0
-    
+
     // MARK - Life cycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
- 
+
     // MARK - Notifications
-    
+
     func addNotification(name: String) {
         let notificationProxy = BlockNotification(name: name) { notification in
             if let indexPath = notification.object as? NSIndexPath {
                 self.notificationsCounter[indexPath.row] += 1
-                self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                self.tableView.reloadRows(at: [indexPath as IndexPath], with: .automatic)
             }
         }
-        
+
         notifications.append(notificationProxy)
         notificationsCounter.append(0)
         tableView.reloadData()
-        NSNotificationCenter.defaultCenter().postNotificationName(notificationProxy.name, object: nil)
+
+        let name = NSNotification.Name(rawValue: notificationProxy.name)
+        NotificationCenter.default.post(name: name, object: nil)
     }
-    
+
     func removeNotificationAtIndexPath(indexPath: NSIndexPath) {
         let notificationProxy = notifications[indexPath.row]
         notificationProxy.stop()
-        notifications.removeAtIndex(indexPath.row)
-        notificationsCounter.removeAtIndex(indexPath.row)
+        notifications.remove(at: indexPath.row)
+        notificationsCounter.remove(at: indexPath.row)
     }
-    
+
     // MARK - Actions
-   
+
     @IBAction func addNotificationPressed() {
-        addNotification("NotificationExample\(totalNotificationsAdded)")
+        addNotification(name: "NotificationExample\(totalNotificationsAdded)")
         totalNotificationsAdded += 1
     }
-    
+
     // MARK - UITableView
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notifications.count
     }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cellIdentifier")
-        cell?.textLabel?.text = String(format: "%@, sent %d time(s)", notifications[indexPath.row].name, notificationsCounter[indexPath.row])
+
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier")
+        cell?.textLabel?.text = String(format: "%@, sent %d time(s)",
+                                       notifications[indexPath.row].name,
+                                       notificationsCounter[indexPath.row])
         return cell!
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let notificationProxy = notifications[indexPath.row]
-        NSNotificationCenter.defaultCenter().postNotificationName(notificationProxy.name, object: indexPath)
+        let name = NSNotification.Name(rawValue: notificationProxy.name)
+        NotificationCenter.default.post(name: name, object: indexPath)
     }
 }

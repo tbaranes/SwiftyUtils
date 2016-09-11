@@ -1,7 +1,4 @@
 //
-//  NSURLExtensionTests.swift
-//  Demo
-//
 //  Created by Tom Baranes on 24/04/16.
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //
@@ -10,11 +7,11 @@ import XCTest
 @testable import SwiftyUtils
 
 class NSURLExtensionTests: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
     }
-    
+
 }
 
 extension NSURLExtensionTests {
@@ -27,5 +24,5 @@ extension NSURLExtensionTests {
             XCTAssertEqual(queryParameters["other"], nil)
         }
     }
-    
+
 }

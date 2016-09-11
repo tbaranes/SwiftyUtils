@@ -1,7 +1,7 @@
 # SwiftyUtils
 
 [![CI Status](https://travis-ci.org/tbaranes/SwiftyUtils.svg)](https://travis-ci.org/tbaranes/SwiftyUtils)
-![Language](https://img.shields.io/badge/language-Swift%202.2-orange.svg)
+![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/SwiftyUtils.svg)](https://img.shields.io/cocoapods/v/SwiftyUtils.svg)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyUtils.svg?style=flat)](http://cocoadocs.org/docsets/SwiftyUtils)
 [![License](https://img.shields.io/cocoapods/l/SwiftyUtils.svg?style=flat)](http://cocoapods.org/pods/SwiftyUtils)
@@ -12,13 +12,13 @@ SwiftyUtils groups all the reusable code that we need to ship in each project. T
 - Structs
 - Subclasses
 
-Working on iOS, OS X, tvOS, everything has been made to be easy to use! :tada:
+Working on iOS, macOS, tvOS, and watchOS, everything has been made to be easy to use! :tada:
 
 ## Contents
 
 Check out the repository to find examples / tests for each feature.
 
-**Available for iOS, OS X, and tvOS:**
+**Available for iOS, macOS, tvOS and watchOS:**
 
 - [Int](#int-extension)
 - [Double](#double-extension)
@@ -29,19 +29,21 @@ Check out the repository to find examples / tests for each feature.
 - [MutableCollectionType](#mutablecollectiontype-extension)
 - [NSObject](#nsobject-extension)
 - [NSDate](#nsdate-extension)
-- [NSTimer](#nstimer-extension)
+- [Timer](#timer-extension)
 - [NSURL](#nsurl-extension)
-- [NSBundle](#nsbundle-extension)
-- [UIColor / NSColor](#uicolor-nscolor-extension)
-- [NSUserDefaults](#nsuserdefaults-extension)
-- [NSFileManager](#nsfilemanager-extension)
+- [UIColor / NSColor](#color-extension)
+- [UserDefaults](#userdefaults-extension)
+- [FileManager](#filemanager-extension)
 - [NSLayoutConstraint](#nslayoutconstraint-extension)
 - [NSMutableAttributedString](#nsmutableattributedstring-extension)
 - [NSRange](#nsrange-extension)
-- [NSNotificationCenter](#nsnotificationcenter-extension)
+- [Bundle](#bundle-extension)
+- [NotificationCenter](#notificationcenter-extension)
 - [BlockNotification](#blocknotification)
 - [ReusableFormatters](#reusableformatters)
 - [Async](#async)
+- [UITesting](#uitesting)
+- [UnitTesting](#unittesting)
 - **Protocols:**
  - [Injectable](#injectable)
  - [Occupiable](#occupiable)
@@ -56,6 +58,9 @@ Check out the repository to find examples / tests for each feature.
 - [UIViewController](#uiviewcontroller-extension)
 - [UIAlertController](#uialertcontroller-extension)
 - [UIApplication](#uiapplication-extension)
+- [UIStoryboard](#uistoryboard-extension)
+- [UISwitch](#uiswitch-extension)
+- [Simulator](#simulator)
 - **Gestures:**
  - [BlockTapGesturesRecognizers](#blocktapgesturesrecognizers)
  - [BlockLongPressGesturesRecognizers](#blocklongpressgesturesrecognizers)
@@ -63,7 +68,7 @@ Check out the repository to find examples / tests for each feature.
  - [BlockPanGesturesRecognizers](#blockpangesturesrecognizers)
  - [BlockPinchGesturesRecognizers](#blockpinchgesturesrecognizers)
 
-## Available for iOS, OS X, and tvOS
+## Available for iOS, macOS, tvOS and watchOS
 
 ### Int extension
 
@@ -111,12 +116,19 @@ print(aString[2]) // l
 print(aString[1...3]) // ell
 ```
 
+Create a string from Float or Double with max digits:
+
+```swift
+let aString = String(value: 2.323232, maxDigits: 2)
+print(aString) // 2.32
+```
+
 Check if it contains a string:
 
 ```swift
 let aString = "Hello world"
-print (aString.contains("hello")) // true
-print (aString.contains("hellooooo")) // false
+print (aString.contains(text: "hello")) // true
+print (aString.contains(text: "hellooooo")) // false
 ```
 
 Capitalize the first letter:
@@ -187,45 +199,47 @@ Find the indexes of an object:
 
 ``` swift
 var myArray = [1, 2, 3, 1]
-print(myArray.indexesOf(1)) // [0,3]
+print(myArray.indexes(of: 1)) // [0,3]
 ```
 
 Get index of last occurrence of an object:
 
 ``` swift
 var myArray = [1, 2, 3, 1]
-print(myArray.lastIndexOf(1)) // 3
+print(myArray.lastIndex(of: 1)) // 3
 ```
 
 Remove an object:
 
 ``` swift
 var myArray = [1, 2, 3]
-myArray.removeObject(2)
+myArray.remove(object: 2)
 print(myArray) // [1, 3]
+myArray.remove(objects: [1, 3])
+print(myArray) // []
 ```
 
 Check if an array contains instance of an object:
 
 ``` swift
 var myArray = [1, 2, 3]
-print(myArray.containsInstanceOf(1)) // true
-print(myArray.containsInstanceOf("1")) // false
+print(myArray.contains(instanceOf: 1)) // true
+print(myArray.contains(instanceOf: "1")) // false
 ```
 
 Check if an array contains another array:
 
 ``` swift
 var myArray = [1, 2, 3]
-print(myArray.containsArray([1, 2])) // true
-print(myArray.containsArray([5])) // false
+print(myArray.contains(array: [1, 2])) // true
+print(myArray.contains(array: [5])) // false
 ```
 
 Get an object at a specified index:
 
 ``` swift
 var myArray = [1, 2, 3]
-print(myArray.get(1)) // 2
+print(myArray.get(index: 1)) // 2
 ```
 
 Determine if an array contains an object:
@@ -240,15 +254,15 @@ Get intersection and union of two arrays:
 
 ``` swift
 var myArray = [1, 2, 3]
-print(myArray.intersection([1, 5, 3])) // [1, 3]
-print(myArray.union([5, 6])) // [1, 2, 3, 5, 6]
+print(myArray.intersection(for: [1, 5, 3])) // [1, 3]
+print(myArray.union(values: [5, 6])) // [1, 2, 3, 5, 6]
 ```
 
 Get difference between two arrays:
 
 ``` swift
 var myArray = [1, 2, 3]
-print(myArray.difference([1])) // [2, 3]
+print(myArray.difference(with: [1])) // [2, 3]
 ```
 
 Test all elements of an array against a closure:
@@ -267,8 +281,8 @@ Check if a key exists in the dictionary:
 
 ``` swift
 let dic1 = ["one": 1, "two": 2]
-print(myDict.has("one")) // True
-print(myDict.has("1")) // False
+print(myDict.has(key: "one")) // True
+print(myDict.has(key: "1")) // False
 ```
 
 Access a random element:
@@ -294,7 +308,7 @@ Easily get union of two dictionaries:
 let dic1 = ["one": 1, "two": 2]
 let dic2 = ["one": 1, "four": 4]
 
-let dictionary3 = dictionary1.union(dictionary2)
+let dictionary3 = dictionary1.union(values: dictionary2)
 print(dictionary3) // ["one": 1, "two": 2, "four": 4]
 ```
 
@@ -303,7 +317,7 @@ Get difference of two dictionaries:
 ``` swift
 let dic1 = ["one": 1, "two": 2]
 let dic2 = ["one": 1, "four": 4]
-difference(dictionary1, dictionary2) // ["two": 2, "four": 4]
+difference(with: dictionary1, dictionary2) // ["two": 2, "four": 4]
 ```
 
 Merge several dictionaries:
@@ -312,7 +326,7 @@ Merge several dictionaries:
 let dic1 = ["one": 1, "two": 2]
 let dic2 = ["three": 3, "four": 4]
 var finalDic: Dictionary<String, Int> = [:]
-finalDic.merge(dic1, dic2)
+finalDic.merge(with: dic1, dic2)
 print(finalDic) // ["one": 1, "two": 2, "three": 3, "four": 4]
 ```
 
@@ -393,13 +407,13 @@ print(now < now2) // true
 print(now2 < now) // false  
 ```
 
-## NSTimer extension
+## Timer extension
 
 Schedule timer every seconds:
 
 ``` swift
 var count = 0
-NSTimer.every(1.seconds) { (timer: NSTimer) in
+Timer.every(1.seconds) { (timer: NSTimer) in
     print("Will print every second")
     if count == 3 {
         timer.invalidate()
@@ -411,7 +425,7 @@ NSTimer.every(1.seconds) { (timer: NSTimer) in
 Schedule timer after a certain delay:
 
 ``` swift
-NSTimer.after(2.seconds) {
+Timer.after(2.seconds) {
     print("Prints this 2 seconds later in main queue")
 }
 ```
@@ -419,7 +433,7 @@ NSTimer.after(2.seconds) {
 Manual scheduling a timer:
 
 ``` swift
-let timer = NSTimer.new(every: 2.seconds) {
+let timer = Timer.new(every: 2.seconds) {
     print("Prints this 2 seconds later in main queue")
 }
 timer.start
@@ -428,7 +442,7 @@ timer.start
 Manual scheduling a timer with a delay:
 
 ``` swift
-let timer = NSTimer.new(after: 2.seconds) {
+let timer = Timer.new(after: 2.seconds) {
     print("Prints this 2 seconds later in main queue")
 }
 timer.start
@@ -450,55 +464,52 @@ if let queryParameters = url?.queryParameters {
 Add skip backup attributes to you URL:
 
 ``` swift
-let url = NSURL(fileURLWithPath: "/path/to/your/file")        url?.addSkipBackupAttribute() // File at url won't be backupped!
+let url = NSURL(string: "/path/to/your/file")        url?.addSkipBackupAttribute() // File at url won't be backupped!
 ```
 
-### NSBundle extension
-
-Get the app version:
-
-```swift
-NSBundle.mainBundle().appVersion
-NSBundle(URL: someURL)?.appVersion
-```
-
-Get the app build:
-
-```swift
-NSBundle(URL: someURL)?.appBuild
-NSBundle.mainBundle().appBuild
-```
-
-## UIColor / NSColor extension
+### Color extension
 
 Create colors with HEX values:
 
 ``` swift
-let myColor = UIColor(hex: 0x233C64) // Equals 35,60,100,1
-let myColor2 = UIColor(hexString: "not hex string") // nil
+let myUIColor = UIColor(hex: 0x233C64) // Equals 35,60,100,1
+let myNSColor = NSColor(hex: 0x233C64) // Equals 35,60,100,1
+```
 
-let myColor = NSColor(hex: 0x233C64) // Equals 35,60,100,1
-let myColor2 = NSColor(hexString: "not hex string") // nil
+Access to individual color value:
+
+```swift
+let myColor = UIColor(red: 120, green: 205, blue: 44, alpha: 0.3)
+print(myColor.redComponent) // 120
+print(myColor.greenComponent) // 205
+print(myColor.blueComponent) // 44
+print(myColor.alpha) // 0.3
 ```
 
 Get lighter or darker variants of colors instances:
 
-``` swift
+```swift
 let color = UIColor(red: 0.5, green: 0.5, blue: 1.0, alpha: 1.0)
+let lighter = color.lighter(amount: 0.5)
+let darker = color.darker(amount: 0.5)
+// OR
 let lighter = color.lighter()
 let darker = color.darker()
 
 let color = NSColor(red: 0.5, green: 0.5, blue: 1.0, alpha: 1.0)
+let lighter = color.lighter(amount: 0.5)
 let lighter = color.lighter()
+// OR
+let darker = color.darker(amount: 0.5)
 let darker = color.darker()
 ```
 
-### NSUserDefaults extension
+### UserDefaults extension
 
-Get and set values from NSUserDefaults with subscripts:
+Get and set values from UserDefaults with subscripts:
 
 ```swift
-let Defaults = NSUserDefaults.standardUserDefaults()
+let Defaults = UserDefaults.standard()
 Defaults["userName"] = "test"
 print(Defaults["userName"]) // test
 ```
@@ -506,63 +517,65 @@ print(Defaults["userName"]) // test
 Check if the userdefaults contains a key:
 
 ```swift
-NSUserDefaults.contains("aKey")
+UserDefaults.contains("aKey")
 // OR
-NSUserDefaults.standarUserDefaults.contains("aKey")
+UserDefaults.standard().contains("aKey")
 ```
 
 Reset the defaults:
 
 ```swift
-NSUserDefaults.standarUserDefaults.reset()
+UserDefaults.standard().reset()
 ```
 
-### NSFileManager extension
+### FileManager extension
 
 Get documents directory url following the os:
 
 ```
-NSFileManager.documentDirectory()
+FileManager.document
 // OR
-NSFileManager.defaultManager.documentDirectory()
+FileManager.default.document
 ```
 
 Create a new directory:
 
 ```
-NSFileManager.createDirectory(at: directoryUR)
+FileManager.createDirectory(at: directoryUrl)
 // OR
-NSFileManager.defaultManager().createDirectory(at: directoryUR)
+FileManager.default().createDirectory(at: directoryUrl)
 ```
 
 Delete contents of temporary directory
 
 ```
-NSFileManager.deleteAllTemporaryFiles()
+FileManager.deleteAllTemporaryFiles()
 // OR
-NSFileManager.defaultManager().deleteAllTemporaryFiles()
+FileManager.default().deleteAllTemporaryFiles()
 ```
 
 Delete contents of documents directory
 
 ```
-NSFileManager.deleteAllDocumentFiles()
+FileManager.deleteAllDocumentFiles()
 // OR
-NSFileManager.defaultManager().deleteAllDocumentFiles()
+FileManager.default().deleteAllDocumentFiles()
 ```
 
 ### NSLayoutConstraint extension
+
+*No available for watchOS*
 
 Apply a multiplier to a constraint (currently working only for width and height):
 
 ```swift
 let view = UIView(CGRect(x: 0, y: 0, width: 100, height: 200))
-let constraint = NSLayoutConstraint(item: view, attribute: .Width, ...)
-constraint.applyMultiplier(0.5, toView: superview)
+let constraint = NSLayoutConstraint(item: view, attribute: .width, ...)
+constraint.apply(multiplier: 0.5, toView: superview)
 print(constraint.constants) // 50
 
-let constraint = NSLayoutConstraint(item: view, attribute: .Height, ...)
-constraint.applyMultiplier(0.5, toView: superview)
+let constraint = NSLayoutConstraint(item: view, attribute: .height, ...)
+constraint.apply(multiplier0.5, toView: superview)
 print(constraint.constants) // 100
 ```
 
@@ -650,18 +663,49 @@ Range of string:
 ```swift
 let string = "Hello world"
 let stringToFind = "ello wo"
-let range = NSRange(rangeOf: stringToFind, in: string)
+let range = NSRange(textToFind: stringToFind, in: string)
 print(range) // location: 1, length: 7
 ```
 
-### NSNotificationCenter extension
+### NSBundle extension
+
+Get bundle information:
+
+```swift
+Bundle.main.appName
+Bundle(URL: someURL)?.appName
+
+Bundle.main.appVersion
+Bundle(URL: someURL)?.appVersion
+
+Bundle.main.appBuild
+Bundle(URL: someURL)?.appBuild
+
+Bundle.main.bundleId
+Bundle(URL: someURL)?.bundleId
+
+Bundle.main.schemes
+Bundle(URL: someURL)?.schemes
+
+Bundle.main.mainScheme
+Bundle(URL: someURL)?.mainScheme
+```
+
+Get the app build:
+
+```swift
+NSBundle(URL: someURL)?.appBuild
+NSBundle.mainBundle().appBuild
+```
+
+### NotificationCenter extension
 
 Post a notification from a specific queue:
 
 ```
-NSNotificationCenter.defaultCenter().postNotification(name: "aNotification", queue: dispatch_get_main_queue()) 
-NSNotificationCenter.defaultCenter().postNotification(name: "aNotification", object: aObject queue: dispatch_get_main_queue())
-NSNotificationCenter.defaultCenter().postNotification(name: "aNotification", object: aObject userInfo: userInfo queue: dispatch_get_main_queue())
+NotificationCenter.default().postNotification(name: "aNotification", queue: DispatchQueue.main) 
+NotificationCenter.default().postNotification(name: "aNotification", object: aObject queue: DispatchQueue.main)
+NotificationCenter.default().postNotification(name: "aNotification", object: aObject userInfo: userInfo queue: DispatchQueue.main)
 ```
 
 ### BlockNotification
@@ -673,7 +717,7 @@ let notificationProxy = BlockNotification("aNotificationName": name) { notificat
 }
 
 // Post a notification
-NSNotificationCenter.defaultCenter().postNotificationName("aNotificationName", object: "Hello world")
+NotificationCenter.default().postNotificationName("aNotificationName", object: "Hello world")
 ```
 
 ### ReusableFormatters
@@ -681,13 +725,13 @@ NSNotificationCenter.defaultCenter().postNotificationName("aNotificationName", o
 Reuse your formatter to avoid heavy allocation:
 
 ```swift
-DateFormatter.sharedInstance
-NumberFormatter.sharedInstance
-ByteCountFormatter.sharedInstance
-DateComponentsFormatter.sharedInstance
-DateIntervalFormatter.sharedInstance
-EnergyFormatter.sharedInstance
-MassFormatter.sharedInstance
+SUDateFormatter.sharedInstance
+SUNumberFormatter.sharedInstance
+SUByteCountFormatter.sharedInstance
+SUDateComponentsFormatter.sharedInstance
+SUDateIntervalFormatter.sharedInstance
+SUEnergyFormatter.sharedInstance
+SUMassFormatter.sharedInstance
 ```
 
 ### Async
@@ -698,6 +742,42 @@ Grand Central Dispatch sugar syntax:
 Async.background({ /* dispatch in background */}
 Async.main({ /* dispatch on the main thread */}
 Async.delay(2, { /* dispatch on the main thread after a delay */}
+```
+
+### UITesting
+
+Detect if UITests are running:
+
+```swift
+if UITesting.isRunning {
+  // tests are running
+} else {
+  // everything is fine, move along
+}
+```
+
+### UnitTesting
+
+Grand Central Dispatch sugar syntax:
+
+Detect if UITests are running:
+
+```swift
+if UnitTesting.isRunning {
+  // tests are running
+} else {
+  // everything is fine, move along
+}
+```
+
+Measure tests performance:
+
+```
+func testPerformance() {
+  let measurement = measure {
+    // run operation
+  }
+}
 ```
 
 ### Injectable
@@ -828,7 +908,6 @@ print(UIDevice.idForVendor()) // 104C9F7F-7403-4B3E-B6A2-C222C82074FF
 print(UIDevice.systemName()) // iPhone OS
 print(UIDevice.systemVersion()) // 9.0
 print(UIDevice.deviceName()) // iPhone Simulator / iPhone 6 Wifi
-print(UIDevice.deviceModel()) // x86_64 / iPhone7,2
 print(UIDevice.deviceLanguage()) // en
 ```
 
@@ -854,6 +933,14 @@ Create an image from a color:
 
 ```swift
 let image = UIImage(color: UIColor.greenColor())
+```
+
+Change the rendering mode:
+
+```swift
+var image = UIImage(...)
+image = image.template // imageWithRenderingMode(.AlwaysTemplate)
+image = image.original // imageWithRenderingMode(.AlwaysOriginal)
 ```
 
 Fill an image with a color:
@@ -913,8 +1000,8 @@ vc.setupRightBarView(aView)
 
 let vc2 = UIViewController()
 vc2.setupBackButton(hidden: false)
-vc2.setupLeftBarView(view: UIView)
-vc2.setupRightBarView(aView)
+vc2.setupBar(leftView:  aView)
+vc2.setupBar(rightView: aView)
 ```
 
 ### UIAlertController extension
@@ -932,6 +1019,33 @@ Get the current view controller display:
 
 ```swift
 UIApplication.sharedApplication().topViewController()
+```
+
+### UIStoryboard extension
+
+Get the application's main storyboard:
+
+```swift
+let storyboard = UIStoryboard.main
+```
+
+### UISwitch extension
+
+Toggle a switch state:
+
+```swift
+let mySwitch = UISwitch()
+mySwitch.toggle()
+```
+
+### Simulator
+
+Check if you are running on a simulator:
+
+```swift
+if !Simulator.isRunning {
+  // add device specific operations here
+}
 ```
 
 ### BlockTapGesturesRecognizers
@@ -1009,9 +1123,11 @@ viewPinchGesture.addGestureRecognizer(pinchGesture)
 
 ## Installation
 
+- Xcode 8 and later
 - iOS 8.0 or later
-- OS X 10.10 or later
+- macOS 10.10 or later
 - tvOS 9.0 or later
+- watchOS 2.0 or later
 
 ### Manually
 
