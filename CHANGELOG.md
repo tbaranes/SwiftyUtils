@@ -6,21 +6,6 @@ All notable changes to the project will be documented in this file.
 
 ## Next
 
-### API breaking changes
-
-N/A
-
-#### Enhancements
-
-N/A
-
-#### Bugfixes
-
-N/A
-
-## [0.4.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.4.0) (11-09-2016)
-
-
 #### API breaking changes
 
 - Swift 3 support (currently not merged in master, available using branch `feature/swift3`). README is up to date, please report if you find any diffs
@@ -28,28 +13,23 @@ N/A
 
 **Extensions removed:**
 
-- UIDevice: 
-
-```
-class func deviceModel() -> String
-```
-
 - {UI/NS}Color: 
 
 ```
 convenience init(hex: String, alpha: Float)
 ```
 
-### Enhancements
+- UIDevice: 
+
+```
+class func deviceModel() -> String
+```
+
+#### Enhancements
 
 *Note: Take a look into the README to see the details of all the following enhancements* 
 
 - watchOS support
-
-**New protocols available:**
-
-- Then
-- NSBundle is now available for macOS
 
 **New classes:**
 
@@ -69,9 +49,6 @@ var redComponent: Int
 var greenComponent: Int
 var blueComponent: Int
 var alpha: CGFloat
-
-func darker(amount: CGFloat = 0.25) -> SwiftyColor
-func lighter(amount: CGFloat = 0.25) -> SwiftyColor
 ```
 
 - String:
@@ -110,13 +87,53 @@ func toggle(animated: Bool = true)
 ```swift
 var original: UIImage
 var template: UIImage
-func filled(with color: UIColor?) -> UIImage
 ```
-
 
 #### Bugfixes
 
 N/A
+
+## [0.4.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.4.0) (11-09-2016)
+
+#### API breaking changes
+
+- Color extension initializer has been updated:
+
+```swift
+convenience init?(hexString: String)
+convenience init?(hexString: String, alpha: Float)
+```
+
+becomes
+
+```swift
+convenience init(hex: String)
+convenience init(hex: String, alpha: Float)
+```
+
+### Enhancements
+
+*Note: Take a look into the README to see the details of all the following enhancements* 
+
+**New protocols available:**
+
+- Then
+- NSBundle is now available for macOS
+
+**New extensions:**
+
+- Color:
+
+```swift
+func darker(amount: CGFloat = 0.25) -> SwiftyColor
+func lighter(amount: CGFloat = 0.25) -> SwiftyColor
+```
+
+- UIImage:
+
+```swift
+func filled(with color: UIColor?) -> UIImage
+```
 
 ## [0.3.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.3.0) (19-05-2016)
 
@@ -162,7 +179,6 @@ func forceRotation(orientation: UIInterfaceOrientation)
 ### Enhancements
 
 *Note: Take a look into the README to see the details of all the following enhancements* 
-
    
 **New extensions:**
 
