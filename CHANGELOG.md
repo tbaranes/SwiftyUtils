@@ -8,6 +8,21 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
+N/A
+
+#### Enhancements
+
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [0.4.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.4.0) (11-09-2016)
+
+
+#### API breaking changes
+
 - Color extension initializer has been updated:
 
 ```swift
