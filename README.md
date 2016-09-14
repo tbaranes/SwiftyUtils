@@ -30,7 +30,7 @@ Check out the repository to find examples / tests for each feature.
 - [NSObject](#nsobject-extension)
 - [NSDate](#nsdate-extension)
 - [Timer](#timer-extension)
-- [NSURL](#nsurl-extension)
+- [URL](#url-extension)
 - [UIColor / NSColor](#color-extension)
 - [UserDefaults](#userdefaults-extension)
 - [FileManager](#filemanager-extension)
@@ -41,7 +41,6 @@ Check out the repository to find examples / tests for each feature.
 - [NotificationCenter](#notificationcenter-extension)
 - [BlockNotification](#blocknotification)
 - [ReusableFormatters](#reusableformatters)
-- [Async](#async)
 - [UITesting](#uitesting)
 - [UnitTesting](#unittesting)
 - **Protocols:**
@@ -448,12 +447,12 @@ let timer = Timer.new(after: 2.seconds) {
 timer.start
 ```
 
-### NSURL extension
+### URL extension
 
 Put query in a Dictionary:
 
 ``` swift
-let url = NSURL(string: "http://example.com/api?v=1.1&q=google")
+let url = URL(string: "http://example.com/api?v=1.1&q=google")
 if let queryParameters = url?.queryParameters {
     print(queryParameters["v"]) //Optional("1.1")
     print(queryParameters["q"]) //Optional("google")
@@ -464,7 +463,7 @@ if let queryParameters = url?.queryParameters {
 Add skip backup attributes to you URL:
 
 ``` swift
-let url = NSURL(string: "/path/to/your/file")        url?.addSkipBackupAttribute() // File at url won't be backupped!
+let url = URL(string: "/path/to/your/file")        url?.addSkipBackupAttribute() // File at url won't be backupped!
 ```
 
 ### Color extension
@@ -732,16 +731,6 @@ SUDateComponentsFormatter.sharedInstance
 SUDateIntervalFormatter.sharedInstance
 SUEnergyFormatter.sharedInstance
 SUMassFormatter.sharedInstance
-```
-
-### Async
-
-Grand Central Dispatch sugar syntax:
-
-```swift
-Async.background({ /* dispatch in background */}
-Async.main({ /* dispatch on the main thread */}
-Async.delay(2, { /* dispatch on the main thread after a delay */}
 ```
 
 ### UITesting

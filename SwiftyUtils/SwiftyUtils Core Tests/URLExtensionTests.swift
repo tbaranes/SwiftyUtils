@@ -6,7 +6,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class NSURLExtensionTests: XCTestCase {
+class URLExtensionTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
@@ -14,10 +14,10 @@ class NSURLExtensionTests: XCTestCase {
 
 }
 
-extension NSURLExtensionTests {
+extension URLExtensionTests {
 
     func testQueryParameters() {
-        let url = NSURL(string: "http://example.com/api?v=1.1&q=google")
+        let url = URL(string: "http://example.com/api?v=1.1&q=google")
         if let queryParameters = url?.queryParameters {
             XCTAssertEqual(queryParameters["v"], Optional("1.1"))
             XCTAssertEqual(queryParameters["q"], Optional("google"))
