@@ -18,7 +18,7 @@ N/A
 
 N/A
 
-## [0.5.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.5.0) (11-09-2016)
+## [0.5.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.5.0) (14-09-2016)
 
 #### API breaking changes
 
