@@ -11,6 +11,7 @@ public struct UnitTesting {
         return ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
     }
 
+    #if !os(watchOS)
     public static func measure(closure: () -> Void) -> Float {
         let start = CACurrentMediaTime()
         closure()
@@ -18,4 +19,5 @@ public struct UnitTesting {
         let end = CACurrentMediaTime()
         return Float(end - start)
     }
+    #endif
 }

@@ -5,6 +5,7 @@
 
 import Foundation
 
+#if !os(watchOS)
 public extension NSLayoutConstraint {
 
     public func apply(multiplier: CGFloat, toView: SwiftyView) {
@@ -19,3 +20,4 @@ public extension NSLayoutConstraint {
     }
 
 }
+#endif
