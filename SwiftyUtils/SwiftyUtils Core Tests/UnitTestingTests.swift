@@ -10,7 +10,7 @@ import SwiftyUtils
 class UnitTestTests: XCTestCase {
 
     func testIsRunning() {
-        XCTAssertFalse(UnitTesting.isRunning)
+        XCTAssertTrue(UnitTesting.isRunning)
     }
 
     func testMeasure() {
