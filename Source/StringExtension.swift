@@ -85,8 +85,8 @@ public extension String {
 
 public extension String {
 
-    public var extractURLs: [NSURL] {
-        var urls: [NSURL] = []
+    public var extractURLs: [URL] {
+        var urls: [URL] = []
         let detector: NSDataDetector?
         do {
             detector = try NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
@@ -100,7 +100,7 @@ public extension String {
                 (result: NSTextCheckingResult?, flags: NSRegularExpression.MatchingFlags, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
                 if let result = result,
                     let url = result.url {
-                    urls.append(url as NSURL)
+                    urls.append(url as URL)
                 }
             })
         }
