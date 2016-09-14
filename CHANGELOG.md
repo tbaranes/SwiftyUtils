@@ -25,6 +25,10 @@ N/A
 - Swift 3 support. README is up to date, please report if you find any diffs
 - Some APIs have been updated to be more swifty, check out the README for more information
 
+**Classes removed:**
+
+- Async
+
 **Extensions removed:**
 
 - {UI/NS}Color: 
