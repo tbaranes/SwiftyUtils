@@ -9,7 +9,7 @@ import QuartzCore
 public struct UnitTesting {
 
     public static var isRunning: Bool {
-        return ProcessInfo.processInfo.environment["XCInjectBundle"] != nil
+        return ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
     }
 
     public static func measure(closure: () -> Void) -> Float {
