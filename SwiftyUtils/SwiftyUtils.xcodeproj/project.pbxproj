@@ -42,7 +42,6 @@
 		E2218C4C1D1550A9000F96DB /* OccupiableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF6A1CCD0040003156EC /* OccupiableProtocol.swift */; };
 		E2218C4D1D1550A9000F96DB /* Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF6C1CCD0040003156EC /* Selfie.swift */; };
 		E2218C4E1D1550A9000F96DB /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8201D014D6B0085992E /* Then.swift */; };
-		E2218C4F1D1550A9000F96DB /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5B1CCD0040003156EC /* Async.swift */; };
 		E2218C501D1550A9000F96DB /* BlockNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5C1CCD0040003156EC /* BlockNotification.swift */; };
 		E2218C511D1550A9000F96DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5E1CCD0040003156EC /* Constants.swift */; };
 		E2218C521D1550A9000F96DB /* ReusableFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF6B1CCD0040003156EC /* ReusableFormatters.swift */; };
@@ -66,7 +65,6 @@
 		E2218C651D1550AE000F96DB /* OccupiableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF6A1CCD0040003156EC /* OccupiableProtocol.swift */; };
 		E2218C661D1550AE000F96DB /* Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF6C1CCD0040003156EC /* Selfie.swift */; };
 		E2218C671D1550AE000F96DB /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8201D014D6B0085992E /* Then.swift */; };
-		E2218C681D1550AE000F96DB /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5B1CCD0040003156EC /* Async.swift */; };
 		E2218C691D1550AE000F96DB /* BlockNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5C1CCD0040003156EC /* BlockNotification.swift */; };
 		E2218C6A1D1550AE000F96DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5E1CCD0040003156EC /* Constants.swift */; };
 		E2218C6B1D1550AE000F96DB /* ReusableFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF6B1CCD0040003156EC /* ReusableFormatters.swift */; };
@@ -92,7 +90,6 @@
 		E273000D1CCD031B003156EC /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E273000C1CCD031B003156EC /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E273001A1CCD03ED003156EC /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E27300191CCD03ED003156EC /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E27300471CCD0633003156EC /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5A1CCD0040003156EC /* ArrayExtension.swift */; };
-		E27300481CCD0633003156EC /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5B1CCD0040003156EC /* Async.swift */; };
 		E27300491CCD0633003156EC /* BlockNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5C1CCD0040003156EC /* BlockNotification.swift */; };
 		E273004A1CCD0633003156EC /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5D1CCD0040003156EC /* ColorExtension.swift */; };
 		E273004B1CCD0633003156EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5E1CCD0040003156EC /* Constants.swift */; };
@@ -160,7 +157,6 @@
 		E273FF581CCD0025003156EC /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF4D1CCD0025003156EC /* UIScreenExtension.swift */; };
 		E273FF591CCD0025003156EC /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF4E1CCD0025003156EC /* UIViewExtension.swift */; };
 		E273FF6E1CCD0040003156EC /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5A1CCD0040003156EC /* ArrayExtension.swift */; };
-		E273FF711CCD0040003156EC /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5B1CCD0040003156EC /* Async.swift */; };
 		E273FF741CCD0040003156EC /* BlockNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5C1CCD0040003156EC /* BlockNotification.swift */; };
 		E273FF771CCD0040003156EC /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5D1CCD0040003156EC /* ColorExtension.swift */; };
 		E273FF7A1CCD0040003156EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5E1CCD0040003156EC /* Constants.swift */; };
@@ -272,7 +268,6 @@
 		E273FF4D1CCD0025003156EC /* UIScreenExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
 		E273FF4E1CCD0025003156EC /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		E273FF5A1CCD0040003156EC /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
-		E273FF5B1CCD0040003156EC /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		E273FF5C1CCD0040003156EC /* BlockNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockNotification.swift; sourceTree = "<group>"; };
 		E273FF5D1CCD0040003156EC /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		E273FF5E1CCD0040003156EC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -512,7 +507,6 @@
 			children = (
 				E2976EF01CCD2E4B0048724F /* Extensions */,
 				E2976EF11CCD2E6A0048724F /* Protocols */,
-				E273FF5B1CCD0040003156EC /* Async.swift */,
 				E273FF5C1CCD0040003156EC /* BlockNotification.swift */,
 				E273FF5E1CCD0040003156EC /* Constants.swift */,
 				E273FF6B1CCD0040003156EC /* ReusableFormatters.swift */,
@@ -921,7 +915,6 @@
 				E2218C3D1D1550A9000F96DB /* DictionaryExtension.swift in Sources */,
 				E2218C4E1D1550A9000F96DB /* Then.swift in Sources */,
 				E2218C3B1D1550A9000F96DB /* ArrayExtension.swift in Sources */,
-				E2218C4F1D1550A9000F96DB /* Async.swift in Sources */,
 				E2218C3F1D1550A9000F96DB /* IntExtension.swift in Sources */,
 				E2218C441D1550A9000F96DB /* TimerExtension.swift in Sources */,
 				E2218C3C1D1550A9000F96DB /* ColorExtension.swift in Sources */,
@@ -944,7 +937,6 @@
 				E21D5ACA1CCE46410070797C /* NSLayoutConstraintsExtension.swift in Sources */,
 				E2036F321D526368006C8E4F /* BundleExtension.swift in Sources */,
 				E26578051D379F910009452D /* UITesting.swift in Sources */,
-				E27300481CCD0633003156EC /* Async.swift in Sources */,
 				E27300521CCD0633003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E27300531CCD0633003156EC /* NSRangeExtension.swift in Sources */,
 				E2976EEF1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */,
@@ -988,7 +980,6 @@
 				E2218C561D1550AE000F96DB /* DictionaryExtension.swift in Sources */,
 				E2218C671D1550AE000F96DB /* Then.swift in Sources */,
 				E2218C541D1550AE000F96DB /* ArrayExtension.swift in Sources */,
-				E2218C681D1550AE000F96DB /* Async.swift in Sources */,
 				E2218C581D1550AE000F96DB /* IntExtension.swift in Sources */,
 				E2218C5D1D1550AE000F96DB /* TimerExtension.swift in Sources */,
 				E2218C551D1550AE000F96DB /* ColorExtension.swift in Sources */,
@@ -1126,7 +1117,6 @@
 				E273FF921CCD0040003156EC /* NSRangeExtension.swift in Sources */,
 				E273FF591CCD0025003156EC /* UIViewExtension.swift in Sources */,
 				E273FF561CCD0025003156EC /* UIDeviceExtension.swift in Sources */,
-				E273FF711CCD0040003156EC /* Async.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
