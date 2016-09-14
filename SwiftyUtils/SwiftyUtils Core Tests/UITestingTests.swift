@@ -5,7 +5,7 @@
 
 import Foundation
 import XCTest
-import SwiftyUtils
+@testable import SwiftyUtils
 
 class UITestingTests: XCTestCase {
 

@@ -4,7 +4,6 @@
 //
 
 import Foundation
-import QuartzCore
 
 public struct UnitTesting {
 

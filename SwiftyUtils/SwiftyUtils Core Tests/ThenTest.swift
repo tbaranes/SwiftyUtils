@@ -4,7 +4,7 @@
 //
 
 import XCTest
-import SwiftyUtils
+@testable import SwiftyUtils
 
 struct User {
     var name: String?
