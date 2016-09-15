@@ -14,6 +14,13 @@
 		E2147B3C1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */; };
 		E2147B3D1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */; };
 		E2147B3E1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */; };
+		E216A59C1D8B424700029944 /* Iteratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216A59B1D8B424700029944 /* Iteratable.swift */; };
+		E216A59F1D8B42CE00029944 /* IteratableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216A59D1D8B425600029944 /* IteratableTests.swift */; };
+		E216A5A01D8B42CF00029944 /* IteratableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216A59D1D8B425600029944 /* IteratableTests.swift */; };
+		E216A5A11D8B42CF00029944 /* IteratableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216A59D1D8B425600029944 /* IteratableTests.swift */; };
+		E216A5A21D8B42D200029944 /* Iteratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216A59B1D8B424700029944 /* Iteratable.swift */; };
+		E216A5A31D8B42D300029944 /* Iteratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216A59B1D8B424700029944 /* Iteratable.swift */; };
+		E216A5A41D8B42D400029944 /* Iteratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216A59B1D8B424700029944 /* Iteratable.swift */; };
 		E218E3231CE200B9005E0FA4 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E218E3221CE200B9005E0FA4 /* UIAlertControllerExtension.swift */; };
 		E218E3251CE20121005E0FA4 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E218E3241CE20121005E0FA4 /* UIApplicationExtension.swift */; };
 		E218E3271CE201F9005E0FA4 /* NotificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E218E3261CE201F9005E0FA4 /* NotificationCenterExtension.swift */; };
@@ -221,6 +228,8 @@
 /* Begin PBXFileReference section */
 		E2036F2F1D526368006C8E4F /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeTests.swift; sourceTree = "<group>"; };
+		E216A59B1D8B424700029944 /* Iteratable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Iteratable.swift; sourceTree = "<group>"; };
+		E216A59D1D8B425600029944 /* IteratableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IteratableTests.swift; sourceTree = "<group>"; };
 		E218E3221CE200B9005E0FA4 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		E218E3241CE20121005E0FA4 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		E218E3261CE201F9005E0FA4 /* NotificationCenterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtension.swift; sourceTree = "<group>"; };
@@ -417,6 +426,7 @@
 				E265780A1D379FE80009452D /* UnitTestingTests.swift */,
 				E26578111D37A03E0009452D /* UITestingTests.swift */,
 				E27D99B61D8B108B00F7D2CD /* CGFloatLiteral.swift */,
+				E216A59D1D8B425600029944 /* IteratableTests.swift */,
 			);
 			name = Core;
 			path = "../SwiftyUtils/SwiftyUtils Core Tests";
@@ -522,6 +532,7 @@
 				E273FF6B1CCD0040003156EC /* ReusableFormatters.swift */,
 				E26578021D379F910009452D /* UITesting.swift */,
 				E26578061D379FB10009452D /* UnitTesting.swift */,
+				E216A59B1D8B424700029944 /* Iteratable.swift */,
 			);
 			name = "SwiftyUtils Core";
 			path = ../Source;
@@ -931,6 +942,7 @@
 				E2218C3C1D1550A9000F96DB /* ColorExtension.swift in Sources */,
 				E2218C501D1550A9000F96DB /* BlockNotification.swift in Sources */,
 				E2218C461D1550A9000F96DB /* UserDefaultsExtension.swift in Sources */,
+				E216A5A41D8B42D400029944 /* Iteratable.swift in Sources */,
 				E2218C4B1D1550A9000F96DB /* Injectable.swift in Sources */,
 				E2218C4D1D1550A9000F96DB /* Selfie.swift in Sources */,
 				E27D99B51D8B104100F7D2CD /* CGFloatLiteral.swift in Sources */,
@@ -949,6 +961,7 @@
 				E21D5ACA1CCE46410070797C /* NSLayoutConstraintsExtension.swift in Sources */,
 				E2036F321D526368006C8E4F /* BundleExtension.swift in Sources */,
 				E27D99B41D8B104000F7D2CD /* CGFloatLiteral.swift in Sources */,
+				E216A5A31D8B42D300029944 /* Iteratable.swift in Sources */,
 				E26578051D379F910009452D /* UITesting.swift in Sources */,
 				E27300521CCD0633003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E27300531CCD0633003156EC /* NSRangeExtension.swift in Sources */,
@@ -983,6 +996,7 @@
 				E2218C571D1550AE000F96DB /* DoubleExtension.swift in Sources */,
 				E2036F311D526368006C8E4F /* BundleExtension.swift in Sources */,
 				E27D99B31D8B103F00F7D2CD /* CGFloatLiteral.swift in Sources */,
+				E216A5A21D8B42D200029944 /* Iteratable.swift in Sources */,
 				E26578041D379F910009452D /* UITesting.swift in Sources */,
 				E2218C5E1D1550AE000F96DB /* URLExtension.swift in Sources */,
 				E2218C631D1550AE000F96DB /* NotificationCenterExtension.swift in Sources */,
@@ -1026,6 +1040,7 @@
 				E27300811CCD0669003156EC /* OccupiableTests.swift in Sources */,
 				E2DE21471D1C7DB20035C523 /* SwiftyColorTests.swift in Sources */,
 				E273007D1CCD0669003156EC /* NSRangeExtensionTests.swift in Sources */,
+				E216A59F1D8B42CE00029944 /* IteratableTests.swift in Sources */,
 				E21D5ACC1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */,
 				E27300771CCD0669003156EC /* ArrayExtensionTests.swift in Sources */,
 				E2147B3C1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */,
@@ -1052,6 +1067,7 @@
 				E2147B3E1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */,
 				E27300B51CCD06F4003156EC /* IntExtensionTests.swift in Sources */,
 				E27300B21CCD06F4003156EC /* ArrayExtensionTests.swift in Sources */,
+				E216A5A11D8B42CF00029944 /* IteratableTests.swift in Sources */,
 				E27300BD1CCD06F4003156EC /* StringExtensionTests.swift in Sources */,
 				E2DE21491D1C7DB40035C523 /* SwiftyColorTests.swift in Sources */,
 				E27300B81CCD06F4003156EC /* NSRangeExtensionTests.swift in Sources */,
@@ -1078,6 +1094,7 @@
 				E2147B3D1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */,
 				E27300C11CCD06F5003156EC /* IntExtensionTests.swift in Sources */,
 				E27300BE1CCD06F5003156EC /* ArrayExtensionTests.swift in Sources */,
+				E216A5A01D8B42CF00029944 /* IteratableTests.swift in Sources */,
 				E27300C91CCD06F5003156EC /* StringExtensionTests.swift in Sources */,
 				E2DE21481D1C7DB30035C523 /* SwiftyColorTests.swift in Sources */,
 				E27300C41CCD06F5003156EC /* NSRangeExtensionTests.swift in Sources */,
@@ -1100,6 +1117,7 @@
 				E218E3271CE201F9005E0FA4 /* NotificationCenterExtension.swift in Sources */,
 				E218E3251CE20121005E0FA4 /* UIApplicationExtension.swift in Sources */,
 				E26578241D37A5200009452D /* Simulator.swift in Sources */,
+				E216A59C1D8B424700029944 /* Iteratable.swift in Sources */,
 				E273FF4F1CCD0025003156EC /* BlockLongPressGestureRecognizer.swift in Sources */,
 				E273FF511CCD0025003156EC /* BlockPinchGestureRecognizer.swift in Sources */,
 				E273FF6E1CCD0040003156EC /* ArrayExtension.swift in Sources */,
