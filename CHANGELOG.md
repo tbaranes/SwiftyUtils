@@ -16,7 +16,7 @@ N/A
 
 **New extensions:**
 
-- IntegerLiteralType / FloatLiteralType:
+- CGFloatLiteral (Integer / Float extension):
 
 ```
 public var f: CGFloat
