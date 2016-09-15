@@ -5,6 +5,16 @@
 
 import Foundation
 
+// MARK: - Subscript
+
+public extension Array {
+
+    subscript(safe index: Int) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+
+}
+
 // MARK: - Delete
 
 public extension Array where Element : Equatable {

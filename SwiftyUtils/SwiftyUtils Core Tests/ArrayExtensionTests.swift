@@ -22,6 +22,18 @@ class ArrayExtensionTests: XCTestCase {
 
 }
 
+// MARK - Subscript
+
+extension ArrayExtensionTests {
+
+    func testSafeSubscript() {
+        let arrayToTest = [1, 2, 3]
+        XCTAssertEqual(2, arrayToTest[safe: 1])
+        XCTAssertNil(arrayToTest[safe: 10])
+    }
+
+}
+
 // MARK - Delete
 
 extension ArrayExtensionTests {
