@@ -48,6 +48,7 @@ Check out the repository to find examples / tests for each feature.
  - [Injectable](#injectable)
  - [Occupiable](#occupiable)
  - [Then](#then)
+ - [Iteratable](#iteratable)
 
 **Available for iOS:**
 
@@ -882,6 +883,19 @@ let label = UILabel().then {
     $0.textColor = .blackColor()
     $0.text = "Hello, World!"
 }
+```
+
+### Iteratable
+
+Make your enums iteratable:
+
+```swift
+enum Alphabet: Iteratable {
+    case a, b, c, d
+}
+
+let values = iterateEnum(Alphabet.self).map { $0 }
+print(values) // [Alphabet.a, Alphabet.b, Alphabet.c, Alphabet.d]
 ```
 
 ## Available on iOS

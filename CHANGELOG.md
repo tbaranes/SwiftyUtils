@@ -14,6 +14,10 @@ N/A
 
 *Note: Take a look into the README to see the details of all the following enhancements* 
 
+**New protocols available:**
+
+- Iteratable
+
 **New extensions:**
 
 - CGFloatLiteral (Integer / Float extension):
