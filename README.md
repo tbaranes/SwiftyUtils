@@ -22,6 +22,7 @@ Check out the repository to find examples / tests for each feature.
 
 - [Int](#int-extension)
 - [Double](#double-extension)
+- [CGFloat](#cgfloat-extension)
 - [String](#string-extension)
 - [Array](#array-extension)
 - [Dictionary](#dictionary-extension)
@@ -95,6 +96,13 @@ print(1.3.milliseconds) // 0.0013
 print(0.5.day) // 43200
 print(1.day) // 86400
 print(2.day) // 172800
+```
+### CGFloat extension
+
+Create a CGFloat from a Float or an Integer:
+
+```swift
+let imageViewTop = 15.f
 ```
 
 ### String extension
