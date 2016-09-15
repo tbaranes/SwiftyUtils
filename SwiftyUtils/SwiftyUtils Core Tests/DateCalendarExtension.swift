@@ -6,7 +6,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class DateExtensionTests: XCTestCase {
+class DateCalendarExtension: XCTestCase {
 
     let birthdate: Date = {
         var components = DateComponents()
