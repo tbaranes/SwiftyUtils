@@ -12,7 +12,15 @@ N/A
 
 #### Enhancements
 
-N/A
+*Note: Take a look into the README to see the details of all the following enhancements* 
+
+**New extensions:**
+
+- CGFloatLiteral (Integer / Float extension):
+
+```
+public var f: CGFloat
+```
 
 #### Bugfixes
 
