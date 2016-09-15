@@ -8,7 +8,7 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
-N/A
+- `NSDate` is now used as `Date`
 
 #### Enhancements
 
@@ -30,6 +30,12 @@ public var f: CGFloat
 
 ```swift
 subscript(safe index: Int) -> Element?
+```
+
+- Sugar syntax for `Date`
+
+```swift
+Too much to be described here...
 ```
 
 #### Bugfixes
