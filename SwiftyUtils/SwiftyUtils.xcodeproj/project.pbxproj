@@ -36,7 +36,7 @@
 		E2218C3D1D1550A9000F96DB /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5F1CCD0040003156EC /* DictionaryExtension.swift */; };
 		E2218C3E1D1550A9000F96DB /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF601CCD0040003156EC /* DoubleExtension.swift */; };
 		E2218C3F1D1550A9000F96DB /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF621CCD0040003156EC /* IntExtension.swift */; };
-		E2218C401D1550A9000F96DB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* DateExtension.swift */; };
+		E2218C401D1550A9000F96DB /* DateCalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* DateCalendarExtension.swift */; };
 		E2218C411D1550A9000F96DB /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF641CCD0040003156EC /* FileManagerExtension.swift */; };
 		E2218C431D1550A9000F96DB /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF661CCD0040003156EC /* NSRangeExtension.swift */; };
 		E2218C441D1550A9000F96DB /* TimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF671CCD0040003156EC /* TimerExtension.swift */; };
@@ -57,7 +57,7 @@
 		E2218C561D1550AE000F96DB /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5F1CCD0040003156EC /* DictionaryExtension.swift */; };
 		E2218C571D1550AE000F96DB /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF601CCD0040003156EC /* DoubleExtension.swift */; };
 		E2218C581D1550AE000F96DB /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF621CCD0040003156EC /* IntExtension.swift */; };
-		E2218C591D1550AE000F96DB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* DateExtension.swift */; };
+		E2218C591D1550AE000F96DB /* DateCalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* DateCalendarExtension.swift */; };
 		E2218C5A1D1550AE000F96DB /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF641CCD0040003156EC /* FileManagerExtension.swift */; };
 		E2218C5B1D1550AE000F96DB /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF651CCD0040003156EC /* NSMutableAttributedStringExtension.swift */; };
 		E2218C5C1D1550AE000F96DB /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF661CCD0040003156EC /* NSRangeExtension.swift */; };
@@ -104,7 +104,7 @@
 		E273004D1CCD0633003156EC /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF601CCD0040003156EC /* DoubleExtension.swift */; };
 		E273004E1CCD0633003156EC /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF611CCD0040003156EC /* Injectable.swift */; };
 		E273004F1CCD0633003156EC /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF621CCD0040003156EC /* IntExtension.swift */; };
-		E27300501CCD0633003156EC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* DateExtension.swift */; };
+		E27300501CCD0633003156EC /* DateCalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* DateCalendarExtension.swift */; };
 		E27300511CCD0633003156EC /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF641CCD0040003156EC /* FileManagerExtension.swift */; };
 		E27300521CCD0633003156EC /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF651CCD0040003156EC /* NSMutableAttributedStringExtension.swift */; };
 		E27300531CCD0633003156EC /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF661CCD0040003156EC /* NSRangeExtension.swift */; };
@@ -120,7 +120,7 @@
 		E27300781CCD0669003156EC /* DictionaryExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006C1CCD0669003156EC /* DictionaryExtensionTests.swift */; };
 		E27300791CCD0669003156EC /* DoubleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006D1CCD0669003156EC /* DoubleExtensionTests.swift */; };
 		E273007A1CCD0669003156EC /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006E1CCD0669003156EC /* IntExtensionTests.swift */; };
-		E273007B1CCD0669003156EC /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006F1CCD0669003156EC /* DateExtensionTests.swift */; };
+		E273007B1CCD0669003156EC /* DateCalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006F1CCD0669003156EC /* DateCalendarExtension.swift */; };
 		E273007C1CCD0669003156EC /* FileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300701CCD0669003156EC /* FileManagerTests.swift */; };
 		E273007D1CCD0669003156EC /* NSRangeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300711CCD0669003156EC /* NSRangeExtensionTests.swift */; };
 		E273007E1CCD0669003156EC /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300721CCD0669003156EC /* TimerTests.swift */; };
@@ -134,7 +134,7 @@
 		E27300B31CCD06F4003156EC /* DictionaryExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006C1CCD0669003156EC /* DictionaryExtensionTests.swift */; };
 		E27300B41CCD06F4003156EC /* DoubleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006D1CCD0669003156EC /* DoubleExtensionTests.swift */; };
 		E27300B51CCD06F4003156EC /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006E1CCD0669003156EC /* IntExtensionTests.swift */; };
-		E27300B61CCD06F4003156EC /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006F1CCD0669003156EC /* DateExtensionTests.swift */; };
+		E27300B61CCD06F4003156EC /* DateCalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006F1CCD0669003156EC /* DateCalendarExtension.swift */; };
 		E27300B71CCD06F4003156EC /* FileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300701CCD0669003156EC /* FileManagerTests.swift */; };
 		E27300B81CCD06F4003156EC /* NSRangeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300711CCD0669003156EC /* NSRangeExtensionTests.swift */; };
 		E27300B91CCD06F4003156EC /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300721CCD0669003156EC /* TimerTests.swift */; };
@@ -145,7 +145,7 @@
 		E27300BF1CCD06F5003156EC /* DictionaryExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006C1CCD0669003156EC /* DictionaryExtensionTests.swift */; };
 		E27300C01CCD06F5003156EC /* DoubleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006D1CCD0669003156EC /* DoubleExtensionTests.swift */; };
 		E27300C11CCD06F5003156EC /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006E1CCD0669003156EC /* IntExtensionTests.swift */; };
-		E27300C21CCD06F5003156EC /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006F1CCD0669003156EC /* DateExtensionTests.swift */; };
+		E27300C21CCD06F5003156EC /* DateCalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273006F1CCD0669003156EC /* DateCalendarExtension.swift */; };
 		E27300C31CCD06F5003156EC /* FileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300701CCD0669003156EC /* FileManagerTests.swift */; };
 		E27300C41CCD06F5003156EC /* NSRangeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300711CCD0669003156EC /* NSRangeExtensionTests.swift */; };
 		E27300C51CCD06F5003156EC /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300721CCD0669003156EC /* TimerTests.swift */; };
@@ -171,7 +171,7 @@
 		E273FF801CCD0040003156EC /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF601CCD0040003156EC /* DoubleExtension.swift */; };
 		E273FF831CCD0040003156EC /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF611CCD0040003156EC /* Injectable.swift */; };
 		E273FF861CCD0040003156EC /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF621CCD0040003156EC /* IntExtension.swift */; };
-		E273FF891CCD0040003156EC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* DateExtension.swift */; };
+		E273FF891CCD0040003156EC /* DateCalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF631CCD0040003156EC /* DateCalendarExtension.swift */; };
 		E273FF8C1CCD0040003156EC /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF641CCD0040003156EC /* FileManagerExtension.swift */; };
 		E273FF8F1CCD0040003156EC /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF651CCD0040003156EC /* NSMutableAttributedStringExtension.swift */; };
 		E273FF921CCD0040003156EC /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF661CCD0040003156EC /* NSRangeExtension.swift */; };
@@ -257,7 +257,7 @@
 		E273006C1CCD0669003156EC /* DictionaryExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionTests.swift; sourceTree = "<group>"; };
 		E273006D1CCD0669003156EC /* DoubleExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensionTests.swift; sourceTree = "<group>"; };
 		E273006E1CCD0669003156EC /* IntExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
-		E273006F1CCD0669003156EC /* DateExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
+		E273006F1CCD0669003156EC /* DateCalendarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCalendarExtension.swift; sourceTree = "<group>"; };
 		E27300701CCD0669003156EC /* FileManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerTests.swift; sourceTree = "<group>"; };
 		E27300711CCD0669003156EC /* NSRangeExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRangeExtensionTests.swift; sourceTree = "<group>"; };
 		E27300721CCD0669003156EC /* TimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
@@ -291,7 +291,7 @@
 		E273FF601CCD0040003156EC /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		E273FF611CCD0040003156EC /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		E273FF621CCD0040003156EC /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
-		E273FF631CCD0040003156EC /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		E273FF631CCD0040003156EC /* DateCalendarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCalendarExtension.swift; sourceTree = "<group>"; };
 		E273FF641CCD0040003156EC /* FileManagerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
 		E273FF651CCD0040003156EC /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
 		E273FF661CCD0040003156EC /* NSRangeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRangeExtension.swift; sourceTree = "<group>"; };
@@ -411,7 +411,7 @@
 				E273006C1CCD0669003156EC /* DictionaryExtensionTests.swift */,
 				E273006D1CCD0669003156EC /* DoubleExtensionTests.swift */,
 				E273006E1CCD0669003156EC /* IntExtensionTests.swift */,
-				E273006F1CCD0669003156EC /* DateExtensionTests.swift */,
+				E273006F1CCD0669003156EC /* DateCalendarExtension.swift */,
 				E27300701CCD0669003156EC /* FileManagerTests.swift */,
 				E27300711CCD0669003156EC /* NSRangeExtensionTests.swift */,
 				E27300721CCD0669003156EC /* TimerTests.swift */,
@@ -546,7 +546,7 @@
 				E273FF5F1CCD0040003156EC /* DictionaryExtension.swift */,
 				E273FF601CCD0040003156EC /* DoubleExtension.swift */,
 				E273FF621CCD0040003156EC /* IntExtension.swift */,
-				E273FF631CCD0040003156EC /* DateExtension.swift */,
+				E273FF631CCD0040003156EC /* DateCalendarExtension.swift */,
 				E273FF641CCD0040003156EC /* FileManagerExtension.swift */,
 				E273FF651CCD0040003156EC /* NSMutableAttributedStringExtension.swift */,
 				E273FF661CCD0040003156EC /* NSRangeExtension.swift */,
@@ -926,7 +926,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2218C401D1550A9000F96DB /* DateExtension.swift in Sources */,
+				E2218C401D1550A9000F96DB /* DateCalendarExtension.swift in Sources */,
 				E2218C3E1D1550A9000F96DB /* DoubleExtension.swift in Sources */,
 				E2218C451D1550A9000F96DB /* URLExtension.swift in Sources */,
 				E2218C4A1D1550A9000F96DB /* NotificationCenterExtension.swift in Sources */,
@@ -972,7 +972,7 @@
 				E269E82B1D0152720085992E /* Then.swift in Sources */,
 				E273004E1CCD0633003156EC /* Injectable.swift in Sources */,
 				E273004F1CCD0633003156EC /* IntExtension.swift in Sources */,
-				E27300501CCD0633003156EC /* DateExtension.swift in Sources */,
+				E27300501CCD0633003156EC /* DateCalendarExtension.swift in Sources */,
 				E27300471CCD0633003156EC /* ArrayExtension.swift in Sources */,
 				E27300571CCD0633003156EC /* OccupiableProtocol.swift in Sources */,
 				E273004D1CCD0633003156EC /* DoubleExtension.swift in Sources */,
@@ -992,7 +992,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2218C591D1550AE000F96DB /* DateExtension.swift in Sources */,
+				E2218C591D1550AE000F96DB /* DateCalendarExtension.swift in Sources */,
 				E2218C571D1550AE000F96DB /* DoubleExtension.swift in Sources */,
 				E2036F311D526368006C8E4F /* BundleExtension.swift in Sources */,
 				E27D99B31D8B103F00F7D2CD /* CGFloatLiteral.swift in Sources */,
@@ -1027,7 +1027,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E273007B1CCD0669003156EC /* DateExtensionTests.swift in Sources */,
+				E273007B1CCD0669003156EC /* DateCalendarExtension.swift in Sources */,
 				E27D99B71D8B108B00F7D2CD /* CGFloatLiteral.swift in Sources */,
 				E21FD8941D36CAD2001A3886 /* UserDefaultsExtensionTests.swift in Sources */,
 				E273007C1CCD0669003156EC /* FileManagerTests.swift in Sources */,
@@ -1057,7 +1057,7 @@
 			files = (
 				E27300B41CCD06F4003156EC /* DoubleExtensionTests.swift in Sources */,
 				E269E8281D014F2E0085992E /* ThenTest.swift in Sources */,
-				E27300B61CCD06F4003156EC /* DateExtensionTests.swift in Sources */,
+				E27300B61CCD06F4003156EC /* DateCalendarExtension.swift in Sources */,
 				E27D99B91D8B108B00F7D2CD /* CGFloatLiteral.swift in Sources */,
 				E27300B91CCD06F4003156EC /* TimerTests.swift in Sources */,
 				E2A801A61D37167600C99FD3 /* UserDefaultsExtensionTests.swift in Sources */,
@@ -1084,7 +1084,7 @@
 			files = (
 				E27300C01CCD06F5003156EC /* DoubleExtensionTests.swift in Sources */,
 				E269E8271D014F2C0085992E /* ThenTest.swift in Sources */,
-				E27300C21CCD06F5003156EC /* DateExtensionTests.swift in Sources */,
+				E27300C21CCD06F5003156EC /* DateCalendarExtension.swift in Sources */,
 				E27D99B81D8B108B00F7D2CD /* CGFloatLiteral.swift in Sources */,
 				E27300C51CCD06F5003156EC /* TimerTests.swift in Sources */,
 				E2A801A51D37167500C99FD3 /* UserDefaultsExtensionTests.swift in Sources */,
@@ -1132,7 +1132,7 @@
 				E27D99B21D8B103C00F7D2CD /* CGFloatLiteral.swift in Sources */,
 				E273FF8F1CCD0040003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E273FF551CCD0025003156EC /* NSObjectExtension.swift in Sources */,
-				E273FF891CCD0040003156EC /* DateExtension.swift in Sources */,
+				E273FF891CCD0040003156EC /* DateCalendarExtension.swift in Sources */,
 				E218E3231CE200B9005E0FA4 /* UIAlertControllerExtension.swift in Sources */,
 				E273FF8C1CCD0040003156EC /* FileManagerExtension.swift in Sources */,
 				E273FF7D1CCD0040003156EC /* DictionaryExtension.swift in Sources */,

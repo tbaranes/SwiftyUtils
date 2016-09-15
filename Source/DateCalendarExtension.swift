@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - Initializer
+
 public extension Date {
 
     // swiftlint:disable:next function_parameter_count
@@ -42,16 +44,15 @@ public extension Date {
         self.init(timeIntervalSinceReferenceDate: interval)
     }
 
-    public static func date(year: Int, _ month: Int, _ day: Int) -> Date {
+    public static func date(_ year: Int, _ month: Int, _ day: Int) -> Date {
         return Date(year: year, month: month, day: day)
     }
 
-    public static func time(hours: Int, _ minutes: Int, _ seconds: Double) -> Date {
+    public static func time(_ hours: Int, _ minutes: Int, _ seconds: Double) -> Date {
         return Date(hours: hours, minutes: minutes, seconds: seconds)
     }
 
 }
-
 
 // MARK: - Extracting date
 
@@ -164,8 +165,7 @@ public struct DateTimeDelta {
         return type(of: self).init(-self.value, self.unit)
     }
 
-
-    public func after(date: Date) -> Date {
+    public func after(_ date: Date) -> Date {
         switch self.unit {
         case NSCalendar.Unit.year: return date.with(year: date.year + Int(self.value))
         case NSCalendar.Unit.month: return date.with(month: date.month + Int(self.value))
@@ -177,12 +177,12 @@ public struct DateTimeDelta {
         }
     }
 
-    public func before(date: Date) -> Date {
-        return self.negativeDelta.after(date: date)
+    public func before(_ date: Date) -> Date {
+        return self.negativeDelta.after(date)
     }
 
     public var fromNow: Date {
-        return self.after(date: Date())
+        return self.after(Date())
     }
 
     public var ago: Date {
@@ -191,10 +191,9 @@ public struct DateTimeDelta {
 
 }
 
-public func + (date: Date, delta: DateTimeDelta) -> Date { return delta.after(date: date) }
-public func + (delta: DateTimeDelta, date: Date) -> Date { return delta.after(date: date) }
-public func - (date: Date, delta: DateTimeDelta) -> Date { return delta.before(date: date) }
-
+public func + (date: Date, delta: DateTimeDelta) -> Date { return delta.after(date) }
+public func + (delta: DateTimeDelta, date: Date) -> Date { return delta.after(date) }
+public func - (date: Date, delta: DateTimeDelta) -> Date { return delta.before(date) }
 
 // MARK: - Calendar
 
