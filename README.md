@@ -195,6 +195,14 @@ print(aString.extractURLs) // [http://google.com, http://facebook.com]
 
 ### Array extension
 
+Safely access to an element:
+
+```swift
+var myArray = [1, 2, 3]
+print(myArray[safe: 0]) // Optional(1)
+print(myArray[safe: 10]) // nil
+```
+
 Access to a random element:
 
 ``` swift

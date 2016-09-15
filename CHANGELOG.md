@@ -22,6 +22,12 @@ N/A
 public var f: CGFloat
 ```
 
+- Array
+
+```swift
+subscript(safe index: Int) -> Element?
+```
+
 #### Bugfixes
 
 N/A
