@@ -29,7 +29,7 @@ Check out the repository to find examples / tests for each feature.
 - [CollectionType](#collectiontype-extension)
 - [MutableCollectionType](#mutablecollectiontype-extension)
 - [NSObject](#nsobject-extension)
-- [NSDate](#nsdate-extension)
+- [Date](#date-extension)
 - [Timer](#timer-extension)
 - [URL](#url-extension)
 - [UIColor / NSColor](#color-extension)
@@ -376,7 +376,7 @@ print(vc.className) // UIViewController
 print(UIViewController.className) // UIViewController
 ```
 
-## NSDate extension
+## Date extension
 
 Initialize from string:
 
@@ -406,21 +406,53 @@ print(later.minutesInBetweenDate(now)) // 1666.66666641732
 print(later.secondsInBetweenDate(now)) // 99999.999984026
 ```
 
-Check if dates are equal:
+Date utils:
 
-``` swift
-let now = NSDate()
-let now2 = NSDate()
-print(now == now2) // false
-```
+```swift
+Date(year: 1995, month: 1, day: 14, hours: 13, minutes: 7, seconds: 24.5)    // datetime
 
-Check which date is larger:
+Date(year: 1995, month: 1, day: 14)   // date
+Date.date(1995, 1, 14)                // date in shorter
 
-``` swift
-let now = NSDate()
-let now2 = NSDate()
-print(now < now2) // true
-print(now2 < now) // false  
+Date(hours: 13, minutes: 7, seconds: 24.5)   // time; it doesn't take care of year, month and date.
+Date.time(13, 7, 24.920110)                  // time in shorter
+
+Date.today                    // Returns today's date.
+
+Date().year                   // Returns this year.
+Date().month                  // Returns this month.
+Date().day                    // Returns today's day.
+
+Date().hours                  // Returns current hour.
+Date().minutes                // Returns current minute.
+Date().seconds                // Returns current second in Double.
+
+Date.today.with(year: 2014)     // Returns new date with given year.
+Date.today.with(month: 3)       // Returns new date with given month.
+Date.today.with(day: 15)        // Returns new date with given day.
+
+Date.today.with(hours: 12).with(minutes: 30)  // Returns new date with given hours and minutes.
+
+Date.january.first.friday     // Returns first Friday in January.
+Date.today.second.friday      // Returns second Friday in current month.
+
+Date.march.third.friday       // Returns third Friday in March.
+Date.april.fourth.friday      // Returns fourth Friday in April.
+
+Date.today.fifth.friday       // Returns fifth Friday in current month or `nil` if not exists.
+Date.december.last.sunday     // Returns last Sunday in December.
+
+Date.monday                   // Returns Monday in current week.
+Date.friday                   // Returns Friday in current week.
+
+1.year.after(someDate)          // Returns a new date after 1 year from given date.
+3.days.fromNow                  // Returns a new date after 3 days from now.
+
+2.hours.before(someDate)        // Returns a new date before 2 hours from given date.
+4.seconds.ago                   // Returns a new date before 4 sconds from now.
+
+someDate + 5.months             // A new date by adding 5 months.
+someDate - 6.minutes            // A new date by subtracting 6 minutes.
 ```
 
 ## Timer extension

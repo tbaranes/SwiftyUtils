@@ -62,15 +62,3 @@ public extension Date {
     }
 
 }
-
-public func == (lhs: Date, rhs: Date) -> Bool {
-    return lhs.timeIntervalSince1970 == rhs.timeIntervalSince1970
-}
-
-public func < (lhs: Date, rhs: Date) -> Bool {
-    return lhs.compare(rhs as Date) == .orderedAscending
-}
-
-public func > (lhs: Date, rhs: Date) -> Bool {
-    return lhs.compare(rhs as Date) == .orderedDescending
-}
