@@ -3,8 +3,8 @@
 [![CI Status](https://travis-ci.org/tbaranes/SwiftyUtils.svg)](https://travis-ci.org/tbaranes/SwiftyUtils)
 ![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/SwiftyUtils.svg)](https://img.shields.io/cocoapods/v/SwiftyUtils.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyUtils.svg?style=flat)](http://cocoadocs.org/docsets/SwiftyUtils)
-[![License](https://img.shields.io/cocoapods/l/SwiftyUtils.svg?style=flat)](http://cocoapods.org/pods/SwiftyUtils)
 
 SwiftyUtils groups all the reusable code that we need to ship in each project. This framework contains:
 - extension
@@ -1175,6 +1175,7 @@ viewPinchGesture.addGestureRecognizer(pinchGesture)
 ## Installation
 
 - Xcode 8 and later
+- Swift 3.0
 - iOS 8.0 or later
 - macOS 10.10 or later
 - tvOS 9.0 or later
@@ -1187,6 +1188,10 @@ Copy the SwiftyUtils folder into your Xcode project. (Make sure you add the file
 ### CocoaPods
 
 Add `pod SwiftyUtils` to your Podfile.
+
+### Carthage
+
+Add `github "tbaranes/SwiftyUtils"` to your Cartfile.
 
 ### Swift Package Manager
 
