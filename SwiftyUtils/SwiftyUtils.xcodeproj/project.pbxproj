@@ -376,6 +376,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61BE24B71D927427006B8CFD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		E2218C331D155039000F96DB /* SwiftyUtils watchOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +404,7 @@
 		E27300181CCD03ED003156EC /* SwiftyUtils macOS */ = {
 			isa = PBXGroup;
 			children = (
+				61BE24B71D927427006B8CFD /* Classes */,
 				E27300191CCD03ED003156EC /* SwiftyUtils.h */,
 				E273001B1CCD03ED003156EC /* Info.plist */,
 			);
