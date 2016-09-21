@@ -69,6 +69,10 @@ Check out the repository to find examples / tests for each feature.
  - [BlockPanGesturesRecognizers](#blockpangesturesrecognizers)
  - [BlockPinchGesturesRecognizers](#blockpinchgesturesrecognizers)
 
+**Available for macOS:**
+
+- [NSView](#nsview-extension)
+
 ## Available for iOS, macOS, tvOS and watchOS
 
 ### Int extension
@@ -1171,6 +1175,19 @@ let pinchGesture = BlockPinchGestureRecognizer { _ in
 }
 viewPinchGesture.addGestureRecognizer(pinchGesture)     
 ```
+
+## Available on macOS
+
+### NSView extension
+
+**Automates your localizables**
+
+```swift
+aView.convertLocalizables()
+```
+
+It will iterate on all the subviews of the view, and use the text / placeholder as key in `NSLocalizedString`.
+By settings your localizable key in your xib / storyboard, all yours string will be automatically translated just by calling the above method.
 
 ## Installation
 
