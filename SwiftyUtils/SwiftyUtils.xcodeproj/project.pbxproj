@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61BE24BD1D927A78006B8CFD /* NSViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BE24BC1D927A78006B8CFD /* NSViewExtension.swift */; };
 		E2036F301D526368006C8E4F /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2036F2F1D526368006C8E4F /* BundleExtension.swift */; };
 		E2036F311D526368006C8E4F /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2036F2F1D526368006C8E4F /* BundleExtension.swift */; };
 		E2036F321D526368006C8E4F /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2036F2F1D526368006C8E4F /* BundleExtension.swift */; };
@@ -233,6 +234,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61BE24BC1D927A78006B8CFD /* NSViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSViewExtension.swift; sourceTree = "<group>"; };
 		E2036F2F1D526368006C8E4F /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		E2147B3B1CCD272C0086ACE3 /* CollectionTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeTests.swift; sourceTree = "<group>"; };
 		E216A59B1D8B424700029944 /* Iteratable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Iteratable.swift; sourceTree = "<group>"; };
@@ -376,6 +378,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61BE24BB1D927A78006B8CFD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				61BE24BC1D927A78006B8CFD /* NSViewExtension.swift */,
+			);
+			name = Classes;
+			path = ../../Source/macOS;
+			sourceTree = "<group>";
+		};
 		E2218C331D155039000F96DB /* SwiftyUtils watchOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +408,7 @@
 		E27300181CCD03ED003156EC /* SwiftyUtils macOS */ = {
 			isa = PBXGroup;
 			children = (
+				61BE24BB1D927A78006B8CFD /* Classes */,
 				E27300191CCD03ED003156EC /* SwiftyUtils.h */,
 				E273001B1CCD03ED003156EC /* Info.plist */,
 			);
@@ -1012,6 +1024,7 @@
 				E27D99B31D8B103F00F7D2CD /* CGFloatLiteral.swift in Sources */,
 				E216A5A21D8B42D200029944 /* Iteratable.swift in Sources */,
 				E26578041D379F910009452D /* UITesting.swift in Sources */,
+				61BE24BD1D927A78006B8CFD /* NSViewExtension.swift in Sources */,
 				E2218C5E1D1550AE000F96DB /* URLExtension.swift in Sources */,
 				E2218C631D1550AE000F96DB /* NotificationCenterExtension.swift in Sources */,
 				E2218C651D1550AE000F96DB /* OccupiableProtocol.swift in Sources */,

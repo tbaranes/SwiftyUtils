@@ -38,6 +38,14 @@ subscript(safe index: Int) -> Element?
 Too much to be described here...
 ```
 
+**New extensions for macOS:**
+
+- NSView:
+
+```swift
+func convertLocalizables()
+```
+
 #### Bugfixes
 
 N/A
