@@ -11,12 +11,12 @@ import Cocoa
 // MARK - Localizables
 
 public extension NSView {
-    
+
     public func convertLocalizables() {
         if subviews.count == 0 {
             return
         }
-        
+
         for aSubview: NSView in subviews {
             if let aTextField = aSubview as? NSTextField {
                 aTextField.stringValue = NSLocalizedString(aTextField.stringValue, comment: "")
@@ -34,5 +34,5 @@ public extension NSView {
             }
         }
     }
-    
+
 }
