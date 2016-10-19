@@ -459,7 +459,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/iOS Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tombaranes.SwiftyUtils-Demo-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.recisio.kfiphone;
 				PRODUCT_NAME = "SwiftyUtils Example";
 				SWIFT_VERSION = 3.0;
 			};
@@ -472,7 +472,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/iOS Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tombaranes.SwiftyUtils-Demo-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.recisio.kfiphone;
 				PRODUCT_NAME = "SwiftyUtils Example";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
