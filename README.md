@@ -719,7 +719,7 @@ let range = NSRange(textToFind: stringToFind, in: string)
 print(range) // location: 1, length: 7
 ```
 
-### NSBundle extension
+### Bundle extension
 
 Get bundle information:
 
