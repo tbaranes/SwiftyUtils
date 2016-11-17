@@ -10,7 +10,7 @@ import UIKit
 
 extension UILabel {
 
-    func setText(_ text: String, truncatingText: String) {
+    public func setText(_ text: String, truncatingText: String) {
         var text = text
         self.text = text
         while isTruncated() && text.length > 0 {
@@ -19,7 +19,7 @@ extension UILabel {
         }
     }
 
-    func isTruncated() -> Bool {
+    public func isTruncated() -> Bool {
         guard let string = self.text else {
             return false
         }
@@ -30,5 +30,5 @@ extension UILabel {
                                                              context: nil).size
         return (size.height > self.bounds.size.height)
     }
-    
+
 }

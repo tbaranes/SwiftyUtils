@@ -68,7 +68,6 @@ public extension Date {
 
 }
 
-
 // MARK: - Setter and getters for date components
 
 public extension Date {
@@ -123,7 +122,6 @@ public extension Date {
     }
 
 }
-
 
 // MARK: - Relative datetime
 
