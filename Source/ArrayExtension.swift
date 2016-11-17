@@ -143,7 +143,6 @@ public extension Array {
         return false
     }
 
-
     public func testAll(test: (Element) -> Bool) -> Bool {
         for item in self {
             if !test(item) {

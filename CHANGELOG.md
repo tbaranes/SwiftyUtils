@@ -35,7 +35,14 @@ subscript(safe index: Int) -> Element?
 - Sugar syntax for `Date`
 
 ```swift
-Too much to be described here...
+Too many things to be described here... check the README
+```
+
+- UILabelExtension (iOS only)
+
+```swift
+func isTruncated() -> Bool
+func setText(_ text: String, truncatedText: String)
 ```
 
 **New extensions for macOS:**

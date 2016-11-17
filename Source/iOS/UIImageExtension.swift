@@ -7,7 +7,6 @@ import UIKit
 
 // MARK: Initializer
 
-
 public extension UIImage {
 
     public convenience init(color: UIColor?) {

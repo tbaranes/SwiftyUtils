@@ -61,6 +61,7 @@ Check out the repository to find examples / tests for each feature.
 - [UIApplication](#uiapplication-extension)
 - [UIStoryboard](#uistoryboard-extension)
 - [UISwitch](#uiswitch-extension)
+- [UILabel](#uilabel-extension)
 - [Simulator](#simulator)
 - **Gestures:**
  - [BlockTapGesturesRecognizers](#blocktapgesturesrecognizers)
@@ -1091,6 +1092,28 @@ Toggle a switch state:
 ```swift
 let mySwitch = UISwitch()
 mySwitch.toggle()
+```
+
+### UILabel extension
+
+Check if the text of a label is truncated:
+
+```swift
+let label = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 40))
+label.text = "I will be truncated :("
+print(label.isTruncated()) // true
+
+let label = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 40))
+label.text = ":)"
+print(label.isTruncated()) // false
+```
+
+Change the truncated text:
+
+```swift
+let label = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 40))
+label.setText("I will be truncated :(", truncatedText: ".")
+print(label.text) // I wi.
 ```
 
 ### Simulator
