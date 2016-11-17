@@ -10,12 +10,12 @@ import UIKit
 
 extension UILabel {
 
-    public func setText(_ text: String, truncatingText: String) {
+    public func setText(_ text: String, truncatedText: String) {
         var text = text
         self.text = text
         while isTruncated() && text.length > 0 {
             text = String(text.characters.dropLast())
-            self.text = text + truncatingText
+            self.text = text + truncatedText
         }
     }
 
