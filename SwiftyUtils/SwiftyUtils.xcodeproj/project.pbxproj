@@ -196,6 +196,7 @@
 		E2A801A51D37167500C99FD3 /* UserDefaultsExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300741CCD0669003156EC /* UserDefaultsExtensionTests.swift */; };
 		E2A801A61D37167600C99FD3 /* UserDefaultsExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27300741CCD0669003156EC /* UserDefaultsExtensionTests.swift */; };
 		E2B2C50A1DDD071E00C219D1 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B2C5091DDD071E00C219D1 /* UILabelExtension.swift */; };
+		E2B2C50C1DDD949F00C219D1 /* UILabelExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B2C50B1DDD949F00C219D1 /* UILabelExtensionTests.swift */; };
 		E2DE21471D1C7DB20035C523 /* SwiftyColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE21451D1C7D8F0035C523 /* SwiftyColorTests.swift */; };
 		E2DE21481D1C7DB30035C523 /* SwiftyColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE21451D1C7D8F0035C523 /* SwiftyColorTests.swift */; };
 		E2DE21491D1C7DB40035C523 /* SwiftyColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DE21451D1C7D8F0035C523 /* SwiftyColorTests.swift */; };
@@ -317,6 +318,7 @@
 		E2976EEC1CCD2E3A0048724F /* CollectionTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeExtension.swift; sourceTree = "<group>"; };
 		E29AA5091CCFC3F200B351C9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		E2B2C5091DDD071E00C219D1 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		E2B2C50B1DDD949F00C219D1 /* UILabelExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtensionTests.swift; sourceTree = "<group>"; };
 		E2DE21451D1C7D8F0035C523 /* SwiftyColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyColorTests.swift; sourceTree = "<group>"; };
 		E2DE214A1D1C80680035C523 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		E2DE214C1D1C82030035C523 /* UISwitchExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchExtension.swift; sourceTree = "<group>"; };
@@ -460,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				E27300841CCD068C003156EC /* NSObjectExtensionTests.swift */,
+				E2B2C50B1DDD949F00C219D1 /* UILabelExtensionTests.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -791,7 +794,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Tom Baranes";
 				TargetAttributes = {
 					E2218C311D155039000F96DB = {
@@ -1069,6 +1072,7 @@
 				E269E8261D014F2B0085992E /* ThenTest.swift in Sources */,
 				E2E7730A1D8B5A94001C36FF /* DateExtensionTests.swift in Sources */,
 				E27300811CCD0669003156EC /* OccupiableTests.swift in Sources */,
+				E2B2C50C1DDD949F00C219D1 /* UILabelExtensionTests.swift in Sources */,
 				E2DE21471D1C7DB20035C523 /* SwiftyColorTests.swift in Sources */,
 				E273007D1CCD0669003156EC /* NSRangeExtensionTests.swift in Sources */,
 				E216A59F1D8B42CE00029944 /* IteratableTests.swift in Sources */,
@@ -1217,6 +1221,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1240,6 +1245,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1263,6 +1269,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1295,8 +1302,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1327,6 +1336,7 @@
 		E26B67D61CCD1A970069317D /* ReleaseTest */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1397,6 +1407,7 @@
 		E26B67DA1CCD1A970069317D /* ReleaseTest */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1432,6 +1443,7 @@
 		E27300101CCD031B003156EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1452,6 +1464,7 @@
 		E27300111CCD031B003156EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1610,8 +1623,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1659,8 +1674,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1690,6 +1707,7 @@
 		E273FEE01CCCFF5B003156EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1708,6 +1726,7 @@
 		E273FEE11CCCFF5B003156EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
