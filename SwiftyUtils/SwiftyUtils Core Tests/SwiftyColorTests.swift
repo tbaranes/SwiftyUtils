@@ -77,10 +77,16 @@ extension SwiftyColorTests {
             XCTAssertEqualWithAccuracy(red, 1.0, accuracy: 0.0001)
             XCTAssertEqualWithAccuracy(green, 1.0, accuracy: 0.0001)
             XCTAssertEqualWithAccuracy(blue, 1.0, accuracy: 0.0001)
-        #else
-            XCTAssertEqualWithAccuracy(red, 1.25, accuracy: 0.0001)
-            XCTAssertEqualWithAccuracy(green, 1.25, accuracy: 0.0001)
-            XCTAssertEqualWithAccuracy(blue, 1.25, accuracy: 0.0001)
+        #elseif os(iOS)
+            if #available(iOS 10.0, *) {
+                XCTAssertEqualWithAccuracy(red, 1.25, accuracy: 0.0001)
+                XCTAssertEqualWithAccuracy(green, 1.25, accuracy: 0.0001)
+                XCTAssertEqualWithAccuracy(blue, 1.25, accuracy: 0.0001)
+            } else {
+                XCTAssertEqualWithAccuracy(red, 1.0, accuracy: 0.0001)
+                XCTAssertEqualWithAccuracy(green, 1.0, accuracy: 0.0001)
+                XCTAssertEqualWithAccuracy(blue, 1.0, accuracy: 0.0001)
+            }
         #endif
         XCTAssertEqualWithAccuracy(alpha, 1.0, accuracy: 0.0001)
     }
