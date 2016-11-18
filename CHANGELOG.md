@@ -8,6 +8,20 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
+N/A
+
+#### Enhancements
+
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [0.6.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.6.0) (18-11-2016)
+
+#### API breaking changes
+
 - `NSDate` is now used as `Date`
 
 #### Enhancements
@@ -52,10 +66,6 @@ func setText(_ text: String, truncatedText: String)
 ```swift
 func convertLocalizables()
 ```
-
-#### Bugfixes
-
-N/A
 
 ## [0.5.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.5.0) (14-09-2016)
 
