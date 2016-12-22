@@ -71,6 +71,12 @@ class AttributedStringExampleViewController: UIViewController {
         }
     }
 
+    @IBOutlet weak var labelLineHeight: UILabel! {
+        didSet {
+            labelLineHeight.text = "Label with a loooooooong text, and only 0.9 as line height"
+            labelLineHeight.setLineHeight(0.9)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

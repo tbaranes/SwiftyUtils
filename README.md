@@ -1022,6 +1022,14 @@ label.text = ":)"
 print(label.isTruncated()) // false
 ```
 
+Change line height:
+
+```swift
+let label = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 40))
+label.setText("A long multiline text")
+label.setLineHeight(0.9)
+```
+
 Change the truncated text:
 
 ```swift

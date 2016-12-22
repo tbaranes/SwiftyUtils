@@ -2,6 +2,9 @@ language: objective-c
 osx_image: xcode8
 notifications:
   email: false
+branches:
+  only: 
+    - master  
 env:
   global:
   - LC_CTYPE=en_US.UTF-8
@@ -54,3 +57,6 @@ script:
   - if [ $POD_LINT == "YES" ]; then
       pod lib lint;
     fi
+
+after_success:
+   - sleep 5 # Workaround for https://github.com/travis-ci/travis-ci/issues/4725    

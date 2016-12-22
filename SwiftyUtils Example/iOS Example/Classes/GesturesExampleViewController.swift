@@ -60,7 +60,7 @@ class GesturesExampleViewController: UIViewController {
     // MARK - Gestures
 
     func handleTapGesture() {
-        let blockTapGesture = BlockTapGestureRecognizer() { _ in
+        let blockTapGesture = BlockTapGestureRecognizer { _ in
             self.tapCounter += 1
         }
         view.addGestureRecognizer(blockTapGesture)
