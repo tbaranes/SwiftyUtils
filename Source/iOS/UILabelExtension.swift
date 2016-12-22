@@ -19,8 +19,8 @@ extension UILabel {
         paragraphStyle.alignment = self.textAlignment
 
         let attrString = NSMutableAttributedString(string: self.text!)
-        attrString.addAttribute(NSFontAttributeName, value: self.font, range: NSMakeRange(0, attrString.length))
-        attrString.addAttribute(NSParagraphStyleAttributeName, value:paragraphStyle, range:NSMakeRange(0, attrString.length))
+        attrString.addAttribute(NSFontAttributeName, value: self.font, range: NSRange(location: 0, length: attrString.length))
+        attrString.addAttribute(NSParagraphStyleAttributeName, value:paragraphStyle, range: NSRange(location: 0, length: attrString.length))
         self.attributedText = attrString
     }
 

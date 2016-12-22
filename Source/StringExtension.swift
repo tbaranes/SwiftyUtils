@@ -96,8 +96,7 @@ public extension String {
 
         let text = self
         if let detector = detector {
-            detector.enumerateMatches(in: text, options: [], range: NSRange(location: 0, length: text.characters.count), using: {
-                (result: NSTextCheckingResult?, flags: NSRegularExpression.MatchingFlags, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
+            detector.enumerateMatches(in: text, options: [], range: NSRange(location: 0, length: text.characters.count), using: { result, _, _ in
                 if let result = result,
                     let url = result.url {
                     urls.append(url as URL)

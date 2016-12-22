@@ -13,14 +13,14 @@ public class BlockNotification {
 
     // MARK - Initializers
 
-    public init(name: String, closure: @escaping (NSNotification) -> ()) {
+    public init(name: String, closure: @escaping (NSNotification) -> Void) {
         self.name = name
         self.closure = closure
         self.start()
     }
 
     public convenience init(name: String, object: AnyObject,
-                            closure: @escaping (NSNotification) -> ()) {
+                            closure: @escaping (NSNotification) -> Void) {
         self.init(name: name, closure: closure)
         self.object = object
     }

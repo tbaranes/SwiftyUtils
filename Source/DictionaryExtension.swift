@@ -30,7 +30,7 @@ public extension Dictionary {
         return result
     }
 
-    public mutating func merge<K, V>(with dictionaries: Dictionary<K, V>...) {
+    public mutating func merge<K, V>(with dictionaries: [K: V]...) {
         for dict in dictionaries {
             for (key, value) in dict {
                 guard let value = value as? Value, let key = key as? Key else {
@@ -76,8 +76,8 @@ public extension Dictionary where Value: Equatable {
     }
 }
 
-public func += <KeyType, ValueType> (left: inout Dictionary<KeyType, ValueType>,
-                                     right: Dictionary<KeyType, ValueType>) {
+public func += <KeyType, ValueType> (left: inout [KeyType: ValueType],
+                right: [KeyType: ValueType]) {
     for (k, v) in right {
         left.updateValue(v, forKey: k)
     }
