@@ -12,7 +12,13 @@ N/A
 
 #### Enhancements
 
-N/A
+*Note: Take a look into the README to see the details of all the following enhancements* 
+
+- UILabelExtension (iOS only)
+
+```swift
+public func setLineHeight(_ lineHeight: CGFloat)
+```
 
 #### Bugfixes
 
