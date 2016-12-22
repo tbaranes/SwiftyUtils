@@ -10,6 +10,20 @@ import UIKit
 
 extension UILabel {
 
+    // MARK: Set
+
+    public func setLineHeight(_ lineHeight: CGFloat) {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 1.0
+        paragraphStyle.lineHeightMultiple = lineHeight
+        paragraphStyle.alignment = self.textAlignment
+
+        let attrString = NSMutableAttributedString(string: self.text!)
+        attrString.addAttribute(NSFontAttributeName, value: self.font, range: NSMakeRange(0, attrString.length))
+        attrString.addAttribute(NSParagraphStyleAttributeName, value:paragraphStyle, range:NSMakeRange(0, attrString.length))
+        self.attributedText = attrString
+    }
+
     public func setText(_ text: String, truncatedText: String) {
         var text = text
         self.text = text
@@ -18,6 +32,12 @@ extension UILabel {
             self.text = text + truncatedText
         }
     }
+
+}
+
+// MARK: - Helpers
+
+extension UILabel {
 
     public func isTruncated() -> Bool {
         guard let string = self.text else {
