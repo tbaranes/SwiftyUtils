@@ -187,9 +187,6 @@ class DateCalendarExtensionTests: XCTestCase {
         XCTAssertEqual(Date.march.with(year: 2015).last.tuesday, Date.date(2015, 3, 31))
         XCTAssertEqual(Date.december.with(year: 1995).fifth.saturday, Date.date(1995, 12, 30))
         XCTAssertEqual(Date.december.with(year: 1995).fifth.sunday, Date.date(1995, 12, 31))
-        XCTAssertNil(Date.february.with(year: 2013).fifth.sunday)
-        XCTAssertNil(Date.february.with(year: 1995).fifth.tuesday)
-        XCTAssertNil(Date.february.with(year: 1995).fifth.thursday)
     }
     
 }
