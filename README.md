@@ -183,7 +183,7 @@ let notificationProxy = BlockNotification("aNotificationName": name) { notificat
 }
 
 // Post a notification
-NotificationCenter.default().postNotificationName("aNotificationName", object: "Hello world")
+NotificationCenter.default.postNotificationName("aNotificationName", object: "Hello world")
 ```
 
 ### Bundle extension
@@ -192,29 +192,29 @@ Get bundle information:
 
 ```swift
 Bundle.main.appName
-Bundle(URL: someURL)?.appName
+Bundle(url: someURL)?.appName
 
 Bundle.main.appVersion
-Bundle(URL: someURL)?.appVersion
+Bundle(url: someURL)?.appVersion
 
 Bundle.main.appBuild
-Bundle(URL: someURL)?.appBuild
+Bundle(url: someURL)?.appBuild
 
 Bundle.main.bundleId
-Bundle(URL: someURL)?.bundleId
+Bundle(url: someURL)?.bundleId
 
 Bundle.main.schemes
-Bundle(URL: someURL)?.schemes
+Bundle(url: someURL)?.schemes
 
 Bundle.main.mainScheme
-Bundle(URL: someURL)?.mainScheme
+Bundle(url.i: someURL)?.mainScheme
 ```
 
 Get the app build:
 
 ```swift
-NSBundle(URL: someURL)?.appBuild
-NSBundle.mainBundle().appBuild
+Bundle(url: someURL)?.appBuild
+Bundle.main.appBuild
 ```
 
 ### CGFloat extension
@@ -242,23 +242,23 @@ Initialize from string:
 ``` swift
 let format = "yyyy/MM/dd"
 let fromString = "2015/03/11"
-print(NSDate(fromString: fromString, format: format)) // Optional("2015/03/11 00:00:00 +0000")
+print(Date(fromString: fromString, format: format)) // Optional("2015/03/11 00:00:00 +0000")
 ```
 
 Convert date into string:
 
 ``` swift
-let now = NSDate()
+let now = Date()
 print(now.toString())
-print(now.toString(dateStyle: .MediumStyle, timeStyle: .MediumStyle))
+print(now.toString(dateStyle: .medium, timeStyle: .medium))
 print(now.toString(format: "yyyy/MM/dd HH:mm:ss"))
 ```
 
 See how much time passed:
 
 ``` swift
-let now = NSDate()
-let later = NSDate(timeIntervalSinceNow: -100000)
+let now = Date()
+let later = Date(timeIntervalSinceNow: -100000)
 print(later.daysInBetweenDate(now)) // 1.15740740782409
 print(later.hoursInBetweenDate(now)) // 27.7777777733571
 print(later.minutesInBetweenDate(now)) // 1666.66666641732
@@ -409,7 +409,7 @@ Delete contents of temporary directory
 ```
 FileManager.deleteAllTemporaryFiles()
 // OR
-FileManager.default().deleteAllTemporaryFiles()
+FileManager.default.deleteAllTemporaryFiles()
 ```
 
 Delete contents of documents directory
@@ -417,7 +417,7 @@ Delete contents of documents directory
 ```
 FileManager.deleteAllDocumentFiles()
 // OR
-FileManager.default().deleteAllDocumentFiles()
+FileManager.default.deleteAllDocumentFiles()
 ```
 
 ### Int extension
@@ -446,9 +446,9 @@ print(newArray) // [3, "6", 1, 2, "5"]
 Post a notification from a specific queue:
 
 ```
-NotificationCenter.default().postNotification(name: "aNotification", queue: DispatchQueue.main) 
-NotificationCenter.default().postNotification(name: "aNotification", object: aObject queue: DispatchQueue.main)
-NotificationCenter.default().postNotification(name: "aNotification", object: aObject userInfo: userInfo queue: DispatchQueue.main)
+NotificationCenter.default.postNotification(name: "aNotification", queue: DispatchQueue.main) 
+NotificationCenter.default.postNotification(name: "aNotification", object: aObject queue: DispatchQueue.main)
+NotificationCenter.default.postNotification(name: "aNotification", object: aObject userInfo: userInfo queue: DispatchQueue.main)
 ```
 
 ### NSLayoutConstraint extension
@@ -649,7 +649,7 @@ Check if it's a number:
 var aString = "4242"
 print(aString.isNumber()) // true
 var aString = "test"
-print(aString.isNumber) // false
+print(aString.isNumber()) // false
 ```
 
 Check if it's a valid email:
@@ -674,7 +674,7 @@ Schedule timer every seconds:
 
 ``` swift
 var count = 0
-Timer.every(1.seconds) { (timer: NSTimer) in
+Timer.every(1.seconds) { (timer: Timer) in
     print("Will print every second")
     if count == 3 {
         timer.invalidate()
@@ -807,7 +807,7 @@ if UITesting.isRunning {
 Get and set values from UserDefaults with subscripts:
 
 ```swift
-let Defaults = UserDefaults.standard()
+let Defaults = UserDefaults.standard
 Defaults["userName"] = "test"
 print(Defaults["userName"]) // test
 ```
@@ -817,13 +817,13 @@ Check if the userdefaults contains a key:
 ```swift
 UserDefaults.contains("aKey")
 // OR
-UserDefaults.standard().contains("aKey")
+UserDefaults.standard.contains("aKey")
 ```
 
 Reset the defaults:
 
 ```swift
-UserDefaults.standard().reset()
+UserDefaults.standard.reset()
 ```
 
 ### Injectable
@@ -945,7 +945,7 @@ let label = UILabel().then {
 Get the current view controller display:
 
 ```swift
-UIApplication.sharedApplication().topViewController()
+UIApplication.shared.topViewController()
 ```
 
 ### UIAlertController extension
@@ -982,7 +982,7 @@ Force device orientation:
 ```swift
 UIDevice.forceRotation(.Portrait)
 // or
-UIDevice.mainDevice().setValue(orientation.rawValue, forKey: "orientation")
+UIDevice.current.setValue(orientation.rawValue, forKey: "orientation")
 ```
 
 ### UIImage extension
