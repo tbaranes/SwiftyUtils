@@ -649,7 +649,7 @@ Check if it's a number:
 var aString = "4242"
 print(aString.isNumber()) // true
 var aString = "test"
-print(aString.isNumber) // false
+print(aString.isNumber()) // false
 ```
 
 Check if it's a valid email:
