@@ -69,7 +69,7 @@ class TimerTests: XCTestCase {
             self.testAfter2()
         }
 
-        timer.start(runLoop: RunLoop.current, modes: RunLoopMode.defaultRunLoopMode)
+        timer.start(onRunLoop: RunLoop.current, modes: RunLoopMode.defaultRunLoopMode)
     }
 
     func testAfter2() {
