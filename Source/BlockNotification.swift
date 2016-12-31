@@ -32,7 +32,7 @@ public class BlockNotification {
     // MARK -
 
     public  func start() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(notification:)), name: NSNotification.Name(rawValue: name), object: object)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification), name: NSNotification.Name(rawValue: name), object: object)
     }
 
     public  func stop() {
@@ -41,7 +41,7 @@ public class BlockNotification {
 
     // MARK - Action
 
-    dynamic func handleNotification(notification: NSNotification) {
+    dynamic func handleNotification(_ notification: NSNotification) {
         closure(notification)
     }
 
