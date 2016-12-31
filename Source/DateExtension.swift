@@ -10,7 +10,7 @@ import Foundation
 public extension Date {
 
     public init?(fromString string: String, format: String) {
-        let formatter = SUDateFormatter.sharedInstance
+        let formatter = SUDateFormatter.shared
         formatter.dateFormat = format
         guard let date = formatter.date(from: string) else {
             return nil
@@ -19,14 +19,14 @@ public extension Date {
     }
 
     public func toString(dateStyle: DateFormatter.Style = .medium, timeStyle: DateFormatter.Style = .medium) -> String {
-        let formatter = SUDateFormatter.sharedInstance
+        let formatter = SUDateFormatter.shared
         formatter.dateStyle = dateStyle
         formatter.timeStyle = timeStyle
         return formatter.string(from: self as Date)
     }
 
     public func toString(format: String) -> String {
-        let formatter = SUDateFormatter.sharedInstance
+        let formatter = SUDateFormatter.shared
         formatter.dateFormat = format
         return formatter.string(from: self as Date)
     }

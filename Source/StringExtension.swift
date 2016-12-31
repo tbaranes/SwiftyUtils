@@ -26,7 +26,7 @@ public extension String {
 public extension String {
 
     init?(value: Float, maxDigits: Int) {
-        let numberFormatter = SUNumberFormatter.sharedInstance
+        let numberFormatter = SUNumberFormatter.shared
         numberFormatter.numberStyle = .decimal
         numberFormatter.maximumFractionDigits = maxDigits
         guard let string = numberFormatter.string(for: value) else {
@@ -36,7 +36,7 @@ public extension String {
     }
 
     init?(value: Double, maxDigits: Int) {
-        let numberFormatter = SUNumberFormatter.sharedInstance
+        let numberFormatter = SUNumberFormatter.shared
         numberFormatter.numberStyle = .decimal
         numberFormatter.maximumFractionDigits = maxDigits
         guard let string = numberFormatter.string(for: value) else {
@@ -141,7 +141,7 @@ public extension String {
 public extension String {
 
     public var isNumber: Bool {
-        if let _ = SUNumberFormatter.sharedInstance.number(from: self) {
+        if let _ = SUNumberFormatter.shared.number(from: self) {
             return true
         }
         return false
