@@ -7,9 +7,9 @@ import Foundation
 
 public extension Collection {
 
-    public func shuffle() -> [Generator.Element] {
+    public func shuffled() -> [Generator.Element] {
         var list = Array(self)
-        list.shuffleInPlace()
+        list.shuffle()
         return list
     }
 
@@ -17,7 +17,7 @@ public extension Collection {
 
 public extension MutableCollection where Index == Int {
 
-    public mutating func shuffleInPlace() {
+    public mutating func shuffle() {
         if count < 2 {
             return
         }

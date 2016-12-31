@@ -55,17 +55,13 @@ public extension String {
         return self.characters.count
     }
 
-    public func isOnlyEmptySpacesAndNewLineCharacters() -> Bool {
+    public var isOnlyEmptySpacesAndNewLineCharacters: Bool {
         let characterSet = NSCharacterSet.whitespacesAndNewlines
         let newText = self.trimmingCharacters(in: characterSet)
         return newText.isEmpty
     }
 
-    func contains(text: String) -> Bool {
-        return self.range(of: text) != nil
-    }
-
-    public func contains(text: String, compareOption: NSString.CompareOptions) -> Bool {
+    public func contains(_ text: String, compareOption: NSString.CompareOptions) -> Bool {
         return self.range(of: text, options: compareOption) != nil
     }
 
@@ -85,7 +81,7 @@ public extension String {
 
 public extension String {
 
-    public var extractURLs: [URL] {
+    public var extractedURLs: [URL] {
         var urls: [URL] = []
         let detector: NSDataDetector?
         do {
@@ -133,7 +129,7 @@ public extension String {
         return self
     }
 
-    public var capitalizeFirst: String {
+    public var capitalizedFirst: String {
         let result = replacingCharacters(in: Range(startIndex..<startIndex), with: String(self[startIndex]).capitalized)
         return result
     }
@@ -144,7 +140,7 @@ public extension String {
 
 public extension String {
 
-    public func isNumber() -> Bool {
+    public var isNumber: Bool {
         if let _ = SUNumberFormatter.sharedInstance.number(from: self) {
             return true
         }

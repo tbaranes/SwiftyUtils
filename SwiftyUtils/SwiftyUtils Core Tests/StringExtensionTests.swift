@@ -59,22 +59,14 @@ extension StringExtensionTests {
     }
 
     func testIsOnlyEmptySpacesAndNewLineCharacters() {
-        XCTAssertFalse("test".isOnlyEmptySpacesAndNewLineCharacters())
-        XCTAssertTrue(" \n ".isOnlyEmptySpacesAndNewLineCharacters())
+        XCTAssertFalse("test".isOnlyEmptySpacesAndNewLineCharacters)
+        XCTAssertTrue(" \n ".isOnlyEmptySpacesAndNewLineCharacters)
     }
 
     func testClassName() {
         var aString = "hello world"
-        aString = aString.capitalizeFirst
+        aString = aString.capitalizedFirst
         XCTAssertEqual(aString[0], "H")
-    }
-
-    func testContains() {
-        let aString = "Hello world"
-        XCTAssertTrue(aString.contains("worl"))
-        XCTAssertTrue(aString.contains("Hello"))
-        XCTAssertTrue(aString.contains("Hello world"))
-        XCTAssertFalse(aString.contains("elllo"))
     }
 
     func testIsIncludeEmoji() {
@@ -90,7 +82,7 @@ extension StringExtensionTests {
 
     func testExtractURLs() {
         let string = "http://google.com http fpt:// http://facebook.com test"
-        let urls = string.extractURLs
+        let urls = string.extractedURLs
         XCTAssertEqual(urls.count, 2)
     }
 
@@ -119,8 +111,8 @@ extension StringExtensionTests {
 extension StringExtensionTests {
 
     func testIsNumber() {
-        XCTAssertTrue("425252".isNumber())
-        XCTAssertFalse("test".isNumber())
+        XCTAssertTrue("425252".isNumber)
+        XCTAssertFalse("test".isNumber)
     }
 
     func testIsEmailValid() {

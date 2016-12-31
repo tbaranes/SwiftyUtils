@@ -37,25 +37,25 @@ public extension Date {
 
 public extension Date {
 
-    public func daysInBetweenDate(_ date: Date) -> Double {
+    public func days(inBetween date: Date) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff / 86400)
         return diff
     }
 
-    public func hoursInBetweenDate(_ date: Date) -> Double {
+    public func hours(inBetween date: Date) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff / 3600)
         return diff
     }
 
-    public func minutesInBetweenDate(_ date: Date) -> Double {
+    public func minutes(inBetween date: Date) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff / 60)
         return diff
     }
 
-    public func secondsInBetweenDate(_ date: Date) -> Double {
+    public func seconds(inBetween date: Date) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff)
         return diff
