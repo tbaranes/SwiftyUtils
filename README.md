@@ -980,7 +980,7 @@ print(UIDevice.isVersionOrEarlier(8.1)) // false
 Force device orientation:
 
 ```swift
-UIDevice.forceRotation(.Portrait)
+UIDevice.forceRotation(.portrait)
 // or
 UIDevice.current.setValue(orientation.rawValue, forKey: "orientation")
 ```
