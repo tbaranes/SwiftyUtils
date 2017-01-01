@@ -14,26 +14,26 @@ import Foundation
 
 public extension NSMutableAttributedString {
 
-    public static func setTextColor(text: String, color: SwiftyColor, afterOcurrence occurence: String) -> NSMutableAttributedString {
+    public static func colored(text: String, color: SwiftyColor, afterOcurrence occurence: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
-        attrStr.setTextColor(color: color, afterOcurrence: occurence)
+        attrStr.setTextColor(color, afterOcurrence: occurence)
         return attrStr
     }
 
-    public static func setTextColor(text: String, color: SwiftyColor, forOccurences searchString: String) -> NSMutableAttributedString {
+    public static func colored(text: String, color: SwiftyColor, forOccurences searchString: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
-        attrStr.setTextColor(color: color, forOccurences: searchString)
+        attrStr.setTextColor(color, forOccurences: searchString)
         return attrStr
     }
 
-    public func setTextColor(color: SwiftyColor, afterOcurrence occurence: String) {
+    public func setTextColor(_ color: SwiftyColor, afterOcurrence occurence: String) {
         let range = NSRange(text: string, afterOccurence: occurence)
         if range.location != NSNotFound {
             setTextColor(value: color, range: range)
         }
     }
 
-    public func setTextColor(color: SwiftyColor, forOccurences searchString: String) {
+    public func setTextColor(_ color: SwiftyColor, forOccurences searchString: String) {
         addAttributeForOccurence(searchString: searchString, value: color, funcAddingAttribute: setTextColor)
     }
 
@@ -43,13 +43,13 @@ public extension NSMutableAttributedString {
 
 public extension NSMutableAttributedString {
 
-    public static func setTextStrike(text: String, afterOcurrence occurence: String) -> NSMutableAttributedString {
+    public static func striked(text: String, afterOcurrence occurence: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
         attrStr.setTextStrike(afterOcurrence: occurence)
         return attrStr
     }
 
-    public static func setTextStrike(text: String, forOccurences searchString: String) -> NSMutableAttributedString {
+    public static func striked(text: String, forOccurences searchString: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
         attrStr.setTextStrike(forOccurences: searchString)
         return attrStr
@@ -72,13 +72,13 @@ public extension NSMutableAttributedString {
 
 public extension NSMutableAttributedString {
 
-    public static func setTextUnderline(text: String, afterOcurrence occurence: String) -> NSMutableAttributedString {
+    public static func underlined(text: String, afterOcurrence occurence: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
         attrStr.setTextUnderline(afterOcurrence: occurence)
         return attrStr
     }
 
-    public static func setTextUnderline(text: String, forOccurences searchString: String) -> NSMutableAttributedString {
+    public static func underlined(text: String, forOccurences searchString: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
         attrStr.setTextUnderline(forOccurences: searchString)
         return attrStr

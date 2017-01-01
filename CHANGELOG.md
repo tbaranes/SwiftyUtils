@@ -8,7 +8,7 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
-N/A
+- Some APIs have been updated to follow the Swift 3 API guidelines, check out the README for more information
 
 #### Enhancements
 

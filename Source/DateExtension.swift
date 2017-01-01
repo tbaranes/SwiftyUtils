@@ -10,7 +10,7 @@ import Foundation
 public extension Date {
 
     public init?(fromString string: String, format: String) {
-        let formatter = SUDateFormatter.sharedInstance
+        let formatter = SUDateFormatter.shared
         formatter.dateFormat = format
         guard let date = formatter.date(from: string) else {
             return nil
@@ -19,14 +19,14 @@ public extension Date {
     }
 
     public func toString(dateStyle: DateFormatter.Style = .medium, timeStyle: DateFormatter.Style = .medium) -> String {
-        let formatter = SUDateFormatter.sharedInstance
+        let formatter = SUDateFormatter.shared
         formatter.dateStyle = dateStyle
         formatter.timeStyle = timeStyle
         return formatter.string(from: self as Date)
     }
 
     public func toString(format: String) -> String {
-        let formatter = SUDateFormatter.sharedInstance
+        let formatter = SUDateFormatter.shared
         formatter.dateFormat = format
         return formatter.string(from: self as Date)
     }
@@ -37,25 +37,25 @@ public extension Date {
 
 public extension Date {
 
-    public func daysInBetweenDate(_ date: Date) -> Double {
+    public func days(inBetween date: Date) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff / 86400)
         return diff
     }
 
-    public func hoursInBetweenDate(_ date: Date) -> Double {
+    public func hours(inBetween date: Date) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff / 3600)
         return diff
     }
 
-    public func minutesInBetweenDate(_ date: Date) -> Double {
+    public func minutes(inBetween date: Date) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff / 60)
         return diff
     }
 
-    public func secondsInBetweenDate(_ date: Date) -> Double {
+    public func seconds(inBetween date: Date) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
         diff = fabs(diff)
         return diff

@@ -183,7 +183,7 @@ let notificationProxy = BlockNotification("aNotificationName": name) { notificat
 }
 
 // Post a notification
-NotificationCenter.default.postNotificationName("aNotificationName", object: "Hello world")
+NotificationCenter.default.postNotification("aNotificationName", object: "Hello world")
 ```
 
 ### Bundle extension
@@ -231,7 +231,7 @@ Shuffle a collection:
 
 ``` swift
 let myArray = [1, 2, 3, "5", "6]
-let arraySuffled = myArray.shuffle()
+let arraySuffled = myArray.shuffled()
 print(arraySuffled) // [3, "6", 1, 2, "5"]
 ```
 
@@ -259,10 +259,10 @@ See how much time passed:
 ``` swift
 let now = Date()
 let later = Date(timeIntervalSinceNow: -100000)
-print(later.daysInBetweenDate(now)) // 1.15740740782409
-print(later.hoursInBetweenDate(now)) // 27.7777777733571
-print(later.minutesInBetweenDate(now)) // 1666.66666641732
-print(later.secondsInBetweenDate(now)) // 99999.999984026
+print(later.days(inBetween: now)) // 1.15740740782409
+print(later.hours(inBetween: now)) // 27.7777777733571
+print(later.minutes(inBetween: now)) // 1666.66666641732
+print(later.seconds(inBetween: now)) // 99999.999984026
 ```
 
 Date utils:
@@ -401,7 +401,7 @@ Create a new directory:
 ```
 FileManager.createDirectory(at: directoryUrl)
 // OR
-FileManager.default().createDirectory(at: directoryUrl)
+FileManager.default.createDirectory(at: directoryUrl)
 ```
 
 Delete contents of temporary directory
@@ -446,9 +446,9 @@ print(newArray) // [3, "6", 1, 2, "5"]
 Post a notification from a specific queue:
 
 ```
-NotificationCenter.default.postNotification(name: "aNotification", queue: DispatchQueue.main) 
-NotificationCenter.default.postNotification(name: "aNotification", object: aObject queue: DispatchQueue.main)
-NotificationCenter.default.postNotification(name: "aNotification", object: aObject userInfo: userInfo queue: DispatchQueue.main)
+NotificationCenter.default.postNotification("aNotification", queue: DispatchQueue.main) 
+NotificationCenter.default.postNotification("aNotification", object: aObject queue: DispatchQueue.main)
+NotificationCenter.default.postNotification("aNotification", object: aObject userInfo: userInfo queue: DispatchQueue.main)
 ```
 
 ### NSLayoutConstraint extension
@@ -474,7 +474,7 @@ print(constraint.constants) // 100
 Colorize each occurence:
 
 ```swift
-let attrStr: NSMutableAttributedString = NSMutableAttributedString.setTextcolor("hello world", color: UIColor.yellowColor(), forOccurences: "llo")
+let attrStr: NSMutableAttributedString = NSMutableAttributedString.colored(text: "hello world", color: UIColor.yellowColor(), forOccurences: "llo")
 
 // OR
 
@@ -485,7 +485,7 @@ attrStr.setTextColor(UIColor.yellowColor(), forOccurences: "llo")
 Colorize everything after an occurence:
 
 ```swift
-let attrStr = NSMutableAttributedString.setTextcolor("Hello world", color: UIColor.yellowColor(), afterOcurrence: "llo")
+let attrStr = NSMutableAttributedString.colored(text: "Hello world", color: UIColor.yellowColor(), afterOcurrence: "llo")
 
 // OR
 
@@ -496,7 +496,7 @@ attrStr.setTextColor(UIColor.yellowColor(), afterOcurrence: "llo")
 Strike each occurence:
 
 ```swift
-let attrStr: NSMutableAttributedString = NSMutableAttributedString.setTextStrike("Hello world", forOccurences: "llo")
+let attrStr: NSMutableAttributedString = NSMutableAttributedString.striked(text: "Hello world", forOccurences: "llo")
 
 // OR
 
@@ -507,7 +507,7 @@ attrStr.setTextStrike(forOccurences: "llo")
 Strike everything after an occurence:
 
 ```swift
-let attrStr: NSMutableAttributedString = NSMutableAttributedString.setTextStrike("Hello world", afterOcurrence: "llo")
+let attrStr: NSMutableAttributedString = NSMutableAttributedString.striked(text: "Hello world", afterOcurrence: "llo")
 
 // OR
 
@@ -518,7 +518,7 @@ attrStr.setTextStrike(afterOcurrence: "llo")
 Underline each occurence:
 
 ```swift
-let attrStr: NSMutableAttributedString = NSMutableAttributedString.setTextUnderline("Hello world", forOccurences: "llo")
+let attrStr: NSMutableAttributedString = NSMutableAttributedString.underlined(text: "Hello world", forOccurences: "llo")
 
 // OR
 
@@ -529,7 +529,7 @@ attrStr.setTextUnderline(forOccurences: "llo")
 Underline everything after an occurence:
 
 ```swift
-let attrStr: NSMutableAttributedString = NSMutableAttributedString.setTextUnderline("Hello world", afterOcurrence: "llo")
+let attrStr: NSMutableAttributedString = NSMutableAttributedString.underlined(text: "Hello world", afterOcurrence: "llo")
 
 // OR
 
@@ -571,13 +571,13 @@ print(range) // location: 1, length: 7
 Reuse your formatter to avoid heavy allocation:
 
 ```swift
-SUDateFormatter.sharedInstance
-SUNumberFormatter.sharedInstance
-SUByteCountFormatter.sharedInstance
-SUDateComponentsFormatter.sharedInstance
-SUDateIntervalFormatter.sharedInstance
-SUEnergyFormatter.sharedInstance
-SUMassFormatter.sharedInstance
+SUDateFormatter.shared
+SUNumberFormatter.shared
+SUByteCountFormatter.shared
+SUDateComponentsFormatter.shared
+SUDateIntervalFormatter.shared
+SUEnergyFormatter.shared
+SUMassFormatter.shared
 ```
 
 ### String extension
@@ -617,7 +617,7 @@ Capitalize the first letter:
 
 ```swift
 var aString = "hello world"
-aString = aString.capitalizeFirst
+aString = aString.capitalizedFirst
 print(aString)// Hello world
 ```
 
@@ -625,16 +625,16 @@ Check if it's composed only of spaces and new lines:
 
 ```swift
 var aString = "  \n  "
-print(aString.isOnlyEmptySpacesAndNewLineCharacters()) // true
+print(aString.isOnlyEmptySpacesAndNewLineCharacters) // true
 var aString = "test"
-print(aString.isOnlyEmptySpacesAndNewLineCharacters()) // false
+print(aString.isOnlyEmptySpacesAndNewLineCharacters) // false
 ```
 
 Trimmed spaces and new lines:
 
 ```swift
 var aString = " I'  am a    test  \n  "
-print(aString.trim()) // I'am a test
+print(aString.trimmed()) // I'am a test
 ```
 
 Truncated to have a limit of characters:
@@ -647,9 +647,9 @@ Check if it's a number:
 
 ```swift
 var aString = "4242"
-print(aString.isNumber()) // true
+print(aString.isNumber) // true
 var aString = "test"
-print(aString.isNumber()) // false
+print(aString.isNumber) // false
 ```
 
 Check if it's a valid email:
@@ -665,7 +665,7 @@ Extracts URLs:
 
 ```swift
 let string = "http://google.com http fpt:// http://facebook.com test"
-print(aString.extractURLs) // [http://google.com, http://facebook.com]
+print(aString.extractedURLs) // [http://google.com, http://facebook.com]
 ```
 
 ## Timer extension
@@ -697,7 +697,7 @@ Manual scheduling a timer:
 let timer = Timer.new(every: 2.seconds) {
     print("Prints this 2 seconds later in main queue")
 }
-timer.start
+timer.start(onRunLoop: RunLoop.current, modes: RunLoopMode.defaultRunLoopMode)
 ```
 
 Manual scheduling a timer with a delay:
@@ -706,7 +706,7 @@ Manual scheduling a timer with a delay:
 let timer = Timer.new(after: 2.seconds) {
     print("Prints this 2 seconds later in main queue")
 }
-timer.start
+timer.start(onRunLoop: RunLoop.current, modes: RunLoopMode.defaultRunLoopMode)
 ```
 
 ### URL extension
@@ -734,8 +734,8 @@ url?.addSkipBackupAttribute() // File at url won't be backupped!
 Create colors with HEX values:
 
 ``` swift
-let myUIColor = UIColor(hex: 0x233C64) // Equals 35,60,100,1
-let myNSColor = NSColor(hex: 0x233C64) // Equals 35,60,100,1
+let myUIColor = UIColor(hex: "233C64") // Equals 35,60,100,1
+let myNSColor = NSColor(hex: "233C64") // Equals 35,60,100,1
 ```
 
 Access to individual color value:
@@ -828,7 +828,7 @@ UserDefaults.standard.reset()
 
 ### Injectable
 
-Portocol to do `ViewController` Data Injection with Storyboards and Segues in Swift. Inspired from [Nastasha's blog](https://www.natashatherobot.com/update-view-controller-data-injection-with-storyboards-and-segues-in-swift/):
+Protocol to do `ViewController` Data Injection with Storyboards and Segues in Swift. Inspired from [Nastasha's blog](https://www.natashatherobot.com/update-view-controller-data-injection-with-storyboards-and-segues-in-swift/):
 
 ```
 class RedPillViewController: UIViewController, Injectable {
@@ -980,7 +980,7 @@ print(UIDevice.isVersionOrEarlier(8.1)) // false
 Force device orientation:
 
 ```swift
-UIDevice.forceRotation(.Portrait)
+UIDevice.forceRotation(.portrait)
 // or
 UIDevice.current.setValue(orientation.rawValue, forKey: "orientation")
 ```

@@ -58,7 +58,7 @@ public extension FileManager {
 
 public extension FileManager {
 
-    public static func deleteAllTemporaryFiles(path: String) throws {
+    public static func deleteAllTemporaryFiles(at path: String) throws {
         return try self.default.deleteAllTemporaryFiles()
     }
 
@@ -69,7 +69,7 @@ public extension FileManager {
         }
     }
 
-    public static func deleteAllDocumentFiles(path: String) throws {
+    public static func deleteAllDocumentFiles(at path: String) throws {
         return try self.default.deleteAllDocumentFiles()
     }
 
