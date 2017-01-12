@@ -32,4 +32,12 @@ public extension CGRect {
     public func with(height: CGFloat) -> CGRect {
         return CGRect(x: x, y: y, width: width, height: height)
     }
+    
+    public func with(origin: CGPoint) -> CGRect {
+        return CGRect(origin: origin, size: size)
+    }
+    
+    public func with(size: CGSize) -> CGRect {
+        return CGRect(origin: origin, size: size)
+    }
 }

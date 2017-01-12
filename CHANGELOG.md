@@ -29,6 +29,8 @@ public func with(x: CGFloat) -> CGRect
 public func with(y: CGFloat) -> CGRect
 public func with(width: CGFloat) -> CGRect
 public func with(height: CGFloat) -> CGRect
+public func with(origin: CGPoint) -> CGFloat
+public func with(size: CGSize) -> CGFloat
 ```
 
 - UIViewExtension and NSViewExtension

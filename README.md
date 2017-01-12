@@ -778,10 +778,12 @@ aRect.y // instead of aRect.origin.y
 Change one property of a `CGRect`:
 
 ```swift
-let rect = CGRect(x: 10, y: 20, width: 30, height: 40)
-let widerRect = rect.with(width: 100)
-let tallerRect = rect.with(height: 100)
-let rectAtAnotherPosition = rect.with(x: 100).with(y: 200)
+let rect = CGRect(x: 10, y: 20, width: 30, height: 40) 
+let widerRect = rect.with(width: 100) // x: 10, y: 20, width: 100, height: 40
+let tallerRect = rect.with(height: 100) // x: 10, y: 20, width: 30, height: 100
+let rectAtAnotherPosition = rect.with(x: 100).with(y: 200) // x: 100, y: 200, width: 30, height: 40
+let rectWithAnotherSize = rect.with(size: CGSize(width: 200, height: 200)) // x: 10, y: 20, width: 200, height: 200
+let rectAtYetAnotherPosition = rect.with(origin: CGPoint(x: 100, y: 100)) // x: 100, y: 100, width: 30, height: 40
 ```
 
 ### UnitTesting
@@ -1102,18 +1104,19 @@ mySwitch.toggle()
 
 ### UIView extension
 
-**Automates your localizables**
-
-```swift
-aView.convertLocalizables()
-```
-
 **Change the frame of the view easily**
 ```swift
+let aView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 aView.x += 100 // move  to right
 aView.y += 100 // move downwards
 aView.width -= 10 // make the view narrower
 aView.height -= 10 // make the view shorter 
+```
+
+**Automates your localizables**
+
+```swift
+aView.convertLocalizables()
 ```
 
 It will iterate on all the subviews of the view, and use the text / placeholder as key in `NSLocalizedString`.
@@ -1241,18 +1244,19 @@ view.addGestureRecognizer(blockTapGesture)
 
 ### NSView extension
 
-**Automates your localizables**
-
-```swift
-aView.convertLocalizables()
-```
-
 **Change the frame of the view easily**
 ```swift
+let aView = NSView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 aView.x += 100 // move  to right
 aView.y += 100 // move downwards
 aView.width -= 10 // make the view narrower
 aView.height -= 10 // make the view shorter 
+```
+
+**Automates your localizables**
+
+```swift
+aView.convertLocalizables()
 ```
 
 It will iterate on all the subviews of the view, and use the text / placeholder as key in `NSLocalizedString`.
