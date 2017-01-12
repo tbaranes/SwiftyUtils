@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		5A1390961E276F1800636E83 /* CGRectExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1390951E276F1800636E83 /* CGRectExtensionTest.swift */; };
 		5A1390981E27711D00636E83 /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1390971E27711D00636E83 /* UIViewExtensionTests.swift */; };
-		5A13909A1E27745200636E83 /* NSViewExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1390991E27745200636E83 /* NSViewExtensionsTest.swift */; };
+		5A13909B1E27F1D100636E83 /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1871901E269F14005D95AE /* CGRectExtensions.swift */; };
+		5A13909C1E27F1FD00636E83 /* NSViewExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1390991E27745200636E83 /* NSViewExtensionsTest.swift */; };
 		5A1871911E269F14005D95AE /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1871901E269F14005D95AE /* CGRectExtensions.swift */; };
 		61BE24BD1D927A78006B8CFD /* NSViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BE24BC1D927A78006B8CFD /* NSViewExtension.swift */; };
 		E2036F301D526368006C8E4F /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2036F2F1D526368006C8E4F /* BundleExtension.swift */; };
@@ -1065,6 +1066,7 @@
 				E2218C6B1D1550AE000F96DB /* ReusableFormatters.swift in Sources */,
 				E2218C601D1550AE000F96DB /* StringExtension.swift in Sources */,
 				E2218C5C1D1550AE000F96DB /* NSRangeExtension.swift in Sources */,
+				5A13909B1E27F1D100636E83 /* CGRectExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,7 +1075,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E273007B1CCD0669003156EC /* DateCalendarExtensionTests.swift in Sources */,
-				5A13909A1E27745200636E83 /* NSViewExtensionsTest.swift in Sources */,
 				E27D99B71D8B108B00F7D2CD /* CGFloatLiteral.swift in Sources */,
 				E21FD8941D36CAD2001A3886 /* UserDefaultsExtensionTests.swift in Sources */,
 				E273007C1CCD0669003156EC /* FileManagerTests.swift in Sources */,
@@ -1142,6 +1143,7 @@
 				E27300C31CCD06F5003156EC /* FileManagerTests.swift in Sources */,
 				E26578161D37A0430009452D /* UITestingTests.swift in Sources */,
 				E27300C81CCD06F5003156EC /* OccupiableTests.swift in Sources */,
+				5A13909C1E27F1FD00636E83 /* NSViewExtensionsTest.swift in Sources */,
 				E2147B3D1CCD272C0086ACE3 /* CollectionTypeTests.swift in Sources */,
 				E27300C11CCD06F5003156EC /* IntExtensionTests.swift in Sources */,
 				E27300BE1CCD06F5003156EC /* ArrayExtensionTests.swift in Sources */,
