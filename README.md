@@ -766,6 +766,24 @@ let darker = color.darker(amount: 0.5)
 let darker = color.darker()
 ```
 
+### CGRect extension
+
+Get the origin's x and y coordinates:
+
+```swift
+aRect.x // instead of aRect.origin.x
+aRect.y // instead of aRect.origin.y
+```
+
+Change one property of a `CGRect`:
+
+```swift
+let rect = CGRect(x: 10, y: 20, width: 30, height: 40)
+let widerRect = rect.with(width: 100)
+let tallerRect = rect.with(height: 100)
+let rectAtAnotherPosition = rect.with(x: 100).with(y: 200)
+```
+
 ### UnitTesting
 
 Grand Central Dispatch sugar syntax:
@@ -1090,6 +1108,14 @@ mySwitch.toggle()
 aView.convertLocalizables()
 ```
 
+**Change the frame of the view easily**
+```swift
+aView.x += 100 // move  to right
+aView.y += 100 // move downwards
+aView.width -= 10 // make the view narrower
+aView.height -= 10 // make the view shorter 
+```
+
 It will iterate on all the subviews of the view, and use the text / placeholder as key in `NSLocalizedString`.
 By settings your localizable key in your xib / storyboard, all yours string will be automatically translated just by calling the above method.
 
@@ -1219,6 +1245,14 @@ view.addGestureRecognizer(blockTapGesture)
 
 ```swift
 aView.convertLocalizables()
+```
+
+**Change the frame of the view easily**
+```swift
+aView.x += 100 // move  to right
+aView.y += 100 // move downwards
+aView.width -= 10 // make the view narrower
+aView.height -= 10 // make the view shorter 
 ```
 
 It will iterate on all the subviews of the view, and use the text / placeholder as key in `NSLocalizedString`.
