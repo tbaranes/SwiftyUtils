@@ -20,6 +20,26 @@ All notable changes to the project will be documented in this file.
 public func setLineHeight(_ lineHeight: CGFloat)
 ```
 
+- CGRectExtension
+
+```swift
+public var x: CGFloat
+public var y: CGFloat
+public func with(x: CGFloat) -> CGRect
+public func with(y: CGFloat) -> CGRect
+public func with(width: CGFloat) -> CGRect
+public func with(height: CGFloat) -> CGRect
+```
+
+- UIViewExtension and NSViewExtension
+
+```swift
+public var x: CGFloat
+public var y: CGFloat
+public var width: CGFloat
+public var height: CGFloat
+```
+
 #### Bugfixes
 
 N/A
