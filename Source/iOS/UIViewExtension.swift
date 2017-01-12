@@ -12,7 +12,7 @@ public extension UIView {
 
     // swiftlint:disable:next cyclomatic_complexity
     public func convertLocalizables() {
-        if subviews.count == 0 {
+        if subviews.isEmpty {
             return
         }
 

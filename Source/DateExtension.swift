@@ -39,7 +39,7 @@ public extension Date {
 
     public func days(inBetween date: Date) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow
-        diff = fabs(diff / 86400)
+        diff = fabs(diff / 86_400)
         return diff
     }
 
