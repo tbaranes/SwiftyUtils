@@ -81,7 +81,9 @@ public extension Date {
         let components = self.components(units: [.second, .nanosecond])
         return Double(components.second ?? -1) + Double(components.nanosecond ?? -1) / 1_000_000_000
     }
-    public var weekday: Int { return self.components(units: [Calendar.Component.weekday]).weekday ?? -1}
+    public var weekday: Int {
+        return self.components(units: [Calendar.Component.weekday]).weekday ?? -1
+    }
 
     public func with(year: Int) -> Date {
         return Date(year: year, month: month, day: day, hours: hours, minutes: minutes, seconds: seconds)
@@ -132,7 +134,7 @@ public extension IntegerLiteralType {
     public var days: DateTimeDelta { return DateTimeDelta(self, .day) }
 
     public var hours: DateTimeDelta { return DateTimeDelta(self, .hour) }
-    public var minutes: DateTimeDelta { return DateTimeDelta(self, .minute)  }
+    public var minutes: DateTimeDelta { return DateTimeDelta(self, .minute) }
     public var seconds: DateTimeDelta { return DateTimeDelta(self, .second) }
 
     public var year: DateTimeDelta { return self.years }

@@ -1,5 +1,30 @@
 line_length: 180
+variable_name:
+  min_length: 2
+  excluded: 
+   - x
+   - y
 type_name:
   excluded: T
+number_separator:
+  minimum_length: 5
+
+disabled_rules:
+ - shorthand_operator # Waiting next release to enable it
+opt_in_rules:
+ - closure_spacing
+ - conditional_returns_on_newline
+ - empty_count
+ - explicit_init
+ - overridden_super_call
+ - redundant_nil_coalescing
+ - nimble_operator
+ - closure_end_indentation
+ - first_where
+ - attributes
+ - operator_usage_whitespace
+ - prohibited_super_call
+ - number_separator
+ - object_literal
 included:
  - ../Source

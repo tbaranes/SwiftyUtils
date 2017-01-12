@@ -40,7 +40,7 @@ public extension Array where Element : Equatable {
 public extension Array {
 
     public func random() -> Element? {
-        guard self.count > 0 else {
+        guard self.isNotEmpty else {
             return nil
         }
 
