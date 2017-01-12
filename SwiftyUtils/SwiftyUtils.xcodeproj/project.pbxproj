@@ -195,6 +195,10 @@
 		E27D99B71D8B108B00F7D2CD /* CGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27D99B61D8B108B00F7D2CD /* CGFloatLiteral.swift */; };
 		E27D99B81D8B108B00F7D2CD /* CGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27D99B61D8B108B00F7D2CD /* CGFloatLiteral.swift */; };
 		E27D99B91D8B108B00F7D2CD /* CGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27D99B61D8B108B00F7D2CD /* CGFloatLiteral.swift */; };
+		E283446C1E27F6F3000C221A /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1871901E269F14005D95AE /* CGRectExtensions.swift */; };
+		E283446D1E27F6F4000C221A /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1871901E269F14005D95AE /* CGRectExtensions.swift */; };
+		E283446E1E27F6F7000C221A /* CGRectExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1390951E276F1800636E83 /* CGRectExtensionTest.swift */; };
+		E283446F1E27F6F8000C221A /* CGRectExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1390951E276F1800636E83 /* CGRectExtensionTest.swift */; };
 		E2976EED1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2976EEC1CCD2E3A0048724F /* CollectionTypeExtension.swift */; };
 		E2976EEF1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2976EEC1CCD2E3A0048724F /* CollectionTypeExtension.swift */; };
 		E29AA50A1CCFC3F200B351C9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29AA5091CCFC3F200B351C9 /* UIViewControllerExtension.swift */; };
@@ -987,6 +991,7 @@
 				E2218C461D1550A9000F96DB /* UserDefaultsExtension.swift in Sources */,
 				E216A5A41D8B42D400029944 /* Iteratable.swift in Sources */,
 				E2218C4B1D1550A9000F96DB /* Injectable.swift in Sources */,
+				E283446D1E27F6F4000C221A /* CGRectExtensions.swift in Sources */,
 				E2218C4D1D1550A9000F96DB /* Selfie.swift in Sources */,
 				E27D99B51D8B104100F7D2CD /* CGFloatLiteral.swift in Sources */,
 				E2218C481D1550A9000F96DB /* CollectionTypeExtension.swift in Sources */,
@@ -1007,6 +1012,7 @@
 				E27D99B41D8B104000F7D2CD /* CGFloatLiteral.swift in Sources */,
 				E216A5A31D8B42D300029944 /* Iteratable.swift in Sources */,
 				E26578051D379F910009452D /* UITesting.swift in Sources */,
+				E283446C1E27F6F3000C221A /* CGRectExtensions.swift in Sources */,
 				E27300521CCD0633003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E27300531CCD0633003156EC /* NSRangeExtension.swift in Sources */,
 				E2976EEF1CCD2E3A0048724F /* CollectionTypeExtension.swift in Sources */,
@@ -1127,6 +1133,7 @@
 				E26578101D379FF10009452D /* UnitTestingTests.swift in Sources */,
 				E27300BA1CCD06F4003156EC /* URLExtensionTests.swift in Sources */,
 				E21D5ACE1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */,
+				E283446F1E27F6F8000C221A /* CGRectExtensionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1155,6 +1162,7 @@
 				E27300BF1CCD06F5003156EC /* DictionaryExtensionTests.swift in Sources */,
 				E265780F1D379FEF0009452D /* UnitTestingTests.swift in Sources */,
 				E27300C61CCD06F5003156EC /* URLExtensionTests.swift in Sources */,
+				E283446E1E27F6F7000C221A /* CGRectExtensionTest.swift in Sources */,
 				E21D5ACD1CCE481D0070797C /* NSLayoutConstraintExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
