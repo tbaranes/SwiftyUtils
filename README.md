@@ -24,6 +24,7 @@ Check out the repository to find examples / tests for each feature.
 - [BlockNotification](#blocknotification)
 - [Bundle](#bundle-extension)
 - [CGFloat](#cgfloat-extension)
+- [CGRect](#cgrect-extension)
 - [CollectionType](#collectiontype-extension)
 - [Date](#date-extension)
 - [Dictionary](#dictionary-extension)
@@ -223,6 +224,26 @@ Create a CGFloat from a Float or an Integer:
 
 ```swift
 let imageViewTop = 15.f
+```
+
+### CGRect extension
+
+Get the origin's x and y coordinates:
+
+```swift
+aRect.x // instead of aRect.origin.x
+aRect.y // instead of aRect.origin.y
+```
+
+Change one property of a `CGRect`:
+
+```swift
+let rect = CGRect(x: 10, y: 20, width: 30, height: 40) 
+let widerRect = rect.with(width: 100) // x: 10, y: 20, width: 100, height: 40
+let tallerRect = rect.with(height: 100) // x: 10, y: 20, width: 30, height: 100
+let rectAtAnotherPosition = rect.with(x: 100).with(y: 200) // x: 100, y: 200, width: 30, height: 40
+let rectWithAnotherSize = rect.with(size: CGSize(width: 200, height: 200)) // x: 10, y: 20, width: 200, height: 200
+let rectAtYetAnotherPosition = rect.with(origin: CGPoint(x: 100, y: 100)) // x: 100, y: 100, width: 30, height: 40
 ```
 
 ### CollectionType extension
@@ -764,26 +785,6 @@ let lighter = color.lighter()
 // OR
 let darker = color.darker(amount: 0.5)
 let darker = color.darker()
-```
-
-### CGRect extension
-
-Get the origin's x and y coordinates:
-
-```swift
-aRect.x // instead of aRect.origin.x
-aRect.y // instead of aRect.origin.y
-```
-
-Change one property of a `CGRect`:
-
-```swift
-let rect = CGRect(x: 10, y: 20, width: 30, height: 40) 
-let widerRect = rect.with(width: 100) // x: 10, y: 20, width: 100, height: 40
-let tallerRect = rect.with(height: 100) // x: 10, y: 20, width: 30, height: 100
-let rectAtAnotherPosition = rect.with(x: 100).with(y: 200) // x: 100, y: 200, width: 30, height: 40
-let rectWithAnotherSize = rect.with(size: CGSize(width: 200, height: 200)) // x: 10, y: 20, width: 200, height: 200
-let rectAtYetAnotherPosition = rect.with(origin: CGPoint(x: 100, y: 100)) // x: 100, y: 100, width: 30, height: 40
 ```
 
 ### UnitTesting
