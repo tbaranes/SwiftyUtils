@@ -8,6 +8,20 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
+N/A
+
+#### Enhancements
+
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [0.7.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.7.0) (15-01-2017)
+
+#### API breaking changes
+
 - Some APIs have been updated to follow the Swift 3 API guidelines, check out the README for more information
 
 #### Enhancements
@@ -41,10 +55,6 @@ public var y: CGFloat
 public var width: CGFloat
 public var height: CGFloat
 ```
-
-#### Bugfixes
-
-N/A
 
 ## [0.6.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.6.0) (18-11-2016)
 
