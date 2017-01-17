@@ -44,17 +44,17 @@ public extension NSView {
         get { return frame.x }
         set { frame = frame.with(x: newValue) }
     }
-    
+
     public var y: CGFloat {
         get { return frame.y }
         set { frame = frame.with(y: newValue) }
     }
-    
+
     public var width: CGFloat {
         get { return frame.width }
         set { frame = frame.with(width: newValue) }
     }
-    
+
     public var height: CGFloat {
         get { return frame.height }
         set { frame = frame.with(height: newValue) }
