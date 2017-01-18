@@ -1,7 +1,4 @@
 //
-//  NSViewExtension.swift
-//  SwiftyUtils
-//
 //  Created by Vincent CARLIER on 21/09/2016.
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //

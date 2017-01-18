@@ -62,6 +62,7 @@ Check out the repository to find examples / tests for each feature.
 - [UIScreen](#uiscreen-extension)
 - [UIStoryboard](#uistoryboard-extension)
 - [UISwitch](#uiswitch-extension)
+- [UITextFied](#uitextfield-extension)
 - [UIView](#uiview-extension)
 - [UIViewController](#uiviewcontroller-extension)
 - [Simulator](#simulator)
@@ -1101,6 +1102,16 @@ Toggle a switch state:
 ```swift
 let mySwitch = UISwitch()
 mySwitch.toggle()
+```
+
+### UITextField extension
+
+Modify clear button image:
+
+```swift
+let clearButtonImage = UIImage(named: "clear_button")
+let textField = UITextField()
+textField.setClearButton(with: clearButtonImage)
 ```
 
 ### UIView extension
