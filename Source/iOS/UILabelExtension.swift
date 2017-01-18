@@ -1,7 +1,4 @@
 //
-//  UILabelExtension.swift
-//  SwiftyUtils
-//
 //  Created by Tom Baranes on 16/11/2016.
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //

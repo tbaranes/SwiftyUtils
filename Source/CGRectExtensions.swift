@@ -1,7 +1,4 @@
 //
-//  CGRectExtensions.swift
-//  SwiftyUtils
-//
 //  Created by Mulang Su on 11/01/2017.
 //  Copyright © 2017 Tom Baranes. All rights reserved.
 //
