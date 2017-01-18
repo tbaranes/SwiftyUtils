@@ -100,6 +100,7 @@
 		E269E8271D014F2C0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
 		E269E8281D014F2E0085992E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8221D014EBE0085992E /* ThenTest.swift */; };
 		E269E82B1D0152720085992E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269E8201D014D6B0085992E /* Then.swift */; };
+		E26E254F1E2F4FBC00D86322 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E254E1E2F4FBC00D86322 /* UITextFieldExtension.swift */; };
 		E273000D1CCD031B003156EC /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E273000C1CCD031B003156EC /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E273001A1CCD03ED003156EC /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E27300191CCD03ED003156EC /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E27300471CCD0633003156EC /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273FF5A1CCD0040003156EC /* ArrayExtension.swift */; };
@@ -269,6 +270,7 @@
 		E26578231D37A5200009452D /* Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
 		E269E8201D014D6B0085992E /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		E269E8221D014EBE0085992E /* ThenTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThenTest.swift; sourceTree = "<group>"; };
+		E26E254E1E2F4FBC00D86322 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		E273000A1CCD031B003156EC /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E273000C1CCD031B003156EC /* SwiftyUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyUtils.h; sourceTree = "<group>"; };
 		E273000E1CCD031B003156EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -633,6 +635,7 @@
 				E2DE214A1D1C80680035C523 /* UIStoryboardExtension.swift */,
 				E2DE214C1D1C82030035C523 /* UISwitchExtension.swift */,
 				E2B2C5091DDD071E00C219D1 /* UILabelExtension.swift */,
+				E26E254E1E2F4FBC00D86322 /* UITextFieldExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1196,6 +1199,7 @@
 				E273FF8F1CCD0040003156EC /* NSMutableAttributedStringExtension.swift in Sources */,
 				E273FF551CCD0025003156EC /* NSObjectExtension.swift in Sources */,
 				E273FF891CCD0040003156EC /* DateCalendarExtension.swift in Sources */,
+				E26E254F1E2F4FBC00D86322 /* UITextFieldExtension.swift in Sources */,
 				E218E3231CE200B9005E0FA4 /* UIAlertControllerExtension.swift in Sources */,
 				5A1871911E269F14005D95AE /* CGRectExtensions.swift in Sources */,
 				E2B2C50A1DDD071E00C219D1 /* UILabelExtension.swift in Sources */,
