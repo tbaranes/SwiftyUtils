@@ -12,7 +12,16 @@ N/A
 
 #### Enhancements
 
-N/A
+#### Enhancements
+
+*Note: Take a look into the README to see the details of all the following enhancements* 
+
+- UITextFieldExtension (iOS only)
+
+```swift
+public func setClearButton(with image: UIImage)
+```
+
 
 #### Bugfixes
 
