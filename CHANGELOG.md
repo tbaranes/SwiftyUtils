@@ -22,6 +22,12 @@ N/A
 public func setClearButton(with image: UIImage)
 ```
 
+- TimerExtension
+```swift
+func every(_ interval: TimeInterval, firesImmediately: Bool = false, _ block: @escaping () -> Void) -> Timer
+func every(_ interval: TimeInterval, firesImmediately: Bool = false, _ block: @escaping (Timer) -> Void) -> Timer
+```
+
 
 #### Bugfixes
 
