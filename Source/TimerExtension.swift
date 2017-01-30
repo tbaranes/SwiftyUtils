@@ -15,17 +15,31 @@ public extension Timer {
         return timer
     }
 
-    public class func every(_ interval: TimeInterval, _ block: @escaping () -> Void) -> Timer {
-        let timer = Timer.new(every: interval, block)
-        timer.start()
-        return timer
+    public class func every(_ interval: TimeInterval, firesImmediately: Bool = false, _ block: @escaping () -> Void) -> Timer {
+        if firesImmediately {
+            let fireDate = CFAbsoluteTimeGetCurrent()
+            let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, fireDate, interval, 0, 0, { _ in block() })
+            CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, CFRunLoopMode.commonModes)
+            return timer!
+        } else {
+            let timer = Timer.new(every: interval, block)
+            timer.start()
+            return timer
+        }
     }
 
     @nonobjc
-    public class func every(_ interval: TimeInterval, _ block: @escaping (Timer) -> Void) -> Timer {
-        let timer = Timer.new(every: interval, block)
-        timer.start()
-        return timer
+    public class func every(_ interval: TimeInterval, firesImmediately: Bool = false, _ block: @escaping (Timer) -> Void) -> Timer {
+        if firesImmediately {
+            let fireDate = CFAbsoluteTimeGetCurrent()
+            let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, fireDate, interval, 0, 0, { x in block(x!) })
+            CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, CFRunLoopMode.commonModes)
+            return timer!
+        } else {
+            let timer = Timer.new(every: interval, block)
+            timer.start()
+            return timer
+        }
     }
 
 }
