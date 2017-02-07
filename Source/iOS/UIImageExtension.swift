@@ -38,11 +38,45 @@ public extension UIImage {
         context.clip(to: rect, mask: cgImage)
         context.fill(rect)
 
-        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else {
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage ?? self
+    }
+
+    public func combined(with image: UIImage) -> UIImage? {
+        let finalSize = CGSize(width: max(size.width, image.size.width),
+                               height: max(size.height, image.size.height))
+        var finalImage: UIImage?
+
+        UIGraphicsBeginImageContextWithOptions(finalSize, false, UIScreen.main.scale)
+        draw(at: CGPoint(x: (finalSize.width - size.width) / 2, y: (finalSize.height - size.height) / 2))
+        image.draw(at: CGPoint(x: (finalSize.width - image.size.width) / 2, y: (finalSize.height - image.size.height) / 2))
+        finalImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return finalImage
+    }
+
+    public func tinted(with color: UIColor) -> UIImage {
+        var finalImage: UIImage?
+        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
+        guard let ctx = UIGraphicsGetCurrentContext(), let cgImage = cgImage else {
+            UIGraphicsEndImageContext()
             return self
         }
+
+        let rect = CGRect(origin: .zero, size: size)
+        ctx.setBlendMode(.normal)
+        ctx.draw(cgImage, in: rect)
+        ctx.setBlendMode(.multiply)
+        color.setFill()
+        ctx.addRect(rect)
+        ctx.drawPath(using: .fill)
+        ctx.setBlendMode(.destinationIn)
+        ctx.draw(cgImage, in: rect)
+
+        finalImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return newImage
+        return finalImage ?? self
     }
 
 }
