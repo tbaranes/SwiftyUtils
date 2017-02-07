@@ -16,18 +16,24 @@ N/A
 
 *Note: Take a look into the README to see the details of all the following enhancements* 
 
-- UITextFieldExtension (iOS only)
-
-```swift
-public func setClearButton(with image: UIImage)
-```
-
 - TimerExtension
 ```swift
 func every(_ interval: TimeInterval, firesImmediately: Bool = false, _ block: @escaping () -> Void) -> Timer
 func every(_ interval: TimeInterval, firesImmediately: Bool = false, _ block: @escaping (Timer) -> Void) -> Timer
 ```
 
+- UITextFieldExtension (iOS only)
+
+```swift
+public func setClearButton(with image: UIImage)
+```
+
+- UIImage (iOS only)
+
+```swift
+func tinted(with color: UIColor) -> UIImage?
+func combined(with image: UIImage) -> UIImage?
+```
 
 #### Bugfixes
 
