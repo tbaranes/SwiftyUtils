@@ -1030,6 +1030,21 @@ let image = UIImage(named: "anImage")
 let greenImage = image.filled(with: UIColor.greenColor())
 ```
 
+Tinted an image with a color:
+
+```
+let image = UIImage(named: "anImage")
+let greenImage = image.tinted(with: UIColor.greenColor())
+```
+
+Combined an image with another:
+
+```
+let image = UIImage(named: "anImage")
+let anotherImage = UIImage(named: "anotherImage")
+let combinedImage = image.combined(with: anotherImage)
+```
+
 ### UILabel extension
 
 Check if the text of a label is truncated:

@@ -22,5 +22,5 @@ public extension UITextField {
     func clear() {
         self.text = ""
     }
-    
+
 }
