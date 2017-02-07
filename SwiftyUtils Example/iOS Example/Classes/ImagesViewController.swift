@@ -23,6 +23,12 @@ class ImagesViewController: UIViewController {
         }
     }
 
+    @IBOutlet weak var imageTinted: UIImageView! {
+        didSet {
+            imageTinted.image = imageTinted.image?.tinted(with: .green)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
