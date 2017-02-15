@@ -453,6 +453,28 @@ print(myNumber.isNegative) // true
 print(myNumber.digits) // 2
 ```
 
+Round to the nearest / nearest down / nearest up:
+
+```swift
+var value = 17572
+print(value.nearestDozens) // 17570
+print(value.nearestHundreds) // 17600
+print(value.nearestThousands) // 18000
+print(value.nearest(to: 1000) // 18000
+
+value = 17578
+print(value.nearestBelowDozens) // 17570
+print(value.nearestBelowHundreds) // 17500
+print(value.nearestBelowThousands) // 17000
+print(value.nearestBelow(to: 1000) // 17000
+
+value = 17442
+print(value.nearestUpDozens) // 17450
+print(value.nearestUpHundreds) // 17500)
+print(value.nearestUpThousands) // 18000
+print(value.nearestUp(to: 1000) // 18000
+```
+
 ### MutableCollectionType extension
 
 Shuffle a collection:

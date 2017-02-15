@@ -16,7 +16,27 @@ N/A
 
 *Note: Take a look into the README to see the details of all the following enhancements* 
 
+- IntExtension
+
+```swift
+var nearestDozens: Int
+var nearestHundreds: Int
+var nearestThousands: Int
+func nearest(to value: Int) -> Int
+
+var nearestBelowDozens: Int
+var nearestBelowHundreds: Int
+var nearestBelowThousands: Int
+func nearestBelow(to value: Int) -> Int
+
+var nearestUpDozens: Int
+var nearestUpHundreds: Int
+var nearestUpThousands: Int
+func nearestUp(to value: Int) -> Int
+```
+
 - TimerExtension
+
 ```swift
 func every(_ interval: TimeInterval, firesImmediately: Bool = false, _ block: @escaping () -> Void) -> Timer
 func every(_ interval: TimeInterval, firesImmediately: Bool = false, _ block: @escaping (Timer) -> Void) -> Timer
