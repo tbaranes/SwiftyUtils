@@ -2,6 +2,9 @@
 "localizables_example.button" = "I am an UIButton automatically translated";
 "localizables_example.text_field" = "I am an UITextField placeholder automatically translated";
 "localizables_example.text_view" = "I am an UITextView placeholder automatically translated";
+"localizables_example.stackview.label" = "I am a label in an UIStackView";
+"localizables_example.stackview.button" = "I am a button in an UIStackView";
+"localizables_example.stackview.textfield" = "I am a textField in an UIStackView";
 
 "gestures_example.label.tap_counter" = "Tap counter: %d";
 "gestures_example.label.long_press_counter" = "Long press counter: %d";

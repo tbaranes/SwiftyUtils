@@ -9,7 +9,7 @@ class LocalizablesExampleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.convertLocalizables()
+        view.translateSubviews()
     }
 
 }

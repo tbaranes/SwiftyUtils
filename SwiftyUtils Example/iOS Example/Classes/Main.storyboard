@@ -232,15 +232,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R2g-9P-TkA">
+                                <rect key="frame" x="67.5" y="395" width="240" height="100.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="localizables_example.stackview.label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7V-dV-SSQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnL-NO-ZE0">
+                                        <rect key="frame" x="0.0" y="30.5" width="240" height="30"/>
+                                        <state key="normal" title="localizables_example.stackview.button"/>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="localizables_example.stackview.textfield" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OaA-sC-DeQ">
+                                        <rect key="frame" x="0.0" y="70.5" width="240" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.68888300657272339" green="0.71366006135940552" blue="0.73448425531387329" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DFY-aw-5QJ" firstAttribute="centerX" secondItem="edP-8j-PzJ" secondAttribute="centerX" id="0yp-Xi-O0m"/>
                             <constraint firstItem="MAa-He-DI6" firstAttribute="centerX" secondItem="edP-8j-PzJ" secondAttribute="centerX" id="132-Wi-ZPG"/>
+                            <constraint firstItem="R2g-9P-TkA" firstAttribute="centerX" secondItem="edP-8j-PzJ" secondAttribute="centerX" id="9iN-3l-qTy"/>
                             <constraint firstItem="iQq-2y-Tdu" firstAttribute="top" secondItem="ssY-Bq-gb3" secondAttribute="bottom" constant="20" id="ACx-yA-i7y"/>
                             <constraint firstItem="iQq-2y-Tdu" firstAttribute="centerX" secondItem="edP-8j-PzJ" secondAttribute="centerX" id="JEj-Cd-GrG"/>
                             <constraint firstItem="MAa-He-DI6" firstAttribute="top" secondItem="iQq-2y-Tdu" secondAttribute="bottom" constant="20" id="JKE-bJ-5kI"/>
                             <constraint firstItem="ssY-Bq-gb3" firstAttribute="centerX" secondItem="edP-8j-PzJ" secondAttribute="centerX" id="LI8-fW-yyV"/>
+                            <constraint firstItem="R2g-9P-TkA" firstAttribute="top" secondItem="MAa-He-DI6" secondAttribute="bottom" constant="42.5" id="V4T-Sj-tfh"/>
+                            <constraint firstItem="R2g-9P-TkA" firstAttribute="width" secondItem="MAa-He-DI6" secondAttribute="width" id="gf7-ZO-T6o"/>
                             <constraint firstItem="ssY-Bq-gb3" firstAttribute="top" secondItem="DFY-aw-5QJ" secondAttribute="bottom" constant="20" id="usR-Zz-Tif"/>
                             <constraint firstItem="DFY-aw-5QJ" firstAttribute="top" secondItem="DPS-WL-2L3" secondAttribute="bottom" constant="20" id="xQq-z1-vPx"/>
                         </constraints>
