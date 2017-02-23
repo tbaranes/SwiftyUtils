@@ -47,7 +47,7 @@ class GesturesExampleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.convertLocalizables()
+        view.translateSubviews()
         self.handleTapGesture()
         self.handleLongPressGesture()
         self.handleSwipeGesture()

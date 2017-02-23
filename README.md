@@ -1165,7 +1165,7 @@ aView.height -= 10 // make the view shorter
 **Automates your localizables**
 
 ```swift
-aView.convertLocalizables()
+aView.translateSubviews()
 ```
 
 It will iterate on all the subviews of the view, and use the text / placeholder as key in `NSLocalizedString`.

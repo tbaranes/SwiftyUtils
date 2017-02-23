@@ -11,34 +11,34 @@ import UIKit
 public extension UIView {
 
     // swiftlint:disable:next cyclomatic_complexity
-    public func convertLocalizables() {
+    public func translateSubviews() {
         if subviews.isEmpty {
             return
         }
 
-        for aSubview: UIView in subviews {
-            if let aLabel = aSubview as? UILabel {
-                if let text = aLabel.text {
-                    aLabel.text = NSLocalizedString(text, comment: "")
-                }
-            } else if let aTextField = aSubview as? UITextField {
-                if let text = aTextField.text {
-                    aTextField.text = NSLocalizedString(text, comment: "")
-                }
-                if let placeholder = aTextField.placeholder {
-                    aTextField.placeholder = NSLocalizedString(placeholder, comment: "")
-                }
-            } else if let aTextView = aSubview as? UITextView {
-                if let text = aTextView.text {
-                    aTextView.text = NSLocalizedString(text, comment: "")
-                }
-            } else if let aButton = aSubview as?  UIButton {
-                if let title = aButton.title(for: []) {
-                    aButton.setTitle(NSLocalizedString(title, comment: ""), for: [])
+        for subview in subviews {
+            translate(subview)
+            if #available(iOS 9.0, *), let stackView = subview as? UIStackView {
+                stackView.arrangedSubviews.forEach {
+                    self.translate($0)
+                    $0.translateSubviews()
                 }
             } else {
-                aSubview.convertLocalizables()
+                subview.translateSubviews()
             }
+        }
+    }
+
+    private func translate(_ subview: UIView) {
+        if let label = subview as? UILabel {
+            label.text = NSLocalizedString(label.text ?? "", comment: "")
+        } else if let textField = subview as? UITextField {
+            textField.text = NSLocalizedString(textField.text ?? "", comment: "")
+            textField.placeholder = NSLocalizedString(textField.placeholder ?? "", comment: "")
+        } else if let textView = subview as? UITextView {
+            textView.text = NSLocalizedString(textView.text, comment: "")
+        } else if let button = subview as? UIButton {
+            button.setTitle(NSLocalizedString(button.title(for: .normal) ?? "", comment: ""), for: .normal)
         }
     }
 

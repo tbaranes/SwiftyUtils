@@ -8,9 +8,7 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
-N/A
-
-#### Enhancements
+- `UIView.convertLocalizables()` is now named `UIView.translateSubviews()`
 
 #### Enhancements
 
@@ -54,6 +52,9 @@ public func setClearButton(with image: UIImage)
 func tinted(with color: UIColor) -> UIImage?
 func combined(with image: UIImage) -> UIImage?
 ```
+
+- UIView (iOS only)
+   - Add `UIStackView` support for `translateSubviews()`
 
 #### Bugfixes
 
