@@ -581,6 +581,13 @@ let attrStr = NSMutableAttributedString(string: "Hello world")
 attrStr.setTextUnderline(afterOcurrence: "llo")
 ```
 
+Uncamel a camelized string:
+
+```
+let camelString = "isCamelled"
+print(uncamelled.uncamelled) // is_camelled
+```
+
 ### NSObject extension
 
 Get the class name of a `NSObject`:

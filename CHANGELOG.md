@@ -56,6 +56,12 @@ func combined(with image: UIImage) -> UIImage?
 - UIView (iOS only)
    - Add `UIStackView` support for `translateSubviews()`
 
+- StringExtension:
+
+```swift
+var uncamelled: String
+```
+
 #### Bugfixes
 
 N/A
