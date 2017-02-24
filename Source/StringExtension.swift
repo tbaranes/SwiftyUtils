@@ -102,6 +102,13 @@ public extension String {
         return urls
     }
 
+    public var uncamelled: String {
+        let upperCase = CharacterSet.uppercaseLetters
+        return self.unicodeScalars.map {
+            upperCase.contains($0) ? "_" + String($0).lowercased(): String($0)
+        }.joined()
+    }
+
 }
 
 // MARK: - Updating
