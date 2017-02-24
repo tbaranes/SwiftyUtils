@@ -86,6 +86,15 @@ extension StringExtensionTests {
         XCTAssertEqual(urls.count, 2)
     }
 
+    func testUncamelled() {
+        var camelString = "isCamelled"
+        XCTAssertEqual(camelString.uncamelled, "is_camelled")
+        camelString = "is_camelled"
+        XCTAssertEqual(camelString.uncamelled, "is_camelled")
+        camelString = "isCamelled_invalidsYntax"
+        XCTAssertEqual(camelString.uncamelled, "is_camelled_invalids_yntax")
+    }
+
 }
 
 // MARK: - Getter
