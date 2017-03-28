@@ -148,7 +148,7 @@ public extension String {
 public extension String {
 
     public var isNumber: Bool {
-        if let _ = SUNumberFormatter.shared.number(from: self) {
+        if SUNumberFormatter.shared.number(from: self) != nil {
             return true
         }
         return false

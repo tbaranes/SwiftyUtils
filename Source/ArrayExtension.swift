@@ -62,10 +62,8 @@ public extension Array where Element : Equatable {
 
     public func indexes(of object: Element) -> [Int] {
         var indexes = [Int]()
-        for index in 0..<self.count {
-            if self[index] == object {
-                indexes.append(index)
-            }
+        for index in 0..<self.count where self[index] == object {
+            indexes.append(index)
         }
         return indexes
     }
@@ -136,6 +134,7 @@ public extension Array {
 
     public func contains<T>(instanceOf object: T) -> Bool {
         for item in self {
+            // swiftlint:disable:next for_where
             if type(of: item) == type(of: object) {
                 return true
             }

@@ -36,6 +36,7 @@ public class BlockNotification {
     }
 
     public  func stop() {
+        // swiftlint:disable:next notification_center_detachment
         NotificationCenter.default.removeObserver(self)
     }
 
