@@ -1,16 +1,17 @@
-line_length: 180
-variable_name:
+identifier_name:
   min_length: 2
   excluded: 
    - x
-   - y
+
 type_name:
-  excluded: T
+  excluded: 
+   - T
+
+line_length: 150
+file_length: 500
 number_separator:
   minimum_length: 5
 
-disabled_rules:
- - shorthand_operator # Waiting next release to enable it
 opt_in_rules:
  - closure_spacing
  - conditional_returns_on_newline
@@ -26,5 +27,4 @@ opt_in_rules:
  - prohibited_super_call
  - number_separator
  - object_literal
-included:
- - ../Source
+ - fatal_error_message
