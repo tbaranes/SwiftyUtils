@@ -21,6 +21,7 @@ public extension UITextField {
 
     func clear() {
         self.text = ""
+        self.sendActions(for: .editingChanged)
     }
 
 }
