@@ -166,6 +166,13 @@ var myArray = [1, 2, 3]
 print(myArray.difference(with: [1])) // [2, 3]
 ```
 
+Split every n elements:
+
+``` swift
+var myArray = [1, 2, 3, 4]
+print(myArray.split(every: 2)) // [[1, 2], [3, 4]]
+```
+
 Test all elements of an array against a closure:
 
 ``` swift
@@ -716,9 +723,15 @@ Extracts URLs:
 
 ```swift
 let string = "http://google.com http fpt:// http://facebook.com test"
-print(aString.extractedURLs) // [http://google.com, http://facebook.com]
+print(string.extractedURLs) // [http://google.com, http://facebook.com]
 ```
 
+Split every n elements:
+
+```swift
+let string = "abcd"
+print(string.split(every: 2)) // ["ab", "cd"]
+```
 ## Timer extension
 
 Schedule timer every seconds:
