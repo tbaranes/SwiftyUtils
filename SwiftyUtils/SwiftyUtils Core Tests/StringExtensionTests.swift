@@ -95,6 +95,12 @@ extension StringExtensionTests {
         XCTAssertEqual(camelString.uncamelled, "is_camelled_invalids_yntax")
     }
 
+    func testSplitEvery() {
+        let input = "abcd"
+        let split = input.split(every: 2)
+        XCTAssertEqual(split[0], "ab")
+        XCTAssertEqual(split[1], "cd")
+    }
 }
 
 // MARK: - Getter
