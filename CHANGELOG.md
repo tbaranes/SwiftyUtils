@@ -78,6 +78,7 @@ func split(intoChunksOf chunkSize: Int) -> [String]
 
 ```swift
 mutating func removeDuplicates()
+mutating func removeAll(_ item: Element)
 func firstIndex(of item: Element) -> Int?
 func split(intoChunksOf chunkSize: Int) -> [[Element]]
 ```

@@ -63,6 +63,13 @@ extension ArrayExtensionTests {
         XCTAssertEqual(array, expectedArray)
     }
 
+    func testRemoveAllItem() {
+        var array = [0, 0, 1, 1, 2]
+        let expectedArray = [1, 1, 2]
+        array.removeAll(0)
+        XCTAssertEqual(array, expectedArray)
+    }
+
 }
 
 // MARK: - Getter

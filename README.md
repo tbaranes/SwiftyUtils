@@ -129,6 +129,14 @@ array.removeDuplicates()
 print(array) // [0,1,2]
 ```
 
+Remove all instances of an item:
+
+``` swift
+var array = [0, 0, 1, 1, 2]
+array.removeAll(0)
+print(array) // [1,1,2]
+```
+
 Check if an array contains another array:
 
 ``` swift

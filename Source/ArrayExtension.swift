@@ -37,6 +37,10 @@ public extension Array where Element : Equatable {
         self = reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
     }
 
+    public mutating func removeAll(_ item: Element) {
+        self = filter { $0 != item }
+    }
+
 }
 
 // MARK: - Getter
