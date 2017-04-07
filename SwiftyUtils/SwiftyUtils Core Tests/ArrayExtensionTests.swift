@@ -102,6 +102,15 @@ extension ArrayExtensionTests {
         XCTAssertEqual(union, [Int](0...8))
     }
 
+    func testSplitEvery() {
+        let array = [0, 1, 2, 3]
+        let split = array.split(intoChunksOf: 2)
+        XCTAssertEqual(split.count, 2)
+        XCTAssertEqual(split[0][0], 0)
+        XCTAssertEqual(split[0][1], 1)
+        XCTAssertEqual(split[1][0], 2)
+        XCTAssertEqual(split[1][1], 3)
+    }
 }
 
 // MARK: - Update

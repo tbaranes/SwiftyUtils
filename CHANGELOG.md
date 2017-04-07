@@ -60,6 +60,13 @@ func combined(with image: UIImage) -> UIImage?
 
 ```swift
 var uncamelled: String
+func split(intoChunksOf chunkSize: Int) -> [String]
+```
+
+- ArrayExtension:
+
+```swift
+func split(intoChunksOf chunkSize: Int) -> [[Element]]
 ```
 
 #### Bugfixes

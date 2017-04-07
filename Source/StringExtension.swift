@@ -109,6 +109,16 @@ public extension String {
         }.joined()
     }
 
+    public func split(intoChunksOf chunkSize: Int) -> [String] {
+        var output = [String]()
+        let splittedString = characters
+            .map { $0 }
+            .split(intoChunksOf: chunkSize)
+        splittedString.forEach {
+            output.append($0.map { String($0) }.joined(separator: ""))
+        }
+        return output
+    }
 }
 
 // MARK: - Updating
