@@ -67,15 +67,6 @@ extension ArrayExtensionTests {
         XCTAssertNil([].random())
     }
 
-    func testGet() {
-        XCTAssertNotNil(array.get(index: 1))
-        XCTAssertNil(array.get(index: 10))
-    }
-
-    func testTakeMax() {
-        XCTAssertEqual(array.takeMax(number: 2).count, 2)
-    }
-
     func testIndexesOf() {
         var indexes = array.indexes(of: 1)
         XCTAssertEqual(indexes, [1, 6])
@@ -102,7 +93,7 @@ extension ArrayExtensionTests {
         XCTAssertEqual(union, [Int](0...8))
     }
 
-    func testSplitEvery() {
+    func testSplitIntoChunksOf() {
         let array = [0, 1, 2, 3]
         let split = array.split(intoChunksOf: 2)
         XCTAssertEqual(split.count, 2)
@@ -111,29 +102,12 @@ extension ArrayExtensionTests {
         XCTAssertEqual(split[1][0], 2)
         XCTAssertEqual(split[1][1], 3)
     }
-}
-
-// MARK: - Update
-
-extension ArrayExtensionTests {
-
-    func testReverseIndex() {
-        let array = [Int](0...5)
-        XCTAssertEqual(array.reverse(index: 0), 5)
-        XCTAssertEqual(array.reverse(index: 2), 3)
-    }
 
 }
 
 // MARK: - Helpers
 
 extension ArrayExtensionTests {
-
-    func testContainsInstanceOf() {
-        XCTAssertFalse(array.contains(instanceOf: "a"))
-        XCTAssertFalse(array.contains(instanceOf: 12.22))
-        XCTAssertTrue(array.contains(instanceOf: 46378))
-    }
 
     func testTestAll() {
         XCTAssertTrue(array.testAll { $0 < 10 })

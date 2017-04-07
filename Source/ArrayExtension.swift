@@ -40,20 +40,12 @@ public extension Array where Element : Equatable {
 public extension Array {
 
     public func random() -> Element? {
-        guard self.isNotEmpty else {
+        guard isNotEmpty else {
             return nil
         }
 
-        let index = Int(arc4random_uniform(UInt32(self.count)))
+        let index = Int(arc4random_uniform(UInt32(count)))
         return self[index]
-    }
-
-    public func get(index: Int) -> Element? {
-        return index >= 0 && index < count ? self[index] : nil
-    }
-
-    public func takeMax(number: Int) -> Array {
-        return Array(self[0..<Swift.max(0, Swift.min(number, count))])
     }
 
     public func split(intoChunksOf chunkSize: Int) -> [[Element]] {
@@ -69,7 +61,7 @@ public extension Array where Element : Equatable {
 
     public func indexes(of object: Element) -> [Int] {
         var indexes = [Int]()
-        for index in 0..<self.count where self[index] == object {
+        for index in 0..<count where self[index] == object {
             indexes.append(index)
         }
         return indexes
@@ -125,29 +117,9 @@ public extension Array where Element : Equatable {
 
 }
 
-// MARK: - Update
-
-public extension Array {
-
-    public func reverse(index: Int) -> Int {
-        return Swift.max(self.count - 1 - index, 0)
-    }
-
-}
-
 // MARK: - Helpers
 
 public extension Array {
-
-    public func contains<T>(instanceOf object: T) -> Bool {
-        for item in self {
-            // swiftlint:disable:next for_where
-            if type(of: item) == type(of: object) {
-                return true
-            }
-        }
-        return false
-    }
 
     public func testAll(test: (Element) -> Bool) -> Bool {
         for item in self {
@@ -168,7 +140,7 @@ public extension Array where Element : Equatable {
 
     public func contains(array: [Element]) -> Bool {
         for item in array {
-            if self.contains(item) == false {
+            if contains(item) == false {
                 return false
             }
         }
