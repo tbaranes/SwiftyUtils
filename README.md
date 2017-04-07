@@ -103,11 +103,12 @@ var array = [1, 2, 3, 1]
 print(array.indexes(of: 1)) // [0,3]
 ```
 
-Get index of last occurrence of an object:
+Get index of first / last occurrence of an object:
 
 ``` swift
 var array = [1, 2, 3, 1]
-print(array.lastIndex(of: 1)) // 3
+print(array.firstIndex(of: 1)) // Optional(0)
+print(array.lastIndex(of: 1)) // Optional(3)
 ```
 
 Remove an object:

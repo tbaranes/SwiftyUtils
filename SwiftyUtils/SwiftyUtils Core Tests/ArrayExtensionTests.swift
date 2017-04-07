@@ -75,6 +75,22 @@ extension ArrayExtensionTests {
         XCTAssertEqual(indexes, [])
     }
 
+    func testFirstIndexOf() {
+        var index = array.firstIndex(of: 1)
+        XCTAssertEqual(index!, 1)
+
+        index = array.firstIndex(of: 12345)
+        XCTAssertNil(index)
+    }
+
+    func testLastIndexOf() {
+        var index = array.firstIndex(of: 1)
+        XCTAssertEqual(index!, 1)
+
+        index = array.firstIndex(of: 12345)
+        XCTAssertNil(index)
+    }
+
     func testDifference() {
         let a = [Int](0...8), b = [Int](3...4), c = [Int](1...2)
         let difference = a.difference(with: b, c)

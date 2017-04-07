@@ -59,16 +59,23 @@ public extension Array {
 
 public extension Array where Element : Equatable {
 
-    public func indexes(of object: Element) -> [Int] {
+    public func indexes(of item: Element) -> [Int] {
         var indexes = [Int]()
-        for index in 0..<count where self[index] == object {
+        for index in 0..<count where self[index] == item {
             indexes.append(index)
         }
         return indexes
     }
 
-    public func lastIndex(of object: Element) -> Int? {
-        return indexes(of: object).last
+    public func firstIndex(of item: Element) -> Int? {
+        for (index, value) in lazy.enumerated() where value == item {
+            return index
+        }
+        return nil
+    }
+
+    public func lastIndex(of item: Element) -> Int? {
+        return indexes(of: item).last
     }
 
     public func difference(with values: [Element]...) -> [Element] {
