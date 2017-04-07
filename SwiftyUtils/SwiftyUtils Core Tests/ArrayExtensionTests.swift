@@ -34,7 +34,7 @@ extension ArrayExtensionTests {
 
 }
 
-// MARK - Delete
+// MARK - Remove
 
 extension ArrayExtensionTests {
 
@@ -56,6 +56,20 @@ extension ArrayExtensionTests {
         XCTAssertEqual(array, compareArray)
     }
 
+    func testRemoveDuplicates() {
+        var array = [0, 0, 1, 1, 2]
+        let expectedArray = [0, 1, 2]
+        array.removeDuplicates()
+        XCTAssertEqual(array, expectedArray)
+    }
+
+    func testRemoveAllItem() {
+        var array = [0, 0, 1, 1, 2]
+        let expectedArray = [1, 1, 2]
+        array.removeAll(0)
+        XCTAssertEqual(array, expectedArray)
+    }
+
 }
 
 // MARK: - Getter
@@ -67,21 +81,28 @@ extension ArrayExtensionTests {
         XCTAssertNil([].random())
     }
 
-    func testGet() {
-        XCTAssertNotNil(array.get(index: 1))
-        XCTAssertNil(array.get(index: 10))
-    }
-
-    func testTakeMax() {
-        XCTAssertEqual(array.takeMax(number: 2).count, 2)
-    }
-
     func testIndexesOf() {
         var indexes = array.indexes(of: 1)
         XCTAssertEqual(indexes, [1, 6])
 
         indexes = array.indexes(of: 12345)
         XCTAssertEqual(indexes, [])
+    }
+
+    func testFirstIndexOf() {
+        var index = array.firstIndex(of: 1)
+        XCTAssertEqual(index!, 1)
+
+        index = array.firstIndex(of: 12345)
+        XCTAssertNil(index)
+    }
+
+    func testLastIndexOf() {
+        var index = array.firstIndex(of: 1)
+        XCTAssertEqual(index!, 1)
+
+        index = array.firstIndex(of: 12345)
+        XCTAssertNil(index)
     }
 
     func testDifference() {
@@ -102,7 +123,7 @@ extension ArrayExtensionTests {
         XCTAssertEqual(union, [Int](0...8))
     }
 
-    func testSplitEvery() {
+    func testSplitIntoChunksOf() {
         let array = [0, 1, 2, 3]
         let split = array.split(intoChunksOf: 2)
         XCTAssertEqual(split.count, 2)
@@ -111,42 +132,20 @@ extension ArrayExtensionTests {
         XCTAssertEqual(split[1][0], 2)
         XCTAssertEqual(split[1][1], 3)
     }
-}
-
-// MARK: - Update
-
-extension ArrayExtensionTests {
-
-    func testReverseIndex() {
-        let array = [Int](0...5)
-        XCTAssertEqual(array.reverse(index: 0), 5)
-        XCTAssertEqual(array.reverse(index: 2), 3)
-    }
 
 }
 
-// MARK: - Helpers
+// MARK: - Misc
 
 extension ArrayExtensionTests {
-
-    func testContainsInstanceOf() {
-        XCTAssertFalse(array.contains(instanceOf: "a"))
-        XCTAssertFalse(array.contains(instanceOf: 12.22))
-        XCTAssertTrue(array.contains(instanceOf: 46378))
-    }
 
     func testTestAll() {
         XCTAssertTrue(array.testAll { $0 < 10 })
     }
 
-    func testContains() {
-        let array = [Int](2...4)
-        XCTAssertTrue(array.contains(items: 2, 3, 4))
-    }
-
     func testContainsArray() {
         let array = [Int](2...4)
-        XCTAssertTrue(self.array.contains(array: array))
+        XCTAssertTrue(self.array.contains(array))
     }
 
 }

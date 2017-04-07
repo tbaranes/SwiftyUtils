@@ -15,7 +15,7 @@ public extension Array {
 
 }
 
-// MARK: - Delete
+// MARK: - Remove
 
 public extension Array where Element : Equatable {
 
@@ -33,6 +33,14 @@ public extension Array where Element : Equatable {
         }
     }
 
+    public mutating func removeDuplicates() {
+        self = reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
+    }
+
+    public mutating func removeAll(_ item: Element) {
+        self = filter { $0 != item }
+    }
+
 }
 
 // MARK: - Getter
@@ -40,44 +48,44 @@ public extension Array where Element : Equatable {
 public extension Array {
 
     public func random() -> Element? {
-        guard self.isNotEmpty else {
+        guard isNotEmpty else {
             return nil
         }
 
-        let index = Int(arc4random_uniform(UInt32(self.count)))
+        let index = Int(arc4random_uniform(UInt32(count)))
         return self[index]
-    }
-
-    public func get(index: Int) -> Element? {
-        return index >= 0 && index < count ? self[index] : nil
-    }
-
-    public func takeMax(number: Int) -> Array {
-        return Array(self[0..<Swift.max(0, Swift.min(number, count))])
-    }
-
-    public func split(intoChunksOf chunkSize: Int) -> [[Element]] {
-        return stride(from: 0, to: self.count, by: chunkSize).map {
-            let endIndex = ($0.advanced(by: chunkSize) > self.count) ? self.count - $0 : chunkSize
-            return Array(self[$0..<$0.advanced(by: endIndex)])
-        }
     }
 
 }
 
+// MARK: - Index Getter
+
 public extension Array where Element : Equatable {
 
-    public func indexes(of object: Element) -> [Int] {
+    public func indexes(of item: Element) -> [Int] {
         var indexes = [Int]()
-        for index in 0..<self.count where self[index] == object {
+        for index in 0..<count where self[index] == item {
             indexes.append(index)
         }
         return indexes
     }
 
-    public func lastIndex(of object: Element) -> Int? {
-        return indexes(of: object).last
+    public func firstIndex(of item: Element) -> Int? {
+        for (index, value) in lazy.enumerated() where value == item {
+            return index
+        }
+        return nil
     }
+
+    public func lastIndex(of item: Element) -> Int? {
+        return indexes(of: item).last
+    }
+
+}
+
+// MARK: - Mutating Getter
+
+public extension Array where Element : Equatable {
 
     public func difference(with values: [Element]...) -> [Element] {
         var result = [Element]()
@@ -123,31 +131,18 @@ public extension Array where Element : Equatable {
         return result
     }
 
-}
-
-// MARK: - Update
-
-public extension Array {
-
-    public func reverse(index: Int) -> Int {
-        return Swift.max(self.count - 1 - index, 0)
-    }
-
-}
-
-// MARK: - Helpers
-
-public extension Array {
-
-    public func contains<T>(instanceOf object: T) -> Bool {
-        for item in self {
-            // swiftlint:disable:next for_where
-            if type(of: item) == type(of: object) {
-                return true
-            }
+    public func split(intoChunksOf chunkSize: Int) -> [[Element]] {
+        return stride(from: 0, to: self.count, by: chunkSize).map {
+            let endIndex = ($0.advanced(by: chunkSize) > self.count) ? self.count - $0 : chunkSize
+            return Array(self[$0..<$0.advanced(by: endIndex)])
         }
-        return false
     }
+
+}
+
+// MARK: - Misc
+
+public extension Array {
 
     public func testAll(test: (Element) -> Bool) -> Bool {
         for item in self {
@@ -160,15 +155,13 @@ public extension Array {
 
 }
 
+// MARK: - Misc Equatable
+
 public extension Array where Element : Equatable {
 
-    public func contains(items: Element...) -> Bool {
-        return items.testAll { self.index(of: $0) ?? 0 >= 0 }
-    }
-
-    public func contains(array: [Element]) -> Bool {
-        for item in array {
-            if self.contains(item) == false {
+    public func contains(_ elements: [Element]) -> Bool {
+        for item in elements {
+            if contains(item) == false {
                 return false
             }
         }

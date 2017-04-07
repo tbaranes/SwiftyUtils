@@ -10,6 +10,17 @@ All notable changes to the project will be documented in this file.
 
 - `UIView.convertLocalizables()` is now named `UIView.translateSubviews()`
 
+- A few cleanup has been done in the existing extensions:
+   - Array:
+
+```
+func reverse(index: Int) -> Int
+func get(index: Int) -> Element?
+func takeMax(number: Int) -> Array
+func contains<T>(instanceOf object: T) -> Bool
+func contains(_ array: [Element]) -> Bool
+```
+
 #### Enhancements
 
 *Note: Take a look into the README to see the details of all the following enhancements* 
@@ -66,6 +77,9 @@ func split(intoChunksOf chunkSize: Int) -> [String]
 - ArrayExtension:
 
 ```swift
+mutating func removeDuplicates()
+mutating func removeAll(_ item: Element)
+func firstIndex(of item: Element) -> Int?
 func split(intoChunksOf chunkSize: Int) -> [[Element]]
 ```
 
