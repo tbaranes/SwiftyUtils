@@ -15,7 +15,7 @@ public extension Array {
 
 }
 
-// MARK: - Delete
+// MARK: - Remove
 
 public extension Array where Element : Equatable {
 
@@ -31,6 +31,10 @@ public extension Array where Element : Equatable {
         for idx in self.indexes(of: objects).reversed() {
             self.remove(at: idx)
         }
+    }
+
+    public mutating func removeDuplicates() {
+        self = reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
     }
 
 }

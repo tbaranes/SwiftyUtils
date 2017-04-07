@@ -34,7 +34,7 @@ extension ArrayExtensionTests {
 
 }
 
-// MARK - Delete
+// MARK - Remove
 
 extension ArrayExtensionTests {
 
@@ -54,6 +54,13 @@ extension ArrayExtensionTests {
         let compareArray = [0, 2, 3, 4, 5]
         array.remove(objects: 1)
         XCTAssertEqual(array, compareArray)
+    }
+
+    func testRemoveDuplicates() {
+        var array = [0, 0, 1, 1, 2]
+        let expectedArray = [0, 1, 2]
+        array.removeDuplicates()
+        XCTAssertEqual(array, expectedArray)
     }
 
 }
