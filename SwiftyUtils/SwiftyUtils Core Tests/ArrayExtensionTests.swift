@@ -113,14 +113,9 @@ extension ArrayExtensionTests {
         XCTAssertTrue(array.testAll { $0 < 10 })
     }
 
-    func testContains() {
-        let array = [Int](2...4)
-        XCTAssertTrue(array.contains(items: 2, 3, 4))
-    }
-
     func testContainsArray() {
         let array = [Int](2...4)
-        XCTAssertTrue(self.array.contains(array: array))
+        XCTAssertTrue(self.array.contains(array))
     }
 
 }

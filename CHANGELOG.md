@@ -18,6 +18,7 @@ func reverse(index: Int) -> Int
 func get(index: Int) -> Element?
 func takeMax(number: Int) -> Array
 func contains<T>(instanceOf object: T) -> Bool
+func contains(_ array: [Element]) -> Bool
 ```
 
 #### Enhancements

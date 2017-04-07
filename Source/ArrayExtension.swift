@@ -134,12 +134,8 @@ public extension Array {
 
 public extension Array where Element : Equatable {
 
-    public func contains(items: Element...) -> Bool {
-        return items.testAll { self.index(of: $0) ?? 0 >= 0 }
-    }
-
-    public func contains(array: [Element]) -> Bool {
-        for item in array {
+    public func contains(_ elements: [Element]) -> Bool {
+        for item in elements {
             if contains(item) == false {
                 return false
             }
