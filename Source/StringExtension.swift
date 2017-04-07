@@ -109,11 +109,11 @@ public extension String {
         }.joined()
     }
 
-    public func split(every chunkSize: Int) -> [String] {
+    public func split(intoChunksOf chunkSize: Int) -> [String] {
         var output = [String]()
         let splittedString = characters
             .map { $0 }
-            .split(every: chunkSize)
+            .split(intoChunksOf: chunkSize)
         splittedString.forEach {
             output.append($0.map { String($0) }.joined(separator: ""))
         }

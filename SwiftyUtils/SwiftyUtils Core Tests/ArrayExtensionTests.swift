@@ -104,7 +104,7 @@ extension ArrayExtensionTests {
 
     func testSplitEvery() {
         let array = [0, 1, 2, 3]
-        let split = array.split(every: 2)
+        let split = array.split(intoChunksOf: 2)
         XCTAssertEqual(split.count, 2)
         XCTAssertEqual(split[0][0], 0)
         XCTAssertEqual(split[0][1], 1)

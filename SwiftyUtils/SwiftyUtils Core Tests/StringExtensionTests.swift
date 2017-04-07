@@ -97,7 +97,7 @@ extension StringExtensionTests {
 
     func testSplitEvery() {
         let input = "abcd"
-        let split = input.split(every: 2)
+        let split = input.split(intoChunksOf: 2)
         XCTAssertEqual(split[0], "ab")
         XCTAssertEqual(split[1], "cd")
     }

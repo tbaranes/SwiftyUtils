@@ -170,7 +170,7 @@ Split every n elements:
 
 ``` swift
 var myArray = [1, 2, 3, 4]
-print(myArray.split(every: 2)) // [[1, 2], [3, 4]]
+print(myArray.split(intoChunksOf: 2)) // [[1, 2], [3, 4]]
 ```
 
 Test all elements of an array against a closure:
@@ -730,7 +730,7 @@ Split every n elements:
 
 ```swift
 let string = "abcd"
-print(string.split(every: 2)) // ["ab", "cd"]
+print(string.split(intoChunksOf: 2)) // ["ab", "cd"]
 ```
 ## Timer extension
 
