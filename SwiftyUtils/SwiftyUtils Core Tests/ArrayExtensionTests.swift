@@ -135,7 +135,7 @@ extension ArrayExtensionTests {
 
 }
 
-// MARK: - Helpers
+// MARK: - Misc
 
 extension ArrayExtensionTests {
 
