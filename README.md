@@ -358,26 +358,16 @@ someDate - 6.minutes            // A new date by subtracting 6 minutes.
 Check if a key exists in the dictionary:
 
 ``` swift
-let dic1 = ["one": 1, "two": 2]
-print(myDict.has(key: "one")) // True
-print(myDict.has(key: "1")) // False
+let dic = ["one": 1, "two": 2]
+print(dic.has(key: "one")) // True
+print(dic.has(key: "1")) // False
 ```
 
 Access a random element:
 
 ``` swift
-let dic1 = ["one": 1, "two": 2]
-print(myDict.random()) // 1 or something else
-```
-
-Add dictionaries to create new ones:
-
-``` swift
-let dic1 = ["one": 1]
-let dic2 = ["three": 3]
-
-dictionary1 += dictionary2
-print(dictionary1) // ["one": 1, "three": 3]
+let dic= ["one": 1, "two": 2]
+print(dic.random()) // 1 or something else
 ```
 
 Easily get union of two dictionaries:
@@ -386,8 +376,8 @@ Easily get union of two dictionaries:
 let dic1 = ["one": 1, "two": 2]
 let dic2 = ["one": 1, "four": 4]
 
-let dictionary3 = dictionary1.union(values: dictionary2)
-print(dictionary3) // ["one": 1, "two": 2, "four": 4]
+let dic3 = dic1.union(values: dic2)
+print(dic3) // ["one": 1, "two": 2, "four": 4]
 ```
 
 Get difference of two dictionaries:
@@ -395,7 +385,7 @@ Get difference of two dictionaries:
 ``` swift
 let dic1 = ["one": 1, "two": 2]
 let dic2 = ["one": 1, "four": 4]
-difference(with: dictionary1, dictionary2) // ["two": 2, "four": 4]
+difference(with: dic1, dic2) // ["two": 2, "four": 4]
 ```
 
 Merge several dictionaries:
@@ -403,9 +393,19 @@ Merge several dictionaries:
 ```swift
 let dic1 = ["one": 1, "two": 2]
 let dic2 = ["three": 3, "four": 4]
-var finalDic: Dictionary<String, Int> = [:]
+var finalDic = [String: Int]()
 finalDic.merge(with: dic1, dic2)
 print(finalDic) // ["one": 1, "two": 2, "three": 3, "four": 4]
+```
+
+Test each element against a closure:
+
+``` swift
+var dic = ["abc": "abc, "ab": "a", "b": "b"]
+let result = dic.testAll { key, _ in 
+    key.length < 3 
+}
+print(result) // ["ab": "a", "b": "b"]
 ```
 
 ### Double extension
