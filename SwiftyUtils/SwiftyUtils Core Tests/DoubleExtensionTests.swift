@@ -51,6 +51,8 @@ extension DoubleExtensionTests {
 
 }
 
+// MARK: - Transform
+
 extension DoubleExtensionTests {
 
     func testFormattedPrice() {
