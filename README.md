@@ -137,12 +137,12 @@ array.removeAll(0)
 print(array) // [1,1,2]
 ```
 
-Check if an array contains another array:
+Check if an array is a subset of another array:
 
 ``` swift
 var array = [1, 2, 3]
-print(array.contains(array: [1, 2])) // true
-print(array.contains(array: [5])) // false
+print(array.contains([1, 2])) // true
+print(array.contains([5])) // false
 ```
 
 Determine if an array contains an object:
