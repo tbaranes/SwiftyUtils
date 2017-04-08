@@ -42,6 +42,8 @@ var nearestUpDozens: Int
 var nearestUpHundreds: Int
 var nearestUpThousands: Int
 func nearestUp(to value: Int) -> Int
+
+var formattedPrice: String
 ```
 
 - TimerExtension

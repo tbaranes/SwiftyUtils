@@ -500,6 +500,12 @@ print(value.nearestUpThousands) // 18000
 print(value.nearestUp(to: 1000) // 18000
 ```
 
+Formatted value with the locale currency:
+
+```
+print(10.formattedPrice) // "$10.00"
+```
+
 ### MutableCollectionType extension
 
 Shuffle a collection:
