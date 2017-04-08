@@ -84,100 +84,110 @@ Check out the repository to find examples / tests for each feature.
 Safely access to an element:
 
 ```swift
-var myArray = [1, 2, 3]
-print(myArray[safe: 0]) // Optional(1)
-print(myArray[safe: 10]) // nil
+var array = [1, 2, 3]
+print(array[safe: 0]) // Optional(1)
+print(array[safe: 10]) // nil
 ```
 
 Access to a random element:
 
 ``` swift
-var myArray = [1, 2, 3]
-print(myArray.random()) // 2 or something else
+var array = [1, 2, 3]
+print(array.random()) // 1, 2 or 3
 ```
 
-Find the indexes of an object:
+Find all the index of an object:
 
 ``` swift
-var myArray = [1, 2, 3, 1]
-print(myArray.indexes(of: 1)) // [0,3]
+var array = [1, 2, 3, 1]
+print(array.indexes(of: 1)) // [0,3]
 ```
 
-Get index of last occurrence of an object:
+Get index of first / last occurrence of an object:
 
 ``` swift
-var myArray = [1, 2, 3, 1]
-print(myArray.lastIndex(of: 1)) // 3
+var array = [1, 2, 3, 1]
+print(array.firstIndex(of: 1)) // Optional(0)
+print(array.lastIndex(of: 1)) // Optional(3)
 ```
 
 Remove an object:
 
 ``` swift
-var myArray = [1, 2, 3]
+var array = [1, 2, 3]
 myArray.remove(object: 2)
 print(myArray) // [1, 3]
 myArray.remove(objects: [1, 3])
 print(myArray) // []
 ```
 
-Check if an array contains instance of an object:
+Remove all the duplicates:
 
-``` swift
-var myArray = [1, 2, 3]
-print(myArray.contains(instanceOf: 1)) // true
-print(myArray.contains(instanceOf: "1")) // false
+```swift
+var array = [0, 0, 1, 1, 2]
+array.removeDuplicates()
+print(array) // [0,1,2]
+
+let array = [0, 0, 1, 1, 2]
+let newArray.removedDuplicates()
+print(newArray) // [0,1,2]
 ```
 
-Check if an array contains another array:
+Remove all instances of an item:
 
 ``` swift
-var myArray = [1, 2, 3]
-print(myArray.contains(array: [1, 2])) // true
-print(myArray.contains(array: [5])) // false
+var array = [0, 0, 1, 1, 2]
+array.removeAll(0)
+print(array) // [1,1,2]
+
+let array = [0, 0, 1, 1, 2]
+let newArray = array.removedAll(0)
+print(newArray) // [1,1,2]
 ```
 
-Get an object at a specified index:
+Check if an array is a subset of another array:
 
 ``` swift
-var myArray = [1, 2, 3]
-print(myArray.get(index: 1)) // 2
+var array = [1, 2, 3]
+print(array.contains([1, 2])) // true
+print(array.contains([5])) // false
 ```
 
 Determine if an array contains an object:
 
 ``` swift
-var myArray = [1, 2, 3]
-print(myArray.contains(1)) // true
-print(myArray.contains(11)) // false
+var array = [1, 2, 3]
+print(array.contains(1)) // true
+print(array.contains(11)) // false
 ```
 
 Get intersection and union of two arrays:
 
 ``` swift
 var myArray = [1, 2, 3]
-print(myArray.intersection(for: [1, 5, 3])) // [1, 3]
-print(myArray.union(values: [5, 6])) // [1, 2, 3, 5, 6]
+print(array.intersection(for: [1, 5, 3])) // [1, 3]
+print(array.union(values: [5, 6])) // [1, 2, 3, 5, 6]
 ```
 
 Get difference between two arrays:
 
 ``` swift
-var myArray = [1, 2, 3]
-print(myArray.difference(with: [1])) // [2, 3]
+var array = [1, 2, 3]
+print(array.difference(with: [1])) // [2, 3]
 ```
 
-Split every n elements:
+Split into chunk of a specific size:
 
 ``` swift
-var myArray = [1, 2, 3, 4]
-print(myArray.split(intoChunksOf: 2)) // [[1, 2], [3, 4]]
+var array = [1, 2, 3, 4]
+print(array.split(intoChunksOf: 2)) // [[1, 2], [3, 4]]
 ```
 
 Test all elements of an array against a closure:
 
 ``` swift
-var myArray = [1, 2, 3]
-let result = myArray.testAll {
+var array = [1, 2, 3]
+let result = array.testAll {
 	$0 == 1
 }
 print(result) // false
