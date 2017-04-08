@@ -20,6 +20,8 @@ class DoubleExtensionTests: XCTestCase {
 
 }
 
+// MARK: - Time Transform
+
 extension DoubleExtensionTests {
 
     func testMilliseconds() {
@@ -45,6 +47,18 @@ extension DoubleExtensionTests {
         XCTAssertEqual(0.5.day, 43_200 )
         XCTAssertEqual(1.day, 86_400 )
         XCTAssertEqual(2.days, 172_800)
+    }
+
+}
+
+extension DoubleExtensionTests {
+
+    func testFormattedPrice() {
+        let price = Double(10.23)
+        if let symbol = Locale.current.currencySymbol {
+            XCTAssert(price.formattedPrice.contains(symbol))
+        }
+        XCTAssert(price.formattedPrice.contains("\(price)"))
     }
 
 }
