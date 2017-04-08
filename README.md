@@ -127,6 +127,10 @@ Remove all the duplicates:
 var array = [0, 0, 1, 1, 2]
 array.removeDuplicates()
 print(array) // [0,1,2]
+
+let array = [0, 0, 1, 1, 2]
+let newArray.removedDuplicates()
+print(newArray) // [0,1,2]
 ```
 
 Remove all instances of an item:
@@ -135,6 +139,10 @@ Remove all instances of an item:
 var array = [0, 0, 1, 1, 2]
 array.removeAll(0)
 print(array) // [1,1,2]
+
+let array = [0, 0, 1, 1, 2]
+let newArray = array.removedAll(0)
+print(newArray) // [1,1,2]
 ```
 
 Check if an array is a subset of another array:

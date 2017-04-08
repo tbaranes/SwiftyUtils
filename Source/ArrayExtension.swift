@@ -37,8 +37,16 @@ public extension Array where Element : Equatable {
         self = reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
     }
 
+    public func removedDuplicates() -> [Element] {
+        return reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
+    }
+
     public mutating func removeAll(_ item: Element) {
         self = filter { $0 != item }
+    }
+
+    public mutating func removedAll(_ item: Element) -> [Element] {
+        return filter { $0 != item }
     }
 
 }
