@@ -85,6 +85,13 @@ func firstIndex(of item: Element) -> Int?
 func split(intoChunksOf chunkSize: Int) -> [[Element]]
 ```
 
+- DoubleExtension:
+
+
+```swift
+var formattedPrice: String
+```
+
 #### Bugfixes
 
 N/A

@@ -425,6 +425,14 @@ print(1.day) // 86400
 print(2.day) // 172800
 ```
 
+Formatted value with the locale currency:
+
+```
+print(Double(3.24).formattedPrice) // "$3.24"
+print(Double(10).formattedPrice) // "$10.00"
+```
+
+
 ### FileManager extension
 
 Get documents directory url following the os:
