@@ -454,17 +454,17 @@ FileManager.default.createDirectory(at: directoryUrl)
 Delete contents of temporary directory
 
 ```
-FileManager.deleteAllTemporaryFiles()
+FileManager.removeTemporaryFiles()
 // OR
-FileManager.default.deleteAllTemporaryFiles()
+FileManager.default.removeTemporaryFiles()
 ```
 
 Delete contents of documents directory
 
 ```
-FileManager.deleteAllDocumentFiles()
+FileManager.removeDocumentFiles()
 // OR
-FileManager.default.deleteAllDocumentFiles()
+FileManager.default.removeDocumentFiles()
 ```
 
 ### Int extension
