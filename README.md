@@ -24,7 +24,9 @@ Check out the repository to find examples / tests for each feature.
 - [BlockNotification](#blocknotification)
 - [Bundle](#bundle-extension)
 - [CGFloat](#cgfloat-extension)
+- [CGPoint](#cgpoint-extension)
 - [CGRect](#cgrect-extension)
+- [CGSize](#cgsize-extension)
 - [Date](#date-extension)
 - [Dictionary](#dictionary-extension)
 - [Double](#double-extension)
@@ -249,6 +251,40 @@ Create a CGFloat from a Float or an Integer:
 let imageViewTop = 15.f
 ```
 
+### CGPoint extension
+
+Add two `CGPoint`:
+
+```swift
+var point1 = CGPoint(x: 10, y: 10)
+let point2 = CGPoint(x: 10, y: 10)
+print(point1 + point2) // CGPoint(x: 20, y: 20)
+
+point1 += point2
+print(point1) // CGPoint(x: 20, y: 20)
+```
+
+Substract two `CGPoint`:
+
+```swift
+var point1 = CGPoint(x: 10, y: 10)
+let point2 = CGPoint(x: 10, y: 10)
+print(point1 - point2) // CGPoint(x: 0, y: 0)
+
+point1 -= point2
+print(point1) // CGPoint(x: 0, y: 0)
+```
+
+Multiply a `CGPoint` with a scalar:
+
+```swift
+var point1 = CGPoint(x: 10, y: 10)
+print(point1 * 2) // CGPoint(x: 20, y: 20)
+
+point1 += 2
+print(point1) // CGPoint(x: 20, y: 20)
+```
+
 ### CGRect extension
 
 Get the origin's x and y coordinates:
@@ -267,6 +303,50 @@ let tallerRect = rect.with(height: 100) // x: 10, y: 20, width: 30, height: 100
 let rectAtAnotherPosition = rect.with(x: 100).with(y: 200) // x: 100, y: 200, width: 30, height: 40
 let rectWithAnotherSize = rect.with(size: CGSize(width: 200, height: 200)) // x: 10, y: 20, width: 200, height: 200
 let rectAtYetAnotherPosition = rect.with(origin: CGPoint(x: 100, y: 100)) // x: 100, y: 100, width: 30, height: 40
+```
+
+### CGSize extension
+
+Add two `CGSize`:
+
+```swift
+var size1 = CGSize(width: 10, height: 10)
+let size2 = CGSize(width: 10, height: 10)
+print(size1 + size2) // CGSize(width: 20, height: 20)
+
+size1 += size2
+print(size1) // CGSize(width: 20, height: 20)
+```
+
+Substract two `CGSize`:
+
+```swift
+var size1 = CGSize(width: 10, height: 10)
+let size2 = CGSize(width: 10, height: 10)
+print(size1 - size2) // CGSize(width: 0, height: 0)
+
+size1 -= size2
+print(size1) // CGSize(width: 0, height: 0)
+```
+
+Multiply a `CGSize` with a scalar:
+
+```swift
+var size1 = CGSize(x: 10, y: 10)
+print(size1 * 2) // CGSize(width: 20, height: 20)
+
+size1 += 2
+print(size1) // CGSize(width: 20, height: 20)
+```
+
+### CollectionType extension
+
+Shuffle a collection:
+
+``` swift
+let myArray = [1, 2, 3, "5", "6]
+let arraySuffled = myArray.shuffled()
+print(arraySuffled) // [3, "6", 1, 2, "5"]
 ```
 
 ## Date extension
