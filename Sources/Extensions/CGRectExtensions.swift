@@ -5,7 +5,10 @@
 
 import CoreGraphics
 
+// MARK: - Getter
+
 public extension CGRect {
+
     public var x: CGFloat {
         return origin.x
     }
@@ -17,6 +20,12 @@ public extension CGRect {
     public func with(x: CGFloat) -> CGRect {
         return CGRect(x: x, y: y, width: width, height: height)
     }
+
+}
+
+// MARK: - Transform
+
+public extension CGRect {
 
     public func with(y: CGFloat) -> CGRect {
         return CGRect(x: x, y: y, width: width, height: height)
@@ -37,4 +46,5 @@ public extension CGRect {
     public func with(size: CGSize) -> CGRect {
         return CGRect(origin: origin, size: size)
     }
+
 }
