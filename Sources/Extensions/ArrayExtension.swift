@@ -91,7 +91,7 @@ public extension Array where Element : Equatable {
 
 }
 
-// MARK: - Transform
+// MARK: - Equatable Transform
 
 public extension Array where Element : Equatable {
 
@@ -143,6 +143,32 @@ public extension Array where Element : Equatable {
         return stride(from: 0, to: self.count, by: chunkSize).map {
             let endIndex = ($0.advanced(by: chunkSize) > self.count) ? self.count - $0 : chunkSize
             return Array(self[$0..<$0.advanced(by: endIndex)])
+        }
+    }
+
+}
+
+// MARK: - Transform
+
+public extension Array {
+
+    public func shuffled() -> [Element] {
+        var array = self
+        array.shuffle()
+        return array
+    }
+
+    public mutating func shuffle() {
+        guard count > 2 else {
+            return
+        }
+
+        for idx in startIndex..<endIndex {
+            let next = Int(arc4random_uniform(UInt32(endIndex - idx))) + idx
+            guard idx != next else {
+                continue
+            }
+            swap(&self[idx], &self[next])
         }
     }
 
