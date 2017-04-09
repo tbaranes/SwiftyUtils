@@ -3,7 +3,11 @@
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //
 
-import QuartzCore
+#if os(iOS) || os(tvOS)
+import UIKit
+#elseif os(macOS)
+import Cocoa
+#endif
 
 public struct UnitTesting {
 
