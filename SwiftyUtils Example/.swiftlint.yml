@@ -2,6 +2,8 @@ identifier_name:
   min_length: 2
   excluded: 
    - x
+   - y
+   - T
 
 type_name:
   excluded: 
@@ -11,7 +13,8 @@ line_length: 150
 file_length: 500
 number_separator:
   minimum_length: 5
-
+disabled_rules:
+ - todo
 opt_in_rules:
  - closure_spacing
  - conditional_returns_on_newline
@@ -28,3 +31,5 @@ opt_in_rules:
  - number_separator
  - object_literal
  - fatal_error_message
+included:
+ - ../Sources
