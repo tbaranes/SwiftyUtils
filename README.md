@@ -425,6 +425,14 @@ print(1.day) // 86400
 print(2.day) // 172800
 ```
 
+Formatted value with the locale currency:
+
+```
+print(Double(3.24).formattedPrice) // "$3.24"
+print(Double(10).formattedPrice) // "$10.00"
+```
+
+
 ### FileManager extension
 
 Get documents directory url following the os:
@@ -490,6 +498,12 @@ print(value.nearestUpDozens) // 17450
 print(value.nearestUpHundreds) // 17500)
 print(value.nearestUpThousands) // 18000
 print(value.nearestUp(to: 1000) // 18000
+```
+
+Formatted value with the locale currency:
+
+```
+print(10.formattedPrice) // "$10.00"
 ```
 
 ### MutableCollectionType extension

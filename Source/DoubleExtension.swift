@@ -5,10 +5,11 @@
 
 import Foundation
 
+// MARK: - Time Transform
+
 public extension Double {
     public var millisecond: TimeInterval { return self / 1000 }
     public var milliseconds: TimeInterval { return self / 1000 }
-    // swiftlint:disable:next variable_name
     public var ms: TimeInterval { return self / 1000 }
 
     public var second: TimeInterval { return self }
@@ -22,4 +23,17 @@ public extension Double {
 
     public var day: TimeInterval { return self * 3600 * 24 }
     public var days: TimeInterval { return self * 3600 * 24 }
+}
+
+// MARK: - Transform
+
+public extension Double {
+
+    public var formattedPrice: String {
+        let formatter = SUNumberFormatter.shared
+        formatter.numberStyle = .currency
+        formatter.locale = Locale.current
+        return formatter.string(from: self as NSNumber)!
+    }
+
 }

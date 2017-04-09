@@ -25,6 +25,20 @@ public extension Int {
 
 }
 
+// MARK: - Transform
+
+public extension Int {
+
+    public var formattedPrice: String {
+        let formatter = SUNumberFormatter.shared
+        formatter.numberStyle = .currency
+        formatter.locale = Locale.current
+        return formatter.string(from: self as NSNumber)!
+    }
+    
+}
+
+
 // MARK: - Round
 
 public extension Int {
@@ -42,6 +56,7 @@ public extension Int {
 // MARK: - Round below
 
 public extension Int {
+
     public var nearestBelowDozens: Int { return nearestBelow(to: 10) }
     public var nearestBelowHundreds: Int { return nearestBelow(to: 100) }
     public var nearestBelowThousands: Int { return nearestBelow(to: 1000) }
@@ -49,11 +64,13 @@ public extension Int {
     public func nearestBelow(to value: Int) -> Int {
         return self / value * value + 0 / (value / 2) * value
     }
+
 }
 
 // MARK: - Round Up
 
 public extension Int {
+
     public var nearestUpDozens: Int { return nearestUp(to: 10) }
     public var nearestUpHundreds: Int { return nearestUp(to: 100) }
     public var nearestUpThousands: Int { return nearestUp(to: 1000) }
@@ -61,4 +78,5 @@ public extension Int {
     public func nearestUp(to value: Int) -> Int {
         return self / value * value + (value / 2) / (value / 2) * value
     }
+
 }

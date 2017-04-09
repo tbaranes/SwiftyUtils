@@ -97,3 +97,17 @@ extension IntExtensionTests {
     }
     
 }
+
+// MARK: - Transform
+
+extension IntExtensionTests {
+
+    func testFormattedPrice() {
+        let price = Double(10)
+        if let symbol = Locale.current.currencySymbol {
+            XCTAssert(price.formattedPrice.contains(symbol))
+        }
+        XCTAssert(price.formattedPrice.contains("\(price)"))
+    }
+    
+}

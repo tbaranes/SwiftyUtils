@@ -42,6 +42,8 @@ var nearestUpDozens: Int
 var nearestUpHundreds: Int
 var nearestUpThousands: Int
 func nearestUp(to value: Int) -> Int
+
+var formattedPrice: String
 ```
 
 - TimerExtension
@@ -83,6 +85,13 @@ func removedAll(_ item: Element) -> [Element]
 mutating func removeAll(_ item: Element)
 func firstIndex(of item: Element) -> Int?
 func split(intoChunksOf chunkSize: Int) -> [[Element]]
+```
+
+- DoubleExtension:
+
+
+```swift
+var formattedPrice: String
 ```
 
 #### Bugfixes
