@@ -42,7 +42,7 @@ public extension Dictionary {
         var result = self
         values.forEach { dictionary in
             dictionary.forEach { key, value in
-                result.updateValue(value, forKey: key)
+                result[key] = value
             }
         }
         return result
@@ -55,7 +55,7 @@ public extension Dictionary {
                     continue
                 }
 
-                self.updateValue(value, forKey: key)
+                self[key] = value
             }
         }
     }
@@ -71,7 +71,7 @@ public extension Dictionary where Value: Equatable {
         dictionaries.forEach {
             for (key, value) in $0 {
                 if result.has(key: key) && result[key] == value {
-                    result.removeValue(forKey: key)
+                    result[key] = nil
                 }
             }
         }

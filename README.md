@@ -405,7 +405,7 @@ var dic = ["abc": "abc, "ab": "a", "b": "b"]
 let result = dic.testAll { key, _ in 
     key.length < 3 
 }
-print(result) // ["ab": "a", "b": "b"]
+print(result) // false
 ```
 
 ### Double extension
@@ -1403,3 +1403,4 @@ let package = Package(
 ## License
 
 SwiftyUtils is under the MIT license. See the [LICENSE](https://github.com/tbaranes/SwiftyUtils/blob/master/LICENSE) file for more information.
+dic.testAll
