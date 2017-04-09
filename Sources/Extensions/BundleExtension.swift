@@ -5,10 +5,12 @@
 
 import Foundation
 
+// MARK: - App Information
+
 public extension Bundle {
 
     public var appName: String {
-        return string(for: "CFBundleDisplayName")
+        return string(for: kCFBundleNameKey as String)
     }
 
     public var appVersion: String {
@@ -16,12 +18,28 @@ public extension Bundle {
     }
 
     public var appBuild: String {
-        return string(for: "CFBundleVersion")
+        return string(for: kCFBundleVersionKey as String)
     }
 
     public var bundleId: String {
         return string(for: "CFBundleIdentifier")
     }
+
+}
+
+// MARK: - Status
+
+public extension Bundle {
+
+    public var isInTestFlight: Bool {
+        return appStoreReceiptURL?.path.contains("sandboxReceipt") == true
+    }
+
+}
+
+// MARK: - Schemes
+
+public extension Bundle {
 
     public var schemes: [String] {
         guard let infoDictionary = Bundle.main.infoDictionary,
@@ -38,6 +56,8 @@ public extension Bundle {
     }
 
 }
+
+// MARK: - Internal
 
 fileprivate extension Bundle {
 
