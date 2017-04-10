@@ -281,7 +281,7 @@ Multiply a `CGPoint` with a scalar:
 var point1 = CGPoint(x: 10, y: 10)
 print(point1 * 2) // CGPoint(x: 20, y: 20)
 
-point1 += 2
+point1 *= 2
 print(point1) // CGPoint(x: 20, y: 20)
 ```
 
@@ -335,7 +335,7 @@ Multiply a `CGSize` with a scalar:
 var size1 = CGSize(x: 10, y: 10)
 print(size1 * 2) // CGSize(width: 20, height: 20)
 
-size1 += 2
+size1 *= 2
 print(size1) // CGSize(width: 20, height: 20)
 ```
 
