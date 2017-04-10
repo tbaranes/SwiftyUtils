@@ -211,29 +211,25 @@ Get bundle information:
 
 ```swift
 Bundle.main.appName
-Bundle(url: someURL)?.appName
+Bundle(url: url)?.appName
 
 Bundle.main.appVersion
-Bundle(url: someURL)?.appVersion
+Bundle(url: url)?.appVersion
 
 Bundle.main.appBuild
-Bundle(url: someURL)?.appBuild
+Bundle(url: url)?.appBuild
 
 Bundle.main.bundleId
-Bundle(url: someURL)?.bundleId
+Bundle(url: url)?.bundleId
 
 Bundle.main.schemes
-Bundle(url: someURL)?.schemes
+Bundle(url: url)?.schemes
 
 Bundle.main.mainScheme
-Bundle(url.i: someURL)?.mainScheme
-```
+Bundle(url: url)?.mainScheme
 
-Get the app build:
-
-```swift
-Bundle(url: someURL)?.appBuild
-Bundle.main.appBuild
+Bundle.main.isInTestFlight
+Bundle(url: url)?.isInTestFlight
 ```
 
 ### CGFloat extension
