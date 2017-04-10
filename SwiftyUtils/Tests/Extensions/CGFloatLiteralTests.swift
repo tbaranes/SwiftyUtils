@@ -8,7 +8,7 @@ import XCTest
 
 class CGFloatLiteralTests: XCTestCase {
 
-    func textCGFloatLiteral() {
+    func testCGFloatLiteral() {
         XCTAssertEqual(12.f, CGFloat(12))
         XCTAssertEqual(12.3.f, CGFloat(12.3))
     }

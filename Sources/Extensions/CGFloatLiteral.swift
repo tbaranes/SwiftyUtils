@@ -8,7 +8,7 @@ import CoreGraphics
 
 public extension IntegerLiteralType {
 
-    // swiftlint:disable:next variable_name
+    // swiftlint:disable:next identifier_name
     public var f: CGFloat {
         return CGFloat(self)
     }
@@ -17,7 +17,7 @@ public extension IntegerLiteralType {
 
 public extension FloatLiteralType {
 
-    // swiftlint:disable:next variable_name
+    // swiftlint:disable:next identifier_name
     public var f: CGFloat {
         return CGFloat(self)
     }

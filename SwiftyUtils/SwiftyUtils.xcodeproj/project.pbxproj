@@ -63,7 +63,7 @@
 		E267289C1E9A37D200DE844E /* UILabelExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728461E9A36F100DE844E /* UILabelExtensionTests.swift */; };
 		E267289D1E9A37D200DE844E /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728471E9A36F100DE844E /* UIViewExtensionTests.swift */; };
 		E267289E1E9A37D600DE844E /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728351E9A36F100DE844E /* ArrayExtensionTests.swift */; };
-		E267289F1E9A37D600DE844E /* CGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728361E9A36F100DE844E /* CGFloatLiteral.swift */; };
+		E267289F1E9A37D600DE844E /* CGFloatLiteralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728361E9A36F100DE844E /* CGFloatLiteralTests.swift */; };
 		E26728A01E9A37D600DE844E /* CGRectExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728371E9A36F100DE844E /* CGRectExtensionTest.swift */; };
 		E26728A11E9A37D600DE844E /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728381E9A36F100DE844E /* CollectionTypeTests.swift */; };
 		E26728A21E9A37D600DE844E /* DateCalendarExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728391E9A36F100DE844E /* DateCalendarExtensionTests.swift */; };
@@ -117,7 +117,7 @@
 		E26728D21E9A380500DE844E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727CA1E9A362600DE844E /* Constants.swift */; };
 		E26728D31E9A388700DE844E /* NSViewExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728341E9A36F100DE844E /* NSViewExtensionsTest.swift */; };
 		E26728D41E9A388700DE844E /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728351E9A36F100DE844E /* ArrayExtensionTests.swift */; };
-		E26728D51E9A388700DE844E /* CGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728361E9A36F100DE844E /* CGFloatLiteral.swift */; };
+		E26728D51E9A388700DE844E /* CGFloatLiteralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728361E9A36F100DE844E /* CGFloatLiteralTests.swift */; };
 		E26728D61E9A388700DE844E /* CGRectExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728371E9A36F100DE844E /* CGRectExtensionTest.swift */; };
 		E26728D71E9A388700DE844E /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728381E9A36F100DE844E /* CollectionTypeTests.swift */; };
 		E26728D81E9A388700DE844E /* DateCalendarExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728391E9A36F100DE844E /* DateCalendarExtensionTests.swift */; };
@@ -216,7 +216,7 @@
 		E26729481E9A393200DE844E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727CA1E9A362600DE844E /* Constants.swift */; };
 		E26729491E9A393300DE844E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727CA1E9A362600DE844E /* Constants.swift */; };
 		E26729501E9A3B4500DE844E /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728351E9A36F100DE844E /* ArrayExtensionTests.swift */; };
-		E26729511E9A3B4500DE844E /* CGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728361E9A36F100DE844E /* CGFloatLiteral.swift */; };
+		E26729511E9A3B4500DE844E /* CGFloatLiteralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728361E9A36F100DE844E /* CGFloatLiteralTests.swift */; };
 		E26729521E9A3B4500DE844E /* CGRectExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728371E9A36F100DE844E /* CGRectExtensionTest.swift */; };
 		E26729531E9A3B4500DE844E /* CollectionTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728381E9A36F100DE844E /* CollectionTypeTests.swift */; };
 		E26729541E9A3B4500DE844E /* DateCalendarExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728391E9A36F100DE844E /* DateCalendarExtensionTests.swift */; };
@@ -324,7 +324,7 @@
 		E26728001E9A362600DE844E /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		E26728341E9A36F100DE844E /* NSViewExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSViewExtensionsTest.swift; sourceTree = "<group>"; };
 		E26728351E9A36F100DE844E /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
-		E26728361E9A36F100DE844E /* CGFloatLiteral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatLiteral.swift; sourceTree = "<group>"; };
+		E26728361E9A36F100DE844E /* CGFloatLiteralTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatLiteralTests.swift; sourceTree = "<group>"; };
 		E26728371E9A36F100DE844E /* CGRectExtensionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectExtensionTest.swift; sourceTree = "<group>"; };
 		E26728381E9A36F100DE844E /* CollectionTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeTests.swift; sourceTree = "<group>"; };
 		E26728391E9A36F100DE844E /* DateCalendarExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCalendarExtensionTests.swift; sourceTree = "<group>"; };
@@ -545,7 +545,7 @@
 				E26728441E9A36F100DE844E /* UIKit */,
 				E26728331E9A36F100DE844E /* AppKit */,
 				E26728351E9A36F100DE844E /* ArrayExtensionTests.swift */,
-				E26728361E9A36F100DE844E /* CGFloatLiteral.swift */,
+				E26728361E9A36F100DE844E /* CGFloatLiteralTests.swift */,
 				E26728371E9A36F100DE844E /* CGRectExtensionTest.swift */,
 				E26728381E9A36F100DE844E /* CollectionTypeTests.swift */,
 				E26728391E9A36F100DE844E /* DateCalendarExtensionTests.swift */,
@@ -1092,7 +1092,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E267289F1E9A37D600DE844E /* CGFloatLiteral.swift in Sources */,
+				E267289F1E9A37D600DE844E /* CGFloatLiteralTests.swift in Sources */,
 				E26728A41E9A37D600DE844E /* DictionaryExtensionTests.swift in Sources */,
 				E26728A31E9A37D600DE844E /* DateExtensionTests.swift in Sources */,
 				E26728B11E9A37DE00DE844E /* ThenTest.swift in Sources */,
@@ -1141,7 +1141,7 @@
 				E26729581E9A3B4500DE844E /* FileManagerTests.swift in Sources */,
 				E26729641E9A3B5900DE844E /* IteratableTests.swift in Sources */,
 				E26729611E9A3B4A00DE844E /* NSObjectExtensionTests.swift in Sources */,
-				E26729511E9A3B4500DE844E /* CGFloatLiteral.swift in Sources */,
+				E26729511E9A3B4500DE844E /* CGFloatLiteralTests.swift in Sources */,
 				E267295B1E9A3B4500DE844E /* NSRangeExtensionTests.swift in Sources */,
 				E26729681E9A3B5D00DE844E /* UnitTestingTests.swift in Sources */,
 				E26729541E9A3B4500DE844E /* DateCalendarExtensionTests.swift in Sources */,
@@ -1168,7 +1168,7 @@
 				E26728E81E9A389100DE844E /* UITestingTests.swift in Sources */,
 				E26728D81E9A388700DE844E /* DateCalendarExtensionTests.swift in Sources */,
 				E26728D91E9A388700DE844E /* DateExtensionTests.swift in Sources */,
-				E26728D51E9A388700DE844E /* CGFloatLiteral.swift in Sources */,
+				E26728D51E9A388700DE844E /* CGFloatLiteralTests.swift in Sources */,
 				E26728D71E9A388700DE844E /* CollectionTypeTests.swift in Sources */,
 				E26728E11E9A388700DE844E /* SwiftyColorTests.swift in Sources */,
 				E26728E31E9A388700DE844E /* URLExtensionTests.swift in Sources */,
