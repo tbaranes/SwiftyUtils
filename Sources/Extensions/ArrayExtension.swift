@@ -91,7 +91,7 @@ public extension Array where Element : Equatable {
 
 }
 
-// MARK: - Mutating Getter
+// MARK: - Transform
 
 public extension Array where Element : Equatable {
 
