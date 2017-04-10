@@ -8,18 +8,7 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
-- `UIView.convertLocalizables()` is now named `UIView.translateSubviews()`
-
-- A few cleanup has been done in the existing extensions:
-   - Array:
-
-```
-func reverse(index: Int) -> Int
-func get(index: Int) -> Element?
-func takeMax(number: Int) -> Array
-func contains<T>(instanceOf object: T) -> Bool
-func contains(_ array: [Element]) -> Bool
-```
+In order to be ready for the release 1.0, there's have a been a few cleanup in the framework. Some methods have been removed, and others have been renamed. We won't list all here since it would be too long, but look into the README to see the difference if necessary.
 
 #### Enhancements
 

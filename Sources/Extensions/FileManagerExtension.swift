@@ -58,22 +58,22 @@ public extension FileManager {
 
 public extension FileManager {
 
-    public static func deleteAllTemporaryFiles(at path: String) throws {
-        return try self.default.deleteAllTemporaryFiles()
+    public static func removeTemporaryFiles(at path: String) throws {
+        return try self.default.removeTemporaryFiles()
     }
 
-    public func deleteAllTemporaryFiles() throws {
+    public func removeTemporaryFiles() throws {
         let contents = try contentsOfDirectory(atPath: NSTemporaryDirectory())
         for file in contents {
             try removeItem(atPath: NSTemporaryDirectory() + file)
         }
     }
 
-    public static func deleteAllDocumentFiles(at path: String) throws {
-        return try self.default.deleteAllDocumentFiles()
+    public static func removeDocumentFiles(at path: String) throws {
+        return try self.default.removeDocumentFiles()
     }
 
-    public func deleteAllDocumentFiles() throws {
+    public func removeDocumentFiles() throws {
         let documentPath = document.path
         let contents = try contentsOfDirectory(atPath: documentPath)
         for file in contents {
