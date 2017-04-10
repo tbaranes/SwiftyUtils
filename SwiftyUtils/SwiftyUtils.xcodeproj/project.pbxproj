@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E23ED9BB1E9A525B0059BED7 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9BA1E9A525B0059BED7 /* CGPointExtension.swift */; };
+		E23ED9BC1E9A525E0059BED7 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9BA1E9A525B0059BED7 /* CGPointExtension.swift */; };
+		E23ED9BD1E9A525F0059BED7 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9BA1E9A525B0059BED7 /* CGPointExtension.swift */; };
+		E23ED9BE1E9A52600059BED7 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9BA1E9A525B0059BED7 /* CGPointExtension.swift */; };
+		E23ED9C01E9A526D0059BED7 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9BF1E9A526D0059BED7 /* CGSizeExtension.swift */; };
+		E23ED9C11E9A526D0059BED7 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9BF1E9A526D0059BED7 /* CGSizeExtension.swift */; };
+		E23ED9C21E9A526D0059BED7 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9BF1E9A526D0059BED7 /* CGSizeExtension.swift */; };
+		E23ED9C31E9A526D0059BED7 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9BF1E9A526D0059BED7 /* CGSizeExtension.swift */; };
+		E23ED9C91E9A539E0059BED7 /* CGPointExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9C41E9A534E0059BED7 /* CGPointExtensionTests.swift */; };
+		E23ED9CA1E9A53A00059BED7 /* CGPointExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9C41E9A534E0059BED7 /* CGPointExtensionTests.swift */; };
+		E23ED9CB1E9A53A10059BED7 /* CGPointExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9C41E9A534E0059BED7 /* CGPointExtensionTests.swift */; };
+		E23ED9D11E9A55FF0059BED7 /* CGSizeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9CC1E9A55F40059BED7 /* CGSizeExtensionTests.swift */; };
+		E23ED9D21E9A56010059BED7 /* CGSizeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9CC1E9A55F40059BED7 /* CGSizeExtensionTests.swift */; };
+		E23ED9D31E9A56010059BED7 /* CGSizeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9CC1E9A55F40059BED7 /* CGSizeExtensionTests.swift */; };
 		E26722861E9A304800DE844E /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E26722811E9A304800DE844E /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E26722871E9A304800DE844E /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E26722811E9A304800DE844E /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E26722881E9A304800DE844E /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E26722811E9A304800DE844E /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -263,6 +277,10 @@
 
 /* Begin PBXFileReference section */
 		E2218C321D155039000F96DB /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23ED9BA1E9A525B0059BED7 /* CGPointExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
+		E23ED9BF1E9A526D0059BED7 /* CGSizeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
+		E23ED9C41E9A534E0059BED7 /* CGPointExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointExtensionTests.swift; sourceTree = "<group>"; };
+		E23ED9CC1E9A55F40059BED7 /* CGSizeExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeExtensionTests.swift; sourceTree = "<group>"; };
 		E26722801E9A304800DE844E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E26722811E9A304800DE844E /* SwiftyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyUtils.h; sourceTree = "<group>"; };
 		E26724231E9A315B00DE844E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -445,7 +463,9 @@
 				E26727CE1E9A362600DE844E /* ArrayExtension.swift */,
 				E26727CF1E9A362600DE844E /* BundleExtension.swift */,
 				E26727D01E9A362600DE844E /* CGFloatLiteral.swift */,
+				E23ED9BA1E9A525B0059BED7 /* CGPointExtension.swift */,
 				E26727D11E9A362600DE844E /* CGRectExtensions.swift */,
+				E23ED9BF1E9A526D0059BED7 /* CGSizeExtension.swift */,
 				E26727D31E9A362600DE844E /* ColorExtension.swift */,
 				E26727D41E9A362600DE844E /* DateCalendarExtension.swift */,
 				E26727D51E9A362600DE844E /* DateExtension.swift */,
@@ -536,7 +556,9 @@
 				E26728331E9A36F100DE844E /* AppKit */,
 				E26728351E9A36F100DE844E /* ArrayExtensionTests.swift */,
 				E26728361E9A36F100DE844E /* CGFloatLiteralTests.swift */,
+				E23ED9C41E9A534E0059BED7 /* CGPointExtensionTests.swift */,
 				E26728371E9A36F100DE844E /* CGRectExtensionTest.swift */,
+				E23ED9CC1E9A55F40059BED7 /* CGSizeExtensionTests.swift */,
 				E26728391E9A36F100DE844E /* DateCalendarExtensionTests.swift */,
 				E267283A1E9A36F100DE844E /* DateExtensionTests.swift */,
 				E267283B1E9A36F100DE844E /* DictionaryExtensionTests.swift */,
@@ -956,6 +978,7 @@
 				E267291E1E9A38FF00DE844E /* DateExtension.swift in Sources */,
 				E26729281E9A38FF00DE844E /* StringExtension.swift in Sources */,
 				E26729471E9A390C00DE844E /* Then.swift in Sources */,
+				E23ED9C31E9A526D0059BED7 /* CGSizeExtension.swift in Sources */,
 				E267293B1E9A390800DE844E /* BlockNotification.swift in Sources */,
 				E26729251E9A38FF00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
 				E26729441E9A390C00DE844E /* Iteratable.swift in Sources */,
@@ -983,6 +1006,7 @@
 				E267292A1E9A38FF00DE844E /* URLExtension.swift in Sources */,
 				E26728F61E9A38FA00DE844E /* NSObjectExtension.swift in Sources */,
 				E26729171E9A38FF00DE844E /* ArrayExtension.swift in Sources */,
+				E23ED9BE1E9A52600059BED7 /* CGPointExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1016,8 +1040,10 @@
 				E26728EB1E9A38F700DE844E /* UIAlertControllerExtension.swift in Sources */,
 				E26729481E9A393200DE844E /* Constants.swift in Sources */,
 				E26729051E9A38FE00DE844E /* CGRectExtensions.swift in Sources */,
+				E23ED9C21E9A526D0059BED7 /* CGSizeExtension.swift in Sources */,
 				E267290F1E9A38FE00DE844E /* NSLayoutConstraintsExtension.swift in Sources */,
 				E267290A1E9A38FE00DE844E /* DictionaryExtension.swift in Sources */,
+				E23ED9BD1E9A525F0059BED7 /* CGPointExtension.swift in Sources */,
 				E267290B1E9A38FE00DE844E /* DoubleExtension.swift in Sources */,
 				E26728EE1E9A38F700DE844E /* UIImageExtension.swift in Sources */,
 				E26729311E9A390800DE844E /* Simulator.swift in Sources */,
@@ -1043,6 +1069,7 @@
 			files = (
 				E26728CF1E9A380500DE844E /* BlockNotification.swift in Sources */,
 				E26728D01E9A380500DE844E /* UITesting.swift in Sources */,
+				E23ED9BC1E9A525E0059BED7 /* CGPointExtension.swift in Sources */,
 				E26728B71E9A37F600DE844E /* CGFloatLiteral.swift in Sources */,
 				E26728CA1E9A37FD00DE844E /* Injectable.swift in Sources */,
 				E26728C41E9A37F600DE844E /* NSRangeExtension.swift in Sources */,
@@ -1056,6 +1083,7 @@
 				E26728D11E9A380500DE844E /* UnitTesting.swift in Sources */,
 				E26728CE1E9A37FD00DE844E /* Then.swift in Sources */,
 				E26728C11E9A37F600DE844E /* NotificationCenterExtension.swift in Sources */,
+				E23ED9C11E9A526D0059BED7 /* CGSizeExtension.swift in Sources */,
 				E26728C91E9A37F600DE844E /* UserDefaultsExtension.swift in Sources */,
 				E26728C01E9A37F600DE844E /* IntExtension.swift in Sources */,
 				E26728B81E9A37F600DE844E /* CGRectExtensions.swift in Sources */,
@@ -1079,6 +1107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E267289F1E9A37D600DE844E /* CGFloatLiteralTests.swift in Sources */,
+				E23ED9D11E9A55FF0059BED7 /* CGSizeExtensionTests.swift in Sources */,
 				E26728A41E9A37D600DE844E /* DictionaryExtensionTests.swift in Sources */,
 				E26728A31E9A37D600DE844E /* DateExtensionTests.swift in Sources */,
 				E26728B11E9A37DE00DE844E /* ThenTest.swift in Sources */,
@@ -1095,6 +1124,7 @@
 				E26728AD1E9A37D600DE844E /* URLExtensionTests.swift in Sources */,
 				E26728AF1E9A37DE00DE844E /* IteratableTests.swift in Sources */,
 				E267289E1E9A37D600DE844E /* ArrayExtensionTests.swift in Sources */,
+				E23ED9C91E9A539E0059BED7 /* CGPointExtensionTests.swift in Sources */,
 				E26728AA1E9A37D600DE844E /* StringExtensionTests.swift in Sources */,
 				E26728A61E9A37D600DE844E /* FileManagerTests.swift in Sources */,
 				E26728B31E9A37DE00DE844E /* UnitTestingTests.swift in Sources */,
@@ -1111,6 +1141,7 @@
 			files = (
 				E26729571E9A3B4500DE844E /* DoubleExtensionTests.swift in Sources */,
 				E26729631E9A3B4A00DE844E /* UIViewExtensionTests.swift in Sources */,
+				E23ED9D31E9A56010059BED7 /* CGSizeExtensionTests.swift in Sources */,
 				E26729661E9A3B5900DE844E /* ThenTest.swift in Sources */,
 				E26729601E9A3B4500DE844E /* UserDefaultsExtensionTests.swift in Sources */,
 				E26729651E9A3B5900DE844E /* OccupiableTests.swift in Sources */,
@@ -1123,6 +1154,7 @@
 				E267295E1E9A3B4500DE844E /* TimerTests.swift in Sources */,
 				E267295C1E9A3B4500DE844E /* StringExtensionTests.swift in Sources */,
 				E26729581E9A3B4500DE844E /* FileManagerTests.swift in Sources */,
+				E23ED9CB1E9A53A10059BED7 /* CGPointExtensionTests.swift in Sources */,
 				E26729641E9A3B5900DE844E /* IteratableTests.swift in Sources */,
 				E26729611E9A3B4A00DE844E /* NSObjectExtensionTests.swift in Sources */,
 				E26729511E9A3B4500DE844E /* CGFloatLiteralTests.swift in Sources */,
@@ -1149,6 +1181,7 @@
 				E26728E61E9A389100DE844E /* OccupiableTests.swift in Sources */,
 				E26728DD1E9A388700DE844E /* IntExtensionTests.swift in Sources */,
 				E26728E41E9A388700DE844E /* UserDefaultsExtensionTests.swift in Sources */,
+				E23ED9CA1E9A53A00059BED7 /* CGPointExtensionTests.swift in Sources */,
 				E26728E81E9A389100DE844E /* UITestingTests.swift in Sources */,
 				E26728D81E9A388700DE844E /* DateCalendarExtensionTests.swift in Sources */,
 				E26728D91E9A388700DE844E /* DateExtensionTests.swift in Sources */,
@@ -1158,6 +1191,7 @@
 				E26728E91E9A389100DE844E /* UnitTestingTests.swift in Sources */,
 				E26728DB1E9A388700DE844E /* DoubleExtensionTests.swift in Sources */,
 				E26728DF1E9A388700DE844E /* NSRangeExtensionTests.swift in Sources */,
+				E23ED9D21E9A56010059BED7 /* CGSizeExtensionTests.swift in Sources */,
 				E26728D41E9A388700DE844E /* ArrayExtensionTests.swift in Sources */,
 				E26728DA1E9A388700DE844E /* DictionaryExtensionTests.swift in Sources */,
 				E26728E21E9A388700DE844E /* TimerTests.swift in Sources */,
@@ -1181,6 +1215,7 @@
 				E267286D1E9A379900DE844E /* UIApplicationExtension.swift in Sources */,
 				E26728921E9A37AE00DE844E /* BlockPanGestureRecognizer.swift in Sources */,
 				E267287C1E9A379F00DE844E /* ColorExtension.swift in Sources */,
+				E23ED9BB1E9A525B0059BED7 /* CGPointExtension.swift in Sources */,
 				E26728821E9A379F00DE844E /* IntExtension.swift in Sources */,
 				E267288B1E9A379F00DE844E /* UserDefaultsExtension.swift in Sources */,
 				E267288D1E9A37A600DE844E /* Iteratable.swift in Sources */,
@@ -1208,6 +1243,7 @@
 				E267287D1E9A379F00DE844E /* DateCalendarExtension.swift in Sources */,
 				E26728871E9A379F00DE844E /* ReusableFormatters.swift in Sources */,
 				E26728991E9A37AE00DE844E /* UnitTesting.swift in Sources */,
+				E23ED9C01E9A526D0059BED7 /* CGSizeExtension.swift in Sources */,
 				E26728791E9A379F00DE844E /* CGFloatLiteral.swift in Sources */,
 				E26728831E9A379F00DE844E /* NotificationCenterExtension.swift in Sources */,
 				E26728701E9A379900DE844E /* UILabelExtension.swift in Sources */,
