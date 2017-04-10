@@ -36,7 +36,6 @@ Check out the repository to find examples / tests for each feature.
 - [NSLayoutConstraint](#nslayoutconstraint-extension)
 - [NSMutableAttributedString](#nsmutableattributedstring-extension)
 - [NSObject](#nsobject-extension)
-- [NSRange](#nsrange-extension)
 - [ReusableFormatters](#reusableformatters)
 - [String](#string-extension)
 - [Timer](#timer-extension)
@@ -692,25 +691,6 @@ Get the class name of a `NSObject`:
 let vc = UIViewController()
 print(vc.className) // UIViewController
 print(UIViewController.className) // UIViewController
-```
-
-### NSRange extension
-
-Range after an occurence:
-
-```swift
-let string = "Hello world"
-let range = NSRange(text: string, afterOccurence: "llo")
-print(range) // location: 3, length: 8
-```
-
-Range of string:
-
-```swift
-let string = "Hello world"
-let stringToFind = "ello wo"
-let range = NSRange(textToFind: stringToFind, in: string)
-print(range) // location: 1, length: 7
 ```
 
 ### ReusableFormatters

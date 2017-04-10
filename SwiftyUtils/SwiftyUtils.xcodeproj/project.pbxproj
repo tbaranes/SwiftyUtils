@@ -51,7 +51,6 @@
 		E26728831E9A379F00DE844E /* NotificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DA1E9A362600DE844E /* NotificationCenterExtension.swift */; };
 		E26728841E9A379F00DE844E /* NSLayoutConstraintsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DB1E9A362600DE844E /* NSLayoutConstraintsExtension.swift */; };
 		E26728851E9A379F00DE844E /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DC1E9A362600DE844E /* NSMutableAttributedStringExtension.swift */; };
-		E26728861E9A379F00DE844E /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DD1E9A362600DE844E /* NSRangeExtension.swift */; };
 		E26728871E9A379F00DE844E /* ReusableFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DE1E9A362600DE844E /* ReusableFormatters.swift */; };
 		E26728881E9A379F00DE844E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DF1E9A362600DE844E /* StringExtension.swift */; };
 		E26728891E9A379F00DE844E /* TimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E01E9A362600DE844E /* TimerExtension.swift */; };
@@ -85,7 +84,6 @@
 		E26728A61E9A37D600DE844E /* FileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283D1E9A36F100DE844E /* FileManagerTests.swift */; };
 		E26728A71E9A37D600DE844E /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283E1E9A36F100DE844E /* IntExtensionTests.swift */; };
 		E26728A81E9A37D600DE844E /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283F1E9A36F100DE844E /* NSLayoutConstraintExtensionTests.swift */; };
-		E26728A91E9A37D600DE844E /* NSRangeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728401E9A36F100DE844E /* NSRangeExtensionTests.swift */; };
 		E26728AA1E9A37D600DE844E /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728411E9A36F100DE844E /* StringExtensionTests.swift */; };
 		E26728AB1E9A37D600DE844E /* SwiftyColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728421E9A36F100DE844E /* SwiftyColorTests.swift */; };
 		E26728AC1E9A37D600DE844E /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728431E9A36F100DE844E /* TimerTests.swift */; };
@@ -111,7 +109,6 @@
 		E26728C11E9A37F600DE844E /* NotificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DA1E9A362600DE844E /* NotificationCenterExtension.swift */; };
 		E26728C21E9A37F600DE844E /* NSLayoutConstraintsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DB1E9A362600DE844E /* NSLayoutConstraintsExtension.swift */; };
 		E26728C31E9A37F600DE844E /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DC1E9A362600DE844E /* NSMutableAttributedStringExtension.swift */; };
-		E26728C41E9A37F600DE844E /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DD1E9A362600DE844E /* NSRangeExtension.swift */; };
 		E26728C51E9A37F600DE844E /* ReusableFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DE1E9A362600DE844E /* ReusableFormatters.swift */; };
 		E26728C61E9A37F600DE844E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DF1E9A362600DE844E /* StringExtension.swift */; };
 		E26728C71E9A37F600DE844E /* TimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E01E9A362600DE844E /* TimerExtension.swift */; };
@@ -137,7 +134,6 @@
 		E26728DC1E9A388700DE844E /* FileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283D1E9A36F100DE844E /* FileManagerTests.swift */; };
 		E26728DD1E9A388700DE844E /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283E1E9A36F100DE844E /* IntExtensionTests.swift */; };
 		E26728DE1E9A388700DE844E /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283F1E9A36F100DE844E /* NSLayoutConstraintExtensionTests.swift */; };
-		E26728DF1E9A388700DE844E /* NSRangeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728401E9A36F100DE844E /* NSRangeExtensionTests.swift */; };
 		E26728E01E9A388700DE844E /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728411E9A36F100DE844E /* StringExtensionTests.swift */; };
 		E26728E11E9A388700DE844E /* SwiftyColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728421E9A36F100DE844E /* SwiftyColorTests.swift */; };
 		E26728E21E9A388700DE844E /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728431E9A36F100DE844E /* TimerTests.swift */; };
@@ -174,7 +170,6 @@
 		E267290E1E9A38FE00DE844E /* NotificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DA1E9A362600DE844E /* NotificationCenterExtension.swift */; };
 		E267290F1E9A38FE00DE844E /* NSLayoutConstraintsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DB1E9A362600DE844E /* NSLayoutConstraintsExtension.swift */; };
 		E26729101E9A38FE00DE844E /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DC1E9A362600DE844E /* NSMutableAttributedStringExtension.swift */; };
-		E26729111E9A38FE00DE844E /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DD1E9A362600DE844E /* NSRangeExtension.swift */; };
 		E26729121E9A38FE00DE844E /* ReusableFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DE1E9A362600DE844E /* ReusableFormatters.swift */; };
 		E26729131E9A38FE00DE844E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DF1E9A362600DE844E /* StringExtension.swift */; };
 		E26729141E9A38FE00DE844E /* TimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E01E9A362600DE844E /* TimerExtension.swift */; };
@@ -194,7 +189,6 @@
 		E26729231E9A38FF00DE844E /* NotificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DA1E9A362600DE844E /* NotificationCenterExtension.swift */; };
 		E26729241E9A38FF00DE844E /* NSLayoutConstraintsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DB1E9A362600DE844E /* NSLayoutConstraintsExtension.swift */; };
 		E26729251E9A38FF00DE844E /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DC1E9A362600DE844E /* NSMutableAttributedStringExtension.swift */; };
-		E26729261E9A38FF00DE844E /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DD1E9A362600DE844E /* NSRangeExtension.swift */; };
 		E26729271E9A38FF00DE844E /* ReusableFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DE1E9A362600DE844E /* ReusableFormatters.swift */; };
 		E26729281E9A38FF00DE844E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727DF1E9A362600DE844E /* StringExtension.swift */; };
 		E26729291E9A38FF00DE844E /* TimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E01E9A362600DE844E /* TimerExtension.swift */; };
@@ -233,7 +227,6 @@
 		E26729581E9A3B4500DE844E /* FileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283D1E9A36F100DE844E /* FileManagerTests.swift */; };
 		E26729591E9A3B4500DE844E /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283E1E9A36F100DE844E /* IntExtensionTests.swift */; };
 		E267295A1E9A3B4500DE844E /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283F1E9A36F100DE844E /* NSLayoutConstraintExtensionTests.swift */; };
-		E267295B1E9A3B4500DE844E /* NSRangeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728401E9A36F100DE844E /* NSRangeExtensionTests.swift */; };
 		E267295C1E9A3B4500DE844E /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728411E9A36F100DE844E /* StringExtensionTests.swift */; };
 		E267295D1E9A3B4500DE844E /* SwiftyColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728421E9A36F100DE844E /* SwiftyColorTests.swift */; };
 		E267295E1E9A3B4500DE844E /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728431E9A36F100DE844E /* TimerTests.swift */; };
@@ -300,7 +293,6 @@
 		E26727DA1E9A362600DE844E /* NotificationCenterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtension.swift; sourceTree = "<group>"; };
 		E26727DB1E9A362600DE844E /* NSLayoutConstraintsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintsExtension.swift; sourceTree = "<group>"; };
 		E26727DC1E9A362600DE844E /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
-		E26727DD1E9A362600DE844E /* NSRangeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRangeExtension.swift; sourceTree = "<group>"; };
 		E26727DE1E9A362600DE844E /* ReusableFormatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableFormatters.swift; sourceTree = "<group>"; };
 		E26727DF1E9A362600DE844E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E26727E01E9A362600DE844E /* TimerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerExtension.swift; sourceTree = "<group>"; };
@@ -343,7 +335,6 @@
 		E267283D1E9A36F100DE844E /* FileManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerTests.swift; sourceTree = "<group>"; };
 		E267283E1E9A36F100DE844E /* IntExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
 		E267283F1E9A36F100DE844E /* NSLayoutConstraintExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensionTests.swift; sourceTree = "<group>"; };
-		E26728401E9A36F100DE844E /* NSRangeExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRangeExtensionTests.swift; sourceTree = "<group>"; };
 		E26728411E9A36F100DE844E /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		E26728421E9A36F100DE844E /* SwiftyColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyColorTests.swift; sourceTree = "<group>"; };
 		E26728431E9A36F100DE844E /* TimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
@@ -476,7 +467,6 @@
 				E26727DA1E9A362600DE844E /* NotificationCenterExtension.swift */,
 				E26727DB1E9A362600DE844E /* NSLayoutConstraintsExtension.swift */,
 				E26727DC1E9A362600DE844E /* NSMutableAttributedStringExtension.swift */,
-				E26727DD1E9A362600DE844E /* NSRangeExtension.swift */,
 				E26727DE1E9A362600DE844E /* ReusableFormatters.swift */,
 				E26727DF1E9A362600DE844E /* StringExtension.swift */,
 				E26727E01E9A362600DE844E /* TimerExtension.swift */,
@@ -566,7 +556,6 @@
 				E267283D1E9A36F100DE844E /* FileManagerTests.swift */,
 				E267283E1E9A36F100DE844E /* IntExtensionTests.swift */,
 				E267283F1E9A36F100DE844E /* NSLayoutConstraintExtensionTests.swift */,
-				E26728401E9A36F100DE844E /* NSRangeExtensionTests.swift */,
 				E26728411E9A36F100DE844E /* StringExtensionTests.swift */,
 				E26728421E9A36F100DE844E /* SwiftyColorTests.swift */,
 				E26728431E9A36F100DE844E /* TimerTests.swift */,
@@ -982,7 +971,6 @@
 				E267293B1E9A390800DE844E /* BlockNotification.swift in Sources */,
 				E26729251E9A38FF00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
 				E26729441E9A390C00DE844E /* Iteratable.swift in Sources */,
-				E26729261E9A38FF00DE844E /* NSRangeExtension.swift in Sources */,
 				E267291C1E9A38FF00DE844E /* ColorExtension.swift in Sources */,
 				E26729461E9A390C00DE844E /* Selfie.swift in Sources */,
 				E26729221E9A38FF00DE844E /* IntExtension.swift in Sources */,
@@ -1023,7 +1011,6 @@
 				E26729101E9A38FE00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
 				E26729301E9A390800DE844E /* BlockTapGestureRecognizer.swift in Sources */,
 				E267293F1E9A390C00DE844E /* Iteratable.swift in Sources */,
-				E26729111E9A38FE00DE844E /* NSRangeExtension.swift in Sources */,
 				E26728EC1E9A38F700DE844E /* UIApplicationExtension.swift in Sources */,
 				E26729071E9A38FE00DE844E /* ColorExtension.swift in Sources */,
 				E267292C1E9A390700DE844E /* BlockLongPressGestureRecognizer.swift in Sources */,
@@ -1072,7 +1059,6 @@
 				E23ED9BC1E9A525E0059BED7 /* CGPointExtension.swift in Sources */,
 				E26728B71E9A37F600DE844E /* CGFloatLiteral.swift in Sources */,
 				E26728CA1E9A37FD00DE844E /* Injectable.swift in Sources */,
-				E26728C41E9A37F600DE844E /* NSRangeExtension.swift in Sources */,
 				E26728BF1E9A37F600DE844E /* FileManagerExtension.swift in Sources */,
 				E26728B41E9A37F600DE844E /* NSViewExtension.swift in Sources */,
 				E26728BE1E9A37F600DE844E /* DoubleExtension.swift in Sources */,
@@ -1115,7 +1101,6 @@
 				E26728B01E9A37DE00DE844E /* OccupiableTests.swift in Sources */,
 				E26728B21E9A37DE00DE844E /* UITestingTests.swift in Sources */,
 				E26728A51E9A37D600DE844E /* DoubleExtensionTests.swift in Sources */,
-				E26728A91E9A37D600DE844E /* NSRangeExtensionTests.swift in Sources */,
 				E267289D1E9A37D200DE844E /* UIViewExtensionTests.swift in Sources */,
 				E26728A01E9A37D600DE844E /* CGRectExtensionTest.swift in Sources */,
 				E26728AE1E9A37D600DE844E /* UserDefaultsExtensionTests.swift in Sources */,
@@ -1158,7 +1143,6 @@
 				E26729641E9A3B5900DE844E /* IteratableTests.swift in Sources */,
 				E26729611E9A3B4A00DE844E /* NSObjectExtensionTests.swift in Sources */,
 				E26729511E9A3B4500DE844E /* CGFloatLiteralTests.swift in Sources */,
-				E267295B1E9A3B4500DE844E /* NSRangeExtensionTests.swift in Sources */,
 				E26729681E9A3B5D00DE844E /* UnitTestingTests.swift in Sources */,
 				E26729541E9A3B4500DE844E /* DateCalendarExtensionTests.swift in Sources */,
 				E267295D1E9A3B4500DE844E /* SwiftyColorTests.swift in Sources */,
@@ -1190,7 +1174,6 @@
 				E26728E31E9A388700DE844E /* URLExtensionTests.swift in Sources */,
 				E26728E91E9A389100DE844E /* UnitTestingTests.swift in Sources */,
 				E26728DB1E9A388700DE844E /* DoubleExtensionTests.swift in Sources */,
-				E26728DF1E9A388700DE844E /* NSRangeExtensionTests.swift in Sources */,
 				E23ED9D21E9A56010059BED7 /* CGSizeExtensionTests.swift in Sources */,
 				E26728D41E9A388700DE844E /* ArrayExtensionTests.swift in Sources */,
 				E26728DA1E9A388700DE844E /* DictionaryExtensionTests.swift in Sources */,
@@ -1211,7 +1194,6 @@
 				E26728911E9A37AE00DE844E /* BlockLongPressGestureRecognizer.swift in Sources */,
 				E26728851E9A379F00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
 				E26728731E9A379900DE844E /* UISwitchExtension.swift in Sources */,
-				E26728861E9A379F00DE844E /* NSRangeExtension.swift in Sources */,
 				E267286D1E9A379900DE844E /* UIApplicationExtension.swift in Sources */,
 				E26728921E9A37AE00DE844E /* BlockPanGestureRecognizer.swift in Sources */,
 				E267287C1E9A379F00DE844E /* ColorExtension.swift in Sources */,
