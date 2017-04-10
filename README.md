@@ -25,13 +25,11 @@ Check out the repository to find examples / tests for each feature.
 - [Bundle](#bundle-extension)
 - [CGFloat](#cgfloat-extension)
 - [CGRect](#cgrect-extension)
-- [CollectionType](#collectiontype-extension)
 - [Date](#date-extension)
 - [Dictionary](#dictionary-extension)
 - [Double](#double-extension)
 - [FileManager](#filemanager-extension)
 - [Int](#int-extension)
-- [MutableCollectionType](#mutablecollectiontype-extension)
 - [NotificationCenter](#notificationcenter-extension)
 - [NSLayoutConstraint](#nslayoutconstraint-extension)
 - [NSMutableAttributedString](#nsmutableattributedstring-extension)
@@ -183,6 +181,17 @@ var array = [1, 2, 3, 4]
 print(array.split(intoChunksOf: 2)) // [[1, 2], [3, 4]]
 ```
 
+Shuffle array's elements:
+
+``` swift
+var array = [1, 2, 3, 5, 6]
+array.shuffle()
+print(array) // [3, 6, 1, 2, 5]
+
+let arrayShuffled = array.shuffled()
+print(arrayShuffled) // [2, 1, 6, 3, 5]
+```
+
 Test all elements of an array against a closure:
 
 ``` swift
@@ -258,16 +267,6 @@ let tallerRect = rect.with(height: 100) // x: 10, y: 20, width: 30, height: 100
 let rectAtAnotherPosition = rect.with(x: 100).with(y: 200) // x: 100, y: 200, width: 30, height: 40
 let rectWithAnotherSize = rect.with(size: CGSize(width: 200, height: 200)) // x: 10, y: 20, width: 200, height: 200
 let rectAtYetAnotherPosition = rect.with(origin: CGPoint(x: 100, y: 100)) // x: 100, y: 100, width: 30, height: 40
-```
-
-### CollectionType extension
-
-Shuffle a collection:
-
-``` swift
-let myArray = [1, 2, 3, "5", "6]
-let arraySuffled = myArray.shuffled()
-print(arraySuffled) // [3, "6", 1, 2, "5"]
 ```
 
 ## Date extension
@@ -500,16 +499,6 @@ Formatted value with the locale currency:
 
 ```
 print(10.formattedPrice) // "$10.00"
-```
-
-### MutableCollectionType extension
-
-Shuffle a collection:
-
-``` swift
-var myArray = [1, 2, 3, "5", "6]
-myArray.shuffle()
-print(newArray) // [3, "6", 1, 2, "5"]
 ```
 
 ### NotificationCenter extension

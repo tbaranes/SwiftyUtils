@@ -93,6 +93,12 @@ extension ArrayExtensionTests {
         XCTAssertNil([].random())
     }
 
+}
+
+// MARK: - Index Getter
+
+extension ArrayExtensionTests {
+
     func testIndexesOf() {
         var indexes = array.indexes(of: 1)
         XCTAssertEqual(indexes, [1, 6])
@@ -116,6 +122,12 @@ extension ArrayExtensionTests {
         index = array.firstIndex(of: 12345)
         XCTAssertNil(index)
     }
+
+}
+
+// MARK: - Transform
+
+extension ArrayExtensionTests {
 
     func testDifference() {
         let a = [Int](0...8), b = [Int](3...4), c = [Int](1...2)
@@ -143,6 +155,22 @@ extension ArrayExtensionTests {
         XCTAssertEqual(split[0][1], 1)
         XCTAssertEqual(split[1][0], 2)
         XCTAssertEqual(split[1][1], 3)
+    }
+
+    func testShuffle() {
+        var array = [1, 2, 3, 4, 5]
+        let copyArray = array
+        _ = array.shuffle()
+
+        XCTAssertNotNil(array)
+        XCTAssertEqual(array.count, copyArray.count)
+
+        for element in copyArray {
+            if let i = array.index(of: element) {
+                array.remove(at: i)
+            }
+        }
+        XCTAssertEqual(array, [])
     }
 
 }
