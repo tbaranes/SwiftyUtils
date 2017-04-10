@@ -54,7 +54,7 @@ public extension FileManager {
 
 }
 
-// MARK: - Delete
+// MARK: - Remove
 
 public extension FileManager {
 

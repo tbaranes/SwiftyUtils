@@ -20,13 +20,14 @@ extension FileManagerTests {
 
     func testCreateDirectory() {
         let directoryURL = FileManager.default.document
-        let _ = directoryURL.appendingPathComponent("demo", isDirectory: true)
+        _ = directoryURL.appendingPathComponent("demo", isDirectory: true)
         do {
             try FileManager.default.createDirectory(at: directoryURL)
             XCTAssertTrue(FileManager.default.fileExists(atPath: directoryURL.path))
         } catch {
-            XCTAssertTrue(false)
+            XCTFail()
         }
     }
 
 }
+
