@@ -827,7 +827,7 @@ Schedule timer every seconds:
 
 ``` swift
 var count = 0
-Timer.every(1.seconds, fireImmediately: true) { timer in // fireImmediately is an optional parameter, defaults to false
+Timer.every(1.second, fireImmediately: true) { timer in // fireImmediately is an optional parameter, defaults to false
     print("Will print every second")
     if count == 3 {
         timer.invalidate()
