@@ -827,7 +827,7 @@ Schedule timer every seconds:
 
 ``` swift
 var count = 0
-Timer.every(1.seconds, fireImmediately: true) { (timer: Timer) in // fireImmediately is an optional parameter, defaults to false
+Timer.every(1.seconds, fireImmediately: true) { timer in // fireImmediately is an optional parameter, defaults to false
     print("Will print every second")
     if count == 3 {
         timer.invalidate()
@@ -839,7 +839,7 @@ Timer.every(1.seconds, fireImmediately: true) { (timer: Timer) in // fireImmedia
 Schedule timer after a certain delay:
 
 ``` swift
-Timer.after(2.seconds) {
+Timer.after(2.seconds) { _ in
     print("Prints this 2 seconds later in main queue")
 }
 ```
@@ -847,7 +847,7 @@ Timer.after(2.seconds) {
 Manual scheduling a timer:
 
 ``` swift
-let timer = Timer.new(every: 2.seconds) {
+let timer = Timer.new(every: 2.seconds) { _ in
     print("Prints this 2 seconds later in main queue")
 }
 timer.start(onRunLoop: RunLoop.current, modes: RunLoopMode.defaultRunLoopMode)
@@ -856,7 +856,7 @@ timer.start(onRunLoop: RunLoop.current, modes: RunLoopMode.defaultRunLoopMode)
 Manual scheduling a timer with a delay:
 
 ``` swift
-let timer = Timer.new(after: 2.seconds) {
+let timer = Timer.new(after: 2.seconds) { _ in
     print("Prints this 2 seconds later in main queue")
 }
 timer.start(onRunLoop: RunLoop.current, modes: RunLoopMode.defaultRunLoopMode)
