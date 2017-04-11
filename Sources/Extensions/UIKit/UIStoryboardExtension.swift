@@ -7,10 +7,10 @@ import UIKit
 
 public extension UIStoryboard {
 
-    public static var main: UIStoryboard {
+    public class var main: UIStoryboard? {
         let bundle = Bundle.main
         guard let storyboardName = bundle.object(forInfoDictionaryKey: "UIMainStoryboardFile") as? String else {
-            fatalError("No main storyboard set in your app.")
+            return nil
         }
         return  UIStoryboard(name: storyboardName, bundle: bundle)
     }
