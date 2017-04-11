@@ -1217,7 +1217,7 @@ print(label.text) // I wi.
 Get the screen orientation:
 
 ```swift
-if UIInterfaceOrientationIsPortrait(UIScreen.screenOrientation()) {
+if UIInterfaceOrientationIsPortrait(UIScreen.screenOrientation) {
 	// Portrait
 } else {
 	// Landscape
@@ -1227,16 +1227,16 @@ if UIInterfaceOrientationIsPortrait(UIScreen.screenOrientation()) {
 Get the screen size:
 
 ```swift
-print(UIScreen.currentSize) // CGSize(375.0, 667.0) on iPhone6
-print(UIScreen.screenWidth) // 375.0 on iPhone6
-print(UIScreen.screenHeight) // 667.0 on iPhone6
-print(UIScreen.screenHeightWithoutStatusBar) // 647.0 on iPhone6
+print(UIScreen.size) // CGSize(375.0, 667.0) on iPhone6
+print(UIScreen.width) // 375.0 on iPhone6
+print(UIScreen.height) // 667.0 on iPhone6
+print(UIScreen.heightWithoutStatusBar) // 647.0 on iPhone6
 ```
 
 Get the status bar height:
 
 ```swift
-print(UIScreen.screenStatusBarHeight) // 20.0 on iPhone6
+print(UIScreen.statusBarHeight) // 20.0 on iPhone6
 ```
 
 ### UIStoryboard extension
