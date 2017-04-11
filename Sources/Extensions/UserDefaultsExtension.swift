@@ -20,21 +20,27 @@ public extension UserDefaults {
 
 }
 
-// MARK: - Helpers
+// MARK: - Misc
 
 public extension UserDefaults {
 
-    public static func contains(key: String) -> Bool {
-        return self.standard.contains(key: key)
+    public static func has(key: String) -> Bool {
+        return self.standard.has(key: key)
     }
 
-    public func contains(key: String) -> Bool {
+    public func has(key: String) -> Bool {
         return self.dictionaryRepresentation().keys.contains(key)
     }
 
-    public func reset() {
-        for key in Array(UserDefaults.standard.dictionaryRepresentation().keys) {
-            UserDefaults.standard.removeObject(forKey: key)
+}
+
+// MARK: - Remove
+
+public extension UserDefaults {
+
+    public func removeAll() {
+        for (key, _) in dictionaryRepresentation() {
+            removeObject(forKey: key)
         }
     }
 

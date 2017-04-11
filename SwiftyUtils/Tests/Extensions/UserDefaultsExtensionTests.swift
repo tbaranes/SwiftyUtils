@@ -30,20 +30,37 @@ extension UserDefaultsExtensionTests {
     }
 }
 
-// MARK -
+// MARK - Misc
 
 extension UserDefaultsExtensionTests {
 
-    func testContainsKeySuccess() {
+    func testHasKey() {
         let key = "aKey"
         let value = "aValue"
         UserDefaults.standard.set(value, forKey: key)
-        XCTAssertTrue(UserDefaults.contains(key: key))
+        XCTAssertTrue(UserDefaults.has(key: key))
+        XCTAssertFalse(UserDefaults.has(key: "fakeKey"))
     }
 
-    func testContainsKeyFailure() {
-        let key = "aFakeKey"
-        XCTAssertFalse(UserDefaults.contains(key: key))
+}
+
+// MARK - Remove
+
+extension UserDefaultsExtensionTests {
+
+    func testRemoveAll() {
+        func testRemoveAll() {
+            let defaults = UserDefaults.standard
+            defaults["a"] = "test1"
+            defaults["b"] = "test2"
+            let count = defaults.dictionaryRepresentation().count
+            XCTAssert(!defaults.dictionaryRepresentation().isEmpty)
+            defaults.removeAll()
+            XCTAssert(!defaults.has(key: "a"))
+            XCTAssert(!defaults.has(key: "b"))
+            // We'll still have the system keys present, but our two keys should be gone
+            XCTAssert(defaults.dictionaryRepresentation().count == count - 2)
+        }
     }
 
 }
