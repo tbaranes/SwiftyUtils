@@ -21,7 +21,6 @@ Check out the repository to find examples / tests for each feature.
 **Available for iOS, macOS, tvOS and watchOS:**
 
 - [Array](#array-extension)
-- [BlockNotification](#blocknotification)
 - [Bundle](#bundle-extension)
 - [CGFloat](#cgfloat-extension)
 - [CGPoint](#cgpoint-extension)
@@ -66,12 +65,6 @@ Check out the repository to find examples / tests for each feature.
 - [UIView](#uiview-extension)
 - [UIViewController](#uiviewcontroller-extension)
 - [Simulator](#simulator)
-- **Gestures:**
- - [BlockLongPressGesturesRecognizers](#blocklongpressgesturesrecognizers)
- - [BlockPanGesturesRecognizers](#blockpangesturesrecognizers)
- - [BlockPinchGesturesRecognizers](#blockpinchgesturesrecognizers)
- - [BlockSwipeGesturesRecognizers](#blockswipegesturesrecognizers)
- - [BlockTapGesturesRecognizers](#blocktapgesturesrecognizers)
 
 **Available for macOS:**
 
@@ -202,18 +195,6 @@ let result = array.testAll {
 	$0 == 1
 }
 print(result) // false
-```
-
-### BlockNotification
-
-```swift
-// Register a notification
-let notificationProxy = BlockNotification("aNotificationName": name) { notification in
-	print("notification received: \(notification.object))
-}
-
-// Post a notification
-NotificationCenter.default.postNotification("aNotificationName", object: "Hello world")
 ```
 
 ### Bundle extension
@@ -1312,79 +1293,6 @@ Check if you are running on a simulator:
 if !Simulator.isRunning {
   // add device specific operations here
 }
-```
-
-### BlockLongPressGesturesRecognizers
-
-```swift
-let longPressGesture = BlockLongPressGestureRecognizer() { _ in
-	print("long press gesture detected")
-}
-view.addGestureRecognizer(longPressGesture)
-
-// OR
-
-let longPressGesture = BlockLongPressGestureRecognizer(numberOfTapsRequired: 0, numberOfTouchesRequired: 1, minimumPressDuration: 0.5) { _ in
-	print("long press gesture detected")
-}
-view.addGestureRecognizer(longPressGesture)
-```
-
-### BlockPanGesturesRecognizers
-
-```swift
-let panGesture = BlockPanGestureRecognizer() { _ in
-	print("pan gesture detected"
-}
-view.addGestureRecognizer(panGesture)
-
-// OR
-
-let panGesture = BlockPanGestureRecognizer(minimumNumberOfTouches: 1) { _ in
-	print("pan gesture detected"
-}
-view.addGestureRecognizer(panGesture)
-```
-
-### BlockPinchGesturesRecognizers
-
-```swift
-let pinchGesture = BlockPinchGestureRecognizer { _ in
-	print("pinch gesture detected"
-}
-viewPinchGesture.addGestureRecognizer(pinchGesture)     
-```
-
-### BlockSwipeGesturesRecognizers
-
-```swift
-let swipeDownGesture = BlockSwipeGestureRecognizer(direction: .Down) { _ in
-	print("swipe gesture detected")
-}
-view.addGestureRecognizer(swipeDownGesture)
-
-// OR
-
-let swipeDownGesture = BlockSwipeGestureRecognizer(numberOfTouchesRequired: 1, direction: .Down) { _ in
-	print("swipe gesture detected")
-}
-view.addGestureRecognizer(swipeDownGesture)
-```
-
-### BlockTapGesturesRecognizers
-
-```swift
-let blockTapGesture = BlockTapGestureRecognizer() { _ in
-   print("tap gesture detected")
-}
-view.addGestureRecognizer(blockTapGesture)
-
-// OR
-
-let blockTapGesture = BlockTapGestureRecognizer(numberOfTapsRequired: 1, numberOfTouchesRequired: 1) { _ in
-   print("tap gesture detected")
-}
-view.addGestureRecognizer(blockTapGesture)
 ```
 
 ## Available on macOS
