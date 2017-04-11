@@ -27,7 +27,7 @@ Check out the repository to find examples / tests for each feature.
 - [CGPoint](#cgpoint-extension)
 - [CGRect](#cgrect-extension)
 - [CGSize](#cgsize-extension)
-- [{UI,NS}Color](#color-extension)
+- [Color](#color-extension)
 - [Date](#date-extension)
 - [Dictionary](#dictionary-extension)
 - [Double](#double-extension)
