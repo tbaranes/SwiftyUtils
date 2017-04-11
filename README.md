@@ -1054,14 +1054,6 @@ let label = UILabel().then {
 
 ## Available on iOS
 
-### UIApplication extension
-
-Get the current view controller display:
-
-```swift
-UIApplication.shared.topViewController()
-```
-
 ### UIAlertController extension
 
 Show a basic alert:
@@ -1069,6 +1061,15 @@ Show a basic alert:
 ```swift
 UIAlertController.show(title: "Title", message: "Message")
 UIAlertController.show(title: "Title", message: "Message", cancelTitle: "Custom cancel title")
+```
+
+### UIApplication extension
+
+Get the current view controller display:
+
+```swift
+UIApplication.shared.topViewController() // Using UIWindow's rootViewController as baseVC
+UIApplication.shared.topViewController(baseVC) // topVC from the base view controller
 ```
 
 ### UIDevice extension
