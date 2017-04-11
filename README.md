@@ -1295,26 +1295,19 @@ By settings your localizable key in your xib / storyboard, all yours string will
 Reset the navigation stack by deleting previous view controllers:
 
 ```swift
-        let navController = UINavigationController()
-        navController.pushViewController(vc1, animated: true)
-        navController.pushViewController(vc2, animated: true)
-        navController.pushViewController(vc3, animated: true)
-        vc3.deletePreviousViewControllers(true)
-        print(navController.viewControllers) // [vc3]
+let navController = UINavigationController()
+navController.pushViewController(vc1, animated: true)
+navController.pushViewController(vc2, animated: true)
+navController.pushViewController(vc3, animated: true)
+vc3.removePreviousControllers(true)
+print(navController.viewControllers) // [vc3]
 ```
 
-
-Setup your navigation bar:
+Check if ViewController is onscreen and not hidden:
 
 ```swift
-let vc = UIViewController()
-vc.setupBackButton(title: String = "Example", tintColor: UIColor.blueColor())
-vc.setupRightBarView(aView)
-
-let vc2 = UIViewController()
-vc2.setupBackButton(hidden: false)
-vc2.setupBar(leftView:  aView)
-vc2.setupBar(rightView: aView)
+let viewController = UIViewController()
+print(viewController.isVisible) // false
 ```
 
 ### Simulator
