@@ -696,9 +696,14 @@ print(uncamelled.uncamelled) // is_camelled
 Get the class name of a `NSObject`:
 
 ```swift
-let vc = UIViewController()
-print(vc.className) // UIViewController
-print(UIViewController.className) // UIViewController
+#if !os(macOS)
+	let vc = NSViewController()
+	print(vc.className) // NSViewController
+#else
+	let vc = UIViewController()
+	print(vc.className) // UIViewController
+	print(UIViewController.className) // UIViewController
+#endif
 ```
 
 ### NSRange extension
