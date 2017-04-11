@@ -8,7 +8,7 @@
 
 import XCTest
 
-class UIViewExtensionTests: XCTestCase {
+final class UIViewExtensionTests: XCTestCase {
     
     func testXYWHChanges() {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))

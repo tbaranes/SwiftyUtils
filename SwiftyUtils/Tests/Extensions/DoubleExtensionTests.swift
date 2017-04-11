@@ -6,7 +6,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class DoubleExtensionTests: XCTestCase {
+final class DoubleExtensionTests: XCTestCase {
 
     var value: Double = 1
 

@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyUtils
 
-class ImagesViewController: UIViewController {
+final class ImagesViewController: UIViewController {
 
     @IBOutlet weak var imageViewWithColor: UIImageView! {
         didSet {

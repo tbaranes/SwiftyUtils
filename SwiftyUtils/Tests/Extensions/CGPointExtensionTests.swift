@@ -9,7 +9,7 @@
 import XCTest
 import SwiftyUtils
 
-class CGPointExtensionTests: XCTestCase {
+final class CGPointExtensionTests: XCTestCase {
 
     func testOperators() {
         var point = CGPoint(x: 10, y: 10)

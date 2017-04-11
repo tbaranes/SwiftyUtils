@@ -6,7 +6,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class ArrayExtensionTests: XCTestCase {
+final class ArrayExtensionTests: XCTestCase {
 
     var array = [Int]()
 

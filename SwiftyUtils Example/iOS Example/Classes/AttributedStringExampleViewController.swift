@@ -6,7 +6,7 @@
 import UIKit
 import SwiftyUtils
 
-class AttributedStringExampleViewController: UIViewController {
+final class AttributedStringExampleViewController: UIViewController {
 
     @IBOutlet weak var labelColorizeAfterOccurence: UILabel! {
         didSet {

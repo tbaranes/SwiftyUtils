@@ -6,7 +6,7 @@
 import UIKit
 import SwiftyUtils
 
-class OthersExampleViewController: UIViewController {
+final class OthersExampleViewController: UIViewController {
 
     // fromNib
     // NSMutableAttributedstring

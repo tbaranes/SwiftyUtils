@@ -5,7 +5,7 @@
 
 import UIKit
 
-class LocalizablesExampleViewController: UIViewController {
+final class LocalizablesExampleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

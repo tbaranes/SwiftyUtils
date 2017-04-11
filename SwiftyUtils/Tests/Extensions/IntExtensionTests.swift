@@ -6,7 +6,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class IntExtensionTests: XCTestCase {
+final class IntExtensionTests: XCTestCase {
 
     // MARK - Life cycle
 

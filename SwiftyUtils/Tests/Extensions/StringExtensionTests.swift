@@ -6,7 +6,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class StringExtensionTests: XCTestCase {
+final class StringExtensionTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

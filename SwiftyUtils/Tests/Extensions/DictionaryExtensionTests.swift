@@ -6,7 +6,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class DictionaryExtensionTests: XCTestCase {
+final class DictionaryExtensionTests: XCTestCase {
 
     var firstdic: [String:Int]!
     var secondDic: [String:Int]!

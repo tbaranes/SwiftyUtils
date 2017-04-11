@@ -6,7 +6,7 @@
 import UIKit
 import SwiftyUtils
 
-class InjectedViewController: UIViewController, Injectable {
+final class InjectedViewController: UIViewController, Injectable {
 
     @IBOutlet weak var labelStringInjected: UILabel!
     fileprivate var stringInjected: String!

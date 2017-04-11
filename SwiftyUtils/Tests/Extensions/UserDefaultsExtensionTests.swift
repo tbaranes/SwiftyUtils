@@ -6,7 +6,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class UserDefaultsExtensionTests: XCTestCase {
+final class UserDefaultsExtensionTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

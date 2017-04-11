@@ -12,7 +12,7 @@ struct User {
 }
 extension User: Then {}
 
-class ThenTests: XCTestCase {
+final class ThenTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

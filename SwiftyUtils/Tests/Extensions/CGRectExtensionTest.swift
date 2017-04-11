@@ -9,7 +9,7 @@
 import XCTest
 import SwiftyUtils
 
-class CGRectExtensionTest: XCTestCase {
+final class CGRectExtensionTest: XCTestCase {
     
     func testXYWHChanges() {
         let rect = CGRect(x: 1, y: 2, width: 3, height: 4)
