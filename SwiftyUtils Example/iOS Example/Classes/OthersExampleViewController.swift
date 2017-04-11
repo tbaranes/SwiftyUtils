@@ -25,7 +25,7 @@ final class OthersExampleViewController: UIViewController {
 
     @IBOutlet weak var labelScreenOrientation: UILabel! {
         didSet {
-            let isPortrait = UIInterfaceOrientationIsPortrait(UIScreen.screenOrientation())
+            let isPortrait = UIInterfaceOrientationIsPortrait(UIScreen.currentOrientation)
             let orientation = isPortrait ? "portrait" : "landscape"
             labelScreenOrientation.text = String(format: "Screen orientation: %@", orientation)
 
@@ -35,21 +35,21 @@ final class OthersExampleViewController: UIViewController {
     @IBOutlet weak var labelScreenSize: UILabel! {
         didSet {
             labelScreenSize.text = String(format: "Screen width: %.f, screen height: %.f",
-                                          UIScreen.screenSize().width, UIScreen.screenSize().height)
+                                          UIScreen.size.width, UIScreen.size.height)
         }
     }
 
     @IBOutlet weak var labelStatusBarHeight: UILabel! {
         didSet {
             labelStatusBarHeight.text = String(format: "Status bar height: %.f",
-                                               UIScreen.screenStatusBarHeight)
+                                               UIScreen.statusBarHeight)
         }
     }
 
     @IBOutlet weak var labelScreenHeightWithoutStatusBar: UILabel! {
         didSet {
             let text = String(format: "Screen height without status bar: %.f",
-                              UIScreen.screenHeightWithoutStatusBar)
+                              UIScreen.heightWithoutStatusBar)
             labelScreenHeightWithoutStatusBar.text = text
         }
     }

@@ -5,33 +5,48 @@
 
 import UIKit
 
+// MARK: - Size
+
 public extension UIScreen {
 
-    public static func screenSize() -> CGSize {
-        return CGSize(width: screenWidth, height: screenHeight)
+    public class var size: CGSize {
+        return CGSize(width: width, height: height)
     }
 
-    public static var screenWidth: CGFloat {
+    public class var width: CGFloat {
         return UIScreen.main.bounds.size.width
     }
 
-    public static var screenHeight: CGFloat {
+    public class var height: CGFloat {
         return UIScreen.main.bounds.size.height
     }
 
-    #if os(iOS)
-    public static func screenOrientation() -> UIInterfaceOrientation {
-    return UIApplication.shared.statusBarOrientation
-    }
+}
 
-    public static var screenStatusBarHeight: CGFloat {
+#if os(iOS)
+
+// MARK: - StatusBar
+
+public extension UIScreen {
+
+    public class var statusBarHeight: CGFloat {
         return UIApplication.shared.statusBarFrame.height
     }
 
-    public static var screenHeightWithoutStatusBar: CGFloat {
-        return UIInterfaceOrientationIsPortrait(screenOrientation()) ? UIScreen.main.bounds.size.height - screenStatusBarHeight :
-            UIScreen.main.bounds.size.width - screenStatusBarHeight
+    public class var heightWithoutStatusBar: CGFloat {
+        return UIInterfaceOrientationIsPortrait(currentOrientation) ? height - statusBarHeight :
+            UIScreen.main.bounds.size.width - statusBarHeight
     }
-    #endif
 
 }
+
+// MARK: - Orientation
+
+public extension UIScreen {
+
+    public class var currentOrientation: UIInterfaceOrientation {
+        return UIApplication.shared.statusBarOrientation
+    }
+
+}
+#endif
