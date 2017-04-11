@@ -1120,11 +1120,13 @@ UIApplication.shared.topViewController(from: baseVC) // topVC from the base view
 Access to your device information:
 
 ``` swift
-print(UIDevice.idForVendor()) // 104C9F7F-7403-4B3E-B6A2-C222C82074FF
+print(UIDevice.idForVendor) // 104C9F7F-7403-4B3E-B6A2-C222C82074FF
 print(UIDevice.systemName()) // iPhone OS
 print(UIDevice.systemVersion()) // 9.0
-print(UIDevice.deviceName()) // iPhone Simulator / iPhone 6 Wifi
-print(UIDevice.deviceLanguage()) // en
+print(UIDevice.deviceName) // iPhone Simulator / iPhone 6 Wifi
+print(UIDevice.deviceLanguage) // en
+print(UIDevice.isPhone) // true or false
+print(UIDevice.isPad) // true or false
 ```
 
 Check your system version:
@@ -1139,8 +1141,7 @@ Force device orientation:
 
 ```swift
 UIDevice.forceRotation(.portrait)
-// or
-UIDevice.current.setValue(orientation.rawValue, forKey: "orientation")
+UIDevice.current.forceRotation(.portrait)
 ```
 
 ### UIImage extension
