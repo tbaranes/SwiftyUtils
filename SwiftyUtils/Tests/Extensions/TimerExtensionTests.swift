@@ -29,7 +29,7 @@ class TimerTests: XCTestCase {
 
     func testEvery() {
         var fired = false
-        timer1 = Timer.every(0.1.seconds) {
+        timer1 = Timer.every(0.1.seconds) { _ in
             if fired {
                 self.testNewAfter()
                 self.timer1.invalidate()
@@ -39,8 +39,8 @@ class TimerTests: XCTestCase {
         }
     }
 
-    let timer2 = Timer.new(after: 0.1.seconds) { fatalError() }
-    let timer3 = Timer.new(every: 0.1.seconds) { fatalError() }
+    let timer2 = Timer.new(after: 0.1.seconds) { _ in fatalError() }
+    let timer3 = Timer.new(every: 0.1.seconds) { _ in fatalError() }
 
     func testNewAfter() {
         let timer = Timer.new(after: 0.1.seconds) {
@@ -53,7 +53,7 @@ class TimerTests: XCTestCase {
 
     func testNewEvery() {
         var fired = false
-        timer4 = Timer.new(every: 0.1.seconds) {
+        timer4 = Timer.new(every: 0.1.seconds) { _ in
             if fired {
                 self.timer4.invalidate()
                 self.testStart()
@@ -78,7 +78,7 @@ class TimerTests: XCTestCase {
 
     func testTimerFired() {
         var fires = 0
-        let timer = Timer.new(every: 0.1.seconds) { (timer: Timer) in
+        let timer = Timer.new(every: 0.1.seconds) { timer in
             guard fires <= 1 else { fatalError("should be invalidated") }
             defer { fires += 1 }
 
@@ -92,7 +92,7 @@ class TimerTests: XCTestCase {
 
     func testTimerCleanup() {
         var fires = 0
-        let _ = Timer.every(0.1.seconds) { (timer: Timer) in
+        let _ = Timer.every(0.1.seconds) { timer in
             guard fires <= 1 else { fatalError("should be invalidated") }
             defer { fires += 1 }
 

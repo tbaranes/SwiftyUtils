@@ -20,7 +20,7 @@ class NSRangeExtensionTests: XCTestCase {
 
 }
 
-    // MARK - Range
+// MARK - Range
 
 extension NSRangeExtensionTests {
 
@@ -38,4 +38,5 @@ extension NSRangeExtensionTests {
         XCTAssertEqual(range.location, 1)
         XCTAssertEqual(range.length, stringToFind.length)
     }
+
 }
