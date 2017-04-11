@@ -864,15 +864,14 @@ timer.start(onRunLoop: RunLoop.current, modes: RunLoopMode.defaultRunLoopMode)
 
 ### URL extension
 
-Put query in a Dictionary:
+Get query parameters from URL:
 
 ``` swift
 let url = URL(string: "http://example.com/api?v=1.1&q=google")
-if let queryParameters = url?.queryParameters {
-    print(queryParameters["v"]) //Optional("1.1")
-    print(queryParameters["q"]) //Optional("google")
-    print(queryParameters["other"]) //nil
-}
+let queryParameters = url?.queryParameters
+print(queryParameters?["v"]) // 1.1
+print(queryParameters?["q"]) // google
+print(queryParameters?["other"]) // nil
 ```
 
 Add skip backup attributes to you URL:
