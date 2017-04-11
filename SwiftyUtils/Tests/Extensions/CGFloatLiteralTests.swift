@@ -6,7 +6,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class CGFloatLiteralTests: XCTestCase {
+final class CGFloatLiteralTests: XCTestCase {
 
     func testCGFloatLiteral() {
         XCTAssertEqual(12.f, CGFloat(12))

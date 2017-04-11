@@ -9,7 +9,7 @@
 import XCTest
 import SwiftyUtils
 
-class CGSizeExtensionTests: XCTestCase {
+final class CGSizeExtensionTests: XCTestCase {
 
     func testOperators() {
         var size = CGSize(width: 10, height: 10)

@@ -11,7 +11,7 @@ public enum Alphabet: Iteratable {
 }
 
 
-class IteratableTests: XCTestCase {
+final class IteratableTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

@@ -6,7 +6,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class DateExtensionTests: XCTestCase {
+final class DateExtensionTests: XCTestCase {
 
     var string = ""
     let format = "dd-mm-yyyy hh:mm:ss"

@@ -6,7 +6,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class TimerTests: XCTestCase {
+final class TimerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

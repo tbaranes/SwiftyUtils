@@ -7,7 +7,7 @@ import Foundation
 import XCTest
 @testable import SwiftyUtils
 
-class UnitTestTests: XCTestCase {
+final class UnitTestTests: XCTestCase {
 
     func testIsRunning() {
         XCTAssertTrue(UnitTesting.isRunning)

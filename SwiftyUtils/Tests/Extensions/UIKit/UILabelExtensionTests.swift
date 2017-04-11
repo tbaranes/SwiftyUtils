@@ -12,7 +12,7 @@ import XCTest
 
 // MARK: Life cycle
 
-class UILabelExtensionTests: XCTestCase {
+final class UILabelExtensionTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

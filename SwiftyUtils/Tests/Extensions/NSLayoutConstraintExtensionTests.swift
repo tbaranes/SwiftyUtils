@@ -6,7 +6,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class NSLayoutConstraintExtensionTests: XCTestCase {
+final class NSLayoutConstraintExtensionTests: XCTestCase {
 
     var view: SwiftyView!
     var superview: SwiftyView!

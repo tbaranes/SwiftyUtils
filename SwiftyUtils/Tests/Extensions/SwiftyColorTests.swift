@@ -6,7 +6,7 @@
 import XCTest
 @testable import SwiftyUtils
 
-class SwiftyColorTests: XCTestCase {
+final class SwiftyColorTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
