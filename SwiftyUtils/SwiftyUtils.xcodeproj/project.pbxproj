@@ -62,13 +62,7 @@
 		E267288E1E9A37A600DE844E /* OccupiableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FE1E9A362600DE844E /* OccupiableProtocol.swift */; };
 		E267288F1E9A37A600DE844E /* Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FF1E9A362600DE844E /* Selfie.swift */; };
 		E26728901E9A37A600DE844E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728001E9A362600DE844E /* Then.swift */; };
-		E26728911E9A37AE00DE844E /* BlockLongPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F31E9A362600DE844E /* BlockLongPressGestureRecognizer.swift */; };
-		E26728921E9A37AE00DE844E /* BlockPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F41E9A362600DE844E /* BlockPanGestureRecognizer.swift */; };
-		E26728931E9A37AE00DE844E /* BlockPinchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F51E9A362600DE844E /* BlockPinchGestureRecognizer.swift */; };
-		E26728941E9A37AE00DE844E /* BlockSwipeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F61E9A362600DE844E /* BlockSwipeGestureRecognizer.swift */; };
-		E26728951E9A37AE00DE844E /* BlockTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F71E9A362600DE844E /* BlockTapGestureRecognizer.swift */; };
 		E26728961E9A37AE00DE844E /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F81E9A362600DE844E /* Simulator.swift */; };
-		E26728971E9A37AE00DE844E /* BlockNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F11E9A362600DE844E /* BlockNotification.swift */; };
 		E26728981E9A37AE00DE844E /* UITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F91E9A362600DE844E /* UITesting.swift */; };
 		E26728991E9A37AE00DE844E /* UnitTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FA1E9A362600DE844E /* UnitTesting.swift */; };
 		E267289A1E9A37AE00DE844E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727CA1E9A362600DE844E /* Constants.swift */; };
@@ -122,7 +116,6 @@
 		E26728CC1E9A37FD00DE844E /* OccupiableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FE1E9A362600DE844E /* OccupiableProtocol.swift */; };
 		E26728CD1E9A37FD00DE844E /* Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FF1E9A362600DE844E /* Selfie.swift */; };
 		E26728CE1E9A37FD00DE844E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728001E9A362600DE844E /* Then.swift */; };
-		E26728CF1E9A380500DE844E /* BlockNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F11E9A362600DE844E /* BlockNotification.swift */; };
 		E26728D01E9A380500DE844E /* UITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F91E9A362600DE844E /* UITesting.swift */; };
 		E26728D11E9A380500DE844E /* UnitTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FA1E9A362600DE844E /* UnitTesting.swift */; };
 		E26728D21E9A380500DE844E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727CA1E9A362600DE844E /* Constants.swift */; };
@@ -200,16 +193,10 @@
 		E26729291E9A38FF00DE844E /* TimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E01E9A362600DE844E /* TimerExtension.swift */; };
 		E267292A1E9A38FF00DE844E /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727EE1E9A362600DE844E /* URLExtension.swift */; };
 		E267292B1E9A38FF00DE844E /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727EF1E9A362600DE844E /* UserDefaultsExtension.swift */; };
-		E267292C1E9A390700DE844E /* BlockLongPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F31E9A362600DE844E /* BlockLongPressGestureRecognizer.swift */; };
-		E267292D1E9A390700DE844E /* BlockPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F41E9A362600DE844E /* BlockPanGestureRecognizer.swift */; };
-		E267292F1E9A390700DE844E /* BlockSwipeGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F61E9A362600DE844E /* BlockSwipeGestureRecognizer.swift */; };
-		E26729301E9A390800DE844E /* BlockTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F71E9A362600DE844E /* BlockTapGestureRecognizer.swift */; };
 		E26729311E9A390800DE844E /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F81E9A362600DE844E /* Simulator.swift */; };
-		E26729321E9A390800DE844E /* BlockNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F11E9A362600DE844E /* BlockNotification.swift */; };
 		E26729331E9A390800DE844E /* UITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F91E9A362600DE844E /* UITesting.swift */; };
 		E26729341E9A390800DE844E /* UnitTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FA1E9A362600DE844E /* UnitTesting.swift */; };
 		E267293A1E9A390800DE844E /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F81E9A362600DE844E /* Simulator.swift */; };
-		E267293B1E9A390800DE844E /* BlockNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F11E9A362600DE844E /* BlockNotification.swift */; };
 		E267293C1E9A390800DE844E /* UITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F91E9A362600DE844E /* UITesting.swift */; };
 		E267293E1E9A390C00DE844E /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FC1E9A362600DE844E /* Injectable.swift */; };
 		E267293F1E9A390C00DE844E /* Iteratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FD1E9A362600DE844E /* Iteratable.swift */; };
@@ -318,12 +305,6 @@
 		E26727ED1E9A362600DE844E /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		E26727EE1E9A362600DE844E /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		E26727EF1E9A362600DE844E /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
-		E26727F11E9A362600DE844E /* BlockNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockNotification.swift; sourceTree = "<group>"; };
-		E26727F31E9A362600DE844E /* BlockLongPressGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockLongPressGestureRecognizer.swift; sourceTree = "<group>"; };
-		E26727F41E9A362600DE844E /* BlockPanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockPanGestureRecognizer.swift; sourceTree = "<group>"; };
-		E26727F51E9A362600DE844E /* BlockPinchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockPinchGestureRecognizer.swift; sourceTree = "<group>"; };
-		E26727F61E9A362600DE844E /* BlockSwipeGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockSwipeGestureRecognizer.swift; sourceTree = "<group>"; };
-		E26727F71E9A362600DE844E /* BlockTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		E26727F81E9A362600DE844E /* Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
 		E26727F91E9A362600DE844E /* UITesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITesting.swift; sourceTree = "<group>"; };
 		E26727FA1E9A362600DE844E /* UnitTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTesting.swift; sourceTree = "<group>"; };
@@ -517,7 +498,6 @@
 			isa = PBXGroup;
 			children = (
 				E26727F21E9A362600DE844E /* UIKit */,
-				E26727F11E9A362600DE844E /* BlockNotification.swift */,
 				E26727F91E9A362600DE844E /* UITesting.swift */,
 				E26727FA1E9A362600DE844E /* UnitTesting.swift */,
 			);
@@ -527,11 +507,6 @@
 		E26727F21E9A362600DE844E /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				E26727F31E9A362600DE844E /* BlockLongPressGestureRecognizer.swift */,
-				E26727F41E9A362600DE844E /* BlockPanGestureRecognizer.swift */,
-				E26727F51E9A362600DE844E /* BlockPinchGestureRecognizer.swift */,
-				E26727F61E9A362600DE844E /* BlockSwipeGestureRecognizer.swift */,
-				E26727F71E9A362600DE844E /* BlockTapGestureRecognizer.swift */,
 				E26727F81E9A362600DE844E /* Simulator.swift */,
 			);
 			path = UIKit;
@@ -979,7 +954,6 @@
 				E26729281E9A38FF00DE844E /* StringExtension.swift in Sources */,
 				E26729471E9A390C00DE844E /* Then.swift in Sources */,
 				E23ED9C31E9A526D0059BED7 /* CGSizeExtension.swift in Sources */,
-				E267293B1E9A390800DE844E /* BlockNotification.swift in Sources */,
 				E26729251E9A38FF00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
 				E26729441E9A390C00DE844E /* Iteratable.swift in Sources */,
 				E26729261E9A38FF00DE844E /* NSRangeExtension.swift in Sources */,
@@ -1019,17 +993,13 @@
 				E26729091E9A38FE00DE844E /* DateExtension.swift in Sources */,
 				E26729131E9A38FE00DE844E /* StringExtension.swift in Sources */,
 				E26729421E9A390C00DE844E /* Then.swift in Sources */,
-				E26729321E9A390800DE844E /* BlockNotification.swift in Sources */,
 				E26729101E9A38FE00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
-				E26729301E9A390800DE844E /* BlockTapGestureRecognizer.swift in Sources */,
 				E267293F1E9A390C00DE844E /* Iteratable.swift in Sources */,
 				E26729111E9A38FE00DE844E /* NSRangeExtension.swift in Sources */,
 				E26728EC1E9A38F700DE844E /* UIApplicationExtension.swift in Sources */,
 				E26729071E9A38FE00DE844E /* ColorExtension.swift in Sources */,
-				E267292C1E9A390700DE844E /* BlockLongPressGestureRecognizer.swift in Sources */,
 				E26729411E9A390C00DE844E /* Selfie.swift in Sources */,
 				E267290D1E9A38FE00DE844E /* IntExtension.swift in Sources */,
-				E267292D1E9A390700DE844E /* BlockPanGestureRecognizer.swift in Sources */,
 				E26729161E9A38FE00DE844E /* UserDefaultsExtension.swift in Sources */,
 				E26729031E9A38FE00DE844E /* BundleExtension.swift in Sources */,
 				E26728F11E9A38F700DE844E /* UIStoryboardExtension.swift in Sources */,
@@ -1052,7 +1022,6 @@
 				E26729121E9A38FE00DE844E /* ReusableFormatters.swift in Sources */,
 				E26729041E9A38FE00DE844E /* CGFloatLiteral.swift in Sources */,
 				E267293E1E9A390C00DE844E /* Injectable.swift in Sources */,
-				E267292F1E9A390700DE844E /* BlockSwipeGestureRecognizer.swift in Sources */,
 				E267290E1E9A38FE00DE844E /* NotificationCenterExtension.swift in Sources */,
 				E26729341E9A390800DE844E /* UnitTesting.swift in Sources */,
 				E26728F41E9A38F700DE844E /* UIViewControllerExtension.swift in Sources */,
@@ -1067,7 +1036,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E26728CF1E9A380500DE844E /* BlockNotification.swift in Sources */,
 				E26728D01E9A380500DE844E /* UITesting.swift in Sources */,
 				E23ED9BC1E9A525E0059BED7 /* CGPointExtension.swift in Sources */,
 				E26728B71E9A37F600DE844E /* CGFloatLiteral.swift in Sources */,
@@ -1208,12 +1176,10 @@
 				E267287E1E9A379F00DE844E /* DateExtension.swift in Sources */,
 				E26728881E9A379F00DE844E /* StringExtension.swift in Sources */,
 				E267288E1E9A37A600DE844E /* OccupiableProtocol.swift in Sources */,
-				E26728911E9A37AE00DE844E /* BlockLongPressGestureRecognizer.swift in Sources */,
 				E26728851E9A379F00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
 				E26728731E9A379900DE844E /* UISwitchExtension.swift in Sources */,
 				E26728861E9A379F00DE844E /* NSRangeExtension.swift in Sources */,
 				E267286D1E9A379900DE844E /* UIApplicationExtension.swift in Sources */,
-				E26728921E9A37AE00DE844E /* BlockPanGestureRecognizer.swift in Sources */,
 				E267287C1E9A379F00DE844E /* ColorExtension.swift in Sources */,
 				E23ED9BB1E9A525B0059BED7 /* CGPointExtension.swift in Sources */,
 				E26728821E9A379F00DE844E /* IntExtension.swift in Sources */,
@@ -1223,18 +1189,14 @@
 				E267288C1E9A37A600DE844E /* Injectable.swift in Sources */,
 				E26728981E9A37AE00DE844E /* UITesting.swift in Sources */,
 				E26728721E9A379900DE844E /* UIStoryboardExtension.swift in Sources */,
-				E26728971E9A37AE00DE844E /* BlockNotification.swift in Sources */,
 				E267286E1E9A379900DE844E /* UIDeviceExtension.swift in Sources */,
 				E26728741E9A379900DE844E /* UITextFieldExtension.swift in Sources */,
 				E267289A1E9A37AE00DE844E /* Constants.swift in Sources */,
 				E26728761E9A379900DE844E /* UIViewExtension.swift in Sources */,
 				E26728961E9A37AE00DE844E /* Simulator.swift in Sources */,
-				E26728941E9A37AE00DE844E /* BlockSwipeGestureRecognizer.swift in Sources */,
 				E267286C1E9A379900DE844E /* UIAlertControllerExtension.swift in Sources */,
-				E26728931E9A37AE00DE844E /* BlockPinchGestureRecognizer.swift in Sources */,
 				E267287A1E9A379F00DE844E /* CGRectExtensions.swift in Sources */,
 				E26728841E9A379F00DE844E /* NSLayoutConstraintsExtension.swift in Sources */,
-				E26728951E9A37AE00DE844E /* BlockTapGestureRecognizer.swift in Sources */,
 				E267287F1E9A379F00DE844E /* DictionaryExtension.swift in Sources */,
 				E26728801E9A379F00DE844E /* DoubleExtension.swift in Sources */,
 				E26728901E9A37A600DE844E /* Then.swift in Sources */,
