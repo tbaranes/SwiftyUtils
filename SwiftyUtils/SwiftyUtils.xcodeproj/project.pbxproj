@@ -232,8 +232,7 @@
 		E27300641CCD0655003156EC /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E273FED71CCCFF5B003156EC /* SwiftyUtils.framework */; };
 		E273009D1CCD06CD003156EC /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E273000A1CCD031B003156EC /* SwiftyUtils.framework */; };
 		E27300AC1CCD06E8003156EC /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27300171CCD03ED003156EC /* SwiftyUtils.framework */; };
-		E29DD9011E9CC2F90076CFD7 /* NSObjectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728451E9A36F100DE844E /* NSObjectExtensionTests.swift */; };
-		E29DD9061E9CC8C10076CFD7 /* UIAlertControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29DD9041E9CC8BD0076CFD7 /* UIAlertControllerExtensionTests.swift */; };
+		E29DD90A1E9CD5DA0076CFD7 /* UISwitchExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29DD9071E9CD5660076CFD7 /* UISwitchExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -342,6 +341,7 @@
 		E27300A71CCD06E8003156EC /* SwiftyUtils macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftyUtils macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E273FED71CCCFF5B003156EC /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29DD9041E9CC8BD0076CFD7 /* UIAlertControllerExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensionTests.swift; sourceTree = "<group>"; };
+		E29DD9071E9CD5660076CFD7 /* UISwitchExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -563,6 +563,7 @@
 				E26728461E9A36F100DE844E /* UILabelExtensionTests.swift */,
 				E26728471E9A36F100DE844E /* UIViewExtensionTests.swift */,
 				E29DD9041E9CC8BD0076CFD7 /* UIAlertControllerExtensionTests.swift */,
+				E29DD9071E9CD5660076CFD7 /* UISwitchExtensionTests.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1077,6 +1078,7 @@
 				E267289C1E9A37D200DE844E /* UILabelExtensionTests.swift in Sources */,
 				E26728B01E9A37DE00DE844E /* OccupiableTests.swift in Sources */,
 				E26728B21E9A37DE00DE844E /* UITestingTests.swift in Sources */,
+				E29DD90A1E9CD5DA0076CFD7 /* UISwitchExtensionTests.swift in Sources */,
 				E26728A51E9A37D600DE844E /* DoubleExtensionTests.swift in Sources */,
 				E26728A91E9A37D600DE844E /* NSRangeExtensionTests.swift in Sources */,
 				E267289D1E9A37D200DE844E /* UIViewExtensionTests.swift in Sources */,
