@@ -9,7 +9,19 @@
 import XCTest
 
 final class NSViewExtensionTests: XCTestCase {
-    
+
+    override func setUp() {
+        super.setUp()
+    }
+
+    override func tearDown() {
+        super.tearDown()
+    }
+
+}
+
+extension NSViewExtensionTests {
+
     func testXYWHChanges() {
         let view = NSView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         view.x = 10

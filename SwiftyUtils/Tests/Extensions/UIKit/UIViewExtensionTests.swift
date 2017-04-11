@@ -10,6 +10,20 @@ import XCTest
 
 final class UIViewExtensionTests: XCTestCase {
     
+    override func setUp() {
+        super.setUp()
+    }
+
+    override func tearDown() {
+        super.tearDown()
+    }
+
+}
+
+// MARK: - Frame
+
+extension UIViewExtensionTests {
+
     func testXYWHChanges() {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         view.x = 10
@@ -18,5 +32,5 @@ final class UIViewExtensionTests: XCTestCase {
         view.height = 40
         XCTAssertEqual(view.frame, CGRect(x: 10, y: 20, width: 30, height: 40))
     }
-    
+
 }
