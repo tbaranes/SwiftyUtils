@@ -58,7 +58,6 @@ Check out the repository to find examples / tests for each feature.
 - [UIImage](#uiimage-extension)
 - [UILabel](#uilabel-extension)
 - [UIScreen](#uiscreen-extension)
-- [UIStoryboard](#uistoryboard-extension)
 - [UISwitch](#uiswitch-extension)
 - [UITextFied](#uitextfield-extension)
 - [UIView](#uiview-extension)
@@ -1187,14 +1186,6 @@ Get the status bar height:
 
 ```swift
 print(UIScreen.screenStatusBarHeight) // 20.0 on iPhone6
-```
-
-### UIStoryboard extension
-
-Get the application's main storyboard:
-
-```swift
-let storyboard = UIStoryboard.main
 ```
 
 ### UISwitch extension
