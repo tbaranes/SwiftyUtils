@@ -48,7 +48,6 @@ Check out the repository to find examples / tests for each feature.
  - [Injectable](#injectable)
  - [Iteratable](#iteratable)
  - [Occupiable](#occupiable)
- - [Selfie](#selfie)
  - [Then](#then)
 
 **Available for iOS:**
@@ -1034,19 +1033,6 @@ print(string.isEmpty) // false
 ```swift
 let string: String? = ""
 print(string.isNilOrEmpty) // true
-```
-
-### Selfie
-
-Log your classes's members and values when making a `description`, like Value types:
-
-```
-class MyModel: Selfie {
-	let property1 = "I'm a property"
-	let property2 = 100
-}
-
-print(MyModel().description) // MyModel(property1: "I'm a property", property2: 100)
 ```
 
 ### Then

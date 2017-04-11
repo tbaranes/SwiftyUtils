@@ -59,8 +59,7 @@
 		E267288B1E9A379F00DE844E /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727EF1E9A362600DE844E /* UserDefaultsExtension.swift */; };
 		E267288C1E9A37A600DE844E /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FC1E9A362600DE844E /* Injectable.swift */; };
 		E267288D1E9A37A600DE844E /* Iteratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FD1E9A362600DE844E /* Iteratable.swift */; };
-		E267288E1E9A37A600DE844E /* OccupiableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FE1E9A362600DE844E /* OccupiableProtocol.swift */; };
-		E267288F1E9A37A600DE844E /* Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FF1E9A362600DE844E /* Selfie.swift */; };
+		E267288E1E9A37A600DE844E /* Occupiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FE1E9A362600DE844E /* Occupiable.swift */; };
 		E26728901E9A37A600DE844E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728001E9A362600DE844E /* Then.swift */; };
 		E26728961E9A37AE00DE844E /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F81E9A362600DE844E /* Simulator.swift */; };
 		E26728981E9A37AE00DE844E /* UITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F91E9A362600DE844E /* UITesting.swift */; };
@@ -113,8 +112,7 @@
 		E26728C91E9A37F600DE844E /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727EF1E9A362600DE844E /* UserDefaultsExtension.swift */; };
 		E26728CA1E9A37FD00DE844E /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FC1E9A362600DE844E /* Injectable.swift */; };
 		E26728CB1E9A37FD00DE844E /* Iteratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FD1E9A362600DE844E /* Iteratable.swift */; };
-		E26728CC1E9A37FD00DE844E /* OccupiableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FE1E9A362600DE844E /* OccupiableProtocol.swift */; };
-		E26728CD1E9A37FD00DE844E /* Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FF1E9A362600DE844E /* Selfie.swift */; };
+		E26728CC1E9A37FD00DE844E /* Occupiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FE1E9A362600DE844E /* Occupiable.swift */; };
 		E26728CE1E9A37FD00DE844E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728001E9A362600DE844E /* Then.swift */; };
 		E26728D01E9A380500DE844E /* UITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F91E9A362600DE844E /* UITesting.swift */; };
 		E26728D11E9A380500DE844E /* UnitTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FA1E9A362600DE844E /* UnitTesting.swift */; };
@@ -200,13 +198,11 @@
 		E267293C1E9A390800DE844E /* UITesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727F91E9A362600DE844E /* UITesting.swift */; };
 		E267293E1E9A390C00DE844E /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FC1E9A362600DE844E /* Injectable.swift */; };
 		E267293F1E9A390C00DE844E /* Iteratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FD1E9A362600DE844E /* Iteratable.swift */; };
-		E26729401E9A390C00DE844E /* OccupiableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FE1E9A362600DE844E /* OccupiableProtocol.swift */; };
-		E26729411E9A390C00DE844E /* Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FF1E9A362600DE844E /* Selfie.swift */; };
+		E26729401E9A390C00DE844E /* Occupiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FE1E9A362600DE844E /* Occupiable.swift */; };
 		E26729421E9A390C00DE844E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728001E9A362600DE844E /* Then.swift */; };
 		E26729431E9A390C00DE844E /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FC1E9A362600DE844E /* Injectable.swift */; };
 		E26729441E9A390C00DE844E /* Iteratable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FD1E9A362600DE844E /* Iteratable.swift */; };
-		E26729451E9A390C00DE844E /* OccupiableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FE1E9A362600DE844E /* OccupiableProtocol.swift */; };
-		E26729461E9A390C00DE844E /* Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FF1E9A362600DE844E /* Selfie.swift */; };
+		E26729451E9A390C00DE844E /* Occupiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FE1E9A362600DE844E /* Occupiable.swift */; };
 		E26729471E9A390C00DE844E /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728001E9A362600DE844E /* Then.swift */; };
 		E26729481E9A393200DE844E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727CA1E9A362600DE844E /* Constants.swift */; };
 		E26729491E9A393300DE844E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727CA1E9A362600DE844E /* Constants.swift */; };
@@ -310,8 +306,7 @@
 		E26727FA1E9A362600DE844E /* UnitTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTesting.swift; sourceTree = "<group>"; };
 		E26727FC1E9A362600DE844E /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		E26727FD1E9A362600DE844E /* Iteratable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Iteratable.swift; sourceTree = "<group>"; };
-		E26727FE1E9A362600DE844E /* OccupiableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OccupiableProtocol.swift; sourceTree = "<group>"; };
-		E26727FF1E9A362600DE844E /* Selfie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Selfie.swift; sourceTree = "<group>"; };
+		E26727FE1E9A362600DE844E /* Occupiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Occupiable.swift; sourceTree = "<group>"; };
 		E26728001E9A362600DE844E /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		E26728341E9A36F100DE844E /* NSViewExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSViewExtensionsTest.swift; sourceTree = "<group>"; };
 		E26728351E9A36F100DE844E /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
@@ -517,8 +512,7 @@
 			children = (
 				E26727FC1E9A362600DE844E /* Injectable.swift */,
 				E26727FD1E9A362600DE844E /* Iteratable.swift */,
-				E26727FE1E9A362600DE844E /* OccupiableProtocol.swift */,
-				E26727FF1E9A362600DE844E /* Selfie.swift */,
+				E26727FE1E9A362600DE844E /* Occupiable.swift */,
 				E26728001E9A362600DE844E /* Then.swift */,
 			);
 			path = Protocols;
@@ -958,7 +952,6 @@
 				E26729441E9A390C00DE844E /* Iteratable.swift in Sources */,
 				E26729261E9A38FF00DE844E /* NSRangeExtension.swift in Sources */,
 				E267291C1E9A38FF00DE844E /* ColorExtension.swift in Sources */,
-				E26729461E9A390C00DE844E /* Selfie.swift in Sources */,
 				E26729221E9A38FF00DE844E /* IntExtension.swift in Sources */,
 				E267292B1E9A38FF00DE844E /* UserDefaultsExtension.swift in Sources */,
 				E26729181E9A38FF00DE844E /* BundleExtension.swift in Sources */,
@@ -976,7 +969,7 @@
 				E26729191E9A38FF00DE844E /* CGFloatLiteral.swift in Sources */,
 				E26729431E9A390C00DE844E /* Injectable.swift in Sources */,
 				E26729231E9A38FF00DE844E /* NotificationCenterExtension.swift in Sources */,
-				E26729451E9A390C00DE844E /* OccupiableProtocol.swift in Sources */,
+				E26729451E9A390C00DE844E /* Occupiable.swift in Sources */,
 				E267292A1E9A38FF00DE844E /* URLExtension.swift in Sources */,
 				E26728F61E9A38FA00DE844E /* NSObjectExtension.swift in Sources */,
 				E26729171E9A38FF00DE844E /* ArrayExtension.swift in Sources */,
@@ -998,7 +991,6 @@
 				E26729111E9A38FE00DE844E /* NSRangeExtension.swift in Sources */,
 				E26728EC1E9A38F700DE844E /* UIApplicationExtension.swift in Sources */,
 				E26729071E9A38FE00DE844E /* ColorExtension.swift in Sources */,
-				E26729411E9A390C00DE844E /* Selfie.swift in Sources */,
 				E267290D1E9A38FE00DE844E /* IntExtension.swift in Sources */,
 				E26729161E9A38FE00DE844E /* UserDefaultsExtension.swift in Sources */,
 				E26729031E9A38FE00DE844E /* BundleExtension.swift in Sources */,
@@ -1025,7 +1017,7 @@
 				E267290E1E9A38FE00DE844E /* NotificationCenterExtension.swift in Sources */,
 				E26729341E9A390800DE844E /* UnitTesting.swift in Sources */,
 				E26728F41E9A38F700DE844E /* UIViewControllerExtension.swift in Sources */,
-				E26729401E9A390C00DE844E /* OccupiableProtocol.swift in Sources */,
+				E26729401E9A390C00DE844E /* Occupiable.swift in Sources */,
 				E26729151E9A38FE00DE844E /* URLExtension.swift in Sources */,
 				E26728EA1E9A38F700DE844E /* NSObjectExtension.swift in Sources */,
 				E26729021E9A38FE00DE844E /* ArrayExtension.swift in Sources */,
@@ -1056,9 +1048,8 @@
 				E26728C01E9A37F600DE844E /* IntExtension.swift in Sources */,
 				E26728B81E9A37F600DE844E /* CGRectExtensions.swift in Sources */,
 				E26728C31E9A37F600DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
-				E26728CC1E9A37FD00DE844E /* OccupiableProtocol.swift in Sources */,
+				E26728CC1E9A37FD00DE844E /* Occupiable.swift in Sources */,
 				E26728B51E9A37F600DE844E /* ArrayExtension.swift in Sources */,
-				E26728CD1E9A37FD00DE844E /* Selfie.swift in Sources */,
 				E26728CB1E9A37FD00DE844E /* Iteratable.swift in Sources */,
 				E26728BD1E9A37F600DE844E /* DictionaryExtension.swift in Sources */,
 				E26728C21E9A37F600DE844E /* NSLayoutConstraintsExtension.swift in Sources */,
@@ -1171,11 +1162,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E26728711E9A379900DE844E /* UIScreenExtension.swift in Sources */,
-				E267288F1E9A37A600DE844E /* Selfie.swift in Sources */,
 				E26728891E9A379F00DE844E /* TimerExtension.swift in Sources */,
 				E267287E1E9A379F00DE844E /* DateExtension.swift in Sources */,
 				E26728881E9A379F00DE844E /* StringExtension.swift in Sources */,
-				E267288E1E9A37A600DE844E /* OccupiableProtocol.swift in Sources */,
+				E267288E1E9A37A600DE844E /* Occupiable.swift in Sources */,
 				E26728851E9A379F00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
 				E26728731E9A379900DE844E /* UISwitchExtension.swift in Sources */,
 				E26728861E9A379F00DE844E /* NSRangeExtension.swift in Sources */,
