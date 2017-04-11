@@ -14,4 +14,5 @@ public struct Simulator {
             return false
         #endif
     }()
+
 }
