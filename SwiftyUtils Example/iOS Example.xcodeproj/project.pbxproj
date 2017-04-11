@@ -12,8 +12,6 @@
 		E21880A31D677ED5001888D2 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21880A21D677ED5001888D2 /* ImagesViewController.swift */; };
 		E27300E21CCD0D99003156EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281B9111C039BE4000DADBA /* AppDelegate.swift */; };
 		E27300E31CCD0D99003156EC /* LocalizablesExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2049E3E1C044EDD006D10E7 /* LocalizablesExampleViewController.swift */; };
-		E27300E41CCD0D99003156EC /* GesturesExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E281B9131C039BE4000DADBA /* GesturesExampleViewController.swift */; };
-		E27300E51CCD0D99003156EC /* NotificationsExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B88901C03B00F00CBA57B /* NotificationsExampleTableViewController.swift */; };
 		E27300E61CCD0D99003156EC /* AttributedStringExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B1D911C0645A300C986BF /* AttributedStringExampleViewController.swift */; };
 		E27300E71CCD0D99003156EC /* InjectableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E210DE351CCCC2940007F692 /* InjectableViewController.swift */; };
 		E27300E81CCD0D99003156EC /* InjectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E210DE371CCCC29B0007F692 /* InjectedViewController.swift */; };
@@ -105,8 +103,6 @@
 		E27300CC1CCD09D3003156EC /* SwiftyUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyUtils.xcodeproj; path = ../SwiftyUtils/SwiftyUtils.xcodeproj; sourceTree = "<group>"; };
 		E281B9111C039BE4000DADBA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E281B9121C039BE4000DADBA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		E281B9131C039BE4000DADBA /* GesturesExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GesturesExampleViewController.swift; sourceTree = "<group>"; };
-		E28B88901C03B00F00CBA57B /* NotificationsExampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsExampleTableViewController.swift; sourceTree = "<group>"; };
 		E2986EA31CCAF2D700D438A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E29E73491C04BD0000F059F1 /* OthersExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OthersExampleViewController.swift; sourceTree = "<group>"; };
 		E2D92EB51C0392E40065268F /* SwiftyUtils Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftyUtils Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,8 +142,6 @@
 				E281B9121C039BE4000DADBA /* Main.storyboard */,
 				E281B9111C039BE4000DADBA /* AppDelegate.swift */,
 				E2049E3E1C044EDD006D10E7 /* LocalizablesExampleViewController.swift */,
-				E281B9131C039BE4000DADBA /* GesturesExampleViewController.swift */,
-				E28B88901C03B00F00CBA57B /* NotificationsExampleTableViewController.swift */,
 				E23B1D911C0645A300C986BF /* AttributedStringExampleViewController.swift */,
 				E210DE351CCCC2940007F692 /* InjectableViewController.swift */,
 				E210DE371CCCC29B0007F692 /* InjectedViewController.swift */,
@@ -336,10 +330,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E21880A31D677ED5001888D2 /* ImagesViewController.swift in Sources */,
-				E27300E41CCD0D99003156EC /* GesturesExampleViewController.swift in Sources */,
 				E27300E81CCD0D99003156EC /* InjectedViewController.swift in Sources */,
 				E27300E61CCD0D99003156EC /* AttributedStringExampleViewController.swift in Sources */,
-				E27300E51CCD0D99003156EC /* NotificationsExampleTableViewController.swift in Sources */,
 				E27300E91CCD0D99003156EC /* OthersExampleViewController.swift in Sources */,
 				E27300E31CCD0D99003156EC /* LocalizablesExampleViewController.swift in Sources */,
 				E27300E21CCD0D99003156EC /* AppDelegate.swift in Sources */,
