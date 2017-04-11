@@ -5,6 +5,8 @@
 
 import UIKit
 
+// MARK: - Clear button
+
 public extension UITextField {
 
     public func setClearButton(with image: UIImage) {
@@ -20,8 +22,22 @@ public extension UITextField {
     }
 
     func clear() {
-        self.text = ""
-        self.sendActions(for: .editingChanged)
+        text = ""
+        sendActions(for: .editingChanged)
+    }
+
+}
+
+// MARK: - Placeholder
+
+public extension UITextField {
+
+    public func setPlaceHolderTextColor(_ color: UIColor) {
+        guard let placeholder = placeholder, placeholder.isNotEmpty else {
+            return
+        }
+        attributedPlaceholder = NSAttributedString(string: placeholder,
+                                                   attributes: [NSForegroundColorAttributeName: color])
     }
 
 }
