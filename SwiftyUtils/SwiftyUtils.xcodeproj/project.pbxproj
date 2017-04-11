@@ -233,7 +233,7 @@
 		E273009D1CCD06CD003156EC /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E273000A1CCD031B003156EC /* SwiftyUtils.framework */; };
 		E27300AC1CCD06E8003156EC /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27300171CCD03ED003156EC /* SwiftyUtils.framework */; };
 		E29DD9101E9CDB010076CFD7 /* UIViewControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29DD90E1E9CDAB80076CFD7 /* UIViewControllerExtensionTests.swift */; };
-		E29DD9111E9CDB020076CFD7 /* UIViewControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29DD90E1E9CDAB80076CFD7 /* UIViewControllerExtensionTests.swift */; };
+		E29DD9141E9CF50B0076CFD7 /* UIViewControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29DD90E1E9CDAB80076CFD7 /* UIViewControllerExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1018,7 +1018,6 @@
 				E26728EE1E9A38F700DE844E /* UIImageExtension.swift in Sources */,
 				E26729311E9A390800DE844E /* Simulator.swift in Sources */,
 				E267290C1E9A38FE00DE844E /* FileManagerExtension.swift in Sources */,
-				E29DD9111E9CDB020076CFD7 /* UIViewControllerExtensionTests.swift in Sources */,
 				E26729081E9A38FE00DE844E /* DateCalendarExtension.swift in Sources */,
 				E26729121E9A38FE00DE844E /* ReusableFormatters.swift in Sources */,
 				E26729041E9A38FE00DE844E /* CGFloatLiteral.swift in Sources */,
@@ -1132,6 +1131,7 @@
 				E267295B1E9A3B4500DE844E /* NSRangeExtensionTests.swift in Sources */,
 				E26729681E9A3B5D00DE844E /* UnitTestingTests.swift in Sources */,
 				E26729541E9A3B4500DE844E /* DateCalendarExtensionTests.swift in Sources */,
+				E29DD9141E9CF50B0076CFD7 /* UIViewControllerExtensionTests.swift in Sources */,
 				E267295D1E9A3B4500DE844E /* SwiftyColorTests.swift in Sources */,
 				E26729501E9A3B4500DE844E /* ArrayExtensionTests.swift in Sources */,
 				E26729591E9A3B4500DE844E /* IntExtensionTests.swift in Sources */,
