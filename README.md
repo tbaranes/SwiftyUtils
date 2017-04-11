@@ -956,7 +956,7 @@ if UITesting.isRunning {
 
 ### UserDefaults extension
 
-Get and set values from UserDefaults with subscripts:
+Get and set values from `UserDefaults` with subscripts:
 
 ```swift
 let Defaults = UserDefaults.standard
@@ -964,18 +964,18 @@ Defaults["userName"] = "test"
 print(Defaults["userName"]) // test
 ```
 
-Check if the userdefaults contains a key:
+Check if the `UserDefaults` has a key:
 
 ```swift
-UserDefaults.contains("aKey")
+UserDefaults.has(key: "aKey")
 // OR
-UserDefaults.standard.contains("aKey")
+UserDefaults.standard.has(key: "aKey")
 ```
 
-Reset the defaults:
+Remove all values in `UserDefaults`:
 
 ```swift
-UserDefaults.standard.reset()
+UserDefaults.standard.removeAll()
 ```
 
 ### Injectable
