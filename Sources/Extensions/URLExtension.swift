@@ -5,6 +5,8 @@
 
 import Foundation
 
+// MARK: - Query
+
 public extension URL {
 
     public var queryParameters: [String: String]? {
@@ -18,6 +20,12 @@ public extension URL {
         }
         return parameters
     }
+
+}
+
+// MARK: - Attributes
+
+public extension URL {
 
     public func addSkipBackupAttribute() throws {
         try (self as NSURL).setResourceValue(true, forKey: URLResourceKey.isExcludedFromBackupKey)
