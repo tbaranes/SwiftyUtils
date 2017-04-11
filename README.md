@@ -27,6 +27,7 @@ Check out the repository to find examples / tests for each feature.
 - [CGPoint](#cgpoint-extension)
 - [CGRect](#cgrect-extension)
 - [CGSize](#cgsize-extension)
+- [Color](#color-extension)
 - [Date](#date-extension)
 - [Dictionary](#dictionary-extension)
 - [Double](#double-extension)
@@ -41,7 +42,6 @@ Check out the repository to find examples / tests for each feature.
 - [String](#string-extension)
 - [Timer](#timer-extension)
 - [URL](#url-extension)
-- [UIColor / NSColor](#color-extension)
 - [UnitTesting](#unittesting)
 - [UITesting](#uitesting)
 - [UserDefaults](#userdefaults-extension)
@@ -339,14 +339,41 @@ size1 *= 2
 print(size1) // CGSize(width: 20, height: 20)
 ```
 
-### CollectionType extension
+### Color extension
 
-Shuffle a collection:
+Create colors with HEX values:
 
 ``` swift
-let myArray = [1, 2, 3, "5", "6]
-let arraySuffled = myArray.shuffled()
-print(arraySuffled) // [3, "6", 1, 2, "5"]
+let myUIColor = UIColor(hex: "233C64") // Equals 35,60,100,1
+let myNSColor = NSColor(hex: "233C64") // Equals 35,60,100,1
+```
+
+Access to individual color value:
+
+```swift
+let myColor = UIColor(red: 120, green: 205, blue: 44, alpha: 0.3)
+print(myColor.redComponent) // 120
+print(myColor.greenComponent) // 205
+print(myColor.blueComponent) // 44
+print(myColor.alpha) // 0.3
+```
+
+Get lighter or darker variants of colors instances:
+
+```swift
+let color = UIColor(red: 0.5, green: 0.5, blue: 1.0, alpha: 1.0)
+let lighter = color.lighter(amount: 0.5)
+let darker = color.darker(amount: 0.5)
+// OR
+let lighter = color.lighter()
+let darker = color.darker()
+
+let color = NSColor(red: 0.5, green: 0.5, blue: 1.0, alpha: 1.0)
+let lighter = color.lighter(amount: 0.5)
+let lighter = color.lighter()
+// OR
+let darker = color.darker(amount: 0.5)
+let darker = color.darker()
 ```
 
 ## Date extension
@@ -879,43 +906,6 @@ Add skip backup attributes to you URL:
 ``` swift
 let url = URL(string: "/path/to/your/file")        
 url?.addSkipBackupAttribute() // File at url won't be backupped!
-```
-
-### Color extension
-
-Create colors with HEX values:
-
-``` swift
-let myUIColor = UIColor(hex: "233C64") // Equals 35,60,100,1
-let myNSColor = NSColor(hex: "233C64") // Equals 35,60,100,1
-```
-
-Access to individual color value:
-
-```swift
-let myColor = UIColor(red: 120, green: 205, blue: 44, alpha: 0.3)
-print(myColor.redComponent) // 120
-print(myColor.greenComponent) // 205
-print(myColor.blueComponent) // 44
-print(myColor.alpha) // 0.3
-```
-
-Get lighter or darker variants of colors instances:
-
-```swift
-let color = UIColor(red: 0.5, green: 0.5, blue: 1.0, alpha: 1.0)
-let lighter = color.lighter(amount: 0.5)
-let darker = color.darker(amount: 0.5)
-// OR
-let lighter = color.lighter()
-let darker = color.darker()
-
-let color = NSColor(red: 0.5, green: 0.5, blue: 1.0, alpha: 1.0)
-let lighter = color.lighter(amount: 0.5)
-let lighter = color.lighter()
-// OR
-let darker = color.darker(amount: 0.5)
-let darker = color.darker()
 ```
 
 ### UnitTesting
