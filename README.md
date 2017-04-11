@@ -1184,7 +1184,7 @@ let combinedImage = image.combined(with: anotherImage)
 
 ### UILabel extension
 
-Check if the text of a label is truncated:
+Detect if a label text is truncated:
 
 ```swift
 let label = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 40))
@@ -1196,7 +1196,7 @@ label.text = ":)"
 print(label.isTruncated()) // false
 ```
 
-Change line height:
+Customize label line height:
 
 ```swift
 let label = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 40))
@@ -1204,7 +1204,7 @@ label.setText("A long multiline text")
 label.setLineHeight(0.9)
 ```
 
-Change the truncated text:
+Customize the label truncated text (replace the default `...`):
 
 ```swift
 let label = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 40))
