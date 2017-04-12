@@ -1054,15 +1054,6 @@ let label = UILabel().then {
 
 ## Available on iOS, tvOS, and watchOS (a few)
 
-### UIApplication extension
-
-Get the current view controller display:
-
-```swift
-UIApplication.shared.topViewController() // Using UIWindow's rootViewController as baseVC
-UIApplication.shared.topViewController(from: baseVC) // topVC from the base view controller
-```
-
 ### UIAlertController extension
 
 Create a custom `UIAlertController`:
@@ -1113,6 +1104,15 @@ alertController.addAction(title: "ActionTitle",
                           style: .destructive,
                           isEnabled: false,
                           handler: nil)
+```
+
+### UIApplication extension
+
+Get the current view controller display:
+
+```swift
+UIApplication.shared.topViewController() // Using UIWindow's rootViewController as baseVC
+UIApplication.shared.topViewController(from: baseVC) // topVC from the base view controller
 ```
 
 ### UIDevice extension
