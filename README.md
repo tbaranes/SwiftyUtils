@@ -1069,7 +1069,7 @@ Get the current view controller display:
 
 ```swift
 UIApplication.shared.topViewController() // Using UIWindow's rootViewController as baseVC
-UIApplication.shared.topViewController(baseVC) // topVC from the base view controller
+UIApplication.shared.topViewController(from: baseVC) // topVC from the base view controller
 ```
 
 ### UIDevice extension

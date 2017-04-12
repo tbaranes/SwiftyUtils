@@ -7,17 +7,17 @@ import UIKit
 
 public extension UIApplication {
 
-    public func topViewController(_ baseVC: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+    public func topViewController(from baseVC: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         guard let baseVC = baseVC else {
             return nil
         }
 
         if let nav = baseVC as? UINavigationController {
-            return topViewController(nav.visibleViewController)
+            return topViewController(from: nav.visibleViewController)
         } else if let tab = baseVC as? UITabBarController, let selected = tab.selectedViewController {
-            return topViewController(selected)
+            return topViewController(from: selected)
         } else if let presented = baseVC.presentedViewController {
-            return topViewController(presented)
+            return topViewController(from: presented)
         }
         return baseVC
     }
