@@ -5,10 +5,12 @@
 
 import UIKit
 
+// MARK: - Misc
+
 public extension UISwitch {
 
     public func toggle(animated: Bool = true) {
-        self.setOn(!self.isOn, animated: animated)
+        self.setOn(!isOn, animated: animated)
     }
 
 }

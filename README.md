@@ -1249,11 +1249,14 @@ let storyboard = UIStoryboard.main
 
 ### UISwitch extension
 
-Toggle a switch state:
+Toggle `UISwitch`:
 
 ```swift
-let mySwitch = UISwitch()
-mySwitch.toggle()
+let aSwitch = UISwitch(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+aSwitch.toggle()
+print(aSwitch.isOn) // true
+
+aSwitch.toggle(animated: false)
 ```
 
 ### UITextField extension
