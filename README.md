@@ -50,7 +50,7 @@ Check out the repository to find examples / tests for each feature.
  - [Occupiable](#occupiable)
  - [Then](#then)
 
-**Available for iOS:**
+**Available for iOS, tvOS, and watchOS (a few):**
 
 - [UIAlertController](#uialertcontroller-extension)
 - [UIApplication](#uiapplication-extension)
@@ -1052,15 +1052,58 @@ let label = UILabel().then {
 }
 ```
 
-## Available on iOS
+## Available on iOS, tvOS, and watchOS (a few)
 
 ### UIAlertController extension
 
-Show a basic alert:
+Create a custom `UIAlertController`:
 
 ```swift
-UIAlertController.show(title: "Title", message: "Message")
-UIAlertController.show(title: "Title", message: "Message", cancelTitle: "Custom cancel title")
+let alertController1 = UIAlertController(title: "Title",
+                                        message: "Message")
+                          
+let alertController2 = UIAlertController(title: "Title",
+                                        message: "Message",
+                                        defaultActionButtonTitle: "Cancel")
+                                                      
+let alertController3 = UIAlertController(title: "Title",
+                                        message: "Message",
+                                        defaultActionButtonTitle: "Cancel",
+                                        defaultActionButtonStyle: .cancel) 
+                                        
+let alertController1 = UIAlertController(title: "Title",
+                                        message: "Message",
+                                        defaultActionButtonTitle: "Cancel",
+                                        defaultActionButtonStyle: .cancel,
+                                        tintColor: .blue)
+```
+
+Show an `UIAlertController`:
+
+```swift
+alertController.show()
+alertController.show(animated: false)
+alertController.show(animated: true, completion: {
+	print("Presented")
+})
+```
+
+Add an action to the `UIAlertController`:
+
+```swift
+alertController.addAction(title: "ActionTitle")
+
+alertController.addAction(title: "ActionTitle",
+                          style: .destructive)
+                          
+alertController.addAction(title: "ActionTitle",
+                          style: .destructive,
+                          isEnabled: false)
+                          
+alertController.addAction(title: "ActionTitle",
+                          style: .destructive,
+                          isEnabled: false,
+                          handler: nil)
 ```
 
 ### UIApplication extension

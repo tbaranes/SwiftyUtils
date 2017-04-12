@@ -5,13 +5,48 @@
 
 import UIKit
 
+// MARK: - Initializers
+
 public extension UIAlertController {
 
-    public static func show(title: String, message: String, cancelTitle: String = "OK") {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: cancelTitle, style: .cancel, handler: nil)
-        alertController.addAction(cancelAction)
-        UIApplication.shared.topViewController()?.present(alertController, animated: true, completion: nil)
+    public convenience init(title: String,
+                            message: String? = nil,
+                            defaultActionButtonTitle: String = "OK",
+                            defaultActionButtonStyle: UIAlertActionStyle = .default,
+                            tintColor: UIColor? = nil) {
+        self.init(title: title, message: message, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: defaultActionButtonTitle, style: defaultActionButtonStyle, handler: nil)
+        addAction(defaultAction)
+        if let color = tintColor {
+            view.tintColor = color
+        }
+    }
+
+}
+
+// MARK: - Show
+
+public extension UIAlertController {
+
+    public func show(animated: Bool = true, completion: (() -> Void)? = nil) {
+        UIApplication.shared.topViewController()?.present(self, animated: animated, completion: completion)
+    }
+
+}
+
+// MARK: - Actions
+
+public extension UIAlertController {
+
+    @discardableResult
+    func addAction(title: String,
+                   style: UIAlertActionStyle = .default,
+                   isEnabled: Bool = true,
+                   handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
+        let action = UIAlertAction(title: title, style: style, handler: handler)
+        action.isEnabled = isEnabled
+        addAction(action)
+        return action
     }
 
 }
