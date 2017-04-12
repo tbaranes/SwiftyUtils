@@ -7,16 +7,14 @@ import Foundation
 
 public extension NSObject {
 
+    #if !os(macOS)
     public var className: String {
         return type(of: self).className
     }
+    #endif
 
     public static var className: String {
-        return stringFromClass(aClass: self)
+        return String(describing: self)
     }
 
-}
-
-public func stringFromClass(aClass: AnyClass) -> String {
-    return NSStringFromClass(aClass).components(separatedBy: ".").last!
 }

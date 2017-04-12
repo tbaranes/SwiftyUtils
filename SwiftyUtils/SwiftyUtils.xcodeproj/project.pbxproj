@@ -232,6 +232,7 @@
 		E27300641CCD0655003156EC /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E273FED71CCCFF5B003156EC /* SwiftyUtils.framework */; };
 		E273009D1CCD06CD003156EC /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E273000A1CCD031B003156EC /* SwiftyUtils.framework */; };
 		E27300AC1CCD06E8003156EC /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27300171CCD03ED003156EC /* SwiftyUtils.framework */; };
+		E29DD9011E9CC2F90076CFD7 /* NSObjectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728451E9A36F100DE844E /* NSObjectExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,7 +288,7 @@
 		E26727DE1E9A362600DE844E /* ReusableFormatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableFormatters.swift; sourceTree = "<group>"; };
 		E26727DF1E9A362600DE844E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E26727E01E9A362600DE844E /* TimerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerExtension.swift; sourceTree = "<group>"; };
-		E26727E21E9A362600DE844E /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		E26727E21E9A362600DE844E /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSObjectExtension.swift; path = UIKit/NSObjectExtension.swift; sourceTree = "<group>"; };
 		E26727E31E9A362600DE844E /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		E26727E41E9A362600DE844E /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		E26727E51E9A362600DE844E /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
@@ -452,6 +453,7 @@
 				E26727DA1E9A362600DE844E /* NotificationCenterExtension.swift */,
 				E26727DB1E9A362600DE844E /* NSLayoutConstraintsExtension.swift */,
 				E26727DC1E9A362600DE844E /* NSMutableAttributedStringExtension.swift */,
+				E26727E21E9A362600DE844E /* NSObjectExtension.swift */,
 				E26727DD1E9A362600DE844E /* NSRangeExtension.swift */,
 				E26727DE1E9A362600DE844E /* ReusableFormatters.swift */,
 				E26727DF1E9A362600DE844E /* StringExtension.swift */,
@@ -473,7 +475,6 @@
 		E26727E11E9A362600DE844E /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				E26727E21E9A362600DE844E /* NSObjectExtension.swift */,
 				E26727E31E9A362600DE844E /* UIAlertControllerExtension.swift */,
 				E26727E41E9A362600DE844E /* UIApplicationExtension.swift */,
 				E26727E51E9A362600DE844E /* UIDeviceExtension.swift */,
@@ -1146,6 +1147,7 @@
 				E26728D91E9A388700DE844E /* DateExtensionTests.swift in Sources */,
 				E26728D51E9A388700DE844E /* CGFloatLiteralTests.swift in Sources */,
 				E26728E11E9A388700DE844E /* SwiftyColorTests.swift in Sources */,
+				E29DD9011E9CC2F90076CFD7 /* NSObjectExtensionTests.swift in Sources */,
 				E26728E31E9A388700DE844E /* URLExtensionTests.swift in Sources */,
 				E26728E91E9A389100DE844E /* UnitTestingTests.swift in Sources */,
 				E26728DB1E9A388700DE844E /* DoubleExtensionTests.swift in Sources */,

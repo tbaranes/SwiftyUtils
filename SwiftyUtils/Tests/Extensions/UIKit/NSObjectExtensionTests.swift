@@ -18,13 +18,21 @@ final class NSObjectExtensionTests: XCTestCase {
         super.tearDown()
     }
 
+}
 
-    // MARK -
+// MARK: - Misc
+
+extension NSObjectExtensionTests {
 
     func testClassName() {
-        let vc = UIViewController()
-        XCTAssertEqual(vc.className, "UIViewController")
-        XCTAssertEqual(UIViewController.className, "UIViewController")
+        #if os(macOS)
+            let vc = NSViewController()
+            XCTAssertEqual(vc.className, "NSViewController")
+        #else
+            let vc = UIViewController()
+            XCTAssertEqual(vc.className, "UIViewController")
+            XCTAssertEqual(UIViewController.className, "UIViewController")
+        #endif
     }
 
 }
