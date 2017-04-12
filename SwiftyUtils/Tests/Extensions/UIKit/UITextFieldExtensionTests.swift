@@ -22,7 +22,6 @@ final class UITextFieldExtensionTests: XCTestCase {
     
 }
 
-
 // MARK: - Placeholder
 
 extension UITextFieldExtensionTests {

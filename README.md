@@ -1224,6 +1224,14 @@ let textField = UITextField()
 textField.setClearButton(with: clearButtonImage)
 ```
 
+Modify placeholder's color:
+
+```swift
+let textField = UITextField()
+// set `placeholder` or `attributedPlaceholder`
+textField.setPlaceHolderTextColor(.blue)
+```
+
 ### UIView extension
 
 **Change the frame of the view easily**
