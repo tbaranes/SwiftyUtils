@@ -3,8 +3,7 @@
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //
 
-import Foundation
-#if os(OSX)
+#if os(macOS)
     import Cocoa
 #else
     import UIKit
