@@ -5,47 +5,22 @@
 
 import UIKit
 
-// MARK: - Helpers
+// MARK: - Navigation
 
 public extension UIViewController {
 
-    public func deletePreviousViewControllers(animated: Bool = false) {
+    public func removePreviousControllers(animated: Bool = false) {
         navigationController?.setViewControllers([self], animated: animated)
     }
 
 }
 
-// MARK: - NavigationBar
+// MARK: - Misc
 
 public extension UIViewController {
 
-    #if os(iOS)
-    public func setupBackButton(hidden: Bool = false, title: String = "", backIndicatorImage: UIImage? = nil, tintColor: UIColor? = UIColor.white) {
-        navigationItem.hidesBackButton = hidden
-        if !hidden {
-            navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
-
-            if let unwrappedColor = tintColor {
-                navigationItem.backBarButtonItem?.tintColor = unwrappedColor
-                navigationController?.navigationBar.tintColor = unwrappedColor
-            }
-
-            if let unwrappedImage = backIndicatorImage {
-                navigationController?.navigationBar.backIndicatorImage = unwrappedImage
-                navigationController?.navigationBar.backIndicatorTransitionMaskImage = unwrappedImage
-            }
-        }
-    }
-    #endif
-
-    public func setupBar(leftView: UIView) {
-        let leftBarButtonItem = UIBarButtonItem(customView: leftView)
-        navigationItem.leftBarButtonItem = leftBarButtonItem
-    }
-
-    public func setupBar(rightView: UIView) {
-        let rightBarButtonItem = UIBarButtonItem(customView: rightView)
-        navigationItem.rightBarButtonItem = rightBarButtonItem
+    public var isVisible: Bool {
+        return self.isViewLoaded && view.window != nil
     }
 
 }
