@@ -474,7 +474,7 @@ print(dic) // ["A": "2, "B": "4", "C": "6"]
 
 `flatMap` a dictionary:
 
-```
+```swift
 let dic = ["a": 1, "b": 2, "c": 3]
 let result = dic.flatMap { key, value -> (String, String)? in
 	if value % 2 == 0 {
