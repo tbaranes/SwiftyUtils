@@ -18,7 +18,7 @@ final class StringExtensionTests: XCTestCase {
 
 }
 
-// MARK -
+// MARK - Subscript
 
 extension StringExtensionTests {
 
@@ -35,75 +35,67 @@ extension StringExtensionTests {
 
 }
 
-extension StringExtensionTests {
-
-    func testInitFloat() {
-        let aFloat: Float = 2.323232
-        let aString = String(value: aFloat, maxDigits: 2)
-        XCTAssertTrue(aString == "2,32" || aString == "2.32")
-    }
-
-    func testInitDouble() {
-        let aFloat: Double = 2.323232
-        let aString = String(value: aFloat, maxDigits: 2)
-        XCTAssertTrue(aString == "2,32" || aString == "2.32")
-    }
-
-}
+// MARK: - Misc
 
 extension StringExtensionTests {
 
-    func testLengthRange() {
+    func testLength() {
         let aString = "Hello world"
         XCTAssertEqual(aString.length, aString.characters.count)
     }
 
-    func testIsOnlyEmptySpacesAndNewLineCharacters() {
-        XCTAssertFalse("test".isOnlyEmptySpacesAndNewLineCharacters)
-        XCTAssertTrue(" \n ".isOnlyEmptySpacesAndNewLineCharacters)
+    func testContains() {
+        let string = "Hello world"
+        XCTAssertTrue(string.contains("lo wo"))
+        XCTAssertFalse(string.contains("wo lo"))
     }
 
-    func testClassName() {
+}
+
+// MARK: - Validator
+
+extension StringExtensionTests {
+
+    func testIsNumeric() {
+        XCTAssertTrue("425252".isNumeric)
+        XCTAssertFalse("test".isNumeric)
+    }
+
+    func testIsEmailValid() {
+        var aString = "test@gmail.com"
+        XCTAssertTrue(aString.isEmail)
+        aString = "test"
+        XCTAssertFalse(aString.isEmail)
+        aString = "test@gmail"
+        XCTAssertFalse(aString.isEmail)
+        aString = "test@.com"
+        XCTAssertFalse(aString.isEmail)
+    }
+
+}
+
+// MARK: - Computed Properties
+
+extension StringExtensionTests {
+
+    func testUncamelized() {
+        var camelString = "isCamelled"
+        XCTAssertEqual(camelString.uncamelized, "is_camelled")
+        camelString = "is_camelled"
+        XCTAssertEqual(camelString.uncamelized, "is_camelled")
+        camelString = "isCamelled_invalidsYntax"
+        XCTAssertEqual(camelString.uncamelized, "is_camelled_invalids_yntax")
+    }
+
+    func testCapitalizedFirst() {
         var aString = "hello world"
         aString = aString.capitalizedFirst
         XCTAssertEqual(aString[0], "H")
     }
 
-    func testIsIncludeEmoji() {
-        XCTAssertTrue("test 😃 emoji".containsEmoji())
-        XCTAssertFalse("test emoji".containsEmoji())
-    }
-
 }
 
-// MARK: - Getter
-
-extension StringExtensionTests {
-
-    func testExtractURLs() {
-        let string = "http://google.com http fpt:// http://facebook.com test"
-        let urls = string.extractedURLs
-        XCTAssertEqual(urls.count, 2)
-    }
-
-    func testUncamelled() {
-        var camelString = "isCamelled"
-        XCTAssertEqual(camelString.uncamelled, "is_camelled")
-        camelString = "is_camelled"
-        XCTAssertEqual(camelString.uncamelled, "is_camelled")
-        camelString = "isCamelled_invalidsYntax"
-        XCTAssertEqual(camelString.uncamelled, "is_camelled_invalids_yntax")
-    }
-
-    func testSplitEvery() {
-        let input = "abcd"
-        let split = input.split(intoChunksOf: 2)
-        XCTAssertEqual(split[0], "ab")
-        XCTAssertEqual(split[1], "cd")
-    }
-}
-
-// MARK: - Getter
+// MARK: - Transform
 
 extension StringExtensionTests {
 
@@ -119,26 +111,11 @@ extension StringExtensionTests {
         XCTAssertEqual(string, "0123456789...")
     }
 
-}
-
-// MARK - Validators
-
-extension StringExtensionTests {
-
-    func testIsNumber() {
-        XCTAssertTrue("425252".isNumber)
-        XCTAssertFalse("test".isNumber)
-    }
-
-    func testIsEmailValid() {
-        var aString = "test@gmail.com"
-        XCTAssertTrue(aString.isEmail)
-        aString = "test"
-        XCTAssertFalse(aString.isEmail)
-        aString = "test@gmail"
-        XCTAssertFalse(aString.isEmail)
-        aString = "test@.com"
-        XCTAssertFalse(aString.isEmail)
+    func testSplitEvery() {
+        let input = "abcd"
+        let split = input.split(intoChunksOf: 2)
+        XCTAssertEqual(split[0], "ab")
+        XCTAssertEqual(split[1], "cd")
     }
 
 }
