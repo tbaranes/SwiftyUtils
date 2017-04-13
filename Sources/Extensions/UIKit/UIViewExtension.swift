@@ -10,7 +10,6 @@ import UIKit
 
 public extension UIView {
 
-    // swiftlint:disable:next cyclomatic_complexity
     public func translateSubviews() {
         if subviews.isEmpty {
             return
@@ -42,37 +41,6 @@ public extension UIView {
         }
     }
 
-}
-
-// MARK: - Nib
-
-public extension UIView {
-
-    public class func fromNib<T: UIView>(nibNameOrNil: String? = nil) -> T {
-        let v: T? = fromNib(nibNameOrNil: nibNameOrNil)
-        return v!
-    }
-
-    public class func fromNib<T: UIView>(nibNameOrNil: String? = nil) -> T? {
-        var view: T?
-        let name: String
-        if let nibName = nibNameOrNil {
-            name = nibName
-        } else {
-            name = T.className
-        }
-
-        guard let nibViews = Bundle.main.loadNibNamed(name, owner: nil, options: nil) else {
-            return nil
-        }
-
-        for v in nibViews {
-            if let tog = v as? T {
-                view = tog
-            }
-        }
-        return view
-    }
 }
 
 // MARK: - Frame

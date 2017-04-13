@@ -1272,6 +1272,7 @@ textField.setClearButton(with: clearButtonImage)
 ### UIView extension
 
 **Change the frame of the view easily**
+
 ```swift
 let aView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 aView.x += 100 // move  to right
@@ -1288,14 +1289,6 @@ aView.translateSubviews()
 
 It will iterate on all the subviews of the view, and use the text / placeholder as key in `NSLocalizedString`.
 By settings your localizable key in your xib / storyboard, all yours string will be automatically translated just by calling the above method.
-
-**Instantiate view from nib programatically**
-
-```swift
-let myCustomView: CustomView = UIView.fromNib()
-// or
-let myCustomView = UIView.fromNib() as? CustomView
-```
 
 ### UIViewController extension
 
