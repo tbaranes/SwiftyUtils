@@ -5,6 +5,19 @@
 
 import Foundation
 
+// MARK: - Initializer
+
+public extension Dictionary {
+
+    public init<C>(elements: C) where C: Collection, C.Iterator.Element == (Key, Value) {
+        self.init()
+        for (key, value) in elements {
+            self[key] = value
+        }
+    }
+
+}
+
 // MARK: - Getter
 
 public extension Dictionary {
@@ -37,6 +50,14 @@ public extension Dictionary {
 // MARK: - Transform
 
 public extension Dictionary {
+
+    public func map<T, U>(_ transform: (Key, Value) throws -> (T, U)) rethrows -> [T: U] where T: Hashable {
+        return [T: U](elements: try self.map(transform))
+    }
+
+    public func flatMap<T, U>(_ transform: (Key, Value) throws -> (T, U)?) rethrows -> [T: U] where T: Hashable {
+        return [T: U](elements: try self.flatMap(transform))
+    }
 
     public func union(values: Dictionary...) -> Dictionary {
         var result = self

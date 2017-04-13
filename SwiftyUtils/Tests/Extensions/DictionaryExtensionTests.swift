@@ -31,6 +31,28 @@ final class DictionaryExtensionTests: XCTestCase {
 
 extension DictionaryExtensionTests {
 
+    func testMap() {
+        let dic = ["a": 1, "b": 2, "c": 3]
+        let result = dic.map {
+            ($0.uppercased(), "\($1 * 2)")
+        }
+        XCTAssertEqual(result.count, 3)
+        XCTAssertEqual(result["A"], "2")
+        XCTAssertEqual(result["B"], "4")
+        XCTAssertEqual(result["C"], "6")
+    }
+
+    func testFlatMap() {
+        let dic = ["a": 1, "b": 2, "c": 3]
+        let result = dic.flatMap { key, value -> (String, String)? in
+            value % 2 == 0 ? nil : (key.uppercased(), "\(value * 2)")
+        }
+        XCTAssertEqual(result.count, 2)
+        XCTAssertEqual(result["A"], "2")
+        XCTAssertNil(result["B"])
+        XCTAssertEqual(result["C"], "6")
+    }
+
     func testUnion() {
         let union = firstdic.union(values: secondDic)
         XCTAssertEqual(firstdic.keys.count + secondDic.keys.count, union.keys.count)
