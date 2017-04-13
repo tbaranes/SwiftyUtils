@@ -19,6 +19,12 @@ public extension UIImage {
         self.init(cgImage: (image?.cgImage!)!)
     }
 
+}
+
+// MARK: - Colors
+
+public extension UIImage {
+
     public func filled(with color: UIColor?) -> UIImage {
         guard let color = color else {
             return self
@@ -43,7 +49,13 @@ public extension UIImage {
         return newImage ?? self
     }
 
-    #if !os(watchOS)
+}
+
+// MARK: - Transform
+
+#if !os(watchOS)
+public extension UIImage {
+
     public func combined(with image: UIImage) -> UIImage? {
         let finalSize = CGSize(width: max(size.width, image.size.width),
                                height: max(size.height, image.size.height))
@@ -57,32 +69,10 @@ public extension UIImage {
         return finalImage
     }
 
-    public func tinted(with color: UIColor) -> UIImage {
-        var finalImage: UIImage?
-        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
-        guard let ctx = UIGraphicsGetCurrentContext(), let cgImage = cgImage else {
-            UIGraphicsEndImageContext()
-            return self
-        }
-
-        let rect = CGRect(origin: .zero, size: size)
-        ctx.setBlendMode(.normal)
-        ctx.draw(cgImage, in: rect)
-        ctx.setBlendMode(.multiply)
-        color.setFill()
-        ctx.addRect(rect)
-        ctx.drawPath(using: .fill)
-        ctx.setBlendMode(.destinationIn)
-        ctx.draw(cgImage, in: rect)
-
-        finalImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return finalImage ?? self
-    }
-    #endif
 }
+#endif
 
-// MARK: RenderingMode
+// MARK: - RenderingMode
 
 public extension UIImage {
 

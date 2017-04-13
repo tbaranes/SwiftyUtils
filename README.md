@@ -1159,37 +1159,30 @@ UIDevice.current.forceRotation(.portrait)
 Create an image from a color:
 
 ```swift
-let image = UIImage(color: UIColor.greenColor())
+let image = UIImage(color: .green)
+```
+
+Fill an image with a color:
+
+```swift
+let image = UIImage(named: "image")
+let greenImage = image.filled(with: .green)
+```
+
+Combined an image with another:
+
+```swift
+let image = UIImage(named: "image")
+let image2 = UIImage(named: "image2")
+let combinedImage = image.combined(with: image2)
 ```
 
 Change the rendering mode:
 
 ```swift
-var image = UIImage(...)
-image = image.template // imageWithRenderingMode(.AlwaysTemplate)
-image = image.original // imageWithRenderingMode(.AlwaysOriginal)
-```
-
-Fill an image with a color:
-
-```
-let image = UIImage(named: "anImage")
-let greenImage = image.filled(with: UIColor.greenColor())
-```
-
-Tinted an image with a color:
-
-```
-let image = UIImage(named: "anImage")
-let greenImage = image.tinted(with: UIColor.greenColor())
-```
-
-Combined an image with another:
-
-```
-let image = UIImage(named: "anImage")
-let anotherImage = UIImage(named: "anotherImage")
-let combinedImage = image.combined(with: anotherImage)
+var image = UIImage(named: "image")
+image = image.template // imageWithRenderingMode(.alwaysTemplate)
+image = image.original // imageWithRenderingMode(.alwaysOriginal)
 ```
 
 ### UILabel extension
