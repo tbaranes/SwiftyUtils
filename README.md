@@ -462,6 +462,29 @@ let dic3 = dic1.union(values: dic2)
 print(dic3) // ["one": 1, "two": 2, "four": 4]
 ```
 
+`map` a dictionary:
+
+```swift
+let dic = ["a": 1, "b": 2, "c": 3]
+let result = dic.map { key, value in
+	return (key.uppercased(), "\(value * 2)")
+}
+print(dic) // ["A": "2, "B": "4", "C": "6"]
+```
+
+`flatMap` a dictionary:
+
+```
+let dic = ["a": 1, "b": 2, "c": 3]
+let result = dic.flatMap { key, value -> (String, String)? in
+	if value % 2 == 0 {
+	 	return nil
+	}
+	return (key.uppercased(), "\(value * 2)")
+}
+print(dic) // ["A": "2, "C": "6"]
+```
+
 Get difference of two dictionaries:
 
 ``` swift
