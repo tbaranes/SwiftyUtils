@@ -764,98 +764,85 @@ SUMassFormatter.shared
 
 ### String extension
 
-Get the length of a string:
-
-```swift
-var aString = "hello world"
-print(aString.length) // 11
-```
-
 Access with subscript:
 
 ```swift
-var aString = "hello world"
-print(aString[0]) // h
-print(aString[2]) // l
-print(aString[1...3]) // ell
+var string = "hello world"
+print(string[0]) // h
+print(string[2]) // l
+print(string[1...3]) // ell
 ```
 
-Create a string from Float or Double with max digits:
+Get the length of a string:
 
 ```swift
-let aString = String(value: 2.323232, maxDigits: 2)
-print(aString) // 2.32
+var string = "hello world"
+print(string.length) // 11
 ```
 
 Check if it contains a string:
 
 ```swift
-let aString = "Hello world"
-print (aString.contains(text: "hello")) // true
-print (aString.contains(text: "hellooooo")) // false
+let string = "Hello world"
+print (string.contains(text: "hello")) // true
+print (string.contains(text: "hellooooo")) // false
 ```
 
-Capitalize the first letter:
-
-```swift
-var aString = "hello world"
-aString = aString.capitalizedFirst
-print(aString)// Hello world
-```
-
-Check if it's composed only of spaces and new lines:
-
-```swift
-var aString = "  \n  "
-print(aString.isOnlyEmptySpacesAndNewLineCharacters) // true
-var aString = "test"
-print(aString.isOnlyEmptySpacesAndNewLineCharacters) // false
-```
-
-Trimmed spaces and new lines:
-
-```swift
-var aString = " I'  am a    test  \n  "
-print(aString.trimmed()) // I'am a test
-```
-
-Truncated to have a limit of characters:
-
-```swift
-var aString = "0123456789aaaa"
-print(aString.truncate(limit: 10)) // 0123456789...
-```
 Check if it's a number:
 
 ```swift
-var aString = "4242"
-print(aString.isNumber) // true
-var aString = "test"
-print(aString.isNumber) // false
+var string = "4242"
+print(string.isNumber) // true
+
+var string = "test"
+print(string.isNumber) // false
 ```
 
 Check if it's a valid email:
 
 ```swift
-var aString = "test@gmail.com"
-print(aString.isEmail) // true
-var aString = "test@"
-print(aString.isEmail) // false
+var string = "test@gmail.com"
+print(string.isEmail) // true
+var string = "test@"
+print(string.isEmail) // false
 ```
 
-Extracts URLs:
+Uncamelize a string:
 
 ```swift
-let string = "http://google.com http fpt:// http://facebook.com test"
-print(string.extractedURLs) // [http://google.com, http://facebook.com]
+var camelString = "isCamelled"
+print(camelString.uncamelize) // is_camelled
 ```
 
-Split every n elements:
+Capitalize the first letter:
+
+```swift
+var string = "hello world"
+string = string.capitalizedFirst
+print(string)// Hello world
+```
+
+Trimmed spaces and new lines:
+
+```swift
+var string = " I'  am a    test  \n  "
+print(string.trimmed()) // I'am a test
+```
+
+Truncated to have a limit of characters:
+
+```swift
+var string = "0123456789aaaa"
+print(string.truncate(limit: 10)) // 0123456789...
+```
+
+Split string in chunks of n elements:
 
 ```swift
 let string = "abcd"
 print(string.split(intoChunksOf: 2)) // ["ab", "cd"]
 ```
+
 ## Timer extension
 
 Schedule timer every seconds:
