@@ -56,7 +56,7 @@ public extension String {
 
 public extension String {
 
-    public var uncamelize: String {
+    public var uncamelized: String {
         let upperCase = CharacterSet.uppercaseLetters
         return self.unicodeScalars.map {
             upperCase.contains($0) ? "_" + String($0).lowercased(): String($0)

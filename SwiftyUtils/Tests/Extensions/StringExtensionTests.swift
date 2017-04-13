@@ -78,13 +78,13 @@ extension StringExtensionTests {
 
 extension StringExtensionTests {
 
-    func testUncamelize() {
+    func testUncamelized() {
         var camelString = "isCamelled"
-        XCTAssertEqual(camelString.uncamelize, "is_camelled")
+        XCTAssertEqual(camelString.uncamelized, "is_camelled")
         camelString = "is_camelled"
-        XCTAssertEqual(camelString.uncamelize, "is_camelled")
+        XCTAssertEqual(camelString.uncamelized, "is_camelled")
         camelString = "isCamelled_invalidsYntax"
-        XCTAssertEqual(camelString.uncamelize, "is_camelled_invalids_yntax")
+        XCTAssertEqual(camelString.uncamelized, "is_camelled_invalids_yntax")
     }
 
     func testCapitalizedFirst() {

@@ -710,8 +710,8 @@ attrStr.setTextUnderline(afterOcurrence: "llo")
 Uncamel a camelized string:
 
 ```
-let camelString = "isCamelled"
-print(uncamelled.uncamelled) // is_camelled
+let camelString = "CamelString"
+print(uncamelled.uncamelized) // camel_string
 ```
 
 ### NSObject extension
