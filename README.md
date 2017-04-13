@@ -1299,7 +1299,7 @@ let navController = UINavigationController()
 navController.pushViewController(vc1, animated: true)
 navController.pushViewController(vc2, animated: true)
 navController.pushViewController(vc3, animated: true)
-vc3.removePreviousControllers(true)
+vc3.removePreviousControllers(animated: true)
 print(navController.viewControllers) // [vc3]
 ```
 
