@@ -42,7 +42,6 @@
 		E26728791E9A379F00DE844E /* CGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D01E9A362600DE844E /* CGFloatLiteral.swift */; };
 		E267287A1E9A379F00DE844E /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D11E9A362600DE844E /* CGRectExtensions.swift */; };
 		E267287C1E9A379F00DE844E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D31E9A362600DE844E /* ColorExtension.swift */; };
-		E267287D1E9A379F00DE844E /* DateCalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D41E9A362600DE844E /* DateCalendarExtension.swift */; };
 		E267287E1E9A379F00DE844E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D51E9A362600DE844E /* DateExtension.swift */; };
 		E267287F1E9A379F00DE844E /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D61E9A362600DE844E /* DictionaryExtension.swift */; };
 		E26728801E9A379F00DE844E /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D71E9A362600DE844E /* DoubleExtension.swift */; };
@@ -71,7 +70,6 @@
 		E267289E1E9A37D600DE844E /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728351E9A36F100DE844E /* ArrayExtensionTests.swift */; };
 		E267289F1E9A37D600DE844E /* CGFloatLiteralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728361E9A36F100DE844E /* CGFloatLiteralTests.swift */; };
 		E26728A01E9A37D600DE844E /* CGRectExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728371E9A36F100DE844E /* CGRectExtensionTest.swift */; };
-		E26728A21E9A37D600DE844E /* DateCalendarExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728391E9A36F100DE844E /* DateCalendarExtensionTests.swift */; };
 		E26728A31E9A37D600DE844E /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283A1E9A36F100DE844E /* DateExtensionTests.swift */; };
 		E26728A41E9A37D600DE844E /* DictionaryExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283B1E9A36F100DE844E /* DictionaryExtensionTests.swift */; };
 		E26728A51E9A37D600DE844E /* DoubleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283C1E9A36F100DE844E /* DoubleExtensionTests.swift */; };
@@ -95,7 +93,6 @@
 		E26728B71E9A37F600DE844E /* CGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D01E9A362600DE844E /* CGFloatLiteral.swift */; };
 		E26728B81E9A37F600DE844E /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D11E9A362600DE844E /* CGRectExtensions.swift */; };
 		E26728BA1E9A37F600DE844E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D31E9A362600DE844E /* ColorExtension.swift */; };
-		E26728BB1E9A37F600DE844E /* DateCalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D41E9A362600DE844E /* DateCalendarExtension.swift */; };
 		E26728BC1E9A37F600DE844E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D51E9A362600DE844E /* DateExtension.swift */; };
 		E26728BD1E9A37F600DE844E /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D61E9A362600DE844E /* DictionaryExtension.swift */; };
 		E26728BE1E9A37F600DE844E /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D71E9A362600DE844E /* DoubleExtension.swift */; };
@@ -121,7 +118,6 @@
 		E26728D41E9A388700DE844E /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728351E9A36F100DE844E /* ArrayExtensionTests.swift */; };
 		E26728D51E9A388700DE844E /* CGFloatLiteralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728361E9A36F100DE844E /* CGFloatLiteralTests.swift */; };
 		E26728D61E9A388700DE844E /* CGRectExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728371E9A36F100DE844E /* CGRectExtensionTest.swift */; };
-		E26728D81E9A388700DE844E /* DateCalendarExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728391E9A36F100DE844E /* DateCalendarExtensionTests.swift */; };
 		E26728D91E9A388700DE844E /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283A1E9A36F100DE844E /* DateExtensionTests.swift */; };
 		E26728DA1E9A388700DE844E /* DictionaryExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283B1E9A36F100DE844E /* DictionaryExtensionTests.swift */; };
 		E26728DB1E9A388700DE844E /* DoubleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283C1E9A36F100DE844E /* DoubleExtensionTests.swift */; };
@@ -156,7 +152,6 @@
 		E26729041E9A38FE00DE844E /* CGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D01E9A362600DE844E /* CGFloatLiteral.swift */; };
 		E26729051E9A38FE00DE844E /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D11E9A362600DE844E /* CGRectExtensions.swift */; };
 		E26729071E9A38FE00DE844E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D31E9A362600DE844E /* ColorExtension.swift */; };
-		E26729081E9A38FE00DE844E /* DateCalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D41E9A362600DE844E /* DateCalendarExtension.swift */; };
 		E26729091E9A38FE00DE844E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D51E9A362600DE844E /* DateExtension.swift */; };
 		E267290A1E9A38FE00DE844E /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D61E9A362600DE844E /* DictionaryExtension.swift */; };
 		E267290B1E9A38FE00DE844E /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D71E9A362600DE844E /* DoubleExtension.swift */; };
@@ -176,7 +171,6 @@
 		E26729191E9A38FF00DE844E /* CGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D01E9A362600DE844E /* CGFloatLiteral.swift */; };
 		E267291A1E9A38FF00DE844E /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D11E9A362600DE844E /* CGRectExtensions.swift */; };
 		E267291C1E9A38FF00DE844E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D31E9A362600DE844E /* ColorExtension.swift */; };
-		E267291D1E9A38FF00DE844E /* DateCalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D41E9A362600DE844E /* DateCalendarExtension.swift */; };
 		E267291E1E9A38FF00DE844E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D51E9A362600DE844E /* DateExtension.swift */; };
 		E267291F1E9A38FF00DE844E /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D61E9A362600DE844E /* DictionaryExtension.swift */; };
 		E26729201E9A38FF00DE844E /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727D71E9A362600DE844E /* DoubleExtension.swift */; };
@@ -209,7 +203,6 @@
 		E26729501E9A3B4500DE844E /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728351E9A36F100DE844E /* ArrayExtensionTests.swift */; };
 		E26729511E9A3B4500DE844E /* CGFloatLiteralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728361E9A36F100DE844E /* CGFloatLiteralTests.swift */; };
 		E26729521E9A3B4500DE844E /* CGRectExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728371E9A36F100DE844E /* CGRectExtensionTest.swift */; };
-		E26729541E9A3B4500DE844E /* DateCalendarExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728391E9A36F100DE844E /* DateCalendarExtensionTests.swift */; };
 		E26729551E9A3B4500DE844E /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283A1E9A36F100DE844E /* DateExtensionTests.swift */; };
 		E26729561E9A3B4500DE844E /* DictionaryExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283B1E9A36F100DE844E /* DictionaryExtensionTests.swift */; };
 		E26729571E9A3B4500DE844E /* DoubleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283C1E9A36F100DE844E /* DoubleExtensionTests.swift */; };
@@ -277,7 +270,6 @@
 		E26727D01E9A362600DE844E /* CGFloatLiteral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatLiteral.swift; sourceTree = "<group>"; };
 		E26727D11E9A362600DE844E /* CGRectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectExtensions.swift; sourceTree = "<group>"; };
 		E26727D31E9A362600DE844E /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		E26727D41E9A362600DE844E /* DateCalendarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCalendarExtension.swift; sourceTree = "<group>"; };
 		E26727D51E9A362600DE844E /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		E26727D61E9A362600DE844E /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		E26727D71E9A362600DE844E /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
@@ -315,7 +307,6 @@
 		E26728351E9A36F100DE844E /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
 		E26728361E9A36F100DE844E /* CGFloatLiteralTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatLiteralTests.swift; sourceTree = "<group>"; };
 		E26728371E9A36F100DE844E /* CGRectExtensionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectExtensionTest.swift; sourceTree = "<group>"; };
-		E26728391E9A36F100DE844E /* DateCalendarExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCalendarExtensionTests.swift; sourceTree = "<group>"; };
 		E267283A1E9A36F100DE844E /* DateExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		E267283B1E9A36F100DE844E /* DictionaryExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionTests.swift; sourceTree = "<group>"; };
 		E267283C1E9A36F100DE844E /* DoubleExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensionTests.swift; sourceTree = "<group>"; };
@@ -450,7 +441,6 @@
 				E26727D11E9A362600DE844E /* CGRectExtensions.swift */,
 				E23ED9BF1E9A526D0059BED7 /* CGSizeExtension.swift */,
 				E26727D31E9A362600DE844E /* ColorExtension.swift */,
-				E26727D41E9A362600DE844E /* DateCalendarExtension.swift */,
 				E26727D51E9A362600DE844E /* DateExtension.swift */,
 				E26727D61E9A362600DE844E /* DictionaryExtension.swift */,
 				E26727D71E9A362600DE844E /* DoubleExtension.swift */,
@@ -535,7 +525,6 @@
 				E23ED9C41E9A534E0059BED7 /* CGPointExtensionTests.swift */,
 				E26728371E9A36F100DE844E /* CGRectExtensionTest.swift */,
 				E23ED9CC1E9A55F40059BED7 /* CGSizeExtensionTests.swift */,
-				E26728391E9A36F100DE844E /* DateCalendarExtensionTests.swift */,
 				E267283A1E9A36F100DE844E /* DateExtensionTests.swift */,
 				E267283B1E9A36F100DE844E /* DictionaryExtensionTests.swift */,
 				E267283C1E9A36F100DE844E /* DoubleExtensionTests.swift */,
@@ -975,7 +964,6 @@
 				E26728FA1E9A38FA00DE844E /* UIImageExtension.swift in Sources */,
 				E267293A1E9A390800DE844E /* Simulator.swift in Sources */,
 				E26729211E9A38FF00DE844E /* FileManagerExtension.swift in Sources */,
-				E267291D1E9A38FF00DE844E /* DateCalendarExtension.swift in Sources */,
 				E26729271E9A38FF00DE844E /* ReusableFormatters.swift in Sources */,
 				E26729191E9A38FF00DE844E /* CGFloatLiteral.swift in Sources */,
 				E26729431E9A390C00DE844E /* Injectable.swift in Sources */,
@@ -1021,7 +1009,6 @@
 				E26728EE1E9A38F700DE844E /* UIImageExtension.swift in Sources */,
 				E26729311E9A390800DE844E /* Simulator.swift in Sources */,
 				E267290C1E9A38FE00DE844E /* FileManagerExtension.swift in Sources */,
-				E26729081E9A38FE00DE844E /* DateCalendarExtension.swift in Sources */,
 				E26729121E9A38FE00DE844E /* ReusableFormatters.swift in Sources */,
 				E26729041E9A38FE00DE844E /* CGFloatLiteral.swift in Sources */,
 				E267293E1E9A390C00DE844E /* Injectable.swift in Sources */,
@@ -1048,7 +1035,6 @@
 				E26728B41E9A37F600DE844E /* NSViewExtension.swift in Sources */,
 				E26728BE1E9A37F600DE844E /* DoubleExtension.swift in Sources */,
 				E26728D21E9A380500DE844E /* Constants.swift in Sources */,
-				E26728BB1E9A37F600DE844E /* DateCalendarExtension.swift in Sources */,
 				E26728BC1E9A37F600DE844E /* DateExtension.swift in Sources */,
 				E26728C81E9A37F600DE844E /* URLExtension.swift in Sources */,
 				E26728D11E9A380500DE844E /* UnitTesting.swift in Sources */,
@@ -1084,14 +1070,12 @@
 				E267289C1E9A37D200DE844E /* UILabelExtensionTests.swift in Sources */,
 				E26728B01E9A37DE00DE844E /* OccupiableTests.swift in Sources */,
 				E26728B21E9A37DE00DE844E /* UITestingTests.swift in Sources */,
-				E29DD90A1E9CD5DA0076CFD7 /* UISwitchExtensionTests.swift in Sources */,
 				E26728A51E9A37D600DE844E /* DoubleExtensionTests.swift in Sources */,
 				E26728A91E9A37D600DE844E /* NSRangeExtensionTests.swift in Sources */,
 				E267289D1E9A37D200DE844E /* UIViewExtensionTests.swift in Sources */,
 				E26728A01E9A37D600DE844E /* CGRectExtensionTest.swift in Sources */,
 				E26728AE1E9A37D600DE844E /* UserDefaultsExtensionTests.swift in Sources */,
 				E267289B1E9A37D200DE844E /* NSObjectExtensionTests.swift in Sources */,
-				E26728A21E9A37D600DE844E /* DateCalendarExtensionTests.swift in Sources */,
 				E26728AD1E9A37D600DE844E /* URLExtensionTests.swift in Sources */,
 				E26728AF1E9A37DE00DE844E /* IteratableTests.swift in Sources */,
 				E267289E1E9A37D600DE844E /* ArrayExtensionTests.swift in Sources */,
@@ -1133,7 +1117,7 @@
 				E26729511E9A3B4500DE844E /* CGFloatLiteralTests.swift in Sources */,
 				E267295B1E9A3B4500DE844E /* NSRangeExtensionTests.swift in Sources */,
 				E26729681E9A3B5D00DE844E /* UnitTestingTests.swift in Sources */,
-				E26729541E9A3B4500DE844E /* DateCalendarExtensionTests.swift in Sources */,
+				E29DD9141E9CF50B0076CFD7 /* UIViewControllerExtensionTests.swift in Sources */,
 				E267295D1E9A3B4500DE844E /* SwiftyColorTests.swift in Sources */,
 				E26729501E9A3B4500DE844E /* ArrayExtensionTests.swift in Sources */,
 				E26729591E9A3B4500DE844E /* IntExtensionTests.swift in Sources */,
@@ -1156,7 +1140,6 @@
 				E26728E41E9A388700DE844E /* UserDefaultsExtensionTests.swift in Sources */,
 				E23ED9CA1E9A53A00059BED7 /* CGPointExtensionTests.swift in Sources */,
 				E26728E81E9A389100DE844E /* UITestingTests.swift in Sources */,
-				E26728D81E9A388700DE844E /* DateCalendarExtensionTests.swift in Sources */,
 				E26728D91E9A388700DE844E /* DateExtensionTests.swift in Sources */,
 				E26728D51E9A388700DE844E /* CGFloatLiteralTests.swift in Sources */,
 				E26728E11E9A388700DE844E /* SwiftyColorTests.swift in Sources */,
@@ -1206,7 +1189,6 @@
 				E26728901E9A37A600DE844E /* Then.swift in Sources */,
 				E267286F1E9A379900DE844E /* UIImageExtension.swift in Sources */,
 				E26728811E9A379F00DE844E /* FileManagerExtension.swift in Sources */,
-				E267287D1E9A379F00DE844E /* DateCalendarExtension.swift in Sources */,
 				E26728871E9A379F00DE844E /* ReusableFormatters.swift in Sources */,
 				E26728991E9A37AE00DE844E /* UnitTesting.swift in Sources */,
 				E23ED9C01E9A526D0059BED7 /* CGSizeExtension.swift in Sources */,
