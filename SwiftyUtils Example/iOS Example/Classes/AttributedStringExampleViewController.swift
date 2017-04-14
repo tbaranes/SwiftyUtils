@@ -10,50 +10,50 @@ final class AttributedStringExampleViewController: UIViewController {
 
     @IBOutlet weak var labelColorizeAfterOccurence: UILabel! {
         didSet {
-            let attrString = NSMutableAttributedString.colored(text: "hello world",
-                                                   color: UIColor.green,
-                                                   afterOcurrence: "hello")
+            let attrString = NSMutableAttributedString.colored(inText: "hello world",
+                                                               color: UIColor.green,
+                                                               afterOcurrence: "hello")
             labelColorizeAfterOccurence.attributedText = attrString
         }
     }
 
     @IBOutlet weak var labelColorizeForEachOccurence: UILabel! {
         didSet {
-            let attrString = NSMutableAttributedString.colored(text: "hello world",
-                                                                    color: UIColor.green,
-                                                                    forOccurences: "o")
+            let attrString = NSMutableAttributedString.colored(inText: "hello world",
+                                                               color: UIColor.green,
+                                                               occurences: "o")
             labelColorizeForEachOccurence.attributedText = attrString
         }
     }
 
     @IBOutlet weak var labelStrikeAfterOccurence: UILabel! {
         didSet {
-            let attrString = NSMutableAttributedString.striked(text: "hello world",
-                                                                     afterOcurrence: "o")
+            let attrString = NSMutableAttributedString.struck(inText: "hello world",
+                                                              afterOcurrence: "o")
             labelStrikeAfterOccurence.attributedText = attrString
         }
     }
 
     @IBOutlet weak var labelStrikeForEachOccurence: UILabel! {
         didSet {
-            let attrString = NSMutableAttributedString.striked(text: "hello world",
-                                                                     forOccurences: "o")
+            let attrString = NSMutableAttributedString.struck(inText: "hello world",
+                                                              occurences: "o")
             labelStrikeForEachOccurence.attributedText = attrString
         }
     }
 
     @IBOutlet weak var labelUnderlineAfterOccurence: UILabel! {
         didSet {
-            let attrString = NSMutableAttributedString.striked(text: "hello world",
-                                                                        afterOcurrence: "o")
+            let attrString = NSMutableAttributedString.struck(inText: "hello world",
+                                                              afterOcurrence: "o")
             labelUnderlineAfterOccurence.attributedText = attrString
         }
     }
 
     @IBOutlet weak var labelUnderlineForEachOccurence: UILabel! {
         didSet {
-            let attrString = NSMutableAttributedString.underlined(text: "hello world",
-                                                                        forOccurences: "o")
+            let attrString = NSMutableAttributedString.underlined(inText: "hello world",
+                                                                  occurences: "o")
             labelUnderlineForEachOccurence.attributedText = attrString
         }
     }
@@ -61,12 +61,12 @@ final class AttributedStringExampleViewController: UIViewController {
     @IBOutlet weak var labelCombiningAllAttrExample: UILabel! {
         didSet {
             let attrStr = NSMutableAttributedString(string: "hello world")
-            attrStr.setTextColor(UIColor.orange, afterOcurrence: "hello")
-            attrStr.setTextColor(UIColor.green, forOccurences: "o")
-            attrStr.setTextStrike(forOccurences: "o")
-            attrStr.setTextStrike(afterOcurrence: "hello")
-            attrStr.setTextUnderline(forOccurences: "o")
-            attrStr.setTextUnderline(afterOcurrence: "hello")
+            attrStr.color(.orange, afterOcurrence: "hello")
+            attrStr.color(.green, occurences: "o")
+            attrStr.strike(occurences: "o")
+            attrStr.color(.red, occurences: "hello")
+            attrStr.underline(occurences: "o")
+            attrStr.underline(afterOcurrence: "hello")
             labelCombiningAllAttrExample.attributedText = attrStr
         }
     }
