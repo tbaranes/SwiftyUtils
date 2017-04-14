@@ -8,84 +8,32 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
-In order to be ready for the release 1.0, there's have a been a few cleanup in the framework. Some methods have been removed, and others have been renamed. We won't list all here since it would be too long, but look into the README to see the difference if necessary.
+N/A
 
 #### Enhancements
 
-*Note: Take a look into the README to see the details of all the following enhancements* 
-
-- IntExtension
-
-```swift
-var nearestDozens: Int
-var nearestHundreds: Int
-var nearestThousands: Int
-func nearest(to value: Int) -> Int
-
-var nearestBelowDozens: Int
-var nearestBelowHundreds: Int
-var nearestBelowThousands: Int
-func nearestBelow(to value: Int) -> Int
-
-var nearestUpDozens: Int
-var nearestUpHundreds: Int
-var nearestUpThousands: Int
-func nearestUp(to value: Int) -> Int
-
-var formattedPrice: String
-```
-
-- TimerExtension
-
-```swift
-func every(_ interval: TimeInterval, firesImmediately: Bool = false, _ block: @escaping () -> Void) -> Timer
-func every(_ interval: TimeInterval, firesImmediately: Bool = false, _ block: @escaping (Timer) -> Void) -> Timer
-```
-
-- UITextFieldExtension (iOS only)
-
-```swift
-public func setClearButton(with image: UIImage)
-```
-
-- UIImage (iOS only)
-
-```swift
-func tinted(with color: UIColor) -> UIImage?
-func combined(with image: UIImage) -> UIImage?
-```
-
-- UIView (iOS only)
-   - Add `UIStackView` support for `translateSubviews()`
-
-- StringExtension:
-
-```swift
-var uncamelled: String
-func split(intoChunksOf chunkSize: Int) -> [String]
-```
-
-- ArrayExtension:
-
-```swift
-func removedDuplicates() -> [Element]
-mutating func removeDuplicates()
-func removedAll(_ item: Element) -> [Element]
-mutating func removeAll(_ item: Element)
-func firstIndex(of item: Element) -> Int?
-func split(intoChunksOf chunkSize: Int) -> [[Element]]
-```
-
-- DoubleExtension:
-
-
-```swift
-var formattedPrice: String
-```
+N/A
 
 #### Bugfixes
 
 N/A
+
+## [1.0.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/1.0.0) (17-03-2017)
+
+In order to reach 1.0, SwiftyUtils got a huge cleanup:
+
+- Removing extensions /classes that didn't fit in the library's spirit
+- Renaming methods to make them more Swifty
+- Introducing dozens of new extensions
+- Adding a few missing tests
+- Updating the docs
+- ...
+
+Since that release contains a lot of changes we won't details them all.
+
+We are really sorry to introduce that many breaking changes, but it was a mandatory cost to release  1.0! Also, the future release should have none (or a very low number) breaking changes and a lot of new features 🎉
+
+A big thanks to [Mulang Su](https://github.com/Sweeper777) for reviewing all the PRs!
 
 ## [0.7.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.7.0) (15-01-2017)
 
