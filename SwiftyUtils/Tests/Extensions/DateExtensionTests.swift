@@ -54,25 +54,25 @@ extension DateExtensionTests {
     func testDaysSince() {
         let now = Date()
         let later = Date(timeIntervalSinceNow: -100000)
-        XCTAssertEqual(floor(later.days(since: now)), 1)
+        XCTAssertEqualWithAccuracy(later.days(since: now), 1, accuracy: 1)
     }
 
     func testHoursSince() {
         let now = Date()
         let later = Date(timeIntervalSinceNow: -100000)
-        XCTAssertEqual(floor(later.hours(since: now)), 27)
+        XCTAssertEqualWithAccuracy(later.hours(since: now), 27, accuracy: 1)
     }
 
     func testMinutesSince() {
         let now = Date()
         let later = Date(timeIntervalSinceNow: -100000)
-        XCTAssertEqual(floor(later.minutes(since: now)), 1666)
+        XCTAssertEqualWithAccuracy(later.minutes(since: now), 1666, accuracy: 1)
     }
 
     func testSecondsSince() {
         let now = Date()
         let later = Date(timeIntervalSinceNow: -100000)
-        XCTAssertEqual(floor(floor(later.seconds(since: now))), 100000)
+        XCTAssertEqualWithAccuracy(later.seconds(since: now), 100000, accuracy: 1)
     }
 
 }
