@@ -7,7 +7,7 @@ import UIKit
 
 // MARK: - Clear button
 
-public extension UITextField {
+extension UITextField {
 
     public func setClearButton(with image: UIImage) {
         let clearButton = UIButton(type: .custom)

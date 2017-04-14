@@ -5,7 +5,7 @@
 
 import Foundation
 
-public extension NSObject {
+extension NSObject {
 
     #if !os(macOS)
     public var className: String {

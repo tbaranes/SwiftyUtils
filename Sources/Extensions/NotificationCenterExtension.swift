@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Misc
 
-public extension NotificationCenter {
+extension NotificationCenter {
 
     public func postNotification(_ name: String, object: AnyObject? = nil, userInfo: [NSObject : AnyObject]? = nil, queue: DispatchQueue) {
         queue.async {

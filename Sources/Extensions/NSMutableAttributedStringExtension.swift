@@ -12,7 +12,7 @@ import Foundation
 
 // MARK - Color
 
-public extension NSMutableAttributedString {
+extension NSMutableAttributedString {
 
     public static func colored(inText text: String, color: SwiftyColor, afterOcurrence occurence: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
@@ -41,7 +41,7 @@ public extension NSMutableAttributedString {
 
 // MARK - Strike
 
-public extension NSMutableAttributedString {
+extension NSMutableAttributedString {
 
     public static func struck(inText text: String, afterOcurrence occurence: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)
@@ -70,7 +70,7 @@ public extension NSMutableAttributedString {
 
 // MARK - Underline
 
-public extension NSMutableAttributedString {
+extension NSMutableAttributedString {
 
     public static func underlined(inText text: String, afterOcurrence occurence: String) -> NSMutableAttributedString {
         let attrStr = NSMutableAttributedString(string: text)

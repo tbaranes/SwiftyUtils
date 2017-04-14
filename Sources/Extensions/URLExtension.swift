@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Query
 
-public extension URL {
+extension URL {
 
     public var queryParameters: [String: String]? {
         guard let components = URLComponents(url: self as URL, resolvingAgainstBaseURL: true), let queryItems = components.queryItems else {
@@ -25,7 +25,7 @@ public extension URL {
 
 // MARK: - Attributes
 
-public extension URL {
+extension URL {
 
     public func addSkipBackupAttribute() throws {
         try (self as NSURL).setResourceValue(true, forKey: URLResourceKey.isExcludedFromBackupKey)

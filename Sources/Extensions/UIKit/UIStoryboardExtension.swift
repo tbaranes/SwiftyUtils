@@ -5,7 +5,7 @@
 
 import UIKit
 
-public extension UIStoryboard {
+extension UIStoryboard {
 
     public class var main: UIStoryboard? {
         let bundle = Bundle.main

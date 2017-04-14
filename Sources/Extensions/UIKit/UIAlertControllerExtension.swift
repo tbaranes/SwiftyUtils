@@ -7,7 +7,7 @@ import UIKit
 
 // MARK: - Initializers
 
-public extension UIAlertController {
+extension UIAlertController {
 
     public convenience init(title: String,
                             message: String? = nil,
@@ -26,7 +26,7 @@ public extension UIAlertController {
 
 // MARK: - Show
 
-public extension UIAlertController {
+extension UIAlertController {
 
     public func show(animated: Bool = true, completion: (() -> Void)? = nil) {
         UIApplication.shared.topViewController()?.present(self, animated: animated, completion: completion)
@@ -36,7 +36,7 @@ public extension UIAlertController {
 
 // MARK: - Actions
 
-public extension UIAlertController {
+extension UIAlertController {
 
     @discardableResult
     func addAction(title: String,

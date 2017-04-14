@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Subscript
 
-public extension Array {
+extension Array {
 
     subscript(safe index: Int) -> Element? {
         return indices.contains(index) ? self[index] : nil
@@ -17,7 +17,7 @@ public extension Array {
 
 // MARK: - Remove
 
-public extension Array where Element : Equatable {
+extension Array where Element : Equatable {
 
     public mutating func remove(object: Iterator.Element) -> Bool {
         if let index = self.index(of: object) {
@@ -53,7 +53,7 @@ public extension Array where Element : Equatable {
 
 // MARK: - Getter
 
-public extension Array {
+extension Array {
 
     public func random() -> Element? {
         guard isNotEmpty else {
@@ -68,7 +68,7 @@ public extension Array {
 
 // MARK: - Index Getter
 
-public extension Array where Element : Equatable {
+extension Array where Element : Equatable {
 
     public func indexes(of item: Element) -> [Int] {
         var indexes = [Int]()
@@ -93,7 +93,7 @@ public extension Array where Element : Equatable {
 
 // MARK: - Equatable Transform
 
-public extension Array where Element : Equatable {
+extension Array where Element : Equatable {
 
     public func difference(with values: [Element]...) -> [Element] {
         var result = [Element]()
@@ -150,7 +150,7 @@ public extension Array where Element : Equatable {
 
 // MARK: - Transform
 
-public extension Array {
+extension Array {
 
     public func shuffled() -> [Element] {
         var array = self
@@ -176,7 +176,7 @@ public extension Array {
 
 // MARK: - Misc
 
-public extension Array {
+extension Array {
 
     public func testAll(test: (Element) -> Bool) -> Bool {
         for item in self {
@@ -191,7 +191,7 @@ public extension Array {
 
 // MARK: - Misc Equatable
 
-public extension Array where Element : Equatable {
+extension Array where Element : Equatable {
 
     public func contains(_ elements: [Element]) -> Bool {
         for item in elements {

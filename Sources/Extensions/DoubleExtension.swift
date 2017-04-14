@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Time Transform
 
-public extension Double {
+extension Double {
     public var millisecond: TimeInterval { return self / 1000 }
     public var milliseconds: TimeInterval { return self / 1000 }
     public var ms: TimeInterval { return self / 1000 }
@@ -27,7 +27,7 @@ public extension Double {
 
 // MARK: - Transform
 
-public extension Double {
+extension Double {
 
     public var formattedPrice: String {
         let formatter = SUNumberFormatter.shared

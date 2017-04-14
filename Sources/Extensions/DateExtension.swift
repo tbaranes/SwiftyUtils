@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Initializers
 
-public extension Date {
+extension Date {
 
     public init?(fromString string: String, format: String) {
         let formatter = SUDateFormatter.shared
@@ -41,7 +41,7 @@ public extension Date {
 
 // MARK: - Since
 
-public extension Date {
+extension Date {
 
     public func days(since date: Date) -> Double {
         var diff = self.timeIntervalSinceNow - date.timeIntervalSinceNow

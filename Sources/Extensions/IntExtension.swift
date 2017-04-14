@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Misc
 
-public extension Int {
+extension Int {
 
     public var isEven: Bool { return (self % 2 == 0) }
     public var isOdd: Bool { return (self % 2 != 0) }
@@ -29,7 +29,7 @@ public extension Int {
 
 // MARK: - Transform
 
-public extension Int {
+extension Int {
 
     public var formattedPrice: String {
         let formatter = SUNumberFormatter.shared
@@ -42,7 +42,7 @@ public extension Int {
 
 // MARK: - Round
 
-public extension Int {
+extension Int {
 
     public var nearestDozens: Int { return nearest(to: 10) }
     public var nearestHundreds: Int { return nearest(to: 100) }
@@ -56,7 +56,7 @@ public extension Int {
 
 // MARK: - Round below
 
-public extension Int {
+extension Int {
 
     public var nearestBelowDozens: Int { return nearestBelow(to: 10) }
     public var nearestBelowHundreds: Int { return nearestBelow(to: 100) }
@@ -70,7 +70,7 @@ public extension Int {
 
 // MARK: - Round Up
 
-public extension Int {
+extension Int {
 
     public var nearestUpDozens: Int { return nearestUp(to: 10) }
     public var nearestUpHundreds: Int { return nearestUp(to: 100) }

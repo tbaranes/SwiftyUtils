@@ -7,7 +7,7 @@ import Cocoa
 
 // MARK - Localizables
 
-public extension NSView {
+extension NSView {
 
     public func convertLocalizables() {
         if subviews.isEmpty {
@@ -36,7 +36,7 @@ public extension NSView {
 
 // MARK: - Frame
 
-public extension NSView {
+extension NSView {
     public var x: CGFloat {
         get { return frame.x }
         set { frame = frame.with(x: newValue) }

@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Subscript
 
-public extension UserDefaults {
+extension UserDefaults {
 
     public subscript(key: String) -> Any? {
         get {
@@ -22,7 +22,7 @@ public extension UserDefaults {
 
 // MARK: - Misc
 
-public extension UserDefaults {
+extension UserDefaults {
 
     public static func has(key: String) -> Bool {
         return self.standard.has(key: key)
@@ -36,7 +36,7 @@ public extension UserDefaults {
 
 // MARK: - Remove
 
-public extension UserDefaults {
+extension UserDefaults {
 
     public func removeAll() {
         for (key, _) in dictionaryRepresentation() {
