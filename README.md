@@ -603,74 +603,67 @@ print(constraint.constants) // 100
 Colorize each occurence:
 
 ```swift
-let attrStr: NSMutableAttributedString = NSMutableAttributedString.colored(text: "hello world", color: UIColor.yellowColor(), forOccurences: "llo")
+let attrStr: NSMutableAttributedString = NSMutableAttributedString.colored(inText: "hello world", color: .yellow, occurences: "llo")
 
 // OR
 
 let attrStr: NSMutableAttributedString = NSMutableAttributedString(string: "Hello world")
-attrStr.setTextColor(UIColor.yellowColor(), forOccurences: "llo")
+attrStr.color(.yellow, occurences: "llo")
 ```
 
 Colorize everything after an occurence:
 
 ```swift
-let attrStr = NSMutableAttributedString.colored(text: "Hello world", color: UIColor.yellowColor(), afterOcurrence: "llo")
+let attrStr = NSMutableAttributedString.colored(inText: "Hello world", color: .yellow, afterOcurrence: "llo")
 
 // OR
 
 let attrStr = NSMutableAttributedString(string: "Hello world")
-attrStr.setTextColor(UIColor.yellowColor(), afterOcurrence: "llo")
+attrStr.color(.yellow, afterOcurrence: "llo")
 ```
 
 Strike each occurence:
 
 ```swift
-let attrStr: NSMutableAttributedString = NSMutableAttributedString.striked(text: "Hello world", forOccurences: "llo")
+let attrStr: NSMutableAttributedString = NSMutableAttributedString.struck(inText: "Hello world", occurences: "llo")
 
 // OR
 
 let attrStr = NSMutableAttributedString(string: "Hello world")
-attrStr.setTextStrike(forOccurences: "llo")
+attrStr.strike(occurences: "llo")
 ```
 
 Strike everything after an occurence:
 
 ```swift
-let attrStr: NSMutableAttributedString = NSMutableAttributedString.striked(text: "Hello world", afterOcurrence: "llo")
+let attrStr: NSMutableAttributedString = NSMutableAttributedString.struck(inText: "Hello world", afterOcurrence: "llo")
 
 // OR
 
 let attrStr = NSMutableAttributedString(string: "Hello world")
-attrStr.setTextStrike(afterOcurrence: "llo")
+attrStr.strike(ocurrences: "llo")
 ```
 
 Underline each occurence:
 
 ```swift
-let attrStr: NSMutableAttributedString = NSMutableAttributedString.underlined(text: "Hello world", forOccurences: "llo")
+let attrStr: NSMutableAttributedString = NSMutableAttributedString.underlined(inText: "Hello world", occurences: "llo")
 
 // OR
 
 let attrStr = NSMutableAttributedString(string: "Hello world")
-attrStr.setTextUnderline(forOccurences: "llo")
+attrStr.underline(occurences: "llo")
 ```
 
 Underline everything after an occurence:
 
 ```swift
-let attrStr: NSMutableAttributedString = NSMutableAttributedString.underlined(text: "Hello world", afterOcurrence: "llo")
+let attrStr: NSMutableAttributedString = NSMutableAttributedString.underlined(inText: "Hello world", afterOcurrence: "llo")
 
 // OR
 
 let attrStr = NSMutableAttributedString(string: "Hello world")
-attrStr.setTextUnderline(afterOcurrence: "llo")
-```
-
-Uncamel a camelized string:
-
-```
-let camelString = "CamelString"
-print(uncamelled.uncamelized) // camel_string
+attrStr.underline(afterOcurrence: "llo")
 ```
 
 ### NSObject extension
