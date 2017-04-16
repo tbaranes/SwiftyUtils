@@ -33,7 +33,7 @@ Since that release contains a lot of changes we won't details them all.
 
 We are really sorry to introduce that many breaking changes, but it was a mandatory cost to release  1.0! Also, the future release should have none (or a very low number) breaking changes and a lot of new features 🎉
 
-A big thanks to [Mulang Su](https://github.com/Sweeper777) for reviewing all the PRs!
+A big thanks to [Sweepr777](https://github.com/Sweeper777) for reviewing all the PRs!
 
 ## [0.7.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/0.7.0) (15-01-2017)
 
