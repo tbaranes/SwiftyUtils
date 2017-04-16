@@ -5,7 +5,7 @@
 
 import UIKit
 
-public extension UIApplication {
+extension UIApplication {
 
     public func topViewController(from baseVC: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         guard let baseVC = baseVC else {

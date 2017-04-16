@@ -5,7 +5,7 @@
 
 import Foundation
 
-public extension NSRange {
+extension NSRange {
 
     public init(text: String, afterOccurence occurence: String) {
         self = (text as NSString).range(of: occurence, options: [])

@@ -10,8 +10,8 @@ public protocol Occupiable {
     var isNotEmpty: Bool { get }
 }
 
-public extension Occupiable {
-    var isNotEmpty: Bool {
+extension Occupiable {
+    public var isNotEmpty: Bool {
         return !isEmpty
     }
 }
@@ -21,7 +21,7 @@ extension Array: Occupiable { }
 extension Dictionary: Occupiable { }
 extension Set: Occupiable { }
 
-public extension Optional where Wrapped: Occupiable {
+extension Optional where Wrapped: Occupiable {
     public var isNilOrEmpty: Bool {
         switch self {
         case .none:

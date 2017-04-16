@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - Initializer
 
-public extension Dictionary {
+extension Dictionary {
 
     public init<C>(elements: C) where C: Collection, C.Iterator.Element == (Key, Value) {
         self.init()
@@ -20,7 +20,7 @@ public extension Dictionary {
 
 // MARK: - Getter
 
-public extension Dictionary {
+extension Dictionary {
 
     public func random() -> Value {
         let index: Int = Int(arc4random_uniform(UInt32(count)))
@@ -31,7 +31,7 @@ public extension Dictionary {
 
 // MARK: - Helpers
 
-public extension Dictionary {
+extension Dictionary {
 
     public func has(key: Key) -> Bool {
         return index(forKey: key) != nil
@@ -49,7 +49,7 @@ public extension Dictionary {
 
 // MARK: - Transform
 
-public extension Dictionary {
+extension Dictionary {
 
     public func map<T, U>(_ transform: (Key, Value) throws -> (T, U)) rethrows -> [T: U] where T: Hashable {
         return [T: U](elements: try self.map(transform))
@@ -85,7 +85,7 @@ public extension Dictionary {
 
 // MARK: - Equatable Transform
 
-public extension Dictionary where Value: Equatable {
+extension Dictionary where Value: Equatable {
 
     public func difference(with dictionaries: [Key: Value]...) -> [Key: Value] {
         var result = self

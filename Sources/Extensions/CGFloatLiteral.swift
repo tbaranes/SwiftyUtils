@@ -6,7 +6,7 @@
 import Foundation
 import CoreGraphics
 
-public extension IntegerLiteralType {
+extension IntegerLiteralType {
 
     // swiftlint:disable:next identifier_name
     public var f: CGFloat {
@@ -15,7 +15,7 @@ public extension IntegerLiteralType {
 
 }
 
-public extension FloatLiteralType {
+extension FloatLiteralType {
 
     // swiftlint:disable:next identifier_name
     public var f: CGFloat {

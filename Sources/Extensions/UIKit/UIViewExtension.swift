@@ -8,7 +8,7 @@ import UIKit
 
 // MARK - Localizables
 
-public extension UIView {
+extension UIView {
 
     public func translateSubviews() {
         if subviews.isEmpty {
@@ -45,7 +45,7 @@ public extension UIView {
 
 // MARK: - Frame
 
-public extension UIView {
+extension UIView {
     public var x: CGFloat {
         get { return frame.x }
         set { frame = frame.with(x: newValue) }

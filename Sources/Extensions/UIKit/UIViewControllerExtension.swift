@@ -7,7 +7,7 @@ import UIKit
 
 // MARK: - Navigation
 
-public extension UIViewController {
+extension UIViewController {
 
     public func removePreviousControllers(animated: Bool = false) {
         navigationController?.setViewControllers([self], animated: animated)
@@ -17,7 +17,7 @@ public extension UIViewController {
 
 // MARK: - Misc
 
-public extension UIViewController {
+extension UIViewController {
 
     public var isVisible: Bool {
         return self.isViewLoaded && view.window != nil

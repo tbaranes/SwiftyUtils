@@ -7,7 +7,7 @@ import CoreGraphics
 
 // MARK: - Getter
 
-public extension CGRect {
+extension CGRect {
 
     public var x: CGFloat {
         return origin.x
@@ -25,7 +25,7 @@ public extension CGRect {
 
 // MARK: - Transform
 
-public extension CGRect {
+extension CGRect {
 
     public func with(y: CGFloat) -> CGRect {
         return CGRect(x: x, y: y, width: width, height: height)

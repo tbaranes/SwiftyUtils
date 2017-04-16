@@ -11,7 +11,7 @@
 
 // MARK: Init
 
-public extension SwiftyColor {
+extension SwiftyColor {
 
     public convenience init(hex: String) {
         let hex = hex.trimmingCharacters(in: NSCharacterSet.alphanumerics.inverted)
@@ -36,7 +36,7 @@ public extension SwiftyColor {
 // MARK: - Components
 
 #if !os(OSX)
-public extension SwiftyColor {
+extension SwiftyColor {
 
     public var redComponent: Int {
         var r: CGFloat = 0
@@ -67,7 +67,7 @@ public extension SwiftyColor {
 
 // MARK: - Brightness
 
-public extension SwiftyColor {
+extension SwiftyColor {
 
     public func lighter(amount: CGFloat = 0.25) -> SwiftyColor {
         return hueColor(withBrightnessAmount: 1 + amount)

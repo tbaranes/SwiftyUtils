@@ -7,7 +7,7 @@ import Foundation
 
 // MARK - Subscript
 
-public extension String {
+extension String {
 
     public subscript(integerIndex: Int) -> Character {
         return self[index(startIndex, offsetBy: integerIndex)]
@@ -23,7 +23,7 @@ public extension String {
 
 // MARK - Misc
 
-public extension String {
+extension String {
 
     public var length: Int {
         return self.characters.count
@@ -37,7 +37,7 @@ public extension String {
 
 // MARk - Validator
 
-public extension String {
+extension String {
 
     public var isNumeric: Bool {
         let hasNumbers = rangeOfCharacter(from: .decimalDigits, options: .literal, range: nil) != nil
@@ -54,7 +54,7 @@ public extension String {
 
 // MARK: - Computed Properties
 
-public extension String {
+extension String {
 
     public var uncamelized: String {
         let upperCase = CharacterSet.uppercaseLetters
@@ -80,7 +80,7 @@ public extension String {
 
 // MARK: - Transform
 
-public extension String {
+extension String {
 
     public func trimmed() -> String {
         return components(separatedBy: NSCharacterSet.whitespacesAndNewlines).joined(separator: "")

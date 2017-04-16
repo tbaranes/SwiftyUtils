@@ -7,7 +7,7 @@ import UIKit
 
 // MARK: Initializer
 
-public extension UIImage {
+extension UIImage {
 
     public convenience init(color: UIColor?) {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
@@ -23,7 +23,7 @@ public extension UIImage {
 
 // MARK: - Colors
 
-public extension UIImage {
+extension UIImage {
 
     public func filled(with color: UIColor?) -> UIImage {
         guard let color = color else {
@@ -54,7 +54,7 @@ public extension UIImage {
 // MARK: - Transform
 
 #if !os(watchOS)
-public extension UIImage {
+extension UIImage {
 
     public func combined(with image: UIImage) -> UIImage? {
         let finalSize = CGSize(width: max(size.width, image.size.width),
@@ -74,7 +74,7 @@ public extension UIImage {
 
 // MARK: - RenderingMode
 
-public extension UIImage {
+extension UIImage {
 
     public var original: UIImage {
         return withRenderingMode(.alwaysOriginal)

@@ -7,7 +7,7 @@ import UIKit
 
 // MARK: - Misc
 
-public extension UISwitch {
+extension UISwitch {
 
     public func toggle(animated: Bool = true) {
         self.setOn(!isOn, animated: animated)

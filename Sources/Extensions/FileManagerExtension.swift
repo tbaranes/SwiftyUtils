@@ -7,7 +7,7 @@ import Foundation
 
 // MARk: - Getter
 
-public extension FileManager {
+extension FileManager {
 
     public static var document: URL {
         return self.default.document
@@ -37,7 +37,7 @@ public extension FileManager {
 
 // MARK: - Create
 
-public extension FileManager {
+extension FileManager {
 
     public static func createDirectory(at directoryURL: URL) throws {
         return try self.default.createDirectory(at: directoryURL)
@@ -56,7 +56,7 @@ public extension FileManager {
 
 // MARK: - Remove
 
-public extension FileManager {
+extension FileManager {
 
     public static func removeTemporaryFiles(at path: String) throws {
         return try self.default.removeTemporaryFiles()

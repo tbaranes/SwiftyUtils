@@ -7,7 +7,7 @@ import UIKit
 
 // MARK: - Size
 
-public extension UIScreen {
+extension UIScreen {
 
     public class var size: CGSize {
         return CGSize(width: width, height: height)
@@ -27,7 +27,7 @@ public extension UIScreen {
 
 // MARK: - StatusBar
 
-public extension UIScreen {
+extension UIScreen {
 
     public class var statusBarHeight: CGFloat {
         return UIApplication.shared.statusBarFrame.height
@@ -42,7 +42,7 @@ public extension UIScreen {
 
 // MARK: - Orientation
 
-public extension UIScreen {
+extension UIScreen {
 
     public class var currentOrientation: UIInterfaceOrientation {
         return UIApplication.shared.statusBarOrientation

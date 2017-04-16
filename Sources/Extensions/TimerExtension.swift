@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - After
 
-public extension Timer {
+extension Timer {
 
     public class func new(after interval: TimeInterval, _ block: @escaping () -> Void) -> Timer {
         return CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, CFAbsoluteTimeGetCurrent() + interval, 0, 0, 0) { _ in
@@ -25,7 +25,7 @@ public extension Timer {
 
 // MARK: - Every
 
-public extension Timer {
+extension Timer {
 
     public class func every(_ interval: TimeInterval, firesImmediately: Bool = false, _ block: @escaping (Timer) -> Void) -> Timer {
         if firesImmediately {
@@ -52,7 +52,7 @@ public extension Timer {
 
 // MARK: - Misc
 
-public extension Timer {
+extension Timer {
 
     public func start(onRunLoop runLoop: RunLoop = RunLoop.current, modes: RunLoopMode...) {
         let modes = modes.isEmpty ? [RunLoopMode.defaultRunLoopMode] : modes

@@ -10,7 +10,7 @@ import AppKit
 #endif
 
 #if !os(watchOS)
-public extension NSLayoutConstraint {
+extension NSLayoutConstraint {
 
     public func apply(multiplier: CGFloat, toView: SwiftyView) {
         switch firstAttribute {

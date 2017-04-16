@@ -7,7 +7,7 @@ import UIKit
 
 // MARK: - Device information
 
-public extension UIDevice {
+extension UIDevice {
 
     public class var idForVendor: String? {
         return UIDevice.current.identifierForVendor?.uuidString
@@ -41,7 +41,7 @@ public extension UIDevice {
 
 // MARK: - Version
 
-public extension UIDevice {
+extension UIDevice {
 
     public class func isVersion(_ version: Float) -> Bool {
         return systemFloatVersion >= version && systemFloatVersion < (version + 1.0)
@@ -64,7 +64,7 @@ public extension UIDevice {
 // MARK: - Rotation
 
 #if os(iOS)
-public extension UIDevice {
+extension UIDevice {
 
     public class func forceRotation(_ orientation: UIInterfaceOrientation) {
         UIDevice.current.forceRotation(orientation)

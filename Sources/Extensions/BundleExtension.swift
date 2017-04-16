@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - App Information
 
-public extension Bundle {
+extension Bundle {
 
     public var appName: String {
         return string(for: kCFBundleNameKey as String)
@@ -29,7 +29,7 @@ public extension Bundle {
 
 // MARK: - Status
 
-public extension Bundle {
+extension Bundle {
 
     public var isInTestFlight: Bool {
         return appStoreReceiptURL?.path.contains("sandboxReceipt") == true
@@ -39,7 +39,7 @@ public extension Bundle {
 
 // MARK: - Schemes
 
-public extension Bundle {
+extension Bundle {
 
     public var schemes: [String] {
         guard let infoDictionary = Bundle.main.infoDictionary,
