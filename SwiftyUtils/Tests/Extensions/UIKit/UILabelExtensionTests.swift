@@ -8,7 +8,7 @@
 
 import UIKit
 import XCTest
-@testable import SwiftyUtils
+import SwiftyUtils
 
 // MARK: Life cycle
 
