@@ -16,7 +16,7 @@ N/A
 
 #### Bugfixes
 
-N/A
+- Make Array subscript public
 
 ## [1.0.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/1.0.0) (17-03-2017)
 
