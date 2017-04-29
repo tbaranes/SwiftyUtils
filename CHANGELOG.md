@@ -12,7 +12,7 @@ N/A
 
 #### Enhancements
 
-N/A
+- translateSubviews: translate all `UIControlState` of `UIButton` 
 
 #### Bugfixes
 

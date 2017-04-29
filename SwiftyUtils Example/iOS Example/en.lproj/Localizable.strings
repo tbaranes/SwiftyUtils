@@ -1,5 +1,6 @@
 "localizables_example.label" = "I am an UILabel automatically translated";
 "localizables_example.button" = "I am an UIButton automatically translated";
+"localizables_example.button_highlighted" = "I am a highlighted UIButton  automatically translated";
 "localizables_example.text_field" = "I am an UITextField placeholder automatically translated";
 "localizables_example.text_view" = "I am an UITextView placeholder automatically translated";
 "localizables_example.stackview.label" = "I am a label in an UIStackView";

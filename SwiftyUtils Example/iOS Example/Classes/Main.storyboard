@@ -173,6 +173,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssY-Bq-gb3">
                                 <rect key="frame" x="91" y="124.5" width="193" height="30"/>
                                 <state key="normal" title="localizables_example.button"/>
+                                <state key="highlighted" title="localizables_example.button_highlighted"/>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="localizables_example.text_field" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iQq-2y-Tdu">
                                 <rect key="frame" x="62.5" y="174.5" width="250" height="30"/>
