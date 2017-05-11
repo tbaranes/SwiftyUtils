@@ -90,7 +90,7 @@ extension StringExtensionTests {
     func testCapitalizedFirst() {
         var aString = "hello world"
         aString = aString.capitalizedFirst
-        XCTAssertEqual(aString[0], "H")
+        XCTAssertEqual(aString, "Hello world")
     }
 
 }
