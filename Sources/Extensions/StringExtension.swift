@@ -64,8 +64,9 @@ extension String {
     }
 
     public var capitalizedFirst: String {
-        let result = replacingCharacters(in: Range(startIndex..<startIndex), with: String(self[startIndex]).capitalized)
-        return result
+        let first = String(characters.prefix(1)).capitalized
+        let other = String(characters.dropFirst())
+        return first + other
     }
 
     public mutating func trim() {
