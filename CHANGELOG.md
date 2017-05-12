@@ -17,6 +17,7 @@ N/A
 #### Bugfixes
 
 - Make Array subscript public
+- No more duplicate letter when using String's `capitalizedFirst`
 
 ## [1.0.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/1.0.0) (17-03-2017)
 
