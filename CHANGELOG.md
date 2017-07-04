@@ -13,6 +13,11 @@ N/A
 #### Enhancements
 
 - translateSubviews: translate all `UIControlState` of `UIButton` 
+- UIApplicationExtension (iOS only)
+
+```swift
+public static func delegate<T: UIApplicationDelegate>(_ type: T.Type) -> T? 
+```
 
 #### Bugfixes
 
