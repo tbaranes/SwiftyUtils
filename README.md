@@ -1077,6 +1077,12 @@ UIApplication.shared.topViewController() // Using UIWindow's rootViewController 
 UIApplication.shared.topViewController(from: baseVC) // topVC from the base view controller
 ```
 
+Get the app delegate:
+
+```swift
+UIApplication.delegate(AppDelegate.self)
+```
+
 ### UIDevice extension
 
 Access to your device information:
