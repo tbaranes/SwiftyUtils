@@ -27,7 +27,7 @@ extension DateExtensionTests {
             XCTFail("Date From String Couldn't be initialized.")
             return
         }
-        XCTAssertEqualWithAccuracy(dateFromString.timeIntervalSince1970, 0, accuracy: 60 * 60 * 24)
+        XCTAssertEqual(dateFromString.timeIntervalSince1970, 0, accuracy: 60 * 60 * 24)
     }
 
 }
@@ -42,7 +42,7 @@ extension DateExtensionTests {
             XCTFail("Date From String Couldn't be initialized.")
             return
         }
-        XCTAssertEqualWithAccuracy(dateFromString.timeIntervalSince1970, 0, accuracy: 60 * 60 * 24)
+        XCTAssertEqual(dateFromString.timeIntervalSince1970, 0, accuracy: 60 * 60 * 24)
     }
 
 }
@@ -54,25 +54,25 @@ extension DateExtensionTests {
     func testDaysSince() {
         let now = Date()
         let later = Date(timeIntervalSinceNow: -100000)
-        XCTAssertEqualWithAccuracy(later.days(since: now), 1, accuracy: 1)
+        XCTAssertEqual(later.days(since: now), 1, accuracy: 1)
     }
 
     func testHoursSince() {
         let now = Date()
         let later = Date(timeIntervalSinceNow: -100000)
-        XCTAssertEqualWithAccuracy(later.hours(since: now), 27, accuracy: 1)
+        XCTAssertEqual(later.hours(since: now), 27, accuracy: 1)
     }
 
     func testMinutesSince() {
         let now = Date()
         let later = Date(timeIntervalSinceNow: -100000)
-        XCTAssertEqualWithAccuracy(later.minutes(since: now), 1666, accuracy: 1)
+        XCTAssertEqual(later.minutes(since: now), 1666, accuracy: 1)
     }
 
     func testSecondsSince() {
         let now = Date()
         let later = Date(timeIntervalSinceNow: -100000)
-        XCTAssertEqualWithAccuracy(later.seconds(since: now), 100000, accuracy: 1)
+        XCTAssertEqual(later.seconds(since: now), 100000, accuracy: 1)
     }
 
 }

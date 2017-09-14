@@ -39,7 +39,7 @@ final class TimerTests: XCTestCase {
         }
     }
 
-    let timer2 = Timer.new(after: 0.1.seconds) { _ in fatalError() }
+    let timer2 = Timer.new(after: 0.1.seconds) { fatalError() }
     let timer3 = Timer.new(every: 0.1.seconds) { _ in fatalError() }
 
     func testNewAfter() {

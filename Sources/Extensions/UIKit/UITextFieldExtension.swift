@@ -21,6 +21,7 @@ extension UITextField {
         rightViewMode = .whileEditing
     }
 
+    @objc
     func clear() {
         text = ""
         sendActions(for: .editingChanged)
@@ -36,8 +37,9 @@ public extension UITextField {
         guard let placeholder = placeholder, placeholder.isNotEmpty else {
             return
         }
+        let attributes = [NSAttributedStringKey.foregroundColor: color]
         attributedPlaceholder = NSAttributedString(string: placeholder,
-                                                   attributes: [NSForegroundColorAttributeName: color])
+                                                   attributes: attributes)
     }
 
 }

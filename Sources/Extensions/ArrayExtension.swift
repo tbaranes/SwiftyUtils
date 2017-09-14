@@ -168,7 +168,7 @@ extension Array {
             guard idx != next else {
                 continue
             }
-            swap(&self[idx], &self[next])
+            self.swapAt(idx, next)
         }
     }
 
