@@ -12,7 +12,8 @@ N/A
 
 #### Enhancements
 
-- translateSubviews: translate all `UIControlState` of `UIButton` 
+- Xcode 9 and Swift 4 support
+- Each `UIButton`'s `UIControlState` will be translated when using `translateSubviews`
 - UIApplicationExtension (iOS only)
 
 ```swift
