@@ -5,7 +5,7 @@
 
 import Cocoa
 
-// MARK - Localizables
+// MARK: - Localizables
 
 extension NSView {
 
@@ -21,9 +21,7 @@ extension NSView {
                     aTextField.placeholderString = NSLocalizedString(placeholder, comment: "")
                 }
             } else if let aTextView = aSubview as? NSTextView {
-                if let text = aTextView.string {
-                    aTextView.string = NSLocalizedString(text, comment: "")
-                }
+                aTextView.string = NSLocalizedString(aTextView.string, comment: "")
             } else if let aButton = aSubview as? NSButton {
                 aButton.title = NSLocalizedString(aButton.title, comment: "")
             } else {

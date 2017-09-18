@@ -10,7 +10,7 @@ import Foundation
     import UIKit
 #endif
 
-// MARK - Color
+// MARK: - Color
 
 extension NSMutableAttributedString {
 
@@ -39,7 +39,7 @@ extension NSMutableAttributedString {
 
 }
 
-// MARK - Strike
+// MARK: - Strike
 
 extension NSMutableAttributedString {
 
@@ -68,7 +68,7 @@ extension NSMutableAttributedString {
 
 }
 
-// MARK - Underline
+// MARK: - Underline
 
 extension NSMutableAttributedString {
 
@@ -97,20 +97,20 @@ extension NSMutableAttributedString {
 
 }
 
-// MARK - Private
+// MARK: - Private
 
 fileprivate extension NSMutableAttributedString {
 
     func addColorAttribute(value: Any, range: NSRange) {
-        addAttribute(NSForegroundColorAttributeName, value: value, range: range)
+        addAttribute(NSAttributedStringKey.foregroundColor, value: value, range: range)
     }
 
     func addStrikeAttribute(value: Any = 1, range: NSRange) {
-        addAttribute(NSStrikethroughStyleAttributeName, value: value, range: range)
+        addAttribute(NSAttributedStringKey.strikethroughStyle, value: value, range: range)
     }
 
     func addUnderlineAttribute(value: Any = 1, range: NSRange) {
-        addAttribute(NSUnderlineStyleAttributeName, value: value, range: range)
+        addAttribute(NSAttributedStringKey.underlineStyle, value: value, range: range)
     }
 
     func addAttribute(forOccurence searchString: String,

@@ -74,21 +74,21 @@ extension SwiftyColorTests {
 
         lighterWhite.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         #if os(OSX)
-            XCTAssertEqualWithAccuracy(red, 1.25, accuracy: 0.0001)
-            XCTAssertEqualWithAccuracy(green, 1.25, accuracy: 0.0001)
-            XCTAssertEqualWithAccuracy(blue, 1.25, accuracy: 0.0001)
+            XCTAssertEqual(red, 1.25, accuracy: 0.0001)
+            XCTAssertEqual(green, 1.25, accuracy: 0.0001)
+            XCTAssertEqual(blue, 1.25, accuracy: 0.0001)
         #elseif os(iOS)
             if #available(iOS 10.0, *) {
-                XCTAssertEqualWithAccuracy(red, 1.25, accuracy: 0.0001)
-                XCTAssertEqualWithAccuracy(green, 1.25, accuracy: 0.0001)
-                XCTAssertEqualWithAccuracy(blue, 1.25, accuracy: 0.0001)
+                XCTAssertEqual(red, 1.25, accuracy: 0.0001)
+                XCTAssertEqual(green, 1.25, accuracy: 0.0001)
+                XCTAssertEqual(blue, 1.25, accuracy: 0.0001)
             } else {
-                XCTAssertEqualWithAccuracy(red, 1.0, accuracy: 0.0001)
-                XCTAssertEqualWithAccuracy(green, 1.0, accuracy: 0.0001)
-                XCTAssertEqualWithAccuracy(blue, 1.0, accuracy: 0.0001)
+                XCTAssertEqual(red, 1.0, accuracy: 0.0001)
+                XCTAssertEqual(green, 1.0, accuracy: 0.0001)
+                XCTAssertEqual(blue, 1.0, accuracy: 0.0001)
             }
         #endif
-        XCTAssertEqualWithAccuracy(alpha, 1.0, accuracy: 0.0001)
+        XCTAssertEqual(alpha, 1.0, accuracy: 0.0001)
     }
 
     func testDarkerBlackIsBlack() {
@@ -101,10 +101,10 @@ extension SwiftyColorTests {
         var alpha: CGFloat = 0
 
         darkerBlack.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-        XCTAssertEqualWithAccuracy(red, 0.0, accuracy: 0.0001)
-        XCTAssertEqualWithAccuracy(green, 0.0, accuracy: 0.0001)
-        XCTAssertEqualWithAccuracy(blue, 0.0, accuracy: 0.0001)
-        XCTAssertEqualWithAccuracy(alpha, 1.0, accuracy: 0.0001)
+        XCTAssertEqual(red, 0.0, accuracy: 0.0001)
+        XCTAssertEqual(green, 0.0, accuracy: 0.0001)
+        XCTAssertEqual(blue, 0.0, accuracy: 0.0001)
+        XCTAssertEqual(alpha, 1.0, accuracy: 0.0001)
     }
 
     func testLighterColor() {
@@ -117,10 +117,10 @@ extension SwiftyColorTests {
         var alpha: CGFloat = 0
 
         lighterColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-        XCTAssertEqualWithAccuracy(red, 0.625, accuracy: 0.0001)
-        XCTAssertEqualWithAccuracy(green, 1.0, accuracy: 0.0001)
-        XCTAssertEqualWithAccuracy(blue, 1.0, accuracy: 0.0001)
-        XCTAssertEqualWithAccuracy(alpha, 1.0, accuracy: 0.0001)
+        XCTAssertEqual(red, 0.625, accuracy: 0.0001)
+        XCTAssertEqual(green, 1.0, accuracy: 0.0001)
+        XCTAssertEqual(blue, 1.0, accuracy: 0.0001)
+        XCTAssertEqual(alpha, 1.0, accuracy: 0.0001)
     }
 
     func testDarkerColor() {
@@ -133,9 +133,9 @@ extension SwiftyColorTests {
         var alpha: CGFloat = 0
 
         darkerColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-        XCTAssertEqualWithAccuracy(red, 0.375, accuracy: 0.0001)
-        XCTAssertEqualWithAccuracy(green, 0.6, accuracy: 0.0001)
-        XCTAssertEqualWithAccuracy(blue, 0.6, accuracy: 0.0001)
+        XCTAssertEqual(red, 0.375, accuracy: 0.0001)
+        XCTAssertEqual(green, 0.6, accuracy: 0.0001)
+        XCTAssertEqual(blue, 0.6, accuracy: 0.0001)
         XCTAssertEqual(alpha, 1.0)
     }
 

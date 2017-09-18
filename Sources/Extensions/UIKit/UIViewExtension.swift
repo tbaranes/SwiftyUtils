@@ -6,7 +6,7 @@
 import Foundation
 import UIKit
 
-// MARK - Localizables
+// MARK: - Localizables
 
 extension UIView {
 

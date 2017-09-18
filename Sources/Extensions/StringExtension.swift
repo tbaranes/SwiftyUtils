@@ -5,7 +5,7 @@
 
 import Foundation
 
-// MARK - Subscript
+// MARK: - Subscript
 
 extension String {
 
@@ -16,12 +16,12 @@ extension String {
     public subscript(integerRange: Range<Int>) -> String {
         let start = index(startIndex, offsetBy: integerRange.lowerBound)
         let end = index(startIndex, offsetBy: integerRange.upperBound)
-        return self[start..<end]
+        return String(self[start..<end])
     }
 
 }
 
-// MARK - Misc
+// MARK: - Misc
 
 extension String {
 
@@ -35,7 +35,7 @@ extension String {
 
 }
 
-// MARk - Validator
+// MARK: - Validator
 
 extension String {
 
