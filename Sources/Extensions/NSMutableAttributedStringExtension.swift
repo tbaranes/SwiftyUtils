@@ -97,6 +97,35 @@ extension NSMutableAttributedString {
 
 }
 
+// MARK: - Font
+
+extension NSMutableAttributedString {
+
+    public static func font(inText text: String, font: SwiftyFont, afterOcurrence occurence: String) -> NSMutableAttributedString {
+        let attrStr = NSMutableAttributedString(string: text)
+        attrStr.font(font, afterOcurrence: occurence)
+        return attrStr
+    }
+
+    public static func font(inText text: String, font: SwiftyFont, occurences searchString: String) -> NSMutableAttributedString {
+        let attrStr = NSMutableAttributedString(string: text)
+        attrStr.font(font, occurences: searchString)
+        return attrStr
+    }
+
+    public func font(_ font: SwiftyFont, afterOcurrence occurence: String) {
+        let range = NSRange(text: string, afterOccurence: occurence)
+        if range.location != NSNotFound {
+            addFontAttribute(value: font, range: range)
+        }
+    }
+
+    public func font(_ font: SwiftyFont, occurences searchString: String) {
+        addAttribute(forOccurence: searchString, value: font, addAttributeMethod: addFontAttribute)
+    }
+
+}
+
 // MARK: - Private
 
 fileprivate extension NSMutableAttributedString {
@@ -111,6 +140,10 @@ fileprivate extension NSMutableAttributedString {
 
     func addUnderlineAttribute(value: Any = 1, range: NSRange) {
         addAttribute(NSAttributedStringKey.underlineStyle, value: value, range: range)
+    }
+
+    func addFontAttribute(value: Any = 1, range: NSRange) {
+        addAttribute(NSAttributedStringKey.font, value: value, range: range)
     }
 
     func addAttribute(forOccurence searchString: String,
