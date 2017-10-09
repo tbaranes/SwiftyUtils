@@ -44,7 +44,7 @@ extension Bundle {
     public var schemes: [String] {
         guard let infoDictionary = Bundle.main.infoDictionary,
             let urlTypes = infoDictionary["CFBundleURLTypes"] as? [AnyObject],
-            let urlType = urlTypes.first as? [String : AnyObject],
+            let urlType = urlTypes.first as? [String: AnyObject],
             let urlSchemes = urlType["CFBundleURLSchemes"] as? [String] else {
                 return []
         }
