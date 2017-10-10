@@ -666,6 +666,30 @@ let attrStr = NSMutableAttributedString(string: "Hello world")
 attrStr.underline(afterOcurrence: "llo")
 ```
 
+Use custom font for each occurence:
+
+```swift
+let font = UIFont.boldSystemFont(ofSize: 15)
+let attrStr: NSMutableAttributedString = NSMutableAttributedString.font(inText: "hello world", font: font, occurences: "llo")
+
+// OR
+
+let attrStr: NSMutableAttributedString = NSMutableAttributedString(string: "Hello world")
+attrStr.font(font, occurences: "llo")
+```
+
+Custom font for everything after an occurence:
+
+```swift
+let font = UIFont.boldSystemFont(ofSize: 15)
+let attrStr = NSMutableAttributedString.colored(inText: "Hello world", font: font, afterOcurrence: "llo")
+
+// OR
+
+let attrStr = NSMutableAttributedString(string: "Hello world")
+attrStr.font(font, afterOcurrence: "llo")
+```
+
 ### NSObject extension
 
 Get the class name of a `NSObject`:

@@ -20,6 +20,16 @@ N/A
 public static func delegate<T: UIApplicationDelegate>(_ type: T.Type) -> T? 
 ```
 
+- NSMutableAttributedString:
+
+```swift
+public static func font(inText text: String, font: SwiftyFont, afterOcurrence occurence: String) -> NSMutableAttributedString
+public func font(_ font: SwiftyFont, afterOcurrence occurence: String)
+
+public static func font(inText text: String, font: SwiftyFont, occurences searchString: String) -> NSMutableAttributedString
+public func font(_ font: SwiftyFont, occurences searchString: String)
+```
+
 #### Bugfixes
 
 - Make Array subscript public
