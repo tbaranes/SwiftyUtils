@@ -9,11 +9,11 @@ import Foundation
 
 extension FileManager {
 
-    public static var document: URL {
+    @objc public static var document: URL {
         return self.default.document
     }
 
-    public var document: URL {
+    @objc public var document: URL {
         #if os(OSX)
             // On OS X it is, so put files in Application Support. If we aren't running
             // in a sandbox, put it in a subdirectory based on the bundle identifier
@@ -43,6 +43,7 @@ extension FileManager {
         return try self.default.createDirectory(at: directoryURL)
     }
 
+    @objc
     public func createDirectory(at directoryUrl: URL) throws {
         let fileManager = FileManager.default
         var isDir: ObjCBool = false
