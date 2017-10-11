@@ -24,10 +24,12 @@ extension UserDefaults {
 
 extension UserDefaults {
 
+    @objc
     public static func has(key: String) -> Bool {
         return self.standard.has(key: key)
     }
 
+    @objc
     public func has(key: String) -> Bool {
         return self.dictionaryRepresentation().keys.contains(key)
     }

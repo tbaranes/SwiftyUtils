@@ -13,6 +13,7 @@
 
 extension SwiftyColor {
 
+    @objc
     public convenience init(hex: String) {
         let hex = hex.trimmingCharacters(in: NSCharacterSet.alphanumerics.inverted)
         var int = UInt32()
