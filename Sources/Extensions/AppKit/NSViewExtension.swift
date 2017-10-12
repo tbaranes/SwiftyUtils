@@ -9,6 +9,7 @@ import Cocoa
 
 extension NSView {
 
+    @objc
     public func convertLocalizables() {
         if subviews.isEmpty {
             return
