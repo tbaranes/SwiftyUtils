@@ -9,6 +9,7 @@ import UIKit
 
 extension UIImage {
 
+    @objc
     public convenience init(color: UIColor?) {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
@@ -25,6 +26,7 @@ extension UIImage {
 
 extension UIImage {
 
+    @objc
     public func filled(with color: UIColor?) -> UIImage {
         guard let color = color else {
             return self

@@ -10,6 +10,7 @@ import UIKit
 
 extension UIView {
 
+    @objc
     public func translateSubviews() {
         if subviews.isEmpty {
             return

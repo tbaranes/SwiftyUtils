@@ -13,7 +13,7 @@ extension Bundle {
         return string(for: kCFBundleNameKey as String)
     }
 
-    public var appVersion: String {
+    @objc public var appVersion: String {
         return string(for: "CFBundleShortVersionString")
     }
 
