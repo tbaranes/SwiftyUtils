@@ -13,7 +13,7 @@ extension UITextField {
         let clearButton = UIButton(type: .custom)
         clearButton.setImage(image, for: .normal)
         clearButton.frame = CGRect(origin: .zero, size: CGSize(width: self.height, height: self.height))
-        clearButton.contentMode = .center
+        clearButton.contentMode = .right
         clearButton.addTarget(self, action: #selector(clear), for: .touchUpInside)
         clearButtonMode = .never
 
