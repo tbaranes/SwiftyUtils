@@ -40,10 +40,10 @@ extension UILabelExtensionTests {
     func testTruncateWithCustomSuffix() {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 40))
         label.setText("I will be truncated :(", truncatedText: ".")
-        XCTAssertEqual(label.text?.characters.last, ".")
+        XCTAssertEqual(label.text?.last, ".")
 
         label.setText(":)", truncatedText: ".")
-        XCTAssertNotEqual(label.text?.characters.last, ".")
+        XCTAssertNotEqual(label.text?.last, ".")
     }
 
 }
