@@ -149,8 +149,8 @@ fileprivate extension NSMutableAttributedString {
     func addAttribute(forOccurence searchString: String,
                       value: Any = 1,
                       addAttributeMethod: ((_ value: Any, _ range: NSRange) -> Void)) {
-        let inputLength = string.length
-        let searchLength = searchString.length
+        let inputLength = string.count
+        let searchLength = searchString.count
         var range = NSRange(location: 0, length: length)
         while range.location != NSNotFound {
             range = (string as NSString).range(of: searchString, options: [], range: range)
