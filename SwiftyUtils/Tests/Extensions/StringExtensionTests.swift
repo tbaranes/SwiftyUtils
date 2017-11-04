@@ -39,11 +39,6 @@ extension StringExtensionTests {
 
 extension StringExtensionTests {
 
-    func testLength() {
-        let aString = "Hello world"
-        XCTAssertEqual(aString.length, aString.characters.count)
-    }
-
     func testContains() {
         let string = "Hello world"
         XCTAssertTrue(string.contains("lo wo"))

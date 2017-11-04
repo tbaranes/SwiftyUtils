@@ -21,7 +21,7 @@ extension FileManager {
             var defaultURL = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first
             if ProcessInfo.processInfo.environment["APP_SANDBOX_CONTAINER_ID"] == nil {
                 var identifier = Bundle.main.bundleIdentifier
-                if identifier?.length == 0 {
+                if identifier?.isEmpty ?? false {
                     identifier = Bundle.main.executableURL?.lastPathComponent
                 }
                 defaultURL = defaultURL?.appendingPathComponent(identifier ?? "", isDirectory: true)

@@ -82,7 +82,7 @@ extension DictionaryExtensionTests {
     }
 
     func testTestAll() {
-        let allKeysHaveMoreThan3Chars = firstdic.testAll { key, _ in key.length >= 3 }
+        let allKeysHaveMoreThan3Chars = firstdic.testAll { key, _ in key.count >= 3 }
         XCTAssertTrue(allKeysHaveMoreThan3Chars)
     }
 

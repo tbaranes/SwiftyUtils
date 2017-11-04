@@ -30,8 +30,8 @@ extension UILabel {
     public func setText(_ text: String, truncatedText: String) {
         var text = text
         self.text = text
-        while isTruncated() && text.length > 0 {
-            text = String(text.characters.dropLast())
+        while isTruncated() && text.isNotEmpty {
+            text = String(text.dropLast())
             self.text = text + truncatedText
         }
     }

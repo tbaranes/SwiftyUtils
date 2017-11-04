@@ -11,7 +11,7 @@ extension NSRange {
         self = (text as NSString).range(of: occurence, options: [])
         if location != NSNotFound {
             location += 1
-            length = text.length - location
+            length = text.count - location
         }
     }
 

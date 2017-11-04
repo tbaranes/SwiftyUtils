@@ -8,11 +8,11 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
-N/A
+- Xcode 9 and Swift 4 support
+- Removing `String.length`, starting with swift 4, you can directly user  `String.count`
 
 #### Enhancements
 
-- Xcode 9 and Swift 4 support
 - Each `UIButton`'s `UIControlState` will be translated when using `translateSubviews`
 - UIApplicationExtension (iOS only)
 

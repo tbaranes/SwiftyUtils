@@ -25,10 +25,6 @@ extension String {
 
 extension String {
 
-    public var length: Int {
-        return self.characters.count
-    }
-
     public func contains(_ text: String, compareOption: NSString.CompareOptions) -> Bool {
         return self.range(of: text, options: compareOption) != nil
     }
@@ -64,8 +60,8 @@ extension String {
     }
 
     public var capitalizedFirst: String {
-        let first = String(characters.prefix(1)).capitalized
-        let other = String(characters.dropFirst())
+        let first = prefix(1).capitalized
+        let other = dropFirst()
         return first + other
     }
 
@@ -88,7 +84,7 @@ extension String {
     }
 
     public func truncated(limit: Int) -> String {
-        if self.length > limit {
+        if self.count > limit {
             var truncatedString = self[0..<limit]
             truncatedString = truncatedString.appending("...")
             return truncatedString
@@ -98,7 +94,7 @@ extension String {
 
     public func split(intoChunksOf chunkSize: Int) -> [String] {
         var output = [String]()
-        let splittedString = characters
+        let splittedString = self
             .map { $0 }
             .split(intoChunksOf: chunkSize)
         splittedString.forEach {

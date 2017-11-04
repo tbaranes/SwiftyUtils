@@ -36,7 +36,7 @@ extension NSRangeExtensionTests {
         let stringToFind = "ello wo"
         let range = NSRange(textToFind: stringToFind, in: string)
         XCTAssertEqual(range.location, 1)
-        XCTAssertEqual(range.length, stringToFind.length)
+        XCTAssertEqual(range.length, stringToFind.count)
     }
 
 }
