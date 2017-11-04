@@ -8,6 +8,21 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
+N/A
+
+#### Enhancements
+
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [2.0.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/2.0.0) (04-11-2017)
+
+
+#### API breaking changes
+
 - Xcode 9 and Swift 4 support
 - Removing `String.length`, starting with swift 4, you can directly user  `String.count`
 
