@@ -749,13 +749,6 @@ print(string[2]) // l
 print(string[1...3]) // ell
 ```
 
-Get the length of a string:
-
-```swift
-var string = "hello world"
-print(string.length) // 11
-```
-
 Check if it contains a string:
 
 ```swift
