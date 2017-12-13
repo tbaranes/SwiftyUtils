@@ -1195,7 +1195,7 @@ print(label.text) // I wi.
 Get the screen orientation:
 
 ```swift
-if UIInterfaceOrientationIsPortrait(UIScreen.screenOrientation) {
+if UIInterfaceOrientationIsPortrait(UIScreen.currentOrientation) {
 	// Portrait
 } else {
 	// Landscape
