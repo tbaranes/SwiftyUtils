@@ -16,7 +16,7 @@ N/A
 
 #### Bugfixes
 
-N/A
+- Keep label lineBreakMode when using setLineHeight
 
 ## [2.0.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/2.0.0) (04-11-2017)
 

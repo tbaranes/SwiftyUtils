@@ -14,7 +14,8 @@ extension UILabel {
         paragraphStyle.lineSpacing = 1.0
         paragraphStyle.lineHeightMultiple = lineHeight
         paragraphStyle.alignment = textAlignment
-
+        paragraphStyle.lineBreakMode = lineBreakMode
+    
         let attrString = NSMutableAttributedString(string: text!)
         attrString.addAttribute(NSAttributedStringKey.font, value: font, range: NSRange(location: 0, length: attrString.length))
         attrString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: attrString.length))
