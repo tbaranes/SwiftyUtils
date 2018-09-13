@@ -131,19 +131,19 @@ extension NSMutableAttributedString {
 fileprivate extension NSMutableAttributedString {
 
     func addColorAttribute(value: Any, range: NSRange) {
-        addAttribute(NSAttributedStringKey.foregroundColor, value: value, range: range)
+        addAttribute(NSAttributedString.Key.foregroundColor, value: value, range: range)
     }
 
     func addStrikeAttribute(value: Any = 1, range: NSRange) {
-        addAttribute(NSAttributedStringKey.strikethroughStyle, value: value, range: range)
+        addAttribute(NSAttributedString.Key.strikethroughStyle, value: value, range: range)
     }
 
     func addUnderlineAttribute(value: Any = 1, range: NSRange) {
-        addAttribute(NSAttributedStringKey.underlineStyle, value: value, range: range)
+        addAttribute(NSAttributedString.Key.underlineStyle, value: value, range: range)
     }
 
     func addFontAttribute(value: Any = 1, range: NSRange) {
-        addAttribute(NSAttributedStringKey.font, value: value, range: range)
+        addAttribute(NSAttributedString.Key.font, value: value, range: range)
     }
 
     func addAttribute(forOccurence searchString: String,

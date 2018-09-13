@@ -17,7 +17,7 @@ extension Array {
 
 // MARK: - Remove
 
-extension Array where Element : Equatable {
+extension Array where Element: Equatable {
 
     public mutating func remove(object: Iterator.Element) -> Bool {
         if let index = self.index(of: object) {
@@ -68,7 +68,7 @@ extension Array {
 
 // MARK: - Index Getter
 
-extension Array where Element : Equatable {
+extension Array where Element: Equatable {
 
     public func indexes(of item: Element) -> [Int] {
         var indexes = [Int]()
@@ -93,7 +93,7 @@ extension Array where Element : Equatable {
 
 // MARK: - Equatable Transform
 
-extension Array where Element : Equatable {
+extension Array where Element: Equatable {
 
     public func difference(with values: [Element]...) -> [Element] {
         var result = [Element]()
@@ -112,8 +112,8 @@ extension Array where Element : Equatable {
         var result = self
         var intersection = Array()
 
-        for (i, value) in values.enumerated() {
-            if i > 0 {
+        for (index, value) in values.enumerated() {
+            if index > 0 {
                 result = intersection
                 intersection = Array()
             }
@@ -191,7 +191,7 @@ extension Array {
 
 // MARK: - Misc Equatable
 
-extension Array where Element : Equatable {
+extension Array where Element: Equatable {
 
     public func contains(_ elements: [Element]) -> Bool {
         for item in elements {

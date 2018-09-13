@@ -18,18 +18,18 @@ extension SwiftyColor {
         let hex = hex.trimmingCharacters(in: NSCharacterSet.alphanumerics.inverted)
         var int = UInt32()
         Scanner(string: hex).scanHexInt32(&int)
-        let a, r, g, b: UInt32
+        let alpha, red, green, blue: UInt32
         switch hex.count {
         case 3:
-            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+            (alpha, red, green, blue) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
         case 6:
-            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+            (alpha, red, green, blue) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
         case 8:
-            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+            (alpha, red, green, blue) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
         default:
-            (a, r, g, b) = (1, 1, 1, 0)
+            (alpha, red, green, blue) = (1, 1, 1, 0)
         }
-        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+        self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: CGFloat(alpha) / 255)
     }
 
 }
@@ -40,21 +40,21 @@ extension SwiftyColor {
 extension SwiftyColor {
 
     public var redComponent: Int {
-        var r: CGFloat = 0
-        getRed(&r, green: nil, blue: nil, alpha: nil)
-        return Int(r * 255)
+        var red: CGFloat = 0
+        getRed(&red, green: nil, blue: nil, alpha: nil)
+        return Int(red * 255)
     }
 
     public var greenComponent: Int {
-        var g: CGFloat = 0
-        getRed(nil, green: &g, blue: nil, alpha: nil)
-        return Int(g * 255)
+        var green: CGFloat = 0
+        getRed(nil, green: &green, blue: nil, alpha: nil)
+        return Int(green * 255)
     }
 
     public var blueComponent: Int {
-        var b: CGFloat = 0
-        getRed(nil, green: nil, blue: &b, alpha: nil)
-        return Int(b * 255)
+        var blue: CGFloat = 0
+        getRed(nil, green: nil, blue: &blue, alpha: nil)
+        return Int(blue * 255)
     }
 
     public var alpha: CGFloat {

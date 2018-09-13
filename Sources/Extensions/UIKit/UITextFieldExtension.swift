@@ -37,7 +37,7 @@ public extension UITextField {
         guard let placeholder = placeholder, placeholder.isNotEmpty else {
             return
         }
-        let attributes = [NSAttributedStringKey.foregroundColor: color]
+        let attributes = [NSAttributedString.Key.foregroundColor: color]
         attributedPlaceholder = NSAttributedString(string: placeholder,
                                                    attributes: attributes)
     }
