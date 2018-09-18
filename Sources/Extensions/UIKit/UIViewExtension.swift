@@ -38,7 +38,7 @@ extension UIView {
         } else if let textView = subview as? UITextView {
             textView.text = NSLocalizedString(textView.text, comment: "")
         } else if let button = subview as? UIButton {
-            let states: [UIControlState] = [.normal, .selected, .highlighted, .disabled, .application, .reserved]
+            let states: [UIControl.State] = [.normal, .selected, .highlighted, .disabled, .application, .reserved]
             for state in states where button.title(for: state) != nil {
                 button.setTitle(NSLocalizedString(button.title(for: state) ?? "", comment: ""), for: state)
             }

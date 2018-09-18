@@ -8,7 +8,13 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
-N/A
+- Xcode 10 and Swift 4.2 support
+- Removing following methods:
+   - `Simulator`
+   - `Iteratable`
+   - Collection's `random` and `shuffle`
+   - Collection's `testAll`, `removeAll`
+   - Dictionnary `map` and `flatMap`
 
 #### Enhancements
 

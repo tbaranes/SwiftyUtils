@@ -38,24 +38,6 @@ extension ArrayExtensionTests {
 
 extension ArrayExtensionTests {
 
-    func testRemoveObject() {
-        var arrayToTest = [1, 2, 3]
-        var isObjectRemoved = arrayToTest.remove(object: 2)
-        XCTAssertTrue(isObjectRemoved)
-        isObjectRemoved = arrayToTest.remove(object: 5)
-        XCTAssertFalse(isObjectRemoved)
-    }
-
-    func testRemoveObjects() {
-        let copyArray = array
-        array.remove(objects: 12345)
-        XCTAssertEqual(array, copyArray)
-
-        let compareArray = [0, 2, 3, 4, 5]
-        array.remove(objects: 1)
-        XCTAssertEqual(array, compareArray)
-    }
-
     func testRemoveDuplicates() {
         var array = [0, 0, 1, 1, 2]
         let expectedArray = [0, 1, 2]
@@ -67,30 +49,6 @@ extension ArrayExtensionTests {
         let array = [0, 0, 1, 1, 2]
         let expectedArray = [0, 1, 2]
         XCTAssertEqual(array.removedDuplicates(), expectedArray)
-    }
-
-    func testRemoveAllItem() {
-        var array = [0, 0, 1, 1, 2]
-        let expectedArray = [1, 1, 2]
-        array.removeAll(0)
-        XCTAssertEqual(array, expectedArray)
-    }
-
-    func testRemovedAllItem() {
-        var array = [0, 0, 1, 1, 2]
-        let expectedArray = [1, 1, 2]
-        XCTAssertEqual(array.removedAll(0), expectedArray)
-    }
-
-}
-
-// MARK: - Getter
-
-extension ArrayExtensionTests {
-
-    func testRandom() {
-        XCTAssertNotNil(array.random())
-        XCTAssertNil([].random())
     }
 
 }
@@ -155,37 +113,6 @@ extension ArrayExtensionTests {
         XCTAssertEqual(split[0][1], 1)
         XCTAssertEqual(split[1][0], 2)
         XCTAssertEqual(split[1][1], 3)
-    }
-
-    func testShuffle() {
-        var array = [1, 2, 3, 4, 5]
-        let copyArray = array
-        _ = array.shuffle()
-
-        XCTAssertNotNil(array)
-        XCTAssertEqual(array.count, copyArray.count)
-
-        for element in copyArray {
-            if let i = array.index(of: element) {
-                array.remove(at: i)
-            }
-        }
-        XCTAssertEqual(array, [])
-    }
-
-}
-
-// MARK: - Misc
-
-extension ArrayExtensionTests {
-
-    func testTestAll() {
-        XCTAssertTrue(array.testAll { $0 < 10 })
-    }
-
-    func testContainsArray() {
-        let array = [Int](2...4)
-        XCTAssertTrue(self.array.contains(array))
     }
 
 }
