@@ -18,17 +18,6 @@ extension Dictionary {
 
 }
 
-// MARK: - Getter
-
-extension Dictionary {
-
-    public func random() -> Value {
-        let index: Int = Int(arc4random_uniform(UInt32(count)))
-        return Array(self.values)[index]
-    }
-
-}
-
 // MARK: - Helpers
 
 extension Dictionary {
@@ -37,27 +26,11 @@ extension Dictionary {
         return index(forKey: key) != nil
     }
 
-    public func testAll(test: (Key, Value) -> (Bool)) -> Bool {
-        for (key, value) in self {
-            if !test(key, value) {
-                return false
-            }
-        }
-        return true
-    }
 }
 
 // MARK: - Transform
 
 extension Dictionary {
-
-    public func map<T, U>(_ transform: (Key, Value) throws -> (T, U)) rethrows -> [T: U] where T: Hashable {
-        return [T: U](elements: try self.map(transform))
-    }
-
-    public func flatMap<T, U>(_ transform: (Key, Value) throws -> (T, U)?) rethrows -> [T: U] where T: Hashable {
-        return [T: U](elements: try self.compactMap(transform))
-    }
 
     public func union(values: Dictionary...) -> Dictionary {
         var result = self

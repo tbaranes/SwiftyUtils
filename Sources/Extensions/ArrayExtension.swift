@@ -19,49 +19,12 @@ extension Array {
 
 extension Array where Element: Equatable {
 
-    public mutating func remove(object: Iterator.Element) -> Bool {
-        if let index = self.index(of: object) {
-            self.remove(at: index)
-            return true
-        }
-        return false
-    }
-
-    public mutating func remove(objects: Element) {
-        for idx in self.indexes(of: objects).reversed() {
-            self.remove(at: idx)
-        }
-    }
-
     public mutating func removeDuplicates() {
         self = reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
     }
 
     public func removedDuplicates() -> [Element] {
         return reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
-    }
-
-    public mutating func removeAll(_ item: Element) {
-        self = filter { $0 != item }
-    }
-
-    public mutating func removedAll(_ item: Element) -> [Element] {
-        return filter { $0 != item }
-    }
-
-}
-
-// MARK: - Getter
-
-extension Array {
-
-    public func random() -> Element? {
-        guard isNotEmpty else {
-            return nil
-        }
-
-        let index = Int(arc4random_uniform(UInt32(count)))
-        return self[index]
     }
 
 }
@@ -144,62 +107,6 @@ extension Array where Element: Equatable {
             let endIndex = ($0.advanced(by: chunkSize) > self.count) ? self.count - $0 : chunkSize
             return Array(self[$0..<$0.advanced(by: endIndex)])
         }
-    }
-
-}
-
-// MARK: - Transform
-
-extension Array {
-
-    public func shuffled() -> [Element] {
-        var array = self
-        array.shuffle()
-        return array
-    }
-
-    public mutating func shuffle() {
-        guard count > 2 else {
-            return
-        }
-
-        for idx in startIndex..<endIndex {
-            let next = Int(arc4random_uniform(UInt32(endIndex - idx))) + idx
-            guard idx != next else {
-                continue
-            }
-            self.swapAt(idx, next)
-        }
-    }
-
-}
-
-// MARK: - Misc
-
-extension Array {
-
-    public func testAll(test: (Element) -> Bool) -> Bool {
-        for item in self {
-            if !test(item) {
-                return false
-            }
-        }
-        return true
-    }
-
-}
-
-// MARK: - Misc Equatable
-
-extension Array where Element: Equatable {
-
-    public func contains(_ elements: [Element]) -> Bool {
-        for item in elements {
-            if contains(item) == false {
-                return false
-            }
-        }
-        return true
     }
 
 }
