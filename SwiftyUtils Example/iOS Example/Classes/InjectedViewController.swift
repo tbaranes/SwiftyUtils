@@ -14,7 +14,7 @@ final class InjectedViewController: UIViewController, Injectable {
     override func viewDidLoad() {
         super.viewDidLoad()
         assertDependencies()
-        labelStringInjected.text = "String injected: \(stringInjected)"
+        labelStringInjected.text = "String injected: \(String(describing: stringInjected))"
     }
 
 }
