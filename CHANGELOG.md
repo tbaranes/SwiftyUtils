@@ -8,6 +8,20 @@ All notable changes to the project will be documented in this file.
 
 #### API breaking changes
 
+N/A
+
+#### Enhancements
+
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [3.0.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/3.0.0) (18-09-2018)
+
+#### API breaking changes
+
 - Xcode 10 and Swift 4.2 support
 - Removing following methods:
    - `Simulator`
@@ -15,10 +29,6 @@ All notable changes to the project will be documented in this file.
    - Collection's `random` and `shuffle`
    - Collection's `testAll`, `removeAll`
    - Dictionnary `map` and `flatMap`
-
-#### Enhancements
-
-N/A
 
 #### Bugfixes
 

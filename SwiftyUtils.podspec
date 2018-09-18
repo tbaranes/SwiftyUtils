@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
 s.name            	= "SwiftyUtils"
-s.version          	= "2.0.0"
+s.version          	= "3.0.0"
 s.summary          	= "Swifty utils regroups all the boilerplate code reusable in each project."
 s.description      	= "Swifty utils regroups all the boilerplate code reusable in each project, available for iOS, OSX and tvOS"
 s.homepage         	= "https://github.com/tbaranes/SwiftyUtils"
