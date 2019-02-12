@@ -65,6 +65,8 @@ extension StringExtensionTests {
         XCTAssertFalse(aString.isEmail)
         aString = "test@.com"
         XCTAssertFalse(aString.isEmail)
+        aString = "testing+gmailsorting@gmail.com"
+        XCTAssertTrue(aString.isEmail)
     }
 
 }
