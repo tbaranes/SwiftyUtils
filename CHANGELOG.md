@@ -12,7 +12,7 @@ N/A
 
 #### Enhancements
 
-N/A
+- added ip address validation extension to String
 
 #### Bugfixes
 
