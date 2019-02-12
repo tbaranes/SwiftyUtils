@@ -1270,7 +1270,8 @@ aView.convertLocalizables()
 It will iterate on all the subviews of the view, and use the text / placeholder as key in `NSLocalizedString`.
 By settings your localizable key in your xib / storyboard, all yours string will be automatically translated just by calling the above method.
 
-### System Utility
+### Shell Utility 
+(macOS only)
 
 Runs a command on a system shell and provides the return code for success, STDOUT, and STDERR.
 
