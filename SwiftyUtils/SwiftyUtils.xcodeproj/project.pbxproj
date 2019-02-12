@@ -7,13 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33D2AFA022128EBA00CBC975 /* SystemUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2AF9F22128EBA00CBC975 /* SystemUtility.swift */; };
 		33D2AFA122128EBA00CBC975 /* SystemUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2AF9F22128EBA00CBC975 /* SystemUtility.swift */; };
-		33D2AFA222128EBA00CBC975 /* SystemUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2AF9F22128EBA00CBC975 /* SystemUtility.swift */; };
-		33D2AFA322128EBA00CBC975 /* SystemUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2AF9F22128EBA00CBC975 /* SystemUtility.swift */; };
-		33D2AFA9221290F000CBC975 /* SystemUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2AFA42212903F00CBC975 /* SystemUtilityTests.swift */; };
 		33D2AFAA221290F100CBC975 /* SystemUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2AFA42212903F00CBC975 /* SystemUtilityTests.swift */; };
-		33D2AFAB221290F300CBC975 /* SystemUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2AFA42212903F00CBC975 /* SystemUtilityTests.swift */; };
 		E23ED9BB1E9A525B0059BED7 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9BA1E9A525B0059BED7 /* CGPointExtension.swift */; };
 		E23ED9BC1E9A525E0059BED7 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9BA1E9A525B0059BED7 /* CGPointExtension.swift */; };
 		E23ED9BD1E9A525F0059BED7 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9BA1E9A525B0059BED7 /* CGPointExtension.swift */; };
@@ -939,7 +934,6 @@
 				E26729251E9A38FF00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
 				E26729261E9A38FF00DE844E /* NSRangeExtension.swift in Sources */,
 				E267291C1E9A38FF00DE844E /* ColorExtension.swift in Sources */,
-				33D2AFA322128EBA00CBC975 /* SystemUtility.swift in Sources */,
 				E26729221E9A38FF00DE844E /* IntExtension.swift in Sources */,
 				E267292B1E9A38FF00DE844E /* UserDefaultsExtension.swift in Sources */,
 				E26729181E9A38FF00DE844E /* BundleExtension.swift in Sources */,
@@ -996,7 +990,6 @@
 				E267290C1E9A38FE00DE844E /* FileManagerExtension.swift in Sources */,
 				E26729121E9A38FE00DE844E /* ReusableFormatters.swift in Sources */,
 				E26729041E9A38FE00DE844E /* CGFloatLiteral.swift in Sources */,
-				33D2AFA222128EBA00CBC975 /* SystemUtility.swift in Sources */,
 				E267293E1E9A390C00DE844E /* Injectable.swift in Sources */,
 				E267290E1E9A38FE00DE844E /* NotificationCenterExtension.swift in Sources */,
 				E26729341E9A390800DE844E /* UnitTesting.swift in Sources */,
@@ -1054,7 +1047,6 @@
 				E26728A41E9A37D600DE844E /* DictionaryExtensionTests.swift in Sources */,
 				E26728A31E9A37D600DE844E /* DateExtensionTests.swift in Sources */,
 				E26728B11E9A37DE00DE844E /* ThenTest.swift in Sources */,
-				33D2AFA9221290F000CBC975 /* SystemUtilityTests.swift in Sources */,
 				E267289C1E9A37D200DE844E /* UILabelExtensionTests.swift in Sources */,
 				E26728B01E9A37DE00DE844E /* OccupiableTests.swift in Sources */,
 				E26728B21E9A37DE00DE844E /* UITestingTests.swift in Sources */,
@@ -1097,7 +1089,6 @@
 				E267295E1E9A3B4500DE844E /* TimerExtensionTests.swift in Sources */,
 				E267295C1E9A3B4500DE844E /* StringExtensionTests.swift in Sources */,
 				E26729581E9A3B4500DE844E /* FileManagerTests.swift in Sources */,
-				33D2AFAB221290F300CBC975 /* SystemUtilityTests.swift in Sources */,
 				E23ED9CB1E9A53A10059BED7 /* CGPointExtensionTests.swift in Sources */,
 				E26729611E9A3B4A00DE844E /* NSObjectExtensionTests.swift in Sources */,
 				E26729511E9A3B4500DE844E /* CGFloatLiteralTests.swift in Sources */,
@@ -1166,7 +1157,6 @@
 				E26728761E9A379900DE844E /* UIViewExtension.swift in Sources */,
 				E267286C1E9A379900DE844E /* UIAlertControllerExtension.swift in Sources */,
 				E267287A1E9A379F00DE844E /* CGRectExtensions.swift in Sources */,
-				33D2AFA022128EBA00CBC975 /* SystemUtility.swift in Sources */,
 				E26728841E9A379F00DE844E /* NSLayoutConstraintsExtension.swift in Sources */,
 				E267287F1E9A379F00DE844E /* DictionaryExtension.swift in Sources */,
 				E26728801E9A379F00DE844E /* DoubleExtension.swift in Sources */,

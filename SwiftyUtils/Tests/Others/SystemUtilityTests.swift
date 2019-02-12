@@ -7,6 +7,8 @@
 import XCTest
 import SwiftyUtils
 
+#if os(macOS)
+
 final class SystemUtilityTests: XCTestCase {
 
     override func setUp() {
@@ -39,3 +41,4 @@ extension SystemUtilityTests {
     }
 }
 
+#endif

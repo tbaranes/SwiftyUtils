@@ -67,6 +67,7 @@ Check out the repository to find examples / tests for each feature.
 **Available for macOS:**
 
 - [NSView](#nsview-extension)
+- [SystemUtility - Shell](#system-utility)
 
 ## Available for iOS, macOS, tvOS and watchOS
 
@@ -1268,6 +1269,27 @@ aView.convertLocalizables()
 
 It will iterate on all the subviews of the view, and use the text / placeholder as key in `NSLocalizedString`.
 By settings your localizable key in your xib / storyboard, all yours string will be automatically translated just by calling the above method.
+
+### System Utility
+
+Runs a command on a system shell and provides the return code for success, STDOUT, and STDERR.
+
+**STDOUT as one continuous String**
+```
+let (rCode, stdOut, stdErr) = SystemUtility.shell(["ls", "-l", "/"])
+// rCode = 0 (which is "true" in shell)
+// stdOut = "total 13\ndrwxrwxr-x+ 91 root  admin  2912 Feb 11 01:24 Applications" ...  etc
+// stdErr = [""]
+```
+
+**STDOUT as array of Strings separated by newlines**
+```
+let (rCode, stdOut, stdErr) = SystemUtility.shellArrayOut(["ls", "-l", "/"])
+// rCode = 0 (which is "true" in shell)
+// stdOut = ["total 13", "drwxrwxr-x+ 91 root  admin  2912 Feb 11 01:24 Applications" ...  etc]
+// stdErr = [""]
+```
+
 
 ## Installation
 
