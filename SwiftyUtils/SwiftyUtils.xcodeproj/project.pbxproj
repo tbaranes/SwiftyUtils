@@ -386,6 +386,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33D2AFB6221310C500CBC975 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				33D2AF9F22128EBA00CBC975 /* SystemUtility.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		33D2AFB7221310EF00CBC975 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				33D2AFA42212903F00CBC975 /* SystemUtilityTests.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
 		E267227F1E9A304800DE844E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,9 +496,9 @@
 		E26727F01E9A362600DE844E /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				33D2AFB6221310C500CBC975 /* macOS */,
 				E26727F91E9A362600DE844E /* UITesting.swift */,
 				E26727FA1E9A362600DE844E /* UnitTesting.swift */,
-				33D2AF9F22128EBA00CBC975 /* SystemUtility.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -549,8 +565,8 @@
 		E267284A1E9A36F100DE844E /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				33D2AFB7221310EF00CBC975 /* macOS */,
 				E267284B1E9A36F100DE844E /* UITestingTests.swift */,
-				33D2AFA42212903F00CBC975 /* SystemUtilityTests.swift */,
 				E267284C1E9A36F100DE844E /* UnitTestingTests.swift */,
 			);
 			path = Others;
