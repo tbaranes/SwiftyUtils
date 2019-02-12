@@ -12,7 +12,7 @@ N/A
 
 #### Enhancements
 
-N/A
+- Added SystemUtility struct with shell command access
 
 #### Bugfixes
 
