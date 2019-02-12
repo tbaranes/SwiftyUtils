@@ -59,21 +59,13 @@ extension String {
     }
 
     private func confirmIP4isValid(ip4: String) -> Bool {
-        var valid = false
         var sin = sockaddr_in()
-        if ip4.withCString({ cstring in inet_pton(AF_INET, cstring, &sin.sin_addr)}) == 1 {
-            valid = true
-        }
-        return valid
+        return ip4.withCString({ cstring in inet_pton(AF_INET, cstring, &sin.sin_addr)}) == 1
     }
     
     private func confirmIP6isValid(ip6: String) -> Bool {
-        var valid = false
         var sin6 = sockaddr_in6()
-        if ip6.withCString({ cstring in inet_pton(AF_INET6, cstring, &sin6.sin6_addr)}) == 1 {
-            valid = true
-        }
-        return valid
+        return ip6.withCString({ cstring in inet_pton(AF_INET6, cstring, &sin6.sin6_addr)}) == 1
     }
 
 }

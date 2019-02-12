@@ -68,7 +68,6 @@ extension StringExtensionTests {
     }
     
     func testIPAddressValid() {
-        
         var ipAddr = "123.45.67.89"
         XCTAssertTrue(ipAddr.isIPAddress)
         XCTAssertTrue(ipAddr.isIP4Address)
@@ -117,7 +116,6 @@ extension StringExtensionTests {
         XCTAssertFalse(ipAddr.isIPAddress)
         XCTAssertFalse(ipAddr.isIP4Address)
         XCTAssertFalse(ipAddr.isIP6Address)
-
     }
 
 }
