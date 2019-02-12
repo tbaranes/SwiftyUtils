@@ -66,6 +66,59 @@ extension StringExtensionTests {
         aString = "test@.com"
         XCTAssertFalse(aString.isEmail)
     }
+    
+    func testIPAddressValid() {
+        
+        var ipAddr = "123.45.67.89"
+        XCTAssertTrue(ipAddr.isIPAddress)
+        XCTAssertTrue(ipAddr.isIP4Address)
+        XCTAssertFalse(ipAddr.isIP6Address)
+        ipAddr = "999.1.3.2"
+        XCTAssertFalse(ipAddr.isIPAddress)
+        XCTAssertFalse(ipAddr.isIP4Address)
+        XCTAssertFalse(ipAddr.isIP6Address)
+        ipAddr = "4.3.2.1"
+        XCTAssertTrue(ipAddr.isIPAddress)
+        XCTAssertTrue(ipAddr.isIP4Address)
+        XCTAssertFalse(ipAddr.isIP6Address)
+        ipAddr = "091.056.034.002"
+        XCTAssertTrue(ipAddr.isIPAddress)
+        XCTAssertTrue(ipAddr.isIP4Address)
+        XCTAssertFalse(ipAddr.isIP6Address)
+        ipAddr = "123.45.67.89."
+        XCTAssertFalse(ipAddr.isIPAddress)
+        XCTAssertFalse(ipAddr.isIP4Address)
+        XCTAssertFalse(ipAddr.isIP6Address)
+        ipAddr = "2001:0db8:85a3:0000:0000:8a2e:0370:7334."
+        XCTAssertFalse(ipAddr.isIPAddress)
+        XCTAssertFalse(ipAddr.isIP4Address)
+        XCTAssertFalse(ipAddr.isIP6Address)
+        ipAddr = "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+        XCTAssertTrue(ipAddr.isIPAddress)
+        XCTAssertFalse(ipAddr.isIP4Address)
+        XCTAssertTrue(ipAddr.isIP6Address)
+        ipAddr = "FE80::0202:B3FF:FE1E:8329"
+        XCTAssertTrue(ipAddr.isIPAddress)
+        XCTAssertFalse(ipAddr.isIP4Address)
+        XCTAssertTrue(ipAddr.isIP6Address)
+        ipAddr = "[2001:db8::1]:80"
+        XCTAssertFalse(ipAddr.isIPAddress)
+        XCTAssertFalse(ipAddr.isIP4Address)
+        XCTAssertFalse(ipAddr.isIP6Address)
+        ipAddr = "fc00::/7"
+        XCTAssertFalse(ipAddr.isIPAddress)
+        XCTAssertFalse(ipAddr.isIP4Address)
+        XCTAssertFalse(ipAddr.isIP6Address)
+        ipAddr = "fc00::"
+        XCTAssertTrue(ipAddr.isIPAddress)
+        XCTAssertFalse(ipAddr.isIP4Address)
+        XCTAssertTrue(ipAddr.isIP6Address)
+        ipAddr = "i'll bribe you to say i'm an ip address!"
+        XCTAssertFalse(ipAddr.isIPAddress)
+        XCTAssertFalse(ipAddr.isIP4Address)
+        XCTAssertFalse(ipAddr.isIP6Address)
+
+    }
 
 }
 
