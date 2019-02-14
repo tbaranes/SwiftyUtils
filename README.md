@@ -327,6 +327,30 @@ let darker = color.darker(amount: 0.5)
 let darker = color.darker()
 ```
 
+### Data Extension
+
+Initialize from hex string:
+
+```swift
+let hexString = "6261736520313020697320736F2062617369632E206261736520313620697320776865726520697427732061742C20796F2E"
+let data = Data(hexString: hexString)
+```
+
+Get hex string from data:
+
+```swift
+let data = Data(...)
+let string = data.toHexString()
+// string = "6261736520313020697320736F2062617369632E206261736520313620697320776865726520697427732061742C20796F2E" if using previous example value
+```
+
+Get UInt8 Array from data:
+
+```swift
+let data = Data(...)
+let array = data.bytesArray
+```
+
 ## Date extension
 
 Initialize from string:

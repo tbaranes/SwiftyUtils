@@ -12,7 +12,10 @@ N/A
 
 #### Enhancements
 
-N/A
+- Added Data extensions
+    - data to hex string
+    - hex string to data
+    - data to UInt8 array
 
 #### Bugfixes
 
