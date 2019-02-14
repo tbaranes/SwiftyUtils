@@ -16,6 +16,8 @@ N/A
     - data to hex string
     - hex string to data
     - data to UInt8 array
+- Added SystemUtility struct with shell command access
+- added ip address validation extension to String
 
 #### Bugfixes
 
