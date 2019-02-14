@@ -9,18 +9,18 @@
 import Foundation
 
 extension Data {
-    
+
     // MARK: Initializers
     /**
      Initializes a new data object from a hex string
-     
+
      - Parameter hexString: String in hexadecimal format. Can start with "0x" or not and may have spaces. Any illegal (non hex) characters or an odd number of legal characters will cause it to fail.
      */
     public init?(hexString: String) {
         let noSpaces = hexString.replacingOccurrences(of: "\\s", with: "", options: .regularExpression, range: nil)
         guard noSpaces.count % 2 == 0 else { print("invalid hex string: uneven character count"); return nil }
         let hexArray = noSpaces.split(intoChunksOf: 2)
-        
+
         var byteArray = [UInt8]()
         byteArray.reserveCapacity(hexString.count)
         for substringByte in hexArray {
@@ -34,10 +34,10 @@ extension Data {
     // MARK: managable data
     /**
     Provides the data as a hex string with formatting options.
-     
+
     - Parameter hexLeader: Boolean determining if the string should start with "0x"
     - Parameter spaces: Boolean determining if there should be spaces inserted every 8 characters
-     
+
     - Returns: String with hex encoded data
      */
     public func toHexString(hexLeader: Bool = false, spaces: Bool = false) -> String {
@@ -57,7 +57,6 @@ extension Data {
         }
         return hexString
     }
-
 
     /**
     Provides the data as an array of UInt8 bytes for easy manipulation.
