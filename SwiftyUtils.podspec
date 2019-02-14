@@ -27,6 +27,8 @@ s.source_files				= 'Sources/*.swift',
 s.ios.source_files			= 'Sources/Extensions/UIKit/*.swift',
 							  'Sources/Others/UIKit/*.swift',
 
-s.osx.source_files          = 'Sources/AppKit/*.swift'
+s.osx.source_files          = 'Sources/AppKit/*.swift',
+                              'Sources/Others/macOS/*.swift'
+
 
 end
