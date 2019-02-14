@@ -731,6 +731,26 @@ var string = "test@"
 print(string.isEmail) // false
 ```
 
+Check if it's a valid IP address:
+
+```swift
+let ip4 = "1.2.3.4"
+let ip6 = "fc00::"
+let notIPAtAll = "i'll bribe you to say i'm an ip address!"
+
+ip4.isIPAddress //true
+ip4.isIP6Address //false
+ip4.isIPAddress //true
+
+ip6.isIPAddress //false
+ip6.isIP6Address //true
+ip6.isIPAddress //true
+
+notIPAtAll.isIPAddress //false
+notIPAtAll.isIP6Address //false
+notIPAtAll.isIPAddress //false
+```
+
 Uncamelize a string:
 
 ```swift

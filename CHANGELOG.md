@@ -13,6 +13,7 @@ N/A
 #### Enhancements
 
 - Added SystemUtility struct with shell command access
+- added ip address validation extension to String
 
 #### Bugfixes
 
