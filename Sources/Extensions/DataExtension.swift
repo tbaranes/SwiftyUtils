@@ -18,14 +18,20 @@ extension Data {
      */
     public init?(hexString: String) {
         let noSpaces = hexString.replacingOccurrences(of: "\\s", with: "", options: .regularExpression, range: nil)
-        guard noSpaces.count % 2 == 0 else { print("invalid hex string: uneven character count"); return nil }
+        guard noSpaces.count % 2 == 0 else {
+            return nil
+        }
         let hexArray = noSpaces.split(intoChunksOf: 2)
 
         var byteArray = [UInt8]()
         byteArray.reserveCapacity(hexString.count)
         for substringByte in hexArray {
-            guard substringByte != "0x" else { continue }
-            guard let byte = UInt8(substringByte, radix: 16) else { print("could not convert substring '\(substringByte)' to byte"); return nil }
+            guard substringByte != "0x" else {
+                continue
+            }
+            guard let byte = UInt8(substringByte, radix: 16) else {
+                return nil
+            }
             byteArray.append(byte)
         }
         self = Data(bytes: byteArray)
@@ -62,10 +68,6 @@ extension Data {
     Provides the data as an array of UInt8 bytes for easy manipulation.
      */
     public var bytesArray: [UInt8] {
-        return toBytesArray()
-    }
-
-    private func toBytesArray() -> [UInt8] {
         let count = self.count / MemoryLayout<UInt8>.stride
         let array = self.withUnsafeBytes { (bytes: UnsafePointer<UInt8>) -> [UInt8] in
             var byteArray = [UInt8]()
@@ -77,5 +79,4 @@ extension Data {
         }
         return array
     }
-
 }
