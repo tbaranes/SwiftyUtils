@@ -16,7 +16,6 @@ final class DataExtensionTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-
 }
 
 
@@ -111,5 +110,4 @@ extension DataExtensionTests {
             XCTAssertTrue(array[index] == count - index)
         }
     }
-
 }
