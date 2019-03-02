@@ -68,15 +68,6 @@ extension Data {
     Provides the data as an array of UInt8 bytes for easy manipulation.
      */
     public var bytesArray: [UInt8] {
-        let count = self.count / MemoryLayout<UInt8>.stride
-        let array = self.withUnsafeBytes { (bytes: UnsafePointer<UInt8>) -> [UInt8] in
-            var byteArray = [UInt8]()
-            byteArray.reserveCapacity(count)
-            for index in 0..<count {
-                byteArray.append(bytes[index])
-            }
-            return byteArray
-        }
-        return array
+        return Array(self)
     }
 }
