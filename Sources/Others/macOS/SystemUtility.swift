@@ -9,8 +9,8 @@
 import Foundation
 
 #if os(macOS)
+// swiftlint:disable large_tuple
 public struct SystemUtility {
-    
     /**
      Runs a command on a system shell and provides the return code for success, STDOUT, and STDERR.
      
@@ -47,9 +47,10 @@ public struct SystemUtility {
 
         return (rCode, stdOut, stdError)
     }
-    
+
     /**
-     Runs a command on a system shell and provides the return code for success, STDOUT, and STDERR. The returned information is separated into an array of Strings separated by newlines.
+     Runs a command on a system shell and provides the return code for success, STDOUT, and STDERR.
+     The returned information is separated into an array of Strings separated by newlines.
      
      - Parameter args: an array starting with the command and any following arguments as separate Strings in the array.
      - Parameter launchPath: path the base executable (defaults to "/usr/bin/env" and can be ignored in most cases)
@@ -63,10 +64,11 @@ public struct SystemUtility {
          // stdErr = [""]
      
      */
-    public static func shellArrayOut(_ args: [String], _ launchPath: String = "/usr/bin/env") -> (returnCode: Int32, stdOut: [String], stdError: [String]) {
+    public static func shellArrayOut(_ args: [String],
+                                     _ launchPath: String = "/usr/bin/env") -> (returnCode: Int32, stdOut: [String], stdError: [String]) {
         let (rCode, stdOut, stdErr) = shell(args, launchPath)
-        let output = stdOut.split(separator: "\n").map{String($0)}
-        let error = stdErr.split(separator: "\n").map{String($0)}
+        let output = stdOut.split(separator: "\n").map { String($0) }
+        let error = stdErr.split(separator: "\n").map { String($0) }
         return (rCode, output, error)
     }
 }

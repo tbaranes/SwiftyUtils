@@ -12,6 +12,7 @@ N/A
 
 #### Enhancements
 
+- Xcode 10.2 and Swift 5 support
 - Added Data extensions
     - data to hex string
     - hex string to data

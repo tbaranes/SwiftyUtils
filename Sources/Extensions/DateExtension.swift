@@ -22,7 +22,7 @@ extension Date {
 
 // MARK: - Format
 
-public extension Date {
+extension Date {
 
     public func string(dateStyle: DateFormatter.Style = .medium, timeStyle: DateFormatter.Style = .medium) -> String {
         let formatter = SUDateFormatter.shared
@@ -71,7 +71,7 @@ extension Date {
 
 // MARK: - IsIn
 
-public extension Date {
+extension Date {
 
     public var isInFuture: Bool {
         return self > Date()

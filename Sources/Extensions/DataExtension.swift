@@ -14,7 +14,8 @@ extension Data {
     /**
      Initializes a new data object from a hex string
 
-     - Parameter hexString: String in hexadecimal format. Can start with "0x" or not and may have spaces. Any illegal (non hex) characters or an odd number of legal characters will cause it to fail.
+     - Parameter hexString: String in hexadecimal format. Can start with "0x" or
+     not and may have spaces. Any illegal (non hex) characters or an odd number of legal characters will cause it to fail.
      */
     public init?(hexString: String) {
         let noSpaces = hexString.replacingOccurrences(of: "\\s", with: "", options: .regularExpression, range: nil)
@@ -34,7 +35,7 @@ extension Data {
             }
             byteArray.append(byte)
         }
-        self = Data(bytes: byteArray)
+        self = Data(byteArray)
     }
 
     // MARK: managable data
@@ -53,7 +54,8 @@ extension Data {
         if hexLeader {
             hexString = "0x"
         }
-        self.withUnsafeBytes { (bytes: UnsafePointer<UInt8>) in
+
+        self.withUnsafeBytes { bytes in
             for index in 0..<count {
                 if spaces && (index % 4) == 0 && index != 0 && index != (count - 1) {
                     hexString += " "

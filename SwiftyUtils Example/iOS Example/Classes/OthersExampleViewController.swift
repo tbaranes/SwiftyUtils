@@ -25,7 +25,7 @@ final class OthersExampleViewController: UIViewController {
 
     @IBOutlet weak var labelScreenOrientation: UILabel! {
         didSet {
-            let isPortrait = UIInterfaceOrientationIsPortrait(UIScreen.currentOrientation)
+            let isPortrait = UIScreen.currentOrientation == UIInterfaceOrientation.portrait
             let orientation = isPortrait ? "portrait" : "landscape"
             labelScreenOrientation.text = String(format: "Screen orientation: %@", orientation)
 

@@ -24,7 +24,7 @@ extension UIApplication {
 
 }
 
-public extension UIApplication {
+extension UIApplication {
     public static func delegate<T: UIApplicationDelegate>(_ type: T.Type) -> T? {
         return UIApplication.shared.delegate as? T
     }
