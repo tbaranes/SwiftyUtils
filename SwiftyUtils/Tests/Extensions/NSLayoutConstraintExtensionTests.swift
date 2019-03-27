@@ -26,7 +26,7 @@ final class NSLayoutConstraintExtensionTests: XCTestCase {
 extension NSLayoutConstraintExtensionTests {
 
     func testApplyMultiplierWidth() {
-        let constraint = NSLayoutConstraint(item: view,
+        let constraint = NSLayoutConstraint(item: view!,
                                             attribute: .width,
                                             relatedBy: .equal,
                                             toItem: nil,
@@ -38,7 +38,7 @@ extension NSLayoutConstraintExtensionTests {
     }
 
     func testApplyMultiplierHeight() {
-        let constraint = NSLayoutConstraint(item: view,
+        let constraint = NSLayoutConstraint(item: view!,
                                             attribute: .height,
                                             relatedBy: .equal,
                                             toItem: nil,

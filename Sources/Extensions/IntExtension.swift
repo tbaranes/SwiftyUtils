@@ -18,11 +18,8 @@ extension Int {
     public var digits: Int {
         if self == 0 {
             return 1
-        } else if Int(fabs(Double(self))) <= LONG_MAX {
-            return Int(log10(fabs(Double(self)))) + 1
-        } else {
-            return -1
         }
+        return Int(log10(fabs(Double(self)))) + 1
     }
 
 }
