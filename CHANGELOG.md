@@ -12,17 +12,26 @@ N/A
 
 #### Enhancements
 
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [4.0.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/4.0.0) (27-03-2019)
+
+#### API breaking changes
+
 - Xcode 10.2 and Swift 5 support
+
+#### Enhancements
+
 - Added Data extensions
     - data to hex string
     - hex string to data
     - data to UInt8 array
 - Added SystemUtility struct with shell command access
 - added ip address validation extension to String
-
-#### Bugfixes
-
-N/A
 
 ## [3.0.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/3.0.0) (18-09-2018)
 
