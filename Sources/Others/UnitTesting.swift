@@ -9,7 +9,7 @@ import UIKit
 import Cocoa
 #endif
 
-public struct UnitTesting {
+public enum UnitTesting {
 
     public static var isRunning: Bool {
         return ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil

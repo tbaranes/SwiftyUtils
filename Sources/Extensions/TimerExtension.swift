@@ -10,7 +10,11 @@ import Foundation
 extension Timer {
 
     public class func new(after interval: TimeInterval, _ block: @escaping () -> Void) -> Timer {
-        return CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, CFAbsoluteTimeGetCurrent() + interval, 0, 0, 0) { _ in
+        return CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault,
+                                               CFAbsoluteTimeGetCurrent() + interval,
+                                               0,
+                                               0,
+                                               0) { _ in
             block()
         }
     }
@@ -27,10 +31,16 @@ extension Timer {
 
 extension Timer {
 
-    public class func every(_ interval: TimeInterval, firesImmediately: Bool = false, _ block: @escaping (Timer) -> Void) -> Timer {
+    public class func every(_ interval: TimeInterval,
+                            firesImmediately: Bool = false,
+                            _ block: @escaping (Timer) -> Void) -> Timer {
         if firesImmediately {
             let fireDate = CFAbsoluteTimeGetCurrent()
-            let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, fireDate, interval, 0, 0, { x in block(x!) })
+            let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault,
+                                                        fireDate,
+                                                        interval,
+                                                        0,
+                                                        0) { x in block(x!) }
             CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, CFRunLoopMode.commonModes)
             return timer!
         } else {
@@ -42,7 +52,11 @@ extension Timer {
 
     public class func new(every interval: TimeInterval, _ block: @escaping (Timer) -> Void) -> Timer {
         var timer: Timer!
-        timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, CFAbsoluteTimeGetCurrent() + interval, interval, 0, 0) { _ in
+        timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault,
+                                                CFAbsoluteTimeGetCurrent() + interval,
+                                                interval,
+                                                0,
+                                                0) { _ in
             block(timer)
         }
         return timer

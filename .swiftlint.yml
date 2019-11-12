@@ -1,0 +1,93 @@
+identifier_name:
+  min_length: 2
+  excluded: 
+   - x
+   - y
+type_name:
+  excluded: 
+   - T
+superfluous_disable_command:
+  severity: warning
+number_separator:
+  minimum_length: 5
+private_outlet:
+    allow_private_set: true
+nesting:
+    type_level: 3
+disabled_rules:      
+ - force_cast
+ - force_try
+opt_in_rules:
+ - closure_spacing
+ - closure_body_length
+ - conditional_returns_on_newline
+ - empty_count
+ - explicit_init
+ - overridden_super_call
+ - redundant_nil_coalescing
+ - closure_end_indentation
+ - first_where
+ - attributes
+ - prohibited_super_call
+ - number_separator
+ - object_literal
+ - fatal_error_message
+ - private_outlet
+ - implicit_return
+ - multiline_parameters
+ - vertical_parameter_alignment_on_call
+ - unneeded_parentheses_in_closure_argument
+ - joined_default_parameter
+ - pattern_matching_keywords
+ - array_init
+ - contains_over_first_not_nil
+ - let_var_whitespace
+ - literal_expression_end_indentation
+ - multiline_arguments
+ - sorted_first_last
+ - strict_fileprivate
+ - discouraged_object_literal
+ - discouraged_optional_boolean
+ - empty_string
+ - private_action
+ - unneeded_break_in_switch
+ - unused_enumerated
+ - unused_optional_binding
+ - valid_ibinspectable
+ - convenience_type
+ - modifier_order
+ - multiline_function_chains
+ - single_test_class
+ - superfluous_disable_command
+ - unavailable_function
+ - no_fallthrough_only
+ - anyobject_protocol
+ - redundant_type_annotation
+ - collection_alignment
+ - identical_operands
+ - legacy_random
+ - toggle_bool
+ - unused_declaration
+ - unused_import
+ - last_where
+ - no_extension_access_modifier
+ - static_operator
+ - trailing_closure
+ - empty_xctest_method
+ - legacy_multiple
+ - nimble_operator
+ - operator_usage_whitespace
+ - quick_discouraged_call
+ - quick_discouraged_focused_test
+ - quick_discouraged_pending_test
+ - reduce_into
+ - required_enum_case
+ - switch_case_on_newline
+ - xct_specific_matcher
+ - yoda_condition
+ - contains_over_filter_count
+ - contains_over_filter_is_empty
+ - discouraged_optional_collection
+ - empty_collection_literal
+ - contains_over_range_nil_comparison
+ - flatmap_over_map_reduce

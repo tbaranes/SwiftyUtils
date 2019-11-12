@@ -11,13 +11,13 @@ import SwiftyUtils
 
 final class ImagesViewController: UIViewController {
 
-    @IBOutlet weak var imageViewWithColor: UIImageView! {
+    @IBOutlet private weak var imageViewWithColor: UIImageView! {
         didSet {
             imageViewWithColor.image = UIImage(color: UIColor.orange)
         }
     }
 
-    @IBOutlet weak var imageFilled: UIImageView! {
+    @IBOutlet private weak var imageFilled: UIImageView! {
         didSet {
             imageFilled.image = imageFilled.image?.filled(with: .green)
         }

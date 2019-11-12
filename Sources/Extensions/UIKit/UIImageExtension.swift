@@ -65,7 +65,8 @@ extension UIImage {
 
         UIGraphicsBeginImageContextWithOptions(finalSize, false, UIScreen.main.scale)
         draw(at: CGPoint(x: (finalSize.width - size.width) / 2, y: (finalSize.height - size.height) / 2))
-        image.draw(at: CGPoint(x: (finalSize.width - image.size.width) / 2, y: (finalSize.height - image.size.height) / 2))
+        image.draw(at: CGPoint(x: (finalSize.width - image.size.width) / 2,
+                               y: (finalSize.height - image.size.height) / 2))
         finalImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return finalImage

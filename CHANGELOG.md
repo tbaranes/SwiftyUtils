@@ -12,11 +12,12 @@ N/A
 
 #### Enhancements
 
-N/A
+- Moving from Travis to Github Actions
+- Updating Swiftlint and fix all related warnings
 
 #### Bugfixes
 
-N/A
+- Fixed SPM support
 
 ## [4.0.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/4.0.0) (27-03-2019)
 

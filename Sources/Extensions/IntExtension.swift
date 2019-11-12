@@ -9,11 +9,11 @@ import Foundation
 
 extension Int {
 
-    public var isEven: Bool { return (self % 2 == 0) }
-    public var isOdd: Bool { return (self % 2 != 0) }
-    public var isPositive: Bool { return (self > 0) }
-    public var isNegative: Bool { return (self < 0) }
-    public var range: Range<Int> { return 0..<self }
+    public var isEven: Bool { self.isMultiple(of: 2) }
+    public var isOdd: Bool { !isEven }
+    public var isPositive: Bool { self > 0 }
+    public var isNegative: Bool { !isPositive }
+    public var range: Range<Int> { 0..<self }
 
     public var digits: Int {
         if self == 0 {

@@ -17,8 +17,9 @@ extension UILabel {
         paragraphStyle.lineBreakMode = lineBreakMode
 
         let attrString = NSMutableAttributedString(string: text!)
-        attrString.addAttribute(NSAttributedString.Key.font, value: font!, range: NSRange(location: 0, length: attrString.length))
-        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: attrString.length))
+        let range = NSRange(location: 0, length: attrString.length)
+        attrString.addAttribute(.font, value: font!, range: range)
+        attrString.addAttribute(.paragraphStyle, value: paragraphStyle, range: range)
         attributedText = attrString
     }
 

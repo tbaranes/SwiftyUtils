@@ -29,7 +29,10 @@ extension SwiftyColor {
         default:
             (alpha, red, green, blue) = (1, 1, 1, 0)
         }
-        self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: CGFloat(alpha) / 255)
+        self.init(red: CGFloat(red) / 255,
+                  green: CGFloat(green) / 255,
+                  blue: CGFloat(blue) / 255,
+                  alpha: CGFloat(alpha) / 255)
     }
 
 }
@@ -86,14 +89,16 @@ extension SwiftyColor {
 
         #if os (iOS) || os (tvOS) || os (watchOS)
             if getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha) {
-                return SwiftyColor(hue: hue, saturation: saturation,
+                return SwiftyColor(hue: hue,
+                                   saturation: saturation,
                                    brightness: brightness * amount,
                                    alpha: alpha)
             }
             return self
         #else
             getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
-            return SwiftyColor(hue: hue, saturation: saturation,
+            return SwiftyColor(hue: hue,
+                               saturation: saturation,
                                brightness: brightness * amount,
                                alpha: alpha)
         #endif
