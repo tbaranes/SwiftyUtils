@@ -12,6 +12,20 @@ N/A
 
 #### Enhancements
 
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [5.0.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.0.0) (12-11-2019)
+
+#### API breaking changes
+
+- Xcode 11 and Swift 5 support
+
+#### Enhancements
+
 - Moving from Travis to Github Actions
 - Updating Swiftlint and fix all related warnings
 
