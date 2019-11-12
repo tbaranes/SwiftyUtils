@@ -15,13 +15,15 @@ extension Data {
      Initializes a new data object from a hex string
 
      - Parameter hexString: String in hexadecimal format. Can start with "0x" or
-     not and may have spaces. Any illegal (non hex) characters or an odd number of legal characters will cause it to fail.
+                            not and may have spaces.
+                            Any illegal (non hex) characters or an odd number of legal characters will cause it to fail.
      */
     public init?(hexString: String) {
         let noSpaces = hexString.replacingOccurrences(of: "\\s", with: "", options: .regularExpression, range: nil)
-        guard noSpaces.count % 2 == 0 else {
+        guard noSpaces.count.isMultiple(of: 2) else {
             return nil
         }
+
         let hexArray = noSpaces.split(intoChunksOf: 2)
 
         var byteArray = [UInt8]()

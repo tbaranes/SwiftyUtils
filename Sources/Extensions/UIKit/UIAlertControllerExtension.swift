@@ -16,7 +16,9 @@ extension UIAlertController {
                             defaultActionButtonStyle: UIAlertAction.Style = .default,
                             tintColor: UIColor? = nil) {
         self.init(title: title, message: message, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: defaultActionButtonTitle, style: defaultActionButtonStyle, handler: nil)
+        let defaultAction = UIAlertAction(title: defaultActionButtonTitle,
+                                          style: defaultActionButtonStyle,
+                                          handler: nil)
         addAction(defaultAction)
         if let color = tintColor {
             view.tintColor = color

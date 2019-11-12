@@ -8,8 +8,12 @@ import SwiftyUtils
 
 final class InjectedViewController: UIViewController, Injectable {
 
-    @IBOutlet weak var labelStringInjected: UILabel!
-    fileprivate var stringInjected: String!
+    // MARK: Properties
+
+    @IBOutlet private weak var labelStringInjected: UILabel!
+    private var stringInjected: String?
+
+    // MARK: Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()

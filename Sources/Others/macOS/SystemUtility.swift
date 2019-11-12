@@ -9,8 +9,11 @@
 import Foundation
 
 #if os(macOS)
-// swiftlint:disable large_tuple
-public struct SystemUtility {
+
+public typealias ShellOutput = (returnCode: Int32, stdOut: String, stdError: String)
+public typealias ShellArrayOutput = (returnCode: Int32, stdOut: [String], stdError: [String])
+
+public enum SystemUtility {
     /**
      Runs a command on a system shell and provides the return code for success, STDOUT, and STDERR.
      
@@ -26,7 +29,7 @@ public struct SystemUtility {
          // stdErr = ""
 
     */
-	public static func shell(_ args: [String], _ launchPath: String = "/usr/bin/env") -> (returnCode: Int32, stdOut: String, stdError: String) {
+	public static func shell(_ args: [String], _ launchPath: String = "/usr/bin/env") -> ShellOutput {
         let task = Process()
         task.launchPath = launchPath
         task.arguments = args
@@ -64,8 +67,7 @@ public struct SystemUtility {
          // stdErr = [""]
      
      */
-    public static func shellArrayOut(_ args: [String],
-                                     _ launchPath: String = "/usr/bin/env") -> (returnCode: Int32, stdOut: [String], stdError: [String]) {
+    public static func shellArrayOut(_ args: [String], _ launchPath: String = "/usr/bin/env") -> ShellArrayOutput {
         let (rCode, stdOut, stdErr) = shell(args, launchPath)
         let output = stdOut.split(separator: "\n").map { String($0) }
         let error = stdErr.split(separator: "\n").map { String($0) }

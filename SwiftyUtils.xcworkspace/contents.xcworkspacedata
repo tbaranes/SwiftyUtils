@@ -8,7 +8,7 @@
       location = "group:CHANGELOG.md">
    </FileRef>
    <FileRef
-      location = "group:SwiftyUtils/SwiftyUtils.xcodeproj">
+      location = "group:SwiftyUtils.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:SwiftyUtils Example/iOS Example.xcodeproj">

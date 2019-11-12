@@ -9,9 +9,11 @@ import Foundation
 
 extension URL {
 
+    // swiftlint:disable:next discouraged_optional_collection
     public var queryParameters: [String: String]? {
-        guard let components = URLComponents(url: self as URL, resolvingAgainstBaseURL: true), let queryItems = components.queryItems else {
-            return nil
+        guard let components = URLComponents(url: self as URL, resolvingAgainstBaseURL: true),
+              let queryItems = components.queryItems else {
+                return nil
         }
 
         var parameters = [String: String]()

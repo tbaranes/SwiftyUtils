@@ -23,14 +23,17 @@ extension CGSize {
 
 }
 
+// swiftlint:disable:next static_operator
 public func += (lhs: inout CGSize, rhs: CGSize) {
     lhs = CGSize(width: lhs.width + rhs.width, height: lhs.height + rhs.height)
 }
 
+// swiftlint:disable:next static_operator
 public func -= (lhs: inout CGSize, rhs: CGSize) {
     lhs = CGSize(width: lhs.width - rhs.width, height: lhs.height - rhs.height)
 }
 
+// swiftlint:disable:next static_operator
 public func *= (size: inout CGSize, scalar: CGFloat) {
     size = CGSize(width: size.width * scalar, height: size.height * scalar)
 }

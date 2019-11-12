@@ -59,7 +59,7 @@ extension Bundle {
 
 // MARK: - Internal
 
-fileprivate extension Bundle {
+extension Bundle {
 
     func string(for key: String) -> String {
         guard let infoDictionary = Bundle.main.infoDictionary,

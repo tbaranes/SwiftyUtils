@@ -11,6 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     private func application(_ application: UIApplication,
+                             // swiftlint:disable:next discouraged_optional_collection
                              didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         return true
     }

@@ -20,10 +20,12 @@ extension Array {
 extension Array where Element: Equatable {
 
     public mutating func removeDuplicates() {
+        // swiftlint:disable:next reduce_into
         self = reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
     }
 
     public func removedDuplicates() -> [Element] {
+        // swiftlint:disable:next reduce_into
         return reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
     }
 

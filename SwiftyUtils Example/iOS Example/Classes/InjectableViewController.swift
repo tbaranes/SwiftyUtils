@@ -8,7 +8,12 @@ import SwiftyUtils
 
 final class InjectableViewController: UIViewController {
 
-    @IBOutlet weak var textField: UITextField!
+    // MARK: Properties
+
+    @IBOutlet private weak var textField: UITextField!
+
+    // MARK: Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

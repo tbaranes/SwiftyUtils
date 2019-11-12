@@ -8,7 +8,7 @@ import SwiftyUtils
 
 final class AttributedStringExampleViewController: UIViewController {
 
-    @IBOutlet weak var labelColorizeAfterOccurence: UILabel! {
+    @IBOutlet private weak var labelColorizeAfterOccurence: UILabel! {
         didSet {
             let attrString = NSMutableAttributedString.colored(inText: "hello world",
                                                                color: UIColor.green,
@@ -17,7 +17,7 @@ final class AttributedStringExampleViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var labelColorizeForEachOccurence: UILabel! {
+    @IBOutlet private weak var labelColorizeForEachOccurence: UILabel! {
         didSet {
             let attrString = NSMutableAttributedString.colored(inText: "hello world",
                                                                color: UIColor.green,
@@ -26,7 +26,7 @@ final class AttributedStringExampleViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var labelStrikeAfterOccurence: UILabel! {
+    @IBOutlet private weak var labelStrikeAfterOccurence: UILabel! {
         didSet {
             let attrString = NSMutableAttributedString.struck(inText: "hello world",
                                                               afterOcurrence: "o")
@@ -34,7 +34,7 @@ final class AttributedStringExampleViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var labelStrikeForEachOccurence: UILabel! {
+    @IBOutlet private weak var labelStrikeForEachOccurence: UILabel! {
         didSet {
             let attrString = NSMutableAttributedString.struck(inText: "hello world",
                                                               occurences: "o")
@@ -42,7 +42,7 @@ final class AttributedStringExampleViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var labelUnderlineAfterOccurence: UILabel! {
+    @IBOutlet private weak var labelUnderlineAfterOccurence: UILabel! {
         didSet {
             let attrString = NSMutableAttributedString.struck(inText: "hello world",
                                                               afterOcurrence: "o")
@@ -50,7 +50,7 @@ final class AttributedStringExampleViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var labelUnderlineForEachOccurence: UILabel! {
+    @IBOutlet private weak var labelUnderlineForEachOccurence: UILabel! {
         didSet {
             let attrString = NSMutableAttributedString.underlined(inText: "hello world",
                                                                   occurences: "o")
@@ -58,7 +58,7 @@ final class AttributedStringExampleViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var labelCombiningAllAttrExample: UILabel! {
+    @IBOutlet private weak var labelCombiningAllAttrExample: UILabel! {
         didSet {
             let attrStr = NSMutableAttributedString(string: "hello world")
             attrStr.color(.orange, afterOcurrence: "hello")
@@ -71,7 +71,7 @@ final class AttributedStringExampleViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var labelLineHeight: UILabel! {
+    @IBOutlet private weak var labelLineHeight: UILabel! {
         didSet {
             labelLineHeight.text = "Label with a loooooooong text, and only 0.9 as line height"
             labelLineHeight.setLineHeight(0.9)

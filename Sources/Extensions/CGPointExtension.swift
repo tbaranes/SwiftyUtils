@@ -23,14 +23,17 @@ extension CGPoint {
 
 }
 
+// swiftlint:disable:next static_operator
 public func += (lhs: inout CGPoint, rhs: CGPoint) {
     lhs = CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
 }
 
+// swiftlint:disable:next static_operator
 public func -= (lhs: inout CGPoint, rhs: CGPoint) {
     lhs = CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
 }
 
+// swiftlint:disable:next static_operator
 public func *= (point: inout CGPoint, scalar: CGFloat) {
     point = CGPoint(x: point.x * scalar, y: point.y * scalar)
 }
