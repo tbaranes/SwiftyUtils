@@ -25,7 +25,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1            
       - name: iOS - ${{ matrix.destination }}
-        run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "SwiftyUtils.xcodeproj" -scheme "SwiftyUtils iOS" -destination "${{ matrix.destination }}" clean test | xcpretty
+        run: set -o pipefail && 
+             env NSUnbufferedIO=YES xcodebuild -project "SwiftyUtils.xcodeproj" -scheme "SwiftyUtils iOS" -destination "${{ matrix.destination }}" clean test | xcpretty &&
+             xcodebuild -workspace "SwiftyUtils.xcworkspace" -scheme "iOS Example" -destination "${{ matrix.destination }}" clean 
   tvOS:
     name: Test tvOS 
     runs-on: macOS-latest
