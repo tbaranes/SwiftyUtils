@@ -1244,6 +1244,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftyUtils/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.SwiftyUtils-watchOS";
 				PRODUCT_NAME = SwiftyUtils;
 				SDKROOT = watchos;
@@ -1268,6 +1269,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftyUtils/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.SwiftyUtils-watchOS";
 				PRODUCT_NAME = SwiftyUtils;
 				SDKROOT = watchos;
@@ -1292,6 +1294,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftyUtils/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.SwiftyUtils-watchOS";
 				PRODUCT_NAME = SwiftyUtils;
 				SDKROOT = watchos;
@@ -1373,6 +1376,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbaranes.SwiftyUtils;
 				PRODUCT_NAME = SwiftyUtils;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1410,6 +1414,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbaranes.SwiftyUtils;
 				PRODUCT_NAME = SwiftyUtils;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1449,6 +1454,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftyUtils/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbaranes.SwiftyUtils;
 				PRODUCT_NAME = SwiftyUtils;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1489,6 +1495,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftyUtils/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbaranes.SwiftyUtils;
 				PRODUCT_NAME = SwiftyUtils;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1512,6 +1519,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftyUtils/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbaranes.SwiftyUtils;
 				PRODUCT_NAME = SwiftyUtils;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1539,6 +1547,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbaranes.SwiftyUtils;
 				PRODUCT_NAME = SwiftyUtils;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1563,6 +1572,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbaranes.SwiftyUtils;
 				PRODUCT_NAME = SwiftyUtils;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1793,6 +1803,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbaranes.SwiftyUtils;
 				PRODUCT_NAME = SwiftyUtils;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1816,6 +1827,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbaranes.SwiftyUtils;
 				PRODUCT_NAME = SwiftyUtils;
 				PROVISIONING_PROFILE_SPECIFIER = "";
