@@ -3,6 +3,8 @@
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 // MARK: - Navigation
@@ -24,3 +26,5 @@ extension UIViewController {
     }
 
 }
+
+#endif

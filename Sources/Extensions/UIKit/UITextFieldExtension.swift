@@ -3,6 +3,8 @@
 //  Copyright © 2017 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 // MARK: - Clear button
@@ -43,3 +45,5 @@ extension UITextField {
     }
 
 }
+
+#endif

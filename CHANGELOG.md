@@ -18,6 +18,12 @@ N/A
 
 N/A
 
+## [5.0.1](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.0.1) (12-11-2019)
+
+#### Bugfixes
+
+Fixed SPM compilation
+
 ## [5.0.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.0.0) (12-11-2019)
 
 #### API breaking changes
