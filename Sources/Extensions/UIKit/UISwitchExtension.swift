@@ -3,6 +3,8 @@
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS)
+
 import UIKit
 
 // MARK: - Misc
@@ -14,3 +16,5 @@ extension UISwitch {
     }
 
 }
+
+#endif

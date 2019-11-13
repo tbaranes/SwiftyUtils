@@ -221,6 +221,33 @@
 		E26729661E9A3B5900DE844E /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728501E9A36F100DE844E /* ThenTest.swift */; };
 		E26729671E9A3B5D00DE844E /* UITestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267284B1E9A36F100DE844E /* UITestingTests.swift */; };
 		E26729681E9A3B5D00DE844E /* UnitTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267284C1E9A36F100DE844E /* UnitTestingTests.swift */; };
+		E26CBEE7237B60EB00ECFCE7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E41E9A362600DE844E /* UIApplicationExtension.swift */; };
+		E26CBEE8237B60EB00ECFCE7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E41E9A362600DE844E /* UIApplicationExtension.swift */; };
+		E26CBEE9237B618C00ECFCE7 /* NSViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727CD1E9A362600DE844E /* NSViewExtension.swift */; };
+		E26CBEEA237B618D00ECFCE7 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E31E9A362600DE844E /* UIAlertControllerExtension.swift */; };
+		E26CBEEB237B618D00ECFCE7 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E51E9A362600DE844E /* UIDeviceExtension.swift */; };
+		E26CBEEC237B618D00ECFCE7 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E61E9A362600DE844E /* UIImageExtension.swift */; };
+		E26CBEED237B618D00ECFCE7 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E71E9A362600DE844E /* UILabelExtension.swift */; };
+		E26CBEEE237B618D00ECFCE7 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E81E9A362600DE844E /* UIScreenExtension.swift */; };
+		E26CBEEF237B618D00ECFCE7 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E91E9A362600DE844E /* UIStoryboardExtension.swift */; };
+		E26CBEF0237B618D00ECFCE7 /* UISwitchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727EA1E9A362600DE844E /* UISwitchExtension.swift */; };
+		E26CBEF1237B618D00ECFCE7 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727EB1E9A362600DE844E /* UITextFieldExtension.swift */; };
+		E26CBEF2237B618D00ECFCE7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727EC1E9A362600DE844E /* UIViewControllerExtension.swift */; };
+		E26CBEF3237B618D00ECFCE7 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727ED1E9A362600DE844E /* UIViewExtension.swift */; };
+		E26CBEF4237B618D00ECFCE7 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E21E9A362600DE844E /* NSObjectExtension.swift */; };
+		E26CBEF5237B618E00ECFCE7 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E71E9A362600DE844E /* UILabelExtension.swift */; };
+		E26CBEF6237B618E00ECFCE7 /* UISwitchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727EA1E9A362600DE844E /* UISwitchExtension.swift */; };
+		E26CBEF7237B618E00ECFCE7 /* NSViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727CD1E9A362600DE844E /* NSViewExtension.swift */; };
+		E26CBEF8237B618E00ECFCE7 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E31E9A362600DE844E /* UIAlertControllerExtension.swift */; };
+		E26CBEF9237B618E00ECFCE7 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E51E9A362600DE844E /* UIDeviceExtension.swift */; };
+		E26CBEFA237B618E00ECFCE7 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E71E9A362600DE844E /* UILabelExtension.swift */; };
+		E26CBEFB237B618E00ECFCE7 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E81E9A362600DE844E /* UIScreenExtension.swift */; };
+		E26CBEFC237B618E00ECFCE7 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727E91E9A362600DE844E /* UIStoryboardExtension.swift */; };
+		E26CBEFD237B618E00ECFCE7 /* UISwitchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727EA1E9A362600DE844E /* UISwitchExtension.swift */; };
+		E26CBEFE237B618E00ECFCE7 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727EB1E9A362600DE844E /* UITextFieldExtension.swift */; };
+		E26CBEFF237B618E00ECFCE7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727EC1E9A362600DE844E /* UIViewControllerExtension.swift */; };
+		E26CBF00237B618E00ECFCE7 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727ED1E9A362600DE844E /* UIViewExtension.swift */; };
+		E26CBF01237B618E00ECFCE7 /* NSViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727CD1E9A362600DE844E /* NSViewExtension.swift */; };
 		E27300641CCD0655003156EC /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E273FED71CCCFF5B003156EC /* SwiftyUtils.framework */; };
 		E273009D1CCD06CD003156EC /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E273000A1CCD031B003156EC /* SwiftyUtils.framework */; };
 		E27300AC1CCD06E8003156EC /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27300171CCD03ED003156EC /* SwiftyUtils.framework */; };
@@ -954,6 +981,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E26729291E9A38FF00DE844E /* TimerExtension.swift in Sources */,
+				E26CBEFB237B618E00ECFCE7 /* UIScreenExtension.swift in Sources */,
 				E267291E1E9A38FF00DE844E /* DateExtension.swift in Sources */,
 				E26729281E9A38FF00DE844E /* StringExtension.swift in Sources */,
 				E26729471E9A390C00DE844E /* Then.swift in Sources */,
@@ -961,26 +989,36 @@
 				E26729251E9A38FF00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
 				E26729261E9A38FF00DE844E /* NSRangeExtension.swift in Sources */,
 				E267291C1E9A38FF00DE844E /* ColorExtension.swift in Sources */,
+				E26CBF00237B618E00ECFCE7 /* UIViewExtension.swift in Sources */,
 				E26729221E9A38FF00DE844E /* IntExtension.swift in Sources */,
 				E267292B1E9A38FF00DE844E /* UserDefaultsExtension.swift in Sources */,
 				E26729181E9A38FF00DE844E /* BundleExtension.swift in Sources */,
 				E267293C1E9A390800DE844E /* UITesting.swift in Sources */,
+				E26CBEE8237B60EB00ECFCE7 /* UIApplicationExtension.swift in Sources */,
 				E26729491E9A393300DE844E /* Constants.swift in Sources */,
 				E267291A1E9A38FF00DE844E /* CGRectExtensions.swift in Sources */,
+				E26CBF01237B618E00ECFCE7 /* NSViewExtension.swift in Sources */,
+				E26CBEFF237B618E00ECFCE7 /* UIViewControllerExtension.swift in Sources */,
 				E26729241E9A38FF00DE844E /* NSLayoutConstraintsExtension.swift in Sources */,
 				E267291F1E9A38FF00DE844E /* DictionaryExtension.swift in Sources */,
+				E26CBEF8237B618E00ECFCE7 /* UIAlertControllerExtension.swift in Sources */,
+				E26CBEFD237B618E00ECFCE7 /* UISwitchExtension.swift in Sources */,
 				E26729201E9A38FF00DE844E /* DoubleExtension.swift in Sources */,
 				E26728FA1E9A38FA00DE844E /* UIImageExtension.swift in Sources */,
 				33D2AFCA221538EA00CBC975 /* DataExtension.swift in Sources */,
 				E26729211E9A38FF00DE844E /* FileManagerExtension.swift in Sources */,
 				E26729271E9A38FF00DE844E /* ReusableFormatters.swift in Sources */,
+				E26CBEFE237B618E00ECFCE7 /* UITextFieldExtension.swift in Sources */,
 				E26729191E9A38FF00DE844E /* CGFloatLiteral.swift in Sources */,
 				E26729431E9A390C00DE844E /* Injectable.swift in Sources */,
 				E26729231E9A38FF00DE844E /* NotificationCenterExtension.swift in Sources */,
+				E26CBEFC237B618E00ECFCE7 /* UIStoryboardExtension.swift in Sources */,
 				E26729451E9A390C00DE844E /* Occupiable.swift in Sources */,
 				E267292A1E9A38FF00DE844E /* URLExtension.swift in Sources */,
 				E26728F61E9A38FA00DE844E /* NSObjectExtension.swift in Sources */,
+				E26CBEF9237B618E00ECFCE7 /* UIDeviceExtension.swift in Sources */,
 				E26729171E9A38FF00DE844E /* ArrayExtension.swift in Sources */,
+				E26CBEFA237B618E00ECFCE7 /* UILabelExtension.swift in Sources */,
 				E23ED9BE1E9A52600059BED7 /* CGPointExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1006,6 +1044,7 @@
 				E26728ED1E9A38F700DE844E /* UIDeviceExtension.swift in Sources */,
 				E26728F31E9A38F700DE844E /* UITextFieldExtension.swift in Sources */,
 				E26728F51E9A38F700DE844E /* UIViewExtension.swift in Sources */,
+				E26CBEF7237B618E00ECFCE7 /* NSViewExtension.swift in Sources */,
 				E26728EB1E9A38F700DE844E /* UIAlertControllerExtension.swift in Sources */,
 				33D2AFC9221538E800CBC975 /* DataExtension.swift in Sources */,
 				E26729481E9A393200DE844E /* Constants.swift in Sources */,
@@ -1014,11 +1053,13 @@
 				E267290F1E9A38FE00DE844E /* NSLayoutConstraintsExtension.swift in Sources */,
 				E267290A1E9A38FE00DE844E /* DictionaryExtension.swift in Sources */,
 				E23ED9BD1E9A525F0059BED7 /* CGPointExtension.swift in Sources */,
+				E26CBEF5237B618E00ECFCE7 /* UILabelExtension.swift in Sources */,
 				E267290B1E9A38FE00DE844E /* DoubleExtension.swift in Sources */,
 				E26728EE1E9A38F700DE844E /* UIImageExtension.swift in Sources */,
 				E267290C1E9A38FE00DE844E /* FileManagerExtension.swift in Sources */,
 				E26729121E9A38FE00DE844E /* ReusableFormatters.swift in Sources */,
 				E26729041E9A38FE00DE844E /* CGFloatLiteral.swift in Sources */,
+				E26CBEF6237B618E00ECFCE7 /* UISwitchExtension.swift in Sources */,
 				E267293E1E9A390C00DE844E /* Injectable.swift in Sources */,
 				E267290E1E9A38FE00DE844E /* NotificationCenterExtension.swift in Sources */,
 				E26729341E9A390800DE844E /* UnitTesting.swift in Sources */,
@@ -1035,12 +1076,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E26728D01E9A380500DE844E /* UITesting.swift in Sources */,
+				E26CBEEE237B618D00ECFCE7 /* UIScreenExtension.swift in Sources */,
 				E23ED9BC1E9A525E0059BED7 /* CGPointExtension.swift in Sources */,
 				E26728B71E9A37F600DE844E /* CGFloatLiteral.swift in Sources */,
+				E26CBEF3237B618D00ECFCE7 /* UIViewExtension.swift in Sources */,
 				E26728CA1E9A37FD00DE844E /* Injectable.swift in Sources */,
+				E26CBEF0237B618D00ECFCE7 /* UISwitchExtension.swift in Sources */,
+				E26CBEF4237B618D00ECFCE7 /* NSObjectExtension.swift in Sources */,
+				E26CBEEA237B618D00ECFCE7 /* UIAlertControllerExtension.swift in Sources */,
+				E26CBEF1237B618D00ECFCE7 /* UITextFieldExtension.swift in Sources */,
 				E26728C41E9A37F600DE844E /* NSRangeExtension.swift in Sources */,
+				E26CBEEB237B618D00ECFCE7 /* UIDeviceExtension.swift in Sources */,
 				E26728BF1E9A37F600DE844E /* FileManagerExtension.swift in Sources */,
 				E26728B41E9A37F600DE844E /* NSViewExtension.swift in Sources */,
+				E26CBEF2237B618D00ECFCE7 /* UIViewControllerExtension.swift in Sources */,
 				E26728BE1E9A37F600DE844E /* DoubleExtension.swift in Sources */,
 				33D2AFA122128EBA00CBC975 /* SystemUtility.swift in Sources */,
 				E26728D21E9A380500DE844E /* Constants.swift in Sources */,
@@ -1048,8 +1097,10 @@
 				E26728C81E9A37F600DE844E /* URLExtension.swift in Sources */,
 				E26728D11E9A380500DE844E /* UnitTesting.swift in Sources */,
 				E26728CE1E9A37FD00DE844E /* Then.swift in Sources */,
+				E26CBEE7237B60EB00ECFCE7 /* UIApplicationExtension.swift in Sources */,
 				E26728C11E9A37F600DE844E /* NotificationCenterExtension.swift in Sources */,
 				E23ED9C11E9A526D0059BED7 /* CGSizeExtension.swift in Sources */,
+				E26CBEEC237B618D00ECFCE7 /* UIImageExtension.swift in Sources */,
 				E26728C91E9A37F600DE844E /* UserDefaultsExtension.swift in Sources */,
 				E26728C01E9A37F600DE844E /* IntExtension.swift in Sources */,
 				E26728B81E9A37F600DE844E /* CGRectExtensions.swift in Sources */,
@@ -1060,8 +1111,10 @@
 				E26728BD1E9A37F600DE844E /* DictionaryExtension.swift in Sources */,
 				E26728C21E9A37F600DE844E /* NSLayoutConstraintsExtension.swift in Sources */,
 				E26728C51E9A37F600DE844E /* ReusableFormatters.swift in Sources */,
+				E26CBEEF237B618D00ECFCE7 /* UIStoryboardExtension.swift in Sources */,
 				E26728C61E9A37F600DE844E /* StringExtension.swift in Sources */,
 				E26728C71E9A37F600DE844E /* TimerExtension.swift in Sources */,
+				E26CBEED237B618D00ECFCE7 /* UILabelExtension.swift in Sources */,
 				E26728BA1E9A37F600DE844E /* ColorExtension.swift in Sources */,
 				E26728B61E9A37F600DE844E /* BundleExtension.swift in Sources */,
 			);
@@ -1184,6 +1237,7 @@
 				E267288C1E9A37A600DE844E /* Injectable.swift in Sources */,
 				E26728981E9A37AE00DE844E /* UITesting.swift in Sources */,
 				E26728721E9A379900DE844E /* UIStoryboardExtension.swift in Sources */,
+				E26CBEE9237B618C00ECFCE7 /* NSViewExtension.swift in Sources */,
 				E267286E1E9A379900DE844E /* UIDeviceExtension.swift in Sources */,
 				E26728741E9A379900DE844E /* UITextFieldExtension.swift in Sources */,
 				E267289A1E9A37AE00DE844E /* Constants.swift in Sources */,

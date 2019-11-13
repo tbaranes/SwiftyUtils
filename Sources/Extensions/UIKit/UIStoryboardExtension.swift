@@ -3,6 +3,8 @@
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 extension UIStoryboard {
@@ -16,3 +18,5 @@ extension UIStoryboard {
     }
 
 }
+
+#endif

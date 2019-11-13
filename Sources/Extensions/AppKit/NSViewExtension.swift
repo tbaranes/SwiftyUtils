@@ -3,6 +3,8 @@
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //
 
+#if os(macOS)
+
 import Cocoa
 
 // MARK: - Localizables
@@ -56,3 +58,5 @@ extension NSView {
         set { frame = frame.with(height: newValue) }
     }
 }
+
+#endif

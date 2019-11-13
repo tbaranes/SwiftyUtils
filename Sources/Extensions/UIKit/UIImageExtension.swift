@@ -3,6 +3,8 @@
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //
 
+#if !os(macOS)
+
 import UIKit
 
 // MARK: Initializer
@@ -88,3 +90,5 @@ extension UIImage {
     }
 
 }
+
+#endif

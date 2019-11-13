@@ -3,6 +3,8 @@
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS)
+
 import UIKit
 
 extension UIApplication {
@@ -29,3 +31,5 @@ extension UIApplication {
         return UIApplication.shared.delegate as? T
     }
 }
+
+#endif
