@@ -1243,7 +1243,7 @@ textField.setPlaceHolderTextColor(.blue)
 
 ### UIView extension
 
-**Change the frame of the view easily**
+Change the frame of the view easily:
 
 ```swift
 let aView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -1253,7 +1253,13 @@ aView.width -= 10 // make the view narrower
 aView.height -= 10 // make the view shorter 
 ```
 
-**Automates your localizables**
+Find a subview using its `accessibilityIdentifier, useful to tests private outlets:
+
+```swift
+aView.findView(forIdentifier: "accessibilityIdentifier")
+```
+
+Automates your localizables:
 
 ```swift
 aView.translateSubviews()
