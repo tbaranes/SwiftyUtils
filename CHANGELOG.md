@@ -12,7 +12,11 @@ N/A
 
 #### Enhancements
 
-N/A
+- UIViewExtension:
+
+```swift
+func findView(forIdentifier identifier: String) -> UIView?
+```
 
 #### Bugfixes
 

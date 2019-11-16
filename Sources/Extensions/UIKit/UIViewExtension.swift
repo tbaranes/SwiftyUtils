@@ -7,6 +7,30 @@
 
 import UIKit
 
+// MARK: - Frame
+
+extension UIView {
+    public var x: CGFloat {
+        get { return frame.x }
+        set { frame = frame.with(x: newValue) }
+    }
+
+    public var y: CGFloat {
+        get { return frame.y }
+        set { frame = frame.with(y: newValue) }
+    }
+
+    public var width: CGFloat {
+        get { return frame.width }
+        set { frame = frame.with(width: newValue) }
+    }
+
+    public var height: CGFloat {
+        get { return frame.height }
+        set { frame = frame.with(height: newValue) }
+    }
+}
+
 // MARK: - Localizables
 
 extension UIView {
@@ -48,28 +72,30 @@ extension UIView {
 
 }
 
-// MARK: - Frame
+// MARK: - Find View
 
 extension UIView {
-    public var x: CGFloat {
-        get { return frame.x }
-        set { frame = frame.with(x: newValue) }
+
+    public func findView(forIdentifier identifier: String) -> UIView? {
+        if accessibilityIdentifier == identifier {
+            return self
+        }
+
+        if #available(iOS 9.0, *), let stackView = self as? UIStackView {
+            return findView(in: stackView.arrangedSubviews, forIdentifier: identifier)
+        }
+        return findView(in: subviews, forIdentifier: identifier)
     }
 
-    public var y: CGFloat {
-        get { return frame.y }
-        set { frame = frame.with(y: newValue) }
+    private func findView(in views: [UIView], forIdentifier identifier: String) -> UIView? {
+        for view in views {
+            if let view = view.findView(forIdentifier: identifier) {
+                return view
+            }
+        }
+        return nil
     }
 
-    public var width: CGFloat {
-        get { return frame.width }
-        set { frame = frame.with(width: newValue) }
-    }
-
-    public var height: CGFloat {
-        get { return frame.height }
-        set { frame = frame.with(height: newValue) }
-    }
 }
 
 #endif
