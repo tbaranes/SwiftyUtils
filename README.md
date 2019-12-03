@@ -1268,6 +1268,14 @@ aView.translateSubviews()
 It will iterate on all the subviews of the view, and use the text / placeholder as key in `NSLocalizedString`.
 By settings your localizable key in your xib / storyboard, all yours string will be automatically translated just by calling the above method.
 
+Add constraints between a view and its superview:
+
+```swift
+aView.addConstraints() // Add constraints to all edges with zero insets
+aView.addConstraints(to: [.top, .bottom]) // Add constraints to top and bottom edges with zero insets
+aView.addConstraints(to: [.top, .left], insets: UIEdgeInsets(top: 10, left: 20, bottom: 0, right: 0)) // Add constraints to top and left edges with custom insets
+```
+
 ### UIViewController extension
 
 Reset the navigation stack by deleting previous view controllers:

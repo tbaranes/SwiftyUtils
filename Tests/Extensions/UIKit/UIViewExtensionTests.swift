@@ -34,3 +34,53 @@ extension UIViewExtensionTests {
     }
 
 }
+
+// MARK: - Constraints
+
+extension UIViewExtensionTests {
+
+    func testAddConstraints() {
+        let view = UIView(frame: .zero)
+        let superview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        superview.addSubview(view)
+        view.addConstraints(to: .all)
+        XCTAssertEqual(superview.constraints.count, 4)
+    }
+
+    func testAddTopConstraint_withInsets() {
+        let view = UIView(frame: .zero)
+        let superview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        superview.addSubview(view)
+        view.addConstraints(to: .top, insets: UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0))
+        XCTAssertEqual(superview.constraints.count, 1)
+        XCTAssertEqual(superview.constraints.first?.constant, 10)
+    }
+
+    func testAddLeftConstraint_withInsets() {
+        let view = UIView(frame: .zero)
+        let superview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        superview.addSubview(view)
+        view.addConstraints(to: .left, insets: UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0))
+        XCTAssertEqual(superview.constraints.count, 1)
+        XCTAssertEqual(superview.constraints.first?.constant, 10)
+    }
+
+    func testAddBottomConstraint_withInsets() {
+        let view = UIView(frame: .zero)
+        let superview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        superview.addSubview(view)
+        view.addConstraints(to: .bottom, insets: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0))
+        XCTAssertEqual(superview.constraints.count, 1)
+        XCTAssertEqual(superview.constraints.first?.constant, -10)
+    }
+
+    func testAddRightConstraint_withInsets() {
+        let view = UIView(frame: .zero)
+        let superview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        superview.addSubview(view)
+        view.addConstraints(to: .right, insets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10))
+        XCTAssertEqual(superview.constraints.count, 1)
+        XCTAssertEqual(superview.constraints.first?.constant, -10)
+    }
+
+}

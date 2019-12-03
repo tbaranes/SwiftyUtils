@@ -32,5 +32,4 @@ extension UIApplication {
         return UIApplication.shared.delegate as? T
     }
 }
-
 #endif
