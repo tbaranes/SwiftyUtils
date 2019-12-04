@@ -1296,6 +1296,24 @@ let viewController = UIViewController()
 print(viewController.isVisible) // false
 ```
 
+Add a child view controller to another controller:
+
+```swift
+vc.addChildController(childVC, subview: vc.view, animated: true, duration: 0.35, options: [.curveEaseInOut, .transitionCrossDissolve])
+```
+
+Add a child view controller to a container view:
+
+```swift
+vc.addChildController(childVC, in: containerView)
+```
+
+Remove a child view controller:
+
+```swift
+vc.removeChildController(childVC)
+```
+
 ### Simulator
 
 Check if you are running on a simulator:
