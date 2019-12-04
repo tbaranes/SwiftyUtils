@@ -16,6 +16,7 @@ N/A
 
 ```swift
 func findView(forIdentifier identifier: String) -> UIView?
+func addConstraints(to edges: UIRectEdge = .all, insets: UIEdgeInsets = .zero)
 ```
 
 #### Bugfixes
