@@ -14,6 +14,16 @@ final class FileManagerTests: XCTestCase {
 
 }
 
+// MARK: - Getter
+
+extension FileManagerTests {
+
+    func testDocument() {
+        XCTAssertEqual(FileManager.document, FileManager.default.document)
+    }
+
+}
+
 // MARK: - Create
 
 extension FileManagerTests {
@@ -22,7 +32,7 @@ extension FileManagerTests {
         let directoryURL = FileManager.default.document
         _ = directoryURL.appendingPathComponent("demo", isDirectory: true)
         do {
-            try FileManager.default.createDirectory(at: directoryURL)
+            try FileManager.createDirectory(at: directoryURL)
             XCTAssertTrue(FileManager.default.fileExists(atPath: directoryURL.path))
         } catch {
             XCTFail("directory should be created")

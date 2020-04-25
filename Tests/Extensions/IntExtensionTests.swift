@@ -26,6 +26,7 @@ extension IntExtensionTests {
 
     func testDigits() {
         XCTAssertEqual(33.digits, 2)
+        XCTAssertEqual(0.digits, 1)
     }
 
     func testEvenAndOdd() {
@@ -40,6 +41,10 @@ extension IntExtensionTests {
         XCTAssertFalse((-33).isPositive)
         XCTAssertFalse(33.isNegative)
         XCTAssertTrue((-33).isNegative)
+    }
+
+    func testRange() {
+        XCTAssertEqual(33.range, 0..<33)
     }
 
 }

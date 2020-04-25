@@ -74,10 +74,10 @@ extension ArrayExtensionTests {
     }
 
     func testLastIndexOf() {
-        var index = array.firstIndex(of: 1)
-        XCTAssertEqual(index!, 1)
+        var index = array.lastIndex(of: 1)
+        XCTAssertEqual(index!, 6)
 
-        index = array.firstIndex(of: 12_345)
+        index = array.lastIndex(of: 12_345)
         XCTAssertNil(index)
     }
 

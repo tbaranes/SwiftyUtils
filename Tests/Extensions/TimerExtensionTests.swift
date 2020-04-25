@@ -50,6 +50,7 @@ final class TimerTests: XCTestCase {
     }
 
     var timer4: Timer!
+    var timer5: Timer!
 
     func testNewEvery() {
         var fired = false
@@ -62,6 +63,20 @@ final class TimerTests: XCTestCase {
             }
         }
         timer4.start()
+    }
+
+    func testFireImmediatly() {
+        var fired = false
+        timer5 = Timer.every(0.1.seconds,
+                             firesImmediately: true) { _ in
+            if fired {
+                self.timer5.invalidate()
+                self.testStart()
+            } else {
+                fired = true
+            }
+        }
+        timer5 .start()
     }
 
     func testStart() {

@@ -27,7 +27,9 @@ extension UIViewExtensionTests {
     func testXYWHChanges() {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         view.x = 10
+        XCTAssertEqual(view.x, 10)
         view.y = 20
+        XCTAssertEqual(view.y, 20)
         view.width = 30
         view.height = 40
         XCTAssertEqual(view.frame, CGRect(x: 10, y: 20, width: 30, height: 40))

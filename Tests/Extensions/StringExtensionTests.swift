@@ -41,8 +41,8 @@ extension StringExtensionTests {
 
     func testContains() {
         let string = "Hello world"
-        XCTAssertTrue(string.contains("lo wo"))
-        XCTAssertFalse(string.contains("wo lo"))
+        XCTAssertTrue(string.contains("lo wo", compareOption: .backwards))
+        XCTAssertFalse(string.contains("wo lo", compareOption: .backwards))
     }
 
 }
@@ -158,6 +158,10 @@ extension StringExtensionTests {
         var string = "0123456789aaaa"
         string.truncate(limit: 10)
         XCTAssertEqual(string, "0123456789...")
+
+        string = "0123456789"
+        string.truncate(limit: 10)
+        XCTAssertEqual(string, "0123456789")
     }
 
     func testSplitEvery() {

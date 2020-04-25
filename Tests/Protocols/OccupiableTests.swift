@@ -85,12 +85,19 @@ final class OccupiableTests: XCTestCase {
     // MARK: - Optional isNilOrEmpty
 
     func testOptionalIsEmptySuccess() {
-        let string: String? = ""
+        var string: String? = ""
+        XCTAssertTrue(string.isNilOrEmpty)
+        string = nil
         XCTAssertTrue(string.isNilOrEmpty)
     }
 
     func testOptionalIsEmptyFailure() {
         let string: String? = "stringNotEmpty"
         XCTAssertFalse(string.isNilOrEmpty)
+    }
+
+    func testIsNotNilNotEmpty() {
+        let string: String? = "stringNotEmpty"
+        XCTAssertTrue(string.isNotNilNotEmpty)
     }
 }
