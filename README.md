@@ -18,7 +18,7 @@ Working on iOS, macOS, tvOS, and watchOS, everything has been made to be easy to
 
 Check out the repository to find examples / tests for each feature.
 
-**Swift, CoreGraphics and Foundation Utils**
+**Swift, Foundation and CoreGraphics extensions:**
 
  - [Array](#array-extension)
  - [Bundle](#bundle-extension)
@@ -42,16 +42,15 @@ Check out the repository to find examples / tests for each feature.
  - [String](#string-extension)
  - [Timer](#timer-extension)
  - [URL](#url-extension)
- - [UnitTesting](#unittesting)
- - [UITesting](#uitesting)
  - [UserDefaults](#userdefaults-extension)
 
 
-**SwiftUI Utils:**
+**SwiftUI:**
 
 - [UIElementPreview](#uielementpreview)
 
-**UIKit Utils:**
+
+**UIKit Extensions:**
 
 - [UIAlertController](#uialertcontroller-extension)
 - [UIApplication](#uiapplication-extension)
@@ -66,13 +65,11 @@ Check out the repository to find examples / tests for each feature.
 - [UITextFied](#uitextfield-extension)
 - [UIView](#uiview-extension)
 - [UIViewController](#uiviewcontroller-extension)
-- [Simulator](#simulator)
 
 
-**Cocoa - AppKit Utils:**
+**AppKit Extensions:**
 
 - [NSView](#nsview-extension)
-- [SystemUtility - Shell](#shell-utility)
 
 
 **Protocols:**
@@ -86,7 +83,13 @@ Check out the repository to find examples / tests for each feature.
 
  - [UserDefaultsBacked](#userdefaultsbacked)
 
-## Swift, CoreGraphics and Foundation Utils
+**Others:**
+
+- [UnitTesting](#unittesting)
+- [UITesting](#uitesting)
+- [SystemUtility - Shell](#shell-utility)
+
+## Swift, Foundation and CoreGraphics Extensions
 
 ### Array extension
 
@@ -914,42 +917,6 @@ let url = URL(string: "/path/to/your/file")
 url?.addSkipBackupAttribute() // File at url won't be backupped!
 ```
 
-### UnitTesting
-
-Grand Central Dispatch sugar syntax:
-
-Detect if UITests are running:
-
-```swift
-if UnitTesting.isRunning {
-  // tests are running
-} else {
-  // everything is fine, move along
-}
-```
-
-Measure tests performance:
-
-```swift
-func testPerformance() {
-  let measurement = measure {
-    // run operation
-  }
-}
-```
-
-### UITesting
-
-Detect if UITests are running:
-
-```swift
-if UITesting.isRunning {
-  // tests are running
-} else {
-  // everything is fine, move along
-}
-```
-
 ### UserDefaults extension
 
 Get and set values from `UserDefaults` with subscripts:
@@ -974,109 +941,6 @@ Remove all values in `UserDefaults`:
 UserDefaults.standard.removeAll()
 ```
 
-## Protocols
-
-### Injectable
-
-Protocol to do `ViewController` Data Injection with Storyboards and Segues in Swift. Inspired from [Nastasha's blog](https://www.natashatherobot.com/update-view-controller-data-injection-with-storyboards-and-segues-in-swift/):
-
-```swift
-class RedPillViewController: UIViewController, Injectable {
-
-    @IBOutlet weak private var mainLabel: UILabel!
-
-    // the type matches the IOU's type
-    typealias T = String
-
-    // this is my original dependency (IOU)
-    // I can now make this private!
-    private var mainText: String!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // this will crash if the IOU is not set
-        assertDependencies()
-
-        // using the IOU if needed here,
-        // but using it later is fine as well
-        mainLabel.text = mainText
-    }
-
-    // Injectable Implementation
-    func inject(text: T) {
-        mainText = text
-    }
-
-    func assertDependencies() {
-        assert(mainText != nil)
-    }
-}
-
-// ViewController that will inject data...
-override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
-    switch segueIdentifierForSegue(segue) {
-    case .TheRedPillExperience
-        let redPillVC = segue.destinationViewController as? RedPillViewController
-        redPillVC?.inject("😈")
-    case .TheBluePillExperience:
-        let bluePillVC = segue.destinationViewController as? BluePillViewController
-        bluePillVC?.inject("👼")
-    }
-}
-```
-
-### Occupiable
-
-The following use cases works for String Array, Dictionary, and Set
-
-`isEmpty` / `isNotEmpty`
-
-*No optional types only*
-
-```swift
-var string = "Hello world"
-print(string.isNotEmpty) // true
-print(string.isEmpty) // false
-```
-
-`isNilOrEmpty`
-
-*Optional types only*
-
-```swift
-let string: String? = ""
-print(string.isNilOrEmpty) // true
-```
-
-### Then
-
-Syntactic sugar for Swift initializers:
-
-```swift
-let label = UILabel().then {
-    $0.textAlignment = .Center
-    $0.textColor = .blackColor()
-    $0.text = "Hello, World!"
-}
-```
-
-## PropertyWrappers
-
-### UserDefaultsBacked
-
-Type safe access to UserDefaults with support for default values.
-
-```swift
-struct SettingsViewModel {
-    @UserDefaultsBacked(key: "search-page-size", defaultValue: 20)
-    var numberOfSearchResultsPerPage: Int
-
-    @UserDefaultsBacked(key: "signature")
-    var messageSignature: String?
-}
-```
 
 ## SwiftUI
 
@@ -1102,7 +966,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 ```
 
-## UIKit Utils
+## UIKit Extensions
 
 ### UIAlertController extension
 
@@ -1134,7 +998,7 @@ Show an `UIAlertController`:
 alertController.show()
 alertController.show(animated: false)
 alertController.show(animated: true, completion: {
-	print("Presented")
+    print("Presented")
 })
 ```
 
@@ -1312,9 +1176,9 @@ Get the screen orientation:
 
 ```swift
 if UIInterfaceOrientationIsPortrait(UIScreen.currentOrientation) {
-	// Portrait
+    // Portrait
 } else {
-	// Landscape
+    // Landscape
 }
 ```
 
@@ -1466,17 +1330,7 @@ Remove a child view controller:
 vc.removeChildController(childVC)
 ```
 
-### Simulator
-
-Check if you are running on a simulator:
-
-```swift
-if !Simulator.isRunning {
-  // add device specific operations here
-}
-```
-
-## AppKit / Cocoa Utils
+## AppKit, Cocoa Extensions
 
 ### NSView extension
 
@@ -1498,6 +1352,148 @@ aView.convertLocalizables()
 
 It will iterate on all the subviews of the view, and use the text / placeholder as key in `NSLocalizedString`.
 By settings your localizable key in your xib / storyboard, all yours string will be automatically translated just by calling the above method.
+
+## Protocols
+
+### Injectable
+
+Protocol to do `ViewController` Data Injection with Storyboards and Segues in Swift. Inspired from [Nastasha's blog](https://www.natashatherobot.com/update-view-controller-data-injection-with-storyboards-and-segues-in-swift/):
+
+```swift
+class RedPillViewController: UIViewController, Injectable {
+
+    @IBOutlet weak private var mainLabel: UILabel!
+
+    // the type matches the IOU's type
+    typealias T = String
+
+    // this is my original dependency (IOU)
+    // I can now make this private!
+    private var mainText: String!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // this will crash if the IOU is not set
+        assertDependencies()
+
+        // using the IOU if needed here,
+        // but using it later is fine as well
+        mainLabel.text = mainText
+    }
+
+    // Injectable Implementation
+    func inject(text: T) {
+        mainText = text
+    }
+
+    func assertDependencies() {
+        assert(mainText != nil)
+    }
+}
+
+// ViewController that will inject data...
+override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+    switch segueIdentifierForSegue(segue) {
+    case .TheRedPillExperience
+        let redPillVC = segue.destinationViewController as? RedPillViewController
+        redPillVC?.inject("😈")
+    case .TheBluePillExperience:
+        let bluePillVC = segue.destinationViewController as? BluePillViewController
+        bluePillVC?.inject("👼")
+    }
+}
+```
+
+### Occupiable
+
+The following use cases works for String Array, Dictionary, and Set
+
+`isEmpty` / `isNotEmpty`
+
+*No optional types only*
+
+```swift
+var string = "Hello world"
+print(string.isNotEmpty) // true
+print(string.isEmpty) // false
+```
+
+`isNilOrEmpty`
+
+*Optional types only*
+
+```swift
+let string: String? = ""
+print(string.isNilOrEmpty) // true
+```
+
+### Then
+
+Syntactic sugar for Swift initializers:
+
+```swift
+let label = UILabel().then {
+    $0.textAlignment = .Center
+    $0.textColor = .blackColor()
+    $0.text = "Hello, World!"
+}
+```
+
+## PropertyWrappers
+
+### UserDefaultsBacked
+
+Type safe access to UserDefaults with support for default values.
+
+```swift
+struct SettingsViewModel {
+    @UserDefaultsBacked(key: "search-page-size", defaultValue: 20)
+    var numberOfSearchResultsPerPage: Int
+
+    @UserDefaultsBacked(key: "signature")
+    var messageSignature: String?
+}
+```
+
+## Others
+
+### UnitTesting
+
+Grand Central Dispatch sugar syntax:
+
+Detect if UITests are running:
+
+```swift
+if UnitTesting.isRunning {
+  // tests are running
+} else {
+  // everything is fine, move along
+}
+```
+
+Measure tests performance:
+
+```swift
+func testPerformance() {
+  let measurement = measure {
+    // run operation
+  }
+}
+```
+
+### UITesting
+
+Detect if UITests are running:
+
+```swift
+if UITesting.isRunning {
+  // tests are running
+} else {
+  // everything is fine, move along
+}
+```
 
 ### Shell Utility 
 (macOS only)
