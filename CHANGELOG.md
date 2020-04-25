@@ -33,6 +33,15 @@ func addChild(_ child: UIViewController, in containerView: UIView)
 func removeChildController(_ child: UIViewController)
 ```
 
+- PropertyWrappers:
+
+```
+@UserDefaultsBacked(key: "defaults_key", defaultValue: 20)
+var defaultValue: Int
+@UserDefaultsBacked(key: "default_key2")
+var defaultKey2: String?
+```
+
 #### Bugfixes
 
 N/A
