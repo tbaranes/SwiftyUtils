@@ -13,16 +13,63 @@ N/A
 #### Enhancements
 
 - Adding `UIElementPreview`, an easy way to generate mulitple SwiftUI previews with different configuration
+- Completing missing unit tests 
+- BundleExtension:
+
+```swift
+var displayName: String
+```
+
+- DictionaryExtension
+
+```swift
+func toData(options: JSONSerialization.WritingOptions = []) throws -> Data?
+```
+
+- DataExtension:
+
+```
+func toDictionary(options: JSONSerialization.ReadingOptions = []) throws -> [String: Any]?
+```
+
+- NSAttributedStringExtension:
+
+```swift
+func isAttributeActivated(_ attribute: NSAttributedString.Key, appliedOn text: String, value: Any) -> Bool
+```
+
+- UIApplicationExtension:
+
+```
+func openAppSettings()
+func openAppStoreReviewPage(_ url: URL)
+```
+
+- UIButtonExtension:
+
+```swift
+func addRightImage(_ image: UIImage?, offset: CGFloat)
+```
+
+- UICollectionViewCellExtension:
+
+```
+func applyCornerRadius(_ radius: CGFloat)
+func animate(scale: Bool, duration: TimeInterval = 0.35, transformScale: CGFloat = 0.97, damping: CGFloat = 0.7, options: UIView.AnimationOptions = [], delay: TimeInterval = 0.0, velocity: CGFloat = 0.0, completion: ((Bool) -> Void)? = nil)
+```
+
 - UIViewExtension:
 
 ```swift
 func findView(forIdentifier identifier: String) -> UIView?
 func addConstraints(to edges: UIRectEdge = .all, insets: UIEdgeInsets = .zero)
+func applyCornerRadius(_ radius: CGFloat, maskedCorners: CACornerMask [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]) 
 ```
 
 - UIViewController:
 
 ```swift
+var isModal: Bool
 func addChildController(_ controller: UIViewController,
                         to subview: UIView,
                         animated: Bool = true,
@@ -31,6 +78,7 @@ func addChildController(_ controller: UIViewController,
                                                             .transitionCrossDissolve])
 func addChild(_ child: UIViewController, in containerView: UIView)
 func removeChildController(_ child: UIViewController)
+func openSafariVC(withURL url: URL, delegate: SFSafariViewControllerDelegate, tintColor: UIColor = .black, barTintColor: UIColor = .white, barCollapsing: Bool = true)
 ```
 
 - PropertyWrappers:

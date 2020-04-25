@@ -25,6 +25,14 @@ extension UIViewController {
         self.isViewLoaded && view.window != nil
     }
 
+    /// Check if the view controller has been presented or not
+    /// - Returns: `Bool`
+    public var isModal: Bool {
+        presentingViewController?.presentedViewController == self ||
+            navigationController?.presentingViewController?.presentedViewController == navigationController ||
+            tabBarController?.presentingViewController is UITabBarController
+    }
+
 }
 
 // MARK: - ChildVC
@@ -79,6 +87,43 @@ extension UIViewController {
         child.willMove(toParent: nil)
         child.view.removeFromSuperview()
         child.removeFromParent()
+    }
+
+}
+
+#endif
+
+#if os(iOS)
+
+import SafariServices
+
+// MARK: - Safari View Controller
+
+@available(iOS 10.0, *)
+extension UIViewController {
+
+    /// open Safari view controller with URL and options
+    /// - Parameters:
+    ///     - url: `URL`
+    ///     - delegate: `SFSafariViewControllerDelegate`, you may use `SafariViewControllerDelegate`
+    ///     - tintColor: `UIColor`, default is `.black`
+    ///     - barTintColor: `UIColor`, default is `.white`
+    ///     - barCollapsing: `Bool`, default is `true` only available since iOS 11.0
+    public func openSafariVC(withURL url: URL,
+                             delegate: SFSafariViewControllerDelegate,
+                             tintColor: UIColor = .black,
+                             barTintColor: UIColor = .white,
+                             barCollapsing: Bool = true) {
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.delegate = delegate
+        safariViewController.preferredControlTintColor = tintColor
+        safariViewController.preferredBarTintColor = barTintColor
+        if #available(iOS 11.0, *) {
+            safariViewController.configuration.barCollapsingEnabled = barCollapsing
+        }
+        DispatchQueue.main.async { [weak self] in
+            self?.present(safariViewController, animated: true, completion: nil)
+        }
     }
 
 }

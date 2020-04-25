@@ -116,3 +116,29 @@ extension DataExtensionTests {
         }
     }
 }
+
+// MARK: - Dictionary Mapping
+
+extension DataExtensionTests {
+
+    func testToDictionary_success() {
+        let jsonObject = ["int": 1, "bool": true, "string": "test"] as [String: Any]
+        let data = try? JSONSerialization.data(withJSONObject: jsonObject, options: [])
+        do {
+            let dictionary = try data!.toDictionary()!
+            XCTAssertTrue(NSDictionary(dictionary: dictionary).isEqual(to: jsonObject))
+        } catch {
+            XCTFail("Should not failed when mapping from a valid json")
+        }
+    }
+
+    func testToDictionary_withoutValue() {
+        do {
+            _ = try "".data(using: .utf8)!.toDictionary()
+            XCTFail("Should not successfully create a dictionary")
+        } catch let error {
+            XCTAssertNotNil(error)
+        }
+    }
+
+}

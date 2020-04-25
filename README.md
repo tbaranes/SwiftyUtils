@@ -33,6 +33,7 @@ Check out the repository to find examples / tests for each feature.
 - [FileManager](#filemanager-extension)
 - [Int](#int-extension)
 - [NotificationCenter](#notificationcenter-extension)
+- [NSAttributedString](#nsattributedstring-extension)
 - [NSLayoutConstraint](#nslayoutconstraint-extension)
 - [NSMutableAttributedString](#nsmutableattributedstring-extension)
 - [NSObject](#nsobject-extension)
@@ -57,6 +58,8 @@ Check out the repository to find examples / tests for each feature.
 
 - [UIAlertController](#uialertcontroller-extension)
 - [UIApplication](#uiapplication-extension)
+- [UIButton](#uibutton-extension)
+- [UICollectionViewCell](#uicollectionviewcell-extension)
 - [UIDevice](#uidevice-extension)
 - [UIImage](#uiimage-extension)
 - [UILabel](#uilabel-extension)
@@ -179,6 +182,9 @@ Get bundle information:
 ```swift
 Bundle.main.appName
 Bundle(url: url)?.appName
+
+Bundle.main.displayName
+Bundle(url: url)?.displayName
 
 Bundle.main.appVersion
 Bundle(url: url)?.appVersion
@@ -356,6 +362,12 @@ let data = Data(...)
 let array = data.bytesArray
 ```
 
+Map Data to Dictionary:
+
+```swift
+let dictionary = try data.toDictionary()
+```
+
 ### Date extension
 
 Initialize from string:
@@ -402,6 +414,12 @@ Check if a key exists in the dictionary:
 let dic = ["one": 1, "two": 2]
 print(dic.has(key: "one")) // True
 print(dic.has(key: "1")) // False
+```
+
+Map Dictionary to Data:
+
+```swift
+let data = try dictionary.toData()
 ```
 
 Easily get union of two dictionaries:
@@ -561,6 +579,17 @@ Post a notification from a specific queue:
 NotificationCenter.default.postNotification("aNotification", queue: DispatchQueue.main) 
 NotificationCenter.default.postNotification("aNotification", object: aObject queue: DispatchQueue.main)
 NotificationCenter.default.postNotification("aNotification", object: aObject userInfo: userInfo queue: DispatchQueue.main)
+```
+
+### NSAttributedString extension
+
+Check if an attribute is applied on the desired substring:
+
+```swift
+let text = "Hello"
+let attrString = NSMutableAttributedString(text: "Hello world")
+attrString = attrString.underlined(occurences: text)
+attrString.isAttributeActivated(.underlineStyle, appliedOn: text, value: 1) // true
 ```
 
 ### NSLayoutConstraint extension
@@ -1132,6 +1161,51 @@ Get the app delegate:
 UIApplication.delegate(AppDelegate.self)
 ```
 
+Open app settings:
+
+```swift
+UIApplication.shared.openAppSettings()
+```
+
+Open app review page:
+
+```swift
+let url = URL(string: "https://itunes.apple.com/app/{APP_ID}?action=write-review")
+UIApplication.shared.openAppStoreReviewPage(url)
+```
+
+### UIButton extension
+
+Add right image with custom offset to button:
+
+```swift
+let button = UIButton(frame: .zero)
+button.addRightImage(image, offset: 16)
+```
+
+### UICollectionViewCell extension
+
+Apply a corner radius to the cell:
+
+```swift
+let cell = UICollectionViewCell()
+cell.applyCornerRadius(10)
+```
+
+Animate when cell is highlighted:
+
+```swift
+class MyCollectionViewCell: UICollectionViewCell {
+    // ...
+    override var isHighlighted: Bool {
+        willSet {
+            self.animate(scale: newValue, options: .curveEaseInOut) // Note that the animation is customisable, but all parameters as default value
+        }
+    }
+    // ...
+}
+```
+
 ### UIDevice extension
 
 Access to your device information:
@@ -1299,6 +1373,14 @@ aView.width -= 10 // make the view narrower
 aView.height -= 10 // make the view shorter 
 ```
 
+Apply a corner radius to the view:
+
+```swift
+let view = UIView()
+view.applyCornerRadius(10)
+view.applyCornerRadius(20, maskedCorners: [.layerMaxXMaxYCorner])
+```
+
 Find a subview using its `accessibilityIdentifier, useful to tests private outlets:
 
 ```swift
@@ -1340,6 +1422,20 @@ Check if ViewController is onscreen and not hidden:
 ```swift
 let viewController = UIViewController()
 print(viewController.isVisible) // false
+```
+
+Check if ViewController is presented modally:
+
+```swift
+let viewController = UIViewController()
+print(viewController.isModal)
+```
+
+Open Safari modally:
+
+```
+let url = URL(string: "https://www.apple.com")
+vc.openSafariVC(url: url, delegate: self)
 ```
 
 Add a child view controller to another controller:

@@ -15,6 +15,20 @@ extension Dictionary {
 
 }
 
+// MARK: - Data
+
+extension Dictionary {
+
+    /// Data from dictionary
+    /// - Parameter options: `JSONSerialization.WritingOptions`
+    /// - Returns: `Data?`
+    public func toData(options: JSONSerialization.WritingOptions = []) throws -> Data? {
+        let data = try JSONSerialization.data(withJSONObject: self, options: options)
+        return data
+    }
+
+}
+
 // MARK: - Transform
 
 extension Dictionary {
