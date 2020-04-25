@@ -10,7 +10,7 @@ extension IntegerLiteralType {
 
     // swiftlint:disable:next identifier_name
     public var f: CGFloat {
-        return CGFloat(self)
+        CGFloat(self)
     }
 
 }
@@ -19,7 +19,7 @@ extension FloatLiteralType {
 
     // swiftlint:disable:next identifier_name
     public var f: CGFloat {
-        return CGFloat(self)
+        CGFloat(self)
     }
 
 }

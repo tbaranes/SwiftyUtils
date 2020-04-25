@@ -12,32 +12,32 @@ import UIKit
 extension UIDevice {
 
     public class var idForVendor: String? {
-        return UIDevice.current.identifierForVendor?.uuidString
+        UIDevice.current.identifierForVendor?.uuidString
     }
 
     public class func systemName() -> String {
-        return UIDevice.current.systemName
+        UIDevice.current.systemName
     }
 
     @objc
     public class func systemVersion() -> String {
-        return UIDevice.current.systemVersion
+        UIDevice.current.systemVersion
     }
 
     public class var deviceName: String {
-        return UIDevice.current.name
+        UIDevice.current.name
     }
 
     public class var deviceLanguage: String {
-        return Bundle.main.preferredLocalizations[0]
+        Bundle.main.preferredLocalizations[0]
     }
 
     @objc public class var isPhone: Bool {
-        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone
+        UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone
     }
 
     @objc public class var isPad: Bool {
-        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
+        UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
     }
 
 }
@@ -47,19 +47,19 @@ extension UIDevice {
 extension UIDevice {
 
     public class func isVersion(_ version: Float) -> Bool {
-        return systemFloatVersion >= version && systemFloatVersion < (version + 1.0)
+        systemFloatVersion >= version && systemFloatVersion < (version + 1.0)
     }
 
     public class func isVersionOrLater(_ version: Float) -> Bool {
-        return systemFloatVersion >= version
+        systemFloatVersion >= version
     }
 
     public class func isVersionOrEarlier(_ version: Float) -> Bool {
-        return systemFloatVersion < (version + 1.0)
+        systemFloatVersion < (version + 1.0)
     }
 
     private class var systemFloatVersion: Float {
-        return (systemVersion() as NSString).floatValue
+        (systemVersion() as NSString).floatValue
     }
 
 }

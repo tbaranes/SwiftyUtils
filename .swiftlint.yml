@@ -91,3 +91,9 @@ opt_in_rules:
  - empty_collection_literal
  - contains_over_range_nil_comparison
  - flatmap_over_map_reduce
+ - raw_value_for_camel_cased_codable_enum
+ - return_value_from_void_function
+ - prefer_self_type_over_type_of_self
+excluded:
+ - Carthage
+ - Pods

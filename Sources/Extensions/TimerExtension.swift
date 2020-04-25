@@ -10,12 +10,12 @@ import Foundation
 extension Timer {
 
     public class func new(after interval: TimeInterval, _ block: @escaping () -> Void) -> Timer {
-        return CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault,
-                                               CFAbsoluteTimeGetCurrent() + interval,
-                                               0,
-                                               0,
-                                               0) { _ in
-            block()
+        CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault,
+                                        CFAbsoluteTimeGetCurrent() + interval,
+                                        0,
+                                        0,
+                                        0) { _ in
+                                            block()
         }
     }
 

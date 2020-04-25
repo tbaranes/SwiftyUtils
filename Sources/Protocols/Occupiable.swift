@@ -12,7 +12,7 @@ public protocol Occupiable {
 
 extension Occupiable {
     public var isNotEmpty: Bool {
-        return !isEmpty
+        !isEmpty
     }
 }
 
@@ -32,6 +32,6 @@ extension Optional where Wrapped: Occupiable {
     }
 
     public var isNotNilNotEmpty: Bool {
-        return !isNilOrEmpty
+        !isNilOrEmpty
     }
 }
