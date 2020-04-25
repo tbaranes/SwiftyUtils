@@ -31,6 +31,25 @@ extension UIView {
     }
 }
 
+// MARK: - Corner Radius
+
+extension UIView {
+
+    /// Configure view's corner radius
+    /// - Parameter radii: `CGFloat`
+    /// - Parameter maskedCorners: `CACornerMask`, default is all sides
+    @available(iOS 11.0, tvOS 11.0, *)
+    public func applyCornerRadius(_ radius: CGFloat, maskedCorners: CACornerMask = [.layerMaxXMaxYCorner,
+                                                                                    .layerMaxXMinYCorner,
+                                                                                    .layerMinXMaxYCorner,
+                                                                                    .layerMinXMinYCorner]) {
+        self.layer.cornerRadius = radius
+        self.layer.maskedCorners = maskedCorners
+        self.layer.masksToBounds = true
+    }
+
+}
+
 // MARK: - Localizables
 
 extension UIView {

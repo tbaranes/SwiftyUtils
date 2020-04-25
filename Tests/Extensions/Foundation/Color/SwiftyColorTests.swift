@@ -34,6 +34,32 @@ extension SwiftyColorTests {
         XCTAssertNotNil(color)
     }
 
+    func testInitFromHex_length_3() {
+        let color = UIColor(hex: "#555")
+        XCTAssertNotNil(color)
+    }
+
+    func testInitFromHex_length_6() {
+        let color = UIColor(hex: "#555557")
+        XCTAssertNotNil(color)
+    }
+
+    func testInitFromHex_length_8() {
+        let color = UIColor(hex: "#55555555")
+        XCTAssertNotNil(color)
+    }
+
+    func testInitFromHex_invalidLength() {
+        let color = UIColor(hex: "🤭")
+        XCTAssertNotNil(color)
+    }
+
+}
+
+// MARK: - Components
+
+extension SwiftyColorTests {
+
     func testRedComponent() {
         let color = SwiftyColor.red
         XCTAssertEqual(color.redComponent, 255)

@@ -48,3 +48,32 @@ extension UIViewControllerExtensionTests {
     }
 
 }
+
+// MARK: - Modal
+
+extension UIViewControllerExtensionTests {
+
+    func testIsModal_false() {
+        let vc = UIViewController()
+        _ = UINavigationController(rootViewController: vc)
+        XCTAssertFalse(vc.isModal)
+    }
+
+    func testIsModal_true() {
+        let vc = UIViewController()
+        let vcModal = UIViewController()
+        vc.present(vcModal, animated: false, completion: nil)
+        XCTAssertTrue(vcModal.isModal)
+    }
+
+    func testIsModal_embedNav_true() {
+        let vc = UIViewController()
+        let navController = UINavigationController(rootViewController: vc)
+        navController.pushViewController(vc, animated: true)
+
+        let vcModal = UIViewController()
+        navController.present(vcModal, animated: false, completion: nil)
+        XCTAssertTrue(vcModal.isModal)
+    }
+
+}

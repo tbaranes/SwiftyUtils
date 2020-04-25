@@ -37,6 +37,32 @@ extension UIViewExtensionTests {
 
 }
 
+// MARK: - Corner Radius
+
+@available(iOS 11.0, tvOS 11.0, *)
+extension UIViewExtensionTests {
+
+    func testConfigureCornerRadius() {
+        let view = UIView(frame: .zero)
+        view.applyCornerRadius(10)
+        XCTAssertEqual(view.layer.cornerRadius, 10)
+        XCTAssertTrue(view.layer.masksToBounds)
+        XCTAssertEqual(view.layer.maskedCorners, [.layerMaxXMaxYCorner,
+                                                  .layerMaxXMinYCorner,
+                                                  .layerMinXMaxYCorner,
+                                                  .layerMinXMinYCorner])
+    }
+
+    func testConfigureCornerRadius_andMaskedCorners() {
+        let view = UIView(frame: .zero)
+        view.applyCornerRadius(20, maskedCorners: [.layerMaxXMaxYCorner])
+        XCTAssertEqual(view.layer.cornerRadius, 20)
+        XCTAssertTrue(view.layer.masksToBounds)
+        XCTAssertEqual(view.layer.maskedCorners, [.layerMaxXMaxYCorner])
+    }
+
+}
+
 // MARK: - Constraints
 
 extension UIViewExtensionTests {

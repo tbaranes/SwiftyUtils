@@ -21,6 +21,10 @@ extension BundleExtensionTests {
         XCTAssertEqual(Bundle.main.appName, "xctest")
     }
 
+    func testDisplayName() {
+        XCTAssertEqual(Bundle.main.displayName, "")
+    }
+
     func testAppVersion() {
         XCTAssertEqual(Bundle.main.appVersion, "")
     }

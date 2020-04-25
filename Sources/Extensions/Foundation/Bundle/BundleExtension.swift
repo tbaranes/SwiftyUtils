@@ -17,6 +17,10 @@ extension Bundle {
         string(for: "CFBundleShortVersionString")
     }
 
+    public var displayName: String {
+        string(for: "CFBundleDisplayName")
+    }
+
     public var appBuild: String {
         string(for: kCFBundleVersionKey as String)
     }

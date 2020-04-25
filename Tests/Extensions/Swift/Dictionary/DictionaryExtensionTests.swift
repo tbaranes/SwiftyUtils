@@ -27,6 +27,24 @@ final class DictionaryExtensionTests: XCTestCase {
 
 }
 
+// MARK: - Data
+
+extension DictionaryExtensionTests {
+
+    func testToData() {
+        do {
+            let dictionary = ["int": 1, "string": "string", "bool": true] as [String: Any]
+            let data = try dictionary.toData()!
+
+            let output = try data.toDictionary()!
+            XCTAssertTrue(NSDictionary(dictionary: dictionary).isEqual(to: output))
+        } catch {
+            XCTFail("Should not failed creating the data")
+        }
+    }
+
+}
+
 // MARK: - Transform
 
 extension DictionaryExtensionTests {

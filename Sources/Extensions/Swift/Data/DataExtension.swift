@@ -8,9 +8,10 @@
 
 import Foundation
 
+// MARK: - Initializers
+
 extension Data {
 
-    // MARK: Initializers
     /**
      Initializes a new data object from a hex string
 
@@ -40,7 +41,26 @@ extension Data {
         self = Data(byteArray)
     }
 
-    // MARK: managable data
+}
+
+// MARK: - Mapping
+
+extension Data {
+
+    // Returns a dictionnary from data
+    /// - Parameter options: `JSONSerialization.ReadingOptions`
+    /// - Returns: `[String: String]`
+    public func toDictionary(options: JSONSerialization.ReadingOptions = []) throws -> [String: Any]? {
+        let data = try JSONSerialization.jsonObject(with: self, options: options) as? [String: Any]
+        return data
+    }
+
+}
+
+// MARK: - Managable data
+
+extension Data {
+
     /**
     Provides the data as a hex string with formatting options.
 
