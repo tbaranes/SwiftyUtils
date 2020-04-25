@@ -11,7 +11,7 @@
 import SwiftUI
 
 @available(iOS 13.0, tvOS 13.0, watchOSApplicationExtension 6.0, OSX 10.15, *)
-struct UIElementPreview<Value: View>: View {
+public struct UIElementPreview<Value: View>: View {
 
     private let previewLayout: PreviewLayout
     private let previewDevices: [String]
@@ -24,21 +24,23 @@ struct UIElementPreview<Value: View>: View {
     /// Generate automatically multiple previews including
     /// - Parameters:
     ///   - viewToPreview: The view to preview
-    ///   - previewLayout: The preview layout configuration, it must be either `.sizeThatFits`or `.device`. Default is `.device`.
-    ///   - previewDevices: A list of the devices to preview when `previewLayout` is equal to `.device`. Default is `["iPhone SE", "iPhone XS Max"]`.
+    ///   - previewLayout: The preview layout configuration, it must be either `.sizeThatFits`or `.device`.
+    ///                    Default is `.device`.
+    ///   - previewDevices: A list of the devices to preview when `previewLayout` is equal to `.device`.
+    ///                     Default is `["iPhone SE", "iPhone XS Max"]`.
     ///   - dynamicTypeSizes: The different dynamic type sizes applied to our preview
     /// - returns: a `View` used to display all previews
-    init(_ viewToPreview: Value,
-         previewLayout: PreviewLayout = .device,
-         previewDevices: [String] = ["iPhone SE", "iPhone XS Max"],
-         dynamicTypeSizes: [ContentSizeCategory] = [.extraSmall, .large, .extraExtraExtraLarge]) {
+    public init(_ viewToPreview: Value,
+                previewLayout: PreviewLayout = .device,
+                previewDevices: [String] = ["iPhone SE", "iPhone XS Max"],
+                dynamicTypeSizes: [ContentSizeCategory] = [.extraSmall, .large, .extraExtraExtraLarge]) {
         self.viewToPreview = viewToPreview
         self.previewLayout = previewLayout
         self.previewDevices = previewDevices
         self.dynamicTypeSizes = dynamicTypeSizes
     }
 
-    var body: some View {
+    public var body: some View {
         Group {
             if self.isPreviewSizeThatFits {
                 previews(named: "Default Device", previewLayout: .sizeThatFits)

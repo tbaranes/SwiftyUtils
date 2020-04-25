@@ -48,6 +48,8 @@ Check out the repository to find examples / tests for each feature.
  - [Injectable](#injectable)
  - [Occupiable](#occupiable)
  - [Then](#then)
+ - **PropertyWrappers:**
+  - [UserDefaultsBacked](#userdefaultsbacked)
 - **SwiftUI:**
  - [UIElementPreview](#uielementpreview)
  
@@ -354,7 +356,7 @@ let data = Data(...)
 let array = data.bytesArray
 ```
 
-## Date extension
+### Date extension
 
 Initialize from string:
 
@@ -813,7 +815,7 @@ let string = "abcd"
 print(string.split(intoChunksOf: 2)) // ["ab", "cd"]
 ```
 
-## Timer extension
+### Timer extension
 
 Schedule timer every seconds:
 
@@ -933,6 +935,8 @@ Remove all values in `UserDefaults`:
 UserDefaults.standard.removeAll()
 ```
 
+## Protocols
+
 ### Injectable
 
 Protocol to do `ViewController` Data Injection with Storyboards and Segues in Swift. Inspired from [Nastasha's blog](https://www.natashatherobot.com/update-view-controller-data-injection-with-storyboards-and-segues-in-swift/):
@@ -1018,6 +1022,24 @@ let label = UILabel().then {
     $0.text = "Hello, World!"
 }
 ```
+
+## PropertyWrappers
+
+### UserDefaultsBacked
+
+Type safe access to UserDefaults with support for default values.
+
+```swift
+struct SettingsViewModel {
+    @UserDefaultsBacked(key: "search-page-size", defaultValue: 20)
+    var numberOfSearchResultsPerPage: Int
+
+    @UserDefaultsBacked(key: "signature")
+    var messageSignature: String?
+}
+```
+
+## SwiftUI
 
 ### UIElementPreview
 
