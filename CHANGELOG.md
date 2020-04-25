@@ -19,6 +19,19 @@ func findView(forIdentifier identifier: String) -> UIView?
 func addConstraints(to edges: UIRectEdge = .all, insets: UIEdgeInsets = .zero)
 ```
 
+- UIViewController:
+
+```swift
+func addChildController(_ controller: UIViewController,
+                        to subview: UIView,
+                        animated: Bool = true,
+                        duration: TimeInterval = 0.35,
+                        options: UIView.AnimationOptions = [.curveEaseInOut,
+                                                            .transitionCrossDissolve])
+func addChild(_ child: UIViewController, in containerView: UIView)
+func removeChildController(_ child: UIViewController)
+```
+
 #### Bugfixes
 
 N/A
