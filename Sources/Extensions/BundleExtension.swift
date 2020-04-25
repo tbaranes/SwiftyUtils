@@ -10,19 +10,19 @@ import Foundation
 extension Bundle {
 
     public var appName: String {
-        return string(for: kCFBundleNameKey as String)
+        string(for: kCFBundleNameKey as String)
     }
 
     @objc public var appVersion: String {
-        return string(for: "CFBundleShortVersionString")
+        string(for: "CFBundleShortVersionString")
     }
 
     public var appBuild: String {
-        return string(for: kCFBundleVersionKey as String)
+        string(for: kCFBundleVersionKey as String)
     }
 
     public var bundleId: String {
-        return string(for: "CFBundleIdentifier")
+        string(for: "CFBundleIdentifier")
     }
 
 }
@@ -32,7 +32,7 @@ extension Bundle {
 extension Bundle {
 
     public var isInTestFlight: Bool {
-        return appStoreReceiptURL?.path.contains("sandboxReceipt") == true
+        appStoreReceiptURL?.path.contains("sandboxReceipt") == true
     }
 
 }
@@ -52,7 +52,7 @@ extension Bundle {
     }
 
     public var mainScheme: String? {
-        return schemes.first
+        schemes.first
     }
 
 }

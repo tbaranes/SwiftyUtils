@@ -72,6 +72,6 @@ extension Data {
     Provides the data as an array of UInt8 bytes for easy manipulation.
      */
     public var bytesArray: [UInt8] {
-        return Array(self)
+        Array(self)
     }
 }

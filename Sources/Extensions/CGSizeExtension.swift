@@ -10,15 +10,15 @@ import CoreGraphics
 extension CGSize {
 
     public static func + (lhs: CGSize, rhs: CGSize) -> CGSize {
-        return CGSize(width: lhs.width + rhs.width, height: lhs.height + rhs.height)
+        CGSize(width: lhs.width + rhs.width, height: lhs.height + rhs.height)
     }
 
     public static func - (lhs: CGSize, rhs: CGSize) -> CGSize {
-        return CGSize(width: lhs.width - rhs.width, height: lhs.height - rhs.height)
+        CGSize(width: lhs.width - rhs.width, height: lhs.height - rhs.height)
     }
 
     public static func * (size: CGSize, scalar: CGFloat) -> CGSize {
-        return CGSize(width: size.width * scalar, height: size.height * scalar)
+        CGSize(width: size.width * scalar, height: size.height * scalar)
     }
 
 }

@@ -10,7 +10,7 @@ import Foundation
 extension Array {
 
     public subscript(safe index: Int) -> Element? {
-        return indices.contains(index) ? self[index] : nil
+        indices.contains(index) ? self[index] : nil
     }
 
 }
@@ -51,7 +51,7 @@ extension Array where Element: Equatable {
     }
 
     public func lastIndex(of item: Element) -> Int? {
-        return indexes(of: item).last
+        indexes(of: item).last
     }
 
 }
@@ -105,7 +105,7 @@ extension Array where Element: Equatable {
     }
 
     public func split(intoChunksOf chunkSize: Int) -> [[Element]] {
-        return stride(from: 0, to: self.count, by: chunkSize).map {
+        stride(from: 0, to: self.count, by: chunkSize).map {
             let endIndex = ($0.advanced(by: chunkSize) > self.count) ? self.count - $0 : chunkSize
             return Array(self[$0..<$0.advanced(by: endIndex)])
         }

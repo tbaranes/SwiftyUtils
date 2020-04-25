@@ -10,7 +10,7 @@ import Foundation
 extension String {
 
     public subscript(integerIndex: Int) -> Character {
-        return self[index(startIndex, offsetBy: integerIndex)]
+        self[index(startIndex, offsetBy: integerIndex)]
     }
 
     public subscript(integerRange: Range<Int>) -> String {
@@ -26,7 +26,7 @@ extension String {
 extension String {
 
     public func contains(_ text: String, compareOption: NSString.CompareOptions) -> Bool {
-        return self.range(of: text, options: compareOption) != nil
+        self.range(of: text, options: compareOption) != nil
     }
 
 }
@@ -47,15 +47,15 @@ extension String {
     }
 
     public var isIP4Address: Bool {
-        return confirmIP4isValid(ip4: self)
+        confirmIP4isValid(ip4: self)
     }
 
     public var isIP6Address: Bool {
-        return confirmIP6isValid(ip6: self)
+        confirmIP6isValid(ip6: self)
     }
 
     public var isIPAddress: Bool {
-        return confirmIP4isValid(ip4: self) || confirmIP6isValid(ip6: self)
+        confirmIP4isValid(ip4: self) || confirmIP6isValid(ip6: self)
     }
 
     private func confirmIP4isValid(ip4: String) -> Bool {
@@ -101,7 +101,7 @@ extension String {
 extension String {
 
     public func trimmed() -> String {
-        return components(separatedBy: NSCharacterSet.whitespacesAndNewlines).joined()
+        components(separatedBy: NSCharacterSet.whitespacesAndNewlines).joined()
     }
 
     public func truncated(limit: Int) -> String {

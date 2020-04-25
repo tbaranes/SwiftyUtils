@@ -11,22 +11,22 @@ import UIKit
 
 extension UIView {
     public var x: CGFloat {
-        get { return frame.x }
+        get { frame.x }
         set { frame = frame.with(x: newValue) }
     }
 
     public var y: CGFloat {
-        get { return frame.y }
+        get { frame.y }
         set { frame = frame.with(y: newValue) }
     }
 
     public var width: CGFloat {
-        get { return frame.width }
+        get { frame.width }
         set { frame = frame.with(width: newValue) }
     }
 
     public var height: CGFloat {
-        get { return frame.height }
+        get { frame.height }
         set { frame = frame.with(height: newValue) }
     }
 }

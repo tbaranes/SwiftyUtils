@@ -11,7 +11,7 @@ extension UserDefaults {
 
     public subscript(key: String) -> Any? {
         get {
-            return object(forKey: key)
+            object(forKey: key)
         }
         set {
             set(newValue, forKey: key)
@@ -26,12 +26,12 @@ extension UserDefaults {
 
     @objc
     public static func has(key: String) -> Bool {
-        return self.standard.has(key: key)
+        self.standard.has(key: key)
     }
 
     @objc
     public func has(key: String) -> Bool {
-        return self.dictionaryRepresentation().keys.contains(key)
+        self.dictionaryRepresentation().keys.contains(key)
     }
 
 }

@@ -74,11 +74,11 @@ extension Date {
 extension Date {
 
     public var isInFuture: Bool {
-        return self > Date()
+        self > Date()
     }
 
     public var isInPast: Bool {
-        return self < Date()
+        self < Date()
     }
 
 }

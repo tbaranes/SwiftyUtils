@@ -41,12 +41,12 @@ extension Int {
 
 extension Int {
 
-    public var nearestDozens: Int { return nearest(to: 10) }
-    public var nearestHundreds: Int { return nearest(to: 100) }
-    public var nearestThousands: Int { return nearest(to: 1000) }
+    public var nearestDozens: Int { nearest(to: 10) }
+    public var nearestHundreds: Int { nearest(to: 100) }
+    public var nearestThousands: Int { nearest(to: 1000) }
 
     public func nearest(to value: Int) -> Int {
-        return self / value * value + (self % value) / (value / 2) * value
+        self / value * value + (self % value) / (value / 2) * value
     }
 
 }
@@ -55,12 +55,12 @@ extension Int {
 
 extension Int {
 
-    public var nearestBelowDozens: Int { return nearestBelow(to: 10) }
-    public var nearestBelowHundreds: Int { return nearestBelow(to: 100) }
-    public var nearestBelowThousands: Int { return nearestBelow(to: 1000) }
+    public var nearestBelowDozens: Int { nearestBelow(to: 10) }
+    public var nearestBelowHundreds: Int { nearestBelow(to: 100) }
+    public var nearestBelowThousands: Int { nearestBelow(to: 1000) }
 
     public func nearestBelow(to value: Int) -> Int {
-        return self / value * value + 0 / (value / 2) * value
+        self / value * value + 0 / (value / 2) * value
     }
 
 }
@@ -69,12 +69,12 @@ extension Int {
 
 extension Int {
 
-    public var nearestUpDozens: Int { return nearestUp(to: 10) }
-    public var nearestUpHundreds: Int { return nearestUp(to: 100) }
-    public var nearestUpThousands: Int { return nearestUp(to: 1000) }
+    public var nearestUpDozens: Int { nearestUp(to: 10) }
+    public var nearestUpHundreds: Int { nearestUp(to: 100) }
+    public var nearestUpThousands: Int { nearestUp(to: 1000) }
 
     public func nearestUp(to value: Int) -> Int {
-        return self / value * value + (value / 2) / (value / 2) * value
+        self / value * value + (value / 2) / (value / 2) * value
     }
 
 }

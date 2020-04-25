@@ -23,7 +23,7 @@ extension Dictionary {
 extension Dictionary {
 
     public func has(key: Key) -> Bool {
-        return index(forKey: key) != nil
+        index(forKey: key) != nil
     }
 
 }

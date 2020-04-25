@@ -10,7 +10,7 @@ import Foundation
 extension FileManager {
 
     @objc public static var document: URL {
-        return self.default.document
+        self.default.document
     }
 
     @objc public var document: URL {
@@ -40,7 +40,7 @@ extension FileManager {
 extension FileManager {
 
     public static func createDirectory(at directoryURL: URL) throws {
-        return try self.default.createDirectory(at: directoryURL)
+        try self.default.createDirectory(at: directoryURL)
     }
 
     @objc
@@ -60,7 +60,7 @@ extension FileManager {
 extension FileManager {
 
     public static func removeTemporaryFiles(at path: String) throws {
-        return try self.default.removeTemporaryFiles()
+        try self.default.removeTemporaryFiles()
     }
 
     public func removeTemporaryFiles() throws {
@@ -71,7 +71,7 @@ extension FileManager {
     }
 
     public static func removeDocumentFiles(at path: String) throws {
-        return try self.default.removeDocumentFiles()
+        try self.default.removeDocumentFiles()
     }
 
     public func removeDocumentFiles() throws {

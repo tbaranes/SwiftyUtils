@@ -9,12 +9,12 @@ extension NSObject {
 
     #if !os(macOS)
     public var className: String {
-        return type(of: self).className
+        Self.className
     }
     #endif
 
     public static var className: String {
-        return String(describing: self)
+        String(describing: self)
     }
 
 }

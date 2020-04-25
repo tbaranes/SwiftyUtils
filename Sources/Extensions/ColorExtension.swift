@@ -74,11 +74,11 @@ extension SwiftyColor {
 extension SwiftyColor {
 
     public func lighter(amount: CGFloat = 0.25) -> SwiftyColor {
-        return hueColor(withBrightnessAmount: 1 + amount)
+        hueColor(withBrightnessAmount: 1 + amount)
     }
 
     public func darker(amount: CGFloat = 0.25) -> SwiftyColor {
-        return hueColor(withBrightnessAmount: 1 - amount)
+        hueColor(withBrightnessAmount: 1 - amount)
     }
 
     private func hueColor(withBrightnessAmount amount: CGFloat) -> SwiftyColor {
