@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import SwiftyUtils
 
 // MARK: Life cycle
 
@@ -18,6 +19,34 @@ final class UITextFieldExtensionTests: XCTestCase {
 
     override func tearDown() {
         super.tearDown()
+    }
+
+}
+
+// MARK: - Clear Button
+
+extension UITextFieldExtensionTests {
+
+    @available(iOS 13.0, *)
+    func testSetClearButton() {
+        let textField = UITextField()
+        let image = UIImage(systemName: "pencil")!
+        textField.setClearButton(with: image)
+        XCTAssertEqual(textField.rightViewMode, .whileEditing)
+        XCTAssertEqual(textField.clearButtonMode, .never)
+
+        let clearButton = textField.rightView as? UIButton
+        XCTAssertNotNil(clearButton)
+        XCTAssertEqual(clearButton?.image(for: .normal), image)
+        XCTAssertEqual(clearButton?.contentMode, .right)
+        XCTAssertEqual(clearButton?.allTargets.count, 1)
+    }
+
+    func testClear() {
+        let textField = UITextField()
+        textField.text = "test"
+        textField.clear()
+        textField.text = ""
     }
 
 }

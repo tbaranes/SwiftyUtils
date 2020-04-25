@@ -5,19 +5,6 @@
 
 import Foundation
 
-// MARK: - Initializer
-
-extension Dictionary {
-
-    public init<C>(elements: C) where C: Collection, C.Iterator.Element == (Key, Value) {
-        self.init()
-        for (key, value) in elements {
-            self[key] = value
-        }
-    }
-
-}
-
 // MARK: - Helpers
 
 extension Dictionary {

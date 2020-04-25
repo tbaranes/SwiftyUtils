@@ -35,6 +35,9 @@ extension UILabelExtensionTests {
 
         label.text = ":)"
         XCTAssertFalse(label.isTruncated())
+
+        label.text = nil
+        XCTAssertFalse(label.isTruncated())
     }
 
     func testTruncateWithCustomSuffix() {

@@ -97,7 +97,7 @@ extension NSMutableAttributedString {
     }
 
     public func underline(occurences searchString: String) {
-        addAttribute(forOccurence: searchString, addAttributeMethod: addStrikeAttribute)
+        addAttribute(forOccurence: searchString, addAttributeMethod: addUnderlineAttribute(value:range:))
     }
 
 }
@@ -155,9 +155,9 @@ extension NSMutableAttributedString {
         addAttribute(NSAttributedString.Key.font, value: value, range: range)
     }
 
-    func addAttribute(forOccurence searchString: String,
-                      value: Any = 1,
-                      addAttributeMethod: ((_ value: Any, _ range: NSRange) -> Void)) {
+    private func addAttribute(forOccurence searchString: String,
+                              value: Any = 1,
+                              addAttributeMethod: ((_ value: Any, _ range: NSRange) -> Void)) {
         let inputLength = string.count
         let searchLength = searchString.count
         var range = NSRange(location: 0, length: length)

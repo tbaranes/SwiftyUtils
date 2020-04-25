@@ -25,7 +25,9 @@ final class DoubleExtensionTests: XCTestCase {
 extension DoubleExtensionTests {
 
     func testMilliseconds() {
+        XCTAssertEqual(1.3.millisecond, 0.0013)
         XCTAssertEqual(1.3.milliseconds, 0.0013)
+        XCTAssertEqual(1.3.ms, 0.0013)
     }
 
     func testSeconds() {

@@ -17,12 +17,16 @@ final class URLExtensionTests: XCTestCase {
 extension URLExtensionTests {
 
     func testQueryParameters() {
-        let url = URL(string: "http://example.com/api?v=1.1&q=google")
-        if let queryParameters = url?.queryParameters {
-            XCTAssertEqual(queryParameters["v"], Optional("1.1"))
-            XCTAssertEqual(queryParameters["q"], Optional("google"))
-            XCTAssertNil(queryParameters["other"])
-        }
+        let url = URL(string: "http://example.com/api?v=1.1&q=google")!
+        let queryParameters = url.queryParameters
+        XCTAssertEqual(queryParameters?["v"], Optional("1.1"))
+        XCTAssertEqual(queryParameters?["q"], Optional("google"))
+        XCTAssertNil(queryParameters?["other"])
+    }
+
+    func testQueryParameters_withoutParameters() {
+        let url = URL(string: "http://example.com/api")!
+        XCTAssertNil(url.queryParameters)
     }
 
 }

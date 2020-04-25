@@ -30,21 +30,9 @@ extension DateExtensionTests {
         XCTAssertEqual(dateFromString.timeIntervalSince1970, 0, accuracy: 60 * 60 * 24)
     }
 
-}
-
-// MARK: - Format
-
-extension DateExtensionTests {
-
-    func testDateToString() {
-        let dateToString = Date(timeIntervalSince1970: 0).string(format: format)
-        guard let dateFromString = Date(fromString: dateToString, format: format) else {
-            XCTFail("Date From String Couldn't be initialized.")
-            return
-        }
-        XCTAssertEqual(dateFromString.timeIntervalSince1970, 0, accuracy: 60 * 60 * 24)
+    func testDateFromString_invalidFormat() {
+        XCTAssertNil(Date(fromString: "fezfze", format: format))
     }
-
 }
 
 // MARK: - InBetween
