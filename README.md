@@ -48,7 +48,9 @@ Check out the repository to find examples / tests for each feature.
  - [Injectable](#injectable)
  - [Occupiable](#occupiable)
  - [Then](#then)
-
+- **SwiftUI:**
+ - [UIElementPreview](#uielementpreview)
+ 
 **Available for iOS, tvOS, and watchOS (a few):**
 
 - [UIAlertController](#uialertcontroller-extension)
@@ -1014,6 +1016,28 @@ let label = UILabel().then {
     $0.textAlignment = .Center
     $0.textColor = .blackColor()
     $0.text = "Hello, World!"
+}
+```
+
+### UIElementPreview
+
+Generate automatically multiple previews including: 
+
+- Default sized preview or dedicated preview device
+- A preview with Dark Mode enabled
+- Each localization of our project applied to a preview
+- Different dynamic type sizes applied
+
+
+```swift
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        UIElementPreview(ContentView(),
+                         previewLayout: .sizeThatFits, // default is `.device`
+                         previewDevices: ["iPhone SE"], // default is iPhone SE and iPhone XS Max. Note: it won't be used if `previewLayout` is `.sizeThatFits`
+                         dynamicTypeSizes:[.extraSmall] // default is: .extraSmall, .large, .extraExtraExtraLarge
+                        )
+    }
 }
 ```
 

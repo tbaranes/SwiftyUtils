@@ -12,6 +12,7 @@ N/A
 
 #### Enhancements
 
+- Adding `UIElementPreview`, an easy way to generate mulitple SwiftUI previews with different configuration
 - UIViewExtension:
 
 ```swift
