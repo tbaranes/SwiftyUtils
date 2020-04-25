@@ -17,6 +17,7 @@ extension NSAttributedString {
     ///   - attribute: `NSAttributedString.Key`, the attribute to check
     ///   - value: `Any`, the attribute's value expected. Currently supporting only Int
     ///   - appliedOn: `String`, the text that should have the attribute apply on
+    /// - Returns: true if the attribute has been applied to the dedicated text, otherwise false.
     public func isAttributeActivated(_ attribute: NSAttributedString.Key,
                                      appliedOn text: String,
                                      value: Any) -> Bool {

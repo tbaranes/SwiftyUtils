@@ -11,6 +11,12 @@ import UIKit
 
 extension UILabel {
 
+    /// Set the label line height multiple.
+    ///
+    /// The natural line height of the receiver is multiplied by this factor (if positive)
+    /// before being constrained by minimum and maximum line height.
+    ///
+    /// - Parameter lineHeight: The line height multiple that will be applied to the label.
     public func setLineHeight(_ lineHeight: CGFloat) {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 1.0
@@ -31,6 +37,10 @@ extension UILabel {
 
 extension UILabel {
 
+    /// Set the label's text with a custom truncated text (instead of `...`)  if needed.
+    /// - Parameters:
+    ///   - text: The text that will set to the label.
+    ///   - truncatedText: The text that will be used in to replace the `...` if needed.
     public func setText(_ text: String, truncatedText: String) {
         var text = text
         self.text = text
@@ -46,6 +56,8 @@ extension UILabel {
 
 extension UILabel {
 
+    /// Check if the text is truncated or not.
+    /// - Returns: true if the text is truncated, otherwise false.
     public func isTruncated() -> Bool {
         guard let string = text else {
             return false

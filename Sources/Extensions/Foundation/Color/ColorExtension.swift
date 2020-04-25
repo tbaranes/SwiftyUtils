@@ -13,6 +13,8 @@
 
 extension SwiftyColor {
 
+    /// Initialize a Color from an hex String.
+    /// - Parameter hex: the hex used to create the color.
     @objc
     public convenience init(hex: String) {
         let hex = hex.trimmingCharacters(in: NSCharacterSet.alphanumerics.inverted)
@@ -42,24 +44,32 @@ extension SwiftyColor {
 #if !os(OSX)
 extension SwiftyColor {
 
+    /// Extract the red component from the `Color`.
+    /// - Returns: Int.
     public var redComponent: Int {
         var red: CGFloat = 0
         getRed(&red, green: nil, blue: nil, alpha: nil)
         return Int(red * 255)
     }
 
+    /// Extract the green component from the `Color`.
+    /// - Returns: Int.
     public var greenComponent: Int {
         var green: CGFloat = 0
         getRed(nil, green: &green, blue: nil, alpha: nil)
         return Int(green * 255)
     }
 
+    /// Extract the blue component from the `Color`.
+    /// - Returns: Int.
     public var blueComponent: Int {
         var blue: CGFloat = 0
         getRed(nil, green: nil, blue: &blue, alpha: nil)
         return Int(blue * 255)
     }
 
+    /// Extract the alpha component from the `Color`.
+    /// - Returns: Int.
     public var alpha: CGFloat {
         var alpha: CGFloat = 0
         getRed(nil, green: nil, blue: nil, alpha: &alpha)
@@ -73,10 +83,16 @@ extension SwiftyColor {
 
 extension SwiftyColor {
 
+    /// Make the Color lighter.
+    /// - Parameter amount: the amount of brightness to apply/
+    /// - Returns: The `Color` with the amount lighter applied.
     public func lighter(amount: CGFloat = 0.25) -> SwiftyColor {
         hueColor(withBrightnessAmount: 1 + amount)
     }
 
+    /// Make the Color darker.
+    /// - Parameter amount: the amount of dark to apply.
+    /// - Returns: The `Color` with the amount darker applied.
     public func darker(amount: CGFloat = 0.25) -> SwiftyColor {
         hueColor(withBrightnessAmount: 1 - amount)
     }

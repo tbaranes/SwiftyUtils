@@ -9,22 +9,32 @@ import Foundation
 
 extension Bundle {
 
+    /// The app name extracted from the `infoDictionary`.
+    /// - Returns: String.
     public var appName: String {
         string(for: kCFBundleNameKey as String)
     }
 
+    /// The app version extracted from the `infoDictionary`.
+    /// - Returns: String.
     @objc public var appVersion: String {
         string(for: "CFBundleShortVersionString")
     }
 
+    /// The display name extracted from the `infoDictionary`.
+    /// - Returns: String.
     public var displayName: String {
         string(for: "CFBundleDisplayName")
     }
 
+    /// The app build extracted from the `infoDictionary`.
+    /// - Returns: String.
     public var appBuild: String {
         string(for: kCFBundleVersionKey as String)
     }
 
+    /// The app bundle identifier extracted from the `infoDictionary`.
+    /// - Returns: String.
     public var bundleId: String {
         string(for: "CFBundleIdentifier")
     }
@@ -35,6 +45,8 @@ extension Bundle {
 
 extension Bundle {
 
+    /// Check either the app has been installed using TestFlight.
+    /// - Returns: Bool.
     public var isInTestFlight: Bool {
         appStoreReceiptURL?.path.contains("sandboxReceipt") == true
     }
@@ -65,7 +77,7 @@ extension Bundle {
 
 extension Bundle {
 
-    func string(for key: String) -> String {
+    private func string(for key: String) -> String {
         guard let infoDictionary = Bundle.main.infoDictionary,
             let value = infoDictionary[key] as? String else {
                 return ""

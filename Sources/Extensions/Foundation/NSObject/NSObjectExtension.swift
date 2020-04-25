@@ -8,11 +8,15 @@ import Foundation
 extension NSObject {
 
     #if !os(macOS)
+    /// The name of a the type inheriting of `NSObject`
+    /// - Returns: String
     public var className: String {
         Self.className
     }
     #endif
 
+    /// The name of a the type inheriting of `NSObject`
+    /// - Returns: String
     public static var className: String {
         String(describing: self)
     }

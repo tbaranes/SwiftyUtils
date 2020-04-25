@@ -11,6 +11,8 @@ import UIKit
 
 extension UITextField {
 
+    /// Add a custom clear button to the textfield.
+    /// - Parameter image: The image representing the clear button.
     public func setClearButton(with image: UIImage) {
         let clearButton = UIButton(type: .custom)
         clearButton.setImage(image, for: .normal)
@@ -35,6 +37,8 @@ extension UITextField {
 
 extension UITextField {
 
+    /// Change the textfield's placeholder color.
+    /// - Parameter color: The new placeholder's color.
     public func setPlaceHolderTextColor(_ color: UIColor) {
         guard let placeholder = placeholder, placeholder.isNotEmpty else {
             return

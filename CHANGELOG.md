@@ -12,8 +12,9 @@ N/A
 
 #### Enhancements
 
+- Completing missing unit tests
+- Adding documentation to the code
 - Adding `UIElementPreview`, an easy way to generate mulitple SwiftUI previews with different configuration
-- Completing missing unit tests 
 - BundleExtension:
 
 ```swift

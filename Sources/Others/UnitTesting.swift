@@ -11,6 +11,7 @@ import Cocoa
 
 public enum UnitTesting {
 
+    /// Check if unit tests are running or not.
     public static var isRunning: Bool {
         ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
     }

@@ -12,13 +12,11 @@ import Foundation
 
 extension Data {
 
-    /**
-     Initializes a new data object from a hex string
-
-     - Parameter hexString: String in hexadecimal format. Can start with "0x" or
-                            not and may have spaces.
-                            Any illegal (non hex) characters or an odd number of legal characters will cause it to fail.
-     */
+    /// Initializes a new data object from a hex string
+    /// - Parameter hexString: String in hexadecimal format. Can start with "0x" or not and may have spaces.
+    ///                        Any illegal (non hex) characters or an odd number
+    ///                        of legal characters will cause it to fail.
+    /// - Returns: the Data object created from the hex string, or nil if an occured occured.
     public init?(hexString: String) {
         let noSpaces = hexString.replacingOccurrences(of: "\\s", with: "", options: .regularExpression, range: nil)
         guard noSpaces.count.isMultiple(of: 2) else {
@@ -47,9 +45,10 @@ extension Data {
 
 extension Data {
 
-    // Returns a dictionnary from data
-    /// - Parameter options: `JSONSerialization.ReadingOptions`
-    /// - Returns: `[String: String]`
+    // Returns a dictionnary from the json data
+    /// - Parameter options: Options for reading the JSON data and creating the Dictionary object.
+    ///                      Default value is empty.
+    /// - Returns: A Dictionary object from the JSON data in data, or nil if an error occurs.
     public func toDictionary(options: JSONSerialization.ReadingOptions = []) throws -> [String: Any]? {
         let data = try JSONSerialization.jsonObject(with: self, options: options) as? [String: Any]
         return data
@@ -61,14 +60,11 @@ extension Data {
 
 extension Data {
 
-    /**
-    Provides the data as a hex string with formatting options.
-
-    - Parameter hexLeader: Boolean determining if the string should start with "0x"
-    - Parameter spaces: Boolean determining if there should be spaces inserted every 8 characters
-
-    - Returns: String with hex encoded data
-     */
+    /// Provides the data as a hex string with formatting options.
+    /// - Parameters:
+    ///   - hexLeader: Boolean determining if the string should start with "0x"
+    ///   - spaces: Boolean determining if there should be spaces inserted every 8 characters
+    /// - Returns: String with hex encoded data
     public func toHexString(hexLeader: Bool = false, spaces: Bool = false) -> String {
         let count = self.count / MemoryLayout<UInt8>.stride
 
@@ -88,9 +84,8 @@ extension Data {
         return hexString
     }
 
-    /**
-    Provides the data as an array of UInt8 bytes for easy manipulation.
-     */
+    /// Provides the data as an array of UInt8 bytes for easy manipulation.
+    /// - Returns: An array containing the bytes.
     public var bytesArray: [UInt8] {
         Array(self)
     }
