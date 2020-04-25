@@ -7,7 +7,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyUtils.svg?style=flat)](http://cocoadocs.org/docsets/SwiftyUtils)
 
 SwiftyUtils groups all the reusable code that we need to ship in each project. This framework contains:
-- extension
+- Extensions
 - Protocols
 - Structs
 - Subclasses
@@ -18,43 +18,40 @@ Working on iOS, macOS, tvOS, and watchOS, everything has been made to be easy to
 
 Check out the repository to find examples / tests for each feature.
 
-**Available for iOS, macOS, tvOS and watchOS:**
+**Swift, CoreGraphics and Foundation Utils**
 
-- [Array](#array-extension)
-- [Bundle](#bundle-extension)
-- [CGFloat](#cgfloat-extension)
-- [CGPoint](#cgpoint-extension)
-- [CGRect](#cgrect-extension)
-- [CGSize](#cgsize-extension)
-- [Color](#color-extension)
-- [Date](#date-extension)
-- [Dictionary](#dictionary-extension)
-- [Double](#double-extension)
-- [FileManager](#filemanager-extension)
-- [Int](#int-extension)
-- [NotificationCenter](#notificationcenter-extension)
-- [NSAttributedString](#nsattributedstring-extension)
-- [NSLayoutConstraint](#nslayoutconstraint-extension)
-- [NSMutableAttributedString](#nsmutableattributedstring-extension)
-- [NSObject](#nsobject-extension)
-- [NSRange](#nsrange-extension)
-- [ReusableFormatters](#reusableformatters)
-- [String](#string-extension)
-- [Timer](#timer-extension)
-- [URL](#url-extension)
-- [UnitTesting](#unittesting)
-- [UITesting](#uitesting)
-- [UserDefaults](#userdefaults-extension)
-- **Protocols:**
- - [Injectable](#injectable)
- - [Occupiable](#occupiable)
- - [Then](#then)
- - **PropertyWrappers:**
-  - [UserDefaultsBacked](#userdefaultsbacked)
-- **SwiftUI:**
- - [UIElementPreview](#uielementpreview)
- 
-**Available for iOS, tvOS, and watchOS (a few):**
+ - [Array](#array-extension)
+ - [Bundle](#bundle-extension)
+ - [CGFloat](#cgfloat-extension)
+ - [CGPoint](#cgpoint-extension)
+ - [CGRect](#cgrect-extension)
+ - [CGSize](#cgsize-extension)
+ - [Color](#color-extension)
+ - [Date](#date-extension)
+ - [Dictionary](#dictionary-extension)
+ - [Double](#double-extension)
+ - [FileManager](#filemanager-extension)
+ - [Int](#int-extension)
+ - [NotificationCenter](#notificationcenter-extension)
+ - [NSAttributedString](#nsattributedstring-extension)
+ - [NSLayoutConstraint](#nslayoutconstraint-extension)
+ - [NSMutableAttributedString](#nsmutableattributedstring-extension)
+ - [NSObject](#nsobject-extension)
+ - [NSRange](#nsrange-extension)
+ - [ReusableFormatters](#reusableformatters)
+ - [String](#string-extension)
+ - [Timer](#timer-extension)
+ - [URL](#url-extension)
+ - [UnitTesting](#unittesting)
+ - [UITesting](#uitesting)
+ - [UserDefaults](#userdefaults-extension)
+
+
+**SwiftUI Utils:**
+
+- [UIElementPreview](#uielementpreview)
+
+**UIKit Utils:**
 
 - [UIAlertController](#uialertcontroller-extension)
 - [UIApplication](#uiapplication-extension)
@@ -71,12 +68,25 @@ Check out the repository to find examples / tests for each feature.
 - [UIViewController](#uiviewcontroller-extension)
 - [Simulator](#simulator)
 
-**Available for macOS:**
+
+**Cocoa - AppKit Utils:**
 
 - [NSView](#nsview-extension)
-- [SystemUtility - Shell](#system-utility)
+- [SystemUtility - Shell](#shell-utility)
 
-## Available for iOS, macOS, tvOS and watchOS
+
+**Protocols:**
+
+- [Injectable](#injectable)
+- [Occupiable](#occupiable)
+- [Then](#then)
+
+
+**PropertyWrappers:**
+
+ - [UserDefaultsBacked](#userdefaultsbacked)
+
+## Swift, CoreGraphics and Foundation Utils
 
 ### Array extension
 
@@ -90,7 +100,7 @@ print(array[safe: 10]) // nil
 
 Find all the index of an object:
 
-``` swift
+```swift
 var array = [1, 2, 3, 1]
 print(array.indexes(of: 1)) // [0,3]
 ```
@@ -305,7 +315,7 @@ print(size1) // CGSize(width: 20, height: 20)
 
 Create colors with HEX values:
 
-``` swift
+```swift
 let myUIColor = UIColor(hex: "233C64") // Equals 35,60,100,1
 let myNSColor = NSColor(hex: "233C64") // Equals 35,60,100,1
 ```
@@ -372,7 +382,7 @@ let dictionary = try data.toDictionary()
 
 Initialize from string:
 
-``` swift
+```swift
 let format = "yyyy/MM/dd"
 let string = "2015/03/11"
 print(Date(fromString: string, format: format)) // Optional("2015/03/11 00:00:00 +0000")
@@ -380,7 +390,7 @@ print(Date(fromString: string, format: format)) // Optional("2015/03/11 00:00:00
 
 Convert date to string:
 
-``` swift
+```swift
 let now = Date()
 print(now.string())
 print(now.string(dateStyle: .medium, timeStyle: .medium))
@@ -389,7 +399,7 @@ print(now.string(format: "yyyy/MM/dd HH:mm:ss"))
 
 See how much time passed:
 
-``` swift
+```swift
 let now = Date()
 let later = Date(timeIntervalSinceNow: -100000)
 print(later.days(since: now)) // 1.15740740782409
@@ -410,7 +420,7 @@ print(now.isInPast) // false
 
 Check if a key exists in the dictionary:
 
-``` swift
+```swift
 let dic = ["one": 1, "two": 2]
 print(dic.has(key: "one")) // True
 print(dic.has(key: "1")) // False
@@ -424,7 +434,7 @@ let data = try dictionary.toData()
 
 Easily get union of two dictionaries:
 
-``` swift
+```swift
 let dic1 = ["one": 1, "two": 2]
 let dic2 = ["one": 1, "four": 4]
 
@@ -457,7 +467,7 @@ print(dic) // ["A": "2, "C": "6"]
 
 Get difference of two dictionaries:
 
-``` swift
+```swift
 let dic1 = ["one": 1, "two": 2]
 let dic2 = ["one": 1, "four": 4]
 difference(with: dic1, dic2) // ["two": 2, "four": 4]
@@ -492,7 +502,7 @@ print(2.day) // 172800
 
 Formatted value with the locale currency:
 
-```
+```swift
 print(Double(3.24).formattedPrice) // "$3.24"
 print(Double(10).formattedPrice) // "$10.00"
 ```
@@ -502,7 +512,7 @@ print(Double(10).formattedPrice) // "$10.00"
 
 Get documents directory url following the os:
 
-```
+```swift
 FileManager.document
 // OR
 FileManager.default.document
@@ -510,7 +520,7 @@ FileManager.default.document
 
 Create a new directory:
 
-```
+```swift
 FileManager.createDirectory(at: directoryUrl)
 // OR
 FileManager.default.createDirectory(at: directoryUrl)
@@ -518,7 +528,7 @@ FileManager.default.createDirectory(at: directoryUrl)
 
 Delete contents of temporary directory
 
-```
+```swift
 FileManager.removeTemporaryFiles()
 // OR
 FileManager.default.removeTemporaryFiles()
@@ -526,7 +536,7 @@ FileManager.default.removeTemporaryFiles()
 
 Delete contents of documents directory
 
-```
+```swift
 FileManager.removeDocumentFiles()
 // OR
 FileManager.default.removeDocumentFiles()
@@ -575,7 +585,7 @@ print(10.formattedPrice) // "$10.00"
 
 Post a notification from a specific queue:
 
-```
+```swift
 NotificationCenter.default.postNotification("aNotification", queue: DispatchQueue.main) 
 NotificationCenter.default.postNotification("aNotification", object: aObject queue: DispatchQueue.main)
 NotificationCenter.default.postNotification("aNotification", object: aObject userInfo: userInfo queue: DispatchQueue.main)
@@ -848,7 +858,7 @@ print(string.split(intoChunksOf: 2)) // ["ab", "cd"]
 
 Schedule timer every seconds:
 
-``` swift
+```swift
 var count = 0
 Timer.every(1.second, fireImmediately: true) { timer in // fireImmediately is an optional parameter, defaults to false
     print("Will print every second")
@@ -861,7 +871,7 @@ Timer.every(1.second, fireImmediately: true) { timer in // fireImmediately is an
 
 Schedule timer after a certain delay:
 
-``` swift
+```swift
 Timer.after(2.seconds) { _ in
     print("Prints this 2 seconds later in main queue")
 }
@@ -869,7 +879,7 @@ Timer.after(2.seconds) { _ in
 
 Manual scheduling a timer:
 
-``` swift
+```swift
 let timer = Timer.new(every: 2.seconds) { _ in
     print("Prints this 2 seconds later in main queue")
 }
@@ -878,7 +888,7 @@ timer.start(onRunLoop: RunLoop.current, modes: RunLoopMode.defaultRunLoopMode)
 
 Manual scheduling a timer with a delay:
 
-``` swift
+```swift
 let timer = Timer.new(after: 2.seconds) { _ in
     print("Prints this 2 seconds later in main queue")
 }
@@ -889,7 +899,7 @@ timer.start(onRunLoop: RunLoop.current, modes: RunLoopMode.defaultRunLoopMode)
 
 Get query parameters from URL:
 
-``` swift
+```swift
 let url = URL(string: "http://example.com/api?v=1.1&q=google")
 let queryParameters = url?.queryParameters
 print(queryParameters?["v"]) // 1.1
@@ -899,7 +909,7 @@ print(queryParameters?["other"]) // nil
 
 Add skip backup attributes to you URL:
 
-``` swift
+```swift
 let url = URL(string: "/path/to/your/file")        
 url?.addSkipBackupAttribute() // File at url won't be backupped!
 ```
@@ -920,7 +930,7 @@ if UnitTesting.isRunning {
 
 Measure tests performance:
 
-```
+```swift
 func testPerformance() {
   let measurement = measure {
     // run operation
@@ -970,7 +980,7 @@ UserDefaults.standard.removeAll()
 
 Protocol to do `ViewController` Data Injection with Storyboards and Segues in Swift. Inspired from [Nastasha's blog](https://www.natashatherobot.com/update-view-controller-data-injection-with-storyboards-and-segues-in-swift/):
 
-```
+```swift
 class RedPillViewController: UIViewController, Injectable {
 
     @IBOutlet weak private var mainLabel: UILabel!
@@ -1092,7 +1102,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 ```
 
-## Available on iOS, tvOS, and watchOS (a few)
+## UIKit Utils
 
 ### UIAlertController extension
 
@@ -1210,7 +1220,7 @@ class MyCollectionViewCell: UICollectionViewCell {
 
 Access to your device information:
 
-``` swift
+```swift
 print(UIDevice.idForVendor) // 104C9F7F-7403-4B3E-B6A2-C222C82074FF
 print(UIDevice.systemName()) // iPhone OS
 print(UIDevice.systemVersion()) // 9.0
@@ -1222,7 +1232,7 @@ print(UIDevice.isPad) // true or false
 
 Check your system version:
 
-``` swift
+```swift
 print(UIDevice.isVersion(8.1)) // false
 print(UIDevice.isVersionOrLater(8.1)) // true
 print(UIDevice.isVersionOrEarlier(8.1)) // false
@@ -1466,11 +1476,12 @@ if !Simulator.isRunning {
 }
 ```
 
-## Available on macOS
+## AppKit / Cocoa Utils
 
 ### NSView extension
 
-**Change the frame of the view easily**
+Change the frame of the view easily
+
 ```swift
 let aView = NSView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 aView.x += 100 // move  to right
@@ -1493,16 +1504,18 @@ By settings your localizable key in your xib / storyboard, all yours string will
 
 Runs a command on a system shell and provides the return code for success, STDOUT, and STDERR.
 
-**STDOUT as one continuous String**
-```
+STDOUT as one continuous String:
+
+```swift
 let (rCode, stdOut, stdErr) = SystemUtility.shell(["ls", "-l", "/"])
 // rCode = 0 (which is "true" in shell)
 // stdOut = "total 13\ndrwxrwxr-x+ 91 root  admin  2912 Feb 11 01:24 Applications" ...  etc
 // stdErr = [""]
 ```
 
-**STDOUT as array of Strings separated by newlines**
-```
+STDOUT as array of Strings separated by newlines:
+
+```swift
 let (rCode, stdOut, stdErr) = SystemUtility.shellArrayOut(["ls", "-l", "/"])
 // rCode = 0 (which is "true" in shell)
 // stdOut = ["total 13", "drwxrwxr-x+ 91 root  admin  2912 Feb 11 01:24 Applications" ...  etc]
