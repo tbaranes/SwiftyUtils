@@ -10,21 +10,26 @@ import UIKit
 // MARK: - Frame
 
 extension UIView {
+
+    /// Get or set the NSView's frame `x` value.
     public var x: CGFloat {
         get { frame.x }
         set { frame = frame.with(x: newValue) }
     }
 
+    /// Get or set the NSView's frame `y` value.
     public var y: CGFloat {
         get { frame.y }
         set { frame = frame.with(y: newValue) }
     }
 
+    /// Get or set the NSView's frame `width` value.
     public var width: CGFloat {
         get { frame.width }
         set { frame = frame.with(width: newValue) }
     }
 
+    /// Get or set the NSView's frame `height` value.
     public var height: CGFloat {
         get { frame.height }
         set { frame = frame.with(height: newValue) }
@@ -35,9 +40,9 @@ extension UIView {
 
 extension UIView {
 
-    /// Configure view's corner radius
-    /// - Parameter radii: `CGFloat`
-    /// - Parameter maskedCorners: `CACornerMask`, default is all sides
+    /// Apply a corner radius to the view.
+    /// - Parameter radius: The radius that will be applied to the view.
+    /// - Parameter maskedCorners: The corners on which the radius will be applied. Default value is all corners.
     @available(iOS 11.0, tvOS 11.0, *)
     public func applyCornerRadius(_ radius: CGFloat, maskedCorners: CACornerMask = [.layerMaxXMaxYCorner,
                                                                                     .layerMaxXMinYCorner,
@@ -54,6 +59,7 @@ extension UIView {
 
 extension UIView {
 
+    /// Automatically translate all the subviews using their text as localizable's key.
     @objc
     public func translateSubviews() {
         if subviews.isEmpty {
@@ -95,6 +101,9 @@ extension UIView {
 
 extension UIView {
 
+    /// Find a subview using it's accessibility identifier. This is useful to test private view outlets.
+    /// - Parameter identifier: The accessibility identifier to look for.
+    /// - Returns: The view corresponding to the identifier, if none then it will return nil.
     public func findView(forIdentifier identifier: String) -> UIView? {
         if accessibilityIdentifier == identifier {
             return self
@@ -122,6 +131,10 @@ extension UIView {
 @available(iOS 9.0, *)
 extension UIView {
 
+    /// Add constraints to its superview.
+    /// - Parameters:
+    ///   - edges: The edges where a new constraint will be added. Default value is `.all`.
+    ///   - insets: The constant that will be applied to the new constraint. For example, the edge `.top` constant will be equal to the inset `.top`. Default value is `.zero`.
     public func addConstraints(to edges: UIRectEdge = .all, insets: UIEdgeInsets = .zero) {
         guard let superview = superview else {
             fatalError("No superview found, add your view in another before adding constraints.")

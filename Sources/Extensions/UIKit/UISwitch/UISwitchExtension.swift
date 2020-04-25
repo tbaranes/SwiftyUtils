@@ -11,6 +11,8 @@ import UIKit
 
 extension UISwitch {
 
+    /// Toggle a switch state.
+    /// - Parameter animated: true if you want to animate the toggle, otherwise false.
     public func toggle(animated: Bool = true) {
         self.setOn(!isOn, animated: animated)
     }

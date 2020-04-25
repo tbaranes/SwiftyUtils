@@ -11,6 +11,7 @@ import Cocoa
 
 extension NSView {
 
+    /// Automatically translate all the subviews using their text as localizable's key.
     @objc
     public func convertLocalizables() {
         if subviews.isEmpty {
@@ -38,21 +39,26 @@ extension NSView {
 // MARK: - Frame
 
 extension NSView {
+
+    /// Get or set the NSView's frame `x` value.
     public var x: CGFloat {
         get { frame.x }
         set { frame = frame.with(x: newValue) }
     }
 
+    /// Get or set the NSView's frame `y` value.
     public var y: CGFloat {
         get { frame.y }
         set { frame = frame.with(y: newValue) }
     }
 
+    /// Get or set the NSView's frame `width` value.
     public var width: CGFloat {
         get { frame.width }
         set { frame = frame.with(width: newValue) }
     }
 
+    /// Get or set the NSView's frame `height` value.
     public var height: CGFloat {
         get { frame.height }
         set { frame = frame.with(height: newValue) }

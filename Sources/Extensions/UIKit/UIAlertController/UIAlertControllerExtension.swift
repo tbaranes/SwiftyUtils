@@ -11,6 +11,14 @@ import UIKit
 
 extension UIAlertController {
 
+    /// Create a new `UIAlertController` with a default button.
+    /// - Parameters:
+    ///   - title: The alert's title.
+    ///   - title: The alert's message. Default value is nil.
+    ///   - defaultActionButtonTitle: The default alert action button's title. Default value is `OK`
+    ///   - defaultActionButtonStyle: The default alert action button's style. Default value is `.default`
+    ///   - tintColor: The alert's tint color. Default value is `nil`
+    /// - Returns: The `UIAlertController` created.
     @objc
     public convenience init(title: String,
                             message: String? = nil,
@@ -33,6 +41,10 @@ extension UIAlertController {
 
 extension UIAlertController {
 
+    /// Show the alert controller from the top view controller.
+    /// - Parameters:
+    ///   - animated: true or false, default value is true.
+    ///   - completion: Block called once the alert has been presented.
     @objc
     public func show(animated: Bool = true, completion: (() -> Void)? = nil) {
         UIApplication.shared.topViewController()?.present(self, animated: animated, completion: completion)
@@ -44,6 +56,15 @@ extension UIAlertController {
 
 extension UIAlertController {
 
+    /// Add an action to the alert controller.
+    /// - Parameters:
+    ///   - title: The action's title.
+    ///   - style: The action style. Default value is `.default`
+    ///   - isEnabled: Indicates if the action button is enabeld or not.
+    ///   - handler: An optional block called when the buton is pressed.
+    ///              The block takes one parameter corresponding to the action pressed.
+    ///              Default value is nil.
+    /// - Returns: The `UIAlertAction` created.
     @discardableResult
     public func addAction(title: String,
                           style: UIAlertAction.Style = .default,

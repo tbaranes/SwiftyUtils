@@ -12,9 +12,9 @@ import UIKit
 
 extension UICollectionViewCell {
 
-    /// Apply corner radius
+    /// Apply corner radius to the cell.
     /// - Parameters:
-    ///     - radius: `CGFloat`
+    ///     - radius: The radius that will be applied to the cell.
     public func applyCornerRadius(_ radius: CGFloat) {
         contentView.layer.cornerRadius = radius
         contentView.layer.masksToBounds = true
@@ -26,15 +26,17 @@ extension UICollectionViewCell {
 
 extension UICollectionViewCell {
 
-    /// animate on highlighted with value for duration and scale
+    /// Configure and animate the cell animation, mainly used when the cell is highlighted.
     /// - Parameters:
-    ///     - shouldScale: `Bool`
-    ///     - duration: `TimeInterval`, default is `0.35`
-    ///     - scale: `CGFloat`, default is `0.97`
-    ///     - damping: `CGFloat`, default is `0.7`
-    ///     - options: `UIView.AnimationOptions`, default is `[]` empty
-    ///     - delay: `TimeInterval`, default is `0.0`
+    ///     - shouldScale: Either the animation should do a scale animation or not.
+    ///     - duration: The animation duration. Default value is `0.35`
+    ///     - transformScale: The transform scale delta. Default value is `0.97`
+    ///     - damping: The damping ratio for the spring animation as it approaches its quiescent state.
+    ///                Default value is `0.7`
+    ///     - options: A mask of options indicating how you want to perform the animations. Default value is empty.
+    ///     - delay: The delay duration before starting the animation. Default value is `0.0`
     ///     - velocity: `CGFloat`, default is `0.0`
+    ///     - completion: An optional block called once the animation did finish. Default value is nil.
     public func animate(scale: Bool,
                         duration: TimeInterval = 0.35,
                         transformScale: CGFloat = 0.97,

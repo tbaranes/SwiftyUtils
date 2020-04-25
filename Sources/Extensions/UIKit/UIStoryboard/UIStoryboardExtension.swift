@@ -9,12 +9,13 @@ import UIKit
 
 extension UIStoryboard {
 
+    /// Get the main application storyboard.
     public class var main: UIStoryboard? {
         let bundle = Bundle.main
         guard let storyboardName = bundle.object(forInfoDictionaryKey: "UIMainStoryboardFile") as? String else {
             return nil
         }
-        return  UIStoryboard(name: storyboardName, bundle: bundle)
+        return UIStoryboard(name: storyboardName, bundle: bundle)
     }
 
 }

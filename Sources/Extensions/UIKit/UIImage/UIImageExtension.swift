@@ -11,6 +11,9 @@ import UIKit
 
 extension UIImage {
 
+    /// Create an image from a `Color`.
+    /// - Parameter color: The color that will be used to create the image.
+    /// - Returns: The colored image created.
     @objc
     public convenience init(color: UIColor?) {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
@@ -28,6 +31,9 @@ extension UIImage {
 
 extension UIImage {
 
+    /// Fill an image with a color.
+    /// - Parameter color: The color used to fill the image.
+    /// - Returns: The image colorized.
     @objc
     public func filled(with color: UIColor?) -> UIImage {
         guard let color = color else {
@@ -60,6 +66,9 @@ extension UIImage {
 #if !os(watchOS)
 extension UIImage {
 
+    /// Combine this image with another one.
+    /// - Parameter image: The image that will be combined with the current one.
+    /// - Returns: The image resulting from the both image combined together.
     public func combined(with image: UIImage) -> UIImage? {
         let finalSize = CGSize(width: max(size.width, image.size.width),
                                height: max(size.height, image.size.height))
@@ -81,10 +90,12 @@ extension UIImage {
 
 extension UIImage {
 
+    /// Returns the image with a rendering mode set to `original`.
     public var original: UIImage {
         withRenderingMode(.alwaysOriginal)
     }
 
+    /// Returns the image with a rendering mode set to `template`.
     public var template: UIImage {
         withRenderingMode(.alwaysTemplate)
     }

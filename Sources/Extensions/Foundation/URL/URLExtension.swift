@@ -9,7 +9,9 @@ import Foundation
 
 extension URL {
 
-    // swiftlint:disable:next discouraged_optional_collection
+    // swiftlint:disable discouraged_optional_collection
+    /// Extract the query items from an URL.
+    /// - Returns: A dictionary containing all the query items found. If no items found then it will return nil.
     public var queryParameters: [String: String]? {
         guard let components = URLComponents(url: self as URL, resolvingAgainstBaseURL: true),
               let queryItems = components.queryItems else {
@@ -29,6 +31,9 @@ extension URL {
 
 extension URL {
 
+    /// Add the `URLResourceKey.isExcludedFromBackupKey` attribute to the URL.
+    ///
+    /// This key is used to determine whether the resource is excluded from all backups of app data.
     public func addSkipBackupAttribute() throws {
         try (self as NSURL).setResourceValue(true, forKey: URLResourceKey.isExcludedFromBackupKey)
     }

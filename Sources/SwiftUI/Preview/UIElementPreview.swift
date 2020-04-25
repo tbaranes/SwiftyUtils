@@ -10,6 +10,12 @@
 
 import SwiftUI
 
+/// Generate multiple previews configured, the different preview configurations are documented below.
+/// - Note:
+/// - Default sized preview or dedicated preview device
+/// - A preview with Dark Mode enabled
+/// - Each localization of our project applied to a preview
+/// - Different dynamic type sizes applied
 @available(iOS 13.0, tvOS 13.0, watchOSApplicationExtension 6.0, OSX 10.15, *)
 public struct UIElementPreview<Value: View>: View {
 

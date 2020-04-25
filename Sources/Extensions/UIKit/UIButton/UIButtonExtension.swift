@@ -13,10 +13,10 @@ import UIKit
 @available(iOS 9.0, *)
 extension UIButton {
 
-    /// add right image with custom offset to current button
+    /// Add a right image with custom offset to the current button.
     /// - Parameters:
-    ///     - image: `UIImage?`
-    ///     - offset: `CGFloat`
+    ///     - image: The image that will be added to the button.
+    ///     - offset: The trailing margin that will be added between the image and the button's right border.
     public func addRightImage(_ image: UIImage?, offset: CGFloat) {
         setImage(image, for: .normal)
         imageView?.translatesAutoresizingMaskIntoConstraints = false
