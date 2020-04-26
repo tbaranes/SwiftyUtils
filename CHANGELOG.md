@@ -12,6 +12,16 @@ N/A
 
 #### Enhancements
 
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [5.1.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.1.0) (26-04-2020)
+
+#### Enhancements
+
 - Completing missing unit tests
 - Adding documentation to the code
 - Adding `UIElementPreview`, an easy way to generate mulitple SwiftUI previews with different configuration
@@ -90,10 +100,6 @@ var defaultValue: Int
 @UserDefaultsBacked(key: "default_key2")
 var defaultKey2: String?
 ```
-
-#### Bugfixes
-
-N/A
 
 ## [5.0.1](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.0.1) (12-11-2019)
 
