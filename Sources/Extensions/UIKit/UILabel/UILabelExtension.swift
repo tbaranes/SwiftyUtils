@@ -73,4 +73,26 @@ extension UILabel {
 
 }
 
+// MARK: - Fonts
+
+extension UILabel {
+
+    /// Set a dynamic font to the label.
+    /// - Parameters:
+    ///   - style: The UIFont.TextStyle that will set to the label.
+    ///   - traits: Optional symbolic traits applied to the font. Default value is nil.
+    ///   - minimumScaleFactor: The minimum scale factor supported for the label’s text. Default value is 0.8.
+    @available(iOS 11.0, tvOS 11.0, *)
+    public func configureDynamicStyle(_ style: UIFont.TextStyle,
+                                      traits: UIFontDescriptor.SymbolicTraits? = nil,
+                                      minimumScaleFactor: CGFloat = 0.8) {
+        adjustsFontForContentSizeCategory = true
+        adjustsFontSizeToFitWidth = true
+        allowsDefaultTighteningForTruncation = true
+        self.minimumScaleFactor = minimumScaleFactor
+        font = UIFont.dynamicStyle(style, traits: traits)
+    }
+
+}
+
 #endif

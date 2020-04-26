@@ -27,7 +27,7 @@ final class UITextFieldExtensionTests: XCTestCase {
 
 extension UITextFieldExtensionTests {
 
-    @available(iOS 13.0, *)
+    @available(iOS 13.0, tvOS 13.0, *)
     func testSetClearButton() {
         let textField = UITextField()
         let image = UIImage(systemName: "pencil")!
@@ -70,6 +70,23 @@ extension UITextFieldExtensionTests {
                                                                     at: 0,
                                                                     effectiveRange: nil) as? UIColor
         XCTAssertNil(emptyColor)
+    }
+
+}
+
+// MARK: - Fonts
+
+extension UITextFieldExtensionTests {
+
+    @available(iOS 11.0, tvOS 11.0, *)
+    func testConfigureDynamicStyle() {
+        let font = UIFont.dynamicStyle(.body, traits: .traitBold)
+        let textField = UITextField()
+        textField.configureDynamicStyle(.body, traits: .traitBold, adjustToFit: true)
+        XCTAssertTrue(textField.adjustsFontForContentSizeCategory)
+        XCTAssertTrue(textField.adjustsFontSizeToFitWidth)
+        XCTAssertEqual(textField.font, font)
+
     }
 
 }

@@ -300,6 +300,18 @@
 		E27B7DC62454776E00EF79C7 /* NSAttributedStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7DC52454776E00EF79C7 /* NSAttributedStringExtensionTests.swift */; };
 		E27B7DC72454776E00EF79C7 /* NSAttributedStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7DC52454776E00EF79C7 /* NSAttributedStringExtensionTests.swift */; };
 		E27B7DC82454776E00EF79C7 /* NSAttributedStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7DC52454776E00EF79C7 /* NSAttributedStringExtensionTests.swift */; };
+		E27B7E192455AF1900EF79C7 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7E182455AF1900EF79C7 /* UIFontExtension.swift */; };
+		E27B7E1C2455B45F00EF79C7 /* UIFontExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7E1B2455B45F00EF79C7 /* UIFontExtensionTests.swift */; };
+		E27B7E222455B8EB00EF79C7 /* UITextViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7E212455B8EB00EF79C7 /* UITextViewExtensionTests.swift */; };
+		E27B7E232455B8F000EF79C7 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7E1E2455B86A00EF79C7 /* UITextViewExtension.swift */; };
+		E27B7E252455BB4C00EF79C7 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7E182455AF1900EF79C7 /* UIFontExtension.swift */; };
+		E27B7E272455BB6000EF79C7 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7E1E2455B86A00EF79C7 /* UITextViewExtension.swift */; };
+		E27B7E282455BB7B00EF79C7 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7E1E2455B86A00EF79C7 /* UITextViewExtension.swift */; };
+		E27B7E292455BB7C00EF79C7 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7E1E2455B86A00EF79C7 /* UITextViewExtension.swift */; };
+		E27B7E2A2455BB8000EF79C7 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7E182455AF1900EF79C7 /* UIFontExtension.swift */; };
+		E27B7E2B2455BB8100EF79C7 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7E182455AF1900EF79C7 /* UIFontExtension.swift */; };
+		E27B7E2E2455BBB400EF79C7 /* UILabelExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728461E9A36F100DE844E /* UILabelExtensionTests.swift */; };
+		E27B7E2F2455BBBA00EF79C7 /* UITextFieldExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29DD90B1E9CD88E0076CFD7 /* UITextFieldExtensionTests.swift */; };
 		E29DD90C1E9CD88E0076CFD7 /* UITextFieldExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29DD90B1E9CD88E0076CFD7 /* UITextFieldExtensionTests.swift */; };
 		E2E8DDEB1E9F79C900BF3FE6 /* UIImageExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E8DDE91E9F790600BF3FE6 /* UIImageExtensionTests.swift */; };
 /* End PBXBuildFile section */
@@ -424,6 +436,10 @@
 		E27B7DBB245475AA00EF79C7 /* UICollectionViewCellExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtensionTests.swift; sourceTree = "<group>"; };
 		E27B7DBF2454771600EF79C7 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		E27B7DC52454776E00EF79C7 /* NSAttributedStringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensionTests.swift; sourceTree = "<group>"; };
+		E27B7E182455AF1900EF79C7 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		E27B7E1B2455B45F00EF79C7 /* UIFontExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensionTests.swift; sourceTree = "<group>"; };
+		E27B7E1E2455B86A00EF79C7 /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		E27B7E212455B8EB00EF79C7 /* UITextViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtensionTests.swift; sourceTree = "<group>"; };
 		E29DD9041E9CC8BD0076CFD7 /* UIAlertControllerExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensionTests.swift; sourceTree = "<group>"; };
 		E29DD9071E9CD5660076CFD7 /* UISwitchExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchExtensionTests.swift; sourceTree = "<group>"; };
 		E29DD90B1E9CD88E0076CFD7 /* UITextFieldExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensionTests.swift; sourceTree = "<group>"; };
@@ -567,12 +583,14 @@
 				E27B7DAB2454744C00EF79C7 /* UIButton */,
 				E27B7DB72454754C00EF79C7 /* UICollectionViewCell */,
 				E27B7D8024546F1200EF79C7 /* UIDevice */,
+				E27B7E172455AF0900EF79C7 /* UIFont */,
 				E27B7D8124546F1800EF79C7 /* UIImage */,
 				E27B7D8224546F2000EF79C7 /* UILabel */,
 				E27B7D8324546F2600EF79C7 /* UIScreen */,
 				E27B7D8424546F2D00EF79C7 /* UIStoryboard */,
 				E27B7D8524546F3300EF79C7 /* UISwitch */,
 				E27B7D8624546F3900EF79C7 /* UITextField */,
+				E27B7E1D2455B85F00EF79C7 /* UITextView */,
 				E27B7D8824546F4D00EF79C7 /* UIView */,
 				E27B7D8724546F4100EF79C7 /* UIViewController */,
 			);
@@ -623,10 +641,12 @@
 		E26728441E9A36F100DE844E /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E27B7E202455B8CF00EF79C7 /* UITextView */,
 				E27B7DA1245470D500EF79C7 /* UIAlertController */,
 				E27B7DB1245474A800EF79C7 /* UIButton */,
 				E27B7DBA2454759E00EF79C7 /* UICollectionViewCell */,
 				E27B7DA2245470DD00EF79C7 /* UIDevice */,
+				E27B7E1A2455B44F00EF79C7 /* UIFont */,
 				E27B7DA3245470E300EF79C7 /* UIImage */,
 				E27B7DA4245470EA00EF79C7 /* UILabel */,
 				E27B7DA5245470F000EF79C7 /* UIScreen */,
@@ -1386,6 +1406,38 @@
 			path = NSAttributedString;
 			sourceTree = "<group>";
 		};
+		E27B7E172455AF0900EF79C7 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				E27B7E182455AF1900EF79C7 /* UIFontExtension.swift */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
+		E27B7E1A2455B44F00EF79C7 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				E27B7E1B2455B45F00EF79C7 /* UIFontExtensionTests.swift */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
+		E27B7E1D2455B85F00EF79C7 /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				E27B7E1E2455B86A00EF79C7 /* UITextViewExtension.swift */,
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
+		E27B7E202455B8CF00EF79C7 /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				E27B7E212455B8EB00EF79C7 /* UITextViewExtensionTests.swift */,
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1730,6 +1782,8 @@
 				E26CBEFB237B618E00ECFCE7 /* UIScreenExtension.swift in Sources */,
 				E267291E1E9A38FF00DE844E /* DateExtension.swift in Sources */,
 				E26729281E9A38FF00DE844E /* StringExtension.swift in Sources */,
+				E27B7E2B2455BB8100EF79C7 /* UIFontExtension.swift in Sources */,
+				E27B7E292455BB7C00EF79C7 /* UITextViewExtension.swift in Sources */,
 				E26729471E9A390C00DE844E /* Then.swift in Sources */,
 				E23ED9C31E9A526D0059BED7 /* CGSizeExtension.swift in Sources */,
 				E26729251E9A38FF00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
@@ -1782,6 +1836,7 @@
 				E26729141E9A38FE00DE844E /* TimerExtension.swift in Sources */,
 				E26729091E9A38FE00DE844E /* DateExtension.swift in Sources */,
 				E27B7D3024543C0700EF79C7 /* UserDefaultsBacked.swift in Sources */,
+				E27B7E252455BB4C00EF79C7 /* UIFontExtension.swift in Sources */,
 				E26729131E9A38FE00DE844E /* StringExtension.swift in Sources */,
 				E26729421E9A390C00DE844E /* Then.swift in Sources */,
 				E26729101E9A38FE00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
@@ -1791,6 +1846,7 @@
 				E27B7D2A24542A8F00EF79C7 /* UIElementPreview.swift in Sources */,
 				E267290D1E9A38FE00DE844E /* IntExtension.swift in Sources */,
 				E26729161E9A38FE00DE844E /* UserDefaultsExtension.swift in Sources */,
+				E27B7E272455BB6000EF79C7 /* UITextViewExtension.swift in Sources */,
 				E26729031E9A38FE00DE844E /* BundleExtension.swift in Sources */,
 				E26728F11E9A38F700DE844E /* UIStoryboardExtension.swift in Sources */,
 				E26729331E9A390800DE844E /* UITesting.swift in Sources */,
@@ -1864,6 +1920,7 @@
 				E26728C01E9A37F600DE844E /* IntExtension.swift in Sources */,
 				E26728B81E9A37F600DE844E /* CGRectExtensions.swift in Sources */,
 				33D2AFC8221538E600CBC975 /* DataExtension.swift in Sources */,
+				E27B7E2A2455BB8000EF79C7 /* UIFontExtension.swift in Sources */,
 				E26728C31E9A37F600DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
 				E26728CC1E9A37FD00DE844E /* Occupiable.swift in Sources */,
 				E26728B51E9A37F600DE844E /* ArrayExtension.swift in Sources */,
@@ -1871,6 +1928,7 @@
 				E26728C21E9A37F600DE844E /* NSLayoutConstraintsExtension.swift in Sources */,
 				E26728C51E9A37F600DE844E /* ReusableFormatters.swift in Sources */,
 				E26CBEEF237B618D00ECFCE7 /* UIStoryboardExtension.swift in Sources */,
+				E27B7E282455BB7B00EF79C7 /* UITextViewExtension.swift in Sources */,
 				E26728C61E9A37F600DE844E /* StringExtension.swift in Sources */,
 				E26728C71E9A37F600DE844E /* TimerExtension.swift in Sources */,
 				E26CBEED237B618D00ECFCE7 /* UILabelExtension.swift in Sources */,
@@ -1887,6 +1945,7 @@
 				E27B7DC62454776E00EF79C7 /* NSAttributedStringExtensionTests.swift in Sources */,
 				E27B7D59245466E700EF79C7 /* BundleExtensionTests.swift in Sources */,
 				E267289F1E9A37D600DE844E /* CGFloatLiteralTests.swift in Sources */,
+				E27B7E1C2455B45F00EF79C7 /* UIFontExtensionTests.swift in Sources */,
 				E23ED9D11E9A55FF0059BED7 /* CGSizeExtensionTests.swift in Sources */,
 				E26728A41E9A37D600DE844E /* DictionaryExtensionTests.swift in Sources */,
 				E27B7D552454666200EF79C7 /* UIAlertControllerExtensionTests.swift in Sources */,
@@ -1894,6 +1953,7 @@
 				E27B7D4D24545FEE00EF79C7 /* ReusableFormattersTests.swift in Sources */,
 				E27B7D3824543E3600EF79C7 /* UserDefaultsBackedTests.swift in Sources */,
 				E26728A31E9A37D600DE844E /* DateExtensionTests.swift in Sources */,
+				E27B7E222455B8EB00EF79C7 /* UITextViewExtensionTests.swift in Sources */,
 				E26728B11E9A37DE00DE844E /* ThenTest.swift in Sources */,
 				E267289C1E9A37D200DE844E /* UILabelExtensionTests.swift in Sources */,
 				E26728B01E9A37DE00DE844E /* OccupiableTests.swift in Sources */,
@@ -1939,6 +1999,7 @@
 				E27B7DC82454776E00EF79C7 /* NSAttributedStringExtensionTests.swift in Sources */,
 				E26729651E9A3B5900DE844E /* OccupiableTests.swift in Sources */,
 				E26729671E9A3B5D00DE844E /* UITestingTests.swift in Sources */,
+				E27B7E2F2455BBBA00EF79C7 /* UITextFieldExtensionTests.swift in Sources */,
 				E26729521E9A3B4500DE844E /* CGRectExtensionTest.swift in Sources */,
 				E27B7D432454444800EF79C7 /* AnyOptionalTests.swift in Sources */,
 				E267295A1E9A3B4500DE844E /* NSLayoutConstraintExtensionTests.swift in Sources */,
@@ -1951,6 +2012,7 @@
 				E267295C1E9A3B4500DE844E /* StringExtensionTests.swift in Sources */,
 				E27B7D572454666400EF79C7 /* UIAlertControllerExtensionTests.swift in Sources */,
 				E27B7D3A24543E3800EF79C7 /* UserDefaultsBackedTests.swift in Sources */,
+				E27B7E2E2455BBB400EF79C7 /* UILabelExtensionTests.swift in Sources */,
 				E27B7D4B24545D8000EF79C7 /* UIScreenExtensionTests.swift in Sources */,
 				E26729581E9A3B4500DE844E /* FileManagerTests.swift in Sources */,
 				E23ED9CB1E9A53A10059BED7 /* CGPointExtensionTests.swift in Sources */,
@@ -2029,6 +2091,7 @@
 				E26728981E9A37AE00DE844E /* UITesting.swift in Sources */,
 				E27B7D3C245443D900EF79C7 /* AnyOptional.swift in Sources */,
 				E26728721E9A379900DE844E /* UIStoryboardExtension.swift in Sources */,
+				E27B7E232455B8F000EF79C7 /* UITextViewExtension.swift in Sources */,
 				E26CBEE9237B618C00ECFCE7 /* NSViewExtension.swift in Sources */,
 				E267286E1E9A379900DE844E /* UIDeviceExtension.swift in Sources */,
 				E26728741E9A379900DE844E /* UITextFieldExtension.swift in Sources */,
@@ -2042,6 +2105,7 @@
 				E26728901E9A37A600DE844E /* Then.swift in Sources */,
 				E267286F1E9A379900DE844E /* UIImageExtension.swift in Sources */,
 				E26728811E9A379F00DE844E /* FileManagerExtension.swift in Sources */,
+				E27B7E192455AF1900EF79C7 /* UIFontExtension.swift in Sources */,
 				33D2AFC2221514AF00CBC975 /* DataExtension.swift in Sources */,
 				E26728871E9A379F00DE844E /* ReusableFormatters.swift in Sources */,
 				E26728991E9A37AE00DE844E /* UnitTesting.swift in Sources */,

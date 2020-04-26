@@ -50,4 +50,25 @@ extension UITextField {
 
 }
 
+// MARK: - Fonts
+
+extension UITextField {
+
+    /// Set a dynamic font to the label.
+    /// - Parameters:
+    ///   - style: The UIFont.TextStyle that will set to the label.
+    ///   - traits: Optional symbolic traits applied to the font. Default value is nil.
+    ///   - adjustToFit: A Boolean value indicating whether the font size should be reduced
+    ///                  in order to fit the text string into the text field’s bounding rectangle.
+    @available(iOS 11.0, tvOS 11.0, *)
+    public func configureDynamicStyle(_ style: UIFont.TextStyle,
+                                      traits: UIFontDescriptor.SymbolicTraits? = nil,
+                                      adjustToFit: Bool = true) {
+        adjustsFontForContentSizeCategory = true
+        adjustsFontSizeToFitWidth = adjustToFit
+        font = UIFont.dynamicStyle(style, traits: traits)
+    }
+
+}
+
 #endif
