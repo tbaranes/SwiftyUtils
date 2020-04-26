@@ -134,7 +134,9 @@ extension UIView {
     /// Add constraints to its superview.
     /// - Parameters:
     ///   - edges: The edges where a new constraint will be added. Default value is `.all`.
-    ///   - insets: The constant that will be applied to the new constraint. For example, the edge `.top` constant will be equal to the inset `.top`. Default value is `.zero`.
+    ///   - insets: The constant that will be applied to the new constraint.
+    ///             For example, the edge `.top` constant will be equal to the inset `.top`.
+    ///             Default value is `.zero`.
     public func addConstraints(to edges: UIRectEdge = .all, insets: UIEdgeInsets = .zero) {
         guard let superview = superview else {
             fatalError("No superview found, add your view in another before adding constraints.")

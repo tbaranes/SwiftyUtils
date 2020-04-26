@@ -24,8 +24,9 @@ final class UILabelExtensionTests: XCTestCase {
 
 }
 
-// MARK: - Tests
+// MARK: - Truncatated
 
+#if os(iOS)
 extension UILabelExtensionTests {
 
     func testIsTruncated() {
@@ -47,6 +48,25 @@ extension UILabelExtensionTests {
 
         label.setText(":)", truncatedText: ".")
         XCTAssertNotEqual(label.text?.last, ".")
+    }
+
+}
+#endif
+
+// MARK: - Fonts
+
+extension UILabelExtensionTests {
+
+    @available(iOS 11.0, tvOS 11.0, *)
+    func testConfigureDynamicStyle() {
+        let font = UIFont.dynamicStyle(.body, traits: .traitBold)
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 40))
+        label.configureDynamicStyle(.body, traits: .traitBold, minimumScaleFactor: 0.5)
+        XCTAssertTrue(label.adjustsFontForContentSizeCategory)
+        XCTAssertTrue(label.adjustsFontSizeToFitWidth)
+        XCTAssertTrue(label.allowsDefaultTighteningForTruncation)
+        XCTAssertEqual(label.font, font)
+
     }
 
 }

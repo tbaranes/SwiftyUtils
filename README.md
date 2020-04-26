@@ -57,12 +57,14 @@ Check out the repository to find examples / tests for each feature.
 - [UIButton](#uibutton-extension)
 - [UICollectionViewCell](#uicollectionviewcell-extension)
 - [UIDevice](#uidevice-extension)
+- [UIFont](#uifont-extension)
 - [UIImage](#uiimage-extension)
 - [UILabel](#uilabel-extension)
 - [UIScreen](#uiscreen-extension)
 - [UIStoryboard](#uistoryboard-extension)
 - [UISwitch](#uiswitch-extension)
 - [UITextFied](#uitextfield-extension)
+- [UITextView](#uitextview-extension)
 - [UIView](#uiview-extension)
 - [UIViewController](#uiviewcontroller-extension)
 
@@ -1080,6 +1082,14 @@ class MyCollectionViewCell: UICollectionViewCell {
 }
 ```
 
+### UIFont extension
+
+Obtains a font that scale to support Dynamic Type:
+
+```swift
+let font = UIFont.dynamicStyle(.body, traits: .traitsBold)
+```
+
 ### UIDevice extension
 
 Access to your device information:
@@ -1141,6 +1151,12 @@ image = image.original // imageWithRenderingMode(.alwaysOriginal)
 ```
 
 ### UILabel extension
+
+Configure a dynamic text style to the label:
+
+```swift
+label.configureDynamicStyle(.body, traits: .traitBold)
+```
 
 Detect if a label text is truncated:
 
@@ -1219,6 +1235,12 @@ aSwitch.toggle(animated: false)
 
 ### UITextField extension
 
+Configure a dynamic text style to the textfield:
+
+```swift
+textField.configureDynamicStyle(.body, traits: .traitBold)
+```
+
 Modify clear button image:
 
 ```swift
@@ -1233,6 +1255,14 @@ Modify placeholder's color:
 let textField = UITextField()
 // set `placeholder` or `attributedPlaceholder`
 textField.setPlaceHolderTextColor(.blue)
+```
+
+### UITextView extension
+
+Configure a dynamic text style to the textfield:
+
+```swift
+textView.configureDynamicStyle(.body, traits: .traitBold)
 ```
 
 ### UIView extension

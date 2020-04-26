@@ -12,7 +12,29 @@ N/A
 
 #### Enhancements
 
-N/A
+- UIFontExtension:
+
+```swift
+class func dynamicStyle(_ style: UIFont.TextStyle, traits: UIFontDescriptor.SymbolicTraits?, sizeCategory: UIContentSizeCategory = .large) -> UIFont
+```
+
+- UILabelExtension:
+
+```swift
+func configureDynamicStyle(_ style: UIFont.TextStyle, traits: UIFontDescriptor.SymbolicTraits? = nil, minimumScaleFactor: CGFloat = 0.8)
+```
+
+- UITextFieldExtension:
+
+```swift
+func configureDynamicStyle(_ style: UIFont.TextStyle, traits: UIFontDescriptor.SymbolicTraits? = nil, adjustToFit: Bool = true)
+```
+
+- UITextViewExtension:
+
+```swift
+func configureDynamicStyle(_ style: UIFont.TextStyle, traits: UIFontDescriptor.SymbolicTraits? = nil)
+```
 
 #### Bugfixes
 
@@ -39,7 +61,7 @@ func toData(options: JSONSerialization.WritingOptions = []) throws -> Data?
 
 - DataExtension:
 
-```
+```swift
 func toDictionary(options: JSONSerialization.ReadingOptions = []) throws -> [String: Any]?
 ```
 
@@ -51,7 +73,7 @@ func isAttributeActivated(_ attribute: NSAttributedString.Key, appliedOn text: S
 
 - UIApplicationExtension:
 
-```
+```swift
 func openAppSettings()
 func openAppStoreReviewPage(_ url: URL)
 ```
@@ -64,7 +86,7 @@ func addRightImage(_ image: UIImage?, offset: CGFloat)
 
 - UICollectionViewCellExtension:
 
-```
+```swift
 func applyCornerRadius(_ radius: CGFloat)
 func animate(scale: Bool, duration: TimeInterval = 0.35, transformScale: CGFloat = 0.97, damping: CGFloat = 0.7, options: UIView.AnimationOptions = [], delay: TimeInterval = 0.0, velocity: CGFloat = 0.0, completion: ((Bool) -> Void)? = nil)
 ```
@@ -81,12 +103,7 @@ func applyCornerRadius(_ radius: CGFloat, maskedCorners: CACornerMask [.layerMax
 
 ```swift
 var isModal: Bool
-func addChildController(_ controller: UIViewController,
-                        to subview: UIView,
-                        animated: Bool = true,
-                        duration: TimeInterval = 0.35,
-                        options: UIView.AnimationOptions = [.curveEaseInOut,
-                                                            .transitionCrossDissolve])
+func addChildController(_ controller: UIViewController, to subview: UIView, animated: Bool = true, duration: TimeInterval = 0.35, options: UIView.AnimationOptions = [.curveEaseInOut, .transitionCrossDissolve])
 func addChild(_ child: UIViewController, in containerView: UIView)
 func removeChildController(_ child: UIViewController)
 func openSafariVC(withURL url: URL, delegate: SFSafariViewControllerDelegate, tintColor: UIColor = .black, barTintColor: UIColor = .white, barCollapsing: Bool = true)
@@ -94,7 +111,7 @@ func openSafariVC(withURL url: URL, delegate: SFSafariViewControllerDelegate, ti
 
 - PropertyWrappers:
 
-```
+```swift
 @UserDefaultsBacked(key: "defaults_key", defaultValue: 20)
 var defaultValue: Int
 @UserDefaultsBacked(key: "default_key2")

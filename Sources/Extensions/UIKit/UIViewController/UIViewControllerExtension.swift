@@ -12,7 +12,8 @@ import UIKit
 extension UIViewController {
 
     /// Remove all the previous controllers from the navigation.
-    /// - Parameter animated: If false, replace the view controllers without any animations, otherwise it will be animated.
+    /// - Parameter animated: If false, replace the view controllers without any animations,
+    ///                       otherwise it will be animated.
     public func removePreviousControllers(animated: Bool = false) {
         navigationController?.setViewControllers([self], animated: animated)
     }
