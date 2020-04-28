@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
 s.name            	= "SwiftyUtils"
-s.version          	= "5.1.0"
+s.version          	= "5.2.0"
 s.summary          	= "Swifty utils regroups all the boilerplate code reusable in each project."
 s.description      	= "Swifty utils regroups all the boilerplate code reusable in each project, available for iOS, OSX and tvOS"
 s.homepage         	= "https://github.com/tbaranes/SwiftyUtils"
@@ -21,14 +21,16 @@ s.watchos.deployment_target = '2.0'
 
 s.requires_arc 	   			= true
 s.source_files				= 'Sources/*.swift', 
-							  'Sources/Extensions/*.swift',
+							  'Sources/Extensions/CoreGraphics/**/*.swift',
+							  'Sources/Extensions/Foundation/**/*.swift',
+							  'Sources/Extensions/Swift/**/*.swift',
+							  'Sources/Others/*.swift',
+							  'Sources/PropertyWrappers/*.swift',
 							  'Sources/Protocols/*.swift',
-							  'Sources/Others/*.swift'
+							  'Sources/SwiftUI/**/*.swift'
 
-s.ios.source_files			= 'Sources/Extensions/UIKit/*.swift',
-							  'Sources/Others/UIKit/*.swift',
-
-s.osx.source_files          = 'Sources/AppKit/*.swift',
+s.ios.source_files			= 'Sources/Extensions/UIKit/**/*.swift'
+s.osx.source_files          = 'Sources/AppKit/**/*.swift',
                               'Sources/Others/macOS/*.swift'
 
 
