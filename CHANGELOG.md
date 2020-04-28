@@ -12,6 +12,16 @@ N/A
 
 #### Enhancements
 
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [5.2.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.2.0) (28-04-2020)
+
+#### Enhancements
+
 - UIFontExtension:
 
 ```swift
@@ -38,7 +48,7 @@ func configureDynamicStyle(_ style: UIFont.TextStyle, traits: UIFontDescriptor.S
 
 #### Bugfixes
 
-N/A
+- Fixed missing swift sources added to the targets when using CocoaPods to embed SwiftyUtils
 
 ## [5.1.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.1.0) (26-04-2020)
 
