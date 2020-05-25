@@ -49,6 +49,9 @@ Check out the repository to find examples / tests for each feature.
 
 - [UIElementPreview](#uielementpreview)
 
+**SwiftUI Extension:**
+
+- [BindingExtension](#binding-extension)
 
 **UIKit Extensions:**
 
@@ -964,6 +967,25 @@ struct ContentView_Previews: PreviewProvider {
                          previewDevices: ["iPhone SE"], // default is iPhone SE and iPhone XS Max. Note: it won't be used if `previewLayout` is `.sizeThatFits`
                          dynamicTypeSizes:[.extraSmall] // default is: .extraSmall, .large, .extraExtraExtraLarge
                         )
+    }
+}
+```
+
+## SwiftUI Extensions
+
+### Binding extension
+
+Pass an interactive value that’ll act as a preview stand-in for a binding:
+
+```swift
+struct MyButton: View {
+    @Binding var isSelected: Bool
+    // ...
+}
+
+struct MyButton_Previews: PreviewProvider {
+    static var previews: some View {
+        MyButton(isSelected: .mock(true))
     }
 }
 ```

@@ -18,6 +18,12 @@ N/A
 var preview: some View
 ```
 
+- BindingExtension:
+
+```swift
+static func mock(_ value: Value) -> Self {
+```
+
 #### Bugfixes
 
 N/A
