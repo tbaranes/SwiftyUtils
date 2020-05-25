@@ -7,6 +7,10 @@
 
 import UIKit
 
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
+
 // MARK: - Navigation
 
 extension UIViewController {
@@ -105,6 +109,29 @@ extension UIViewController {
         child.willMove(toParent: nil)
         child.view.removeFromSuperview()
         child.removeFromParent()
+    }
+
+}
+
+@available(iOS 13.0, tvOS 13.0, *)
+extension UIViewController {
+
+    private struct Preview: UIViewControllerRepresentable {
+        var viewController: UIViewController
+
+        func makeUIViewController(context: Context) -> UIViewController {
+            viewController
+        }
+
+        func updateUIViewController(_ uiViewController: UIViewController,
+                                    context: Context) {
+
+        }
+    }
+
+    ///  Generate a Xcode preview for any view controllers
+    public var preview: some View {
+        Preview(viewController: self)
     }
 
 }
