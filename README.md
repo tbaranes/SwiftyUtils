@@ -1310,6 +1310,17 @@ aView.addConstraints(to: [.top, .left], insets: UIEdgeInsets(top: 10, left: 20, 
 
 ### UIViewController extension
 
+Generate a Xcode preview for any view controllers:
+
+```swift
+@available(iOS 13, *)
+struct MyViewPreview: PreviewProvider {
+    static var previews: some View {
+        MyViewController().preview
+    }
+}
+```
+
 Reset the navigation stack by deleting previous view controllers:
 
 ```swift

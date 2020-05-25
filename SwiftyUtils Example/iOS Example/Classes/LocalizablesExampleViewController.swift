@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class LocalizablesExampleViewController: UIViewController {
 

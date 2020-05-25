@@ -12,7 +12,11 @@ N/A
 
 #### Enhancements
 
-N/A
+- UIViewControllerExtension:
+
+```swift
+var preview: some View
+```
 
 #### Bugfixes
 
