@@ -30,6 +30,10 @@
 		E23ED9D11E9A55FF0059BED7 /* CGSizeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9CC1E9A55F40059BED7 /* CGSizeExtensionTests.swift */; };
 		E23ED9D21E9A56010059BED7 /* CGSizeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9CC1E9A55F40059BED7 /* CGSizeExtensionTests.swift */; };
 		E23ED9D31E9A56010059BED7 /* CGSizeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9CC1E9A55F40059BED7 /* CGSizeExtensionTests.swift */; };
+		E25151FD247BEB15004ACEF0 /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25151FC247BEB15004ACEF0 /* BindingExtension.swift */; };
+		E25151FE247BEB15004ACEF0 /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25151FC247BEB15004ACEF0 /* BindingExtension.swift */; };
+		E25151FF247BEB15004ACEF0 /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25151FC247BEB15004ACEF0 /* BindingExtension.swift */; };
+		E2515200247BEB15004ACEF0 /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25151FC247BEB15004ACEF0 /* BindingExtension.swift */; };
 		E26722861E9A304800DE844E /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E26722811E9A304800DE844E /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E26722871E9A304800DE844E /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E26722811E9A304800DE844E /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E26722881E9A304800DE844E /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E26722811E9A304800DE844E /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -350,6 +354,7 @@
 		E23ED9BF1E9A526D0059BED7 /* CGSizeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
 		E23ED9C41E9A534E0059BED7 /* CGPointExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointExtensionTests.swift; sourceTree = "<group>"; };
 		E23ED9CC1E9A55F40059BED7 /* CGSizeExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeExtensionTests.swift; sourceTree = "<group>"; };
+		E25151FC247BEB15004ACEF0 /* BindingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingExtension.swift; sourceTree = "<group>"; };
 		E26722801E9A304800DE844E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E26722811E9A304800DE844E /* SwiftyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyUtils.h; sourceTree = "<group>"; };
 		E26724231E9A315B00DE844E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -519,6 +524,14 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		E25151FB247BEB15004ACEF0 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				E25151FC247BEB15004ACEF0 /* BindingExtension.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		E267227F1E9A304800DE844E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +573,7 @@
 			children = (
 				E27B7D5E24546B1200EF79C7 /* Foundation */,
 				E27B7D7B24546E9F00EF79C7 /* Swift */,
+				E25151FB247BEB15004ACEF0 /* SwiftUI */,
 				E27B7D9D2454707C00EF79C7 /* CoreGraphics */,
 				E26727CC1E9A362600DE844E /* AppKit */,
 				E26727E11E9A362600DE844E /* UIKit */,
@@ -1786,6 +1800,7 @@
 				E27B7E292455BB7C00EF79C7 /* UITextViewExtension.swift in Sources */,
 				E26729471E9A390C00DE844E /* Then.swift in Sources */,
 				E23ED9C31E9A526D0059BED7 /* CGSizeExtension.swift in Sources */,
+				E2515200247BEB15004ACEF0 /* BindingExtension.swift in Sources */,
 				E26729251E9A38FF00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
 				E26729261E9A38FF00DE844E /* NSRangeExtension.swift in Sources */,
 				E267291C1E9A38FF00DE844E /* ColorExtension.swift in Sources */,
@@ -1878,6 +1893,7 @@
 				E27B7DAE2454747200EF79C7 /* UIButtonExtension.swift in Sources */,
 				E26729151E9A38FE00DE844E /* URLExtension.swift in Sources */,
 				E26728EA1E9A38F700DE844E /* NSObjectExtension.swift in Sources */,
+				E25151FF247BEB15004ACEF0 /* BindingExtension.swift in Sources */,
 				E26729021E9A38FE00DE844E /* ArrayExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1933,6 +1949,7 @@
 				E26728C71E9A37F600DE844E /* TimerExtension.swift in Sources */,
 				E26CBEED237B618D00ECFCE7 /* UILabelExtension.swift in Sources */,
 				E26728BA1E9A37F600DE844E /* ColorExtension.swift in Sources */,
+				E25151FE247BEB15004ACEF0 /* BindingExtension.swift in Sources */,
 				E26728B61E9A37F600DE844E /* BundleExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2115,6 +2132,7 @@
 				E26728701E9A379900DE844E /* UILabelExtension.swift in Sources */,
 				E26728751E9A379900DE844E /* UIViewControllerExtension.swift in Sources */,
 				E27B7DC02454771600EF79C7 /* NSAttributedStringExtension.swift in Sources */,
+				E25151FD247BEB15004ACEF0 /* BindingExtension.swift in Sources */,
 				E27B7DAD2454745600EF79C7 /* UIButtonExtension.swift in Sources */,
 				E267288A1E9A379F00DE844E /* URLExtension.swift in Sources */,
 				E267286B1E9A379900DE844E /* NSObjectExtension.swift in Sources */,
