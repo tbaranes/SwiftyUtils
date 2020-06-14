@@ -32,6 +32,7 @@ Check out the repository to find examples / tests for each feature.
  - [Double](#double-extension)
  - [FileManager](#filemanager-extension)
  - [Int](#int-extension)
+ - [MutableCollection](#mutablecollection-extension)
  - [NotificationCenter](#notificationcenter-extension)
  - [NSAttributedString](#nsattributedstring-extension)
  - [NSLayoutConstraint](#nslayoutconstraint-extension)
@@ -588,6 +589,16 @@ Formatted value with the locale currency:
 
 ```
 print(10.formattedPrice) // "$10.00"
+```
+
+### MutableCollection extension
+
+Sorts the mutable collection in place using `KeyPath`:
+
+```swift
+var articles = [Article(title: "B"), Article(title: "C"), Article(title: "A")]
+articles.sort(by: \.title) // [A, B, C]
+articles.sort(by: \.title, order: >) // [C, B, A]
 ```
 
 ### NotificationCenter extension
