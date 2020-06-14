@@ -39,6 +39,7 @@ Check out the repository to find examples / tests for each feature.
  - [NSObject](#nsobject-extension)
  - [NSRange](#nsrange-extension)
  - [ReusableFormatters](#reusableformatters)
+ - [Sequence](#sequence-extension)
  - [String](#string-extension)
  - [Timer](#timer-extension)
  - [URL](#url-extension)
@@ -766,6 +767,16 @@ SUDateComponentsFormatter.shared
 SUDateIntervalFormatter.shared
 SUEnergyFormatter.shared
 SUMassFormatter.shared
+```
+
+### Sequence extension
+
+Sort a sequence using `keyPath`:
+
+```swift
+let articles = [Article(title: "B"), Article(title: "C"), Article(title: "A")]
+var sortedArticles = articles.sorted(by: \.title) // [A, B, C]
+sortedArticles = articles.sorted(by: \.title, order: >) // [C, B, A]
 ```
 
 ### String extension

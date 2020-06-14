@@ -24,6 +24,12 @@ var preview: some View
 static func mock(_ value: Value) -> Self {
 ```
 
+- SequenceExtension:
+
+```swift
+func sorted<T: Comparable>(by keyPath: KeyPath<Element, T>, order: (T, T) -> Bool = (<)) -> [Element]
+```
+
 #### Bugfixes
 
 N/A
