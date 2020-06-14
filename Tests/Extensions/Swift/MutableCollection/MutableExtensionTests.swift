@@ -1,5 +1,5 @@
 //
-//  SequenceExtensionTests.swift
+//  MutableExtensionTests.swift
 //  SwiftyUtils
 //
 //  Created by Tom Baranes on 14/06/2020.
@@ -9,7 +9,7 @@
 import XCTest
 import SwiftyUtils
 
-final class SequenceExtensionTests: XCTestCase {
+final class MutableExtensionTests: XCTestCase {
 
     // MARK: - Life cycle
 
@@ -25,7 +25,7 @@ final class SequenceExtensionTests: XCTestCase {
 
 // MARK: - KeyPath
 
-extension SequenceExtensionTests {
+extension MutableExtensionTests {
 
     private struct Author: Equatable {
         let name: String
@@ -35,23 +35,26 @@ extension SequenceExtensionTests {
         let romain = Author(name: "Romain")
         let enrique = Author(name: "Enrique")
         let amelie = Author(name: "Amelie")
-        let songs = [amelie, romain, enrique]
-        XCTAssertEqual(songs.sorted(by: \.name), [amelie, enrique, romain])
+        var songs = [amelie, romain, enrique]
+        songs.sort(by: \.name)
+        XCTAssertEqual(songs, [amelie, enrique, romain])
     }
 
     func testSortedKeyPath_ascendingOrder() {
         let romain = Author(name: "Romain")
         let enrique = Author(name: "Enrique")
         let amelie = Author(name: "Amelie")
-        let songs = [amelie, romain, enrique]
-        XCTAssertEqual(songs.sorted(by: \.name, order: <), [amelie, enrique, romain])
+        var songs = [amelie, romain, enrique]
+        songs.sort(by: \.name, order: <)
+        XCTAssertEqual(songs, [amelie, enrique, romain])
     }
 
     func testSortedKeyPath_descendingOrder() {
         let romain = Author(name: "Romain")
         let enrique = Author(name: "Enrique")
         let amelie = Author(name: "Amelie")
-        let songs = [amelie, romain, enrique]
-        XCTAssertEqual(songs.sorted(by: \.name, order: >), [romain, enrique, amelie])
+        var songs = [amelie, romain, enrique]
+        songs.sort(by: \.name, order: >)
+        XCTAssertEqual(songs, [romain, enrique, amelie])
     }
 }
