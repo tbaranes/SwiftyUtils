@@ -36,11 +36,34 @@ mutating func sort<T: Comparable>(by keyPath: KeyPath<Element, T>, order: (T, T)
 func sorted<T: Comparable>(by keyPath: KeyPath<Element, T>, order: (T, T) -> Bool = (<)) -> [Element]
 ```
 
+- UITableViewExtension:
+
+```swift
+func register<T: UITableViewCell>(cellType: T.Type) where T: Reusable & NibLoadable
+func register<T: UITableViewCell>(cellType: T.Type) where T: Reusable
+func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath, cellType: T.Type = T.self) -> T where T: Reusable
+func register<T: UITableViewHeaderFooterView>(headerFooterViewType: T.Type) where T: Reusable & NibLoadable
+func register<T: UITableViewHeaderFooterView>(headerFooterViewType: T.Type) where T: Reusable
+func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>(_ viewType: T.Type = T.self) -> T? where T: Reusable
+```
+
+- UICollectionViewCellExtension:
+
+```swift
+func register<T: UICollectionViewCell>(cellType: T.Type) where T: Reusable & NibLoadable
+func register<T: UICollectionViewCell>(cellType: T.Type) where T: Reusable T.self) -> T where T: Reusable
+func register<T: UICollectionReusableView>(supplementaryViewType: T.Type, ofKind elementKind: String) where T: Reusable & NibLoadable
+func register<T: UICollectionReusableView>(supplementaryViewType: T.Type, ofKind elementKind: String) where T: Reusable
+func dequeueReusableSupplementaryView<T: UICollectionReusableView>(ofKind elementKind: String, for indexPath: IndexPath, viewType: T.Type = T.self) -> T where T: Reusable
+```
+
 - Protocols:
 
 ```swift
 protocol NibLoadable: AnyObject
 protocol NibOwnerLoadable: AnyObject
+protocol Reusable: AnyObject
+typealias NibReusable = Reusable & NibLoadable
 ```
 
 #### Bugfixes

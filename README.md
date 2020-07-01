@@ -60,6 +60,7 @@ Check out the repository to find examples / tests for each feature.
 - [UIAlertController](#uialertcontroller-extension)
 - [UIApplication](#uiapplication-extension)
 - [UIButton](#uibutton-extension)
+- [UICollectionView](#uicollectionview-extension)
 - [UICollectionViewCell](#uicollectionviewcell-extension)
 - [UIDevice](#uidevice-extension)
 - [UIFont](#uifont-extension)
@@ -68,7 +69,8 @@ Check out the repository to find examples / tests for each feature.
 - [UIScreen](#uiscreen-extension)
 - [UIStoryboard](#uistoryboard-extension)
 - [UISwitch](#uiswitch-extension)
-- [UITextFied](#uitextfield-extension)
+- [UITableView](#uitableview-extension)
+- [UITextField](#uitextfield-extension)
 - [UITextView](#uitextview-extension)
 - [UIView](#uiview-extension)
 - [UIViewController](#uiviewcontroller-extension)
@@ -1106,6 +1108,30 @@ let button = UIButton(frame: .zero)
 button.addRightImage(image, offset: 16)
 ```
 
+### UICollectionView extension
+
+Register and dequeue safely your `UICollectionViewCell`:
+
+```swift
+// 1. Make your `UICollectionCell` conforms to `Reusable` (class-based) or `NibReusable` (nib-based)
+final class ReusableClassCollectionViewCell: UICollectionViewCell, Reusable {}
+// 2. Register your cell:
+collectionView.register(cellType: ReusableClassCollectionViewCell.self)
+// 3. Dequeue your cell:
+let cell: ReusableClassCollectionViewCell = collectionView.dequeueReusableCell(at: indexPath)
+```
+
+Register and dequeue safely your `UICollectionReusableView`:
+
+```swift
+// 1. Make your `UICollectionReusableView` conforms to `Reusable` (class-based) or `NibReusable` (nib-based)
+final class ReusableNibCollectionReusableView: UICollectionReusableView, NibReusable
+// 2. Register your cell:
+collectionView.register(supplementaryViewType: ReusableNibCollectionReusableView.self, ofKind: UICollectionView.elementKindSectionHeader)
+// 3. Dequeue your cell:
+let header: ReusableNibCollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, at: indexPath)
+```
+
 ### UICollectionViewCell extension
 
 Apply a corner radius to the cell:
@@ -1278,6 +1304,30 @@ aSwitch.toggle()
 print(aSwitch.isOn) // true
 
 aSwitch.toggle(animated: false)
+```
+
+### UITableView
+
+Register and dequeue safely your `UITableViewCell`:
+
+```swift
+// 1. Make your `UITableViewCell` conforms to `Reusable` (class-based) or `NibReusable` (nib-based)
+final class ReusableClassTableViewCell: UITableViewCell, Reusable {}
+// 2. Register your cell:
+tableView.register(cellType: ReusableClassTableViewCell.self)
+// 3. Dequeue your cell:
+let cell: ReusableClassTableViewCell = tableView.dequeueReusableCell(at: indexPath)
+```
+
+Register and dequeue safely your `UITableViewHeaderFooterView`:
+
+```swift
+// 1. Make your `UITableViewHeaderFooterView` conforms to `Reusable` (class-based) or `NibReusable` (nib-based)
+final class ReusableClassHeaderFooterView: UITableViewHeaderFooterView, Reusable {}
+// 2. Register your header or footer:
+tableView.register(headerFooterViewType: ReusableClassHeaderFooterView.self)
+// 3. Dequeue your header or footer:
+let cell: ReusableClassHeaderFooterView = tableView.dequeueReusableHeaderFooterView()
 ```
 
 ### UITextField extension

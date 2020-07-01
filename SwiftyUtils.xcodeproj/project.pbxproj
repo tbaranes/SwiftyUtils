@@ -69,6 +69,25 @@
 		E262EA2124AD2B7D00CED9A0 /* Occupiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E9F324AD256400CED9A0 /* Occupiable.swift */; };
 		E262EA2224AD2B7D00CED9A0 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E9F024AD256400CED9A0 /* Then.swift */; };
 		E262EA2324AD2B7D00CED9A0 /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E9F224AD256400CED9A0 /* AnyOptional.swift */; };
+		E262EA3324AD2E3700CED9A0 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA3224AD2E3700CED9A0 /* Reusable.swift */; };
+		E262EA3524AD2E3E00CED9A0 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA3224AD2E3700CED9A0 /* Reusable.swift */; };
+		E262EA3C24AD2FAF00CED9A0 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA3B24AD2FAF00CED9A0 /* UITableViewExtension.swift */; };
+		E262EA3D24AD2FAF00CED9A0 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA3B24AD2FAF00CED9A0 /* UITableViewExtension.swift */; };
+		E262EA4124AD35F600CED9A0 /* UITableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA4024AD35F600CED9A0 /* UITableViewTests.swift */; };
+		E262EA6524AD3AE000CED9A0 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA6424AD3AE000CED9A0 /* UICollectionViewExtension.swift */; };
+		E262EA6624AD3AE000CED9A0 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA6424AD3AE000CED9A0 /* UICollectionViewExtension.swift */; };
+		E262EA7224AD3B4300CED9A0 /* ReusableClassHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA6C24AD3B4300CED9A0 /* ReusableClassHeaderFooterView.swift */; };
+		E262EA7424AD3B4300CED9A0 /* ReusableClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA6D24AD3B4300CED9A0 /* ReusableClassTableViewCell.swift */; };
+		E262EA7624AD3B4300CED9A0 /* ReusableNibHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA6E24AD3B4300CED9A0 /* ReusableNibHeaderFooterView.swift */; };
+		E262EA7824AD3B4300CED9A0 /* ReusableNibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E262EA6F24AD3B4300CED9A0 /* ReusableNibTableViewCell.xib */; };
+		E262EA7A24AD3B4300CED9A0 /* ReusableNibHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E262EA7024AD3B4300CED9A0 /* ReusableNibHeaderFooterView.xib */; };
+		E262EA7C24AD3B4300CED9A0 /* ReusableNibTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA7124AD3B4300CED9A0 /* ReusableNibTableViewCell.swift */; };
+		E262EA8524AD3BAD00CED9A0 /* ReusableNibCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA8024AD3BAC00CED9A0 /* ReusableNibCollectionViewCell.swift */; };
+		E262EA8724AD3BAD00CED9A0 /* ReusableNibCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA8124AD3BAC00CED9A0 /* ReusableNibCollectionReusableView.swift */; };
+		E262EA8924AD3BAD00CED9A0 /* ReusableClassCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA8224AD3BAD00CED9A0 /* ReusableClassCollectionViewCell.swift */; };
+		E262EA8B24AD3BAD00CED9A0 /* ReusableNibCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E262EA8324AD3BAD00CED9A0 /* ReusableNibCollectionViewCell.xib */; };
+		E262EA8D24AD3BAD00CED9A0 /* ReusableNibCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E262EA8424AD3BAD00CED9A0 /* ReusableNibCollectionReusableView.xib */; };
+		E262EA9024AD3BFF00CED9A0 /* UICollectionViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA8F24AD3BFF00CED9A0 /* UICollectionViewExtensionTests.swift */; };
 		E26722861E9A304800DE844E /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E26722811E9A304800DE844E /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E26722871E9A304800DE844E /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E26722811E9A304800DE844E /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E26722881E9A304800DE844E /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E26722811E9A304800DE844E /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -327,6 +346,7 @@
 		E27B7E2E2455BBB400EF79C7 /* UILabelExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728461E9A36F100DE844E /* UILabelExtensionTests.swift */; };
 		E27B7E2F2455BBBA00EF79C7 /* UITextFieldExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29DD90B1E9CD88E0076CFD7 /* UITextFieldExtensionTests.swift */; };
 		E29DD90C1E9CD88E0076CFD7 /* UITextFieldExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29DD90B1E9CD88E0076CFD7 /* UITextFieldExtensionTests.swift */; };
+		E2B3A3B624ADBAB1004491DD /* ReusableCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B3A3AF24ADBA98004491DD /* ReusableCollectionReusableView.swift */; };
 		E2C6B55124962B1700F07E5A /* MutableCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C6B55024962B1700F07E5A /* MutableCollectionExtension.swift */; };
 		E2C6B55224962B1700F07E5A /* MutableCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C6B55024962B1700F07E5A /* MutableCollectionExtension.swift */; };
 		E2C6B55324962B1700F07E5A /* MutableCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C6B55024962B1700F07E5A /* MutableCollectionExtension.swift */; };
@@ -394,6 +414,22 @@
 		E262EA1024AD268700CED9A0 /* NibOwnerLoadableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibOwnerLoadableView.xib; sourceTree = "<group>"; };
 		E262EA1324AD268E00CED9A0 /* NibOwnerLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadableView.swift; sourceTree = "<group>"; };
 		E262EA1624AD276200CED9A0 /* NibOwnerLoadableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadableTests.swift; sourceTree = "<group>"; };
+		E262EA3224AD2E3700CED9A0 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		E262EA3B24AD2FAF00CED9A0 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		E262EA4024AD35F600CED9A0 /* UITableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewTests.swift; sourceTree = "<group>"; };
+		E262EA6424AD3AE000CED9A0 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		E262EA6C24AD3B4300CED9A0 /* ReusableClassHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableClassHeaderFooterView.swift; sourceTree = "<group>"; };
+		E262EA6D24AD3B4300CED9A0 /* ReusableClassTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableClassTableViewCell.swift; sourceTree = "<group>"; };
+		E262EA6E24AD3B4300CED9A0 /* ReusableNibHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableNibHeaderFooterView.swift; sourceTree = "<group>"; };
+		E262EA6F24AD3B4300CED9A0 /* ReusableNibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableNibTableViewCell.xib; sourceTree = "<group>"; };
+		E262EA7024AD3B4300CED9A0 /* ReusableNibHeaderFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableNibHeaderFooterView.xib; sourceTree = "<group>"; };
+		E262EA7124AD3B4300CED9A0 /* ReusableNibTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableNibTableViewCell.swift; sourceTree = "<group>"; };
+		E262EA8024AD3BAC00CED9A0 /* ReusableNibCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableNibCollectionViewCell.swift; sourceTree = "<group>"; };
+		E262EA8124AD3BAC00CED9A0 /* ReusableNibCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableNibCollectionReusableView.swift; sourceTree = "<group>"; };
+		E262EA8224AD3BAD00CED9A0 /* ReusableClassCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableClassCollectionViewCell.swift; sourceTree = "<group>"; };
+		E262EA8324AD3BAD00CED9A0 /* ReusableNibCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableNibCollectionViewCell.xib; sourceTree = "<group>"; };
+		E262EA8424AD3BAD00CED9A0 /* ReusableNibCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableNibCollectionReusableView.xib; sourceTree = "<group>"; };
+		E262EA8F24AD3BFF00CED9A0 /* UICollectionViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensionTests.swift; sourceTree = "<group>"; };
 		E26722801E9A304800DE844E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E26722811E9A304800DE844E /* SwiftyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyUtils.h; sourceTree = "<group>"; };
 		E26724231E9A315B00DE844E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -481,6 +517,7 @@
 		E29DD9071E9CD5660076CFD7 /* UISwitchExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchExtensionTests.swift; sourceTree = "<group>"; };
 		E29DD90B1E9CD88E0076CFD7 /* UITextFieldExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensionTests.swift; sourceTree = "<group>"; };
 		E29DD90E1E9CDAB80076CFD7 /* UIViewControllerExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionTests.swift; sourceTree = "<group>"; };
+		E2B3A3AF24ADBA98004491DD /* ReusableCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCollectionReusableView.swift; sourceTree = "<group>"; };
 		E2C6B55024962B1700F07E5A /* MutableCollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableCollectionExtension.swift; sourceTree = "<group>"; };
 		E2C6B55624962B4C00F07E5A /* MutableExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableExtensionTests.swift; sourceTree = "<group>"; };
 		E2E8DDE91E9F790600BF3FE6 /* UIImageExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensionTests.swift; sourceTree = "<group>"; };
@@ -572,30 +609,12 @@
 			isa = PBXGroup;
 			children = (
 				E262E9DA24AD254D00CED9A0 /* Swift */,
-				E262E9D624AD254D00CED9A0 /* UIKit */,
+				E262EA7E24AD3B6C00CED9A0 /* UIKit */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		E262E9D624AD254D00CED9A0 /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				E262E9D724AD254D00CED9A0 /* Nibs */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
-		E262E9D724AD254D00CED9A0 /* Nibs */ = {
-			isa = PBXGroup;
-			children = (
-				E262E9D824AD254D00CED9A0 /* Vendors */,
-				E262E9D924AD254D00CED9A0 /* NibLoadableTests.swift */,
-				E262EA1624AD276200CED9A0 /* NibOwnerLoadableTests.swift */,
-			);
-			path = Nibs;
-			sourceTree = "<group>";
-		};
-		E262E9D824AD254D00CED9A0 /* Vendors */ = {
+		E262E9D724AD254D00CED9A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				E262EA0924AD25C900CED9A0 /* NibLoadableView.swift */,
@@ -603,7 +622,7 @@
 				E262EA1324AD268E00CED9A0 /* NibOwnerLoadableView.swift */,
 				E262EA1024AD268700CED9A0 /* NibOwnerLoadableView.xib */,
 			);
-			path = Vendors;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E262E9DA24AD254D00CED9A0 /* Swift */ = {
@@ -628,6 +647,7 @@
 		E262E9EB24AD256400CED9A0 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E262EA3124AD2E2C00CED9A0 /* Reusable */,
 				E262E9EC24AD256400CED9A0 /* Nibs */,
 			);
 			path = UIKit;
@@ -653,6 +673,100 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
+		E262EA3124AD2E2C00CED9A0 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				E262EA3224AD2E3700CED9A0 /* Reusable.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		E262EA3A24AD2FAF00CED9A0 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				E262EA3B24AD2FAF00CED9A0 /* UITableViewExtension.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		E262EA3F24AD35E800CED9A0 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				E262EA4024AD35F600CED9A0 /* UITableViewTests.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		E262EA6324AD3AD300CED9A0 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E262EA6424AD3AE000CED9A0 /* UICollectionViewExtension.swift */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		E262EA6724AD3AFB00CED9A0 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E262EA8F24AD3BFF00CED9A0 /* UICollectionViewExtensionTests.swift */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		E262EA6824AD3B0700CED9A0 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				E262EA6924AD3B0B00CED9A0 /* UIKit */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		E262EA6924AD3B0B00CED9A0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E262EA7F24AD3B9100CED9A0 /* UICollectionViewCell */,
+				E262EA6B24AD3B4300CED9A0 /* UITableViewCell */,
+				E262E9D724AD254D00CED9A0 /* Views */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E262EA6B24AD3B4300CED9A0 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E262EA6C24AD3B4300CED9A0 /* ReusableClassHeaderFooterView.swift */,
+				E262EA6D24AD3B4300CED9A0 /* ReusableClassTableViewCell.swift */,
+				E262EA6E24AD3B4300CED9A0 /* ReusableNibHeaderFooterView.swift */,
+				E262EA7024AD3B4300CED9A0 /* ReusableNibHeaderFooterView.xib */,
+				E262EA7124AD3B4300CED9A0 /* ReusableNibTableViewCell.swift */,
+				E262EA6F24AD3B4300CED9A0 /* ReusableNibTableViewCell.xib */,
+			);
+			name = UITableViewCell;
+			path = Vendor/UITableViewCell;
+			sourceTree = "<group>";
+		};
+		E262EA7E24AD3B6C00CED9A0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E262E9D924AD254D00CED9A0 /* NibLoadableTests.swift */,
+				E262EA1624AD276200CED9A0 /* NibOwnerLoadableTests.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E262EA7F24AD3B9100CED9A0 /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E262EA8224AD3BAD00CED9A0 /* ReusableClassCollectionViewCell.swift */,
+				E2B3A3AF24ADBA98004491DD /* ReusableCollectionReusableView.swift */,
+				E262EA8024AD3BAC00CED9A0 /* ReusableNibCollectionViewCell.swift */,
+				E262EA8324AD3BAD00CED9A0 /* ReusableNibCollectionViewCell.xib */,
+				E262EA8124AD3BAC00CED9A0 /* ReusableNibCollectionReusableView.swift */,
+				E262EA8424AD3BAD00CED9A0 /* ReusableNibCollectionReusableView.xib */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
 		E267227F1E9A304800DE844E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -666,6 +780,7 @@
 		E267228E1E9A30D200DE844E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E262EA6824AD3B0700CED9A0 /* Vendors */,
 				E262E9D524AD254D00CED9A0 /* Protocols */,
 				E27B7D3224543DF400EF79C7 /* PropertyWrappers */,
 				E26728321E9A36F100DE844E /* Extensions */,
@@ -716,6 +831,7 @@
 				E27B7D7E24546EFF00EF79C7 /* UIAlertController */,
 				E27B7D7F24546F0500EF79C7 /* UIApplication */,
 				E27B7DAB2454744C00EF79C7 /* UIButton */,
+				E262EA6324AD3AD300CED9A0 /* UICollectionView */,
 				E27B7DB72454754C00EF79C7 /* UICollectionViewCell */,
 				E27B7D8024546F1200EF79C7 /* UIDevice */,
 				E27B7E172455AF0900EF79C7 /* UIFont */,
@@ -724,6 +840,7 @@
 				E27B7D8324546F2600EF79C7 /* UIScreen */,
 				E27B7D8424546F2D00EF79C7 /* UIStoryboard */,
 				E27B7D8524546F3300EF79C7 /* UISwitch */,
+				E262EA3A24AD2FAF00CED9A0 /* UITableView */,
 				E27B7D8624546F3900EF79C7 /* UITextField */,
 				E27B7E1D2455B85F00EF79C7 /* UITextView */,
 				E27B7D8824546F4D00EF79C7 /* UIView */,
@@ -765,9 +882,9 @@
 		E26728441E9A36F100DE844E /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				E27B7E202455B8CF00EF79C7 /* UITextView */,
 				E27B7DA1245470D500EF79C7 /* UIAlertController */,
 				E27B7DB1245474A800EF79C7 /* UIButton */,
+				E262EA6724AD3AFB00CED9A0 /* UICollectionView */,
 				E27B7DBA2454759E00EF79C7 /* UICollectionViewCell */,
 				E27B7DA2245470DD00EF79C7 /* UIDevice */,
 				E27B7E1A2455B44F00EF79C7 /* UIFont */,
@@ -775,7 +892,9 @@
 				E27B7DA4245470EA00EF79C7 /* UILabel */,
 				E27B7DA5245470F000EF79C7 /* UIScreen */,
 				E27B7DA7245470FD00EF79C7 /* UISwitch */,
+				E262EA3F24AD35E800CED9A0 /* UITableView */,
 				E27B7DA82454710500EF79C7 /* UITextField */,
+				E27B7E202455B8CF00EF79C7 /* UITextView */,
 				E27B7DAA2454711400EF79C7 /* UIView */,
 				E27B7DA92454710D00EF79C7 /* UIViewController */,
 			);
@@ -1851,8 +1970,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E262EA7824AD3B4300CED9A0 /* ReusableNibTableViewCell.xib in Resources */,
+				E262EA8D24AD3BAD00CED9A0 /* ReusableNibCollectionReusableView.xib in Resources */,
 				E262EA1124AD268700CED9A0 /* NibOwnerLoadableView.xib in Resources */,
 				E262EA0D24AD25D000CED9A0 /* NibLoadableView.xib in Resources */,
+				E262EA7A24AD3B4300CED9A0 /* ReusableNibHeaderFooterView.xib in Resources */,
+				E262EA8B24AD3BAD00CED9A0 /* ReusableNibCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1998,9 +2121,11 @@
 				E26729111E9A38FE00DE844E /* NSRangeExtension.swift in Sources */,
 				E262E9F624AD256400CED9A0 /* NibLoadable.swift in Sources */,
 				E26728EC1E9A38F700DE844E /* UIApplicationExtension.swift in Sources */,
+				E262EA3524AD2E3E00CED9A0 /* Reusable.swift in Sources */,
 				E26729071E9A38FE00DE844E /* ColorExtension.swift in Sources */,
 				E27B7D2A24542A8F00EF79C7 /* UIElementPreview.swift in Sources */,
 				E267290D1E9A38FE00DE844E /* IntExtension.swift in Sources */,
+				E262EA3D24AD2FAF00CED9A0 /* UITableViewExtension.swift in Sources */,
 				E26729161E9A38FE00DE844E /* UserDefaultsExtension.swift in Sources */,
 				E27B7E272455BB6000EF79C7 /* UITextViewExtension.swift in Sources */,
 				E26729031E9A38FE00DE844E /* BundleExtension.swift in Sources */,
@@ -2028,6 +2153,7 @@
 				E262E9FC24AD256400CED9A0 /* Then.swift in Sources */,
 				E26729121E9A38FE00DE844E /* ReusableFormatters.swift in Sources */,
 				E26729041E9A38FE00DE844E /* CGFloatLiteral.swift in Sources */,
+				E262EA6624AD3AE000CED9A0 /* UICollectionViewExtension.swift in Sources */,
 				E26CBEF6237B618E00ECFCE7 /* UISwitchExtension.swift in Sources */,
 				E262EA0224AD256400CED9A0 /* AnyOptional.swift in Sources */,
 				E267290E1E9A38FE00DE844E /* NotificationCenterExtension.swift in Sources */,
@@ -2104,11 +2230,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B3A3B624ADBAB1004491DD /* ReusableCollectionReusableView.swift in Sources */,
 				E29DD90C1E9CD88E0076CFD7 /* UITextFieldExtensionTests.swift in Sources */,
 				E262EA1724AD276200CED9A0 /* NibOwnerLoadableTests.swift in Sources */,
 				E262E9E724AD254D00CED9A0 /* ThenTest.swift in Sources */,
 				E262E9E124AD254D00CED9A0 /* AnyOptionalTests.swift in Sources */,
 				E27B7DC62454776E00EF79C7 /* NSAttributedStringExtensionTests.swift in Sources */,
+				E262EA8724AD3BAD00CED9A0 /* ReusableNibCollectionReusableView.swift in Sources */,
 				E27B7D59245466E700EF79C7 /* BundleExtensionTests.swift in Sources */,
 				E267289F1E9A37D600DE844E /* CGFloatLiteralTests.swift in Sources */,
 				E27B7E1C2455B45F00EF79C7 /* UIFontExtensionTests.swift in Sources */,
@@ -2116,23 +2244,28 @@
 				E2FB195B2496221500DFE66C /* SequenceExtensionTests.swift in Sources */,
 				E23ED9D11E9A55FF0059BED7 /* CGSizeExtensionTests.swift in Sources */,
 				E26728A41E9A37D600DE844E /* DictionaryExtensionTests.swift in Sources */,
+				E262EA7224AD3B4300CED9A0 /* ReusableClassHeaderFooterView.swift in Sources */,
 				E27B7D552454666200EF79C7 /* UIAlertControllerExtensionTests.swift in Sources */,
 				E27B7D4924545D8000EF79C7 /* UIScreenExtensionTests.swift in Sources */,
 				E27B7D4D24545FEE00EF79C7 /* ReusableFormattersTests.swift in Sources */,
 				E27B7D3824543E3600EF79C7 /* UserDefaultsBackedTests.swift in Sources */,
 				E26728A31E9A37D600DE844E /* DateExtensionTests.swift in Sources */,
 				E27B7E222455B8EB00EF79C7 /* UITextViewExtensionTests.swift in Sources */,
+				E262EA4124AD35F600CED9A0 /* UITableViewTests.swift in Sources */,
 				E267289C1E9A37D200DE844E /* UILabelExtensionTests.swift in Sources */,
 				E26728B21E9A37DE00DE844E /* UITestingTests.swift in Sources */,
 				E26728A51E9A37D600DE844E /* DoubleExtensionTests.swift in Sources */,
 				E26728A91E9A37D600DE844E /* NSRangeExtensionTests.swift in Sources */,
 				E267289D1E9A37D200DE844E /* UIViewExtensionTests.swift in Sources */,
+				E262EA7624AD3B4300CED9A0 /* ReusableNibHeaderFooterView.swift in Sources */,
 				E26728A01E9A37D600DE844E /* CGRectExtensionTest.swift in Sources */,
 				E26728AE1E9A37D600DE844E /* UserDefaultsExtensionTests.swift in Sources */,
 				E267289B1E9A37D200DE844E /* NSObjectExtensionTests.swift in Sources */,
 				E26728AD1E9A37D600DE844E /* URLExtensionTests.swift in Sources */,
 				E267289E1E9A37D600DE844E /* ArrayExtensionTests.swift in Sources */,
+				E262EA8924AD3BAD00CED9A0 /* ReusableClassCollectionViewCell.swift in Sources */,
 				E262E9E424AD254D00CED9A0 /* OccupiableTests.swift in Sources */,
+				E262EA8524AD3BAD00CED9A0 /* ReusableNibCollectionViewCell.swift in Sources */,
 				E23ED9C91E9A539E0059BED7 /* CGPointExtensionTests.swift in Sources */,
 				E2C6B55724962B4C00F07E5A /* MutableExtensionTests.swift in Sources */,
 				E26728AA1E9A37D600DE844E /* StringExtensionTests.swift in Sources */,
@@ -2143,14 +2276,17 @@
 				E2E8DDEB1E9F79C900BF3FE6 /* UIImageExtensionTests.swift in Sources */,
 				33D2AFCB221538F400CBC975 /* DataExtensionTests.swift in Sources */,
 				E26728A71E9A37D600DE844E /* IntExtensionTests.swift in Sources */,
+				E262EA7C24AD3B4300CED9A0 /* ReusableNibTableViewCell.swift in Sources */,
 				E26728AB1E9A37D600DE844E /* SwiftyColorTests.swift in Sources */,
 				E26728A81E9A37D600DE844E /* NSLayoutConstraintExtensionTests.swift in Sources */,
 				E262EA0A24AD25C900CED9A0 /* NibLoadableView.swift in Sources */,
 				E26728AC1E9A37D600DE844E /* TimerExtensionTests.swift in Sources */,
 				E27B7DB5245474CF00EF79C7 /* UIButtonExtensionTests.swift in Sources */,
+				E262EA9024AD3BFF00CED9A0 /* UICollectionViewExtensionTests.swift in Sources */,
 				E262EA1424AD268E00CED9A0 /* NibOwnerLoadableView.swift in Sources */,
 				E27B7DBC245475AA00EF79C7 /* UICollectionViewCellExtensionTests.swift in Sources */,
 				E27B7D5C2454685A00EF79C7 /* UISwitchExtensionTests.swift in Sources */,
+				E262EA7424AD3B4300CED9A0 /* ReusableClassTableViewCell.swift in Sources */,
 				E27B7D5D2454686A00EF79C7 /* UIViewControllerExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2247,6 +2383,7 @@
 				E26728711E9A379900DE844E /* UIScreenExtension.swift in Sources */,
 				E26728891E9A379F00DE844E /* TimerExtension.swift in Sources */,
 				E267287E1E9A379F00DE844E /* DateExtension.swift in Sources */,
+				E262EA6524AD3AE000CED9A0 /* UICollectionViewExtension.swift in Sources */,
 				E27B7D2E24543C0700EF79C7 /* UserDefaultsBacked.swift in Sources */,
 				E26728881E9A379F00DE844E /* StringExtension.swift in Sources */,
 				E26728851E9A379F00DE844E /* NSMutableAttributedStringExtension.swift in Sources */,
@@ -2270,6 +2407,7 @@
 				E267286E1E9A379900DE844E /* UIDeviceExtension.swift in Sources */,
 				E26728741E9A379900DE844E /* UITextFieldExtension.swift in Sources */,
 				E267289A1E9A37AE00DE844E /* Constants.swift in Sources */,
+				E262EA3C24AD2FAF00CED9A0 /* UITableViewExtension.swift in Sources */,
 				E26728761E9A379900DE844E /* UIViewExtension.swift in Sources */,
 				E267286C1E9A379900DE844E /* UIAlertControllerExtension.swift in Sources */,
 				E2C6B55124962B1700F07E5A /* MutableCollectionExtension.swift in Sources */,
@@ -2277,6 +2415,7 @@
 				E26728841E9A379F00DE844E /* NSLayoutConstraintsExtension.swift in Sources */,
 				E267287F1E9A379F00DE844E /* DictionaryExtension.swift in Sources */,
 				E26728801E9A379F00DE844E /* DoubleExtension.swift in Sources */,
+				E262EA3324AD2E3700CED9A0 /* Reusable.swift in Sources */,
 				E262E9F424AD256400CED9A0 /* NibLoadable.swift in Sources */,
 				E267286F1E9A379900DE844E /* UIImageExtension.swift in Sources */,
 				E26728811E9A379F00DE844E /* FileManagerExtension.swift in Sources */,
