@@ -73,6 +73,10 @@ Check out the repository to find examples / tests for each feature.
 - [UIView](#uiview-extension)
 - [UIViewController](#uiviewcontroller-extension)
 
+**UIKit Protocols:**
+
+- [NibLoadable](#nibloadable)
+- [NibOwnerLoadable](#nibownerloadable)
 
 **AppKit Extensions:**
 
@@ -84,7 +88,6 @@ Check out the repository to find examples / tests for each feature.
 - [Injectable](#injectable)
 - [Occupiable](#occupiable)
 - [Then](#then)
-
 
 **PropertyWrappers:**
 
@@ -1413,6 +1416,40 @@ Remove a child view controller:
 
 ```swift
 vc.removeChildController(childVC)
+```
+
+## UIKit Protocols:
+
+### NibLoadable
+
+Make your `UIView` subclasses conform to this protocol to instantiate them from their NIB safely.
+**Note:** Be sure that your `UIView` is based on a Nib, and is used as the Xib's root view.
+
+```swift
+class NibLoadableView: UIView, NibLoadable {
+    // ...
+}
+
+let view = NibLoadableView.loadFromNib()
+```
+
+### NibOwnerLoadable
+
+Make your `UIView` subclasses conform to this protocol to instantiate them from their Xib's File Owner safely.
+**Note:** Be sure that your `UIView` is based on a Nib, and is used as the Xib's File's Owner.
+
+```swift
+class NibLoadableView: UIView, NibOwnerLoadable {
+    // ...
+    
+    required init?(coder aDecoder: NSCoder) {
+      super.init(coder: aDecoder)
+      self.loadNibContent()
+    }
+
+}
+
+// Then use it directly from another xib or whatever...
 ```
 
 ## AppKit, Cocoa Extensions

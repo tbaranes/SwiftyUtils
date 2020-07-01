@@ -36,6 +36,13 @@ mutating func sort<T: Comparable>(by keyPath: KeyPath<Element, T>, order: (T, T)
 func sorted<T: Comparable>(by keyPath: KeyPath<Element, T>, order: (T, T) -> Bool = (<)) -> [Element]
 ```
 
+- Protocols:
+
+```swift
+protocol NibLoadable: AnyObject
+protocol NibOwnerLoadable: AnyObject
+```
+
 #### Bugfixes
 
 N/A
