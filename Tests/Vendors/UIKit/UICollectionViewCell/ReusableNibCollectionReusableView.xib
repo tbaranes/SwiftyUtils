@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReusableNibCollectionReusableView" id="lLv-PR-QoZ" customClass="ReusableNibCollectionReusableView" customModule="SwiftyUtils_iOS_Tests" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="469" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvd-Fh-EfR">
+                    <rect key="frame" x="213.5" y="15" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Dvd-Fh-EfR" firstAttribute="centerY" secondItem="lLv-PR-QoZ" secondAttribute="centerY" id="Od3-Vb-Mhs"/>
+                <constraint firstItem="Dvd-Fh-EfR" firstAttribute="centerX" secondItem="lLv-PR-QoZ" secondAttribute="centerX" id="q6k-Ow-1Ja"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="h1C-sg-6Rx"/>
+            <connections>
+                <outlet property="label" destination="Dvd-Fh-EfR" id="dcz-d7-gr1"/>
+            </connections>
+            <point key="canvasLocation" x="537.5" y="242"/>
+        </collectionReusableView>
+    </objects>
+</document>
