@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
 s.name            	= "SwiftyUtils"
-s.version          	= "5.2.0"
+s.version          	= "5.3.0"
 s.summary          	= "Swifty utils regroups all the boilerplate code reusable in each project."
 s.description      	= "Swifty utils regroups all the boilerplate code reusable in each project, available for iOS, OSX and tvOS"
 s.homepage         	= "https://github.com/tbaranes/SwiftyUtils"
@@ -26,7 +26,7 @@ s.source_files				= 'Sources/*.swift',
 							  'Sources/Extensions/Swift/**/*.swift',
 							  'Sources/Others/*.swift',
 							  'Sources/PropertyWrappers/*.swift',
-							  'Sources/Protocols/*.swift'
+							  'Sources/Protocols/Swift/*.swift'
 
 s.ios.source_files			= 'Sources/Protocols/UIKit/**/*.swift',
 							  'Sources/Extensions/UIKit/**/*.swift'
