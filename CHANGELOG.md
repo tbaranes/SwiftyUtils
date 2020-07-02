@@ -12,6 +12,16 @@ N/A
 
 #### Enhancements
 
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [5.3.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.3.0) (02-07-2020)
+
+#### Enhancements
+
 - UIViewControllerExtension:
 
 ```swift
@@ -65,10 +75,6 @@ protocol NibOwnerLoadable: AnyObject
 protocol Reusable: AnyObject
 typealias NibReusable = Reusable & NibLoadable
 ```
-
-#### Bugfixes
-
-N/A
 
 ## [5.2.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.2.0) (28-04-2020)
 
