@@ -6,17 +6,9 @@ All notable changes to the project will be documented in this file.
 
 ## Next
 
-#### API breaking changes
+## [5.4.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.4.0) (06-10-2020)
 
-N/A
-
-#### Enhancements
-
-N/A
-
-#### Bugfixes
-
-N/A
+Bump min iOS version to 10 when using SPM. This is just to fix a warning from Xcode 12.
 
 ## [5.3.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.3.0) (02-07-2020)
 
