@@ -6,6 +6,14 @@ All notable changes to the project will be documented in this file.
 
 ## Next
 
+#### Enhancements
+
+N/A
+
+#### Bugfixes
+
+N/A
+
 ## [5.5.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.5.0) (08-11-2020)
 
 #### Enhancements
