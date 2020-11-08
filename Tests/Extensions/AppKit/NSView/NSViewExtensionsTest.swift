@@ -6,7 +6,9 @@
 //  Copyright © 2017 Tom Baranes. All rights reserved.
 //
 
+#if os(macOS)
 import XCTest
+import AppKit
 
 final class NSViewExtensionTests: XCTestCase {
 
@@ -32,3 +34,4 @@ extension NSViewExtensionTests {
     }
 
 }
+#endif
