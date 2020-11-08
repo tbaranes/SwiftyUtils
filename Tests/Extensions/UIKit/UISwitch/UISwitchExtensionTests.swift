@@ -8,6 +8,7 @@
 
 import XCTest
 
+#if os(iOS)
 // MARK: Life cycle
 
 final class UISwitchExtensionTests: XCTestCase {
@@ -34,3 +35,4 @@ extension UISwitchExtensionTests {
     }
 
 }
+#endif

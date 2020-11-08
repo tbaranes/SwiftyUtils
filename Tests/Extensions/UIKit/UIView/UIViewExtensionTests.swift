@@ -7,6 +7,9 @@
 //
 
 import XCTest
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
 
 final class UIViewExtensionTests: XCTestCase {
 
@@ -111,4 +114,81 @@ extension UIViewExtensionTests {
         XCTAssertEqual(superview.constraints.first?.constant, -10)
     }
 
+}
+
+// MARK: - Find
+
+extension UIViewExtensionTests {
+    func testParentViewController() {
+        let view = UIView(frame: .zero)
+        XCTAssertNil(view.parentViewController)
+
+        let viewController = UIViewController()
+        viewController.view.addSubview(view)
+        XCTAssertEqual(view.parentViewController, viewController)
+    }
+
+    func testFindView() {
+        let view = UIView(frame: .zero)
+        let viewToFind = UIScrollView()
+        view.addSubview(viewToFind)
+        view.addSubview(UIView())
+        view.addSubview(UIScrollView())
+
+        let scrollView: UIScrollView? = view.findView()
+        XCTAssertEqual(scrollView, viewToFind)
+    }
+
+    func testFindView_inStackView() {
+        let view = UIView(frame: .zero)
+        let viewToFind = UIScrollView()
+        let stackView = UIStackView(frame: .zero)
+        stackView.addArrangedSubview(viewToFind)
+        view.addSubview(viewToFind)
+
+        let scrollView: UIScrollView? = view.findView()
+        XCTAssertEqual(scrollView, viewToFind)
+    }
+
+    func testFindView_forIdentifier() {
+        let view = UIView(frame: .zero)
+        let viewToFind = UIScrollView()
+        viewToFind.accessibilityIdentifier = "accessibilityIdentifier"
+        view.addSubview(viewToFind)
+        view.addSubview(UIView())
+        view.addSubview(UIScrollView())
+
+        let scrollView = view.findView(forIdentifier: "accessibilityIdentifier")
+        XCTAssertEqual(scrollView, viewToFind)
+    }
+
+    func testFindView__forIdentifier_inStackView() {
+        let view = UIView(frame: .zero)
+        let viewToFind = UIScrollView()
+        viewToFind.accessibilityIdentifier = "accessibilityIdentifier"
+        let stackView = UIStackView(frame: .zero)
+        stackView.addArrangedSubview(viewToFind)
+        view.addSubview(viewToFind)
+
+        let scrollView = view.findView(forIdentifier: "accessibilityIdentifier")
+        XCTAssertEqual(scrollView, viewToFind)
+    }
+}
+
+// MARK: - SwiftUI
+
+@available(iOS 13.0, tvOS 13.0, *)
+extension UIViewExtensionTests {
+    struct SwiftUIView: View {
+        var body: some View { EmptyView() }
+    }
+
+    func testAddSubSwiftUIView() {
+        let view = UIView(frame: .zero)
+        view.addSubSwiftUIView(SwiftUIView())
+        let hostingView = view.subviews.first
+        XCTAssertEqual(hostingView?.backgroundColor, .clear)
+        XCTAssertEqual(view.constraints.count, 4)
+        XCTAssertTrue(hostingView?.parentViewController is UIHostingController<SwiftUIView>)
+    }
 }

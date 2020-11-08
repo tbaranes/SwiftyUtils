@@ -1382,10 +1382,28 @@ view.applyCornerRadius(10)
 view.applyCornerRadius(20, maskedCorners: [.layerMaxXMaxYCorner])
 ```
 
+Find the `ViewController` which contains this view:
+
+```swift
+let parent: UIViewController? = aView.parentViewController
+```
+
 Find a subview using its `accessibilityIdentifier, useful to tests private outlets:
 
 ```swift
 aView.findView(forIdentifier: "accessibilityIdentifier")
+```
+
+Find the first subview corresponding to a  specific type:
+
+```swift
+let scrollView: UIScrollView? = aView.findView()
+```
+
+Add a SwiftUI `View` as a subview:
+
+```swift
+aView.addSubSwiftUIView(SwiftUIView())
 ```
 
 Automates your localizables:
@@ -1466,6 +1484,12 @@ Remove a child view controller:
 
 ```swift
 vc.removeChildController(childVC)
+```
+
+Add a SwiftUI `View` as a child of the input `UIView`:
+
+```swift
+vc.addSubSwiftUIView(SwiftUIView(), to: vc.view)
 ```
 
 ## UIKit Protocols:

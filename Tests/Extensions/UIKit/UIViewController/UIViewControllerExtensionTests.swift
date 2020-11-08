@@ -7,6 +7,9 @@
 //
 
 import XCTest
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
 
 // MARK: Life cycle
 
@@ -76,4 +79,28 @@ extension UIViewControllerExtensionTests {
         XCTAssertTrue(vcModal.isModal)
     }
 
+}
+
+// MARK: - SwiftUI
+
+@available(iOS 13.0, tvOS 13.0, *)
+extension UIViewControllerExtensionTests {
+    struct SwiftUIView: View {
+        var body: some View { EmptyView() }
+    }
+
+    func testAddSubSwiftUIView() {
+        let viewController = UIViewController()
+        let view = viewController.view
+        viewController.addSubSwiftUIView(SwiftUIView(), to: viewController.view)
+
+        let hostingController = viewController.children.first
+        XCTAssertEqual(viewController.children.count, 1)
+        XCTAssertTrue(hostingController is UIHostingController<SwiftUIView>)
+
+        let hostingView = view?.subviews.first
+        XCTAssertEqual(hostingView?.backgroundColor, .clear)
+        XCTAssertEqual(view?.constraints.count, 4)
+        XCTAssertTrue(hostingView?.parentViewController is UIHostingController<SwiftUIView>)
+    }
 }
