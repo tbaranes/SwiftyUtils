@@ -27,7 +27,7 @@ final class UITextViewExtensionTests: XCTestCase {
 
 extension UITextViewExtensionTests {
 
-    @available(iOS 11.0, *)
+    @available(iOS 11.0, tvOS 11.0, *)
     func testConfigureDynamicStyle() {
         let font = UIFont.dynamicStyle(.body, traits: .traitBold)
         let textField = UITextField()

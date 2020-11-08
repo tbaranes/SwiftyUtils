@@ -6,6 +6,25 @@ All notable changes to the project will be documented in this file.
 
 ## Next
 
+## [5.5.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.5.0) (08-11-2020)
+
+#### Enhancements
+
+- UIViewControllerExtension:
+
+```swift
+func addSubSwiftUIView<Content>(_ swiftUIView: Content, to view: UIView) where Content: View
+```
+
+- UIViewExtension:
+
+```swift
+var parentViewController: UIViewController?
+func findView<T>() -> T?
+func addSubSwiftUIView<Content>(_ swiftUIView: Content) where Content: View 
+func addBorders(to edges: UIRectEdge, borderColor: UIColor, borderWidth: CGFloat)
+```
+
 ## [5.4.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.4.0) (06-10-2020)
 
 Bump min iOS version to 10 when using SPM. This is just to fix a warning from Xcode 12.

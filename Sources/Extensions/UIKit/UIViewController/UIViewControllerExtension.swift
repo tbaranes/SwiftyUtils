@@ -6,7 +6,6 @@
 #if os(iOS) || os(tvOS)
 
 import UIKit
-
 #if canImport(SwiftUI)
 import SwiftUI
 #endif
@@ -113,8 +112,27 @@ extension UIViewController {
 
 }
 
+// MARK: - SwiftUI
+
 @available(iOS 13.0, tvOS 13.0, *)
 extension UIViewController {
+    /// Add a SwiftUI `View` as a child of the input `UIView`.
+    /// - Parameters:
+    ///   - swiftUIView: The SwiftUI `View` to add as a child.
+    ///   - view: The `UIView` instance to which the view should be added.
+    public func addSubSwiftUIView<Content>(_ swiftUIView: Content, to view: UIView) where Content: View {
+        let hostingController = UIHostingController(rootView: swiftUIView)
+        hostingController.view.backgroundColor = .clear
+        addChild(hostingController)
+        view.addSubview(hostingController.view)
+        hostingController.view.addConstraints()
+        hostingController.didMove(toParent: self)
+    }
+
+    ///  Generate a Xcode preview for any view controllers
+    public var preview: some View {
+        Preview(viewController: self)
+    }
 
     private struct Preview: UIViewControllerRepresentable {
         var viewController: UIViewController
@@ -128,12 +146,6 @@ extension UIViewController {
 
         }
     }
-
-    ///  Generate a Xcode preview for any view controllers
-    public var preview: some View {
-        Preview(viewController: self)
-    }
-
 }
 
 #endif
