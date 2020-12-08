@@ -7,7 +7,7 @@
 // Inspired from: https://www.swiftbysundell.com/articles/getting-the-most-out-of-xcode-previews/
 //
 
-#if canImport(SwiftUI)
+#if canImport(SwiftUI) && (arch(arm64) || arch(x86_64))
 import SwiftUI
 
 @available(iOS 13.0, tvOS 13.0, macOS 10.15, watchOS 6.0, *)

@@ -6,9 +6,6 @@
 #if os(iOS) || os(tvOS)
 
 import UIKit
-#if canImport(SwiftUI)
-import SwiftUI
-#endif
 
 // MARK: - Navigation
 
@@ -114,6 +111,9 @@ extension UIViewController {
 
 // MARK: - SwiftUI
 
+#if canImport(SwiftUI) && (arch(arm64) || arch(x86_64))
+import SwiftUI
+
 @available(iOS 13.0, tvOS 13.0, *)
 extension UIViewController {
     /// Add a SwiftUI `View` as a child of the input `UIView`.
@@ -147,6 +147,7 @@ extension UIViewController {
         }
     }
 }
+#endif
 
 #endif
 

@@ -14,6 +14,12 @@ N/A
 
 N/A
 
+## [5.5.1](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.5.1) (08-12-2020)
+
+#### Bugfixes
+
+- Fixed builds targeting armv7 using SPM
+
 ## [5.5.0](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.5.0) (08-11-2020)
 
 #### Enhancements

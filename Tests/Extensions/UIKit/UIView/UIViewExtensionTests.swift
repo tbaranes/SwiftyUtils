@@ -7,9 +7,6 @@
 //
 
 import XCTest
-#if canImport(SwiftUI)
-import SwiftUI
-#endif
 
 final class UIViewExtensionTests: XCTestCase {
 
@@ -177,6 +174,9 @@ extension UIViewExtensionTests {
 
 // MARK: - SwiftUI
 
+#if canImport(SwiftUI) && (arch(arm64) || arch(x86_64))
+import SwiftUI
+
 @available(iOS 13.0, tvOS 13.0, *)
 extension UIViewExtensionTests {
     struct SwiftUIView: View {
@@ -192,3 +192,5 @@ extension UIViewExtensionTests {
         XCTAssertTrue(hostingView?.parentViewController is UIHostingController<SwiftUIView>)
     }
 }
+
+#endif

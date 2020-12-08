@@ -7,9 +7,6 @@
 //
 
 import XCTest
-#if canImport(SwiftUI)
-import SwiftUI
-#endif
 
 // MARK: Life cycle
 
@@ -83,6 +80,9 @@ extension UIViewControllerExtensionTests {
 
 // MARK: - SwiftUI
 
+#if canImport(SwiftUI) && (arch(arm64) || arch(x86_64))
+import SwiftUI
+
 @available(iOS 13.0, tvOS 13.0, *)
 extension UIViewControllerExtensionTests {
     struct SwiftUIView: View {
@@ -104,3 +104,4 @@ extension UIViewControllerExtensionTests {
         XCTAssertTrue(hostingView?.parentViewController is UIHostingController<SwiftUIView>)
     }
 }
+#endif
