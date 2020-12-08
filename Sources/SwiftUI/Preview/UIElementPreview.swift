@@ -8,6 +8,7 @@
 // Inspiration from: https://www.avanderlee.com/swiftui/previews-different-states/
 //
 
+#if (arch(arm64) || arch(x86_64))
 import SwiftUI
 
 /// Generate multiple previews configured, the different preview configurations are documented below.
@@ -101,3 +102,4 @@ public struct UIElementPreview<Value: View>: View {
         }
     }
 }
+#endif

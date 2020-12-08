@@ -6,9 +6,6 @@
 #if os(iOS) || os(tvOS)
 
 import UIKit
-#if canImport(SwiftUI)
-import SwiftUI
-#endif
 
 // MARK: - Frame
 
@@ -196,6 +193,9 @@ extension UIView {
 
 // MARK: - SwiftUI
 
+#if canImport(SwiftUI) && (arch(arm64) || arch(x86_64))
+import SwiftUI
+
 @available(iOS 13.0, tvOS 13.0, *)
 extension UIView {
     /// Add a SwiftUI `View` as a child of the input `UIView`.
@@ -209,6 +209,7 @@ extension UIView {
         hostingController.view.addConstraints()
     }
 }
+#endif
 
 // MARK: - Borders
 
