@@ -346,6 +346,7 @@
 		E27B7E2E2455BBB400EF79C7 /* UILabelExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728461E9A36F100DE844E /* UILabelExtensionTests.swift */; };
 		E27B7E2F2455BBBA00EF79C7 /* UITextFieldExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29DD90B1E9CD88E0076CFD7 /* UITextFieldExtensionTests.swift */; };
 		E29DD90C1E9CD88E0076CFD7 /* UITextFieldExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29DD90B1E9CD88E0076CFD7 /* UITextFieldExtensionTests.swift */; };
+		E2A81056263C1E0F00FF35AA /* UISliderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A81055263C1E0F00FF35AA /* UISliderExtension.swift */; };
 		E2B3A3B624ADBAB1004491DD /* ReusableCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B3A3AF24ADBA98004491DD /* ReusableCollectionReusableView.swift */; };
 		E2C6B55124962B1700F07E5A /* MutableCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C6B55024962B1700F07E5A /* MutableCollectionExtension.swift */; };
 		E2C6B55224962B1700F07E5A /* MutableCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C6B55024962B1700F07E5A /* MutableCollectionExtension.swift */; };
@@ -517,6 +518,7 @@
 		E29DD9071E9CD5660076CFD7 /* UISwitchExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchExtensionTests.swift; sourceTree = "<group>"; };
 		E29DD90B1E9CD88E0076CFD7 /* UITextFieldExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensionTests.swift; sourceTree = "<group>"; };
 		E29DD90E1E9CDAB80076CFD7 /* UIViewControllerExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionTests.swift; sourceTree = "<group>"; };
+		E2A81055263C1E0F00FF35AA /* UISliderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderExtension.swift; sourceTree = "<group>"; };
 		E2B3A3AF24ADBA98004491DD /* ReusableCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCollectionReusableView.swift; sourceTree = "<group>"; };
 		E2C6B55024962B1700F07E5A /* MutableCollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableCollectionExtension.swift; sourceTree = "<group>"; };
 		E2C6B55624962B4C00F07E5A /* MutableExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableExtensionTests.swift; sourceTree = "<group>"; };
@@ -838,6 +840,7 @@
 				E27B7D8124546F1800EF79C7 /* UIImage */,
 				E27B7D8224546F2000EF79C7 /* UILabel */,
 				E27B7D8324546F2600EF79C7 /* UIScreen */,
+				E2A81054263C1E0200FF35AA /* UISlider */,
 				E27B7D8424546F2D00EF79C7 /* UIStoryboard */,
 				E27B7D8524546F3300EF79C7 /* UISwitch */,
 				E262EA3A24AD2FAF00CED9A0 /* UITableView */,
@@ -1675,6 +1678,14 @@
 			path = UITextView;
 			sourceTree = "<group>";
 		};
+		E2A81054263C1E0200FF35AA /* UISlider */ = {
+			isa = PBXGroup;
+			children = (
+				E2A81055263C1E0F00FF35AA /* UISliderExtension.swift */,
+			);
+			path = UISlider;
+			sourceTree = "<group>";
+		};
 		E2C6B54F24962AF900F07E5A /* MutableCollection */ = {
 			isa = PBXGroup;
 			children = (
@@ -2391,6 +2402,7 @@
 				E26728861E9A379F00DE844E /* NSRangeExtension.swift in Sources */,
 				E267286D1E9A379900DE844E /* UIApplicationExtension.swift in Sources */,
 				E262E9F724AD256400CED9A0 /* NibOwnerLoadable.swift in Sources */,
+				E2A81056263C1E0F00FF35AA /* UISliderExtension.swift in Sources */,
 				E27B7DB92454755800EF79C7 /* UICollectionViewCellExtension.swift in Sources */,
 				E27B7D2824542A8F00EF79C7 /* UIElementPreview.swift in Sources */,
 				E267287C1E9A379F00DE844E /* ColorExtension.swift in Sources */,
