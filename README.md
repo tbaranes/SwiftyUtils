@@ -67,6 +67,7 @@ Check out the repository to find examples / tests for each feature.
 - [UIImage](#uiimage-extension)
 - [UILabel](#uilabel-extension)
 - [UIScreen](#uiscreen-extension)
+- [UISlider](#uislider-extension)
 - [UIStoryboard](#uistoryboard-extension)
 - [UISwitch](#uiswitch-extension)
 - [UITableView](#uitableview-extension)
@@ -1284,6 +1285,19 @@ Get the status bar height:
 
 ```swift
 print(UIScreen.statusBarHeight) // 20.0 on iPhone6
+```
+
+### UISlider extension
+
+Get the value where the user tapped using an `UITapGestureRecognizer`:
+
+```
+let slider = UISlider(frame: .zero)
+slider.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(sliderTapped(_:))))
+
+func sliderTapped(sender: UITapGestureRecognizer) {
+    let value = slider.value(for: sender)
+}
 ```
 
 ### UIStoryboard extension
