@@ -428,8 +428,8 @@ Check if a date is in future or past:
 
 ```swift
 let later = Date(timeIntervalSinceNow: -100000)
-print(now.isInFuture) // true
-print(now.isInPast) // false
+print(now.isInFuture) // false
+print(now.isInPast) // true
 ```
 
 ### Dictionary extension
