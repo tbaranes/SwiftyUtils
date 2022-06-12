@@ -2044,7 +2044,7 @@
 		};
 		E2576C401D1480E6009B2CD0 /* Run Script - ⚠️ SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -2052,7 +2052,7 @@
 			name = "Run Script - ⚠️ SwiftLint";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "swiftlint --config .swiftlint.yml\n";
 		};
