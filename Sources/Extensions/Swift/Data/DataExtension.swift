@@ -68,18 +68,19 @@ extension Data {
     public func toHexString(hexLeader: Bool = false, spaces: Bool = false) -> String {
         let count = self.count / MemoryLayout<UInt8>.stride
 
-        var hexString = ""
-        if hexLeader {
-            hexString = "0x"
-        }
+        let hexString = withUnsafeBytes { bytes -> String in
+            var hexString = ""
+            if hexLeader {
+                hexString = "0x"
+            }
 
-        self.withUnsafeBytes { bytes in
-            for index in 0..<count {
+            for (index, byte) in bytes.enumerated() {
                 if spaces && (index % 4) == 0 && index != 0 && index != (count - 1) {
                     hexString += " "
                 }
-                hexString += String(format: "%02X", bytes[index])
+                hexString += String(format: "%02X", byte)
             }
+            return hexString
         }
         return hexString
     }
