@@ -8,6 +8,16 @@ All notable changes to the project will be documented in this file.
 
 #### Enhancements
 
+N/A
+
+#### Bugfixes
+
+N/A
+
+## [5.5.2](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.5.2) (05-10-2022)
+
+#### Enhancements
+
 - UISliderExtension:
 
 ```swift
@@ -16,7 +26,7 @@ func value(for gestureRecognizer: UITapGestureRecognizer) -> Float
 
 #### Bugfixes
 
-N/A
+- Xcode 14 support
 
 ## [5.5.1](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.5.1) (08-12-2020)
 

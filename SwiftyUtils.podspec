@@ -3,14 +3,14 @@ Pod::Spec.new do |s|
 # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
 s.name            	= "SwiftyUtils"
-s.version          	= "5.5.0"
+s.version          	= "5.5.2"
 s.summary          	= "Swifty utils regroups all the boilerplate code reusable in each project."
-s.description      	= "Swifty utils regroups all the boilerplate code reusable in each project, available for iOS, OSX and tvOS"
+s.description      	= "Swifty utils regroups all the boilerplate code reusable in each project, available for iOS, macOS and tvOS"
 s.homepage         	= "https://github.com/tbaranes/SwiftyUtils"
 s.license      		= { :type => "MIT", :file => "LICENSE" }
 s.author           	= { "Tom Baranes" => "tom.baranes@gmail.com" }
 s.source           	= { :git => "https://github.com/tbaranes/SwiftyUtils.git", :tag => "#{s.version}" }
-s.swift_versions 	= "5.1"
+s.swift_versions 	= "5.6"
 
 # ―――  Spec tech  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
