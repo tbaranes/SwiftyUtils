@@ -804,7 +804,7 @@ Access with subscript:
 var string = "hello world"
 print(string[0]) // h
 print(string[2]) // l
-print(string[1...3]) // ell
+print(string[Range(1...3)]) // ell
 ```
 
 Check if it contains a string:
