@@ -25,6 +25,7 @@ final class NibOwnerLoadableTests: XCTestCase {
 
 // MARK: - Tests
 
+#if os(iOS)
 extension NibOwnerLoadableTests {
 
     func testLoadNib() {
@@ -35,3 +36,4 @@ extension NibOwnerLoadableTests {
     }
 
 }
+#endif

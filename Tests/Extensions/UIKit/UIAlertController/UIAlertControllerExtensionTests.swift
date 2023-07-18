@@ -3,6 +3,7 @@
 //  Copyright © 2017 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS)
 import XCTest
 
 final class UIAlertControllerExtensionTests: XCTestCase {
@@ -10,7 +11,6 @@ final class UIAlertControllerExtensionTests: XCTestCase {
 }
 
 // MARK: - Init
-
 extension UIAlertControllerExtensionTests {
 
     func testInit() {
@@ -29,7 +29,6 @@ extension UIAlertControllerExtensionTests {
         XCTAssertEqual(defaultAction?.title, "Cancel")
         XCTAssertEqual(defaultAction?.style, .cancel)
     }
-
 }
 
 // MARK: - Action
@@ -52,3 +51,4 @@ extension UIAlertControllerExtensionTests {
     }
 
 }
+#endif

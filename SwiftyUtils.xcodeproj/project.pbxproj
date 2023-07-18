@@ -7,6 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334882882A68FA0300B9564A /* ReusableNibCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 334882822A68FA0200B9564A /* ReusableNibCollectionReusableView.xib */; };
+		334882892A68FA0300B9564A /* ReusableNibCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 334882832A68FA0200B9564A /* ReusableNibCollectionViewCell.xib */; };
+		3348828A2A68FA0300B9564A /* NibLoadableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 334882842A68FA0200B9564A /* NibLoadableView.xib */; };
+		3348828B2A68FA0300B9564A /* ReusableNibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 334882852A68FA0200B9564A /* ReusableNibTableViewCell.xib */; };
+		3348828C2A68FA0300B9564A /* ReusableNibHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 334882862A68FA0200B9564A /* ReusableNibHeaderFooterView.xib */; };
+		3348828D2A68FA0300B9564A /* NibOwnerLoadableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 334882872A68FA0200B9564A /* NibOwnerLoadableView.xib */; };
+		337905132A6915FF00456868 /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2218C321D155039000F96DB /* SwiftyUtils.framework */; };
+		3379051A2A69161A00456868 /* UnitTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267284C1E9A36F100DE844E /* UnitTestingTests.swift */; };
+		3379051B2A69161E00456868 /* UITestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267284B1E9A36F100DE844E /* UITestingTests.swift */; };
+		3379051C2A69162A00456868 /* BundleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7D58245466E700EF79C7 /* BundleExtensionTests.swift */; };
+		3379051D2A69163B00456868 /* NSAttributedStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7DC52454776E00EF79C7 /* NSAttributedStringExtensionTests.swift */; };
+		3379051E2A69163B00456868 /* NSObjectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728451E9A36F100DE844E /* NSObjectExtensionTests.swift */; };
+		3379051F2A69163B00456868 /* SwiftyColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728421E9A36F100DE844E /* SwiftyColorTests.swift */; };
+		337905202A69163B00456868 /* TimerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728431E9A36F100DE844E /* TimerExtensionTests.swift */; };
+		337905212A69163B00456868 /* DoubleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283C1E9A36F100DE844E /* DoubleExtensionTests.swift */; };
+		337905222A69163B00456868 /* DataExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2AFC3221538DB00CBC975 /* DataExtensionTests.swift */; };
+		337905232A69163B00456868 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283A1E9A36F100DE844E /* DateExtensionTests.swift */; };
+		337905242A69163B00456868 /* MutableExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C6B55624962B4C00F07E5A /* MutableExtensionTests.swift */; };
+		337905252A69163B00456868 /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728351E9A36F100DE844E /* ArrayExtensionTests.swift */; };
+		337905262A69163B00456868 /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283E1E9A36F100DE844E /* IntExtensionTests.swift */; };
+		337905272A69163B00456868 /* FileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283D1E9A36F100DE844E /* FileManagerTests.swift */; };
+		337905292A69163B00456868 /* NSMutableAttributedStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7D512454626A00EF79C7 /* NSMutableAttributedStringExtensionTests.swift */; };
+		3379052A2A69163B00456868 /* NSRangeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728401E9A36F100DE844E /* NSRangeExtensionTests.swift */; };
+		3379052B2A69163B00456868 /* ReusableFormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7D4C24545FEE00EF79C7 /* ReusableFormattersTests.swift */; };
+		3379052C2A69163B00456868 /* UserDefaultsExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728491E9A36F100DE844E /* UserDefaultsExtensionTests.swift */; };
+		3379052D2A69163B00456868 /* DictionaryExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267283B1E9A36F100DE844E /* DictionaryExtensionTests.swift */; };
+		3379052E2A69163B00456868 /* SequenceExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB19562496214300DFE66C /* SequenceExtensionTests.swift */; };
+		3379052F2A69163B00456868 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728411E9A36F100DE844E /* StringExtensionTests.swift */; };
+		337905302A69163B00456868 /* URLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728481E9A36F100DE844E /* URLExtensionTests.swift */; };
+		337905312A69164900456868 /* CGPointExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9C41E9A534E0059BED7 /* CGPointExtensionTests.swift */; };
+		337905322A69164900456868 /* CGFloatLiteralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728361E9A36F100DE844E /* CGFloatLiteralTests.swift */; };
+		337905332A69164900456868 /* CGRectExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26728371E9A36F100DE844E /* CGRectExtensionTest.swift */; };
+		337905342A69164900456868 /* CGSizeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23ED9CC1E9A55F40059BED7 /* CGSizeExtensionTests.swift */; };
+		337905362A69166800456868 /* UserDefaultsBackedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B7D3324543E0400EF79C7 /* UserDefaultsBackedTests.swift */; };
+		337905372A69166F00456868 /* AnyOptionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E9DB24AD254D00CED9A0 /* AnyOptionalTests.swift */; };
+		337905382A69166F00456868 /* ThenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E9DD24AD254D00CED9A0 /* ThenTest.swift */; };
+		337905392A69166F00456868 /* OccupiableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E9DC24AD254D00CED9A0 /* OccupiableTests.swift */; };
+		3379053A2A6927B800456868 /* UnitTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26727FA1E9A362600DE844E /* UnitTesting.swift */; };
 		33D2AFA122128EBA00CBC975 /* SystemUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2AF9F22128EBA00CBC975 /* SystemUtility.swift */; };
 		33D2AFAA221290F100CBC975 /* SystemUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2AFA42212903F00CBC975 /* SystemUtilityTests.swift */; };
 		33D2AFC2221514AF00CBC975 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2AFC1221514AF00CBC975 /* DataExtension.swift */; };
@@ -61,8 +99,6 @@
 		E262EA0424AD256400CED9A0 /* Occupiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E9F324AD256400CED9A0 /* Occupiable.swift */; };
 		E262EA0524AD256400CED9A0 /* Occupiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E9F324AD256400CED9A0 /* Occupiable.swift */; };
 		E262EA0A24AD25C900CED9A0 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA0924AD25C900CED9A0 /* NibLoadableView.swift */; };
-		E262EA0D24AD25D000CED9A0 /* NibLoadableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E262EA0C24AD25D000CED9A0 /* NibLoadableView.xib */; };
-		E262EA1124AD268700CED9A0 /* NibOwnerLoadableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E262EA1024AD268700CED9A0 /* NibOwnerLoadableView.xib */; };
 		E262EA1424AD268E00CED9A0 /* NibOwnerLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA1324AD268E00CED9A0 /* NibOwnerLoadableView.swift */; };
 		E262EA1724AD276200CED9A0 /* NibOwnerLoadableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA1624AD276200CED9A0 /* NibOwnerLoadableTests.swift */; };
 		E262EA2024AD2B7D00CED9A0 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262E9F124AD256400CED9A0 /* Injectable.swift */; };
@@ -79,14 +115,10 @@
 		E262EA7224AD3B4300CED9A0 /* ReusableClassHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA6C24AD3B4300CED9A0 /* ReusableClassHeaderFooterView.swift */; };
 		E262EA7424AD3B4300CED9A0 /* ReusableClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA6D24AD3B4300CED9A0 /* ReusableClassTableViewCell.swift */; };
 		E262EA7624AD3B4300CED9A0 /* ReusableNibHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA6E24AD3B4300CED9A0 /* ReusableNibHeaderFooterView.swift */; };
-		E262EA7824AD3B4300CED9A0 /* ReusableNibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E262EA6F24AD3B4300CED9A0 /* ReusableNibTableViewCell.xib */; };
-		E262EA7A24AD3B4300CED9A0 /* ReusableNibHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E262EA7024AD3B4300CED9A0 /* ReusableNibHeaderFooterView.xib */; };
 		E262EA7C24AD3B4300CED9A0 /* ReusableNibTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA7124AD3B4300CED9A0 /* ReusableNibTableViewCell.swift */; };
 		E262EA8524AD3BAD00CED9A0 /* ReusableNibCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA8024AD3BAC00CED9A0 /* ReusableNibCollectionViewCell.swift */; };
 		E262EA8724AD3BAD00CED9A0 /* ReusableNibCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA8124AD3BAC00CED9A0 /* ReusableNibCollectionReusableView.swift */; };
 		E262EA8924AD3BAD00CED9A0 /* ReusableClassCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA8224AD3BAD00CED9A0 /* ReusableClassCollectionViewCell.swift */; };
-		E262EA8B24AD3BAD00CED9A0 /* ReusableNibCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E262EA8324AD3BAD00CED9A0 /* ReusableNibCollectionViewCell.xib */; };
-		E262EA8D24AD3BAD00CED9A0 /* ReusableNibCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E262EA8424AD3BAD00CED9A0 /* ReusableNibCollectionReusableView.xib */; };
 		E262EA9024AD3BFF00CED9A0 /* UICollectionViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E262EA8F24AD3BFF00CED9A0 /* UICollectionViewExtensionTests.swift */; };
 		E26722861E9A304800DE844E /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E26722811E9A304800DE844E /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E26722871E9A304800DE844E /* SwiftyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E26722811E9A304800DE844E /* SwiftyUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -366,6 +398,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		337905142A6915FF00456868 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E273FECE1CCCFF5B003156EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2218C311D155039000F96DB;
+			remoteInfo = "SwiftyUtils watchOS";
+		};
 		E27300651CCD0655003156EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E273FECE1CCCFF5B003156EC /* Project object */;
@@ -390,6 +429,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		334882822A68FA0200B9564A /* ReusableNibCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableNibCollectionReusableView.xib; sourceTree = "<group>"; };
+		334882832A68FA0200B9564A /* ReusableNibCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableNibCollectionViewCell.xib; sourceTree = "<group>"; };
+		334882842A68FA0200B9564A /* NibLoadableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibLoadableView.xib; sourceTree = "<group>"; };
+		334882852A68FA0200B9564A /* ReusableNibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableNibTableViewCell.xib; sourceTree = "<group>"; };
+		334882862A68FA0200B9564A /* ReusableNibHeaderFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableNibHeaderFooterView.xib; sourceTree = "<group>"; };
+		334882872A68FA0200B9564A /* NibOwnerLoadableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibOwnerLoadableView.xib; sourceTree = "<group>"; };
+		3379050F2A6915FF00456868 /* SwiftyUtils watchOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftyUtils watchOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D2AF9F22128EBA00CBC975 /* SystemUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemUtility.swift; sourceTree = "<group>"; };
 		33D2AFA42212903F00CBC975 /* SystemUtilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemUtilityTests.swift; sourceTree = "<group>"; };
 		33D2AFC1221514AF00CBC975 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
@@ -411,8 +457,6 @@
 		E262E9F224AD256400CED9A0 /* AnyOptional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
 		E262E9F324AD256400CED9A0 /* Occupiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Occupiable.swift; sourceTree = "<group>"; };
 		E262EA0924AD25C900CED9A0 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
-		E262EA0C24AD25D000CED9A0 /* NibLoadableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibLoadableView.xib; sourceTree = "<group>"; };
-		E262EA1024AD268700CED9A0 /* NibOwnerLoadableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NibOwnerLoadableView.xib; sourceTree = "<group>"; };
 		E262EA1324AD268E00CED9A0 /* NibOwnerLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadableView.swift; sourceTree = "<group>"; };
 		E262EA1624AD276200CED9A0 /* NibOwnerLoadableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadableTests.swift; sourceTree = "<group>"; };
 		E262EA3224AD2E3700CED9A0 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -422,14 +466,10 @@
 		E262EA6C24AD3B4300CED9A0 /* ReusableClassHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableClassHeaderFooterView.swift; sourceTree = "<group>"; };
 		E262EA6D24AD3B4300CED9A0 /* ReusableClassTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableClassTableViewCell.swift; sourceTree = "<group>"; };
 		E262EA6E24AD3B4300CED9A0 /* ReusableNibHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableNibHeaderFooterView.swift; sourceTree = "<group>"; };
-		E262EA6F24AD3B4300CED9A0 /* ReusableNibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableNibTableViewCell.xib; sourceTree = "<group>"; };
-		E262EA7024AD3B4300CED9A0 /* ReusableNibHeaderFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableNibHeaderFooterView.xib; sourceTree = "<group>"; };
 		E262EA7124AD3B4300CED9A0 /* ReusableNibTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableNibTableViewCell.swift; sourceTree = "<group>"; };
 		E262EA8024AD3BAC00CED9A0 /* ReusableNibCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableNibCollectionViewCell.swift; sourceTree = "<group>"; };
 		E262EA8124AD3BAC00CED9A0 /* ReusableNibCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableNibCollectionReusableView.swift; sourceTree = "<group>"; };
 		E262EA8224AD3BAD00CED9A0 /* ReusableClassCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableClassCollectionViewCell.swift; sourceTree = "<group>"; };
-		E262EA8324AD3BAD00CED9A0 /* ReusableNibCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableNibCollectionViewCell.xib; sourceTree = "<group>"; };
-		E262EA8424AD3BAD00CED9A0 /* ReusableNibCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReusableNibCollectionReusableView.xib; sourceTree = "<group>"; };
 		E262EA8F24AD3BFF00CED9A0 /* UICollectionViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensionTests.swift; sourceTree = "<group>"; };
 		E26722801E9A304800DE844E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E26722811E9A304800DE844E /* SwiftyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyUtils.h; sourceTree = "<group>"; };
@@ -451,7 +491,7 @@
 		E26727DC1E9A362600DE844E /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
 		E26727DD1E9A362600DE844E /* NSRangeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRangeExtension.swift; sourceTree = "<group>"; };
 		E26727DE1E9A362600DE844E /* ReusableFormatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableFormatters.swift; sourceTree = "<group>"; };
-		E26727DF1E9A362600DE844E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E26727DF1E9A362600DE844E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; usesTabs = 0; };
 		E26727E01E9A362600DE844E /* TimerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerExtension.swift; sourceTree = "<group>"; };
 		E26727E21E9A362600DE844E /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		E26727E31E9A362600DE844E /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
@@ -468,7 +508,7 @@
 		E26727EE1E9A362600DE844E /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		E26727EF1E9A362600DE844E /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		E26727F91E9A362600DE844E /* UITesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITesting.swift; sourceTree = "<group>"; };
-		E26727FA1E9A362600DE844E /* UnitTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTesting.swift; sourceTree = "<group>"; };
+		E26727FA1E9A362600DE844E /* UnitTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTesting.swift; sourceTree = "<group>"; usesTabs = 0; };
 		E26728341E9A36F100DE844E /* NSViewExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSViewExtensionsTest.swift; sourceTree = "<group>"; };
 		E26728351E9A36F100DE844E /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
 		E26728361E9A36F100DE844E /* CGFloatLiteralTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatLiteralTests.swift; sourceTree = "<group>"; };
@@ -480,7 +520,7 @@
 		E267283E1E9A36F100DE844E /* IntExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
 		E267283F1E9A36F100DE844E /* NSLayoutConstraintExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensionTests.swift; sourceTree = "<group>"; };
 		E26728401E9A36F100DE844E /* NSRangeExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRangeExtensionTests.swift; sourceTree = "<group>"; };
-		E26728411E9A36F100DE844E /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		E26728411E9A36F100DE844E /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; usesTabs = 0; };
 		E26728421E9A36F100DE844E /* SwiftyColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyColorTests.swift; sourceTree = "<group>"; };
 		E26728431E9A36F100DE844E /* TimerExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerExtensionTests.swift; sourceTree = "<group>"; };
 		E26728451E9A36F100DE844E /* NSObjectExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensionTests.swift; sourceTree = "<group>"; };
@@ -528,6 +568,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3379050C2A6915FF00456868 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				337905132A6915FF00456868 /* SwiftyUtils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2218C2E1D155039000F96DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -583,6 +631,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		334882812A68FA0200B9564A /* UIKit Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				334882822A68FA0200B9564A /* ReusableNibCollectionReusableView.xib */,
+				334882832A68FA0200B9564A /* ReusableNibCollectionViewCell.xib */,
+				334882842A68FA0200B9564A /* NibLoadableView.xib */,
+				334882852A68FA0200B9564A /* ReusableNibTableViewCell.xib */,
+				334882862A68FA0200B9564A /* ReusableNibHeaderFooterView.xib */,
+				334882872A68FA0200B9564A /* NibOwnerLoadableView.xib */,
+			);
+			path = "UIKit Nibs";
+			sourceTree = "<group>";
+		};
 		33D2AFB6221310C500CBC975 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -620,9 +681,7 @@
 			isa = PBXGroup;
 			children = (
 				E262EA0924AD25C900CED9A0 /* NibLoadableView.swift */,
-				E262EA0C24AD25D000CED9A0 /* NibLoadableView.xib */,
 				E262EA1324AD268E00CED9A0 /* NibOwnerLoadableView.swift */,
-				E262EA1024AD268700CED9A0 /* NibOwnerLoadableView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -718,6 +777,7 @@
 		E262EA6824AD3B0700CED9A0 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				334882812A68FA0200B9564A /* UIKit Nibs */,
 				E262EA6924AD3B0B00CED9A0 /* UIKit */,
 			);
 			path = Vendors;
@@ -739,9 +799,7 @@
 				E262EA6C24AD3B4300CED9A0 /* ReusableClassHeaderFooterView.swift */,
 				E262EA6D24AD3B4300CED9A0 /* ReusableClassTableViewCell.swift */,
 				E262EA6E24AD3B4300CED9A0 /* ReusableNibHeaderFooterView.swift */,
-				E262EA7024AD3B4300CED9A0 /* ReusableNibHeaderFooterView.xib */,
 				E262EA7124AD3B4300CED9A0 /* ReusableNibTableViewCell.swift */,
-				E262EA6F24AD3B4300CED9A0 /* ReusableNibTableViewCell.xib */,
 			);
 			name = UITableViewCell;
 			path = Vendor/UITableViewCell;
@@ -762,9 +820,7 @@
 				E262EA8224AD3BAD00CED9A0 /* ReusableClassCollectionViewCell.swift */,
 				E2B3A3AF24ADBA98004491DD /* ReusableCollectionReusableView.swift */,
 				E262EA8024AD3BAC00CED9A0 /* ReusableNibCollectionViewCell.swift */,
-				E262EA8324AD3BAD00CED9A0 /* ReusableNibCollectionViewCell.xib */,
 				E262EA8124AD3BAC00CED9A0 /* ReusableNibCollectionReusableView.swift */,
-				E262EA8424AD3BAD00CED9A0 /* ReusableNibCollectionReusableView.xib */,
 			);
 			path = UICollectionViewCell;
 			sourceTree = "<group>";
@@ -933,6 +989,7 @@
 				E27300981CCD06CD003156EC /* SwiftyUtils tvOS Tests.xctest */,
 				E27300A71CCD06E8003156EC /* SwiftyUtils macOS Tests.xctest */,
 				E2218C321D155039000F96DB /* SwiftyUtils.framework */,
+				3379050F2A6915FF00456868 /* SwiftyUtils watchOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1756,6 +1813,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3379050E2A6915FF00456868 /* SwiftyUtils watchOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 337905192A6915FF00456868 /* Build configuration list for PBXNativeTarget "SwiftyUtils watchOS Tests" */;
+			buildPhases = (
+				3379050B2A6915FF00456868 /* Sources */,
+				3379050C2A6915FF00456868 /* Frameworks */,
+				3379050D2A6915FF00456868 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				337905152A6915FF00456868 /* PBXTargetDependency */,
+			);
+			name = "SwiftyUtils watchOS Tests";
+			productName = SwiftyUtilsTests;
+			productReference = 3379050F2A6915FF00456868 /* SwiftyUtils watchOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E2218C311D155039000F96DB /* SwiftyUtils watchOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2218C3A1D155039000F96DB /* Build configuration list for PBXNativeTarget "SwiftyUtils watchOS" */;
@@ -1891,10 +1966,14 @@
 		E273FECE1CCCFF5B003156EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Tom Baranes";
 				TargetAttributes = {
+					3379050E2A6915FF00456868 = {
+						CreatedOnToolsVersion = 14.3;
+						ProvisioningStyle = Automatic;
+					};
 					E2218C311D155039000F96DB = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = TNVENL2JX3;
@@ -1951,11 +2030,19 @@
 				E27300091CCD031B003156EC /* SwiftyUtils tvOS */,
 				E27300971CCD06CD003156EC /* SwiftyUtils tvOS Tests */,
 				E2218C311D155039000F96DB /* SwiftyUtils watchOS */,
+				3379050E2A6915FF00456868 /* SwiftyUtils watchOS Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3379050D2A6915FF00456868 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2218C301D155039000F96DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1981,12 +2068,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E262EA7824AD3B4300CED9A0 /* ReusableNibTableViewCell.xib in Resources */,
-				E262EA8D24AD3BAD00CED9A0 /* ReusableNibCollectionReusableView.xib in Resources */,
-				E262EA1124AD268700CED9A0 /* NibOwnerLoadableView.xib in Resources */,
-				E262EA0D24AD25D000CED9A0 /* NibLoadableView.xib in Resources */,
-				E262EA7A24AD3B4300CED9A0 /* ReusableNibHeaderFooterView.xib in Resources */,
-				E262EA8B24AD3BAD00CED9A0 /* ReusableNibCollectionViewCell.xib in Resources */,
+				3348828D2A68FA0300B9564A /* NibOwnerLoadableView.xib in Resources */,
+				3348828B2A68FA0300B9564A /* ReusableNibTableViewCell.xib in Resources */,
+				334882882A68FA0300B9564A /* ReusableNibCollectionReusableView.xib in Resources */,
+				3348828A2A68FA0300B9564A /* NibLoadableView.xib in Resources */,
+				3348828C2A68FA0300B9564A /* ReusableNibHeaderFooterView.xib in Resources */,
+				334882892A68FA0300B9564A /* ReusableNibCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2026,7 +2113,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "swiftlint --config .swiftlint.yml\n";
+			shellScript = "#!/usr/bin/env bash\n\nif [[ -e /opt/homebrew ]]; then\n\teval $(/opt/homebrew/bin/brew shellenv)\nfi\n\nswiftlint --config .swiftlint.yml\n";
 		};
 		E23515A81D14818C005FEC39 /* Run Script - ⚠️ SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2059,6 +2146,43 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3379050B2A6915FF00456868 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				337905342A69164900456868 /* CGSizeExtensionTests.swift in Sources */,
+				337905212A69163B00456868 /* DoubleExtensionTests.swift in Sources */,
+				3379051C2A69162A00456868 /* BundleExtensionTests.swift in Sources */,
+				3379052F2A69163B00456868 /* StringExtensionTests.swift in Sources */,
+				337905362A69166800456868 /* UserDefaultsBackedTests.swift in Sources */,
+				337905292A69163B00456868 /* NSMutableAttributedStringExtensionTests.swift in Sources */,
+				3379051F2A69163B00456868 /* SwiftyColorTests.swift in Sources */,
+				337905392A69166F00456868 /* OccupiableTests.swift in Sources */,
+				337905232A69163B00456868 /* DateExtensionTests.swift in Sources */,
+				3379051E2A69163B00456868 /* NSObjectExtensionTests.swift in Sources */,
+				337905222A69163B00456868 /* DataExtensionTests.swift in Sources */,
+				3379052B2A69163B00456868 /* ReusableFormattersTests.swift in Sources */,
+				3379052A2A69163B00456868 /* NSRangeExtensionTests.swift in Sources */,
+				337905372A69166F00456868 /* AnyOptionalTests.swift in Sources */,
+				337905312A69164900456868 /* CGPointExtensionTests.swift in Sources */,
+				337905242A69163B00456868 /* MutableExtensionTests.swift in Sources */,
+				337905202A69163B00456868 /* TimerExtensionTests.swift in Sources */,
+				337905382A69166F00456868 /* ThenTest.swift in Sources */,
+				3379052D2A69163B00456868 /* DictionaryExtensionTests.swift in Sources */,
+				3379051D2A69163B00456868 /* NSAttributedStringExtensionTests.swift in Sources */,
+				337905332A69164900456868 /* CGRectExtensionTest.swift in Sources */,
+				3379051B2A69161E00456868 /* UITestingTests.swift in Sources */,
+				337905302A69163B00456868 /* URLExtensionTests.swift in Sources */,
+				3379051A2A69161A00456868 /* UnitTestingTests.swift in Sources */,
+				337905322A69164900456868 /* CGFloatLiteralTests.swift in Sources */,
+				337905252A69163B00456868 /* ArrayExtensionTests.swift in Sources */,
+				337905262A69163B00456868 /* IntExtensionTests.swift in Sources */,
+				337905272A69163B00456868 /* FileManagerTests.swift in Sources */,
+				3379052E2A69163B00456868 /* SequenceExtensionTests.swift in Sources */,
+				3379052C2A69163B00456868 /* UserDefaultsExtensionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E2218C2D1D155039000F96DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2093,6 +2217,7 @@
 				E2C6B55424962B1700F07E5A /* MutableCollectionExtension.swift in Sources */,
 				E262EA2024AD2B7D00CED9A0 /* Injectable.swift in Sources */,
 				E26729241E9A38FF00DE844E /* NSLayoutConstraintsExtension.swift in Sources */,
+				3379053A2A6927B800456868 /* UnitTesting.swift in Sources */,
 				E267291F1E9A38FF00DE844E /* DictionaryExtension.swift in Sources */,
 				E26CBEF8237B618E00ECFCE7 /* UIAlertControllerExtension.swift in Sources */,
 				E26CBEFD237B618E00ECFCE7 /* UISwitchExtension.swift in Sources */,
@@ -2454,6 +2579,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		337905152A6915FF00456868 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2218C311D155039000F96DB /* SwiftyUtils watchOS */;
+			targetProxy = 337905142A6915FF00456868 /* PBXContainerItemProxy */;
+		};
 		E27300661CCD0655003156EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E273FED61CCCFF5B003156EC /* SwiftyUtils iOS */;
@@ -2472,6 +2602,82 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		337905162A6915FF00456868 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.SwiftyUtils-watchOS-tests.SwiftyUtilsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		337905172A6915FF00456868 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.SwiftyUtils-watchOS-tests.SwiftyUtilsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
+		337905182A6915FF00456868 /* ReleaseTest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tbaranes.SwiftyUtils-watchOS-tests.SwiftyUtilsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = ReleaseTest;
+		};
 		E2218C371D155039000F96DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3084,6 +3290,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		337905192A6915FF00456868 /* Build configuration list for PBXNativeTarget "SwiftyUtils watchOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				337905162A6915FF00456868 /* Debug */,
+				337905172A6915FF00456868 /* Release */,
+				337905182A6915FF00456868 /* ReleaseTest */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E2218C3A1D155039000F96DB /* Build configuration list for PBXNativeTarget "SwiftyUtils watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

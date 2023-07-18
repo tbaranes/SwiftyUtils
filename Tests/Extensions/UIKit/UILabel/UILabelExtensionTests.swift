@@ -6,6 +6,7 @@
 //  Copyright © 2016 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 import XCTest
 import SwiftyUtils
@@ -26,7 +27,6 @@ final class UILabelExtensionTests: XCTestCase {
 
 // MARK: - Truncatated
 
-#if os(iOS)
 extension UILabelExtensionTests {
 
     func testIsTruncated() {
@@ -51,7 +51,6 @@ extension UILabelExtensionTests {
     }
 
 }
-#endif
 
 // MARK: - Fonts
 
@@ -70,3 +69,4 @@ extension UILabelExtensionTests {
     }
 
 }
+#endif

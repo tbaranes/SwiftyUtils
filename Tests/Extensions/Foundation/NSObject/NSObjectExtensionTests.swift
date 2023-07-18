@@ -22,6 +22,7 @@ final class NSObjectExtensionTests: XCTestCase {
 
 // MARK: - Misc
 
+#if !os(watchOS)
 extension NSObjectExtensionTests {
 
     func testClassName() {
@@ -34,5 +35,5 @@ extension NSObjectExtensionTests {
             XCTAssertEqual(UIViewController.className, "UIViewController")
         #endif
     }
-
 }
+#endif

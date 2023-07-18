@@ -53,11 +53,190 @@ extension String {
     }
 
     /// Check if the string contains an email email with a valid format.
+    @available(*, deprecated, message: "Use `validateEmailAddress()` instead")
     public var isEmail: Bool {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
         return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: self)
     }
 
+    /// These values are given in soft language intentionally because email validation is highly varied and many
+    /// places are too strict. The support level is based on authors anecdotal experiences.
+    public enum EmailSupport: Int, Equatable, Comparable {
+        case widelySupported
+        case mostlySupported
+        case technicallySupported
+
+        public static func < (lhs: String.EmailSupport, rhs: String.EmailSupport) -> Bool {
+            lhs.rawValue < rhs.rawValue
+        }
+    }
+
+    /// By RFC 5322, should be MOSTLY correct and cover the most common use cases. It turns out email validation
+    /// is *very* complicated. The more esoteric valid emails might/will not be validated as correct. Aka, some false
+    /// negatives are expected, but false positives should not happen.
+    ///
+    /// Note: ios, tvos, and watch os availability is a guess as I don't have those sdks installed to confirm.
+    @available(macOS 13, iOS 16, tvOS 16, watchOS 10, *)
+    @discardableResult // swiftlint:disable:next function_body_length
+    public func validateEmailAddress(requireTLD: Bool = true) throws -> EmailSupport {
+        guard 3...255 ~= count else { throw EmailError.invalidLength }
+
+        // swiftlint:disable:next cyclomatic_complexity function_body_length large_tuple
+        func parseEmailSections() throws -> (local: String, domain: String, supportLevel: EmailSupport) {
+            var local = ""
+            var domain = ""
+            var supportLevel = EmailSupport.widelySupported
+
+            let escapeAndAt = CharacterSet("\\@".unicodeScalars)
+            let quotes = CharacterSet("\"".unicodeScalars)
+            let space = CharacterSet(" ".unicodeScalars)
+            let nothing = CharacterSet()
+            let localStoppers = escapeAndAt.union(quotes).union(space)
+
+            var inQuotes = false
+            var finishedLocal = false
+            let scanner = Scanner(string: self)
+            scanner.charactersToBeSkipped = nil
+            while scanner.isAtEnd == false {
+                if finishedLocal {
+                    guard
+                        let partial = scanner.scanUpToCharacters(from: nothing)
+                    else { throw EmailError.invalidFormat }
+                    domain = partial
+                } else {
+                    var partial = ""
+                    if let scanned = scanner.scanUpToCharacters(from: localStoppers) {
+                        partial = scanned
+                    }
+
+                    defer { local.append(partial) }
+
+                    guard
+                        let character = scanner.scanCharacter()
+                    else { throw EmailError.invalidFormat }
+
+                    switch character {
+                    case "\\":
+                        guard inQuotes == true else { throw EmailError.escapesAndSpacesOnlyAllowedWithinQuotes }
+                        guard
+                            let next = scanner.scanCharacter()
+                        else { throw EmailError.escapedSequenceUnfinished }
+                        partial.append(character)
+                        partial.append(next)
+                        supportLevel = max(supportLevel, .technicallySupported)
+                    case "@":
+                        guard inQuotes == false else { continue }
+                        finishedLocal = true
+                    case "\"":
+                        partial.append(character)
+                        if inQuotes == false {
+                            inQuotes = true
+                        } else {
+                            inQuotes = false
+                            guard
+                                scanner.scanString("@") != nil
+                            else { throw EmailError.quotesMustCoverEntireLocalSection }
+                            // back up one character since @ check was successful
+                            scanner.currentIndex = index(before: scanner.currentIndex)
+                        }
+                        supportLevel = max(supportLevel, .technicallySupported)
+                    case " ":
+                        guard inQuotes == true else { throw EmailError.escapesAndSpacesOnlyAllowedWithinQuotes }
+                        supportLevel = max(supportLevel, .technicallySupported)
+                    default:
+                        throw EmailError.scannerError
+                    }
+                }
+            }
+            return (local, domain, supportLevel)
+        }
+
+        let info = try parseEmailSections()
+        let local = info.local
+        let domain = info.domain
+        var supportLevel = info.supportLevel
+
+        guard 1...64 ~= local.count else { throw EmailError.localSectionInvalidLength }
+
+        guard local.first != "." && local.last != "." else { throw EmailError.localSectionStartsOrEndsWithDot }
+
+        guard local.contains("..") == false else { throw EmailError.localSectionHasConsecutiveDots }
+
+        try domain.validateDomain(requireTLD: requireTLD)
+
+        if local.contains(/\+/) {
+            supportLevel = max(supportLevel, .mostlySupported)
+        }
+
+        if local.contains(/[\/\=\!\%\$]/) {
+            supportLevel = max(supportLevel, .technicallySupported)
+        }
+
+        if requireTLD == false && domain.contains(".") == false {
+            supportLevel = max(supportLevel, .technicallySupported)
+        }
+
+        return supportLevel
+    }
+
+    public enum EmailError: String, Error, CustomStringConvertible {
+        case quotesMustCoverEntireLocalSection
+        case escapesAndSpacesOnlyAllowedWithinQuotes
+        case invalidFormat
+        case escapedSequenceUnfinished
+        case scannerError
+        case noAtSign
+        case invalidLength
+        case localSectionInvalidLength
+        case localSectionStartsOrEndsWithDot
+        case localSectionHasConsecutiveDots
+
+        public var description: String {
+            "\(EmailError.self).\(rawValue)"
+        }
+    }
+
+    @available(macOS 13, iOS 16, tvOS 16, watchOS 10, *)
+    public func validateDomain(requireTLD: Bool = true) throws {
+        guard 1...253 ~= count else { throw DomainError.invalidLength }
+        guard contains("..") == false else { throw DomainError.hasConsecutiveDots }
+
+        if requireTLD {
+            guard contains(".") else { throw DomainError.hasNoTLD }
+        }
+
+        if hasPrefix(".") || hasSuffix(".") {
+            throw DomainError.startsOrEndsWithDot
+        }
+
+        if hasPrefix("-") || hasSuffix("-") {
+            throw DomainError.startsOrEndsWithHyphen
+        }
+
+        let illegalSubdomains = split(separator: ".")
+            .filter { $0.count > 63 }
+
+        guard illegalSubdomains.isEmpty else { throw DomainError.hasSectionWithInvalidCharacterCount }
+
+        let domainRegex = /^[A-Za-z0-9\-\.]+$/
+        guard wholeMatch(of: domainRegex) != nil else {
+            throw DomainError.hasInvalidCharacters
+        }
+    }
+
+    public enum DomainError: String, Error, CustomStringConvertible {
+        case invalidLength
+        case hasConsecutiveDots
+        case hasNoTLD
+        case hasInvalidCharacters
+        case startsOrEndsWithDot
+        case startsOrEndsWithHyphen
+        case hasSectionWithInvalidCharacterCount
+
+        public var description: String {
+            "\(DomainError.self).\(rawValue)"
+        }
+    }
 }
 
 // MARK: - IP Validator

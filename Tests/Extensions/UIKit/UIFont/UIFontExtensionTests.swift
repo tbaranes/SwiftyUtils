@@ -6,6 +6,7 @@
 //  Copyright © 2020 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS)
 import XCTest
 import SwiftyUtils
 
@@ -22,3 +23,4 @@ final class UIFontExtensionTests: XCTestCase {
     }
 
 }
+#endif

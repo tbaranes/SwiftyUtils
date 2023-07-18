@@ -13,6 +13,7 @@ final class UnitTestTests: XCTestCase {
         XCTAssertTrue(UnitTesting.isRunning)
     }
 
+    #if !os(watchOS)
     func testMeasure() {
         let timing = UnitTesting.measure {
             for _ in [0...1000] { }
@@ -20,4 +21,5 @@ final class UnitTestTests: XCTestCase {
         XCTAssertTrue(timing > 0)
         XCTAssertTrue(timing < 1)
     }
+    #endif
 }

@@ -6,6 +6,7 @@
 //  Copyright © 2017 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS)
 import XCTest
 @testable import SwiftyUtils
 
@@ -90,3 +91,4 @@ extension UITextFieldExtensionTests {
     }
 
 }
+#endif

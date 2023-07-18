@@ -56,6 +56,7 @@ extension StringExtensionTests {
         XCTAssertFalse("test".isNumeric)
     }
 
+    @available(*, deprecated)
     func testIsEmailValid() {
         var aString = "test@gmail.com"
         XCTAssertTrue(aString.isEmail)
@@ -69,7 +70,90 @@ extension StringExtensionTests {
         XCTAssertTrue(aString.isEmail)
     }
 
-    // swiftlint:disable:next function_body_length
+    @available(macOS 13, iOS 16, tvOS 16, watchOS 10, *)
+    func testEmailValidationOnPreviousValues() throws {
+        var aString = "test@gmail.com"
+        XCTAssertEqual(try aString.validateEmailAddress(), .widelySupported)
+        aString = "test"
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = "test@gmail"
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = "test@gmail"
+        XCTAssertEqual(try aString.validateEmailAddress(requireTLD: false), .technicallySupported)
+        aString = "test@.com"
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = "testing+gmailsorting@gmail.com"
+        XCTAssertEqual(try aString.validateEmailAddress(), .mostlySupported)
+    }
+
+    @available(macOS 13, iOS 16, tvOS 16, watchOS 10, *)
+    func testEmailValidationOnValidEmails() throws {
+        // test cases sourced from https://www.linuxjournal.com/article/9585,
+        // but validation corrected against https://www.dominicsayers.com/isemail/
+        var aString = ##"dclo@us.ibm.com"##
+        XCTAssertEqual(try aString.validateEmailAddress(), .widelySupported)
+        aString = ##""Abc@def"@example.com"##
+        XCTAssertEqual(try aString.validateEmailAddress(), .technicallySupported)
+        aString = ##""Fred Bloggs"@example.com"##
+        XCTAssertEqual(try aString.validateEmailAddress(), .technicallySupported)
+        aString = ##"customer/department=shipping@example.com"##
+        XCTAssertEqual(try aString.validateEmailAddress(), .technicallySupported)
+        aString = ##"$A12345@example.com"##
+        XCTAssertEqual(try aString.validateEmailAddress(), .technicallySupported)
+        aString = ##"!def!xyz%abc@example.com"##
+        XCTAssertEqual(try aString.validateEmailAddress(), .technicallySupported)
+        aString = ##"_somename@example.com"##
+        XCTAssertEqual(try aString.validateEmailAddress(), .widelySupported)
+        aString = ##"user+mailbox@example.com"##
+        XCTAssertEqual(try aString.validateEmailAddress(), .mostlySupported)
+        aString = ##"peter.piper@example.com"##
+        XCTAssertEqual(try aString.validateEmailAddress(), .widelySupported)
+        aString = ##""Doug \"Ace\" L."@example.com"##
+        XCTAssertEqual(try aString.validateEmailAddress(), .technicallySupported)
+    }
+
+    @available(macOS 13, iOS 16, tvOS 16, watchOS 10, *)
+    func testEmailValidationOnInvalidEmails() throws {
+        var aString = ##"abc\\@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"Fred\ Bloggs@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"Joe.\\Blow@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"abc\@def@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"abc@def@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"abc\\@def@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"abc\@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"doug@"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##""qu@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"ote"@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##".dot@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"dot.@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"two..dot@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##""Doug "Ace" L."@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"Doug\ \"Ace\"\ L\.@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"Doug\ \"Ace\"\ Lovell@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"hello world@example.com"##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+        aString = ##"gatsby@f.sc.ot.t.f.i.tzg.era.l.d."##
+        XCTAssertThrowsError(try aString.validateEmailAddress())
+    }
+
     func testIPAddressValid() {
         var ipAddr = "123.45.67.89"
         XCTAssertTrue(ipAddr.isIPAddress)
@@ -120,7 +204,6 @@ extension StringExtensionTests {
         XCTAssertFalse(ipAddr.isIP4Address)
         XCTAssertFalse(ipAddr.isIP6Address)
     }
-
 }
 
 // MARK: - Computed Properties
