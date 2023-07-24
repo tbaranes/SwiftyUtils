@@ -20,6 +20,20 @@
                ReferencedContainer = "container:SwiftyUtils.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3379050E2A6915FF00456868"
+               BuildableName = "SwiftyUtils watchOS Tests.xctest"
+               BlueprintName = "SwiftyUtils watchOS Tests"
+               ReferencedContainer = "container:SwiftyUtils.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,6 +42,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3379050E2A6915FF00456868"
+               BuildableName = "SwiftyUtils watchOS Tests.xctest"
+               BlueprintName = "SwiftyUtils watchOS Tests"
+               ReferencedContainer = "container:SwiftyUtils.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

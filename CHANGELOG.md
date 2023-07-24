@@ -8,11 +8,18 @@ All notable changes to the project will be documented in this file.
 
 #### Enhancements
 
-N/A
+- `String.validateEmailAddress(requireTLD: Bool = true) throws -> EmailSupport`
+   * much improved (tho admittedly imperfect) algorithm for determining if a string is a valid email or not, based on RFC 5322.
+- `String.validateDomain(requireTLD: Bool = true) throws`
+   * simple domain validation for strings
+- watchOS unit tests implemented
+- deprecate old `String.isEmail` property, but keep it since the new method has very recent OS requirements
 
 #### Bugfixes
 
-N/A
+* CI/CD fixes
+* SPM tests build and run on macOS
+
 
 ## [5.5.2](https://github.com/tbaranes/SwiftyUtils/releases/tag/5.5.2) (05-10-2022)
 

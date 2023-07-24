@@ -6,6 +6,7 @@
 //  Copyright © 2020 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS)
 import XCTest
 import SwiftyUtils
 
@@ -38,3 +39,4 @@ extension UITextViewExtensionTests {
     }
 
 }
+#endif

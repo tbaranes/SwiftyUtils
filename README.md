@@ -828,10 +828,25 @@ print(string.isNumber) // false
 Check if it's a valid email:
 
 ```swift
+// (deprecated)
 var string = "test@gmail.com"
 print(string.isEmail) // true
 var string = "test@"
 print(string.isEmail) // false
+```
+
+```swift
+// current
+var support = try "test@gmail.com".validateEmailAddress() // EmailSupport.widelySupported
+string = try "test+tag@gmail.com".validateEmailAddress() // EmailSupport.mostlySupported
+string = try "\"abc@def\"@gmail.com".validateEmailAddress() // EmailSupport.technicallySupported
+string = try "test@".validateEmailAddress() // throws an error for lack of a domain
+```
+
+Check it's a valid domain:
+```swift
+try "google.com".validateDomain() // doesn't throw
+try "google..com".validateDomain() // throws because of sequential dots in value
 ```
 
 Check if it's a valid IP address:

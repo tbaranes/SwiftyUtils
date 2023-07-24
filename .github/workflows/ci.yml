@@ -11,48 +11,62 @@ on:
 jobs:
   macOS:
     name: Test macOS
-    runs-on: macOS-latest
+    runs-on: macOS-13
     steps:
       - uses: actions/checkout@v1
       - name: macOS
-        run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "SwiftyUtils.xcodeproj" -scheme "SwiftyUtils macOS" -destination "platform=macOS" clean test | xcpretty
+        run: |
+          sudo xcode-select -p
+          sudo xcode-select -s /Applications/Xcode_14.2.app/Contents/Developer
+          set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "SwiftyUtils.xcodeproj" -scheme "SwiftyUtils macOS" -destination "platform=macOS" -destination-timeout 10 clean test | xcpretty
   iOS:
     name: Test iOS 
-    runs-on: macOS-latest
+    runs-on: macOS-13
     strategy:
       matrix:
-        destination: ["OS=15.2,name=iPhone 11 Pro"] #, "OS=12.4,name=iPhone XS", "OS=11.4,name=iPhone X", "OS=10.3.1,name=iPhone SE"]
+        destination: ["platform=iOS Simulator,name=iPhone 14"] #, "OS=12.4,name=iPhone XS", "OS=11.4,name=iPhone X", "OS=10.3.1,name=iPhone SE"]
     steps:
       - uses: actions/checkout@v1
       - name: iOS - ${{ matrix.destination }}
-        run: set -o pipefail && 
-             env NSUnbufferedIO=YES xcodebuild -project "SwiftyUtils.xcodeproj" -scheme "SwiftyUtils iOS" -destination "${{ matrix.destination }}" clean test | xcpretty &&
-             xcodebuild -workspace "SwiftyUtils.xcworkspace" -scheme "iOS Example" -destination "${{ matrix.destination }}" clean 
+        run: |
+          sudo xcode-select -s /Applications/Xcode_14.3.app/Contents/Developer
+          set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "SwiftyUtils.xcodeproj" -scheme "SwiftyUtils iOS" -destination "${{ matrix.destination }}" -destination-timeout 10 clean test | xcpretty
   tvOS:
     name: Test tvOS 
-    runs-on: macOS-latest
+    runs-on: macOS-13
     strategy:
       matrix:
-        destination: ["OS=15.2,name=Apple TV 4K"] #, "OS=11.4,name=Apple TV 4K", "OS=10.2,name=Apple TV 1080p"]
+        destination: ["platform=tvOS Simulator,name=Apple TV 4K (3rd generation)"] #, "OS=11.4,name=Apple TV 4K", "OS=10.2,name=Apple TV 1080p"]
     steps:
       - uses: actions/checkout@v1
       - name: tvOS - ${{ matrix.destination }}
-        run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "SwiftyUtils.xcodeproj" -scheme "SwiftyUtils tvOS" -destination "${{ matrix.destination }}" clean test | xcpretty
+        run: |
+          sudo xcode-select -s /Applications/Xcode_14.3.app/Contents/Developer
+          set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "SwiftyUtils.xcodeproj" -scheme "SwiftyUtils tvOS" -destination "${{ matrix.destination }}" -destination-timeout 10 clean test | xcpretty
   watchOS:
     name: Build watchOS
-    runs-on: macOS-latest
+    runs-on: macOS-13
     strategy:
       matrix:
-        destination: ["OS=8.3,name=Apple Watch Series 5 - 44mm"] #, "OS=4.2,name=Apple Watch Series 3 - 42mm", "OS=3.2,name=Apple Watch Series 2 - 42mm"]
+        destination: ["platform=watchOS Simulator,name=Apple Watch Series 8 (41mm)"] #, "OS=4.2,name=Apple Watch Series 3 - 42mm", "OS=3.2,name=Apple Watch Series 2 - 42mm"]
     steps:
       - uses: actions/checkout@v1
       - name: watchOS - ${{ matrix.destination }}
-        run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "SwiftyUtils.xcodeproj" -scheme "SwiftyUtils watchOS" -destination "${{ matrix.destination }}" clean build | xcpretty
+        run: |
+          sudo xcode-select -s /Applications/Xcode_14.3.app/Contents/Developer
+          set -o pipefail && env NSUnbufferedIO=YES xcodebuild -project "SwiftyUtils.xcodeproj" -scheme "SwiftyUtils watchOS" -destination "${{ matrix.destination }}" -destination-timeout 10 clean test | xcpretty
   spm:
     name: Test SPM Integration
-    runs-on: macOS-latest    
-    needs: [macOS]
+    runs-on: macOS-13    
     steps:
       - uses: actions/checkout@v1
       - name: SPM Build
-        run: swift build
+        run: |
+          sudo xcode-select -p
+          sudo xcode-select -s /Applications/Xcode_14.3.app/Contents/Developer
+          swift build
+      - name: SPM Test
+        run: |
+          sudo xcode-select -p
+          sudo xcode-select -s /Applications/Xcode_14.3.app/Contents/Developer
+          SPM_TESTING=true swift test

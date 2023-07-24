@@ -11,9 +11,15 @@ import Cocoa
 
 public enum UnitTesting {
 
-    /// Check if unit tests are running or not.
+    /// Check if unit tests are running or not. If running `spm test` from the command line, prefix it with `SPM_TESTING=true`
+    ///
+    /// For example:
+    /// ```
+    /// SPM_TESTING=true spm test
+    /// ```
     public static var isRunning: Bool {
-        ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
+        ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil ||
+        ProcessInfo.processInfo.environment["SPM_TESTING"] != nil
     }
 
     #if !os(watchOS)
@@ -25,5 +31,4 @@ public enum UnitTesting {
         return Float(end - start)
     }
     #endif
-
 }

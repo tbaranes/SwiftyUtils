@@ -6,6 +6,7 @@
 //  Copyright © 2017 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS)
 import XCTest
 
 // MARK: Life cycle
@@ -37,3 +38,4 @@ extension UIImageExtensionTests {
     }
 
 }
+#endif

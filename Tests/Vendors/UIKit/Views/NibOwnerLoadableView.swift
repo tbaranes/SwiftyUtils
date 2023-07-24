@@ -6,6 +6,7 @@
 //  Copyright © 2020 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 import SwiftyUtils
 
@@ -19,3 +20,4 @@ final class NibOwnerLoadableView: UIView, NibOwnerLoadable {
     }
 
 }
+#endif

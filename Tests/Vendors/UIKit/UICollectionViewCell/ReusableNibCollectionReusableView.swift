@@ -6,6 +6,7 @@
 //  Copyright © 2020 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 import SwiftyUtils
 
@@ -13,3 +14,4 @@ final class ReusableNibCollectionReusableView: UICollectionReusableView, NibReus
 
     @IBOutlet private(set) weak var label: UILabel!
 }
+#endif

@@ -6,6 +6,7 @@
 //  Copyright © 2020 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 import XCTest
 import SwiftyUtils
@@ -79,3 +80,4 @@ extension UIDeviceExtensionTests {
     }
 
 }
+#endif

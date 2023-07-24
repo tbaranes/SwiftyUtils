@@ -6,6 +6,7 @@
 //  Copyright © 2017 Tom Baranes. All rights reserved.
 //
 
+#if os(iOS)
 import XCTest
 
 final class UIViewExtensionTests: XCTestCase {
@@ -171,10 +172,11 @@ extension UIViewExtensionTests {
         XCTAssertEqual(scrollView, viewToFind)
     }
 }
+#endif
 
 // MARK: - SwiftUI
 
-#if canImport(SwiftUI) && (arch(arm64) || arch(x86_64))
+#if canImport(SwiftUI) && (arch(arm64) || arch(x86_64)) && os(iOS)
 import SwiftUI
 
 @available(iOS 13.0, tvOS 13.0, *)
